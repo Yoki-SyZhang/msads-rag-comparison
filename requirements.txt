@@ -1,0 +1,14 @@
+beautifulsoup4
+chromadb
+fastapi
+numpy
+openai
+pandas
+playwright
+python-dotenv
+requests
+scikit-learn
+sentence-transformers
+streamlit
+tqdm
+uvicorn[standard]

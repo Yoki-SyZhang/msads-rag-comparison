@@ -1,0 +1,827 @@
+{
+  "schema_version": 2,
+  "timestamp": "2026-08-04T01:46:07.937173",
+  "question": "Which noncredit courses are required or optional in the In-Person MS-ADS program?",
+  "question_id": "C09",
+  "question_meta": {
+    "category": "curriculum",
+    "type": "accordion",
+    "difficulty": "easy",
+    "expected_behavior": "direct_answer"
+  },
+  "results": {
+    "pipeline_flatrag": {
+      "pipeline_id": "pipeline_flatrag",
+      "display_name": "FlatRAG",
+      "answer": "Based on the retrieved program materials, here is the breakdown of noncredit courses in the In-Person MS-ADS program:\n\n**Required:**\n- **Career Seminar** – This is a Pass/Fail seminar that supports the development of industry professional skills, job and/or internship searches, and other in-demand competencies. Students enroll in it each quarter, and it is 0 units with no cost. Students with significant full-time work experience may be eligible to waive it [1].\n\n**Optional (Foundational):**\n- Introduction to Statistical Concepts\n- R for Data Science\n- Python for Data Science\n- Advanced Linear Algebra for Machine Learning [1]\n\n**Optional (Resource):**\n- Brush up on the Basics – This is an optional resource that recommends specific Coursera courses to gauge preparation in foundational topics [1][2].\n\nSources:\n1. [In Person Program | In Person Program - Accordion Overview > Noncredit Courses](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/)\n2. [In Person Program | Noncredit Courses > Brush up on the Basics (Optional resource)](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/)",
+      "sources": [
+        {
+          "page_title": "In Person Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "tool_calls": [
+            {
+              "name": "list_page_sections",
+              "args": {
+                "url": "in_person_program"
+              }
+            },
+            {
+              "name": "list_page_sections",
+              "args": {
+                "url": "course_progressions"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "list_page_sections",
+              "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/in-person-program/:\n  - \"1-Year 12 Course Program (Full- and Part-Time Options)\" (3 chunks)\n  - \"2-Year Thesis Track, 18 Course Program (Full-Time Only)\" (3 chunks)\n  - \"By and For Data Science Innovators\" (1 chunk)\n  - \"Career Outcomes in Data Science\" (1 chunk)\n  - \"Comparison Chart\" (1 chunk)\n  - \"Core Courses > Data Engineering Platforms for Analytics or Big Data and Cloud Computing\" (1 chunk)\n  - \"Core Courses > Data Science Capstone Project\" (1 chunk)\n  - \"Core Courses > Leadership and Consulting for Data Science\" (1 chunk)\n  - \"Core Courses > Machine Learning I\" (1 chunk)\n  - \"Core Courses > Machine Learning II\" (1 chunk)\n  - \"Core Courses > Statistical Models for Data Science\" (1 chunk)\n  - \"Core Courses > Time Series Analysis and Forecasting\" (1 chunk)\n  - \"Get in Touch\" (1 chunk)\n  - \"In Person Program\" (1 chunk)\n  - \"In Person Program - Accordion Overview > Core Courses\" (1 chunk)\n  - \"In Person Program - Accordion Overview > Noncredit Courses\" (1 chunk)\n  - \"In Person Program - Accordion Overview > Sample Elective Courses\" (1 chunk)\n  - \"Noncredit Courses > Advanced Linear Algebra for Machine Learning (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Brush up on the Basics (Optional resource)\" (1 chunk)\n  - \"Noncredit Courses > Career Seminar (Seminar, required)\" (1 chunk)\n  - \"Noncredit Courses > Introduction to Statistical Concepts (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Python for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > R for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Sample Elective Courses > Advanced Computer Vision with Deep Learning\" (2 chunks)\n  - \"Sample Elective Courses > Advanced Machine Learning and Artificial Intelligence\" (2 chunks)\n  - \"Sample Elective Courses > Applied Generative AI: Agents and Multimodal Intelligence\" (2 chunks)\n  - \"Sample Elective Courses > Bayesian Machine Learning with G"
+            },
+            {
+              "name": "list_page_sections",
+              "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/:\n  - \"Course Progressions - Accordion Overview > Sample 2-Year Full-Time Schedule\" (1 chunk)\n  - \"Course Progressions - Accordion Overview > Sample Full-Time Schedule\" (1 chunk)\n  - \"Course Progressions - Accordion Overview > Sample Part-Time Schedule\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 5 > Elective 5\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 5 > Elective 6\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 5 > Thesis Course I\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 6 > Elective 7\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 6 > Elective 8\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 6 > Thesis Course II\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Prequarter > Introduction to Statistical Concepts (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Prequarter > R for Data Science (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Advanced Linear Algebra for Machine Learning (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Career Seminar (Required)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Data Engineering Platforms for Analytics or Big Data and Cloud Computing\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Leadership and Consulting for Data Science\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Python for Data Science (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Statistical Models for Data Science\" (1 chunk)\n  - \"Course Progressions > Sample Full-Ti"
+            }
+          ],
+          "judger": null
+        },
+        {
+          "step": 2,
+          "tool_calls": [
+            {
+              "name": "fetch_section_chunks",
+              "args": {
+                "url": "in_person_program",
+                "section_breadcrumb": "In Person Program - Accordion Overview > Noncredit Courses"
+              }
+            },
+            {
+              "name": "fetch_section_chunks",
+              "args": {
+                "url": "in_person_program",
+                "section_breadcrumb": "Noncredit Courses > Career Seminar (Seminar, required)"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_section_chunks",
+              "content": "Fetched 1 chunk(s) from \"In Person Program - Accordion Overview > Noncredit Courses\":\n\n[0] In Person Program | In Person Program - Accordion Overview > Noncredit Courses\n[Page: In Person Program | Section: In Person Program - Accordion Overview > Noncredit Courses]\n\nNoncredit Courses:\nCareer Seminar (Seminar, required), Introduction to Statistical Concepts (Foundational, optional), R for Data Science (Foundational, optional), Python for Data Science (Foundational, o..."
+            },
+            {
+              "name": "fetch_section_chunks",
+              "content": "Fetched 1 chunk(s) from \"Noncredit Courses > Career Seminar (Seminar, required)\":\n\n[0] In Person Program | Noncredit Courses > Career Seminar (Seminar, required)\n[Page: In Person Program | Section: Noncredit Courses > Career Seminar (Seminar, required)]\n\nThe Pass/Fail Career Seminar supports the development of industry professional skills, job and/or internship searches, and other in-demand areas of competency among today’s employers. Students enroll in the ..."
+            }
+          ],
+          "judger": {
+            "completeness": "partial",
+            "useful_indices": [
+              0,
+              1
+            ],
+            "decision": "done",
+            "candidate_chunk_count": 2,
+            "accepted_chunk_count": 2
+          }
+        },
+        {
+          "step": 1,
+          "tool_calls": [
+            {
+              "name": "list_page_sections",
+              "args": {
+                "url": "in_person_program"
+              }
+            },
+            {
+              "name": "list_page_sections",
+              "args": {
+                "url": "faqs"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "list_page_sections",
+              "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/in-person-program/:\n  - \"1-Year 12 Course Program (Full- and Part-Time Options)\" (3 chunks)\n  - \"2-Year Thesis Track, 18 Course Program (Full-Time Only)\" (3 chunks)\n  - \"By and For Data Science Innovators\" (1 chunk)\n  - \"Career Outcomes in Data Science\" (1 chunk)\n  - \"Comparison Chart\" (1 chunk)\n  - \"Core Courses > Data Engineering Platforms for Analytics or Big Data and Cloud Computing\" (1 chunk)\n  - \"Core Courses > Data Science Capstone Project\" (1 chunk)\n  - \"Core Courses > Leadership and Consulting for Data Science\" (1 chunk)\n  - \"Core Courses > Machine Learning I\" (1 chunk)\n  - \"Core Courses > Machine Learning II\" (1 chunk)\n  - \"Core Courses > Statistical Models for Data Science\" (1 chunk)\n  - \"Core Courses > Time Series Analysis and Forecasting\" (1 chunk)\n  - \"Get in Touch\" (1 chunk)\n  - \"In Person Program\" (1 chunk)\n  - \"In Person Program - Accordion Overview > Core Courses\" (1 chunk)\n  - \"In Person Program - Accordion Overview > Noncredit Courses\" (1 chunk)\n  - \"In Person Program - Accordion Overview > Sample Elective Courses\" (1 chunk)\n  - \"Noncredit Courses > Advanced Linear Algebra for Machine Learning (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Brush up on the Basics (Optional resource)\" (1 chunk)\n  - \"Noncredit Courses > Career Seminar (Seminar, required)\" (1 chunk)\n  - \"Noncredit Courses > Introduction to Statistical Concepts (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Python for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > R for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Sample Elective Courses > Advanced Computer Vision with Deep Learning\" (2 chunks)\n  - \"Sample Elective Courses > Advanced Machine Learning and Artificial Intelligence\" (2 chunks)\n  - \"Sample Elective Courses > Applied Generative AI: Agents and Multimodal Intelligence\" (2 chunks)\n  - \"Sample Elective Courses > Bayesian Machine Learning with G"
+            },
+            {
+              "name": "list_page_sections",
+              "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/:\n  - \"2-Year Thesis Track Program > How many spots are available in the new 2-year program?\" (1 chunk)\n  - \"2-Year Thesis Track Program > If I am admitted to the In-Person, Full-Time 1-year program, may I take any of the 2-year program electives?\" (1 chunk)\n  - \"2-Year Thesis Track Program > May I switch between the 1- and 2-year programs after officially enrolling in the MS-ADS program?\" (1 chunk)\n  - \"2-Year Thesis Track Program > What is the 2-year program's thesis requirement?\" (1 chunk)\n  - \"2-Year Thesis Track Program > What is the new 2-year thesis track program (18 courses), and how is it different from the 1-year program (12 courses)?\" (2 chunks)\n  - \"2-Year Thesis Track Program > When can I apply for the 2-year thesis track program?\" (1 chunk)\n  - \"Application Process > Do I need to provide my recommenders with instructions?\" (1 chunk)\n  - \"Application Process > Does the admissions office allow recommenders to email their letter directly as an attachment to be included in an applicant’s file?\" (1 chunk)\n  - \"Application Process > How do I submit the materials that will accompany my Master's in Applied Data Science application?\" (1 chunk)\n  - \"Application Process > How will I be notified that I am admitted to the Master's in Applied Data Science program?\" (1 chunk)\n  - \"Application Process > I took the GRE and/or GMAT and want to include my score(s) with my Master's in Applied Data Science application.\" (1 chunk)\n  - \"Application Process > I took the TOEFL over two years ago. Can I still use those TOEFL results?\" (1 chunk)\n  - \"Application Process > If I am admitted to the Master's in Applied Data Science program, what do I do next?\" (1 chunk)\n  - \"Application Process > If I finish my Master's in Applied Data Science application before the deadline, will I receive my decision early?\" (1 chunk)\n  - \"Application Process > Is the GRE or GMAT required for th"
+            }
+          ],
+          "judger": null
+        },
+        {
+          "step": 2,
+          "tool_calls": [
+            {
+              "name": "fetch_section_chunks",
+              "args": {
+                "url": "in_person_program",
+                "section_breadcrumb": "In Person Program - Accordion Overview > Noncredit Courses"
+              }
+            },
+            {
+              "name": "fetch_section_chunks",
+              "args": {
+                "url": "in_person_program",
+                "section_breadcrumb": "Noncredit Courses > Brush up on the Basics (Optional resource)"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_section_chunks",
+              "content": "Fetched 1 chunk(s) from \"In Person Program - Accordion Overview > Noncredit Courses\":\n\n[0] In Person Program | In Person Program - Accordion Overview > Noncredit Courses\n[Page: In Person Program | Section: In Person Program - Accordion Overview > Noncredit Courses]\n\nNoncredit Courses:\nCareer Seminar (Seminar, required), Introduction to Statistical Concepts (Foundational, optional), R for Data Science (Foundational, optional), Python for Data Science (Foundational, o..."
+            },
+            {
+              "name": "fetch_section_chunks",
+              "content": "Fetched 1 chunk(s) from \"Noncredit Courses > Brush up on the Basics (Optional resource)\":\n\n[0] In Person Program | Noncredit Courses > Brush up on the Basics (Optional resource)\n[Page: In Person Program | Section: Noncredit Courses > Brush up on the Basics (Optional resource)]\n\nIf you would like to gauge your preparation in Foundational course topics, we recommend specific Coursera courses that cover very similar topics. If you would like to gauge your preparation in Founda..."
+            }
+          ],
+          "judger": {
+            "completeness": "partial",
+            "useful_indices": [
+              0,
+              1
+            ],
+            "decision": "done",
+            "candidate_chunk_count": 2,
+            "accepted_chunk_count": 2
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "text": "[Page: In Person Program | Section: In Person Program - Accordion Overview > Noncredit Courses]\n\nNoncredit Courses:\nCareer Seminar (Seminar, required), Introduction to Statistical Concepts (Foundational, optional), R for Data Science (Foundational, optional), Python for Data Science (Foundational, optional), Advanced Linear Algebra for Machine Learning (Foundational, optional), Brush up on the Basics (Optional resource)",
+          "chunk_id": "education__masters_programs__in_person_program__noncredit_courses__15",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+          "page_title": "In Person Program",
+          "section": "Noncredit Courses",
+          "section_breadcrumb": "In Person Program - Accordion Overview > Noncredit Courses",
+          "content_type": "accordion_overview",
+          "program_type": "in_person",
+          "distance": 0.0
+        },
+        {
+          "text": "[Page: In Person Program | Section: Noncredit Courses > Career Seminar (Seminar, required)]\n\nThe Pass/Fail Career Seminar supports the development of industry professional skills, job and/or internship searches, and other in-demand areas of competency among today’s employers. Students enroll in the Career Seminar each quarter in order to engage in unique content throughout their degree program. Students with significant full-time work experience may be eligible to waive this course. 0 units, no cost.",
+          "chunk_id": "education__masters_programs__in_person_program__career_seminar_seminar_required__18",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+          "page_title": "In Person Program",
+          "section": "Career Seminar (Seminar, required)",
+          "section_breadcrumb": "Noncredit Courses > Career Seminar (Seminar, required)",
+          "content_type": "text",
+          "program_type": "in_person",
+          "distance": 0.0
+        },
+        {
+          "text": "[Page: In Person Program | Section: Noncredit Courses > Brush up on the Basics (Optional resource)]\n\nIf you would like to gauge your preparation in Foundational course topics, we recommend specific Coursera courses that cover very similar topics. If you would like to gauge your preparation in Foundational course topics, we recommend specific Coursera courses that cover very similar topics. Four Coursera courses cover very similar topics. You can review the Coursera curricula to see if you are already well-prepared, or if you like, study their materials to brush up on some or all of these topics. Mathematics for Machine Learning: Linear Algebra (offered by University College London) Basis Data Descriptors, Statistical Distributions, and Application to Business Decisions (offered by Rice University) Python for Data Science, AI, & Development (offered by IBM)",
+          "chunk_id": "education__masters_programs__in_person_program__brush_up_on_the_basics_optional_resource__23",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+          "page_title": "In Person Program",
+          "section": "Brush up on the Basics (Optional resource)",
+          "section_breadcrumb": "Noncredit Courses > Brush up on the Basics (Optional resource)",
+          "content_type": "text",
+          "program_type": "in_person",
+          "distance": 0.0
+        }
+      ],
+      "time_sec": 14.425,
+      "low_confidence": true,
+      "error": null,
+      "raw_debug": {
+        "answer": "Based on the retrieved program materials, here is the breakdown of noncredit courses in the In-Person MS-ADS program:\n\n**Required:**\n- **Career Seminar** – This is a Pass/Fail seminar that supports the development of industry professional skills, job and/or internship searches, and other in-demand competencies. Students enroll in it each quarter, and it is 0 units with no cost. Students with significant full-time work experience may be eligible to waive it [1].\n\n**Optional (Foundational):**\n- Introduction to Statistical Concepts\n- R for Data Science\n- Python for Data Science\n- Advanced Linear Algebra for Machine Learning [1]\n\n**Optional (Resource):**\n- Brush up on the Basics – This is an optional resource that recommends specific Coursera courses to gauge preparation in foundational topics [1][2].\n\nSources:\n1. [In Person Program | In Person Program - Accordion Overview > Noncredit Courses](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/)\n2. [In Person Program | Noncredit Courses > Brush up on the Basics (Optional resource)](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/)",
+        "sources": [
+          {
+            "page_title": "In Person Program",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/"
+          }
+        ],
+        "completeness": "partial",
+        "low_confidence": true,
+        "attempts": 4,
+        "agent_steps": [
+          {
+            "step": 1,
+            "tool_calls": [
+              {
+                "name": "list_page_sections",
+                "args": {
+                  "url": "in_person_program"
+                }
+              },
+              {
+                "name": "list_page_sections",
+                "args": {
+                  "url": "course_progressions"
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "list_page_sections",
+                "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/in-person-program/:\n  - \"1-Year 12 Course Program (Full- and Part-Time Options)\" (3 chunks)\n  - \"2-Year Thesis Track, 18 Course Program (Full-Time Only)\" (3 chunks)\n  - \"By and For Data Science Innovators\" (1 chunk)\n  - \"Career Outcomes in Data Science\" (1 chunk)\n  - \"Comparison Chart\" (1 chunk)\n  - \"Core Courses > Data Engineering Platforms for Analytics or Big Data and Cloud Computing\" (1 chunk)\n  - \"Core Courses > Data Science Capstone Project\" (1 chunk)\n  - \"Core Courses > Leadership and Consulting for Data Science\" (1 chunk)\n  - \"Core Courses > Machine Learning I\" (1 chunk)\n  - \"Core Courses > Machine Learning II\" (1 chunk)\n  - \"Core Courses > Statistical Models for Data Science\" (1 chunk)\n  - \"Core Courses > Time Series Analysis and Forecasting\" (1 chunk)\n  - \"Get in Touch\" (1 chunk)\n  - \"In Person Program\" (1 chunk)\n  - \"In Person Program - Accordion Overview > Core Courses\" (1 chunk)\n  - \"In Person Program - Accordion Overview > Noncredit Courses\" (1 chunk)\n  - \"In Person Program - Accordion Overview > Sample Elective Courses\" (1 chunk)\n  - \"Noncredit Courses > Advanced Linear Algebra for Machine Learning (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Brush up on the Basics (Optional resource)\" (1 chunk)\n  - \"Noncredit Courses > Career Seminar (Seminar, required)\" (1 chunk)\n  - \"Noncredit Courses > Introduction to Statistical Concepts (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Python for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > R for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Sample Elective Courses > Advanced Computer Vision with Deep Learning\" (2 chunks)\n  - \"Sample Elective Courses > Advanced Machine Learning and Artificial Intelligence\" (2 chunks)\n  - \"Sample Elective Courses > Applied Generative AI: Agents and Multimodal Intelligence\" (2 chunks)\n  - \"Sample Elective Courses > Bayesian Machine Learning with G"
+              },
+              {
+                "name": "list_page_sections",
+                "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/:\n  - \"Course Progressions - Accordion Overview > Sample 2-Year Full-Time Schedule\" (1 chunk)\n  - \"Course Progressions - Accordion Overview > Sample Full-Time Schedule\" (1 chunk)\n  - \"Course Progressions - Accordion Overview > Sample Part-Time Schedule\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 5 > Elective 5\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 5 > Elective 6\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 5 > Thesis Course I\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 6 > Elective 7\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 6 > Elective 8\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 6 > Thesis Course II\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Prequarter > Introduction to Statistical Concepts (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Prequarter > R for Data Science (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Advanced Linear Algebra for Machine Learning (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Career Seminar (Required)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Data Engineering Platforms for Analytics or Big Data and Cloud Computing\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Leadership and Consulting for Data Science\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Python for Data Science (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Statistical Models for Data Science\" (1 chunk)\n  - \"Course Progressions > Sample Full-Ti"
+              }
+            ],
+            "judger": null
+          },
+          {
+            "step": 2,
+            "tool_calls": [
+              {
+                "name": "fetch_section_chunks",
+                "args": {
+                  "url": "in_person_program",
+                  "section_breadcrumb": "In Person Program - Accordion Overview > Noncredit Courses"
+                }
+              },
+              {
+                "name": "fetch_section_chunks",
+                "args": {
+                  "url": "in_person_program",
+                  "section_breadcrumb": "Noncredit Courses > Career Seminar (Seminar, required)"
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "fetch_section_chunks",
+                "content": "Fetched 1 chunk(s) from \"In Person Program - Accordion Overview > Noncredit Courses\":\n\n[0] In Person Program | In Person Program - Accordion Overview > Noncredit Courses\n[Page: In Person Program | Section: In Person Program - Accordion Overview > Noncredit Courses]\n\nNoncredit Courses:\nCareer Seminar (Seminar, required), Introduction to Statistical Concepts (Foundational, optional), R for Data Science (Foundational, optional), Python for Data Science (Foundational, o..."
+              },
+              {
+                "name": "fetch_section_chunks",
+                "content": "Fetched 1 chunk(s) from \"Noncredit Courses > Career Seminar (Seminar, required)\":\n\n[0] In Person Program | Noncredit Courses > Career Seminar (Seminar, required)\n[Page: In Person Program | Section: Noncredit Courses > Career Seminar (Seminar, required)]\n\nThe Pass/Fail Career Seminar supports the development of industry professional skills, job and/or internship searches, and other in-demand areas of competency among today’s employers. Students enroll in the ..."
+              }
+            ],
+            "judger": {
+              "completeness": "partial",
+              "useful_indices": [
+                0,
+                1
+              ],
+              "decision": "done",
+              "candidate_chunk_count": 2,
+              "accepted_chunk_count": 2
+            }
+          },
+          {
+            "step": 1,
+            "tool_calls": [
+              {
+                "name": "list_page_sections",
+                "args": {
+                  "url": "in_person_program"
+                }
+              },
+              {
+                "name": "list_page_sections",
+                "args": {
+                  "url": "faqs"
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "list_page_sections",
+                "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/in-person-program/:\n  - \"1-Year 12 Course Program (Full- and Part-Time Options)\" (3 chunks)\n  - \"2-Year Thesis Track, 18 Course Program (Full-Time Only)\" (3 chunks)\n  - \"By and For Data Science Innovators\" (1 chunk)\n  - \"Career Outcomes in Data Science\" (1 chunk)\n  - \"Comparison Chart\" (1 chunk)\n  - \"Core Courses > Data Engineering Platforms for Analytics or Big Data and Cloud Computing\" (1 chunk)\n  - \"Core Courses > Data Science Capstone Project\" (1 chunk)\n  - \"Core Courses > Leadership and Consulting for Data Science\" (1 chunk)\n  - \"Core Courses > Machine Learning I\" (1 chunk)\n  - \"Core Courses > Machine Learning II\" (1 chunk)\n  - \"Core Courses > Statistical Models for Data Science\" (1 chunk)\n  - \"Core Courses > Time Series Analysis and Forecasting\" (1 chunk)\n  - \"Get in Touch\" (1 chunk)\n  - \"In Person Program\" (1 chunk)\n  - \"In Person Program - Accordion Overview > Core Courses\" (1 chunk)\n  - \"In Person Program - Accordion Overview > Noncredit Courses\" (1 chunk)\n  - \"In Person Program - Accordion Overview > Sample Elective Courses\" (1 chunk)\n  - \"Noncredit Courses > Advanced Linear Algebra for Machine Learning (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Brush up on the Basics (Optional resource)\" (1 chunk)\n  - \"Noncredit Courses > Career Seminar (Seminar, required)\" (1 chunk)\n  - \"Noncredit Courses > Introduction to Statistical Concepts (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Python for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > R for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Sample Elective Courses > Advanced Computer Vision with Deep Learning\" (2 chunks)\n  - \"Sample Elective Courses > Advanced Machine Learning and Artificial Intelligence\" (2 chunks)\n  - \"Sample Elective Courses > Applied Generative AI: Agents and Multimodal Intelligence\" (2 chunks)\n  - \"Sample Elective Courses > Bayesian Machine Learning with G"
+              },
+              {
+                "name": "list_page_sections",
+                "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/:\n  - \"2-Year Thesis Track Program > How many spots are available in the new 2-year program?\" (1 chunk)\n  - \"2-Year Thesis Track Program > If I am admitted to the In-Person, Full-Time 1-year program, may I take any of the 2-year program electives?\" (1 chunk)\n  - \"2-Year Thesis Track Program > May I switch between the 1- and 2-year programs after officially enrolling in the MS-ADS program?\" (1 chunk)\n  - \"2-Year Thesis Track Program > What is the 2-year program's thesis requirement?\" (1 chunk)\n  - \"2-Year Thesis Track Program > What is the new 2-year thesis track program (18 courses), and how is it different from the 1-year program (12 courses)?\" (2 chunks)\n  - \"2-Year Thesis Track Program > When can I apply for the 2-year thesis track program?\" (1 chunk)\n  - \"Application Process > Do I need to provide my recommenders with instructions?\" (1 chunk)\n  - \"Application Process > Does the admissions office allow recommenders to email their letter directly as an attachment to be included in an applicant’s file?\" (1 chunk)\n  - \"Application Process > How do I submit the materials that will accompany my Master's in Applied Data Science application?\" (1 chunk)\n  - \"Application Process > How will I be notified that I am admitted to the Master's in Applied Data Science program?\" (1 chunk)\n  - \"Application Process > I took the GRE and/or GMAT and want to include my score(s) with my Master's in Applied Data Science application.\" (1 chunk)\n  - \"Application Process > I took the TOEFL over two years ago. Can I still use those TOEFL results?\" (1 chunk)\n  - \"Application Process > If I am admitted to the Master's in Applied Data Science program, what do I do next?\" (1 chunk)\n  - \"Application Process > If I finish my Master's in Applied Data Science application before the deadline, will I receive my decision early?\" (1 chunk)\n  - \"Application Process > Is the GRE or GMAT required for th"
+              }
+            ],
+            "judger": null
+          },
+          {
+            "step": 2,
+            "tool_calls": [
+              {
+                "name": "fetch_section_chunks",
+                "args": {
+                  "url": "in_person_program",
+                  "section_breadcrumb": "In Person Program - Accordion Overview > Noncredit Courses"
+                }
+              },
+              {
+                "name": "fetch_section_chunks",
+                "args": {
+                  "url": "in_person_program",
+                  "section_breadcrumb": "Noncredit Courses > Brush up on the Basics (Optional resource)"
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "fetch_section_chunks",
+                "content": "Fetched 1 chunk(s) from \"In Person Program - Accordion Overview > Noncredit Courses\":\n\n[0] In Person Program | In Person Program - Accordion Overview > Noncredit Courses\n[Page: In Person Program | Section: In Person Program - Accordion Overview > Noncredit Courses]\n\nNoncredit Courses:\nCareer Seminar (Seminar, required), Introduction to Statistical Concepts (Foundational, optional), R for Data Science (Foundational, optional), Python for Data Science (Foundational, o..."
+              },
+              {
+                "name": "fetch_section_chunks",
+                "content": "Fetched 1 chunk(s) from \"Noncredit Courses > Brush up on the Basics (Optional resource)\":\n\n[0] In Person Program | Noncredit Courses > Brush up on the Basics (Optional resource)\n[Page: In Person Program | Section: Noncredit Courses > Brush up on the Basics (Optional resource)]\n\nIf you would like to gauge your preparation in Foundational course topics, we recommend specific Coursera courses that cover very similar topics. If you would like to gauge your preparation in Founda..."
+              }
+            ],
+            "judger": {
+              "completeness": "partial",
+              "useful_indices": [
+                0,
+                1
+              ],
+              "decision": "done",
+              "candidate_chunk_count": 2,
+              "accepted_chunk_count": 2
+            }
+          }
+        ],
+        "evidence": [
+          {
+            "text": "[Page: In Person Program | Section: In Person Program - Accordion Overview > Noncredit Courses]\n\nNoncredit Courses:\nCareer Seminar (Seminar, required), Introduction to Statistical Concepts (Foundational, optional), R for Data Science (Foundational, optional), Python for Data Science (Foundational, optional), Advanced Linear Algebra for Machine Learning (Foundational, optional), Brush up on the Basics (Optional resource)",
+            "chunk_id": "education__masters_programs__in_person_program__noncredit_courses__15",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+            "page_title": "In Person Program",
+            "section": "Noncredit Courses",
+            "section_breadcrumb": "In Person Program - Accordion Overview > Noncredit Courses",
+            "content_type": "accordion_overview",
+            "program_type": "in_person",
+            "distance": 0.0
+          },
+          {
+            "text": "[Page: In Person Program | Section: Noncredit Courses > Career Seminar (Seminar, required)]\n\nThe Pass/Fail Career Seminar supports the development of industry professional skills, job and/or internship searches, and other in-demand areas of competency among today’s employers. Students enroll in the Career Seminar each quarter in order to engage in unique content throughout their degree program. Students with significant full-time work experience may be eligible to waive this course. 0 units, no cost.",
+            "chunk_id": "education__masters_programs__in_person_program__career_seminar_seminar_required__18",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+            "page_title": "In Person Program",
+            "section": "Career Seminar (Seminar, required)",
+            "section_breadcrumb": "Noncredit Courses > Career Seminar (Seminar, required)",
+            "content_type": "text",
+            "program_type": "in_person",
+            "distance": 0.0
+          },
+          {
+            "text": "[Page: In Person Program | Section: Noncredit Courses > Brush up on the Basics (Optional resource)]\n\nIf you would like to gauge your preparation in Foundational course topics, we recommend specific Coursera courses that cover very similar topics. If you would like to gauge your preparation in Foundational course topics, we recommend specific Coursera courses that cover very similar topics. Four Coursera courses cover very similar topics. You can review the Coursera curricula to see if you are already well-prepared, or if you like, study their materials to brush up on some or all of these topics. Mathematics for Machine Learning: Linear Algebra (offered by University College London) Basis Data Descriptors, Statistical Distributions, and Application to Business Decisions (offered by Rice University) Python for Data Science, AI, & Development (offered by IBM)",
+            "chunk_id": "education__masters_programs__in_person_program__brush_up_on_the_basics_optional_resource__23",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+            "page_title": "In Person Program",
+            "section": "Brush up on the Basics (Optional resource)",
+            "section_breadcrumb": "Noncredit Courses > Brush up on the Basics (Optional resource)",
+            "content_type": "text",
+            "program_type": "in_person",
+            "distance": 0.0
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 11825,
+          "completion_tokens": 865,
+          "total_tokens": 12690,
+          "llm_calls": 10
+        },
+        "metrics": {
+          "tool_calls": 8,
+          "loop_count": 4,
+          "evidence_count": 3,
+          "llm_calls": 10,
+          "judge_calls": null,
+          "valid_fetch_count": null,
+          "invalid_fetch_count": null,
+          "fallback_triggered": null
+        }
+      }
+    },
+    "pipeline_grag_v2": {
+      "pipeline_id": "pipeline_grag_v2",
+      "display_name": "GRAG v2",
+      "answer": "In the In-Person MS-ADS program, the noncredit courses are:\n\n- **Career Seminar** — required (Pass/Fail, 0 units, no cost). Students enroll each quarter; those with significant full-time work experience may be eligible to waive it [2].\n- **Introduction to Statistical Concepts** — optional (0 units, no cost), held in the five weeks before your first quarter [3].\n- **R for Data Science** — optional (0 units, no cost), held in the five weeks before your first quarter [4].\n- **Python for Data Science** — optional (0 units, no cost), held concurrently with the first five weeks of your first quarter [5].\n- **Advanced Linear Algebra for Machine Learning** — optional (0 units, no cost), held concurrently with the second five weeks of your first quarter [6].\n- **Brush up on the Basics** — optional resource, recommending specific Coursera courses to gauge preparation [7].",
+      "sources": [
+        {
+          "page_title": "In-Person Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P2"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P2] In-Person Program\n[N1] Page Introduction — Section (1 content block)\n[N2] Tailor Your Data Science Journey — Section (1 content block)\n[N3] 1-Year 12 Course Program (Full- and Part-Time Options) — Section (1 content block)\n[N4] 2-Year Thesis Track, 18 Course Program (Full-Time Only) — Section (2 content blocks)\n[N5] Comparison Chart — Section (1 content block)\n[N6] Your Career Success — Section (1 content block)\n[N7] Your Engagement — Section (1 content block)\n[N8] Your Student Experience — Section (1 content block)\n[N9] Career Outcomes in Data Science — Section (1 content block)\n[N10] By and For Data Science Innovators — Section (1 content block)\n[N11] Get in Touch — Section (1 content block)\n[N12] Course Progression Tabs — ProgressionTabs (47 content blocks)\n    ├── [N13] Noncredit Courses — ProgressionTab (7 content blocks)\n        preview: This accordion contains: Career Seminar (Seminar, required); Introduction to Statistical Concepts (Foundational, optional); R for Data Science (Foundational, optional); Python for Data Science (Foundational, optional); Advanced Linear Algebra for Machine Learning (Foundational, optional); Brush up on the Basics (Optional resource)\n    ├── [N14] Core Courses — ProgressionTab (8 content blocks)\n        preview: This accordion contains: Time Series Analysis and Forecasting; Statistical Models for Data Science; Machine Learning I; Machine Learning II; Data Engineering Platforms for Analytics or Big Data and Cloud Computing; Leadership and Consulting for Data Science; Data Science Capstone Project\n    ├── [N15] Sample Elective Courses — ProgressionTab (32 content blocks)\n        ├── [N16] Accordion — Accordion (32 content blocks)\n            preview: This accordion contains: Advanced Computer Vision with Deep Learning; Advanced Machine Learning and Artificial Intelligence; Applied Generative AI: Agents and Multimodal Intelligence; Bayesian Machine Learning with Generative AI Applications; Causal Models for Data Science; Data Science for Algorithmic Marketing; Data Science for Healthcare; Data Visualization Techniques; Digital Marketing Analytics in Theory and Practice; Deep Reinforcement Learning; Generative AI: Principles and Applications; Machine Learning Operations; Next-Gen NLP: LLM and Agentic AI in Practice; Optimization and Simulation Methods for Data Science; Quantitative Finance: Methods and Applications; Real Time Intelligent Systems; Supply Chain Optimization"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "The question asks about noncredit courses in the In-Person MS-ADS program. P2 is the dedicated page for the In-Person Program, which likely contains details about required and optional courses, including any noncredit components. Inspecting P2 first is the most direct path to find this information."
+        },
+        {
+          "step": 2,
+          "tool_calls": [
+            {
+              "name": "fetch_graph_content",
+              "args": {
+                "node_refs": [
+                  "N13"
+                ]
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_graph_content",
+              "content": "[N13] Noncredit Courses — path: In-Person Program > Noncredit Courses\n  [N13.1] Accordion\n    [E1] (structure summary) This accordion contains: Career Seminar (Seminar, required); Introduction to Statistical Concepts (Foundational, optional); R for Data Science (Foundational, optional); Python for Data Science (Foundational, optional); Advanced Linear Algebra for Machine Learning (Foundational, optional); Brush up on the Basics (Optional resource)\n    [N13.1.1] Career Seminar (Seminar, required)\n      [E2] The Pass/Fail Career Seminar supports the development of industry professional skills, job and/or internship searches, and other in-demand areas of competency among today’s employers. Students enroll in the Career Seminar each quarter in order to engage in unique content throughout their degree program. Students with significant full-time work experience may be eligible to waive this course. 0 units, no cost.\n    [N13.1.2] Introduction to Statistical Concepts (Foundational, optional)\n      [E3] This course is held in the five weeks leading up to the start of your first quarter and provides general exposure to basic statistical concepts necessary for success in advanced courses in the program. 0 units, no cost.\n    [N13.1.3] R for Data Science (Foundational, optional)\n      [E4] This course is held the five weeks leading up to the start of your first quarter and is an introduction to the essential concepts and techniques for the statistical computing language R. 0 units, no cost.\n    [N13.1.4] Python for Data Science (Foundational, optional)\n      [E5] This course is held concurrently with the first five weeks of your first quarter in the program and starts with an introduction to the Python programming language basic syntax and environment. 0 units, no cost.\n    [N13.1.5] Advanced Linear Algebra for Machine Learning (Foundational, optional)\n      [E6] This course is held concurrently with the second five weeks of your first quarter in the program and is focused on the theoretical concepts and real-life applications of linear algebra for machine learning. 0 units, no cost.\n    [N13.1.6] Brush up on the Basics (Optional resource)\n      [E7] If you would like to gauge your preparation in Foundational course topics, we recommend specific Coursera courses that cover very similar topics.\nFour Coursera courses cover very similar topics. You can review the Coursera curricula to see if you are already well-prepared, or if you like, study their materials to brush up on some or all of these topics.\nMathematics for Machine Learning: Linear Algebra (offered by University College London)\nBasis Data Descriptors, Statistical Distributions, and Application to Business Decisions (offered by Rice University)\nPython for Data Science, AI, & Development (offered by IBM)"
+            }
+          ],
+          "judger": {
+            "node_assessments": [
+              {
+                "node_ref": "N13",
+                "keep_evidence": [
+                  "E1",
+                  "E2",
+                  "E3",
+                  "E4",
+                  "E5",
+                  "E6",
+                  "E7"
+                ],
+                "comment": "E1 provides a structural summary listing all noncredit courses and their required/optional status. E2 details the required Career Seminar. E3-E6 detail the optional foundational courses. E7 describes an optional resource. All directly support identifying required vs optional noncredit courses."
+              }
+            ]
+          },
+          "decision_reason": "The question asks about noncredit courses in the In-Person MS-ADS program. Page P2 has a node labeled 'Noncredit Courses' (N13) which is directly relevant. Fetching this node will provide the required and optional noncredit course details."
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E1",
+          "status": "accepted",
+          "page_title": "In-Person Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program",
+          "text": "This accordion contains: Career Seminar (Seminar, required); Introduction to Statistical Concepts (Foundational, optional); R for Data Science (Foundational, optional); Python for Data Science (Foundational, optional); Advanced Linear Algebra for Machine Learning (Foundational, optional); Brush up on the Basics (Optional resource)",
+          "path": [
+            "In-Person Program",
+            "Noncredit Courses",
+            "Accordion"
+          ],
+          "section_breadcrumb": "In-Person Program > Noncredit Courses > Accordion",
+          "visible_type": "structure summary",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N13"
+            }
+          ],
+          "chunk_id": "chunk:43b472b1613e6c46",
+          "owner_node_id": "accordion:f113c2c8ce26d34e",
+          "page_id": "page:fe9d95e97a7ee76f",
+          "internal_metadata": {
+            "source_type": "accordion_index",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E2",
+          "status": "accepted",
+          "page_title": "In-Person Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program",
+          "text": "The Pass/Fail Career Seminar supports the development of industry professional skills, job and/or internship searches, and other in-demand areas of competency among today’s employers. Students enroll in the Career Seminar each quarter in order to engage in unique content throughout their degree program. Students with significant full-time work experience may be eligible to waive this course. 0 units, no cost.",
+          "path": [
+            "In-Person Program",
+            "Noncredit Courses",
+            "Career Seminar (Seminar, required)"
+          ],
+          "section_breadcrumb": "In-Person Program > Noncredit Courses > Career Seminar (Seminar, required)",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N13"
+            }
+          ],
+          "chunk_id": "chunk:b04b45330f5ea251",
+          "owner_node_id": "accordion_item:5cab176f51f52b86",
+          "page_id": "page:fe9d95e97a7ee76f",
+          "internal_metadata": {
+            "source_type": "p",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E3",
+          "status": "accepted",
+          "page_title": "In-Person Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program",
+          "text": "This course is held in the five weeks leading up to the start of your first quarter and provides general exposure to basic statistical concepts necessary for success in advanced courses in the program. 0 units, no cost.",
+          "path": [
+            "In-Person Program",
+            "Noncredit Courses",
+            "Introduction to Statistical Concepts (Foundational, optional)"
+          ],
+          "section_breadcrumb": "In-Person Program > Noncredit Courses > Introduction to Statistical Concepts (Foundational, optional)",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N13"
+            }
+          ],
+          "chunk_id": "chunk:e2b3a25b452811f8",
+          "owner_node_id": "accordion_item:f237587371bfcb40",
+          "page_id": "page:fe9d95e97a7ee76f",
+          "internal_metadata": {
+            "source_type": "p",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E4",
+          "status": "accepted",
+          "page_title": "In-Person Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program",
+          "text": "This course is held the five weeks leading up to the start of your first quarter and is an introduction to the essential concepts and techniques for the statistical computing language R. 0 units, no cost.",
+          "path": [
+            "In-Person Program",
+            "Noncredit Courses",
+            "R for Data Science (Foundational, optional)"
+          ],
+          "section_breadcrumb": "In-Person Program > Noncredit Courses > R for Data Science (Foundational, optional)",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N13"
+            }
+          ],
+          "chunk_id": "chunk:031ac2a63e1c7a03",
+          "owner_node_id": "accordion_item:7da9977765b90538",
+          "page_id": "page:fe9d95e97a7ee76f",
+          "internal_metadata": {
+            "source_type": "p",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E5",
+          "status": "accepted",
+          "page_title": "In-Person Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program",
+          "text": "This course is held concurrently with the first five weeks of your first quarter in the program and starts with an introduction to the Python programming language basic syntax and environment. 0 units, no cost.",
+          "path": [
+            "In-Person Program",
+            "Noncredit Courses",
+            "Python for Data Science (Foundational, optional)"
+          ],
+          "section_breadcrumb": "In-Person Program > Noncredit Courses > Python for Data Science (Foundational, optional)",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N13"
+            }
+          ],
+          "chunk_id": "chunk:dafd4f833cc3f304",
+          "owner_node_id": "accordion_item:276b0baf6117b96c",
+          "page_id": "page:fe9d95e97a7ee76f",
+          "internal_metadata": {
+            "source_type": "p",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E6",
+          "status": "accepted",
+          "page_title": "In-Person Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program",
+          "text": "This course is held concurrently with the second five weeks of your first quarter in the program and is focused on the theoretical concepts and real-life applications of linear algebra for machine learning. 0 units, no cost.",
+          "path": [
+            "In-Person Program",
+            "Noncredit Courses",
+            "Advanced Linear Algebra for Machine Learning (Foundational, optional)"
+          ],
+          "section_breadcrumb": "In-Person Program > Noncredit Courses > Advanced Linear Algebra for Machine Learning (Foundational, optional)",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N13"
+            }
+          ],
+          "chunk_id": "chunk:de48218ddb0580d4",
+          "owner_node_id": "accordion_item:3a5afb33231d1b6e",
+          "page_id": "page:fe9d95e97a7ee76f",
+          "internal_metadata": {
+            "source_type": "p",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E7",
+          "status": "accepted",
+          "page_title": "In-Person Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program",
+          "text": "If you would like to gauge your preparation in Foundational course topics, we recommend specific Coursera courses that cover very similar topics.\nFour Coursera courses cover very similar topics. You can review the Coursera curricula to see if you are already well-prepared, or if you like, study their materials to brush up on some or all of these topics.\nMathematics for Machine Learning: Linear Algebra (offered by University College London)\nBasis Data Descriptors, Statistical Distributions, and Application to Business Decisions (offered by Rice University)\nPython for Data Science, AI, & Development (offered by IBM)",
+          "path": [
+            "In-Person Program",
+            "Noncredit Courses",
+            "Brush up on the Basics (Optional resource)"
+          ],
+          "section_breadcrumb": "In-Person Program > Noncredit Courses > Brush up on the Basics (Optional resource)",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N13"
+            }
+          ],
+          "chunk_id": "chunk:df1c19ea8a0324f7",
+          "owner_node_id": "accordion_item:49865757aee6bfb2",
+          "page_id": "page:fe9d95e97a7ee76f",
+          "internal_metadata": {
+            "source_type": "body_text",
+            "score": null,
+            "score_breakdown": {}
+          }
+        }
+      ],
+      "time_sec": 12.743,
+      "low_confidence": false,
+      "error": null,
+      "progress_summary": {
+        "summary_covering": "Page P2 (In-Person Program): The node 'Noncredit Courses' (N13) was fetched and provided comprehensive evidence. It lists all noncredit courses with their required/optional status: Career Seminar (required), Introduction to Statistical Concepts (optional), R for Data Science (optional), Python for Data Science (optional), Advanced Linear Algebra for Machine Learning (optional), and an optional resource 'Brush up on the Basics'. All parts of the question are covered by accepted evidence E1-E7. No missing information.",
+        "decision_trace_narrative": "Turn 1: The agent identified that the question asks about noncredit courses in the In-Person MS-ADS program. It noted that page P2 has a node labeled 'Noncredit Courses' (N13) directly relevant. It fetched that node, which returned OK. The fetch provided all necessary details, and the agent accepted the evidence. No re-queries or invalid references occurred."
+      },
+      "raw_debug": {
+        "response": {
+          "answer": "In the In-Person MS-ADS program, the noncredit courses are:\n\n- **Career Seminar** — required (Pass/Fail, 0 units, no cost). Students enroll each quarter; those with significant full-time work experience may be eligible to waive it [2].\n- **Introduction to Statistical Concepts** — optional (0 units, no cost), held in the five weeks before your first quarter [3].\n- **R for Data Science** — optional (0 units, no cost), held in the five weeks before your first quarter [4].\n- **Python for Data Science** — optional (0 units, no cost), held concurrently with the first five weeks of your first quarter [5].\n- **Advanced Linear Algebra for Machine Learning** — optional (0 units, no cost), held concurrently with the second five weeks of your first quarter [6].\n- **Brush up on the Basics** — optional resource, recommending specific Coursera courses to gauge preparation [7].",
+          "citations": [
+            {
+              "index": 2,
+              "title": "In-Person Program",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program",
+              "snippet": "The Pass/Fail Career Seminar supports the development of industry professional skills, job and/or internship searches, and other in-demand areas of competency among today’s employe"
+            },
+            {
+              "index": 3,
+              "title": "In-Person Program",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program",
+              "snippet": "This course is held in the five weeks leading up to the start of your first quarter and provides general exposure to basic statistical concepts necessary for success in advanced co"
+            },
+            {
+              "index": 4,
+              "title": "In-Person Program",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program",
+              "snippet": "This course is held the five weeks leading up to the start of your first quarter and is an introduction to the essential concepts and techniques for the statistical computing langu"
+            },
+            {
+              "index": 5,
+              "title": "In-Person Program",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program",
+              "snippet": "This course is held concurrently with the first five weeks of your first quarter in the program and starts with an introduction to the Python programming language basic syntax and "
+            },
+            {
+              "index": 6,
+              "title": "In-Person Program",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program",
+              "snippet": "This course is held concurrently with the second five weeks of your first quarter in the program and is focused on the theoretical concepts and real-life applications of linear alg"
+            },
+            {
+              "index": 7,
+              "title": "In-Person Program",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program",
+              "snippet": "If you would like to gauge your preparation in Foundational course topics, we recommend specific Coursera courses that cover very similar topics. Four Coursera courses cover very s"
+            }
+          ],
+          "debug": {
+            "tool_turns": 2,
+            "stop_reason": "sufficient_evidence",
+            "evidence_count": 7,
+            "sufficient": true,
+            "missing": "",
+            "log_path": "C:\\Users\\ss363\\Desktop\\Archive\\ads_rag_chatbot\\pipeline_grag_v2\\log\\2026-08-04_014607_a8fdfeaeb767.json",
+            "run_id": "a8fdfeaeb767"
+          }
+        },
+        "run_id": "a8fdfeaeb767",
+        "rewritten_queries": [
+          {
+            "id": "q1",
+            "query": "Which noncredit courses are required or optional in the In-Person MS-ADS program?",
+            "target": "university-program"
+          }
+        ],
+        "judgment": {
+          "sufficient": true,
+          "missing": "",
+          "comment": "Page P2 (In-Person Program): The node 'Noncredit Courses' (N13) was fetched and provided comprehensive evidence. It lists all noncredit courses with their required/optional status: Career Seminar (required), Introduction to Statistical Concepts (optional), R for Data Science (optional), Python for Data Science (optional), Advanced Linear Algebra for Machine Learning (optional), and an optional resource 'Brush up on the Basics'. All parts of the question are covered by accepted evidence E1-E7. No missing information."
+        },
+        "stop_reason": "sufficient_evidence",
+        "fallback": {
+          "triggered": false,
+          "pages_selected": [],
+          "reason": ""
+        },
+        "metrics": {
+          "agent_turns": 2,
+          "tool_calls": 2,
+          "judge_calls": 1,
+          "llm_calls": 7,
+          "valid_fetch_count": 1,
+          "invalid_fetch_count": 0,
+          "accepted_evidence_count": 7,
+          "stop_reason": "sufficient_evidence",
+          "fallback_triggered": false
+        },
+        "usage": {
+          "prompt_tokens": 6401,
+          "completion_tokens": 869,
+          "total_tokens": 7270,
+          "llm_calls": 7
+        },
+        "progress_summary_history": [
+          {
+            "turn": 1,
+            "summary_covering": "No pages have been inspected yet. The investigation has not started, so there is no information about noncredit courses in the In-Person MS-ADS program. All required and optional noncredit courses remain unknown.",
+            "decision_trace_narrative": "Turn 1: The agent decided to inspect page P2, reasoning that it is the dedicated page for the In-Person MS-ADS program and likely contains details about required and optional courses, including noncredit components. The inspection was successful, but no nodes have been evaluated yet, so no information has been extracted.",
+            "sufficient": false,
+            "missing": "All information about noncredit courses (required and optional) in the In-Person MS-ADS program."
+          },
+          {
+            "turn": 2,
+            "summary_covering": "Page P2 (In-Person Program): The node 'Noncredit Courses' (N13) was fetched and provided comprehensive evidence. It lists all noncredit courses with their required/optional status: Career Seminar (required), Introduction to Statistical Concepts (optional), R for Data Science (optional), Python for Data Science (optional), Advanced Linear Algebra for Machine Learning (optional), and an optional resource 'Brush up on the Basics'. All parts of the question are covered by accepted evidence E1-E7. No missing information.",
+            "decision_trace_narrative": "Turn 1: The agent identified that the question asks about noncredit courses in the In-Person MS-ADS program. It noted that page P2 has a node labeled 'Noncredit Courses' (N13) directly relevant. It fetched that node, which returned OK. The fetch provided all necessary details, and the agent accepted the evidence. No re-queries or invalid references occurred.",
+            "sufficient": true,
+            "missing": ""
+          }
+        ],
+        "node_evaluation_log": {
+          "P2 (In-Person Program)": {
+            "N13 (Noncredit Courses)": {
+              "node_id": "progression_tab:23cc386fb18e9018",
+              "path": [
+                "In-Person Program",
+                "Noncredit Courses"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E1",
+                  "chunk_id": "chunk:43b472b1613e6c46",
+                  "text_preview": "This accordion contains: Career Seminar (Seminar, required); Introduction to Statistical Concepts (Foundational, optional); R for Data Science (Founda"
+                },
+                {
+                  "evidence_ref": "E2",
+                  "chunk_id": "chunk:b04b45330f5ea251",
+                  "text_preview": "The Pass/Fail Career Seminar supports the development of industry professional skills, job and/or internship searches, and other in-demand areas of co"
+                },
+                {
+                  "evidence_ref": "E3",
+                  "chunk_id": "chunk:e2b3a25b452811f8",
+                  "text_preview": "This course is held in the five weeks leading up to the start of your first quarter and provides general exposure to basic statistical concepts necess"
+                },
+                {
+                  "evidence_ref": "E4",
+                  "chunk_id": "chunk:031ac2a63e1c7a03",
+                  "text_preview": "This course is held the five weeks leading up to the start of your first quarter and is an introduction to the essential concepts and techniques for t"
+                },
+                {
+                  "evidence_ref": "E5",
+                  "chunk_id": "chunk:dafd4f833cc3f304",
+                  "text_preview": "This course is held concurrently with the first five weeks of your first quarter in the program and starts with an introduction to the Python programm"
+                },
+                {
+                  "evidence_ref": "E6",
+                  "chunk_id": "chunk:de48218ddb0580d4",
+                  "text_preview": "This course is held concurrently with the second five weeks of your first quarter in the program and is focused on the theoretical concepts and real-l"
+                },
+                {
+                  "evidence_ref": "E7",
+                  "chunk_id": "chunk:df1c19ea8a0324f7",
+                  "text_preview": "If you would like to gauge your preparation in Foundational course topics, we recommend specific Coursera courses that cover very similar topics.\nFour"
+                }
+              ],
+              "comment": "E1 provides a structural summary listing all noncredit courses and their required/optional status. E2 details the required Career Seminar. E3-E6 detail the optional foundational courses. E7 describes an optional resource. All directly support identifying required vs optional noncredit courses."
+            }
+          }
+        },
+        "log_path": "C:\\Users\\ss363\\Desktop\\Archive\\ads_rag_chatbot\\pipeline_grag_v2\\log\\2026-08-04_014607_a8fdfeaeb767.json"
+      }
+    }
+  },
+  "run_batch_id": "20260804T013937"
+}

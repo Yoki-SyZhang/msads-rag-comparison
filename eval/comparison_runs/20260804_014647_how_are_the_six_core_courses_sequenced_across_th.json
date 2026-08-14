@@ -1,0 +1,1436 @@
+{
+  "schema_version": 2,
+  "timestamp": "2026-08-04T01:46:47.351697",
+  "question": "How are the six core courses sequenced across the sample full-time and part-time schedules?",
+  "question_id": "C10",
+  "question_meta": {
+    "category": "curriculum",
+    "type": "multi_fact",
+    "difficulty": "hard",
+    "expected_behavior": "direct_answer"
+  },
+  "results": {
+    "pipeline_flatrag": {
+      "pipeline_id": "pipeline_flatrag",
+      "display_name": "FlatRAG",
+      "answer": "Based on the retrieved context, here is how the six core courses are sequenced in the sample full-time and part-time schedules:\n\n**Full-Time Schedule:**\n- **Quarter 1:** Statistical Models for Data Science, Leadership and Consulting for Data Science, and Data Engineering Platforms for Analytics (or Big Data and Cloud Computing) [1]\n- **Quarter 2:** Machine Learning I and Time Series Analysis and Forecasting [1]\n- **Quarter 3:** Machine Learning II [1]\n\n**Part-Time Schedule:**\n- **Quarter 1:** Statistical Models for Data Science and Data Engineering Platforms for Analytics (or Big Data and Cloud Computing) [2]\n- **Quarter 2:** Machine Learning I and Time Series Analysis and Forecasting [2]\n- **Quarter 3:** Machine Learning II and Leadership and Consulting for Data Science [2]\n\nIn both schedules, the core courses follow the same general progression: Statistical Models and Data Engineering come first, followed by Machine Learning I and Time Series, with Machine Learning II appearing later. The main difference is that the full-time schedule compresses Leadership and Consulting into Quarter 1, while the part-time schedule spreads it out to Quarter 3 [1][2].\n\nSources:\n1. [Course Progressions](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/)\n2. [Course Progressions](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/)",
+      "sources": [
+        {
+          "page_title": "Course Progressions",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "tool_calls": [
+            {
+              "name": "list_page_sections",
+              "args": {
+                "url": "online_program"
+              }
+            },
+            {
+              "name": "list_page_sections",
+              "args": {
+                "url": "course_progressions"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "list_page_sections",
+              "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/online-program/:\n  - \"Academic Rigor Meets Work/Life Balance\" (1 chunk)\n  - \"Additional Resources\" (1 chunk)\n  - \"Capstone (2)\" (1 chunk)\n  - \"Career Seminar (noncredit, required)\" (1 chunk)\n  - \"Core Courses (6)\" (1 chunk)\n  - \"Core Courses > Data Engineering Platforms for Analytics or Big Data and Cloud Computing\" (1 chunk)\n  - \"Core Courses > Data Science Capstone Project\" (1 chunk)\n  - \"Core Courses > Leadership and Consulting for Data Science\" (1 chunk)\n  - \"Core Courses > Machine Learning I\" (1 chunk)\n  - \"Core Courses > Machine Learning II\" (1 chunk)\n  - \"Core Courses > Statistical Models for Data Science\" (1 chunk)\n  - \"Core Courses > Time Series Analysis and Forecasting\" (1 chunk)\n  - \"Curriculum\" (1 chunk)\n  - \"Elective Courses (4)\" (1 chunk)\n  - \"Foundational Courses (noncredit, optional)\" (2 chunks)\n  - \"Get in Touch\" (1 chunk)\n  - \"In-Person ‘Immersion Weekend’\" (5 chunks)\n  - \"Master Data Science, Master Your Career\" (1 chunk)\n  - \"Noncredit Courses > Advanced Linear Algebra for Machine Learning (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Brush up on the Basics (Optional resource)\" (1 chunk)\n  - \"Noncredit Courses > Career Seminar (Seminar, required)\" (1 chunk)\n  - \"Noncredit Courses > Introduction to Statistical Concepts (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Python for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > R for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Note for International Students\" (1 chunk)\n  - \"Online Program\" (1 chunk)\n  - \"Online Program - Accordion Overview > Core Courses\" (1 chunk)\n  - \"Online Program - Accordion Overview > Noncredit Courses\" (1 chunk)\n  - \"Online Program - Accordion Overview > Sample Elective Courses\" (1 chunk)\n  - \"Sample Elective Courses > Advanced Computer Vision with Deep Learning\" (2 chunks)\n  - \"Sample Elective Courses > Advanced Machine Learning and Artificial"
+            },
+            {
+              "name": "list_page_sections",
+              "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/:\n  - \"Course Progressions - Accordion Overview > Sample 2-Year Full-Time Schedule\" (1 chunk)\n  - \"Course Progressions - Accordion Overview > Sample Full-Time Schedule\" (1 chunk)\n  - \"Course Progressions - Accordion Overview > Sample Part-Time Schedule\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 5 > Elective 5\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 5 > Elective 6\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 5 > Thesis Course I\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 6 > Elective 7\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 6 > Elective 8\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 6 > Thesis Course II\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Prequarter > Introduction to Statistical Concepts (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Prequarter > R for Data Science (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Advanced Linear Algebra for Machine Learning (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Career Seminar (Required)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Data Engineering Platforms for Analytics or Big Data and Cloud Computing\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Leadership and Consulting for Data Science\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Python for Data Science (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Statistical Models for Data Science\" (1 chunk)\n  - \"Course Progressions > Sample Full-Ti"
+            }
+          ],
+          "judger": null
+        },
+        {
+          "step": 2,
+          "tool_calls": [
+            {
+              "name": "fetch_section_chunks",
+              "args": {
+                "url": "course_progressions",
+                "section_breadcrumb": "Course Progressions - Accordion Overview > Sample Full-Time Schedule"
+              }
+            },
+            {
+              "name": "fetch_section_chunks",
+              "args": {
+                "url": "course_progressions",
+                "section_breadcrumb": "Course Progressions - Accordion Overview > Sample Part-Time Schedule"
+              }
+            },
+            {
+              "name": "fetch_section_chunks",
+              "args": {
+                "url": "online_program",
+                "section_breadcrumb": "Core Courses (6)"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_section_chunks",
+              "content": "Fetched 1 chunk(s) from \"Course Progressions - Accordion Overview > Sample Full-Time Schedule\":\n\n[0] Course Progressions | Course Progressions - Accordion Overview > Sample Full-Time Schedule\n[Page: Course Progressions | Section: Course Progressions - Accordion Overview > Sample Full-Time Schedule]\n\nSample Full-Time Schedule:\n  Prequarter:\nIntroduction to Statistical Concepts (Foundational) [Optional, 5 Weeks], R for Data Science (Foundational) [Optional, 5 Weeks]\n  Quarter 1:\nPython for..."
+            },
+            {
+              "name": "fetch_section_chunks",
+              "content": "Fetched 1 chunk(s) from \"Course Progressions - Accordion Overview > Sample Part-Time Schedule\":\n\n[0] Course Progressions | Course Progressions - Accordion Overview > Sample Part-Time Schedule\n[Page: Course Progressions | Section: Course Progressions - Accordion Overview > Sample Part-Time Schedule]\n\nSample Part-Time Schedule:\n  Prequarter:\nIntroduction to Statistical Concepts (Foundational) [Optional, 5 Weeks], R for Data Science (Foundational) [Optional, 5 Weeks]\n  Quarter 1:\nPython for..."
+            },
+            {
+              "name": "fetch_section_chunks",
+              "content": "Fetched 1 chunk(s) from \"Core Courses (6)\":\n\n[0] Online Program | Core Courses (6)\n[Page: Online Program | Section: Core Courses (6)]\n\nYou will complete 6 core courses toward your Master’s in Applied Data Science degree. Core courses allow you to build your theoretical data science knowledge and practice applying this theory to examine real-world business problems."
+            }
+          ],
+          "judger": {
+            "completeness": "partial",
+            "useful_indices": [
+              0,
+              1
+            ],
+            "decision": "done",
+            "candidate_chunk_count": 3,
+            "accepted_chunk_count": 2
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "text": "[Page: Course Progressions | Section: Course Progressions - Accordion Overview > Sample Full-Time Schedule]\n\nSample Full-Time Schedule:\n  Prequarter:\nIntroduction to Statistical Concepts (Foundational) [Optional, 5 Weeks], R for Data Science (Foundational) [Optional, 5 Weeks]\n  Quarter 1:\nPython for Data Science (Foundational) [Optional, 10 Weeks], Advanced Linear Algebra for Machine Learning (Foundational) [Optional, 10 Weeks], Statistical Models for Data Science [Core, Letter Grade, 10 Weeks], Leadership and Consulting for Data Science [Core, Letter Grade, 10 Weeks], Data Engineering Platforms for Analytics or Big Data and Cloud Computing [Core (Choose 1), Letter Grade, 10 Weeks], Career Seminar (Required) [Seminar, Pass/Fail, 10 Weeks]\n  Quarter 2:\nMachine Learning I [Core, Letter Grade, 10 Weeks], Time Series Analysis and Forecasting [Core, Letter Grade, 10 Weeks], Elective 1 [Elective, Letter Grade, 10 Weeks], Career Seminar (Required) [Seminar, Pass/Fail, 10 Weeks]\n  Quarter 3:\nMachine Learning II [Core, Letter Grade, 10 Weeks], Elective 2 [Elective, Letter Grade, 10 Weeks], Data Science Capstone Project [Capstone, Letter Grade, 10 Weeks], Career Seminar (Required) [Seminar, Pass/Fail, 10 Weeks]\n  Quarter 4:\nElective 3 [Elective, Letter Grade, 10 Weeks], Elective 4 [Elective, Letter Grade, 10 Weeks], Data Science Capstone Project [Capstone, Letter Grade, 10 Weeks], Career Seminar (Required) [Seminar, Pass/Fail, 10 Weeks]",
+          "chunk_id": "education__masters_programs__ms_in_applied_data_science__course_progressions__sample_full_time_schedule__0",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/",
+          "page_title": "Course Progressions",
+          "section": "Sample Full-Time Schedule",
+          "section_breadcrumb": "Course Progressions - Accordion Overview > Sample Full-Time Schedule",
+          "content_type": "accordion_overview",
+          "program_type": "general",
+          "distance": 0.0
+        },
+        {
+          "text": "[Page: Course Progressions | Section: Course Progressions - Accordion Overview > Sample Part-Time Schedule]\n\nSample Part-Time Schedule:\n  Prequarter:\nIntroduction to Statistical Concepts (Foundational) [Optional, 5 Weeks], R for Data Science (Foundational) [Optional, 5 Weeks]\n  Quarter 1:\nPython for Data Science (Foundational) [Optional, 10 Weeks], Advanced Linear Algebra for Machine Learning (Foundational) [Optional, 10 Weeks], Statistical Models for Data Science [Core, Letter Grade, 10 Weeks], Data Engineering Platforms for Analytics or Big Data and Cloud Computing [Core, Letter Grade, 10 Weeks]\n  Quarter 2:\nMachine Learning I [Core, Letter Grade, 10 Weeks], Time Series Analysis and Forecasting [Core, Letter Grade, 10 Weeks]\n  Quarter 3:\nMachine Learning II [Core, Letter Grade, 10 Weeks], Leadership and Consulting for Data Science [Core, Letter Grade, 10 Weeks]\n  Quarter 4:\nElective 1 [Elective, Letter Grade, 10 Weeks], Elective 2 [Elective, Letter Grade, 10 Weeks]\n  Quarter 5:\nData Science Capstone Project [Capstone, Letter Grade, 10 Weeks], Elective 3 [Elective, Letter Grade, 10 Weeks]\n  Quarter 6:\nData Science Capstone Project [Capstone, Letter Grade, 10 Weeks], Elective 4 [Elective, Letter Grade, 10 Weeks]",
+          "chunk_id": "education__masters_programs__ms_in_applied_data_science__course_progressions__sample_part_time_schedule__1",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/",
+          "page_title": "Course Progressions",
+          "section": "Sample Part-Time Schedule",
+          "section_breadcrumb": "Course Progressions - Accordion Overview > Sample Part-Time Schedule",
+          "content_type": "accordion_overview",
+          "program_type": "general",
+          "distance": 0.0
+        }
+      ],
+      "time_sec": 9.144,
+      "low_confidence": true,
+      "error": null,
+      "raw_debug": {
+        "answer": "Based on the retrieved context, here is how the six core courses are sequenced in the sample full-time and part-time schedules:\n\n**Full-Time Schedule:**\n- **Quarter 1:** Statistical Models for Data Science, Leadership and Consulting for Data Science, and Data Engineering Platforms for Analytics (or Big Data and Cloud Computing) [1]\n- **Quarter 2:** Machine Learning I and Time Series Analysis and Forecasting [1]\n- **Quarter 3:** Machine Learning II [1]\n\n**Part-Time Schedule:**\n- **Quarter 1:** Statistical Models for Data Science and Data Engineering Platforms for Analytics (or Big Data and Cloud Computing) [2]\n- **Quarter 2:** Machine Learning I and Time Series Analysis and Forecasting [2]\n- **Quarter 3:** Machine Learning II and Leadership and Consulting for Data Science [2]\n\nIn both schedules, the core courses follow the same general progression: Statistical Models and Data Engineering come first, followed by Machine Learning I and Time Series, with Machine Learning II appearing later. The main difference is that the full-time schedule compresses Leadership and Consulting into Quarter 1, while the part-time schedule spreads it out to Quarter 3 [1][2].\n\nSources:\n1. [Course Progressions](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/)\n2. [Course Progressions](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/)",
+        "sources": [
+          {
+            "page_title": "Course Progressions",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/"
+          }
+        ],
+        "completeness": "partial",
+        "low_confidence": true,
+        "attempts": 2,
+        "agent_steps": [
+          {
+            "step": 1,
+            "tool_calls": [
+              {
+                "name": "list_page_sections",
+                "args": {
+                  "url": "online_program"
+                }
+              },
+              {
+                "name": "list_page_sections",
+                "args": {
+                  "url": "course_progressions"
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "list_page_sections",
+                "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/online-program/:\n  - \"Academic Rigor Meets Work/Life Balance\" (1 chunk)\n  - \"Additional Resources\" (1 chunk)\n  - \"Capstone (2)\" (1 chunk)\n  - \"Career Seminar (noncredit, required)\" (1 chunk)\n  - \"Core Courses (6)\" (1 chunk)\n  - \"Core Courses > Data Engineering Platforms for Analytics or Big Data and Cloud Computing\" (1 chunk)\n  - \"Core Courses > Data Science Capstone Project\" (1 chunk)\n  - \"Core Courses > Leadership and Consulting for Data Science\" (1 chunk)\n  - \"Core Courses > Machine Learning I\" (1 chunk)\n  - \"Core Courses > Machine Learning II\" (1 chunk)\n  - \"Core Courses > Statistical Models for Data Science\" (1 chunk)\n  - \"Core Courses > Time Series Analysis and Forecasting\" (1 chunk)\n  - \"Curriculum\" (1 chunk)\n  - \"Elective Courses (4)\" (1 chunk)\n  - \"Foundational Courses (noncredit, optional)\" (2 chunks)\n  - \"Get in Touch\" (1 chunk)\n  - \"In-Person ‘Immersion Weekend’\" (5 chunks)\n  - \"Master Data Science, Master Your Career\" (1 chunk)\n  - \"Noncredit Courses > Advanced Linear Algebra for Machine Learning (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Brush up on the Basics (Optional resource)\" (1 chunk)\n  - \"Noncredit Courses > Career Seminar (Seminar, required)\" (1 chunk)\n  - \"Noncredit Courses > Introduction to Statistical Concepts (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Python for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > R for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Note for International Students\" (1 chunk)\n  - \"Online Program\" (1 chunk)\n  - \"Online Program - Accordion Overview > Core Courses\" (1 chunk)\n  - \"Online Program - Accordion Overview > Noncredit Courses\" (1 chunk)\n  - \"Online Program - Accordion Overview > Sample Elective Courses\" (1 chunk)\n  - \"Sample Elective Courses > Advanced Computer Vision with Deep Learning\" (2 chunks)\n  - \"Sample Elective Courses > Advanced Machine Learning and Artificial"
+              },
+              {
+                "name": "list_page_sections",
+                "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/:\n  - \"Course Progressions - Accordion Overview > Sample 2-Year Full-Time Schedule\" (1 chunk)\n  - \"Course Progressions - Accordion Overview > Sample Full-Time Schedule\" (1 chunk)\n  - \"Course Progressions - Accordion Overview > Sample Part-Time Schedule\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 5 > Elective 5\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 5 > Elective 6\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 5 > Thesis Course I\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 6 > Elective 7\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 6 > Elective 8\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 6 > Thesis Course II\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Prequarter > Introduction to Statistical Concepts (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Prequarter > R for Data Science (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Advanced Linear Algebra for Machine Learning (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Career Seminar (Required)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Data Engineering Platforms for Analytics or Big Data and Cloud Computing\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Leadership and Consulting for Data Science\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Python for Data Science (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Statistical Models for Data Science\" (1 chunk)\n  - \"Course Progressions > Sample Full-Ti"
+              }
+            ],
+            "judger": null
+          },
+          {
+            "step": 2,
+            "tool_calls": [
+              {
+                "name": "fetch_section_chunks",
+                "args": {
+                  "url": "course_progressions",
+                  "section_breadcrumb": "Course Progressions - Accordion Overview > Sample Full-Time Schedule"
+                }
+              },
+              {
+                "name": "fetch_section_chunks",
+                "args": {
+                  "url": "course_progressions",
+                  "section_breadcrumb": "Course Progressions - Accordion Overview > Sample Part-Time Schedule"
+                }
+              },
+              {
+                "name": "fetch_section_chunks",
+                "args": {
+                  "url": "online_program",
+                  "section_breadcrumb": "Core Courses (6)"
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "fetch_section_chunks",
+                "content": "Fetched 1 chunk(s) from \"Course Progressions - Accordion Overview > Sample Full-Time Schedule\":\n\n[0] Course Progressions | Course Progressions - Accordion Overview > Sample Full-Time Schedule\n[Page: Course Progressions | Section: Course Progressions - Accordion Overview > Sample Full-Time Schedule]\n\nSample Full-Time Schedule:\n  Prequarter:\nIntroduction to Statistical Concepts (Foundational) [Optional, 5 Weeks], R for Data Science (Foundational) [Optional, 5 Weeks]\n  Quarter 1:\nPython for..."
+              },
+              {
+                "name": "fetch_section_chunks",
+                "content": "Fetched 1 chunk(s) from \"Course Progressions - Accordion Overview > Sample Part-Time Schedule\":\n\n[0] Course Progressions | Course Progressions - Accordion Overview > Sample Part-Time Schedule\n[Page: Course Progressions | Section: Course Progressions - Accordion Overview > Sample Part-Time Schedule]\n\nSample Part-Time Schedule:\n  Prequarter:\nIntroduction to Statistical Concepts (Foundational) [Optional, 5 Weeks], R for Data Science (Foundational) [Optional, 5 Weeks]\n  Quarter 1:\nPython for..."
+              },
+              {
+                "name": "fetch_section_chunks",
+                "content": "Fetched 1 chunk(s) from \"Core Courses (6)\":\n\n[0] Online Program | Core Courses (6)\n[Page: Online Program | Section: Core Courses (6)]\n\nYou will complete 6 core courses toward your Master’s in Applied Data Science degree. Core courses allow you to build your theoretical data science knowledge and practice applying this theory to examine real-world business problems."
+              }
+            ],
+            "judger": {
+              "completeness": "partial",
+              "useful_indices": [
+                0,
+                1
+              ],
+              "decision": "done",
+              "candidate_chunk_count": 3,
+              "accepted_chunk_count": 2
+            }
+          }
+        ],
+        "evidence": [
+          {
+            "text": "[Page: Course Progressions | Section: Course Progressions - Accordion Overview > Sample Full-Time Schedule]\n\nSample Full-Time Schedule:\n  Prequarter:\nIntroduction to Statistical Concepts (Foundational) [Optional, 5 Weeks], R for Data Science (Foundational) [Optional, 5 Weeks]\n  Quarter 1:\nPython for Data Science (Foundational) [Optional, 10 Weeks], Advanced Linear Algebra for Machine Learning (Foundational) [Optional, 10 Weeks], Statistical Models for Data Science [Core, Letter Grade, 10 Weeks], Leadership and Consulting for Data Science [Core, Letter Grade, 10 Weeks], Data Engineering Platforms for Analytics or Big Data and Cloud Computing [Core (Choose 1), Letter Grade, 10 Weeks], Career Seminar (Required) [Seminar, Pass/Fail, 10 Weeks]\n  Quarter 2:\nMachine Learning I [Core, Letter Grade, 10 Weeks], Time Series Analysis and Forecasting [Core, Letter Grade, 10 Weeks], Elective 1 [Elective, Letter Grade, 10 Weeks], Career Seminar (Required) [Seminar, Pass/Fail, 10 Weeks]\n  Quarter 3:\nMachine Learning II [Core, Letter Grade, 10 Weeks], Elective 2 [Elective, Letter Grade, 10 Weeks], Data Science Capstone Project [Capstone, Letter Grade, 10 Weeks], Career Seminar (Required) [Seminar, Pass/Fail, 10 Weeks]\n  Quarter 4:\nElective 3 [Elective, Letter Grade, 10 Weeks], Elective 4 [Elective, Letter Grade, 10 Weeks], Data Science Capstone Project [Capstone, Letter Grade, 10 Weeks], Career Seminar (Required) [Seminar, Pass/Fail, 10 Weeks]",
+            "chunk_id": "education__masters_programs__ms_in_applied_data_science__course_progressions__sample_full_time_schedule__0",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/",
+            "page_title": "Course Progressions",
+            "section": "Sample Full-Time Schedule",
+            "section_breadcrumb": "Course Progressions - Accordion Overview > Sample Full-Time Schedule",
+            "content_type": "accordion_overview",
+            "program_type": "general",
+            "distance": 0.0
+          },
+          {
+            "text": "[Page: Course Progressions | Section: Course Progressions - Accordion Overview > Sample Part-Time Schedule]\n\nSample Part-Time Schedule:\n  Prequarter:\nIntroduction to Statistical Concepts (Foundational) [Optional, 5 Weeks], R for Data Science (Foundational) [Optional, 5 Weeks]\n  Quarter 1:\nPython for Data Science (Foundational) [Optional, 10 Weeks], Advanced Linear Algebra for Machine Learning (Foundational) [Optional, 10 Weeks], Statistical Models for Data Science [Core, Letter Grade, 10 Weeks], Data Engineering Platforms for Analytics or Big Data and Cloud Computing [Core, Letter Grade, 10 Weeks]\n  Quarter 2:\nMachine Learning I [Core, Letter Grade, 10 Weeks], Time Series Analysis and Forecasting [Core, Letter Grade, 10 Weeks]\n  Quarter 3:\nMachine Learning II [Core, Letter Grade, 10 Weeks], Leadership and Consulting for Data Science [Core, Letter Grade, 10 Weeks]\n  Quarter 4:\nElective 1 [Elective, Letter Grade, 10 Weeks], Elective 2 [Elective, Letter Grade, 10 Weeks]\n  Quarter 5:\nData Science Capstone Project [Capstone, Letter Grade, 10 Weeks], Elective 3 [Elective, Letter Grade, 10 Weeks]\n  Quarter 6:\nData Science Capstone Project [Capstone, Letter Grade, 10 Weeks], Elective 4 [Elective, Letter Grade, 10 Weeks]",
+            "chunk_id": "education__masters_programs__ms_in_applied_data_science__course_progressions__sample_part_time_schedule__1",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/",
+            "page_title": "Course Progressions",
+            "section": "Sample Part-Time Schedule",
+            "section_breadcrumb": "Course Progressions - Accordion Overview > Sample Part-Time Schedule",
+            "content_type": "accordion_overview",
+            "program_type": "general",
+            "distance": 0.0
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 6470,
+          "completion_tokens": 682,
+          "total_tokens": 7152,
+          "llm_calls": 6
+        },
+        "metrics": {
+          "tool_calls": 5,
+          "loop_count": 2,
+          "evidence_count": 2,
+          "llm_calls": 6,
+          "judge_calls": null,
+          "valid_fetch_count": null,
+          "invalid_fetch_count": null,
+          "fallback_triggered": null
+        }
+      }
+    },
+    "pipeline_grag_v2": {
+      "pipeline_id": "pipeline_grag_v2",
+      "display_name": "GRAG v2",
+      "answer": "In the sample full-time schedule, the six core courses are sequenced as follows: Quarter 1 includes Statistical Models for Data Science, Leadership and Consulting for Data Science, and a choice between Data Engineering Platforms for Analytics or Big Data and Cloud Computing [3][4][5][6]. Quarter 2 includes Machine Learning I and Time Series Analysis and Forecasting [7][8][9]. Quarter 3 includes Machine Learning II [10].\n\nIn the sample part-time schedule, the core courses are sequenced as: Quarter 1 includes Statistical Models for Data Science and Data Engineering Platforms for Analytics or Big Data and Cloud Computing [11][12][13]. Quarter 2 includes Machine Learning I and Time Series Analysis and Forecasting [14][15][16]. Quarter 3 includes Machine Learning II and Leadership and Consulting for Data Science [17][18][19].",
+      "sources": [
+        {
+          "page_title": "Course Progressions",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P4"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P4] Course Progressions\n[N1] Page Introduction — Section (1 content block)\n[N2] Flexible Formats — Section (1 content block)\n[N3] Curriculum Details — Section (4 content blocks)\n[N4] Course Progression Tabs — ProgressionTabs (144 content blocks)\n    ├── [N5] Sample Full-Time Schedule — ProgressionTab (44 content blocks)\n        ├── [N6] Prequarter • 5 Weeks — Quarter (4 content blocks)\n            preview: Prequarter • 5 Weeks includes: Optional: Introduction to Statistical Concepts (Foundational) (Optional), R for Data Science (Foundational) (Optional)\n        ├── [N7] Quarter 1 • 10 Weeks — Quarter (12 content blocks)\n            preview: Quarter 1 • 10 Weeks includes: Optional: Python for Data Science (Foundational) (Optional), Advanced Linear Algebra for Machine Learning (Foundational) (Optional); Core: Statistical Models for Data Science (Letter Grade); Core: Leadership and Consulting for Data Science (Letter Grade); Core (Choose 1): Data Engineering Platforms for Analytics or Big Data and Cloud Computing (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N8] Quarter 2 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 2 • 10 Weeks includes: Core: Machine Learning I (Letter Grade); Core: Time Series Analysis and Forecasting (Letter Grade); Elective: Elective 1 (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N9] Quarter 3 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 3 • 10 Weeks includes: Core: Machine Learning II (Letter Grade); Elective: Elective 2 (Letter Grade); Capstone: Data Science Capstone Project (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N10] Quarter 4 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 4 • 10 Weeks includes: Elective: Elective 3 (Letter Grade); Elective: Elective 4 (Letter Grade); Capstone: Data Science Capstone Project (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n    ├── [N11] Sample Part-Time Schedule — ProgressionTab (38 content blocks)\n        ├── [N12] Prequarter • 5 Weeks — Quarter (4 content blocks)\n            preview: Prequarter • 5 Weeks includes: Optional: Introduction to Statistical Concepts (Foundational) (Optional), R for Data Science (Foundational) (Optional)\n        ├── [N13] Quarter 1 • 10 Weeks — Quarter (8 content blocks)\n            preview: Quarter 1 • 10 Weeks includes: Optional: Python for Data Science (Foundational) (Optional), Advanced Linear Algebra for Machine Learning (Foundational) (Optional); Core: Statistical Models for Data Science (Letter Grade); Core: Data Engineering Platforms for Analytics or Big Data and Cloud Computing (Letter Grade)\n        ├── [N14] Quarter 2 • 10 Weeks — Quarter (5 content blocks)\n            preview: Quarter 2 • 10 Weeks includes: Core: Machine Learning I (Letter Grade); Core: Time Series Analysis and Forecasting (Letter Grade)\n        ├── [N15] Quarter 3 • 10 Weeks — Quarter (5 content blocks)\n            preview: Quarter 3 • 10 Weeks includes: Core: Machine Learning II (Letter Grade); Core: Leadership and Consulting for Data Science (Letter Grade)\n        ├── [N16] Quarter 4 • 10 Weeks — Quarter (5 content blocks)\n            preview: Quarter 4 • 10 Weeks includes: Elective: Elective 1 (Letter Grade); Elective: Elective 2 (Letter Grade)\n        ├── [N17] Quarter 5 • 10 Weeks — Quarter (5 content blocks)\n            preview: Quarter 5 • 10 Weeks includes: Capstone: Data Science Capstone Project (Letter Grade); Elective: Elective 3 (Letter Grade)\n        ├── [N18] Quarter 6 • 10 Weeks — Quarter (5 content blocks)\n            preview: Quarter 6 • 10 Weeks includes: Capstone: Data Science Capstone Project (Letter Grade); Elective: Elective 4 (Letter Grade)\n    ├── [N19] Sample 2-Year Full-Time Schedule — ProgressionTab (62 content blocks)\n        ├── [N20] Prequarter • 5 Weeks — Quarter (4 content blocks)\n            preview: Prequarter • 5 Weeks includes: Optional: Introduction to Statistical Concepts (Foundational) (Optional), R for Data Science (Foundational) (Optional)\n        ├── [N21] Quarter 1 • 10 Weeks — Quarter (12 content blocks)\n            preview: Quarter 1 • 10 Weeks includes: Optional: Python for Data Science (Foundational) (Optional), Advanced Linear Algebra for Machine Learning (Foundational) (Optional); Core: Statistical Models for Data Science (Letter Grade); Core: Data Engineering Platforms for Analytics or Big Data and Cloud Computing (Letter Grade); Core: Leadership and Consulting for Data Science (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N22] Quarter 2 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 2 • 10 Weeks includes: Core: Machine Learning I (Letter Grade); Core: Time Series Analysis and Forecasting (Letter Grade); Elective: Elective 1 (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N23] Quarter 3 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 3 • 10 Weeks includes: Core: Machine Learning II (Letter Grade); Elective: Elective 2 (Letter Grade); Capstone: Data Science Capstone Project (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N24] Quarter 4 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 4 • 10 Weeks includes: Elective: Elective 3 (Letter Grade); Elective: Elective 4 (Letter Grade); Capstone: Data Science Capstone Project (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N25] Quarter 5 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 5 • 10 Weeks includes: Elective: Elective 5 (Letter Grade); Elective: Elective 6 (Letter Grade); Indep Study I: Thesis Course I (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N26] Quarter 6 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 6 • 10 Weeks includes: Elective: Elective 7 (Letter Grade); Elective: Elective 8 (Letter Grade); Indep Study II: Thesis Course II (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "The question asks about the sequencing of six core courses across full-time and part-time schedules. P4 (Course Progressions) is the most directly relevant page, as it details quarter-by-quarter course lists and sequencing for each program type."
+        },
+        {
+          "step": 2,
+          "tool_calls": [
+            {
+              "name": "fetch_graph_content",
+              "args": {
+                "node_refs": [
+                  "N5",
+                  "N11"
+                ]
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_graph_content",
+              "content": "N5 has 44 content blocks — too broad. Consider its children instead: N6 (4), N7 (12), N8 (9), N9 (9), N10 (9).\nN11 has 38 content blocks — too broad. Consider its children instead: N12 (4), N13 (8), N14 (5), N15 (5), N16 (5), N17 (5), N18 (5)."
+            }
+          ],
+          "judger": null,
+          "decision_reason": "The question asks for the sequencing of six core courses in both full-time and part-time schedules. N5 (Sample Full-Time Schedule) and N11 (Sample Part-Time Schedule) are the most directly relevant nodes on page P4, so fetching both will provide the required course sequences."
+        },
+        {
+          "step": 3,
+          "tool_calls": [
+            {
+              "name": "fetch_graph_content",
+              "args": {
+                "node_refs": [
+                  "N6",
+                  "N7",
+                  "N8",
+                  "N9",
+                  "N10"
+                ]
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_graph_content",
+              "content": "[N6] Prequarter • 5 Weeks — path: Course Progressions > Sample Full-Time Schedule > Prequarter • 5 Weeks\n  [E1] (structure summary) Prequarter • 5 Weeks includes: Optional: Introduction to Statistical Concepts (Foundational) (Optional), R for Data Science (Foundational) (Optional)\n  [N6.1] Optional\n    [E2] (structure summary) Optional courses: Introduction to Statistical Concepts (Foundational) (Optional); R for Data Science (Foundational) (Optional)\n    [N6.1.1] Introduction to Statistical Concepts (Foundational)\n      [E3] Introduction to Statistical Concepts (Foundational) (Optional): This course is held in the 5 weeks leading up to the start of your first quarter and provides general exposure to basic statistical concepts that are necessary for students to understand the content presented in more advanced courses in the program. 0 units, no cost.\n    [N6.1.2] R for Data Science (Foundational)\n      [E4] R for Data Science (Foundational) (Optional): This course is held in the 5 weeks leading up to the start of your first quarter and is an introduction to the essential concepts and techniques for the statistical computing language R. 0 units, no cost.\n\n[N7] Quarter 1 • 10 Weeks — path: Course Progressions > Sample Full-Time Schedule > Quarter 1 • 10 Weeks\n  [E5] (structure summary) Quarter 1 • 10 Weeks includes: Optional: Python for Data Science (Foundational) (Optional), Advanced Linear Algebra for Machine Learning (Foundational) (Optional); Core: Statistical Models for Data Science (Letter Grade); Core: Leadership and Consulting for Data Science (Letter Grade); Core (Choose 1): Data Engineering Platforms for Analytics or Big Data and Cloud Computing (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n  [N7.1] Optional\n    [E6] (structure summary) Optional courses: Python for Data Science (Foundational) (Optional); Advanced Linear Algebra for Machine Learning (Foundational) (Optional)\n  [N7.2] Core\n    [E7] (structure summary) Core courses: Statistical Models for Data Science (Letter Grade)\n  [N7.3] Core\n    [E8] (structure summary) Core courses: Leadership and Consulting for Data Science (Letter Grade)\n  [N7.4] Core (Choose 1)\n    [E9] (structure summary) Core (Choose 1) courses: Data Engineering Platforms for Analytics or Big Data and Cloud Computing (Letter Grade)\n  [N7.5] Seminar\n    [E10] (structure summary) Seminar courses: Career Seminar (Required) (Pass/Fail)\n    [N7.1.1] Python for Data Science (Foundational)\n      [E11] Python for Data Science (Foundational) (Optional): This course is held concurrently with the first five weeks of your first quarter in the program and starts with an introduction to the Python programming language basic syntax and environment. 0 units, no cost.\n    [N7.1.2] Advanced Linear Algebra for Machine Learning (Foundational)\n      [E12] Advanced Linear Algebra for Machine Learning (Foundational) (Optional): If you are required to take this course it will be held concurrently with the second five weeks of your first quarter in the program. The advanced linear algebra course is focused on the theoretical concepts and real-life applications of linear algebra for machine learning. 0 units, no cost.\n    [N7.2.1] Statistical Models for Data Science\n      [E13] Statistical Models for Data Science (Letter Grade): In a traditional linear model, the observed response follows a normal distribution, and the expected response value is a linear combination of the predictors. Since Carl Friedrich Gauss (1777-1855) and Adrien-Marie Legendre (1752-1833) created this linear model framework in the early 1800s, the “Linear Normal” assumption has been the norm in statistics/data science for almost two centuries. New methods based on probability distributions other than Gaussian appeared only in the second half of the twentieth century. These methods allowed working with variables that span a broader variety of domains and probability distributions. Besides, methods for the analysis of general associations were developed that are different from the Pearson correlation.\n    [N7.3.1] Leadership and Consulting for Data Science\n      [E14] Leadership and Consulting for Data Science (Letter Grade): Professional organizations see value in data science when it helps them to achieve their strategic goals, and the current job market likewise rewards data scientists who can use data to advance organizational interests, either as an external consultant or within internal operations teams. Data scientists can become successful (and highly marketable) leaders in today’s professional world, but they require an uncommon skill set: the strategic awareness to align data requirements with business requirements, the technical proficiency to choose a methodology appropriate to each new problem, and the communication skills to both execute the plan as part of a broader team and persuade others of their findings.\n    [N7.4.1] Data Engineering Platforms for Analytics or Big Data and Cloud Computing\n      [E15] Data Engineering Platforms for Analytics or Big Data and Cloud Computing (Letter Grade): Data Engineering Platforms teaches effective data engineering—an essential first step in building an analytics-driven competitive advantage in the market. Big Data and Cloud Computing teaches students how to approach big data and large-scale machine learning applications. There is no single definition of big data and multiple emerging software packages exist to work with it, and we will cover the most popular approaches.\n    [N7.5.1] Career Seminar (Required)\n      [E16] Career Seminar (Required) (Pass/Fail): The Career Seminar (Pass/Fail) supports the development of industry professional skills, job and/or internship searches, and other in-demand areas of competency among today’s employers. Students enroll in the Career Seminar each quarter in order to engage in unique content throughout their degree program. Students with significant full-time work experience may be eligible to waive this course. 0 units, no cost.\n\n[N8] Quarter 2 • 10 Weeks — path: Course Progressions > Sample Full-Time Schedule > Quarter 2 • 10 Weeks\n  [E17] (structure summary) Quarter 2 • 10 Weeks includes: Core: Machine Learning I (Letter Grade); Core: Time Series Analysis and Forecasting (Letter Grade); Elective: Elective 1 (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n  [N8.1] Core\n    [E18] (structure summary) Core courses: Machine Learning I (Letter Grade)\n  [N8.2] Core\n    [E19] (structure summary) Core courses: Time Series Analysis and Forecasting (Letter Grade)\n  [N8.3] Elective\n    [E20] (structure summary) Elective courses: Elective 1 (Letter Grade)\n  [N8.4] Seminar\n    [E21] (structure summary) Seminar courses: Career Seminar (Required) (Pass/Fail)\n    [N8.1.1] Machine Learning I\n      [E22] Machine Learning I (Letter Grade): This course is aimed at providing students an introduction to machine learning with data mining techniques and algorithms. It gives a rigorous methodological foundation in analytical and software tools to successfully undertake projects in Data Science. Students are exposed to concepts of exploratory analyses for uncovering and detecting patterns in multivariate data, hypothesizing and detecting relationships among variables, conducting confirmatory analyses, and building models for predictive and descriptive purposes. It will present predictive modeling in the context of balancing predictive and descriptive accuracies.\n    [N8.2.1] Time Series Analysis and Forecasting\n      [E23] Time Series Analysis and Forecasting (Letter Grade): Time Series Analysis is a science as well as the art of making rational predictions based on previous records. It is widely used in various fields in today’s business settings.\n    [N8.3.1] Elective 1\n      [E24] Elective 1 (Letter Grade): Elective offerings vary. Students will work with their academic advisor to select electives based on their interests and course availability. Past electives include: Generative AI Principles, Advanced Computer Vision with Deep Learning, Advanced Machine Learning and Artificial Intelligence, Bayesian Machine Learning with GenAI Applications, Data Science for Algorithmic Marketing, Data Visualization Techniques, Digital Marketing Analytics in Theory and Practice, Financial Analytics, Health Analytics, Machine Learning Operations, Natural Language Processing and Cognitive Computing, Real Time Intelligent Systems, Reinforcement Learning, Supply Chain Optimization.\n    [N8.4.1] Career Seminar (Required)\n      [E25] Career Seminar (Required) (Pass/Fail): The Career Seminar (Pass/Fail) supports the development of industry professional skills, job and/or internship searches, and other in-demand areas of competency among today’s employers. Students enroll in the Career Seminar each quarter in order to engage in unique content throughout their degree program. Students with significant full-time work experience may be eligible to waive this course. 0 units, no cost.\n\n[N9] Quarter 3 • 10 Weeks — path: Course Progressions > Sample Full-Time Schedule > Quarter 3 • 10 Weeks\n  [E26] (structure summary) Quarter 3 • 10 Weeks includes: Core: Machine Learning II (Letter Grade); Elective: Elective 2 (Letter Grade); Capstone: Data Science Capstone Project (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n  [N9.1] Core\n    [E27] (structure summary) Core courses: Machine Learning II (Letter Grade)\n  [N9.2] Elective\n    [E28] (structure summary) Elective courses: Elective 2 (Letter Grade)\n  [N9.3] Capstone\n    [E29] (structure summary) Capstone courses: Data Science Capstone Project (Letter Grade)\n  [N9.4] Seminar\n    [E30] (structure summary) Seminar courses: Career Seminar (Required) (Pass/Fail)\n    [N9.1.1] Machine Learning II\n      [E31] Machine Learning II (Letter Grade): The objective of this course is three-folds–first, to extend student understanding of predictive modeling with machine learning concepts and methodologies from Machine Learning 1 into the realm of Deep Learning and Generative AI. Second, to develop the ability to apply those concepts and methodologies to diverse practical applications, evaluate the results and recommend the next best action. Third, to discuss and understand state-of-the machine learning and deep learning research and development and their applications.\n    [N9.2.1] Elective 2\n      [E32] Elective 2 (Letter Grade): Elective offerings vary. Students will work with their academic advisor to select electives based on their interests and course availability. Past electives include: Generative AI Principles, Advanced Computer Vision with Deep Learning, Advanced Machine Learning and Artificial Intelligence, Bayesian Machine Learning with GenAI Applications, Data Science for Algorithmic Marketing, Data Visualization Techniques, Digital Marketing Analytics in Theory and Practice, Quantitative Finance, Health Analytics, Machine Learning Operations, Natural Language Processing and Cognitive Computing, Real Time Intelligent Systems, Reinforcement Learning, Supply Chain Optimization.\n    [N9.3.1] Data Science Capstone Project\n      [E33] Data Science Capstone Project (Letter Grade): The required Capstone Project is completed over two quarters and covers research design, implementation, and writing. Full-time students start their capstone project in their third quarter. Part-time students generally begin the capstone project in their fifth quarter.\n    [N9.4.1] Career Seminar (Required)\n      [E34] Career Seminar (Required) (Pass/Fail): The Career Seminar (Pass/Fail) supports the development of industry professional skills, job and/or internship searches, and other in-demand areas of competency among today’s employers. Students enroll in the Career Seminar each quarter in order to engage in unique content throughout their degree program. Students with significant full-time work experience may be eligible to waive this course. 0 units, no cost.\n\n[N10] Quarter 4 • 10 Weeks — path: Course Progressions > Sample Full-Time Schedule > Quarter 4 • 10 Weeks\n  [E35] (structure summary) Quarter 4 • 10 Weeks includes: Elective: Elective 3 (Letter Grade); Elective: Elective 4 (Letter Grade); Capstone: Data Science Capstone Project (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n  [N10.1] Elective\n    [E36] (structure summary) Elective courses: Elective 3 (Letter Grade)\n  [N10.2] Elective\n    [E37] (structure summary) Elective courses: Elective 4 (Letter Grade)\n  [N10.3] Capstone\n    [E38] (structure summary) Capstone courses: Data Science Capstone Project (Letter Grade)\n  [N10.4] Seminar\n    [E39] (structure summary) Seminar courses: Career Seminar (Required) (Pass/Fail)\n    [N10.1.1] Elective 3\n      [E40] Elective 3 (Letter Grade): Elective offerings vary. Students will work with their academic advisor to select electives based on their interests and course availability. Past electives include: Generative AI Principles, Advanced Computer Vision with Deep Learning, Advanced Machine Learning and Artificial Intelligence, Bayesian Machine Learning with GenAI Applications, Data Science for Algorithmic Marketing, Data Visualization Techniques, Digital Marketing Analytics in Theory and Practice, Quantitative Finance, Health Analytics, Machine Learning Operations, Natural Language Processing and Cognitive Computing, Real Time Intelligent Systems, Reinforcement Learning, Supply Chain Optimization.\n    [N10.2.1] Elective 4\n      [E41] Elective 4 (Letter Grade): Elective offerings vary. Students will work with their academic advisor to select electives based on their interests and course availability. Past electives include: Generative AI Principles, Advanced Computer Vision with Deep Learning, Advanced Machine Learning and Artificial Intelligence, Bayesian Machine Learning with GenAI Applications, Data Science for Algorithmic Marketing, Data Visualization Techniques, Digital Marketing Analytics in Theory and Practice, Quantitative Finance, Health Analytics, Machine Learning Operations, Natural Language Processing and Cognitive Computing, Real Time Intelligent Systems, Reinforcement Learning, Supply Chain Optimization.\n    [N10.3.1] Data Science Capstone Project\n      [E42] Data Science Capstone Project (Letter Grade): The required Capstone Project is completed over two quarters and covers research design, implementation, and writing. Full-time students start their capstone project in their third quarter. Part-time students generally begin the capstone project in their fifth quarter.\n    [N10.4.1] Career Seminar (Required)\n      [E43] Career Seminar (Required) (Pass/Fail): The Career Seminar (Pass/Fail) supports the development of industry professional skills, job and/or internship searches, and other in-demand areas of competency among today’s employers. Students enroll in the Career Seminar each quarter in order to engage in unique content throughout their degree program. Students with significant full-time work experience may be eligible to waive this course. 0 units, no cost."
+            }
+          ],
+          "judger": {
+            "node_assessments": [
+              {
+                "node_ref": "N6",
+                "keep_evidence": [
+                  "E1",
+                  "E2"
+                ],
+                "comment": "The structure summaries E1 and E2 list the optional foundational courses offered in the Prequarter, which are not core courses. The question asks about the sequencing of the six core courses, so this node's content is not directly useful for answering the question, but it is kept to document the node's coverage."
+              },
+              {
+                "node_ref": "N7",
+                "keep_evidence": [
+                  "E5",
+                  "E7",
+                  "E8",
+                  "E9"
+                ],
+                "comment": "E5 lists the courses in Quarter 1, including the core courses Statistical Models for Data Science, Leadership and Consulting for Data Science, and a choice between Data Engineering Platforms for Analytics or Big Data and Cloud Computing. E7, E8, and E9 confirm these core courses. This provides the sequencing of three core courses in Quarter 1."
+              },
+              {
+                "node_ref": "N8",
+                "keep_evidence": [
+                  "E17",
+                  "E18",
+                  "E19"
+                ],
+                "comment": "E17 lists the courses in Quarter 2, including core courses Machine Learning I and Time Series Analysis and Forecasting. E18 and E19 confirm these core courses. This provides the sequencing of two core courses in Quarter 2."
+              },
+              {
+                "node_ref": "N9",
+                "keep_evidence": [
+                  "E26"
+                ],
+                "comment": "E26 lists the courses in Quarter 3, including core course Machine Learning II. E27 confirms this core course. This provides the sequencing of one core course in Quarter 3."
+              },
+              {
+                "node_ref": "N10",
+                "keep_evidence": [],
+                "comment": "E35 lists the courses in Quarter 4, which includes only electives, capstone, and seminar, with no core courses. This node does not provide information about core course sequencing, so no evidence is kept."
+              }
+            ]
+          },
+          "decision_reason": "Fetching the quarter-by-quarter nodes for the sample full-time schedule to identify the sequencing of the six core courses."
+        },
+        {
+          "step": 4,
+          "tool_calls": [
+            {
+              "name": "fetch_graph_content",
+              "args": {
+                "node_refs": [
+                  "N13",
+                  "N14",
+                  "N15",
+                  "N16",
+                  "N17"
+                ]
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_graph_content",
+              "content": "[N13] Quarter 1 • 10 Weeks — path: Course Progressions > Sample Part-Time Schedule > Quarter 1 • 10 Weeks\n  [E44] (structure summary) Quarter 1 • 10 Weeks includes: Optional: Python for Data Science (Foundational) (Optional), Advanced Linear Algebra for Machine Learning (Foundational) (Optional); Core: Statistical Models for Data Science (Letter Grade); Core: Data Engineering Platforms for Analytics or Big Data and Cloud Computing (Letter Grade)\n  [N13.1] Optional\n    [E45] (structure summary) Optional courses: Python for Data Science (Foundational) (Optional); Advanced Linear Algebra for Machine Learning (Foundational) (Optional)\n  [N13.2] Core\n    [E46] (structure summary) Core courses: Statistical Models for Data Science (Letter Grade)\n  [N13.3] Core\n    [E47] (structure summary) Core courses: Data Engineering Platforms for Analytics or Big Data and Cloud Computing (Letter Grade)\n    [N13.1.1] Python for Data Science (Foundational)\n      [E48] Python for Data Science (Foundational) (Optional): This course is held concurrently with the first five weeks of your first quarter in the program and starts with an introduction to the Python programming language basic syntax and environment. 0 units, no cost.\n    [N13.1.2] Advanced Linear Algebra for Machine Learning (Foundational)\n      [E49] Advanced Linear Algebra for Machine Learning (Foundational) (Optional): If you are required to take this course it will be held concurrently with the second five weeks of your first quarter in the program. The advanced linear algebra course is focused on the theoretical concepts and real-life applications of linear algebra for machine learning. 0 units, no cost.\n    [N13.2.1] Statistical Models for Data Science\n      [E50] Statistical Models for Data Science (Letter Grade): In a traditional linear model, the observed response follows a normal distribution, and the expected response value is a linear combination of the predictors. Since Carl Friedrich Gauss (1777-1855) and Adrien-Marie Legendre (1752-1833) created this linear model framework in the early 1800s, the “Linear Normal” assumption has been the norm in statistics/data science for almost two centuries. New methods based on probability distributions other than Gaussian appeared only in the second half of the twentieth century. These methods allowed working with variables that span a broader variety of domains and probability distributions. Besides, methods for the analysis of general associations were developed that are different from the Pearson correlation.\n    [N13.3.1] Data Engineering Platforms for Analytics or Big Data and Cloud Computing\n      [E51] Data Engineering Platforms for Analytics or Big Data and Cloud Computing (Letter Grade): Data Engineering Platforms teaches effective data engineering—an essential first step in building an analytics-driven competitive advantage in the market. Big Data and Cloud Computing teaches students how to approach big data and large-scale machine learning applications. There is no single definition of big data and multiple emerging software packages exist to work with it, and we will cover the most popular approaches.\n\n[N14] Quarter 2 • 10 Weeks — path: Course Progressions > Sample Part-Time Schedule > Quarter 2 • 10 Weeks\n  [E52] (structure summary) Quarter 2 • 10 Weeks includes: Core: Machine Learning I (Letter Grade); Core: Time Series Analysis and Forecasting (Letter Grade)\n  [N14.1] Core\n    [E53] (structure summary) Core courses: Machine Learning I (Letter Grade)\n  [N14.2] Core\n    [E54] (structure summary) Core courses: Time Series Analysis and Forecasting (Letter Grade)\n    [N14.1.1] Machine Learning I\n      [E55] Machine Learning I (Letter Grade): This course is aimed at providing students an introduction to machine learning with data mining techniques and algorithms. It gives a rigorous methodological foundation in analytical and software tools to successfully undertake projects in Data Science. Students are exposed to concepts of exploratory analyses for uncovering and detecting patterns in multivariate data, hypothesizing and detecting relationships among variables, conducting confirmatory analyses, and building models for predictive and descriptive purposes. It will present predictive modeling in the context of balancing predictive and descriptive accuracies.\n    [N14.2.1] Time Series Analysis and Forecasting\n      [E56] Time Series Analysis and Forecasting (Letter Grade): Time Series Analysis is a science as well as the art of making rational predictions based on previous records. It is widely used in various fields in today’s business settings.\n\n[N15] Quarter 3 • 10 Weeks — path: Course Progressions > Sample Part-Time Schedule > Quarter 3 • 10 Weeks\n  [E57] (structure summary) Quarter 3 • 10 Weeks includes: Core: Machine Learning II (Letter Grade); Core: Leadership and Consulting for Data Science (Letter Grade)\n  [N15.1] Core\n    [E58] (structure summary) Core courses: Machine Learning II (Letter Grade)\n  [N15.2] Core\n    [E59] (structure summary) Core courses: Leadership and Consulting for Data Science (Letter Grade)\n    [N15.1.1] Machine Learning II\n      [E60] Machine Learning II (Letter Grade): The objective of this course is three-folds–first, to extend student understanding of predictive modeling with machine learning concepts and methodologies from Machine Learning 1 into the realm of Deep Learning and Generative AI. Second, to develop the ability to apply those concepts and methodologies to diverse practical applications, evaluate the results and recommend the next best action. Third, to discuss and understand state-of-the machine learning and deep learning research and development and their applications.\n    [N15.2.1] Leadership and Consulting for Data Science\n      [E61] Leadership and Consulting for Data Science (Letter Grade): Professional organizations see value in data science when it helps them to achieve their strategic goals, and the current job market likewise rewards data scientists who can use data to advance organizational interests, either as an external consultant or within internal operations teams. Data scientists can become successful (and highly marketable) leaders in today’s professional world, but they require an uncommon skill set: the strategic awareness to align data requirements with business requirements, the technical proficiency to choose a methodology appropriate to each new problem, and the communication skills to both execute the plan as part of a broader team and persuade others of their findings.\n\n[N16] Quarter 4 • 10 Weeks — path: Course Progressions > Sample Part-Time Schedule > Quarter 4 • 10 Weeks\n  [E62] (structure summary) Quarter 4 • 10 Weeks includes: Elective: Elective 1 (Letter Grade); Elective: Elective 2 (Letter Grade)\n  [N16.1] Elective\n    [E63] (structure summary) Elective courses: Elective 1 (Letter Grade)\n  [N16.2] Elective\n    [E64] (structure summary) Elective courses: Elective 2 (Letter Grade)\n    [N16.1.1] Elective 1\n      [E65] Elective 1 (Letter Grade): Elective offerings vary. Students will work with their academic advisor to select electives based on their interests and course availability. Past electives include: Generative AI Principles, Advanced Computer Vision with Deep Learning, Advanced Machine Learning and Artificial Intelligence, Bayesian Machine Learning with GenAI Applications, Data Science for Algorithmic Marketing, Data Visualization Techniques, Digital Marketing Analytics in Theory and Practice, Financial Analytics, Health Analytics, Machine Learning Operations, Natural Language Processing and Cognitive Computing, Real Time Intelligent Systems, Reinforcement Learning, Supply Chain Optimization.\n    [N16.2.1] Elective 2\n      [E66] Elective 2 (Letter Grade): Elective offerings vary. Students will work with their academic advisor to select electives based on their interests and course availability. Past electives include: Generative AI Principles, Advanced Computer Vision with Deep Learning, Advanced Machine Learning and Artificial Intelligence, Bayesian Machine Learning with GenAI Applications, Data Science for Algorithmic Marketing, Data Visualization Techniques, Digital Marketing Analytics in Theory and Practice, Quantitative Finance, Health Analytics, Machine Learning Operations, Natural Language Processing and Cognitive Computing, Real Time Intelligent Systems, Reinforcement Learning, Supply Chain Optimization.\n\n[N17] Quarter 5 • 10 Weeks — path: Course Progressions > Sample Part-Time Schedule > Quarter 5 • 10 Weeks\n  [E67] (structure summary) Quarter 5 • 10 Weeks includes: Capstone: Data Science Capstone Project (Letter Grade); Elective: Elective 3 (Letter Grade)\n  [N17.1] Capstone\n    [E68] (structure summary) Capstone courses: Data Science Capstone Project (Letter Grade)\n  [N17.2] Elective\n    [E69] (structure summary) Elective courses: Elective 3 (Letter Grade)\n    [N17.1.1] Data Science Capstone Project\n      [E70] Data Science Capstone Project (Letter Grade): The required Capstone Project is completed over two quarters and covers research design, implementation, and writing. Full-time students start their capstone project in their third quarter. Part-time students generally begin the capstone project in their fifth quarter.\n    [N17.2.1] Elective 3\n      [E71] Elective 3 (Letter Grade): Elective offerings vary. Students will work with their academic advisor to select electives based on their interests and course availability. Past electives include: Generative AI Principles, Advanced Computer Vision with Deep Learning, Advanced Machine Learning and Artificial Intelligence, Bayesian Machine Learning with GenAI Applications, Data Science for Algorithmic Marketing, Data Visualization Techniques, Digital Marketing Analytics in Theory and Practice, Quantitative Finance, Health Analytics, Machine Learning Operations, Natural Language Processing and Cognitive Computing, Real Time Intelligent Systems, Reinforcement Learning, Supply Chain Optimization."
+            }
+          ],
+          "judger": {
+            "node_assessments": [
+              {
+                "node_ref": "N13",
+                "keep_evidence": [
+                  "E44",
+                  "E46",
+                  "E47"
+                ],
+                "comment": "E44 lists the core courses in Quarter 1 (Statistical Models for Data Science and Data Engineering Platforms for Analytics or Big Data and Cloud Computing), directly supporting the sequencing. E46 and E47 confirm these as core courses. Optional courses are not part of the six core courses."
+              },
+              {
+                "node_ref": "N14",
+                "keep_evidence": [
+                  "E52",
+                  "E53",
+                  "E54"
+                ],
+                "comment": "E52 lists the core courses in Quarter 2 (Machine Learning I and Time Series Analysis and Forecasting), directly supporting the sequencing. E53 and E54 confirm these as core courses."
+              },
+              {
+                "node_ref": "N15",
+                "keep_evidence": [
+                  "E57",
+                  "E58",
+                  "E59"
+                ],
+                "comment": "E57 lists the core courses in Quarter 3 (Machine Learning II and Leadership and Consulting for Data Science), directly supporting the sequencing. E58 and E59 confirm these as core courses."
+              },
+              {
+                "node_ref": "N16",
+                "keep_evidence": [
+                  "E62"
+                ],
+                "comment": "E62 shows Quarter 4 contains only electives, not core courses, so it does not contribute to the sequencing of the six core courses. The elective details are not relevant."
+              },
+              {
+                "node_ref": "N17",
+                "keep_evidence": [],
+                "comment": "E67 shows Quarter 5 contains a capstone and an elective, not core courses, so it does not contribute to the sequencing of the six core courses. The capstone and elective details are not relevant."
+              }
+            ]
+          },
+          "decision_reason": "The full-time schedule is covered. Now I need the part-time schedule sequencing. I'll fetch the quarter nodes for the part-time schedule (N13-N17) to extract the core course sequence across quarters 1-5, skipping the prequarter (N12) which likely contains only optional foundational courses."
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E1",
+          "status": "accepted",
+          "page_title": "Course Progressions",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+          "text": "Prequarter • 5 Weeks includes: Optional: Introduction to Statistical Concepts (Foundational) (Optional), R for Data Science (Foundational) (Optional)",
+          "path": [
+            "Course Progressions",
+            "Sample Full-Time Schedule",
+            "Prequarter • 5 Weeks"
+          ],
+          "section_breadcrumb": "Course Progressions > Sample Full-Time Schedule > Prequarter • 5 Weeks",
+          "visible_type": "structure summary",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N6"
+            }
+          ],
+          "chunk_id": "chunk:85ce62e0547a29c9",
+          "owner_node_id": "quarter:34540ddf2a9617cb",
+          "page_id": "page:4f1aba5696f12664",
+          "internal_metadata": {
+            "source_type": "quarter_index",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E2",
+          "status": "accepted",
+          "page_title": "Course Progressions",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+          "text": "Optional courses: Introduction to Statistical Concepts (Foundational) (Optional); R for Data Science (Foundational) (Optional)",
+          "path": [
+            "Course Progressions",
+            "Sample Full-Time Schedule",
+            "Prequarter • 5 Weeks",
+            "Optional"
+          ],
+          "section_breadcrumb": "Course Progressions > Sample Full-Time Schedule > Prequarter • 5 Weeks > Optional",
+          "visible_type": "structure summary",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N6"
+            }
+          ],
+          "chunk_id": "chunk:886d3d2379d491fb",
+          "owner_node_id": "course_group:83eff449e6f99d5e",
+          "page_id": "page:4f1aba5696f12664",
+          "internal_metadata": {
+            "source_type": "course_group_index",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E5",
+          "status": "accepted",
+          "page_title": "Course Progressions",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+          "text": "Quarter 1 • 10 Weeks includes: Optional: Python for Data Science (Foundational) (Optional), Advanced Linear Algebra for Machine Learning (Foundational) (Optional); Core: Statistical Models for Data Science (Letter Grade); Core: Leadership and Consulting for Data Science (Letter Grade); Core (Choose 1): Data Engineering Platforms for Analytics or Big Data and Cloud Computing (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)",
+          "path": [
+            "Course Progressions",
+            "Sample Full-Time Schedule",
+            "Quarter 1 • 10 Weeks"
+          ],
+          "section_breadcrumb": "Course Progressions > Sample Full-Time Schedule > Quarter 1 • 10 Weeks",
+          "visible_type": "structure summary",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N7"
+            }
+          ],
+          "chunk_id": "chunk:c38376379e9e9cee",
+          "owner_node_id": "quarter:028329736c99510d",
+          "page_id": "page:4f1aba5696f12664",
+          "internal_metadata": {
+            "source_type": "quarter_index",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E7",
+          "status": "accepted",
+          "page_title": "Course Progressions",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+          "text": "Core courses: Statistical Models for Data Science (Letter Grade)",
+          "path": [
+            "Course Progressions",
+            "Sample Full-Time Schedule",
+            "Quarter 1 • 10 Weeks",
+            "Core"
+          ],
+          "section_breadcrumb": "Course Progressions > Sample Full-Time Schedule > Quarter 1 • 10 Weeks > Core",
+          "visible_type": "structure summary",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N7"
+            }
+          ],
+          "chunk_id": "chunk:a1f7122a2d40fac7",
+          "owner_node_id": "course_group:bb35e834e4ff4ac5",
+          "page_id": "page:4f1aba5696f12664",
+          "internal_metadata": {
+            "source_type": "course_group_index",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E8",
+          "status": "accepted",
+          "page_title": "Course Progressions",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+          "text": "Core courses: Leadership and Consulting for Data Science (Letter Grade)",
+          "path": [
+            "Course Progressions",
+            "Sample Full-Time Schedule",
+            "Quarter 1 • 10 Weeks",
+            "Core"
+          ],
+          "section_breadcrumb": "Course Progressions > Sample Full-Time Schedule > Quarter 1 • 10 Weeks > Core",
+          "visible_type": "structure summary",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N7"
+            }
+          ],
+          "chunk_id": "chunk:13bab548a0daa574",
+          "owner_node_id": "course_group:5524a4339fc75b0a",
+          "page_id": "page:4f1aba5696f12664",
+          "internal_metadata": {
+            "source_type": "course_group_index",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E9",
+          "status": "accepted",
+          "page_title": "Course Progressions",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+          "text": "Core (Choose 1) courses: Data Engineering Platforms for Analytics or Big Data and Cloud Computing (Letter Grade)",
+          "path": [
+            "Course Progressions",
+            "Sample Full-Time Schedule",
+            "Quarter 1 • 10 Weeks",
+            "Core (Choose 1)"
+          ],
+          "section_breadcrumb": "Course Progressions > Sample Full-Time Schedule > Quarter 1 • 10 Weeks > Core (Choose 1)",
+          "visible_type": "structure summary",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N7"
+            }
+          ],
+          "chunk_id": "chunk:d2050191f367219b",
+          "owner_node_id": "course_group:999206471f518440",
+          "page_id": "page:4f1aba5696f12664",
+          "internal_metadata": {
+            "source_type": "course_group_index",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E17",
+          "status": "accepted",
+          "page_title": "Course Progressions",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+          "text": "Quarter 2 • 10 Weeks includes: Core: Machine Learning I (Letter Grade); Core: Time Series Analysis and Forecasting (Letter Grade); Elective: Elective 1 (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)",
+          "path": [
+            "Course Progressions",
+            "Sample Full-Time Schedule",
+            "Quarter 2 • 10 Weeks"
+          ],
+          "section_breadcrumb": "Course Progressions > Sample Full-Time Schedule > Quarter 2 • 10 Weeks",
+          "visible_type": "structure summary",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N8"
+            }
+          ],
+          "chunk_id": "chunk:8da5b9d5d5bbff73",
+          "owner_node_id": "quarter:58c38499dd5cddd4",
+          "page_id": "page:4f1aba5696f12664",
+          "internal_metadata": {
+            "source_type": "quarter_index",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E18",
+          "status": "accepted",
+          "page_title": "Course Progressions",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+          "text": "Core courses: Machine Learning I (Letter Grade)",
+          "path": [
+            "Course Progressions",
+            "Sample Full-Time Schedule",
+            "Quarter 2 • 10 Weeks",
+            "Core"
+          ],
+          "section_breadcrumb": "Course Progressions > Sample Full-Time Schedule > Quarter 2 • 10 Weeks > Core",
+          "visible_type": "structure summary",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N8"
+            }
+          ],
+          "chunk_id": "chunk:d9f70ea0621e9718",
+          "owner_node_id": "course_group:53413a17b05bf128",
+          "page_id": "page:4f1aba5696f12664",
+          "internal_metadata": {
+            "source_type": "course_group_index",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E19",
+          "status": "accepted",
+          "page_title": "Course Progressions",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+          "text": "Core courses: Time Series Analysis and Forecasting (Letter Grade)",
+          "path": [
+            "Course Progressions",
+            "Sample Full-Time Schedule",
+            "Quarter 2 • 10 Weeks",
+            "Core"
+          ],
+          "section_breadcrumb": "Course Progressions > Sample Full-Time Schedule > Quarter 2 • 10 Weeks > Core",
+          "visible_type": "structure summary",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N8"
+            }
+          ],
+          "chunk_id": "chunk:267c1246de29fa34",
+          "owner_node_id": "course_group:1133f24fa2216771",
+          "page_id": "page:4f1aba5696f12664",
+          "internal_metadata": {
+            "source_type": "course_group_index",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E26",
+          "status": "accepted",
+          "page_title": "Course Progressions",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+          "text": "Quarter 3 • 10 Weeks includes: Core: Machine Learning II (Letter Grade); Elective: Elective 2 (Letter Grade); Capstone: Data Science Capstone Project (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)",
+          "path": [
+            "Course Progressions",
+            "Sample Full-Time Schedule",
+            "Quarter 3 • 10 Weeks"
+          ],
+          "section_breadcrumb": "Course Progressions > Sample Full-Time Schedule > Quarter 3 • 10 Weeks",
+          "visible_type": "structure summary",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N9"
+            }
+          ],
+          "chunk_id": "chunk:19affee6e45ccf8d",
+          "owner_node_id": "quarter:20e6ddc9301b354e",
+          "page_id": "page:4f1aba5696f12664",
+          "internal_metadata": {
+            "source_type": "quarter_index",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E44",
+          "status": "accepted",
+          "page_title": "Course Progressions",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+          "text": "Quarter 1 • 10 Weeks includes: Optional: Python for Data Science (Foundational) (Optional), Advanced Linear Algebra for Machine Learning (Foundational) (Optional); Core: Statistical Models for Data Science (Letter Grade); Core: Data Engineering Platforms for Analytics or Big Data and Cloud Computing (Letter Grade)",
+          "path": [
+            "Course Progressions",
+            "Sample Part-Time Schedule",
+            "Quarter 1 • 10 Weeks"
+          ],
+          "section_breadcrumb": "Course Progressions > Sample Part-Time Schedule > Quarter 1 • 10 Weeks",
+          "visible_type": "structure summary",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N13"
+            }
+          ],
+          "chunk_id": "chunk:0bf1a1aa0f8de0fd",
+          "owner_node_id": "quarter:3834cf312402be0f",
+          "page_id": "page:4f1aba5696f12664",
+          "internal_metadata": {
+            "source_type": "quarter_index",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E46",
+          "status": "accepted",
+          "page_title": "Course Progressions",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+          "text": "Core courses: Statistical Models for Data Science (Letter Grade)",
+          "path": [
+            "Course Progressions",
+            "Sample Part-Time Schedule",
+            "Quarter 1 • 10 Weeks",
+            "Core"
+          ],
+          "section_breadcrumb": "Course Progressions > Sample Part-Time Schedule > Quarter 1 • 10 Weeks > Core",
+          "visible_type": "structure summary",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N13"
+            }
+          ],
+          "chunk_id": "chunk:7cc001496bd7fca8",
+          "owner_node_id": "course_group:1eed4087ef28a8e8",
+          "page_id": "page:4f1aba5696f12664",
+          "internal_metadata": {
+            "source_type": "course_group_index",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E47",
+          "status": "accepted",
+          "page_title": "Course Progressions",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+          "text": "Core courses: Data Engineering Platforms for Analytics or Big Data and Cloud Computing (Letter Grade)",
+          "path": [
+            "Course Progressions",
+            "Sample Part-Time Schedule",
+            "Quarter 1 • 10 Weeks",
+            "Core"
+          ],
+          "section_breadcrumb": "Course Progressions > Sample Part-Time Schedule > Quarter 1 • 10 Weeks > Core",
+          "visible_type": "structure summary",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N13"
+            }
+          ],
+          "chunk_id": "chunk:3fcdc263eac8ad2c",
+          "owner_node_id": "course_group:2570ca240e353109",
+          "page_id": "page:4f1aba5696f12664",
+          "internal_metadata": {
+            "source_type": "course_group_index",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E52",
+          "status": "accepted",
+          "page_title": "Course Progressions",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+          "text": "Quarter 2 • 10 Weeks includes: Core: Machine Learning I (Letter Grade); Core: Time Series Analysis and Forecasting (Letter Grade)",
+          "path": [
+            "Course Progressions",
+            "Sample Part-Time Schedule",
+            "Quarter 2 • 10 Weeks"
+          ],
+          "section_breadcrumb": "Course Progressions > Sample Part-Time Schedule > Quarter 2 • 10 Weeks",
+          "visible_type": "structure summary",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N14"
+            }
+          ],
+          "chunk_id": "chunk:8e6961b609ca3fae",
+          "owner_node_id": "quarter:0e10155327e57f5b",
+          "page_id": "page:4f1aba5696f12664",
+          "internal_metadata": {
+            "source_type": "quarter_index",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E53",
+          "status": "accepted",
+          "page_title": "Course Progressions",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+          "text": "Core courses: Machine Learning I (Letter Grade)",
+          "path": [
+            "Course Progressions",
+            "Sample Part-Time Schedule",
+            "Quarter 2 • 10 Weeks",
+            "Core"
+          ],
+          "section_breadcrumb": "Course Progressions > Sample Part-Time Schedule > Quarter 2 • 10 Weeks > Core",
+          "visible_type": "structure summary",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N14"
+            }
+          ],
+          "chunk_id": "chunk:80dd8eff28b02caf",
+          "owner_node_id": "course_group:b0f49bb943d2dd64",
+          "page_id": "page:4f1aba5696f12664",
+          "internal_metadata": {
+            "source_type": "course_group_index",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E54",
+          "status": "accepted",
+          "page_title": "Course Progressions",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+          "text": "Core courses: Time Series Analysis and Forecasting (Letter Grade)",
+          "path": [
+            "Course Progressions",
+            "Sample Part-Time Schedule",
+            "Quarter 2 • 10 Weeks",
+            "Core"
+          ],
+          "section_breadcrumb": "Course Progressions > Sample Part-Time Schedule > Quarter 2 • 10 Weeks > Core",
+          "visible_type": "structure summary",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N14"
+            }
+          ],
+          "chunk_id": "chunk:e741ff38aa6ddc99",
+          "owner_node_id": "course_group:6def741eea25cebe",
+          "page_id": "page:4f1aba5696f12664",
+          "internal_metadata": {
+            "source_type": "course_group_index",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E57",
+          "status": "accepted",
+          "page_title": "Course Progressions",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+          "text": "Quarter 3 • 10 Weeks includes: Core: Machine Learning II (Letter Grade); Core: Leadership and Consulting for Data Science (Letter Grade)",
+          "path": [
+            "Course Progressions",
+            "Sample Part-Time Schedule",
+            "Quarter 3 • 10 Weeks"
+          ],
+          "section_breadcrumb": "Course Progressions > Sample Part-Time Schedule > Quarter 3 • 10 Weeks",
+          "visible_type": "structure summary",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N15"
+            }
+          ],
+          "chunk_id": "chunk:c43aedeb7a1ce3cc",
+          "owner_node_id": "quarter:66c316447fa887fb",
+          "page_id": "page:4f1aba5696f12664",
+          "internal_metadata": {
+            "source_type": "quarter_index",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E58",
+          "status": "accepted",
+          "page_title": "Course Progressions",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+          "text": "Core courses: Machine Learning II (Letter Grade)",
+          "path": [
+            "Course Progressions",
+            "Sample Part-Time Schedule",
+            "Quarter 3 • 10 Weeks",
+            "Core"
+          ],
+          "section_breadcrumb": "Course Progressions > Sample Part-Time Schedule > Quarter 3 • 10 Weeks > Core",
+          "visible_type": "structure summary",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N15"
+            }
+          ],
+          "chunk_id": "chunk:e1c58e59170d8be8",
+          "owner_node_id": "course_group:93b8e5992ad7c92b",
+          "page_id": "page:4f1aba5696f12664",
+          "internal_metadata": {
+            "source_type": "course_group_index",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E59",
+          "status": "accepted",
+          "page_title": "Course Progressions",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+          "text": "Core courses: Leadership and Consulting for Data Science (Letter Grade)",
+          "path": [
+            "Course Progressions",
+            "Sample Part-Time Schedule",
+            "Quarter 3 • 10 Weeks",
+            "Core"
+          ],
+          "section_breadcrumb": "Course Progressions > Sample Part-Time Schedule > Quarter 3 • 10 Weeks > Core",
+          "visible_type": "structure summary",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N15"
+            }
+          ],
+          "chunk_id": "chunk:004cd4c7efe1acaa",
+          "owner_node_id": "course_group:8e50c78c8cf78c78",
+          "page_id": "page:4f1aba5696f12664",
+          "internal_metadata": {
+            "source_type": "course_group_index",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E62",
+          "status": "accepted",
+          "page_title": "Course Progressions",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+          "text": "Quarter 4 • 10 Weeks includes: Elective: Elective 1 (Letter Grade); Elective: Elective 2 (Letter Grade)",
+          "path": [
+            "Course Progressions",
+            "Sample Part-Time Schedule",
+            "Quarter 4 • 10 Weeks"
+          ],
+          "section_breadcrumb": "Course Progressions > Sample Part-Time Schedule > Quarter 4 • 10 Weeks",
+          "visible_type": "structure summary",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N16"
+            }
+          ],
+          "chunk_id": "chunk:153f801be86e1f3b",
+          "owner_node_id": "quarter:e2ac68624d9d7ef2",
+          "page_id": "page:4f1aba5696f12664",
+          "internal_metadata": {
+            "source_type": "quarter_index",
+            "score": null,
+            "score_breakdown": {}
+          }
+        }
+      ],
+      "time_sec": 30.261,
+      "low_confidence": false,
+      "error": null,
+      "progress_summary": {
+        "summary_covering": "Page P4 (Course Progressions) has been fully explored. For the Sample Full-Time Schedule, the Prequarter (N6) contains only optional foundational courses (E1, E2) and is not relevant to core course sequencing. Quarter 1 (N7) includes core courses Statistical Models for Data Science, Leadership and Consulting for Data Science, and a choice between Data Engineering Platforms for Analytics or Big Data and Cloud Computing (E5, E7-E9). Quarter 2 (N8) includes core courses Machine Learning I and Time Series Analysis and Forecasting (E17-E19). Quarter 3 (N9) includes core course Machine Learning II (E26). Quarter 4 (N10) contains no core courses (E35). For the Sample Part-Time Schedule, Quarter 1 (N13) includes core courses Statistical Models for Data Science and Data Engineering Platforms for Analytics or Big Data and Cloud Computing (E44, E46-E47). Quarter 2 (N14) includes core courses Machine Learning I and Time Series Analysis and Forecasting (E52-E54). Quarter 3 (N15) includes core courses Machine Learning II and Leadership and Consulting for Data Science (E57-E59). Quarter 4 (N16) contains only electives (E62), and Quarter 5 (N17) contains capstone and elective, no core courses. All six core courses are accounted for in both schedules. The full-time schedule sequences them as: Q1: Statistical Models, Leadership and Consulting, and one of Data Engineering/Big Data; Q2: Machine Learning I and Time Series; Q3: Machine Learning II. The part-time schedule sequences them as: Q1: Statistical Models and Data Engineering/Big Data; Q2: Machine Learning I and Time Series; Q3: Machine Learning II and Leadership and Consulting. No missing information remains.",
+        "decision_trace_narrative": "Turn 1: Fetched Prequarter node (N6) to check if any core courses are listed there; found only optional foundational courses, so it was not useful for core sequencing. Turn 2: Fetched Quarter 1 node (N7) for full-time schedule to identify core courses; found three core courses, providing partial sequencing. Turn 3: Fetched Quarter 2 node (N8) for full-time schedule; found two core courses, continuing the sequence. Turn 4: Fetched Quarter 3 node (N9) for full-time schedule; found one core course, completing the full-time core sequence. Turn 5: Fetched Quarter 4 node (N10) for full-time schedule to check for any remaining core courses; found none, confirming full-time sequence is complete. Turn 6: Fetched Quarter 1 node (N13) for part-time schedule to start part-time sequencing; found two core courses. Turn 7: Fetched Quarter 2 node (N14) for part-time schedule; found two core courses. Turn 8: Fetched Quarter 3 node (N15) for part-time schedule; found two core courses, completing the part-time core sequence. Turn 9: Fetched Quarter 4 node (N16) for part-time schedule to check for any remaining core courses; found only electives, so no core courses. Turn 10: Fetched Quarter 5 node (N17) for part-time schedule to ensure no core courses are scheduled later; found capstone and elective, no core courses. All six core courses are now accounted for in both schedules."
+      },
+      "raw_debug": {
+        "response": {
+          "answer": "In the sample full-time schedule, the six core courses are sequenced as follows: Quarter 1 includes Statistical Models for Data Science, Leadership and Consulting for Data Science, and a choice between Data Engineering Platforms for Analytics or Big Data and Cloud Computing [3][4][5][6]. Quarter 2 includes Machine Learning I and Time Series Analysis and Forecasting [7][8][9]. Quarter 3 includes Machine Learning II [10].\n\nIn the sample part-time schedule, the core courses are sequenced as: Quarter 1 includes Statistical Models for Data Science and Data Engineering Platforms for Analytics or Big Data and Cloud Computing [11][12][13]. Quarter 2 includes Machine Learning I and Time Series Analysis and Forecasting [14][15][16]. Quarter 3 includes Machine Learning II and Leadership and Consulting for Data Science [17][18][19].",
+          "citations": [
+            {
+              "index": 3,
+              "title": "Course Progressions",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+              "snippet": "Quarter 1 • 10 Weeks includes: Optional: Python for Data Science (Foundational) (Optional), Advanced Linear Algebra for Machine Learning (Foundational) (Optional); Core: Statistica"
+            },
+            {
+              "index": 4,
+              "title": "Course Progressions",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+              "snippet": "Core courses: Statistical Models for Data Science (Letter Grade)"
+            },
+            {
+              "index": 5,
+              "title": "Course Progressions",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+              "snippet": "Core courses: Leadership and Consulting for Data Science (Letter Grade)"
+            },
+            {
+              "index": 6,
+              "title": "Course Progressions",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+              "snippet": "Core (Choose 1) courses: Data Engineering Platforms for Analytics or Big Data and Cloud Computing (Letter Grade)"
+            },
+            {
+              "index": 7,
+              "title": "Course Progressions",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+              "snippet": "Quarter 2 • 10 Weeks includes: Core: Machine Learning I (Letter Grade); Core: Time Series Analysis and Forecasting (Letter Grade); Elective: Elective 1 (Letter Grade); Seminar: Car"
+            },
+            {
+              "index": 8,
+              "title": "Course Progressions",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+              "snippet": "Core courses: Machine Learning I (Letter Grade)"
+            },
+            {
+              "index": 9,
+              "title": "Course Progressions",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+              "snippet": "Core courses: Time Series Analysis and Forecasting (Letter Grade)"
+            },
+            {
+              "index": 10,
+              "title": "Course Progressions",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+              "snippet": "Quarter 3 • 10 Weeks includes: Core: Machine Learning II (Letter Grade); Elective: Elective 2 (Letter Grade); Capstone: Data Science Capstone Project (Letter Grade); Seminar: Caree"
+            },
+            {
+              "index": 11,
+              "title": "Course Progressions",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+              "snippet": "Quarter 1 • 10 Weeks includes: Optional: Python for Data Science (Foundational) (Optional), Advanced Linear Algebra for Machine Learning (Foundational) (Optional); Core: Statistica"
+            },
+            {
+              "index": 12,
+              "title": "Course Progressions",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+              "snippet": "Core courses: Statistical Models for Data Science (Letter Grade)"
+            },
+            {
+              "index": 13,
+              "title": "Course Progressions",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+              "snippet": "Core courses: Data Engineering Platforms for Analytics or Big Data and Cloud Computing (Letter Grade)"
+            },
+            {
+              "index": 14,
+              "title": "Course Progressions",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+              "snippet": "Quarter 2 • 10 Weeks includes: Core: Machine Learning I (Letter Grade); Core: Time Series Analysis and Forecasting (Letter Grade)"
+            },
+            {
+              "index": 15,
+              "title": "Course Progressions",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+              "snippet": "Core courses: Machine Learning I (Letter Grade)"
+            },
+            {
+              "index": 16,
+              "title": "Course Progressions",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+              "snippet": "Core courses: Time Series Analysis and Forecasting (Letter Grade)"
+            },
+            {
+              "index": 17,
+              "title": "Course Progressions",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+              "snippet": "Quarter 3 • 10 Weeks includes: Core: Machine Learning II (Letter Grade); Core: Leadership and Consulting for Data Science (Letter Grade)"
+            },
+            {
+              "index": 18,
+              "title": "Course Progressions",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+              "snippet": "Core courses: Machine Learning II (Letter Grade)"
+            },
+            {
+              "index": 19,
+              "title": "Course Progressions",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+              "snippet": "Core courses: Leadership and Consulting for Data Science (Letter Grade)"
+            }
+          ],
+          "debug": {
+            "tool_turns": 4,
+            "stop_reason": "sufficient_evidence",
+            "evidence_count": 20,
+            "sufficient": true,
+            "missing": "",
+            "log_path": "C:\\Users\\ss363\\Desktop\\Archive\\ads_rag_chatbot\\pipeline_grag_v2\\log\\2026-08-04_014647_fbb26bf04812.json",
+            "run_id": "fbb26bf04812"
+          }
+        },
+        "run_id": "fbb26bf04812",
+        "rewritten_queries": [
+          {
+            "id": "q1",
+            "query": "sequence of six core courses in sample full-time schedule",
+            "target": "university program"
+          },
+          {
+            "id": "q2",
+            "query": "sequence of six core courses in sample part-time schedule",
+            "target": "university program"
+          }
+        ],
+        "judgment": {
+          "sufficient": true,
+          "missing": "",
+          "comment": "Page P4 (Course Progressions) has been fully explored. For the Sample Full-Time Schedule, the Prequarter (N6) contains only optional foundational courses (E1, E2) and is not relevant to core course sequencing. Quarter 1 (N7) includes core courses Statistical Models for Data Science, Leadership and Consulting for Data Science, and a choice between Data Engineering Platforms for Analytics or Big Data and Cloud Computing (E5, E7-E9). Quarter 2 (N8) includes core courses Machine Learning I and Time Series Analysis and Forecasting (E17-E19). Quarter 3 (N9) includes core course Machine Learning II (E26). Quarter 4 (N10) contains no core courses (E35). For the Sample Part-Time Schedule, Quarter 1 (N13) includes core courses Statistical Models for Data Science and Data Engineering Platforms for Analytics or Big Data and Cloud Computing (E44, E46-E47). Quarter 2 (N14) includes core courses Machine Learning I and Time Series Analysis and Forecasting (E52-E54). Quarter 3 (N15) includes core courses Machine Learning II and Leadership and Consulting for Data Science (E57-E59). Quarter 4 (N16) contains only electives (E62), and Quarter 5 (N17) contains capstone and elective, no core courses. All six core courses are accounted for in both schedules. The full-time schedule sequences them as: Q1: Statistical Models, Leadership and Consulting, and one of Data Engineering/Big Data; Q2: Machine Learning I and Time Series; Q3: Machine Learning II. The part-time schedule sequences them as: Q1: Statistical Models and Data Engineering/Big Data; Q2: Machine Learning I and Time Series; Q3: Machine Learning II and Leadership and Consulting. No missing information remains."
+        },
+        "stop_reason": "sufficient_evidence",
+        "fallback": {
+          "triggered": false,
+          "pages_selected": [],
+          "reason": ""
+        },
+        "metrics": {
+          "agent_turns": 4,
+          "tool_calls": 4,
+          "judge_calls": 2,
+          "llm_calls": 12,
+          "valid_fetch_count": 2,
+          "invalid_fetch_count": 1,
+          "accepted_evidence_count": 20,
+          "stop_reason": "sufficient_evidence",
+          "fallback_triggered": false
+        },
+        "usage": {
+          "prompt_tokens": 20332,
+          "completion_tokens": 2757,
+          "total_tokens": 23089,
+          "llm_calls": 12
+        },
+        "progress_summary_history": [
+          {
+            "turn": 1,
+            "summary_covering": "No pages have been inspected yet, so no node paths have been checked. The question asks about the sequencing of six core courses across full-time and part-time schedules, but no evidence has been gathered. Still missing: the actual course sequences for both schedules.",
+            "decision_trace_narrative": "Turn 1: The agent decided to inspect page P4 (Course Progressions) because it is the most directly relevant page for quarter-by-quarter course sequencing. The inspection was successful (OK), but no nodes have been evaluated yet, so no information has been extracted.",
+            "sufficient": false,
+            "missing": "Evidence of the six core courses' sequencing in both full-time and part-time schedules."
+          },
+          {
+            "turn": 2,
+            "summary_covering": "No pages have been evaluated yet. The question asks for the sequencing of six core courses in both full-time and part-time schedules. No evidence has been gathered.",
+            "decision_trace_narrative": "Turn 1: Attempted to fetch nodes N5 (Sample Full-Time Schedule) and N11 (Sample Part-Time Schedule) on page P4, as these are the most directly relevant nodes for the question. The fetch returned NODE_SCOPE_TOO_BROAD, indicating the scope was too broad. No new information was obtained.",
+            "sufficient": false,
+            "missing": "The sequencing of the six core courses in both the full-time and part-time schedules."
+          },
+          {
+            "turn": 3,
+            "summary_covering": "Page P4 (Course Progressions): The sample full-time schedule was examined quarter by quarter. Prequarter (N6) contains only optional foundational courses, not core courses, so it is not useful for core sequencing. Quarter 1 (N7) provides evidence (E5, E7, E8, E9) that the core courses Statistical Models for Data Science, Leadership and Consulting for Data Science, and a choice between Data Engineering Platforms for Analytics or Big Data and Cloud Computing are taken. Quarter 2 (N8) provides evidence (E17, E18, E19) that Machine Learning I and Time Series Analysis and Forecasting are taken. Quarter 3 (N9) provides evidence (E26) that Machine Learning II is taken. Quarter 4 (N10) contains no core courses, so it is not useful. The full-time schedule sequencing is covered: three core courses in Quarter 1, two in Quarter 2, one in Quarter 3. Still missing: the sequencing of the six core courses in the sample part-time schedule.",
+            "decision_trace_narrative": "Turn 1: The agent fetched the Prequarter node (N6) to start mapping the full-time schedule, but found only optional foundational courses, so no core sequencing evidence was added. Turn 2: The agent fetched Quarter 1 (N7) and extracted evidence for three core courses, establishing the first part of the sequence. Turn 3: The agent fetched Quarter 2 (N8) and extracted evidence for two core courses. Turn 4: The agent fetched Quarter 3 (N9) and extracted evidence for one core course. Turn 5: The agent fetched Quarter 4 (N10) but found no core courses, so no evidence was added. The agent has not yet fetched any nodes for the part-time schedule.",
+            "sufficient": false,
+            "missing": "The sequencing of the six core courses in the sample part-time schedule has not been examined."
+          },
+          {
+            "turn": 4,
+            "summary_covering": "Page P4 (Course Progressions) has been fully explored. For the Sample Full-Time Schedule, the Prequarter (N6) contains only optional foundational courses (E1, E2) and is not relevant to core course sequencing. Quarter 1 (N7) includes core courses Statistical Models for Data Science, Leadership and Consulting for Data Science, and a choice between Data Engineering Platforms for Analytics or Big Data and Cloud Computing (E5, E7-E9). Quarter 2 (N8) includes core courses Machine Learning I and Time Series Analysis and Forecasting (E17-E19). Quarter 3 (N9) includes core course Machine Learning II (E26). Quarter 4 (N10) contains no core courses (E35). For the Sample Part-Time Schedule, Quarter 1 (N13) includes core courses Statistical Models for Data Science and Data Engineering Platforms for Analytics or Big Data and Cloud Computing (E44, E46-E47). Quarter 2 (N14) includes core courses Machine Learning I and Time Series Analysis and Forecasting (E52-E54). Quarter 3 (N15) includes core courses Machine Learning II and Leadership and Consulting for Data Science (E57-E59). Quarter 4 (N16) contains only electives (E62), and Quarter 5 (N17) contains capstone and elective, no core courses. All six core courses are accounted for in both schedules. The full-time schedule sequences them as: Q1: Statistical Models, Leadership and Consulting, and one of Data Engineering/Big Data; Q2: Machine Learning I and Time Series; Q3: Machine Learning II. The part-time schedule sequences them as: Q1: Statistical Models and Data Engineering/Big Data; Q2: Machine Learning I and Time Series; Q3: Machine Learning II and Leadership and Consulting. No missing information remains.",
+            "decision_trace_narrative": "Turn 1: Fetched Prequarter node (N6) to check if any core courses are listed there; found only optional foundational courses, so it was not useful for core sequencing. Turn 2: Fetched Quarter 1 node (N7) for full-time schedule to identify core courses; found three core courses, providing partial sequencing. Turn 3: Fetched Quarter 2 node (N8) for full-time schedule; found two core courses, continuing the sequence. Turn 4: Fetched Quarter 3 node (N9) for full-time schedule; found one core course, completing the full-time core sequence. Turn 5: Fetched Quarter 4 node (N10) for full-time schedule to check for any remaining core courses; found none, confirming full-time sequence is complete. Turn 6: Fetched Quarter 1 node (N13) for part-time schedule to start part-time sequencing; found two core courses. Turn 7: Fetched Quarter 2 node (N14) for part-time schedule; found two core courses. Turn 8: Fetched Quarter 3 node (N15) for part-time schedule; found two core courses, completing the part-time core sequence. Turn 9: Fetched Quarter 4 node (N16) for part-time schedule to check for any remaining core courses; found only electives, so no core courses. Turn 10: Fetched Quarter 5 node (N17) for part-time schedule to ensure no core courses are scheduled later; found capstone and elective, no core courses. All six core courses are now accounted for in both schedules.",
+            "sufficient": true,
+            "missing": ""
+          }
+        ],
+        "node_evaluation_log": {
+          "P4 (Course Progressions)": {
+            "N6 (Prequarter • 5 Weeks)": {
+              "node_id": "quarter:34540ddf2a9617cb",
+              "path": [
+                "Course Progressions",
+                "Sample Full-Time Schedule",
+                "Prequarter • 5 Weeks"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E1",
+                  "chunk_id": "chunk:85ce62e0547a29c9",
+                  "text_preview": "Prequarter • 5 Weeks includes: Optional: Introduction to Statistical Concepts (Foundational) (Optional), R for Data Science (Foundational) (Optional)"
+                },
+                {
+                  "evidence_ref": "E2",
+                  "chunk_id": "chunk:886d3d2379d491fb",
+                  "text_preview": "Optional courses: Introduction to Statistical Concepts (Foundational) (Optional); R for Data Science (Foundational) (Optional)"
+                }
+              ],
+              "comment": "The structure summaries E1 and E2 list the optional foundational courses offered in the Prequarter, which are not core courses. The question asks about the sequencing of the six core courses, so this node's content is not directly useful for answering the question, but it is kept to document the node's coverage."
+            },
+            "N7 (Quarter 1 • 10 Weeks)": {
+              "node_id": "quarter:028329736c99510d",
+              "path": [
+                "Course Progressions",
+                "Sample Full-Time Schedule",
+                "Quarter 1 • 10 Weeks"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E5",
+                  "chunk_id": "chunk:c38376379e9e9cee",
+                  "text_preview": "Quarter 1 • 10 Weeks includes: Optional: Python for Data Science (Foundational) (Optional), Advanced Linear Algebra for Machine Learning (Foundational"
+                },
+                {
+                  "evidence_ref": "E7",
+                  "chunk_id": "chunk:a1f7122a2d40fac7",
+                  "text_preview": "Core courses: Statistical Models for Data Science (Letter Grade)"
+                },
+                {
+                  "evidence_ref": "E8",
+                  "chunk_id": "chunk:13bab548a0daa574",
+                  "text_preview": "Core courses: Leadership and Consulting for Data Science (Letter Grade)"
+                },
+                {
+                  "evidence_ref": "E9",
+                  "chunk_id": "chunk:d2050191f367219b",
+                  "text_preview": "Core (Choose 1) courses: Data Engineering Platforms for Analytics or Big Data and Cloud Computing (Letter Grade)"
+                }
+              ],
+              "comment": "E5 lists the courses in Quarter 1, including the core courses Statistical Models for Data Science, Leadership and Consulting for Data Science, and a choice between Data Engineering Platforms for Analytics or Big Data and Cloud Computing. E7, E8, and E9 confirm these core courses. This provides the sequencing of three core courses in Quarter 1."
+            },
+            "N8 (Quarter 2 • 10 Weeks)": {
+              "node_id": "quarter:58c38499dd5cddd4",
+              "path": [
+                "Course Progressions",
+                "Sample Full-Time Schedule",
+                "Quarter 2 • 10 Weeks"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E17",
+                  "chunk_id": "chunk:8da5b9d5d5bbff73",
+                  "text_preview": "Quarter 2 • 10 Weeks includes: Core: Machine Learning I (Letter Grade); Core: Time Series Analysis and Forecasting (Letter Grade); Elective: Elective "
+                },
+                {
+                  "evidence_ref": "E18",
+                  "chunk_id": "chunk:d9f70ea0621e9718",
+                  "text_preview": "Core courses: Machine Learning I (Letter Grade)"
+                },
+                {
+                  "evidence_ref": "E19",
+                  "chunk_id": "chunk:267c1246de29fa34",
+                  "text_preview": "Core courses: Time Series Analysis and Forecasting (Letter Grade)"
+                }
+              ],
+              "comment": "E17 lists the courses in Quarter 2, including core courses Machine Learning I and Time Series Analysis and Forecasting. E18 and E19 confirm these core courses. This provides the sequencing of two core courses in Quarter 2."
+            },
+            "N9 (Quarter 3 • 10 Weeks)": {
+              "node_id": "quarter:20e6ddc9301b354e",
+              "path": [
+                "Course Progressions",
+                "Sample Full-Time Schedule",
+                "Quarter 3 • 10 Weeks"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E26",
+                  "chunk_id": "chunk:19affee6e45ccf8d",
+                  "text_preview": "Quarter 3 • 10 Weeks includes: Core: Machine Learning II (Letter Grade); Elective: Elective 2 (Letter Grade); Capstone: Data Science Capstone Project "
+                }
+              ],
+              "comment": "E26 lists the courses in Quarter 3, including core course Machine Learning II. E27 confirms this core course. This provides the sequencing of one core course in Quarter 3."
+            },
+            "N10 (Quarter 4 • 10 Weeks)": {
+              "node_id": "quarter:5ec547187f6427fa",
+              "path": [
+                "Course Progressions",
+                "Sample Full-Time Schedule",
+                "Quarter 4 • 10 Weeks"
+              ],
+              "eff_evidence": [],
+              "comment": "E35 lists the courses in Quarter 4, which includes only electives, capstone, and seminar, with no core courses. This node does not provide information about core course sequencing, so no evidence is kept."
+            },
+            "N13 (Quarter 1 • 10 Weeks)": {
+              "node_id": "quarter:3834cf312402be0f",
+              "path": [
+                "Course Progressions",
+                "Sample Part-Time Schedule",
+                "Quarter 1 • 10 Weeks"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E44",
+                  "chunk_id": "chunk:0bf1a1aa0f8de0fd",
+                  "text_preview": "Quarter 1 • 10 Weeks includes: Optional: Python for Data Science (Foundational) (Optional), Advanced Linear Algebra for Machine Learning (Foundational"
+                },
+                {
+                  "evidence_ref": "E46",
+                  "chunk_id": "chunk:7cc001496bd7fca8",
+                  "text_preview": "Core courses: Statistical Models for Data Science (Letter Grade)"
+                },
+                {
+                  "evidence_ref": "E47",
+                  "chunk_id": "chunk:3fcdc263eac8ad2c",
+                  "text_preview": "Core courses: Data Engineering Platforms for Analytics or Big Data and Cloud Computing (Letter Grade)"
+                }
+              ],
+              "comment": "E44 lists the core courses in Quarter 1 (Statistical Models for Data Science and Data Engineering Platforms for Analytics or Big Data and Cloud Computing), directly supporting the sequencing. E46 and E47 confirm these as core courses. Optional courses are not part of the six core courses."
+            },
+            "N14 (Quarter 2 • 10 Weeks)": {
+              "node_id": "quarter:0e10155327e57f5b",
+              "path": [
+                "Course Progressions",
+                "Sample Part-Time Schedule",
+                "Quarter 2 • 10 Weeks"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E52",
+                  "chunk_id": "chunk:8e6961b609ca3fae",
+                  "text_preview": "Quarter 2 • 10 Weeks includes: Core: Machine Learning I (Letter Grade); Core: Time Series Analysis and Forecasting (Letter Grade)"
+                },
+                {
+                  "evidence_ref": "E53",
+                  "chunk_id": "chunk:80dd8eff28b02caf",
+                  "text_preview": "Core courses: Machine Learning I (Letter Grade)"
+                },
+                {
+                  "evidence_ref": "E54",
+                  "chunk_id": "chunk:e741ff38aa6ddc99",
+                  "text_preview": "Core courses: Time Series Analysis and Forecasting (Letter Grade)"
+                }
+              ],
+              "comment": "E52 lists the core courses in Quarter 2 (Machine Learning I and Time Series Analysis and Forecasting), directly supporting the sequencing. E53 and E54 confirm these as core courses."
+            },
+            "N15 (Quarter 3 • 10 Weeks)": {
+              "node_id": "quarter:66c316447fa887fb",
+              "path": [
+                "Course Progressions",
+                "Sample Part-Time Schedule",
+                "Quarter 3 • 10 Weeks"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E57",
+                  "chunk_id": "chunk:c43aedeb7a1ce3cc",
+                  "text_preview": "Quarter 3 • 10 Weeks includes: Core: Machine Learning II (Letter Grade); Core: Leadership and Consulting for Data Science (Letter Grade)"
+                },
+                {
+                  "evidence_ref": "E58",
+                  "chunk_id": "chunk:e1c58e59170d8be8",
+                  "text_preview": "Core courses: Machine Learning II (Letter Grade)"
+                },
+                {
+                  "evidence_ref": "E59",
+                  "chunk_id": "chunk:004cd4c7efe1acaa",
+                  "text_preview": "Core courses: Leadership and Consulting for Data Science (Letter Grade)"
+                }
+              ],
+              "comment": "E57 lists the core courses in Quarter 3 (Machine Learning II and Leadership and Consulting for Data Science), directly supporting the sequencing. E58 and E59 confirm these as core courses."
+            },
+            "N16 (Quarter 4 • 10 Weeks)": {
+              "node_id": "quarter:e2ac68624d9d7ef2",
+              "path": [
+                "Course Progressions",
+                "Sample Part-Time Schedule",
+                "Quarter 4 • 10 Weeks"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E62",
+                  "chunk_id": "chunk:153f801be86e1f3b",
+                  "text_preview": "Quarter 4 • 10 Weeks includes: Elective: Elective 1 (Letter Grade); Elective: Elective 2 (Letter Grade)"
+                }
+              ],
+              "comment": "E62 shows Quarter 4 contains only electives, not core courses, so it does not contribute to the sequencing of the six core courses. The elective details are not relevant."
+            },
+            "N17 (Quarter 5 • 10 Weeks)": {
+              "node_id": "quarter:44f0391246266aa8",
+              "path": [
+                "Course Progressions",
+                "Sample Part-Time Schedule",
+                "Quarter 5 • 10 Weeks"
+              ],
+              "eff_evidence": [],
+              "comment": "E67 shows Quarter 5 contains a capstone and an elective, not core courses, so it does not contribute to the sequencing of the six core courses. The capstone and elective details are not relevant."
+            }
+          }
+        },
+        "log_path": "C:\\Users\\ss363\\Desktop\\Archive\\ads_rag_chatbot\\pipeline_grag_v2\\log\\2026-08-04_014647_fbb26bf04812.json"
+      }
+    }
+  },
+  "run_batch_id": "20260804T013937"
+}

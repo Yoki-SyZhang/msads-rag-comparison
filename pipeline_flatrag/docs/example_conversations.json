@@ -1,0 +1,19 @@
+[
+  {
+    "id": 1,
+    "title": "Multi-turn coreference: in-person vs. online vs. 2-year curriculum",
+    "description": "Tests whether the pipeline resolves follow-up references ('the online version', '2-year version') back to the initial question about core courses.",
+    "turns": [
+      {
+        "turn": 1,
+        "role": "user",
+        "content": "What are the core courses for the in-person MSADS program?"
+      },
+      {
+        "turn": 2,
+        "role": "user",
+        "content": "What about the online version? and the 2-year version?"
+      }
+    ]
+  }
+]

@@ -1,0 +1,1080 @@
+{
+  "schema_version": 2,
+  "timestamp": "2026-08-04T01:44:26.259928",
+  "question": "What's the difference between the 1-year 12-course program and the 2-year thesis track?",
+  "question_id": "C05",
+  "question_meta": {
+    "category": "curriculum",
+    "type": "comparative",
+    "difficulty": "medium",
+    "expected_behavior": "direct_answer"
+  },
+  "results": {
+    "pipeline_flatrag": {
+      "pipeline_id": "pipeline_flatrag",
+      "display_name": "FlatRAG",
+      "answer": "Based on the available program materials, here are the key differences between the two in-person MSADS pathways:\n\n**1-Year 12-Course Program (Full- and Part-Time Options)**\n- **Total courses:** 12 (6 Core, 4 Electives, 2 Capstone) [1]\n- **Duration:** Full-time students typically graduate in 4–5 quarters; part-time students may take up to 6 quarters. All students must graduate within 4 years maximum [1].\n- **Capstone:** A 2-quarter Capstone Project with a real industry partner; some students may opt for a research Capstone [1].\n- **Thesis:** No thesis requirement [1].\n- **Format:** Courses are primarily offered in the evenings and on weekends to support working professionals [1].\n\n**2-Year Thesis Track, 18-Course Program (Full-Time Only)**\n- **Total courses:** 18 (6 Core, 8 Electives, 2 Capstone, 2 Independent Study) [2]\n- **Duration:** Completed over 6 academic quarters (21 months), with the summer between years 1 and 2 as a vacation quarter [2].\n- **Capstone:** A 2-quarter Capstone Project [2].\n- **Thesis:** Requires a Master’s Thesis (traditional written thesis or project-based thesis) [2].\n- **Ideal for:** Students seeking a longer academic experience with more time for elective courses and the capacity to complete a thesis [2].\n\n**Additional Notes:**\n- Both programs require a Career Seminar throughout, though those with 3+ years of full-time work experience may petition for exemption [1][2].\n- Both programs are STEM/OPT eligible [1][3].\n- The 2-Year Thesis Track began in academic year 2026-27, and the application for Autumn 2026 closed on December 4, 2025 [2].\n\nSources:\n1. [In Person Program | 1-Year 12 Course Program (Full- and Part-Time Options)](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/)\n2. [In Person Program | 2-Year Thesis Track, 18 Course Program (Full-Time Only)](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/)\n3. [In Person Program | Comparison Chart](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/)",
+      "sources": [
+        {
+          "page_title": "In Person Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "tool_calls": [
+            {
+              "name": "list_page_sections",
+              "args": {
+                "url": "in_person_program"
+              }
+            },
+            {
+              "name": "list_page_sections",
+              "args": {
+                "url": "course_progressions"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "list_page_sections",
+              "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/in-person-program/:\n  - \"1-Year 12 Course Program (Full- and Part-Time Options)\" (3 chunks)\n  - \"2-Year Thesis Track, 18 Course Program (Full-Time Only)\" (3 chunks)\n  - \"By and For Data Science Innovators\" (1 chunk)\n  - \"Career Outcomes in Data Science\" (1 chunk)\n  - \"Comparison Chart\" (1 chunk)\n  - \"Core Courses > Data Engineering Platforms for Analytics or Big Data and Cloud Computing\" (1 chunk)\n  - \"Core Courses > Data Science Capstone Project\" (1 chunk)\n  - \"Core Courses > Leadership and Consulting for Data Science\" (1 chunk)\n  - \"Core Courses > Machine Learning I\" (1 chunk)\n  - \"Core Courses > Machine Learning II\" (1 chunk)\n  - \"Core Courses > Statistical Models for Data Science\" (1 chunk)\n  - \"Core Courses > Time Series Analysis and Forecasting\" (1 chunk)\n  - \"Get in Touch\" (1 chunk)\n  - \"In Person Program\" (1 chunk)\n  - \"In Person Program - Accordion Overview > Core Courses\" (1 chunk)\n  - \"In Person Program - Accordion Overview > Noncredit Courses\" (1 chunk)\n  - \"In Person Program - Accordion Overview > Sample Elective Courses\" (1 chunk)\n  - \"Noncredit Courses > Advanced Linear Algebra for Machine Learning (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Brush up on the Basics (Optional resource)\" (1 chunk)\n  - \"Noncredit Courses > Career Seminar (Seminar, required)\" (1 chunk)\n  - \"Noncredit Courses > Introduction to Statistical Concepts (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Python for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > R for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Sample Elective Courses > Advanced Computer Vision with Deep Learning\" (2 chunks)\n  - \"Sample Elective Courses > Advanced Machine Learning and Artificial Intelligence\" (2 chunks)\n  - \"Sample Elective Courses > Applied Generative AI: Agents and Multimodal Intelligence\" (2 chunks)\n  - \"Sample Elective Courses > Bayesian Machine Learning with G"
+            },
+            {
+              "name": "list_page_sections",
+              "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/:\n  - \"Course Progressions - Accordion Overview > Sample 2-Year Full-Time Schedule\" (1 chunk)\n  - \"Course Progressions - Accordion Overview > Sample Full-Time Schedule\" (1 chunk)\n  - \"Course Progressions - Accordion Overview > Sample Part-Time Schedule\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 5 > Elective 5\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 5 > Elective 6\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 5 > Thesis Course I\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 6 > Elective 7\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 6 > Elective 8\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 6 > Thesis Course II\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Prequarter > Introduction to Statistical Concepts (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Prequarter > R for Data Science (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Advanced Linear Algebra for Machine Learning (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Career Seminar (Required)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Data Engineering Platforms for Analytics or Big Data and Cloud Computing\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Leadership and Consulting for Data Science\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Python for Data Science (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Statistical Models for Data Science\" (1 chunk)\n  - \"Course Progressions > Sample Full-Ti"
+            }
+          ],
+          "judger": null
+        },
+        {
+          "step": 2,
+          "tool_calls": [
+            {
+              "name": "fetch_section_chunks",
+              "args": {
+                "url": "in_person_program",
+                "section_breadcrumb": "1-Year 12 Course Program (Full- and Part-Time Options)"
+              }
+            },
+            {
+              "name": "fetch_section_chunks",
+              "args": {
+                "url": "in_person_program",
+                "section_breadcrumb": "2-Year Thesis Track, 18 Course Program (Full-Time Only)"
+              }
+            },
+            {
+              "name": "fetch_section_chunks",
+              "args": {
+                "url": "in_person_program",
+                "section_breadcrumb": "Comparison Chart"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_section_chunks",
+              "content": "Fetched 3 chunk(s) from \"1-Year 12 Course Program (Full- and Part-Time Options)\":\n\n[0] In Person Program | 1-Year 12 Course Program (Full- and Part-Time Options)\n[Page: In Person Program | Section: 1-Year 12 Course Program (Full- and Part-Time Options)]\n\nThe signature 1-year 12 course program is ideal for those who wish to fast-track their graduate studies. Full-time students typically graduate in 4–5 quarters; part-time students may take up to 6 quarters. A...\n\n[1] In Person Program | 1-Year 12 Course Program (Full- and Part-Time Options)\n[Page: In Person Program | Section: 1-Year 12 Course Program (Full- and Part-Time Options)]\n\n• 12 courses (6 Core, 4 Electives, 2 Capstone).\n• A required Career Seminar throughout the program. Those with 3+ years of full-time work experience may petition for exemption.\n• A 2-quarter Capstone Project...\n\n[2] In Person Program | 1-Year 12 Course Program (Full- and Part-Time Options)\n[Page: In Person Program | Section: 1-Year 12 Course Program (Full- and Part-Time Options)]\n\nCourses are primarily offered in the evenings and on weekends to support working professionals. The program is STEM/OPT eligible . Read More + Show Less -"
+            },
+            {
+              "name": "fetch_section_chunks",
+              "content": "Fetched 3 chunk(s) from \"2-Year Thesis Track, 18 Course Program (Full-Time Only)\":\n\n[0] In Person Program | 2-Year Thesis Track, 18 Course Program (Full-Time Only)\n[Page: In Person Program | Section: 2-Year Thesis Track, 18 Course Program (Full-Time Only)]\n\nBeginning in academic year 2026-27, UChicago will offer an additional 2-year (21 month) pathway for In-Person, Full-Time applicants. The application for the 2-Year Thesis Track (Autumn 2026 start) closed on...\n\n[1] In Person Program | 2-Year Thesis Track, 18 Course Program (Full-Time Only)\n[Page: In Person Program | Section: 2-Year Thesis Track, 18 Course Program (Full-Time Only)]\n\n• 18 total courses (6 Core, 8 Electives, 2 Capstone, 2 Independent Study).\n• A required Career Seminar throughout the program. Those with 3+ years of full-time work experience may petition for exemption.\n• ...\n\n[2] In Person Program | 2-Year Thesis Track, 18 Course Program (Full-Time Only)\n[Page: In Person Program | Section: 2-Year Thesis Track, 18 Course Program (Full-Time Only)]\n\nThis option is ideal for students seeking a longer academic experience with more time to complete more elective courses. Students must also have the capacity to complete a traditional written thesis or thes..."
+            },
+            {
+              "name": "fetch_section_chunks",
+              "content": "Fetched 1 chunk(s) from \"Comparison Chart\":\n\n[0] In Person Program | Comparison Chart\n[Page: In Person Program | Section: Comparison Chart]\n\nThis program is listed as a STEM designated degree by the U.S. Department of Homeland Security for the purposes of the STEM OPT extension allowing eligible students to apply. However, approval of STEM OPT is at the discretion of U.S. Citizenship..."
+            }
+          ],
+          "judger": {
+            "completeness": "partial",
+            "useful_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "decision": "done",
+            "candidate_chunk_count": 7,
+            "accepted_chunk_count": 7
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "text": "[Page: In Person Program | Section: 1-Year 12 Course Program (Full- and Part-Time Options)]\n\nThe signature 1-year 12 course program is ideal for those who wish to fast-track their graduate studies. Full-time students typically graduate in 4–5 quarters; part-time students may take up to 6 quarters. All students must graduate within 4 years maximum. All students complete:",
+          "chunk_id": "education__masters_programs__in_person_program__1_year_12_course_program_full_and_part_time_options__2",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+          "page_title": "In Person Program",
+          "section": "1-Year 12 Course Program (Full- and Part-Time Options)",
+          "section_breadcrumb": "1-Year 12 Course Program (Full- and Part-Time Options)",
+          "content_type": "text",
+          "program_type": "in_person",
+          "distance": 0.0
+        },
+        {
+          "text": "[Page: In Person Program | Section: 1-Year 12 Course Program (Full- and Part-Time Options)]\n\n• 12 courses (6 Core, 4 Electives, 2 Capstone).\n• A required Career Seminar throughout the program. Those with 3+ years of full-time work experience may petition for exemption.\n• A 2-quarter Capstone Project with a real industry partner; some students opt to complete a research Capstone.",
+          "chunk_id": "education__masters_programs__in_person_program__1_year_12_course_program_full_and_part_time_options__3",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+          "page_title": "In Person Program",
+          "section": "1-Year 12 Course Program (Full- and Part-Time Options)",
+          "section_breadcrumb": "1-Year 12 Course Program (Full- and Part-Time Options)",
+          "content_type": "list",
+          "program_type": "in_person",
+          "distance": 0.0
+        },
+        {
+          "text": "[Page: In Person Program | Section: 1-Year 12 Course Program (Full- and Part-Time Options)]\n\nCourses are primarily offered in the evenings and on weekends to support working professionals. The program is STEM/OPT eligible . Read More + Show Less -",
+          "chunk_id": "education__masters_programs__in_person_program__1_year_12_course_program_full_and_part_time_options__4",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+          "page_title": "In Person Program",
+          "section": "1-Year 12 Course Program (Full- and Part-Time Options)",
+          "section_breadcrumb": "1-Year 12 Course Program (Full- and Part-Time Options)",
+          "content_type": "text",
+          "program_type": "in_person",
+          "distance": 0.0
+        },
+        {
+          "text": "[Page: In Person Program | Section: 2-Year Thesis Track, 18 Course Program (Full-Time Only)]\n\nBeginning in academic year 2026-27, UChicago will offer an additional 2-year (21 month) pathway for In-Person, Full-Time applicants. The application for the 2-Year Thesis Track (Autumn 2026 start) closed on December 4, 2025. The 2-year Thesis Track (18 courses) pathway is optimized for those who want a longer master’s program, are interested in taking more elective courses, and have the capacity to complete a master’s thesis. The 2-year (21 month) pathway is completed over 6 academic quarters. The summer in between years 1 and 2 serves as a vacation quarter. Within the application portal, applicants will indicate their selection of this pathway. Read more about applying to the 2-Year program. All students complete:",
+          "chunk_id": "education__masters_programs__in_person_program__2_year_thesis_track_18_course_program_full_time_only__5",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+          "page_title": "In Person Program",
+          "section": "2-Year Thesis Track, 18 Course Program (Full-Time Only)",
+          "section_breadcrumb": "2-Year Thesis Track, 18 Course Program (Full-Time Only)",
+          "content_type": "text",
+          "program_type": "in_person",
+          "distance": 0.0
+        },
+        {
+          "text": "[Page: In Person Program | Section: 2-Year Thesis Track, 18 Course Program (Full-Time Only)]\n\n• 18 total courses (6 Core, 8 Electives, 2 Capstone, 2 Independent Study).\n• A required Career Seminar throughout the program. Those with 3+ years of full-time work experience may petition for exemption.\n• A 2-quarter Capstone Project .\n• A Master’s Thesis (traditional written thesis or project-based thesis).",
+          "chunk_id": "education__masters_programs__in_person_program__2_year_thesis_track_18_course_program_full_time_only__6",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+          "page_title": "In Person Program",
+          "section": "2-Year Thesis Track, 18 Course Program (Full-Time Only)",
+          "section_breadcrumb": "2-Year Thesis Track, 18 Course Program (Full-Time Only)",
+          "content_type": "list",
+          "program_type": "in_person",
+          "distance": 0.0
+        },
+        {
+          "text": "[Page: In Person Program | Section: 2-Year Thesis Track, 18 Course Program (Full-Time Only)]\n\nThis option is ideal for students seeking a longer academic experience with more time to complete more elective courses. Students must also have the capacity to complete a traditional written thesis or thesis project. Read More + Show Less -",
+          "chunk_id": "education__masters_programs__in_person_program__2_year_thesis_track_18_course_program_full_time_only__7",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+          "page_title": "In Person Program",
+          "section": "2-Year Thesis Track, 18 Course Program (Full-Time Only)",
+          "section_breadcrumb": "2-Year Thesis Track, 18 Course Program (Full-Time Only)",
+          "content_type": "text",
+          "program_type": "in_person",
+          "distance": 0.0
+        },
+        {
+          "text": "[Page: In Person Program | Section: Comparison Chart]\n\nThis program is listed as a STEM designated degree by the U.S. Department of Homeland Security for the purposes of the STEM OPT extension allowing eligible students to apply. However, approval of STEM OPT is at the discretion of U.S. Citizenship & Immigration Services.",
+          "chunk_id": "education__masters_programs__in_person_program__comparison_chart__8",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+          "page_title": "In Person Program",
+          "section": "Comparison Chart",
+          "section_breadcrumb": "Comparison Chart",
+          "content_type": "text",
+          "program_type": "in_person",
+          "distance": 0.0
+        }
+      ],
+      "time_sec": 10.635,
+      "low_confidence": true,
+      "error": null,
+      "raw_debug": {
+        "answer": "Based on the available program materials, here are the key differences between the two in-person MSADS pathways:\n\n**1-Year 12-Course Program (Full- and Part-Time Options)**\n- **Total courses:** 12 (6 Core, 4 Electives, 2 Capstone) [1]\n- **Duration:** Full-time students typically graduate in 4–5 quarters; part-time students may take up to 6 quarters. All students must graduate within 4 years maximum [1].\n- **Capstone:** A 2-quarter Capstone Project with a real industry partner; some students may opt for a research Capstone [1].\n- **Thesis:** No thesis requirement [1].\n- **Format:** Courses are primarily offered in the evenings and on weekends to support working professionals [1].\n\n**2-Year Thesis Track, 18-Course Program (Full-Time Only)**\n- **Total courses:** 18 (6 Core, 8 Electives, 2 Capstone, 2 Independent Study) [2]\n- **Duration:** Completed over 6 academic quarters (21 months), with the summer between years 1 and 2 as a vacation quarter [2].\n- **Capstone:** A 2-quarter Capstone Project [2].\n- **Thesis:** Requires a Master’s Thesis (traditional written thesis or project-based thesis) [2].\n- **Ideal for:** Students seeking a longer academic experience with more time for elective courses and the capacity to complete a thesis [2].\n\n**Additional Notes:**\n- Both programs require a Career Seminar throughout, though those with 3+ years of full-time work experience may petition for exemption [1][2].\n- Both programs are STEM/OPT eligible [1][3].\n- The 2-Year Thesis Track began in academic year 2026-27, and the application for Autumn 2026 closed on December 4, 2025 [2].\n\nSources:\n1. [In Person Program | 1-Year 12 Course Program (Full- and Part-Time Options)](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/)\n2. [In Person Program | 2-Year Thesis Track, 18 Course Program (Full-Time Only)](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/)\n3. [In Person Program | Comparison Chart](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/)",
+        "sources": [
+          {
+            "page_title": "In Person Program",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/"
+          }
+        ],
+        "completeness": "partial",
+        "low_confidence": true,
+        "attempts": 2,
+        "agent_steps": [
+          {
+            "step": 1,
+            "tool_calls": [
+              {
+                "name": "list_page_sections",
+                "args": {
+                  "url": "in_person_program"
+                }
+              },
+              {
+                "name": "list_page_sections",
+                "args": {
+                  "url": "course_progressions"
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "list_page_sections",
+                "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/in-person-program/:\n  - \"1-Year 12 Course Program (Full- and Part-Time Options)\" (3 chunks)\n  - \"2-Year Thesis Track, 18 Course Program (Full-Time Only)\" (3 chunks)\n  - \"By and For Data Science Innovators\" (1 chunk)\n  - \"Career Outcomes in Data Science\" (1 chunk)\n  - \"Comparison Chart\" (1 chunk)\n  - \"Core Courses > Data Engineering Platforms for Analytics or Big Data and Cloud Computing\" (1 chunk)\n  - \"Core Courses > Data Science Capstone Project\" (1 chunk)\n  - \"Core Courses > Leadership and Consulting for Data Science\" (1 chunk)\n  - \"Core Courses > Machine Learning I\" (1 chunk)\n  - \"Core Courses > Machine Learning II\" (1 chunk)\n  - \"Core Courses > Statistical Models for Data Science\" (1 chunk)\n  - \"Core Courses > Time Series Analysis and Forecasting\" (1 chunk)\n  - \"Get in Touch\" (1 chunk)\n  - \"In Person Program\" (1 chunk)\n  - \"In Person Program - Accordion Overview > Core Courses\" (1 chunk)\n  - \"In Person Program - Accordion Overview > Noncredit Courses\" (1 chunk)\n  - \"In Person Program - Accordion Overview > Sample Elective Courses\" (1 chunk)\n  - \"Noncredit Courses > Advanced Linear Algebra for Machine Learning (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Brush up on the Basics (Optional resource)\" (1 chunk)\n  - \"Noncredit Courses > Career Seminar (Seminar, required)\" (1 chunk)\n  - \"Noncredit Courses > Introduction to Statistical Concepts (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Python for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > R for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Sample Elective Courses > Advanced Computer Vision with Deep Learning\" (2 chunks)\n  - \"Sample Elective Courses > Advanced Machine Learning and Artificial Intelligence\" (2 chunks)\n  - \"Sample Elective Courses > Applied Generative AI: Agents and Multimodal Intelligence\" (2 chunks)\n  - \"Sample Elective Courses > Bayesian Machine Learning with G"
+              },
+              {
+                "name": "list_page_sections",
+                "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/:\n  - \"Course Progressions - Accordion Overview > Sample 2-Year Full-Time Schedule\" (1 chunk)\n  - \"Course Progressions - Accordion Overview > Sample Full-Time Schedule\" (1 chunk)\n  - \"Course Progressions - Accordion Overview > Sample Part-Time Schedule\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 5 > Elective 5\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 5 > Elective 6\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 5 > Thesis Course I\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 6 > Elective 7\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 6 > Elective 8\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 6 > Thesis Course II\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Prequarter > Introduction to Statistical Concepts (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Prequarter > R for Data Science (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Advanced Linear Algebra for Machine Learning (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Career Seminar (Required)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Data Engineering Platforms for Analytics or Big Data and Cloud Computing\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Leadership and Consulting for Data Science\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Python for Data Science (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Statistical Models for Data Science\" (1 chunk)\n  - \"Course Progressions > Sample Full-Ti"
+              }
+            ],
+            "judger": null
+          },
+          {
+            "step": 2,
+            "tool_calls": [
+              {
+                "name": "fetch_section_chunks",
+                "args": {
+                  "url": "in_person_program",
+                  "section_breadcrumb": "1-Year 12 Course Program (Full- and Part-Time Options)"
+                }
+              },
+              {
+                "name": "fetch_section_chunks",
+                "args": {
+                  "url": "in_person_program",
+                  "section_breadcrumb": "2-Year Thesis Track, 18 Course Program (Full-Time Only)"
+                }
+              },
+              {
+                "name": "fetch_section_chunks",
+                "args": {
+                  "url": "in_person_program",
+                  "section_breadcrumb": "Comparison Chart"
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "fetch_section_chunks",
+                "content": "Fetched 3 chunk(s) from \"1-Year 12 Course Program (Full- and Part-Time Options)\":\n\n[0] In Person Program | 1-Year 12 Course Program (Full- and Part-Time Options)\n[Page: In Person Program | Section: 1-Year 12 Course Program (Full- and Part-Time Options)]\n\nThe signature 1-year 12 course program is ideal for those who wish to fast-track their graduate studies. Full-time students typically graduate in 4–5 quarters; part-time students may take up to 6 quarters. A...\n\n[1] In Person Program | 1-Year 12 Course Program (Full- and Part-Time Options)\n[Page: In Person Program | Section: 1-Year 12 Course Program (Full- and Part-Time Options)]\n\n• 12 courses (6 Core, 4 Electives, 2 Capstone).\n• A required Career Seminar throughout the program. Those with 3+ years of full-time work experience may petition for exemption.\n• A 2-quarter Capstone Project...\n\n[2] In Person Program | 1-Year 12 Course Program (Full- and Part-Time Options)\n[Page: In Person Program | Section: 1-Year 12 Course Program (Full- and Part-Time Options)]\n\nCourses are primarily offered in the evenings and on weekends to support working professionals. The program is STEM/OPT eligible . Read More + Show Less -"
+              },
+              {
+                "name": "fetch_section_chunks",
+                "content": "Fetched 3 chunk(s) from \"2-Year Thesis Track, 18 Course Program (Full-Time Only)\":\n\n[0] In Person Program | 2-Year Thesis Track, 18 Course Program (Full-Time Only)\n[Page: In Person Program | Section: 2-Year Thesis Track, 18 Course Program (Full-Time Only)]\n\nBeginning in academic year 2026-27, UChicago will offer an additional 2-year (21 month) pathway for In-Person, Full-Time applicants. The application for the 2-Year Thesis Track (Autumn 2026 start) closed on...\n\n[1] In Person Program | 2-Year Thesis Track, 18 Course Program (Full-Time Only)\n[Page: In Person Program | Section: 2-Year Thesis Track, 18 Course Program (Full-Time Only)]\n\n• 18 total courses (6 Core, 8 Electives, 2 Capstone, 2 Independent Study).\n• A required Career Seminar throughout the program. Those with 3+ years of full-time work experience may petition for exemption.\n• ...\n\n[2] In Person Program | 2-Year Thesis Track, 18 Course Program (Full-Time Only)\n[Page: In Person Program | Section: 2-Year Thesis Track, 18 Course Program (Full-Time Only)]\n\nThis option is ideal for students seeking a longer academic experience with more time to complete more elective courses. Students must also have the capacity to complete a traditional written thesis or thes..."
+              },
+              {
+                "name": "fetch_section_chunks",
+                "content": "Fetched 1 chunk(s) from \"Comparison Chart\":\n\n[0] In Person Program | Comparison Chart\n[Page: In Person Program | Section: Comparison Chart]\n\nThis program is listed as a STEM designated degree by the U.S. Department of Homeland Security for the purposes of the STEM OPT extension allowing eligible students to apply. However, approval of STEM OPT is at the discretion of U.S. Citizenship..."
+              }
+            ],
+            "judger": {
+              "completeness": "partial",
+              "useful_indices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "decision": "done",
+              "candidate_chunk_count": 7,
+              "accepted_chunk_count": 7
+            }
+          }
+        ],
+        "evidence": [
+          {
+            "text": "[Page: In Person Program | Section: 1-Year 12 Course Program (Full- and Part-Time Options)]\n\nThe signature 1-year 12 course program is ideal for those who wish to fast-track their graduate studies. Full-time students typically graduate in 4–5 quarters; part-time students may take up to 6 quarters. All students must graduate within 4 years maximum. All students complete:",
+            "chunk_id": "education__masters_programs__in_person_program__1_year_12_course_program_full_and_part_time_options__2",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+            "page_title": "In Person Program",
+            "section": "1-Year 12 Course Program (Full- and Part-Time Options)",
+            "section_breadcrumb": "1-Year 12 Course Program (Full- and Part-Time Options)",
+            "content_type": "text",
+            "program_type": "in_person",
+            "distance": 0.0
+          },
+          {
+            "text": "[Page: In Person Program | Section: 1-Year 12 Course Program (Full- and Part-Time Options)]\n\n• 12 courses (6 Core, 4 Electives, 2 Capstone).\n• A required Career Seminar throughout the program. Those with 3+ years of full-time work experience may petition for exemption.\n• A 2-quarter Capstone Project with a real industry partner; some students opt to complete a research Capstone.",
+            "chunk_id": "education__masters_programs__in_person_program__1_year_12_course_program_full_and_part_time_options__3",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+            "page_title": "In Person Program",
+            "section": "1-Year 12 Course Program (Full- and Part-Time Options)",
+            "section_breadcrumb": "1-Year 12 Course Program (Full- and Part-Time Options)",
+            "content_type": "list",
+            "program_type": "in_person",
+            "distance": 0.0
+          },
+          {
+            "text": "[Page: In Person Program | Section: 1-Year 12 Course Program (Full- and Part-Time Options)]\n\nCourses are primarily offered in the evenings and on weekends to support working professionals. The program is STEM/OPT eligible . Read More + Show Less -",
+            "chunk_id": "education__masters_programs__in_person_program__1_year_12_course_program_full_and_part_time_options__4",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+            "page_title": "In Person Program",
+            "section": "1-Year 12 Course Program (Full- and Part-Time Options)",
+            "section_breadcrumb": "1-Year 12 Course Program (Full- and Part-Time Options)",
+            "content_type": "text",
+            "program_type": "in_person",
+            "distance": 0.0
+          },
+          {
+            "text": "[Page: In Person Program | Section: 2-Year Thesis Track, 18 Course Program (Full-Time Only)]\n\nBeginning in academic year 2026-27, UChicago will offer an additional 2-year (21 month) pathway for In-Person, Full-Time applicants. The application for the 2-Year Thesis Track (Autumn 2026 start) closed on December 4, 2025. The 2-year Thesis Track (18 courses) pathway is optimized for those who want a longer master’s program, are interested in taking more elective courses, and have the capacity to complete a master’s thesis. The 2-year (21 month) pathway is completed over 6 academic quarters. The summer in between years 1 and 2 serves as a vacation quarter. Within the application portal, applicants will indicate their selection of this pathway. Read more about applying to the 2-Year program. All students complete:",
+            "chunk_id": "education__masters_programs__in_person_program__2_year_thesis_track_18_course_program_full_time_only__5",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+            "page_title": "In Person Program",
+            "section": "2-Year Thesis Track, 18 Course Program (Full-Time Only)",
+            "section_breadcrumb": "2-Year Thesis Track, 18 Course Program (Full-Time Only)",
+            "content_type": "text",
+            "program_type": "in_person",
+            "distance": 0.0
+          },
+          {
+            "text": "[Page: In Person Program | Section: 2-Year Thesis Track, 18 Course Program (Full-Time Only)]\n\n• 18 total courses (6 Core, 8 Electives, 2 Capstone, 2 Independent Study).\n• A required Career Seminar throughout the program. Those with 3+ years of full-time work experience may petition for exemption.\n• A 2-quarter Capstone Project .\n• A Master’s Thesis (traditional written thesis or project-based thesis).",
+            "chunk_id": "education__masters_programs__in_person_program__2_year_thesis_track_18_course_program_full_time_only__6",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+            "page_title": "In Person Program",
+            "section": "2-Year Thesis Track, 18 Course Program (Full-Time Only)",
+            "section_breadcrumb": "2-Year Thesis Track, 18 Course Program (Full-Time Only)",
+            "content_type": "list",
+            "program_type": "in_person",
+            "distance": 0.0
+          },
+          {
+            "text": "[Page: In Person Program | Section: 2-Year Thesis Track, 18 Course Program (Full-Time Only)]\n\nThis option is ideal for students seeking a longer academic experience with more time to complete more elective courses. Students must also have the capacity to complete a traditional written thesis or thesis project. Read More + Show Less -",
+            "chunk_id": "education__masters_programs__in_person_program__2_year_thesis_track_18_course_program_full_time_only__7",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+            "page_title": "In Person Program",
+            "section": "2-Year Thesis Track, 18 Course Program (Full-Time Only)",
+            "section_breadcrumb": "2-Year Thesis Track, 18 Course Program (Full-Time Only)",
+            "content_type": "text",
+            "program_type": "in_person",
+            "distance": 0.0
+          },
+          {
+            "text": "[Page: In Person Program | Section: Comparison Chart]\n\nThis program is listed as a STEM designated degree by the U.S. Department of Homeland Security for the purposes of the STEM OPT extension allowing eligible students to apply. However, approval of STEM OPT is at the discretion of U.S. Citizenship & Immigration Services.",
+            "chunk_id": "education__masters_programs__in_person_program__comparison_chart__8",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+            "page_title": "In Person Program",
+            "section": "Comparison Chart",
+            "section_breadcrumb": "Comparison Chart",
+            "content_type": "text",
+            "program_type": "in_person",
+            "distance": 0.0
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 6886,
+          "completion_tokens": 917,
+          "total_tokens": 7803,
+          "llm_calls": 6
+        },
+        "metrics": {
+          "tool_calls": 5,
+          "loop_count": 2,
+          "evidence_count": 7,
+          "llm_calls": 6,
+          "judge_calls": null,
+          "valid_fetch_count": null,
+          "invalid_fetch_count": null,
+          "fallback_triggered": null
+        }
+      }
+    },
+    "pipeline_grag_v2": {
+      "pipeline_id": "pipeline_grag_v2",
+      "display_name": "GRAG v2",
+      "answer": "The main differences are:\n\n- **Length and course load**: The 1-year program is 12 courses (6 Core, 4 Electives, 2 Capstone) and typically takes 4–5 quarters full-time [1]. The 2-year thesis track is 18 courses (6 Core, 8 Electives, 2 Capstone, 2 Independent Study) and is completed over 6 academic quarters (21 months) [2][3].\n- **Thesis requirement**: The 2-year track requires a Master’s Thesis (traditional written or project-based) [3]; the 1-year program does not list a thesis requirement [1].\n- **Electives**: The 2-year track offers more electives (8 vs. 4) [1][2].\n- **Independent Study**: Only the 2-year track includes 2 Independent Study courses [2].\n- **Schedule**: The 1-year program offers evening/weekend courses to support working professionals [1]; the 2-year track is full-time only [2].\n- **Summer break**: The 2-year track has a vacation quarter in the summer between years 1 and 2 [2].\n\nBoth programs share the same 6 core courses, a 2-quarter Capstone Project, a required Career Seminar, and STEM/OPT eligibility [1][2][4].",
+      "sources": [
+        {
+          "page_title": "In-Person Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program"
+        },
+        {
+          "page_title": "Course Progressions",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P2"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P2] In-Person Program\n[N1] Page Introduction — Section (1 content block)\n[N2] Tailor Your Data Science Journey — Section (1 content block)\n[N3] 1-Year 12 Course Program (Full- and Part-Time Options) — Section (1 content block)\n[N4] 2-Year Thesis Track, 18 Course Program (Full-Time Only) — Section (2 content blocks)\n[N5] Comparison Chart — Section (1 content block)\n[N6] Your Career Success — Section (1 content block)\n[N7] Your Engagement — Section (1 content block)\n[N8] Your Student Experience — Section (1 content block)\n[N9] Career Outcomes in Data Science — Section (1 content block)\n[N10] By and For Data Science Innovators — Section (1 content block)\n[N11] Get in Touch — Section (1 content block)\n[N12] Course Progression Tabs — ProgressionTabs (47 content blocks)\n    ├── [N13] Noncredit Courses — ProgressionTab (7 content blocks)\n        preview: This accordion contains: Career Seminar (Seminar, required); Introduction to Statistical Concepts (Foundational, optional); R for Data Science (Foundational, optional); Python for Data Science (Foundational, optional); Advanced Linear Algebra for Machine Learning (Foundational, optional); Brush up on the Basics (Optional resource)\n    ├── [N14] Core Courses — ProgressionTab (8 content blocks)\n        preview: This accordion contains: Time Series Analysis and Forecasting; Statistical Models for Data Science; Machine Learning I; Machine Learning II; Data Engineering Platforms for Analytics or Big Data and Cloud Computing; Leadership and Consulting for Data Science; Data Science Capstone Project\n    ├── [N15] Sample Elective Courses — ProgressionTab (32 content blocks)\n        ├── [N16] Accordion — Accordion (32 content blocks)\n            preview: This accordion contains: Advanced Computer Vision with Deep Learning; Advanced Machine Learning and Artificial Intelligence; Applied Generative AI: Agents and Multimodal Intelligence; Bayesian Machine Learning with Generative AI Applications; Causal Models for Data Science; Data Science for Algorithmic Marketing; Data Science for Healthcare; Data Visualization Techniques; Digital Marketing Analytics in Theory and Practice; Deep Reinforcement Learning; Generative AI: Principles and Applications; Machine Learning Operations; Next-Gen NLP: LLM and Agentic AI in Practice; Optimization and Simulation Methods for Data Science; Quantitative Finance: Methods and Applications; Real Time Intelligent Systems; Supply Chain Optimization"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "The question asks about the difference between the 1-year 12-course program and the 2-year thesis track. P2 (In-Person Program) likely contains details on both the 1-year and 2-year tracks, including structure and thesis requirements. Inspecting this page first will help identify relevant nodes to fetch."
+        },
+        {
+          "step": 2,
+          "tool_calls": [
+            {
+              "name": "fetch_graph_content",
+              "args": {
+                "node_refs": [
+                  "N3",
+                  "N4",
+                  "N5"
+                ]
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_graph_content",
+              "content": "[N3] 1-Year 12 Course Program (Full- and Part-Time Options) — path: In-Person Program > 1-Year 12 Course Program (Full- and Part-Time Options)\n  [E1] The signature 1-year 12 course program is ideal for those who wish to fast-track their graduate studies. Full-time students typically graduate in 4–5 quarters; part-time students may take up to 6 quarters. All students must graduate within 4 years maximum.\nAll students complete:\n1. 12 courses (6 Core, 4 Electives, 2 Capstone).\n2. A required Career Seminar throughout the program. Those with 3+ years of full-time work experience may petition for exemption.\n3. A 2-quarter Capstone Project with a real industry partner; some students opt to complete a research Capstone.\nCourses are primarily offered in the evenings and on weekends to support working professionals. The program is STEM/OPT eligible .\n\n[N4] 2-Year Thesis Track, 18 Course Program (Full-Time Only) — path: In-Person Program > 2-Year Thesis Track, 18 Course Program (Full-Time Only)\n  [E2] Beginning in academic year 2026-27, UChicago will offer an additional 2-year (21 month) pathway for In-Person, Full-Time applicants. The application for the 2-Year Thesis Track (Autumn 2026 start) closed on December 4, 2025.\nThe 2-year Thesis Track (18 courses) pathway is optimized for those who want a longer master’s program, are interested in taking more elective courses, and have the capacity to complete a master’s thesis. The 2-year (21 month) pathway is completed over 6 academic quarters. The summer in between years 1 and 2 serves as a vacation quarter.\nWithin the application portal, applicants will indicate their selection of this pathway. Read more about applying to the 2-Year program.\nAll students complete:\n1. 18 total courses (6 Core, 8 Electives, 2 Capstone, 2 Independent Study).\n2. A required Career Seminar throughout the program.\n  [E3] 2 Capstone, 2 Independent Study).\n2. A required Career Seminar throughout the program. Those with 3+ years of full-time work experience may petition for exemption.\n3. A 2-quarter Capstone Project .\n4. A Master’s Thesis (traditional written thesis or project-based thesis).\nThis option is ideal for students seeking a longer academic experience with more time to complete more elective courses. Students must also have the capacity to complete a traditional written thesis or thesis project.\n\n[N5] Comparison Chart — path: In-Person Program > Comparison Chart\n  [E4] This program is listed as a STEM designated degree by the U.S. Department of Homeland Security for the purposes of the STEM OPT extension allowing eligible students to apply. However, approval of STEM OPT is at the discretion of U.S. Citizenship & Immigration Services."
+            }
+          ],
+          "judger": {
+            "node_assessments": [
+              {
+                "node_ref": "N3",
+                "keep_evidence": [
+                  "E1"
+                ],
+                "comment": "E1 details the 1-year program's structure: 12 courses (6 core, 4 electives, 2 capstone), 4-5 quarters full-time, up to 6 part-time, career seminar, capstone project, evening/weekend classes, STEM eligible. This directly contrasts with the 2-year track."
+              },
+              {
+                "node_ref": "N4",
+                "keep_evidence": [
+                  "E2",
+                  "E3"
+                ],
+                "comment": "E2 and E3 describe the 2-year thesis track: 18 courses (6 core, 8 electives, 2 capstone, 2 independent study), 6 quarters, thesis requirement, career seminar, and longer duration. These details directly support comparing the two programs."
+              },
+              {
+                "node_ref": "N5",
+                "keep_evidence": [
+                  "E4"
+                ],
+                "comment": "E4 only mentions STEM designation, which is common to both programs and does not differentiate them. No comparative information is provided in this node."
+              }
+            ]
+          },
+          "decision_reason": "Fetch the nodes describing the 1-year and 2-year tracks and the comparison chart to directly answer the difference between the two programs."
+        },
+        {
+          "step": 3,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P4"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P4] Course Progressions\n[N17] Page Introduction — Section (1 content block)\n[N18] Flexible Formats — Section (1 content block)\n[N19] Curriculum Details — Section (4 content blocks)\n[N20] Course Progression Tabs — ProgressionTabs (144 content blocks)\n    ├── [N21] Sample Full-Time Schedule — ProgressionTab (44 content blocks)\n        ├── [N22] Prequarter • 5 Weeks — Quarter (4 content blocks)\n            preview: Prequarter • 5 Weeks includes: Optional: Introduction to Statistical Concepts (Foundational) (Optional), R for Data Science (Foundational) (Optional)\n        ├── [N23] Quarter 1 • 10 Weeks — Quarter (12 content blocks)\n            preview: Quarter 1 • 10 Weeks includes: Optional: Python for Data Science (Foundational) (Optional), Advanced Linear Algebra for Machine Learning (Foundational) (Optional); Core: Statistical Models for Data Science (Letter Grade); Core: Leadership and Consulting for Data Science (Letter Grade); Core (Choose 1): Data Engineering Platforms for Analytics or Big Data and Cloud Computing (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N24] Quarter 2 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 2 • 10 Weeks includes: Core: Machine Learning I (Letter Grade); Core: Time Series Analysis and Forecasting (Letter Grade); Elective: Elective 1 (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N25] Quarter 3 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 3 • 10 Weeks includes: Core: Machine Learning II (Letter Grade); Elective: Elective 2 (Letter Grade); Capstone: Data Science Capstone Project (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N26] Quarter 4 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 4 • 10 Weeks includes: Elective: Elective 3 (Letter Grade); Elective: Elective 4 (Letter Grade); Capstone: Data Science Capstone Project (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n    ├── [N27] Sample Part-Time Schedule — ProgressionTab (38 content blocks)\n        ├── [N28] Prequarter • 5 Weeks — Quarter (4 content blocks)\n            preview: Prequarter • 5 Weeks includes: Optional: Introduction to Statistical Concepts (Foundational) (Optional), R for Data Science (Foundational) (Optional)\n        ├── [N29] Quarter 1 • 10 Weeks — Quarter (8 content blocks)\n            preview: Quarter 1 • 10 Weeks includes: Optional: Python for Data Science (Foundational) (Optional), Advanced Linear Algebra for Machine Learning (Foundational) (Optional); Core: Statistical Models for Data Science (Letter Grade); Core: Data Engineering Platforms for Analytics or Big Data and Cloud Computing (Letter Grade)\n        ├── [N30] Quarter 2 • 10 Weeks — Quarter (5 content blocks)\n            preview: Quarter 2 • 10 Weeks includes: Core: Machine Learning I (Letter Grade); Core: Time Series Analysis and Forecasting (Letter Grade)\n        ├── [N31] Quarter 3 • 10 Weeks — Quarter (5 content blocks)\n            preview: Quarter 3 • 10 Weeks includes: Core: Machine Learning II (Letter Grade); Core: Leadership and Consulting for Data Science (Letter Grade)\n        ├── [N32] Quarter 4 • 10 Weeks — Quarter (5 content blocks)\n            preview: Quarter 4 • 10 Weeks includes: Elective: Elective 1 (Letter Grade); Elective: Elective 2 (Letter Grade)\n        ├── [N33] Quarter 5 • 10 Weeks — Quarter (5 content blocks)\n            preview: Quarter 5 • 10 Weeks includes: Capstone: Data Science Capstone Project (Letter Grade); Elective: Elective 3 (Letter Grade)\n        ├── [N34] Quarter 6 • 10 Weeks — Quarter (5 content blocks)\n            preview: Quarter 6 • 10 Weeks includes: Capstone: Data Science Capstone Project (Letter Grade); Elective: Elective 4 (Letter Grade)\n    ├── [N35] Sample 2-Year Full-Time Schedule — ProgressionTab (62 content blocks)\n        ├── [N36] Prequarter • 5 Weeks — Quarter (4 content blocks)\n            preview: Prequarter • 5 Weeks includes: Optional: Introduction to Statistical Concepts (Foundational) (Optional), R for Data Science (Foundational) (Optional)\n        ├── [N37] Quarter 1 • 10 Weeks — Quarter (12 content blocks)\n            preview: Quarter 1 • 10 Weeks includes: Optional: Python for Data Science (Foundational) (Optional), Advanced Linear Algebra for Machine Learning (Foundational) (Optional); Core: Statistical Models for Data Science (Letter Grade); Core: Data Engineering Platforms for Analytics or Big Data and Cloud Computing (Letter Grade); Core: Leadership and Consulting for Data Science (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N38] Quarter 2 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 2 • 10 Weeks includes: Core: Machine Learning I (Letter Grade); Core: Time Series Analysis and Forecasting (Letter Grade); Elective: Elective 1 (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N39] Quarter 3 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 3 • 10 Weeks includes: Core: Machine Learning II (Letter Grade); Elective: Elective 2 (Letter Grade); Capstone: Data Science Capstone Project (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N40] Quarter 4 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 4 • 10 Weeks includes: Elective: Elective 3 (Letter Grade); Elective: Elective 4 (Letter Grade); Capstone: Data Science Capstone Project (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N41] Quarter 5 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 5 • 10 Weeks includes: Elective: Elective 5 (Letter Grade); Elective: Elective 6 (Letter Grade); Indep Study I: Thesis Course I (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N42] Quarter 6 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 6 • 10 Weeks includes: Elective: Elective 7 (Letter Grade); Elective: Elective 8 (Letter Grade); Indep Study II: Thesis Course II (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "The comparison chart on P2 lacked comparative details. P4 (Course Progressions) likely contains detailed quarter-by-quarter course lists for each track, which can reveal curriculum differences beyond course count. Inspecting P4 may surface specific nodes comparing the 1-year and 2-year thesis track course sequences."
+        },
+        {
+          "step": 4,
+          "tool_calls": [
+            {
+              "name": "fetch_graph_content",
+              "args": {
+                "node_refs": [
+                  "N35",
+                  "N20"
+                ]
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_graph_content",
+              "content": "N35 has 62 content blocks — too broad. Consider its children instead: N36 (4), N37 (12), N38 (9), N39 (9), N40 (9), N41 (9), N42 (9).\nN20 has 144 content blocks — too broad. Consider its children instead: N21 (44), N27 (38), N35 (62)."
+            }
+          ],
+          "judger": null,
+          "decision_reason": "Need explicit curriculum differences between 1-year and 2-year thesis track. N35 (Sample 2-Year Full-Time Schedule) and N20 (Course Progression Tabs) on P4 should provide detailed course sequences for both tracks, enabling comparison of specific courses and thesis/capstone focus."
+        },
+        {
+          "step": 5,
+          "tool_calls": [
+            {
+              "name": "fetch_graph_content",
+              "args": {
+                "node_refs": [
+                  "N36",
+                  "N37",
+                  "N38",
+                  "N39",
+                  "N40"
+                ]
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_graph_content",
+              "content": "[N36] Prequarter • 5 Weeks — path: Course Progressions > Sample 2-Year Full-Time Schedule > Prequarter • 5 Weeks\n  [E5] (structure summary) Prequarter • 5 Weeks includes: Optional: Introduction to Statistical Concepts (Foundational) (Optional), R for Data Science (Foundational) (Optional)\n  [N36.1] Optional\n    [E6] (structure summary) Optional courses: Introduction to Statistical Concepts (Foundational) (Optional); R for Data Science (Foundational) (Optional)\n    [N36.1.1] Introduction to Statistical Concepts (Foundational)\n      [E7] Introduction to Statistical Concepts (Foundational) (Optional): This course is held in the 5 weeks leading up to the start of your first quarter and provides general exposure to basic statistical concepts that are necessary for students to understand the content presented in more advanced courses in the program. 0 units, no cost.\n    [N36.1.2] R for Data Science (Foundational)\n      [E8] R for Data Science (Foundational) (Optional): This course is held in the 5 weeks leading up to the start of your first quarter and is an introduction to the essential concepts and techniques for the statistical computing language R. 0 units, no cost.\n\n[N37] Quarter 1 • 10 Weeks — path: Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 1 • 10 Weeks\n  [E9] (structure summary) Quarter 1 • 10 Weeks includes: Optional: Python for Data Science (Foundational) (Optional), Advanced Linear Algebra for Machine Learning (Foundational) (Optional); Core: Statistical Models for Data Science (Letter Grade); Core: Data Engineering Platforms for Analytics or Big Data and Cloud Computing (Letter Grade); Core: Leadership and Consulting for Data Science (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n  [N37.1] Optional\n    [E10] (structure summary) Optional courses: Python for Data Science (Foundational) (Optional); Advanced Linear Algebra for Machine Learning (Foundational) (Optional)\n  [N37.2] Core\n    [E11] (structure summary) Core courses: Statistical Models for Data Science (Letter Grade)\n  [N37.3] Core\n    [E12] (structure summary) Core courses: Data Engineering Platforms for Analytics or Big Data and Cloud Computing (Letter Grade)\n  [N37.4] Core\n    [E13] (structure summary) Core courses: Leadership and Consulting for Data Science (Letter Grade)\n  [N37.5] Seminar\n    [E14] (structure summary) Seminar courses: Career Seminar (Required) (Pass/Fail)\n    [N37.1.1] Python for Data Science (Foundational)\n      [E15] Python for Data Science (Foundational) (Optional): This course is held concurrently with the first five weeks of your first quarter in the program and starts with an introduction to the Python programming language basic syntax and environment. 0 units, no cost.\n    [N37.1.2] Advanced Linear Algebra for Machine Learning (Foundational)\n      [E16] Advanced Linear Algebra for Machine Learning (Foundational) (Optional): If you are required to take this course it will be held concurrently with the second five weeks of your first quarter in the program. The advanced linear algebra course is focused on the theoretical concepts and real-life applications of linear algebra for machine learning. 0 units, no cost.\n    [N37.2.1] Statistical Models for Data Science\n      [E17] Statistical Models for Data Science (Letter Grade): In a traditional linear model, the observed response follows a normal distribution, and the expected response value is a linear combination of the predictors. Since Carl Friedrich Gauss (1777-1855) and Adrien-Marie Legendre (1752-1833) created this linear model framework in the early 1800s, the “Linear Normal” assumption has been the norm in statistics/data science for almost two centuries. New methods based on probability distributions other than Gaussian appeared only in the second half of the twentieth century. These methods allowed working with variables that span a broader variety of domains and probability distributions. Besides, methods for the analysis of general associations were developed that are different from the Pearson correlation.\n    [N37.3.1] Data Engineering Platforms for Analytics or Big Data and Cloud Computing\n      [E18] Data Engineering Platforms for Analytics or Big Data and Cloud Computing (Letter Grade): Data Engineering Platforms teaches effective data engineering—an essential first step in building an analytics-driven competitive advantage in the market. Big Data and Cloud Computing teaches students how to approach big data and large-scale machine learning applications. There is no single definition of big data and multiple emerging software packages exist to work with it, and we will cover the most popular approaches.\n    [N37.4.1] Leadership and Consulting for Data Science\n      [E19] Leadership and Consulting for Data Science (Letter Grade): Professional organizations see value in data science when it helps them to achieve their strategic goals, and the current job market likewise rewards data scientists who can use data to advance organizational interests, either as an external consultant or within internal operations teams. Data scientists can become successful (and highly marketable) leaders in today’s professional world, but they require an uncommon skill set: the strategic awareness to align data requirements with business requirements, the technical proficiency to choose a methodology appropriate to each new problem, and the communication skills to both execute the plan as part of a broader team and persuade others of their findings.\n    [N37.5.1] Career Seminar (Required)\n      [E20] Career Seminar (Required) (Pass/Fail): The Career Seminar (Pass/Fail) supports the development of industry professional skills, job and/or internship searches, and other in-demand areas of competency among today’s employers. Students enroll in the Career Seminar each quarter in order to engage in unique content throughout their degree program. Students with significant full-time work experience may be eligible to waive this course. 0 units, no cost.\n\n[N38] Quarter 2 • 10 Weeks — path: Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 2 • 10 Weeks\n  [E21] (structure summary) Quarter 2 • 10 Weeks includes: Core: Machine Learning I (Letter Grade); Core: Time Series Analysis and Forecasting (Letter Grade); Elective: Elective 1 (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n  [N38.1] Core\n    [E22] (structure summary) Core courses: Machine Learning I (Letter Grade)\n  [N38.2] Core\n    [E23] (structure summary) Core courses: Time Series Analysis and Forecasting (Letter Grade)\n  [N38.3] Elective\n    [E24] (structure summary) Elective courses: Elective 1 (Letter Grade)\n  [N38.4] Seminar\n    [E25] (structure summary) Seminar courses: Career Seminar (Required) (Pass/Fail)\n    [N38.1.1] Machine Learning I\n      [E26] Machine Learning I (Letter Grade): This course is aimed at providing students an introduction to machine learning with data mining techniques and algorithms. It gives a rigorous methodological foundation in analytical and software tools to successfully undertake projects in Data Science. Students are exposed to concepts of exploratory analyses for uncovering and detecting patterns in multivariate data, hypothesizing and detecting relationships among variables, conducting confirmatory analyses, and building models for predictive and descriptive purposes. It will present predictive modeling in the context of balancing predictive and descriptive accuracies.\n    [N38.2.1] Time Series Analysis and Forecasting\n      [E27] Time Series Analysis and Forecasting (Letter Grade): Time Series Analysis is a science as well as the art of making rational predictions based on previous records. It is widely used in various fields in today’s business settings.\n    [N38.3.1] Elective 1\n      [E28] Elective 1 (Letter Grade): Elective offerings vary. Students will work with their academic advisor to select electives based on their interests and course availability. Past electives include: Generative AI Principles, Advanced Computer Vision with Deep Learning, Advanced Machine Learning and Artificial Intelligence, Bayesian Machine Learning with GenAI Applications, Data Science for Algorithmic Marketing, Data Visualization Techniques, Digital Marketing Analytics in Theory and Practice, Financial Analytics, Health Analytics, Machine Learning Operations, Natural Language Processing and Cognitive Computing, Real Time Intelligent Systems, Reinforcement Learning, Supply Chain Optimization.\n    [N38.4.1] Career Seminar (Required)\n      [E29] Career Seminar (Required) (Pass/Fail): The Career Seminar (Pass/Fail) supports the development of industry professional skills, job and/or internship searches, and other in-demand areas of competency among today’s employers. Students enroll in the Career Seminar each quarter in order to engage in unique content throughout their degree program. Students with significant full-time work experience may be eligible to waive this course. 0 units, no cost.\n\n[N39] Quarter 3 • 10 Weeks — path: Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 3 • 10 Weeks\n  [E30] (structure summary) Quarter 3 • 10 Weeks includes: Core: Machine Learning II (Letter Grade); Elective: Elective 2 (Letter Grade); Capstone: Data Science Capstone Project (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n  [N39.1] Core\n    [E31] (structure summary) Core courses: Machine Learning II (Letter Grade)\n  [N39.2] Elective\n    [E32] (structure summary) Elective courses: Elective 2 (Letter Grade)\n  [N39.3] Capstone\n    [E33] (structure summary) Capstone courses: Data Science Capstone Project (Letter Grade)\n  [N39.4] Seminar\n    [E34] (structure summary) Seminar courses: Career Seminar (Required) (Pass/Fail)\n    [N39.1.1] Machine Learning II\n      [E35] Machine Learning II (Letter Grade): The objective of this course is three-folds–first, to extend student understanding of predictive modeling with machine learning concepts and methodologies from Machine Learning 1 into the realm of Deep Learning and Generative AI. Second, to develop the ability to apply those concepts and methodologies to diverse practical applications, evaluate the results and recommend the next best action. Third, to discuss and understand state-of-the machine learning and deep learning research and development and their applications.\n    [N39.2.1] Elective 2\n      [E36] Elective 2 (Letter Grade): Elective offerings vary. Students will work with their academic advisor to select electives based on their interests and course availability. Past electives include: Generative AI Principles, Advanced Computer Vision with Deep Learning, Advanced Machine Learning and Artificial Intelligence, Bayesian Machine Learning with GenAI Applications, Data Science for Algorithmic Marketing, Data Visualization Techniques, Digital Marketing Analytics in Theory and Practice, Quantitative Finance, Health Analytics, Machine Learning Operations, Natural Language Processing and Cognitive Computing, Real Time Intelligent Systems, Reinforcement Learning, Supply Chain Optimization.\n    [N39.3.1] Data Science Capstone Project\n      [E37] Data Science Capstone Project (Letter Grade): The required Capstone Project is completed over two quarters and covers research design, implementation, and writing. Full-time students start their capstone project in their third quarter. Part-time students generally begin the capstone project in their fifth quarter.\n    [N39.4.1] Career Seminar (Required)\n      [E38] Career Seminar (Required) (Pass/Fail): The Career Seminar (Pass/Fail) supports the development of industry professional skills, job and/or internship searches, and other in-demand areas of competency among today’s employers. Students enroll in the Career Seminar each quarter in order to engage in unique content throughout their degree program. Students with significant full-time work experience may be eligible to waive this course. 0 units, no cost.\n\n[N40] Quarter 4 • 10 Weeks — path: Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 4 • 10 Weeks\n  [E39] (structure summary) Quarter 4 • 10 Weeks includes: Elective: Elective 3 (Letter Grade); Elective: Elective 4 (Letter Grade); Capstone: Data Science Capstone Project (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n  [N40.1] Elective\n    [E40] (structure summary) Elective courses: Elective 3 (Letter Grade)\n  [N40.2] Elective\n    [E41] (structure summary) Elective courses: Elective 4 (Letter Grade)\n  [N40.3] Capstone\n    [E42] (structure summary) Capstone courses: Data Science Capstone Project (Letter Grade)\n  [N40.4] Seminar\n    [E43] (structure summary) Seminar courses: Career Seminar (Required) (Pass/Fail)\n    [N40.1.1] Elective 3\n      [E44] Elective 3 (Letter Grade): Elective offerings vary. Students will work with their academic advisor to select electives based on their interests and course availability. Past electives include: Generative AI Principles, Advanced Computer Vision with Deep Learning, Advanced Machine Learning and Artificial Intelligence, Bayesian Machine Learning with GenAI Applications, Data Science for Algorithmic Marketing, Data Visualization Techniques, Digital Marketing Analytics in Theory and Practice, Quantitative Finance, Health Analytics, Machine Learning Operations, Natural Language Processing and Cognitive Computing, Real Time Intelligent Systems, Reinforcement Learning, Supply Chain Optimization.\n    [N40.2.1] Elective 4\n      [E45] Elective 4 (Letter Grade): Elective offerings vary. Students will work with their academic advisor to select electives based on their interests and course availability. Past electives include: Generative AI Principles, Advanced Computer Vision with Deep Learning, Advanced Machine Learning and Artificial Intelligence, Bayesian Machine Learning with GenAI Applications, Data Science for Algorithmic Marketing, Data Visualization Techniques, Digital Marketing Analytics in Theory and Practice, Quantitative Finance, Health Analytics, Machine Learning Operations, Natural Language Processing and Cognitive Computing, Real Time Intelligent Systems, Reinforcement Learning, Supply Chain Optimization.\n    [N40.3.1] Data Science Capstone Project\n      [E46] Data Science Capstone Project (Letter Grade): The required Capstone Project is completed over two quarters and covers research design, implementation, and writing. Full-time students start their capstone project in their third quarter. Part-time students generally begin the capstone project in their fifth quarter.\n    [N40.4.1] Career Seminar (Required)\n      [E47] Career Seminar (Required) (Pass/Fail): The Career Seminar (Pass/Fail) supports the development of industry professional skills, job and/or internship searches, and other in-demand areas of competency among today’s employers. Students enroll in the Career Seminar each quarter in order to engage in unique content throughout their degree program. Students with significant full-time work experience may be eligible to waive this course. 0 units, no cost."
+            }
+          ],
+          "judger": {
+            "node_assessments": [
+              {
+                "node_ref": "N36",
+                "keep_evidence": [
+                  "E5"
+                ],
+                "comment": "This node describes the prequarter optional foundational courses, which are part of the 2-year schedule but not directly relevant to comparing the 1-year and 2-year tracks. The structure summary E5 lists the optional courses, but the details in E7 and E8 are about course content, not program differences."
+              },
+              {
+                "node_ref": "N37",
+                "keep_evidence": [
+                  "E9"
+                ],
+                "comment": "This node lists the courses in Quarter 1 of the 2-year schedule. The structure summary E9 provides an overview of the required and optional courses, which helps understand the 2-year track's curriculum. The individual course descriptions (E15-E20) are not directly relevant to comparing program lengths."
+              },
+              {
+                "node_ref": "N38",
+                "keep_evidence": [
+                  "E21"
+                ],
+                "comment": "This node lists the courses in Quarter 2 of the 2-year schedule. The structure summary E21 provides an overview of the required and elective courses, which helps understand the 2-year track's curriculum. The individual course descriptions (E26-E29) are not directly relevant to comparing program lengths."
+              },
+              {
+                "node_ref": "N39",
+                "keep_evidence": [
+                  "E30"
+                ],
+                "comment": "This node lists the courses in Quarter 3 of the 2-year schedule. The structure summary E30 provides an overview of the required, elective, and capstone courses, which helps understand the 2-year track's curriculum. The individual course descriptions (E35-E38) are not directly relevant to comparing program lengths."
+              },
+              {
+                "node_ref": "N40",
+                "keep_evidence": [
+                  "E39"
+                ],
+                "comment": "This node lists the courses in Quarter 4 of the 2-year schedule. The structure summary E39 provides an overview of the elective and capstone courses, which helps understand the 2-year track's curriculum. The individual course descriptions (E44-E47) are not directly relevant to comparing program lengths."
+              }
+            ]
+          },
+          "decision_reason": "Fetching the quarter-by-quarter schedule nodes for the 2-year thesis track from P4 to compare specific courses with the 1-year program's schedule, which was previously too broad at N35."
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E1",
+          "status": "accepted",
+          "page_title": "In-Person Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program",
+          "text": "The signature 1-year 12 course program is ideal for those who wish to fast-track their graduate studies. Full-time students typically graduate in 4–5 quarters; part-time students may take up to 6 quarters. All students must graduate within 4 years maximum.\nAll students complete:\n1. 12 courses (6 Core, 4 Electives, 2 Capstone).\n2. A required Career Seminar throughout the program. Those with 3+ years of full-time work experience may petition for exemption.\n3. A 2-quarter Capstone Project with a real industry partner; some students opt to complete a research Capstone.\nCourses are primarily offered in the evenings and on weekends to support working professionals. The program is STEM/OPT eligible .",
+          "path": [
+            "In-Person Program",
+            "1-Year 12 Course Program (Full- and Part-Time Options)"
+          ],
+          "section_breadcrumb": "In-Person Program > 1-Year 12 Course Program (Full- and Part-Time Options)",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N3"
+            }
+          ],
+          "chunk_id": "chunk:300af5f88c174fa2",
+          "owner_node_id": "section:3cac986ae97c9914",
+          "page_id": "page:fe9d95e97a7ee76f",
+          "internal_metadata": {
+            "source_type": "body_text",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E2",
+          "status": "accepted",
+          "page_title": "In-Person Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program",
+          "text": "Beginning in academic year 2026-27, UChicago will offer an additional 2-year (21 month) pathway for In-Person, Full-Time applicants. The application for the 2-Year Thesis Track (Autumn 2026 start) closed on December 4, 2025.\nThe 2-year Thesis Track (18 courses) pathway is optimized for those who want a longer master’s program, are interested in taking more elective courses, and have the capacity to complete a master’s thesis. The 2-year (21 month) pathway is completed over 6 academic quarters. The summer in between years 1 and 2 serves as a vacation quarter.\nWithin the application portal, applicants will indicate their selection of this pathway. Read more about applying to the 2-Year program.\nAll students complete:\n1. 18 total courses (6 Core, 8 Electives, 2 Capstone, 2 Independent Study).\n2. A required Career Seminar throughout the program.",
+          "path": [
+            "In-Person Program",
+            "2-Year Thesis Track, 18 Course Program (Full-Time Only)"
+          ],
+          "section_breadcrumb": "In-Person Program > 2-Year Thesis Track, 18 Course Program (Full-Time Only)",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N4"
+            }
+          ],
+          "chunk_id": "chunk:46c54f125eb1965a",
+          "owner_node_id": "section:a19859c1a0178718",
+          "page_id": "page:fe9d95e97a7ee76f",
+          "internal_metadata": {
+            "source_type": "body_text",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E3",
+          "status": "accepted",
+          "page_title": "In-Person Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program",
+          "text": "2 Capstone, 2 Independent Study).\n2. A required Career Seminar throughout the program. Those with 3+ years of full-time work experience may petition for exemption.\n3. A 2-quarter Capstone Project .\n4. A Master’s Thesis (traditional written thesis or project-based thesis).\nThis option is ideal for students seeking a longer academic experience with more time to complete more elective courses. Students must also have the capacity to complete a traditional written thesis or thesis project.",
+          "path": [
+            "In-Person Program",
+            "2-Year Thesis Track, 18 Course Program (Full-Time Only)"
+          ],
+          "section_breadcrumb": "In-Person Program > 2-Year Thesis Track, 18 Course Program (Full-Time Only)",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N4"
+            }
+          ],
+          "chunk_id": "chunk:1e77600115aeb5ac",
+          "owner_node_id": "section:a19859c1a0178718",
+          "page_id": "page:fe9d95e97a7ee76f",
+          "internal_metadata": {
+            "source_type": "body_text",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E4",
+          "status": "accepted",
+          "page_title": "In-Person Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program",
+          "text": "This program is listed as a STEM designated degree by the U.S. Department of Homeland Security for the purposes of the STEM OPT extension allowing eligible students to apply. However, approval of STEM OPT is at the discretion of U.S. Citizenship & Immigration Services.",
+          "path": [
+            "In-Person Program",
+            "Comparison Chart"
+          ],
+          "section_breadcrumb": "In-Person Program > Comparison Chart",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N5"
+            }
+          ],
+          "chunk_id": "chunk:ecdc316916bd7ac3",
+          "owner_node_id": "section:d145b7000f73fe04",
+          "page_id": "page:fe9d95e97a7ee76f",
+          "internal_metadata": {
+            "source_type": "p",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E5",
+          "status": "accepted",
+          "page_title": "Course Progressions",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+          "text": "Prequarter • 5 Weeks includes: Optional: Introduction to Statistical Concepts (Foundational) (Optional), R for Data Science (Foundational) (Optional)",
+          "path": [
+            "Course Progressions",
+            "Sample 2-Year Full-Time Schedule",
+            "Prequarter • 5 Weeks"
+          ],
+          "section_breadcrumb": "Course Progressions > Sample 2-Year Full-Time Schedule > Prequarter • 5 Weeks",
+          "visible_type": "structure summary",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N36"
+            }
+          ],
+          "chunk_id": "chunk:e7189f3b7811b062",
+          "owner_node_id": "quarter:2741527368d5c13b",
+          "page_id": "page:4f1aba5696f12664",
+          "internal_metadata": {
+            "source_type": "quarter_index",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E9",
+          "status": "accepted",
+          "page_title": "Course Progressions",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+          "text": "Quarter 1 • 10 Weeks includes: Optional: Python for Data Science (Foundational) (Optional), Advanced Linear Algebra for Machine Learning (Foundational) (Optional); Core: Statistical Models for Data Science (Letter Grade); Core: Data Engineering Platforms for Analytics or Big Data and Cloud Computing (Letter Grade); Core: Leadership and Consulting for Data Science (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)",
+          "path": [
+            "Course Progressions",
+            "Sample 2-Year Full-Time Schedule",
+            "Quarter 1 • 10 Weeks"
+          ],
+          "section_breadcrumb": "Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 1 • 10 Weeks",
+          "visible_type": "structure summary",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N37"
+            }
+          ],
+          "chunk_id": "chunk:f1c06e649e651bd6",
+          "owner_node_id": "quarter:96d72d3a7b6ed30d",
+          "page_id": "page:4f1aba5696f12664",
+          "internal_metadata": {
+            "source_type": "quarter_index",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E21",
+          "status": "accepted",
+          "page_title": "Course Progressions",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+          "text": "Quarter 2 • 10 Weeks includes: Core: Machine Learning I (Letter Grade); Core: Time Series Analysis and Forecasting (Letter Grade); Elective: Elective 1 (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)",
+          "path": [
+            "Course Progressions",
+            "Sample 2-Year Full-Time Schedule",
+            "Quarter 2 • 10 Weeks"
+          ],
+          "section_breadcrumb": "Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 2 • 10 Weeks",
+          "visible_type": "structure summary",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N38"
+            }
+          ],
+          "chunk_id": "chunk:683c30c6a36bf99e",
+          "owner_node_id": "quarter:f8083ec57e18a85c",
+          "page_id": "page:4f1aba5696f12664",
+          "internal_metadata": {
+            "source_type": "quarter_index",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E30",
+          "status": "accepted",
+          "page_title": "Course Progressions",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+          "text": "Quarter 3 • 10 Weeks includes: Core: Machine Learning II (Letter Grade); Elective: Elective 2 (Letter Grade); Capstone: Data Science Capstone Project (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)",
+          "path": [
+            "Course Progressions",
+            "Sample 2-Year Full-Time Schedule",
+            "Quarter 3 • 10 Weeks"
+          ],
+          "section_breadcrumb": "Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 3 • 10 Weeks",
+          "visible_type": "structure summary",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N39"
+            }
+          ],
+          "chunk_id": "chunk:5aeeeb86daa87326",
+          "owner_node_id": "quarter:99c605ca61064f25",
+          "page_id": "page:4f1aba5696f12664",
+          "internal_metadata": {
+            "source_type": "quarter_index",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E39",
+          "status": "accepted",
+          "page_title": "Course Progressions",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+          "text": "Quarter 4 • 10 Weeks includes: Elective: Elective 3 (Letter Grade); Elective: Elective 4 (Letter Grade); Capstone: Data Science Capstone Project (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)",
+          "path": [
+            "Course Progressions",
+            "Sample 2-Year Full-Time Schedule",
+            "Quarter 4 • 10 Weeks"
+          ],
+          "section_breadcrumb": "Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 4 • 10 Weeks",
+          "visible_type": "structure summary",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N40"
+            }
+          ],
+          "chunk_id": "chunk:66ad28e90327b775",
+          "owner_node_id": "quarter:f5fe611c209d9556",
+          "page_id": "page:4f1aba5696f12664",
+          "internal_metadata": {
+            "source_type": "quarter_index",
+            "score": null,
+            "score_breakdown": {}
+          }
+        }
+      ],
+      "time_sec": 37.152,
+      "low_confidence": false,
+      "error": null,
+      "progress_summary": {
+        "summary_covering": "Page P2 (In-Person Program): N3 (1-Year 12 Course Program) provided detailed structure (12 courses, 4-5 quarters, capstone, etc.) directly relevant to the comparison. N4 (2-Year Thesis Track) provided detailed structure (18 courses, 6 quarters, thesis, etc.) directly relevant. N5 (Comparison Chart) only mentioned STEM designation, which is common to both and not differentiating. Page P4 (Course Progressions): N36-N40 (Prequarter and Quarters 1-4 of the 2-year schedule) provided course lists and structure summaries (E5, E9, E21, E30, E39) that help understand the 2-year curriculum, but individual course descriptions are not directly relevant to the comparison. Still missing: A direct side-by-side comparison of the two programs (e.g., total courses, duration, thesis requirement, class schedule) is not explicitly stated in a single node, but the evidence from E1, E2, E3, and the quarter summaries collectively provide the necessary details. The comparison chart node (N5) lacks comparative information, so the missing piece is a consolidated comparison, though the evidence is sufficient to answer the question.",
+        "decision_trace_narrative": "Turn 1: Fetched P2 nodes N3, N4, N5 to get program overviews. N3 and N4 provided detailed structures, N5 only STEM designation. Turn 2: Fetched N36-N40 from P4 to get the 2-year schedule details, as the previous turn's N35 was too broad. These nodes provided course lists and structure summaries, which are useful for understanding the 2-year track's curriculum. No re-queries of already-fetched nodes occurred."
+      },
+      "raw_debug": {
+        "response": {
+          "answer": "The main differences are:\n\n- **Length and course load**: The 1-year program is 12 courses (6 Core, 4 Electives, 2 Capstone) and typically takes 4–5 quarters full-time [1]. The 2-year thesis track is 18 courses (6 Core, 8 Electives, 2 Capstone, 2 Independent Study) and is completed over 6 academic quarters (21 months) [2][3].\n- **Thesis requirement**: The 2-year track requires a Master’s Thesis (traditional written or project-based) [3]; the 1-year program does not list a thesis requirement [1].\n- **Electives**: The 2-year track offers more electives (8 vs. 4) [1][2].\n- **Independent Study**: Only the 2-year track includes 2 Independent Study courses [2].\n- **Schedule**: The 1-year program offers evening/weekend courses to support working professionals [1]; the 2-year track is full-time only [2].\n- **Summer break**: The 2-year track has a vacation quarter in the summer between years 1 and 2 [2].\n\nBoth programs share the same 6 core courses, a 2-quarter Capstone Project, a required Career Seminar, and STEM/OPT eligibility [1][2][4].",
+          "citations": [
+            {
+              "index": 1,
+              "title": "In-Person Program",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program",
+              "snippet": "The signature 1-year 12 course program is ideal for those who wish to fast-track their graduate studies. Full-time students typically graduate in 4–5 quarters; part-time students m"
+            },
+            {
+              "index": 2,
+              "title": "In-Person Program",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program",
+              "snippet": "Beginning in academic year 2026-27, UChicago will offer an additional 2-year (21 month) pathway for In-Person, Full-Time applicants. The application for the 2-Year Thesis Track (Au"
+            },
+            {
+              "index": 3,
+              "title": "In-Person Program",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program",
+              "snippet": "2 Capstone, 2 Independent Study). 2. A required Career Seminar throughout the program. Those with 3+ years of full-time work experience may petition for exemption. 3. A 2-quarter C"
+            },
+            {
+              "index": 4,
+              "title": "In-Person Program",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program",
+              "snippet": "This program is listed as a STEM designated degree by the U.S. Department of Homeland Security for the purposes of the STEM OPT extension allowing eligible students to apply. Howev"
+            }
+          ],
+          "debug": {
+            "tool_turns": 5,
+            "stop_reason": "sufficient_evidence",
+            "evidence_count": 9,
+            "sufficient": true,
+            "missing": "No missing information; the evidence from E1, E2, E3, and the quarter summaries (E5, E9, E21, E30, E39) collectively cover all aspects of the question: course count, duration, thesis requirement, and schedule differences.",
+            "log_path": "C:\\Users\\ss363\\Desktop\\Archive\\ads_rag_chatbot\\pipeline_grag_v2\\log\\2026-08-04_014426_8cf53880166a.json",
+            "run_id": "8cf53880166a"
+          }
+        },
+        "run_id": "8cf53880166a",
+        "rewritten_queries": [
+          {
+            "id": "q1",
+            "query": "difference between 1-year 12-course program and 2-year thesis track",
+            "target": "university-program"
+          }
+        ],
+        "judgment": {
+          "sufficient": true,
+          "missing": "No missing information; the evidence from E1, E2, E3, and the quarter summaries (E5, E9, E21, E30, E39) collectively cover all aspects of the question: course count, duration, thesis requirement, and schedule differences.",
+          "comment": "Page P2 (In-Person Program): N3 (1-Year 12 Course Program) provided detailed structure (12 courses, 4-5 quarters, capstone, etc.) directly relevant to the comparison. N4 (2-Year Thesis Track) provided detailed structure (18 courses, 6 quarters, thesis, etc.) directly relevant. N5 (Comparison Chart) only mentioned STEM designation, which is common to both and not differentiating. Page P4 (Course Progressions): N36-N40 (Prequarter and Quarters 1-4 of the 2-year schedule) provided course lists and structure summaries (E5, E9, E21, E30, E39) that help understand the 2-year curriculum, but individual course descriptions are not directly relevant to the comparison. Still missing: A direct side-by-side comparison of the two programs (e.g., total courses, duration, thesis requirement, class schedule) is not explicitly stated in a single node, but the evidence from E1, E2, E3, and the quarter summaries collectively provide the necessary details. The comparison chart node (N5) lacks comparative information, so the missing piece is a consolidated comparison, though the evidence is sufficient to answer the question."
+        },
+        "stop_reason": "sufficient_evidence",
+        "fallback": {
+          "triggered": false,
+          "pages_selected": [],
+          "reason": ""
+        },
+        "metrics": {
+          "agent_turns": 5,
+          "tool_calls": 5,
+          "judge_calls": 2,
+          "llm_calls": 14,
+          "valid_fetch_count": 2,
+          "invalid_fetch_count": 1,
+          "accepted_evidence_count": 9,
+          "stop_reason": "sufficient_evidence",
+          "fallback_triggered": false
+        },
+        "usage": {
+          "prompt_tokens": 21776,
+          "completion_tokens": 2907,
+          "total_tokens": 24683,
+          "llm_calls": 14
+        },
+        "progress_summary_history": [
+          {
+            "turn": 1,
+            "summary_covering": "No pages have been inspected yet. The agent has only initiated inspection of P2 (In-Person Program) to locate details on both the 1-year and 2-year tracks. Nothing is covered yet.",
+            "decision_trace_narrative": "Turn 1: The agent decided to inspect P2 (In-Person Program) because the question asks about the difference between the 1-year 12-course program and the 2-year thesis track, and P2 likely contains details on both tracks. The inspection was successful (OK), but no nodes have been fetched or evaluated yet.",
+            "sufficient": false,
+            "missing": "All information needed to answer the question is missing: details on the 1-year 12-course program, details on the 2-year thesis track, and the differences between them."
+          },
+          {
+            "turn": 2,
+            "summary_covering": "Page P2 (In-Person Program): Checked N3 (1-Year 12 Course Program) — useful, provides structure (12 courses, 4-5 quarters full-time, up to 6 part-time, career seminar, capstone, evening/weekend, STEM). Checked N4 (2-Year Thesis Track) — useful, provides structure (18 courses, 6 quarters, thesis, career seminar, full-time only). Checked N5 (Comparison Chart) — not useful, only mentions STEM designation common to both. Missing: explicit comparative details such as total cost, curriculum differences beyond course count, or specific advantages/disadvantages of each track.",
+            "decision_trace_narrative": "Turn 1: Fetched graph content for nodes describing the 1-year and 2-year tracks and the comparison chart, aiming to directly answer the difference. Outcome: Successfully retrieved details for N3 and N4, but N5 provided no comparative information. No re-queries of already-fetched nodes occurred.",
+            "sufficient": false,
+            "missing": "Explicit comparative details such as total cost, curriculum differences beyond course count, or specific advantages/disadvantages of each track."
+          },
+          {
+            "turn": 3,
+            "summary_covering": "Page P2 (In-Person Program): Checked N3 (1-Year 12 Course Program) and N4 (2-Year Thesis Track) — both provided detailed evidence (E1, E2, E3) on course counts, structure, duration, and requirements, directly supporting comparison. Checked N5 (Comparison Chart) — only mentions STEM designation (E4), which is common to both and not differentiating. Still missing: explicit comparative details on curriculum differences (e.g., specific courses, thesis vs. capstone focus) beyond what is already in E1-E3.",
+            "decision_trace_narrative": "Turn 1: Inspected P2 nodes N3 and N4 to gather details on each program; both yielded useful evidence. Turn 2: Inspected N5 (Comparison Chart) to find comparative details; found only STEM designation, not useful for differentiation. Turn 3: Inspected P4 (Course Progressions) to find detailed course sequences for each track; tool status OK, but no new evidence was added in this turn (no nodes evaluated on P4 yet).",
+            "sufficient": false,
+            "missing": "Detailed course-by-course comparison between the 1-year and 2-year thesis track, including specific curriculum differences (e.g., thesis vs. capstone, independent study, course sequences)."
+          },
+          {
+            "turn": 4,
+            "summary_covering": "Page P2 (In-Person Program): N3 (1-Year 12 Course Program) provided useful evidence (E1) detailing the 1-year program's structure: 12 courses (6 core, 4 electives, 2 capstone), 4-5 quarters full-time, part-time option, career seminar, capstone project, evening/weekend classes, STEM eligible. N4 (2-Year Thesis Track) provided useful evidence (E2, E3) describing the 2-year track: 18 courses (6 core, 8 electives, 2 capstone, 2 independent study), 6 quarters, thesis requirement, career seminar, longer duration. N5 (Comparison Chart) was not useful as it only mentions STEM designation common to both. Still missing: explicit side-by-side comparison of specific courses or curriculum differences beyond the counts and thesis/capstone focus; the comparison chart did not provide the expected comparative details.",
+            "decision_trace_narrative": "Turn 1: Agent fetched N3 and N4 on P2 to get details of both programs, successfully extracting evidence E1, E2, E3. Turn 2: Agent fetched N5 (Comparison Chart) expecting explicit comparative information, but found only STEM designation (E4), which does not differentiate the programs. Turn 3: Agent attempted to fetch N35 and N20 on P4 to get detailed course sequences for both tracks, but the fetch returned NODE_SCOPE_TOO_BROAD, so no new information was obtained. No re-queries of already-fetched nodes occurred.",
+            "sufficient": false,
+            "missing": "Explicit comparison of specific courses or curriculum differences between the 1-year and 2-year thesis track, such as course sequences, thesis/capstone focus, or any other differentiating details beyond the number of courses and duration."
+          },
+          {
+            "turn": 5,
+            "summary_covering": "Page P2 (In-Person Program): N3 (1-Year 12 Course Program) provided detailed structure (12 courses, 4-5 quarters, capstone, etc.) directly relevant to the comparison. N4 (2-Year Thesis Track) provided detailed structure (18 courses, 6 quarters, thesis, etc.) directly relevant. N5 (Comparison Chart) only mentioned STEM designation, which is common to both and not differentiating. Page P4 (Course Progressions): N36-N40 (Prequarter and Quarters 1-4 of the 2-year schedule) provided course lists and structure summaries (E5, E9, E21, E30, E39) that help understand the 2-year curriculum, but individual course descriptions are not directly relevant to the comparison. Still missing: A direct side-by-side comparison of the two programs (e.g., total courses, duration, thesis requirement, class schedule) is not explicitly stated in a single node, but the evidence from E1, E2, E3, and the quarter summaries collectively provide the necessary details. The comparison chart node (N5) lacks comparative information, so the missing piece is a consolidated comparison, though the evidence is sufficient to answer the question.",
+            "decision_trace_narrative": "Turn 1: Fetched P2 nodes N3, N4, N5 to get program overviews. N3 and N4 provided detailed structures, N5 only STEM designation. Turn 2: Fetched N36-N40 from P4 to get the 2-year schedule details, as the previous turn's N35 was too broad. These nodes provided course lists and structure summaries, which are useful for understanding the 2-year track's curriculum. No re-queries of already-fetched nodes occurred.",
+            "sufficient": true,
+            "missing": "No missing information; the evidence from E1, E2, E3, and the quarter summaries (E5, E9, E21, E30, E39) collectively cover all aspects of the question: course count, duration, thesis requirement, and schedule differences."
+          }
+        ],
+        "node_evaluation_log": {
+          "P2 (In-Person Program)": {
+            "N3 (1-Year 12 Course Program (Full- and Part-Time Options))": {
+              "node_id": "section:3cac986ae97c9914",
+              "path": [
+                "In-Person Program",
+                "1-Year 12 Course Program (Full- and Part-Time Options)"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E1",
+                  "chunk_id": "chunk:300af5f88c174fa2",
+                  "text_preview": "The signature 1-year 12 course program is ideal for those who wish to fast-track their graduate studies. Full-time students typically graduate in 4–5 "
+                }
+              ],
+              "comment": "E1 details the 1-year program's structure: 12 courses (6 core, 4 electives, 2 capstone), 4-5 quarters full-time, up to 6 part-time, career seminar, capstone project, evening/weekend classes, STEM eligible. This directly contrasts with the 2-year track."
+            },
+            "N4 (2-Year Thesis Track, 18 Course Program (Full-Time Only))": {
+              "node_id": "section:a19859c1a0178718",
+              "path": [
+                "In-Person Program",
+                "2-Year Thesis Track, 18 Course Program (Full-Time Only)"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E2",
+                  "chunk_id": "chunk:46c54f125eb1965a",
+                  "text_preview": "Beginning in academic year 2026-27, UChicago will offer an additional 2-year (21 month) pathway for In-Person, Full-Time applicants. The application f"
+                },
+                {
+                  "evidence_ref": "E3",
+                  "chunk_id": "chunk:1e77600115aeb5ac",
+                  "text_preview": "2 Capstone, 2 Independent Study).\n2. A required Career Seminar throughout the program. Those with 3+ years of full-time work experience may petition f"
+                }
+              ],
+              "comment": "E2 and E3 describe the 2-year thesis track: 18 courses (6 core, 8 electives, 2 capstone, 2 independent study), 6 quarters, thesis requirement, career seminar, and longer duration. These details directly support comparing the two programs."
+            },
+            "N5 (Comparison Chart)": {
+              "node_id": "section:d145b7000f73fe04",
+              "path": [
+                "In-Person Program",
+                "Comparison Chart"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E4",
+                  "chunk_id": "chunk:ecdc316916bd7ac3",
+                  "text_preview": "This program is listed as a STEM designated degree by the U.S. Department of Homeland Security for the purposes of the STEM OPT extension allowing eli"
+                }
+              ],
+              "comment": "E4 only mentions STEM designation, which is common to both programs and does not differentiate them. No comparative information is provided in this node."
+            }
+          },
+          "P4 (Course Progressions)": {
+            "N36 (Prequarter • 5 Weeks)": {
+              "node_id": "quarter:2741527368d5c13b",
+              "path": [
+                "Course Progressions",
+                "Sample 2-Year Full-Time Schedule",
+                "Prequarter • 5 Weeks"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E5",
+                  "chunk_id": "chunk:e7189f3b7811b062",
+                  "text_preview": "Prequarter • 5 Weeks includes: Optional: Introduction to Statistical Concepts (Foundational) (Optional), R for Data Science (Foundational) (Optional)"
+                }
+              ],
+              "comment": "This node describes the prequarter optional foundational courses, which are part of the 2-year schedule but not directly relevant to comparing the 1-year and 2-year tracks. The structure summary E5 lists the optional courses, but the details in E7 and E8 are about course content, not program differences."
+            },
+            "N37 (Quarter 1 • 10 Weeks)": {
+              "node_id": "quarter:96d72d3a7b6ed30d",
+              "path": [
+                "Course Progressions",
+                "Sample 2-Year Full-Time Schedule",
+                "Quarter 1 • 10 Weeks"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E9",
+                  "chunk_id": "chunk:f1c06e649e651bd6",
+                  "text_preview": "Quarter 1 • 10 Weeks includes: Optional: Python for Data Science (Foundational) (Optional), Advanced Linear Algebra for Machine Learning (Foundational"
+                }
+              ],
+              "comment": "This node lists the courses in Quarter 1 of the 2-year schedule. The structure summary E9 provides an overview of the required and optional courses, which helps understand the 2-year track's curriculum. The individual course descriptions (E15-E20) are not directly relevant to comparing program lengths."
+            },
+            "N38 (Quarter 2 • 10 Weeks)": {
+              "node_id": "quarter:f8083ec57e18a85c",
+              "path": [
+                "Course Progressions",
+                "Sample 2-Year Full-Time Schedule",
+                "Quarter 2 • 10 Weeks"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E21",
+                  "chunk_id": "chunk:683c30c6a36bf99e",
+                  "text_preview": "Quarter 2 • 10 Weeks includes: Core: Machine Learning I (Letter Grade); Core: Time Series Analysis and Forecasting (Letter Grade); Elective: Elective "
+                }
+              ],
+              "comment": "This node lists the courses in Quarter 2 of the 2-year schedule. The structure summary E21 provides an overview of the required and elective courses, which helps understand the 2-year track's curriculum. The individual course descriptions (E26-E29) are not directly relevant to comparing program lengths."
+            },
+            "N39 (Quarter 3 • 10 Weeks)": {
+              "node_id": "quarter:99c605ca61064f25",
+              "path": [
+                "Course Progressions",
+                "Sample 2-Year Full-Time Schedule",
+                "Quarter 3 • 10 Weeks"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E30",
+                  "chunk_id": "chunk:5aeeeb86daa87326",
+                  "text_preview": "Quarter 3 • 10 Weeks includes: Core: Machine Learning II (Letter Grade); Elective: Elective 2 (Letter Grade); Capstone: Data Science Capstone Project "
+                }
+              ],
+              "comment": "This node lists the courses in Quarter 3 of the 2-year schedule. The structure summary E30 provides an overview of the required, elective, and capstone courses, which helps understand the 2-year track's curriculum. The individual course descriptions (E35-E38) are not directly relevant to comparing program lengths."
+            },
+            "N40 (Quarter 4 • 10 Weeks)": {
+              "node_id": "quarter:f5fe611c209d9556",
+              "path": [
+                "Course Progressions",
+                "Sample 2-Year Full-Time Schedule",
+                "Quarter 4 • 10 Weeks"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E39",
+                  "chunk_id": "chunk:66ad28e90327b775",
+                  "text_preview": "Quarter 4 • 10 Weeks includes: Elective: Elective 3 (Letter Grade); Elective: Elective 4 (Letter Grade); Capstone: Data Science Capstone Project (Lett"
+                }
+              ],
+              "comment": "This node lists the courses in Quarter 4 of the 2-year schedule. The structure summary E39 provides an overview of the elective and capstone courses, which helps understand the 2-year track's curriculum. The individual course descriptions (E44-E47) are not directly relevant to comparing program lengths."
+            }
+          }
+        },
+        "log_path": "C:\\Users\\ss363\\Desktop\\Archive\\ads_rag_chatbot\\pipeline_grag_v2\\log\\2026-08-04_014426_8cf53880166a.json"
+      }
+    }
+  },
+  "run_batch_id": "20260804T013937"
+}

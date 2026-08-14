@@ -1,0 +1,433 @@
+{
+  "schema_version": 2,
+  "timestamp": "2026-08-04T01:57:49.670608",
+  "question": "How much does the MS in Applied Data Science program cost per course?",
+  "question_id": "T01",
+  "question_meta": {
+    "category": "tuition",
+    "type": "single_fact",
+    "difficulty": "easy",
+    "expected_behavior": "direct_answer"
+  },
+  "results": {
+    "pipeline_flatrag": {
+      "pipeline_id": "pipeline_flatrag",
+      "display_name": "FlatRAG",
+      "answer": "Based on the retrieved context, the tuition for the MS in Applied Data Science program is **$6,384 per course** [1]. The total cost for the program depends on the number of courses taken: $76,608 for the 12-course program and $114,912 for the 18-course program [1]. There is also a non-refundable program enrollment deposit of $1,500, which is credited toward your first quarter's tuition balance [1].\n\nNote: This information reflects the program website as scraped in April–May 2026. Please verify current dates and deadlines directly with the program.\n\nSources:\n1. [Tuition Fees Aid | Program Tuition](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/tuition-fees-aid/)",
+      "sources": [
+        {
+          "page_title": "Tuition Fees Aid",
+          "source_url": "https://datascience.uchicago.edu/education/tuition-fees-aid/"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "tool_calls": [
+            {
+              "name": "list_page_sections",
+              "args": {
+                "url": "tuition_fees_aid"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "list_page_sections",
+              "content": "Sections in https://datascience.uchicago.edu/education/tuition-fees-aid/:\n  - \"Financial Aid\" (2 chunks)\n  - \"Noncredit Courses\" (1 chunk)\n  - \"Other Scholarships\" (1 chunk)\n  - \"Program Tuition\" (3 chunks)\n  - \"Start Your Application\" (1 chunk)\n  - \"The Data Science Institute Scholarship, MS in Applied Data Science Alumni Scholarship\" (1 chunk)\n  - \"Tuition Fees Aid\" (1 chunk)"
+            }
+          ],
+          "judger": null
+        },
+        {
+          "step": 2,
+          "tool_calls": [
+            {
+              "name": "fetch_section_chunks",
+              "args": {
+                "url": "tuition_fees_aid",
+                "section_breadcrumb": "Program Tuition"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_section_chunks",
+              "content": "Fetched 3 chunk(s) from \"Program Tuition\":\n\n[0] Tuition Fees Aid | Program Tuition\n[Page: Tuition Fees Aid | Section: Program Tuition]\n\nTuition and course fees displayed are for Summer 2025, Autumn 2025, Winter 2026, and Spring 2026. Visit the Office of the University Bursar website for information on quarterly and occasional fees, as well as information about tuition rates.\n\n[1] Tuition Fees Aid | Program Tuition\n[Page: Tuition Fees Aid | Section: Program Tuition]\n\n• Tuition for the 12- and 18-course MS in Applied Data Science program: $6,384 per course*/$76,608+^, 12 courses/$114,912+^, 18 courses\n• Program Enrollment Deposit (non-refundable): $1,500 (credited toward your first quarter’s tuition balance)\n\n[2] Tuition Fees Aid | Program Tuition\n[Page: Tuition Fees Aid | Section: Program Tuition]\n\n* Enrolling in a program of study includes additional costs beyond the tuition listed here. For a full list of direct and indirect expenses associated with the cost of attendance, please visit the [Cost of Attendance](https://financialaid.uchicago..."
+            }
+          ],
+          "judger": {
+            "completeness": "full",
+            "useful_indices": [
+              0,
+              1,
+              2
+            ],
+            "decision": "done",
+            "candidate_chunk_count": 3,
+            "accepted_chunk_count": 3
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "text": "[Page: Tuition Fees Aid | Section: Program Tuition]\n\nTuition and course fees displayed are for Summer 2025, Autumn 2025, Winter 2026, and Spring 2026. Visit the Office of the University Bursar website for information on quarterly and occasional fees, as well as information about tuition rates.",
+          "chunk_id": "education__tuition_fees_aid__program_tuition__1",
+          "source_url": "https://datascience.uchicago.edu/education/tuition-fees-aid/",
+          "page_title": "Tuition Fees Aid",
+          "section": "Program Tuition",
+          "section_breadcrumb": "Program Tuition",
+          "content_type": "text",
+          "program_type": "general",
+          "distance": 0.0
+        },
+        {
+          "text": "[Page: Tuition Fees Aid | Section: Program Tuition]\n\n• Tuition for the 12- and 18-course MS in Applied Data Science program: $6,384 per course*/$76,608+^, 12 courses/$114,912+^, 18 courses\n• Program Enrollment Deposit (non-refundable): $1,500 (credited toward your first quarter’s tuition balance)",
+          "chunk_id": "education__tuition_fees_aid__program_tuition__2",
+          "source_url": "https://datascience.uchicago.edu/education/tuition-fees-aid/",
+          "page_title": "Tuition Fees Aid",
+          "section": "Program Tuition",
+          "section_breadcrumb": "Program Tuition",
+          "content_type": "list",
+          "program_type": "general",
+          "distance": 0.0
+        },
+        {
+          "text": "[Page: Tuition Fees Aid | Section: Program Tuition]\n\n* Enrolling in a program of study includes additional costs beyond the tuition listed here. For a full list of direct and indirect expenses associated with the cost of attendance, please visit the [Cost of Attendance](https://financialaid.uchicago.edu/graduate/costs/cost-of-attendance/) page of the Graduate Financial Aid Office website. Tuition is expected to increase 3-7% per fiscal year (a fiscal year runs from summer through spring quarter). Those who complete the program over 2 fiscal years are subject to an increased tuition rate in fiscal year 2 of their program. Note: *The program awards partial tuition merit-based scholarships.",
+          "chunk_id": "education__tuition_fees_aid__program_tuition__3",
+          "source_url": "https://datascience.uchicago.edu/education/tuition-fees-aid/",
+          "page_title": "Tuition Fees Aid",
+          "section": "Program Tuition",
+          "section_breadcrumb": "Program Tuition",
+          "content_type": "text",
+          "program_type": "general",
+          "distance": 0.0
+        }
+      ],
+      "time_sec": 15.195,
+      "low_confidence": false,
+      "error": null,
+      "raw_debug": {
+        "answer": "Based on the retrieved context, the tuition for the MS in Applied Data Science program is **$6,384 per course** [1]. The total cost for the program depends on the number of courses taken: $76,608 for the 12-course program and $114,912 for the 18-course program [1]. There is also a non-refundable program enrollment deposit of $1,500, which is credited toward your first quarter's tuition balance [1].\n\nNote: This information reflects the program website as scraped in April–May 2026. Please verify current dates and deadlines directly with the program.\n\nSources:\n1. [Tuition Fees Aid | Program Tuition](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/tuition-fees-aid/)",
+        "sources": [
+          {
+            "page_title": "Tuition Fees Aid",
+            "source_url": "https://datascience.uchicago.edu/education/tuition-fees-aid/"
+          }
+        ],
+        "completeness": "full",
+        "low_confidence": false,
+        "attempts": 2,
+        "agent_steps": [
+          {
+            "step": 1,
+            "tool_calls": [
+              {
+                "name": "list_page_sections",
+                "args": {
+                  "url": "tuition_fees_aid"
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "list_page_sections",
+                "content": "Sections in https://datascience.uchicago.edu/education/tuition-fees-aid/:\n  - \"Financial Aid\" (2 chunks)\n  - \"Noncredit Courses\" (1 chunk)\n  - \"Other Scholarships\" (1 chunk)\n  - \"Program Tuition\" (3 chunks)\n  - \"Start Your Application\" (1 chunk)\n  - \"The Data Science Institute Scholarship, MS in Applied Data Science Alumni Scholarship\" (1 chunk)\n  - \"Tuition Fees Aid\" (1 chunk)"
+              }
+            ],
+            "judger": null
+          },
+          {
+            "step": 2,
+            "tool_calls": [
+              {
+                "name": "fetch_section_chunks",
+                "args": {
+                  "url": "tuition_fees_aid",
+                  "section_breadcrumb": "Program Tuition"
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "fetch_section_chunks",
+                "content": "Fetched 3 chunk(s) from \"Program Tuition\":\n\n[0] Tuition Fees Aid | Program Tuition\n[Page: Tuition Fees Aid | Section: Program Tuition]\n\nTuition and course fees displayed are for Summer 2025, Autumn 2025, Winter 2026, and Spring 2026. Visit the Office of the University Bursar website for information on quarterly and occasional fees, as well as information about tuition rates.\n\n[1] Tuition Fees Aid | Program Tuition\n[Page: Tuition Fees Aid | Section: Program Tuition]\n\n• Tuition for the 12- and 18-course MS in Applied Data Science program: $6,384 per course*/$76,608+^, 12 courses/$114,912+^, 18 courses\n• Program Enrollment Deposit (non-refundable): $1,500 (credited toward your first quarter’s tuition balance)\n\n[2] Tuition Fees Aid | Program Tuition\n[Page: Tuition Fees Aid | Section: Program Tuition]\n\n* Enrolling in a program of study includes additional costs beyond the tuition listed here. For a full list of direct and indirect expenses associated with the cost of attendance, please visit the [Cost of Attendance](https://financialaid.uchicago..."
+              }
+            ],
+            "judger": {
+              "completeness": "full",
+              "useful_indices": [
+                0,
+                1,
+                2
+              ],
+              "decision": "done",
+              "candidate_chunk_count": 3,
+              "accepted_chunk_count": 3
+            }
+          }
+        ],
+        "evidence": [
+          {
+            "text": "[Page: Tuition Fees Aid | Section: Program Tuition]\n\nTuition and course fees displayed are for Summer 2025, Autumn 2025, Winter 2026, and Spring 2026. Visit the Office of the University Bursar website for information on quarterly and occasional fees, as well as information about tuition rates.",
+            "chunk_id": "education__tuition_fees_aid__program_tuition__1",
+            "source_url": "https://datascience.uchicago.edu/education/tuition-fees-aid/",
+            "page_title": "Tuition Fees Aid",
+            "section": "Program Tuition",
+            "section_breadcrumb": "Program Tuition",
+            "content_type": "text",
+            "program_type": "general",
+            "distance": 0.0
+          },
+          {
+            "text": "[Page: Tuition Fees Aid | Section: Program Tuition]\n\n• Tuition for the 12- and 18-course MS in Applied Data Science program: $6,384 per course*/$76,608+^, 12 courses/$114,912+^, 18 courses\n• Program Enrollment Deposit (non-refundable): $1,500 (credited toward your first quarter’s tuition balance)",
+            "chunk_id": "education__tuition_fees_aid__program_tuition__2",
+            "source_url": "https://datascience.uchicago.edu/education/tuition-fees-aid/",
+            "page_title": "Tuition Fees Aid",
+            "section": "Program Tuition",
+            "section_breadcrumb": "Program Tuition",
+            "content_type": "list",
+            "program_type": "general",
+            "distance": 0.0
+          },
+          {
+            "text": "[Page: Tuition Fees Aid | Section: Program Tuition]\n\n* Enrolling in a program of study includes additional costs beyond the tuition listed here. For a full list of direct and indirect expenses associated with the cost of attendance, please visit the [Cost of Attendance](https://financialaid.uchicago.edu/graduate/costs/cost-of-attendance/) page of the Graduate Financial Aid Office website. Tuition is expected to increase 3-7% per fiscal year (a fiscal year runs from summer through spring quarter). Those who complete the program over 2 fiscal years are subject to an increased tuition rate in fiscal year 2 of their program. Note: *The program awards partial tuition merit-based scholarships.",
+            "chunk_id": "education__tuition_fees_aid__program_tuition__3",
+            "source_url": "https://datascience.uchicago.edu/education/tuition-fees-aid/",
+            "page_title": "Tuition Fees Aid",
+            "section": "Program Tuition",
+            "section_breadcrumb": "Program Tuition",
+            "content_type": "text",
+            "program_type": "general",
+            "distance": 0.0
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 4661,
+          "completion_tokens": 346,
+          "total_tokens": 5007,
+          "llm_calls": 6
+        },
+        "metrics": {
+          "tool_calls": 2,
+          "loop_count": 2,
+          "evidence_count": 3,
+          "llm_calls": 6,
+          "judge_calls": null,
+          "valid_fetch_count": null,
+          "invalid_fetch_count": null,
+          "fallback_triggered": null
+        }
+      }
+    },
+    "pipeline_grag_v2": {
+      "pipeline_id": "pipeline_grag_v2",
+      "display_name": "GRAG v2",
+      "answer": "The MS in Applied Data Science program costs **$6,384 per course** for the 12- and 18-course program options [1]. This rate applies to the Summer 2025 through Spring 2026 academic year [1]. Note that tuition is expected to increase 3–7% per fiscal year [1].",
+      "sources": [
+        {
+          "page_title": "Tuition, Fees, & Aid",
+          "source_url": "https://datascience.uchicago.edu/education/tuition-fees-aid"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P7"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P7] Tuition, Fees, & Aid\n[N1] Page Introduction — Section (1 content block)\n[N2] Program Tuition — Section (2 content blocks)\n[N3] Noncredit Courses — Section (1 content block)\n[N4] The Data Science Institute Scholarship, MS in Applied Data Science Alumni Scholarship — Section (1 content block)\n[N5] Other Scholarships — Section (1 content block)\n[N6] Financial Aid — Section (2 content blocks)\n[N7] Start Your Application — Section (1 content block)"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "The question asks about cost per course, which is directly addressed by the Tuition, Fees, & Aid page (P7). Inspect this page first to find relevant cost nodes."
+        },
+        {
+          "step": 2,
+          "tool_calls": [
+            {
+              "name": "fetch_graph_content",
+              "args": {
+                "node_refs": [
+                  "N2",
+                  "N3"
+                ]
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_graph_content",
+              "content": "[N2] Program Tuition — path: Tuition, Fees, & Aid > Program Tuition\n  [E1] Tuition and course fees displayed are for Summer 2025, Autumn 2025, Winter 2026, and Spring 2026. Visit the Office of the University Bursar website for information on quarterly and occasional fees, as well as information about tuition rates.\n- Tuition for the 12- and 18-course MS in Applied Data Science program: $6,384 per course*/$76,608+^, 12 courses/$114,912+^, 18 courses\n- Program Enrollment Deposit (non-refundable): $1,500 (credited toward your first quarter’s tuition balance)\n* Enrolling in a program of study includes additional costs beyond the tuition listed here. For a full list of direct and indirect expenses associated with the cost of attendance, please visit the Cost of Attendance page of the Graduate Financial Aid Office website.\nTuition is expected to increase 3-7% per fiscal year (a fiscal year runs from summer through spring quarter).\n  [E2] increase 3-7% per fiscal year (a fiscal year runs from summer through spring quarter). Those who complete the program over 2 fiscal years are subject to an increased tuition rate in fiscal year 2 of their program.\nNote: *The program awards partial tuition merit-based scholarships.\n\n[N3] Noncredit Courses — path: Tuition, Fees, & Aid > Noncredit Courses\n  [E3] - Career Seminar (required unless eligible to waive): $0\n- Introduction to Statistical Concepts (optional): $0\n- R Foundational Course (optional): $0\n- Python Foundational Course (optional): $0\n- Advanced Linear Algebra for Machine Learning (optional): $0"
+            }
+          ],
+          "judger": {
+            "node_assessments": [
+              {
+                "node_ref": "N2",
+                "keep_evidence": [
+                  "E1"
+                ],
+                "comment": "E1 directly states the tuition per course for the MS in Applied Data Science program as $6,384 per course, which answers the question. E2 discusses tuition increases over fiscal years, which is not directly about the per-course cost."
+              },
+              {
+                "node_ref": "N3",
+                "keep_evidence": [],
+                "comment": "This node lists noncredit courses, all with $0 cost, which are not part of the MS in Applied Data Science program's per-course tuition. Therefore, no evidence here supports the answer."
+              }
+            ]
+          },
+          "decision_reason": "The question asks for cost per course. Node N2 'Program Tuition' likely contains per-course tuition details, and N3 'Noncredit Courses' may clarify per-course costs for noncredit offerings. Fetching both together is efficient."
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E1",
+          "status": "accepted",
+          "page_title": "Tuition, Fees, & Aid",
+          "source_url": "https://datascience.uchicago.edu/education/tuition-fees-aid",
+          "text": "Tuition and course fees displayed are for Summer 2025, Autumn 2025, Winter 2026, and Spring 2026. Visit the Office of the University Bursar website for information on quarterly and occasional fees, as well as information about tuition rates.\n- Tuition for the 12- and 18-course MS in Applied Data Science program: $6,384 per course*/$76,608+^, 12 courses/$114,912+^, 18 courses\n- Program Enrollment Deposit (non-refundable): $1,500 (credited toward your first quarter’s tuition balance)\n* Enrolling in a program of study includes additional costs beyond the tuition listed here. For a full list of direct and indirect expenses associated with the cost of attendance, please visit the Cost of Attendance page of the Graduate Financial Aid Office website.\nTuition is expected to increase 3-7% per fiscal year (a fiscal year runs from summer through spring quarter).",
+          "path": [
+            "Tuition, Fees, & Aid",
+            "Program Tuition"
+          ],
+          "section_breadcrumb": "Tuition, Fees, & Aid > Program Tuition",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N2"
+            }
+          ],
+          "chunk_id": "chunk:a04427237cb5ab1a",
+          "owner_node_id": "section:e67ff71cfd31a5e2",
+          "page_id": "page:a5c1f12af4c1e404",
+          "internal_metadata": {
+            "source_type": "body_text",
+            "score": null,
+            "score_breakdown": {}
+          }
+        }
+      ],
+      "time_sec": 14.562,
+      "low_confidence": false,
+      "error": null,
+      "progress_summary": {
+        "summary_covering": "Page P7 (Tuition, Fees, & Aid): Checked N2 (Program Tuition) — useful, provides per-course tuition of $6,384 for the MS in Applied Data Science program. Checked N3 (Noncredit Courses) — not useful, lists $0 noncredit courses not relevant to the program. The question is fully answered by E1.",
+        "decision_trace_narrative": "Turn 1: Fetched N2 and N3 together, reasoning that N2 likely contains per-course tuition and N3 may clarify noncredit costs. N2 yielded direct evidence (E1) answering the question; N3 was irrelevant. No re-queries or invalid references."
+      },
+      "raw_debug": {
+        "response": {
+          "answer": "The MS in Applied Data Science program costs **$6,384 per course** for the 12- and 18-course program options [1]. This rate applies to the Summer 2025 through Spring 2026 academic year [1]. Note that tuition is expected to increase 3–7% per fiscal year [1].",
+          "citations": [
+            {
+              "index": 1,
+              "title": "Tuition, Fees, & Aid",
+              "source_url": "https://datascience.uchicago.edu/education/tuition-fees-aid",
+              "snippet": "Tuition and course fees displayed are for Summer 2025, Autumn 2025, Winter 2026, and Spring 2026. Visit the Office of the University Bursar website for information on quarterly and"
+            }
+          ],
+          "debug": {
+            "tool_turns": 2,
+            "stop_reason": "sufficient_evidence",
+            "evidence_count": 1,
+            "sufficient": true,
+            "missing": "",
+            "log_path": "C:\\Users\\ss363\\Desktop\\Archive\\ads_rag_chatbot\\pipeline_grag_v2\\log\\2026-08-04_015749_c551e9ef389c.json",
+            "run_id": "c551e9ef389c"
+          }
+        },
+        "run_id": "c551e9ef389c",
+        "rewritten_queries": [
+          {
+            "id": "q1",
+            "query": "MS in Applied Data Science program cost per course",
+            "target": "university-program"
+          }
+        ],
+        "judgment": {
+          "sufficient": true,
+          "missing": "",
+          "comment": "Page P7 (Tuition, Fees, & Aid): Checked N2 (Program Tuition) — useful, provides per-course tuition of $6,384 for the MS in Applied Data Science program. Checked N3 (Noncredit Courses) — not useful, lists $0 noncredit courses not relevant to the program. The question is fully answered by E1."
+        },
+        "stop_reason": "sufficient_evidence",
+        "fallback": {
+          "triggered": false,
+          "pages_selected": [],
+          "reason": ""
+        },
+        "metrics": {
+          "agent_turns": 2,
+          "tool_calls": 2,
+          "judge_calls": 1,
+          "llm_calls": 7,
+          "valid_fetch_count": 1,
+          "invalid_fetch_count": 0,
+          "accepted_evidence_count": 1,
+          "stop_reason": "sufficient_evidence",
+          "fallback_triggered": false
+        },
+        "usage": {
+          "prompt_tokens": 5209,
+          "completion_tokens": 661,
+          "total_tokens": 5870,
+          "llm_calls": 7
+        },
+        "progress_summary_history": [
+          {
+            "turn": 1,
+            "summary_covering": "No pages have been inspected yet. The Tuition, Fees, & Aid page (P7) is the next target, but no nodes have been checked on it. Nothing is missing yet because no information has been gathered.",
+            "decision_trace_narrative": "Turn 1: The agent decided to inspect the Tuition, Fees, & Aid page (P7) because the question directly asks about cost per course, which is likely addressed there. The inspection succeeded, but no nodes have been evaluated yet.",
+            "sufficient": false,
+            "missing": "Cost per course for the MS in Applied Data Science program."
+          },
+          {
+            "turn": 2,
+            "summary_covering": "Page P7 (Tuition, Fees, & Aid): Checked N2 (Program Tuition) — useful, provides per-course tuition of $6,384 for the MS in Applied Data Science program. Checked N3 (Noncredit Courses) — not useful, lists $0 noncredit courses not relevant to the program. The question is fully answered by E1.",
+            "decision_trace_narrative": "Turn 1: Fetched N2 and N3 together, reasoning that N2 likely contains per-course tuition and N3 may clarify noncredit costs. N2 yielded direct evidence (E1) answering the question; N3 was irrelevant. No re-queries or invalid references.",
+            "sufficient": true,
+            "missing": ""
+          }
+        ],
+        "node_evaluation_log": {
+          "P7 (Tuition, Fees, & Aid)": {
+            "N2 (Program Tuition)": {
+              "node_id": "section:e67ff71cfd31a5e2",
+              "path": [
+                "Tuition, Fees, & Aid",
+                "Program Tuition"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E1",
+                  "chunk_id": "chunk:a04427237cb5ab1a",
+                  "text_preview": "Tuition and course fees displayed are for Summer 2025, Autumn 2025, Winter 2026, and Spring 2026. Visit the Office of the University Bursar website fo"
+                }
+              ],
+              "comment": "E1 directly states the tuition per course for the MS in Applied Data Science program as $6,384 per course, which answers the question. E2 discusses tuition increases over fiscal years, which is not directly about the per-course cost."
+            },
+            "N3 (Noncredit Courses)": {
+              "node_id": "section:864dfda8c82347c8",
+              "path": [
+                "Tuition, Fees, & Aid",
+                "Noncredit Courses"
+              ],
+              "eff_evidence": [],
+              "comment": "This node lists noncredit courses, all with $0 cost, which are not part of the MS in Applied Data Science program's per-course tuition. Therefore, no evidence here supports the answer."
+            }
+          }
+        },
+        "log_path": "C:\\Users\\ss363\\Desktop\\Archive\\ads_rag_chatbot\\pipeline_grag_v2\\log\\2026-08-04_015749_c551e9ef389c.json"
+      }
+    }
+  },
+  "run_batch_id": "20260804T013937"
+}

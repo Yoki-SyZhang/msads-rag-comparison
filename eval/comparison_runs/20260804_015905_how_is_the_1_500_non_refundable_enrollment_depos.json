@@ -1,0 +1,568 @@
+{
+  "schema_version": 2,
+  "timestamp": "2026-08-04T01:59:05.688231",
+  "question": "How is the $1,500 non-refundable enrollment deposit applied?",
+  "question_id": "T03",
+  "question_meta": {
+    "category": "tuition",
+    "type": "single_fact",
+    "difficulty": "medium",
+    "expected_behavior": "direct_answer"
+  },
+  "results": {
+    "pipeline_flatrag": {
+      "pipeline_id": "pipeline_flatrag",
+      "display_name": "FlatRAG",
+      "answer": "Based on the retrieved context, the $1,500 non-refundable Program Enrollment Deposit is credited toward your first quarter’s tuition balance [1].\n\nSources:\n1. [Tuition Fees Aid | Program Tuition](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/tuition-fees-aid/)",
+      "sources": [
+        {
+          "page_title": "How To Apply",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply/"
+        },
+        {
+          "page_title": "Tuition Fees Aid",
+          "source_url": "https://datascience.uchicago.edu/education/tuition-fees-aid/"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "tool_calls": [
+            {
+              "name": "semantic_search",
+              "args": {
+                "query": "$1,500 non-refundable enrollment deposit applied to tuition"
+              }
+            },
+            {
+              "name": "list_page_sections",
+              "args": {
+                "url": "tuition_fees_aid"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "semantic_search",
+              "content": "Semantic search returned 5 result(s):\n\n[0] How To Apply | Application Fee (distance: 0.574)\n[Page: How To Apply | Section: Application Fee]\n\nThere is a $90 non-refundable application fee. For questions regarding an application fee waiver, please refer to the Physical Sciences Division fee waiver policy .\n\n[1] Tuition Fees Aid | Noncredit Courses (distance: 0.611)\n[Page: Tuition Fees Aid | Section: Noncredit Courses]\n\n• Career Seminar (required unless eligible to waive): $0\n• Introduction to Statistical Concepts (optional): $0\n• R Foundational Course (optional): $0\n• Python Foundational Course (optional): $0\n• Advanced Linear Algebra for Machine Learning (opt...\n\n[2] Tuition Fees Aid | Program Tuition (distance: 0.671)\n[Page: Tuition Fees Aid | Section: Program Tuition]\n\n* Enrolling in a program of study includes additional costs beyond the tuition listed here. For a full list of direct and indirect expenses associated with the cost of attendance, please visit the [Cost of Attendance](https://financialaid.uchicago...\n\n[3] Tuition Fees Aid | Program Tuition (distance: 0.673)\n[Page: Tuition Fees Aid | Section: Program Tuition]\n\n• Tuition for the 12- and 18-course MS in Applied Data Science program: $6,384 per course*/$76,608+^, 12 courses/$114,912+^, 18 courses\n• Program Enrollment Deposit (non-refundable): $1,500 (credited toward your first quarter’s tuition balance)\n\n[4] Tuition Fees Aid | Program Tuition (distance: 0.699)\n[Page: Tuition Fees Aid | Section: Program Tuition]\n\nTuition and course fees displayed are for Summer 2025, Autumn 2025, Winter 2026, and Spring 2026. Visit the Office of the University Bursar website for information on quarterly and occasional fees, as well as information about tuition rates."
+            },
+            {
+              "name": "list_page_sections",
+              "content": "Sections in https://datascience.uchicago.edu/education/tuition-fees-aid/:\n  - \"Financial Aid\" (2 chunks)\n  - \"Noncredit Courses\" (1 chunk)\n  - \"Other Scholarships\" (1 chunk)\n  - \"Program Tuition\" (3 chunks)\n  - \"Start Your Application\" (1 chunk)\n  - \"The Data Science Institute Scholarship, MS in Applied Data Science Alumni Scholarship\" (1 chunk)\n  - \"Tuition Fees Aid\" (1 chunk)"
+            }
+          ],
+          "judger": {
+            "completeness": "none",
+            "useful_indices": [],
+            "decision": "continue",
+            "candidate_chunk_count": 5,
+            "accepted_chunk_count": 0
+          }
+        },
+        {
+          "step": 2,
+          "tool_calls": [
+            {
+              "name": "fetch_section_chunks",
+              "args": {
+                "url": "tuition_fees_aid",
+                "section_breadcrumb": "Program Tuition"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_section_chunks",
+              "content": "Fetched 3 chunk(s) from \"Program Tuition\":\n\n[0] Tuition Fees Aid | Program Tuition\n[Page: Tuition Fees Aid | Section: Program Tuition]\n\nTuition and course fees displayed are for Summer 2025, Autumn 2025, Winter 2026, and Spring 2026. Visit the Office of the University Bursar website for information on quarterly and occasional fees, as well as information about tuition rates.\n\n[1] Tuition Fees Aid | Program Tuition\n[Page: Tuition Fees Aid | Section: Program Tuition]\n\n• Tuition for the 12- and 18-course MS in Applied Data Science program: $6,384 per course*/$76,608+^, 12 courses/$114,912+^, 18 courses\n• Program Enrollment Deposit (non-refundable): $1,500 (credited toward your first quarter’s tuition balance)\n\n[2] Tuition Fees Aid | Program Tuition\n[Page: Tuition Fees Aid | Section: Program Tuition]\n\n* Enrolling in a program of study includes additional costs beyond the tuition listed here. For a full list of direct and indirect expenses associated with the cost of attendance, please visit the [Cost of Attendance](https://financialaid.uchicago..."
+            }
+          ],
+          "judger": {
+            "completeness": "none",
+            "useful_indices": [],
+            "decision": "continue",
+            "candidate_chunk_count": 3,
+            "accepted_chunk_count": 0
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "text": "[Page: How To Apply | Section: Application Fee]\n\nThere is a $90 non-refundable application fee. For questions regarding an application fee waiver, please refer to the Physical Sciences Division fee waiver policy .",
+          "chunk_id": "education__masters_programs__ms_in_applied_data_science__how_to_apply__application_fee__18",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply/",
+          "page_title": "How To Apply",
+          "section": "Application Fee",
+          "section_breadcrumb": "Application Fee",
+          "content_type": "text",
+          "program_type": "general",
+          "distance": 0.5775285363197327
+        },
+        {
+          "text": "[Page: Tuition Fees Aid | Section: Noncredit Courses]\n\n• Career Seminar (required unless eligible to waive): $0\n• Introduction to Statistical Concepts (optional): $0\n• R Foundational Course (optional): $0\n• Python Foundational Course (optional): $0\n• Advanced Linear Algebra for Machine Learning (optional): $0",
+          "chunk_id": "education__tuition_fees_aid__noncredit_courses__4",
+          "source_url": "https://datascience.uchicago.edu/education/tuition-fees-aid/",
+          "page_title": "Tuition Fees Aid",
+          "section": "Noncredit Courses",
+          "section_breadcrumb": "Noncredit Courses",
+          "content_type": "list",
+          "program_type": "general",
+          "distance": 0.63156658411026
+        },
+        {
+          "text": "[Page: Tuition Fees Aid | Section: Program Tuition]\n\n* Enrolling in a program of study includes additional costs beyond the tuition listed here. For a full list of direct and indirect expenses associated with the cost of attendance, please visit the [Cost of Attendance](https://financialaid.uchicago.edu/graduate/costs/cost-of-attendance/) page of the Graduate Financial Aid Office website. Tuition is expected to increase 3-7% per fiscal year (a fiscal year runs from summer through spring quarter). Those who complete the program over 2 fiscal years are subject to an increased tuition rate in fiscal year 2 of their program. Note: *The program awards partial tuition merit-based scholarships.",
+          "chunk_id": "education__tuition_fees_aid__program_tuition__3",
+          "source_url": "https://datascience.uchicago.edu/education/tuition-fees-aid/",
+          "page_title": "Tuition Fees Aid",
+          "section": "Program Tuition",
+          "section_breadcrumb": "Program Tuition",
+          "content_type": "text",
+          "program_type": "general",
+          "distance": 0.6546354293823242
+        },
+        {
+          "text": "[Page: Tuition Fees Aid | Section: Program Tuition]\n\nTuition and course fees displayed are for Summer 2025, Autumn 2025, Winter 2026, and Spring 2026. Visit the Office of the University Bursar website for information on quarterly and occasional fees, as well as information about tuition rates.",
+          "chunk_id": "education__tuition_fees_aid__program_tuition__1",
+          "source_url": "https://datascience.uchicago.edu/education/tuition-fees-aid/",
+          "page_title": "Tuition Fees Aid",
+          "section": "Program Tuition",
+          "section_breadcrumb": "Program Tuition",
+          "content_type": "text",
+          "program_type": "general",
+          "distance": 0.6880921721458435
+        },
+        {
+          "text": "[Page: Tuition Fees Aid | Section: Program Tuition]\n\n• Tuition for the 12- and 18-course MS in Applied Data Science program: $6,384 per course*/$76,608+^, 12 courses/$114,912+^, 18 courses\n• Program Enrollment Deposit (non-refundable): $1,500 (credited toward your first quarter’s tuition balance)",
+          "chunk_id": "education__tuition_fees_aid__program_tuition__2",
+          "source_url": "https://datascience.uchicago.edu/education/tuition-fees-aid/",
+          "page_title": "Tuition Fees Aid",
+          "section": "Program Tuition",
+          "section_breadcrumb": "Program Tuition",
+          "content_type": "list",
+          "program_type": "general",
+          "distance": 0.6998265981674194
+        },
+        {
+          "text": "[Page: Tuition Fees Aid | Section: Start Your Application]\n\nThe In-Person and the Online program admit full- and part-time students for entrance in autumn quarter.",
+          "chunk_id": "education__tuition_fees_aid__start_your_application__9",
+          "source_url": "https://datascience.uchicago.edu/education/tuition-fees-aid/",
+          "page_title": "Tuition Fees Aid",
+          "section": "Start Your Application",
+          "section_breadcrumb": "Start Your Application",
+          "content_type": "text",
+          "program_type": "general",
+          "distance": 0.7084572315216064
+        },
+        {
+          "text": "[Page: Tuition Fees Aid | Section: Financial Aid]\n\npage](https://financialaid.uchicago.edu/graduate/types-aid/aid-eligibility-criteria) . We have administrative systems in place to assist students in applying for financial aid upon admission to programs. Please visit our Tuition, Financing, and Billing page for more information. For information and assistance with employer tuition benefits, please visit the website of the Bursar . If you are interested in financial aid through student employment, please visit the Student Employment website . Visit our FAQ page for additional information.",
+          "chunk_id": "education__tuition_fees_aid__financial_aid__8",
+          "source_url": "https://datascience.uchicago.edu/education/tuition-fees-aid/",
+          "page_title": "Tuition Fees Aid",
+          "section": "Financial Aid",
+          "section_breadcrumb": "Financial Aid",
+          "content_type": "text",
+          "program_type": "general",
+          "distance": 0.7107208371162415
+        }
+      ],
+      "time_sec": 11.929,
+      "low_confidence": true,
+      "error": null,
+      "raw_debug": {
+        "answer": "Based on the retrieved context, the $1,500 non-refundable Program Enrollment Deposit is credited toward your first quarter’s tuition balance [1].\n\nSources:\n1. [Tuition Fees Aid | Program Tuition](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/tuition-fees-aid/)",
+        "sources": [
+          {
+            "page_title": "How To Apply",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply/"
+          },
+          {
+            "page_title": "Tuition Fees Aid",
+            "source_url": "https://datascience.uchicago.edu/education/tuition-fees-aid/"
+          }
+        ],
+        "completeness": "none",
+        "low_confidence": true,
+        "attempts": 2,
+        "agent_steps": [
+          {
+            "step": 1,
+            "tool_calls": [
+              {
+                "name": "semantic_search",
+                "args": {
+                  "query": "$1,500 non-refundable enrollment deposit applied to tuition"
+                }
+              },
+              {
+                "name": "list_page_sections",
+                "args": {
+                  "url": "tuition_fees_aid"
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "semantic_search",
+                "content": "Semantic search returned 5 result(s):\n\n[0] How To Apply | Application Fee (distance: 0.574)\n[Page: How To Apply | Section: Application Fee]\n\nThere is a $90 non-refundable application fee. For questions regarding an application fee waiver, please refer to the Physical Sciences Division fee waiver policy .\n\n[1] Tuition Fees Aid | Noncredit Courses (distance: 0.611)\n[Page: Tuition Fees Aid | Section: Noncredit Courses]\n\n• Career Seminar (required unless eligible to waive): $0\n• Introduction to Statistical Concepts (optional): $0\n• R Foundational Course (optional): $0\n• Python Foundational Course (optional): $0\n• Advanced Linear Algebra for Machine Learning (opt...\n\n[2] Tuition Fees Aid | Program Tuition (distance: 0.671)\n[Page: Tuition Fees Aid | Section: Program Tuition]\n\n* Enrolling in a program of study includes additional costs beyond the tuition listed here. For a full list of direct and indirect expenses associated with the cost of attendance, please visit the [Cost of Attendance](https://financialaid.uchicago...\n\n[3] Tuition Fees Aid | Program Tuition (distance: 0.673)\n[Page: Tuition Fees Aid | Section: Program Tuition]\n\n• Tuition for the 12- and 18-course MS in Applied Data Science program: $6,384 per course*/$76,608+^, 12 courses/$114,912+^, 18 courses\n• Program Enrollment Deposit (non-refundable): $1,500 (credited toward your first quarter’s tuition balance)\n\n[4] Tuition Fees Aid | Program Tuition (distance: 0.699)\n[Page: Tuition Fees Aid | Section: Program Tuition]\n\nTuition and course fees displayed are for Summer 2025, Autumn 2025, Winter 2026, and Spring 2026. Visit the Office of the University Bursar website for information on quarterly and occasional fees, as well as information about tuition rates."
+              },
+              {
+                "name": "list_page_sections",
+                "content": "Sections in https://datascience.uchicago.edu/education/tuition-fees-aid/:\n  - \"Financial Aid\" (2 chunks)\n  - \"Noncredit Courses\" (1 chunk)\n  - \"Other Scholarships\" (1 chunk)\n  - \"Program Tuition\" (3 chunks)\n  - \"Start Your Application\" (1 chunk)\n  - \"The Data Science Institute Scholarship, MS in Applied Data Science Alumni Scholarship\" (1 chunk)\n  - \"Tuition Fees Aid\" (1 chunk)"
+              }
+            ],
+            "judger": {
+              "completeness": "none",
+              "useful_indices": [],
+              "decision": "continue",
+              "candidate_chunk_count": 5,
+              "accepted_chunk_count": 0
+            }
+          },
+          {
+            "step": 2,
+            "tool_calls": [
+              {
+                "name": "fetch_section_chunks",
+                "args": {
+                  "url": "tuition_fees_aid",
+                  "section_breadcrumb": "Program Tuition"
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "fetch_section_chunks",
+                "content": "Fetched 3 chunk(s) from \"Program Tuition\":\n\n[0] Tuition Fees Aid | Program Tuition\n[Page: Tuition Fees Aid | Section: Program Tuition]\n\nTuition and course fees displayed are for Summer 2025, Autumn 2025, Winter 2026, and Spring 2026. Visit the Office of the University Bursar website for information on quarterly and occasional fees, as well as information about tuition rates.\n\n[1] Tuition Fees Aid | Program Tuition\n[Page: Tuition Fees Aid | Section: Program Tuition]\n\n• Tuition for the 12- and 18-course MS in Applied Data Science program: $6,384 per course*/$76,608+^, 12 courses/$114,912+^, 18 courses\n• Program Enrollment Deposit (non-refundable): $1,500 (credited toward your first quarter’s tuition balance)\n\n[2] Tuition Fees Aid | Program Tuition\n[Page: Tuition Fees Aid | Section: Program Tuition]\n\n* Enrolling in a program of study includes additional costs beyond the tuition listed here. For a full list of direct and indirect expenses associated with the cost of attendance, please visit the [Cost of Attendance](https://financialaid.uchicago..."
+              }
+            ],
+            "judger": {
+              "completeness": "none",
+              "useful_indices": [],
+              "decision": "continue",
+              "candidate_chunk_count": 3,
+              "accepted_chunk_count": 0
+            }
+          }
+        ],
+        "evidence": [
+          {
+            "text": "[Page: How To Apply | Section: Application Fee]\n\nThere is a $90 non-refundable application fee. For questions regarding an application fee waiver, please refer to the Physical Sciences Division fee waiver policy .",
+            "chunk_id": "education__masters_programs__ms_in_applied_data_science__how_to_apply__application_fee__18",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply/",
+            "page_title": "How To Apply",
+            "section": "Application Fee",
+            "section_breadcrumb": "Application Fee",
+            "content_type": "text",
+            "program_type": "general",
+            "distance": 0.5775285363197327
+          },
+          {
+            "text": "[Page: Tuition Fees Aid | Section: Noncredit Courses]\n\n• Career Seminar (required unless eligible to waive): $0\n• Introduction to Statistical Concepts (optional): $0\n• R Foundational Course (optional): $0\n• Python Foundational Course (optional): $0\n• Advanced Linear Algebra for Machine Learning (optional): $0",
+            "chunk_id": "education__tuition_fees_aid__noncredit_courses__4",
+            "source_url": "https://datascience.uchicago.edu/education/tuition-fees-aid/",
+            "page_title": "Tuition Fees Aid",
+            "section": "Noncredit Courses",
+            "section_breadcrumb": "Noncredit Courses",
+            "content_type": "list",
+            "program_type": "general",
+            "distance": 0.63156658411026
+          },
+          {
+            "text": "[Page: Tuition Fees Aid | Section: Program Tuition]\n\n* Enrolling in a program of study includes additional costs beyond the tuition listed here. For a full list of direct and indirect expenses associated with the cost of attendance, please visit the [Cost of Attendance](https://financialaid.uchicago.edu/graduate/costs/cost-of-attendance/) page of the Graduate Financial Aid Office website. Tuition is expected to increase 3-7% per fiscal year (a fiscal year runs from summer through spring quarter). Those who complete the program over 2 fiscal years are subject to an increased tuition rate in fiscal year 2 of their program. Note: *The program awards partial tuition merit-based scholarships.",
+            "chunk_id": "education__tuition_fees_aid__program_tuition__3",
+            "source_url": "https://datascience.uchicago.edu/education/tuition-fees-aid/",
+            "page_title": "Tuition Fees Aid",
+            "section": "Program Tuition",
+            "section_breadcrumb": "Program Tuition",
+            "content_type": "text",
+            "program_type": "general",
+            "distance": 0.6546354293823242
+          },
+          {
+            "text": "[Page: Tuition Fees Aid | Section: Program Tuition]\n\nTuition and course fees displayed are for Summer 2025, Autumn 2025, Winter 2026, and Spring 2026. Visit the Office of the University Bursar website for information on quarterly and occasional fees, as well as information about tuition rates.",
+            "chunk_id": "education__tuition_fees_aid__program_tuition__1",
+            "source_url": "https://datascience.uchicago.edu/education/tuition-fees-aid/",
+            "page_title": "Tuition Fees Aid",
+            "section": "Program Tuition",
+            "section_breadcrumb": "Program Tuition",
+            "content_type": "text",
+            "program_type": "general",
+            "distance": 0.6880921721458435
+          },
+          {
+            "text": "[Page: Tuition Fees Aid | Section: Program Tuition]\n\n• Tuition for the 12- and 18-course MS in Applied Data Science program: $6,384 per course*/$76,608+^, 12 courses/$114,912+^, 18 courses\n• Program Enrollment Deposit (non-refundable): $1,500 (credited toward your first quarter’s tuition balance)",
+            "chunk_id": "education__tuition_fees_aid__program_tuition__2",
+            "source_url": "https://datascience.uchicago.edu/education/tuition-fees-aid/",
+            "page_title": "Tuition Fees Aid",
+            "section": "Program Tuition",
+            "section_breadcrumb": "Program Tuition",
+            "content_type": "list",
+            "program_type": "general",
+            "distance": 0.6998265981674194
+          },
+          {
+            "text": "[Page: Tuition Fees Aid | Section: Start Your Application]\n\nThe In-Person and the Online program admit full- and part-time students for entrance in autumn quarter.",
+            "chunk_id": "education__tuition_fees_aid__start_your_application__9",
+            "source_url": "https://datascience.uchicago.edu/education/tuition-fees-aid/",
+            "page_title": "Tuition Fees Aid",
+            "section": "Start Your Application",
+            "section_breadcrumb": "Start Your Application",
+            "content_type": "text",
+            "program_type": "general",
+            "distance": 0.7084572315216064
+          },
+          {
+            "text": "[Page: Tuition Fees Aid | Section: Financial Aid]\n\npage](https://financialaid.uchicago.edu/graduate/types-aid/aid-eligibility-criteria) . We have administrative systems in place to assist students in applying for financial aid upon admission to programs. Please visit our Tuition, Financing, and Billing page for more information. For information and assistance with employer tuition benefits, please visit the website of the Bursar . If you are interested in financial aid through student employment, please visit the Student Employment website . Visit our FAQ page for additional information.",
+            "chunk_id": "education__tuition_fees_aid__financial_aid__8",
+            "source_url": "https://datascience.uchicago.edu/education/tuition-fees-aid/",
+            "page_title": "Tuition Fees Aid",
+            "section": "Financial Aid",
+            "section_breadcrumb": "Financial Aid",
+            "content_type": "text",
+            "program_type": "general",
+            "distance": 0.7107208371162415
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 8661,
+          "completion_tokens": 542,
+          "total_tokens": 9203,
+          "llm_calls": 8
+        },
+        "metrics": {
+          "tool_calls": 3,
+          "loop_count": 2,
+          "evidence_count": 7,
+          "llm_calls": 8,
+          "judge_calls": null,
+          "valid_fetch_count": null,
+          "invalid_fetch_count": null,
+          "fallback_triggered": null
+        }
+      }
+    },
+    "pipeline_grag_v2": {
+      "pipeline_id": "pipeline_grag_v2",
+      "display_name": "GRAG v2",
+      "answer": "The $1,500 non-refundable enrollment deposit is credited toward your first quarter’s tuition balance [1].",
+      "sources": [
+        {
+          "page_title": "Tuition, Fees, & Aid",
+          "source_url": "https://datascience.uchicago.edu/education/tuition-fees-aid"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P7"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P7] Tuition, Fees, & Aid\n[N1] Page Introduction — Section (1 content block)\n[N2] Program Tuition — Section (2 content blocks)\n[N3] Noncredit Courses — Section (1 content block)\n[N4] The Data Science Institute Scholarship, MS in Applied Data Science Alumni Scholarship — Section (1 content block)\n[N5] Other Scholarships — Section (1 content block)\n[N6] Financial Aid — Section (2 content blocks)\n[N7] Start Your Application — Section (1 content block)"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "The question asks about the $1,500 enrollment deposit, which is a financial matter. P7 (Tuition, Fees, & Aid) is the most relevant page for cost and fee details, likely containing information about how the deposit is applied."
+        },
+        {
+          "step": 2,
+          "tool_calls": [
+            {
+              "name": "fetch_graph_content",
+              "args": {
+                "node_refs": [
+                  "N2",
+                  "N6",
+                  "N7"
+                ]
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_graph_content",
+              "content": "[N2] Program Tuition — path: Tuition, Fees, & Aid > Program Tuition\n  [E1] Tuition and course fees displayed are for Summer 2025, Autumn 2025, Winter 2026, and Spring 2026. Visit the Office of the University Bursar website for information on quarterly and occasional fees, as well as information about tuition rates.\n- Tuition for the 12- and 18-course MS in Applied Data Science program: $6,384 per course*/$76,608+^, 12 courses/$114,912+^, 18 courses\n- Program Enrollment Deposit (non-refundable): $1,500 (credited toward your first quarter’s tuition balance)\n* Enrolling in a program of study includes additional costs beyond the tuition listed here. For a full list of direct and indirect expenses associated with the cost of attendance, please visit the Cost of Attendance page of the Graduate Financial Aid Office website.\nTuition is expected to increase 3-7% per fiscal year (a fiscal year runs from summer through spring quarter).\n  [E2] increase 3-7% per fiscal year (a fiscal year runs from summer through spring quarter). Those who complete the program over 2 fiscal years are subject to an increased tuition rate in fiscal year 2 of their program.\nNote: *The program awards partial tuition merit-based scholarships.\n\n[N6] Financial Aid — path: Tuition, Fees, & Aid > Financial Aid\n  [E3] Merit scholarships are available for eligible applicants. Once you apply to the program, you will be automatically considered for a scholarship. Early applications are highly encouraged.\nIn addition, if you are interested in financial aid to help finance your graduate education, once admitted, you will work with the University of Chicago’s Student Loan Administration office.\nTo understand the types of financial assistance available and to gather additional information, please visit the Graduate Aid page . For international student funding options, please visit the International Student Funding Options page .\nTo find out if you are eligible for federal loans, please visit our Aid Eligibility page . We have administrative systems in place to assist students in applying for financial aid upon admission to programs. Please visit our Tuition, Financing, and Billing page for more information.\n  [E4] to programs. Please visit our Tuition, Financing, and Billing page for more information.\nFor information and assistance with employer tuition benefits, please visit the website of the Bursar .\nIf you are interested in financial aid through student employment, please visit the Student Employment website .\nVisit our FAQ page for additional information.\n\n[N7] Start Your Application — path: Tuition, Fees, & Aid > Start Your Application\n  [E5] The In-Person and the Online program admit full- and part-time students for entrance in autumn quarter."
+            }
+          ],
+          "judger": {
+            "node_assessments": [
+              {
+                "node_ref": "N2",
+                "keep_evidence": [
+                  "E1"
+                ],
+                "comment": "E1 explicitly states the $1,500 non-refundable enrollment deposit is credited toward the first quarter's tuition balance, directly answering how the deposit is applied. E2 discusses tuition increases and scholarships, which are not relevant to the deposit's application."
+              },
+              {
+                "node_ref": "N6",
+                "keep_evidence": [],
+                "comment": "This node covers financial aid options such as scholarships, loans, and employment, but does not mention the enrollment deposit or its application, so no evidence is kept."
+              },
+              {
+                "node_ref": "N7",
+                "keep_evidence": [],
+                "comment": "This node only mentions admission terms for full- and part-time students, with no information about the enrollment deposit, so no evidence is kept."
+              }
+            ]
+          },
+          "decision_reason": "The question asks about the $1,500 enrollment deposit. N2 (Program Tuition) likely contains fee details, N6 (Financial Aid) may mention deposit application, and N7 (Start Your Application) might include deposit information. Fetching these three nodes should reveal how the deposit is applied."
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E1",
+          "status": "accepted",
+          "page_title": "Tuition, Fees, & Aid",
+          "source_url": "https://datascience.uchicago.edu/education/tuition-fees-aid",
+          "text": "Tuition and course fees displayed are for Summer 2025, Autumn 2025, Winter 2026, and Spring 2026. Visit the Office of the University Bursar website for information on quarterly and occasional fees, as well as information about tuition rates.\n- Tuition for the 12- and 18-course MS in Applied Data Science program: $6,384 per course*/$76,608+^, 12 courses/$114,912+^, 18 courses\n- Program Enrollment Deposit (non-refundable): $1,500 (credited toward your first quarter’s tuition balance)\n* Enrolling in a program of study includes additional costs beyond the tuition listed here. For a full list of direct and indirect expenses associated with the cost of attendance, please visit the Cost of Attendance page of the Graduate Financial Aid Office website.\nTuition is expected to increase 3-7% per fiscal year (a fiscal year runs from summer through spring quarter).",
+          "path": [
+            "Tuition, Fees, & Aid",
+            "Program Tuition"
+          ],
+          "section_breadcrumb": "Tuition, Fees, & Aid > Program Tuition",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N2"
+            }
+          ],
+          "chunk_id": "chunk:a04427237cb5ab1a",
+          "owner_node_id": "section:e67ff71cfd31a5e2",
+          "page_id": "page:a5c1f12af4c1e404",
+          "internal_metadata": {
+            "source_type": "body_text",
+            "score": null,
+            "score_breakdown": {}
+          }
+        }
+      ],
+      "time_sec": 15.417,
+      "low_confidence": false,
+      "error": null,
+      "progress_summary": {
+        "summary_covering": "Page P7 (Tuition, Fees, & Aid): N2 (Program Tuition) was checked and found useful; it explicitly states the $1,500 non-refundable enrollment deposit is credited toward the first quarter's tuition balance. N6 (Financial Aid) and N7 (Start Your Application) were checked but not useful; they do not mention the deposit. All parts of the question are covered by accepted evidence E1.",
+        "decision_trace_narrative": "Turn 1: The agent fetched N2, N6, and N7 from P7, reasoning that these nodes likely contain fee details, financial aid, and application information. N2 provided direct evidence (E1) on the deposit's application; N6 and N7 were not useful. No re-queries occurred."
+      },
+      "raw_debug": {
+        "response": {
+          "answer": "The $1,500 non-refundable enrollment deposit is credited toward your first quarter’s tuition balance [1].",
+          "citations": [
+            {
+              "index": 1,
+              "title": "Tuition, Fees, & Aid",
+              "source_url": "https://datascience.uchicago.edu/education/tuition-fees-aid",
+              "snippet": "Tuition and course fees displayed are for Summer 2025, Autumn 2025, Winter 2026, and Spring 2026. Visit the Office of the University Bursar website for information on quarterly and"
+            }
+          ],
+          "debug": {
+            "tool_turns": 2,
+            "stop_reason": "sufficient_evidence",
+            "evidence_count": 1,
+            "sufficient": true,
+            "missing": "",
+            "log_path": "C:\\Users\\ss363\\Desktop\\Archive\\ads_rag_chatbot\\pipeline_grag_v2\\log\\2026-08-04_015905_b4b52922ce32.json",
+            "run_id": "b4b52922ce32"
+          }
+        },
+        "run_id": "b4b52922ce32",
+        "rewritten_queries": [
+          {
+            "id": "q1",
+            "query": "How is the $1,500 non-refundable enrollment deposit applied?",
+            "target": "university-program"
+          }
+        ],
+        "judgment": {
+          "sufficient": true,
+          "missing": "",
+          "comment": "Page P7 (Tuition, Fees, & Aid): N2 (Program Tuition) was checked and found useful; it explicitly states the $1,500 non-refundable enrollment deposit is credited toward the first quarter's tuition balance. N6 (Financial Aid) and N7 (Start Your Application) were checked but not useful; they do not mention the deposit. All parts of the question are covered by accepted evidence E1."
+        },
+        "stop_reason": "sufficient_evidence",
+        "fallback": {
+          "triggered": false,
+          "pages_selected": [],
+          "reason": ""
+        },
+        "metrics": {
+          "agent_turns": 2,
+          "tool_calls": 2,
+          "judge_calls": 1,
+          "llm_calls": 7,
+          "valid_fetch_count": 1,
+          "invalid_fetch_count": 0,
+          "accepted_evidence_count": 1,
+          "stop_reason": "sufficient_evidence",
+          "fallback_triggered": false
+        },
+        "usage": {
+          "prompt_tokens": 5527,
+          "completion_tokens": 721,
+          "total_tokens": 6248,
+          "llm_calls": 7
+        },
+        "progress_summary_history": [
+          {
+            "turn": 1,
+            "summary_covering": "No pages have been checked yet. The investigation has not started, so nothing is covered. Still missing: information on how the $1,500 non-refundable enrollment deposit is applied.",
+            "decision_trace_narrative": "Turn 1: The agent decided to inspect page P7 (Tuition, Fees, & Aid) because the question is about a financial matter and P7 is the most relevant page for cost and fee details. The inspection returned OK, but no nodes have been evaluated yet.",
+            "sufficient": false,
+            "missing": "Information on how the $1,500 non-refundable enrollment deposit is applied."
+          },
+          {
+            "turn": 2,
+            "summary_covering": "Page P7 (Tuition, Fees, & Aid): N2 (Program Tuition) was checked and found useful; it explicitly states the $1,500 non-refundable enrollment deposit is credited toward the first quarter's tuition balance. N6 (Financial Aid) and N7 (Start Your Application) were checked but not useful; they do not mention the deposit. All parts of the question are covered by accepted evidence E1.",
+            "decision_trace_narrative": "Turn 1: The agent fetched N2, N6, and N7 from P7, reasoning that these nodes likely contain fee details, financial aid, and application information. N2 provided direct evidence (E1) on the deposit's application; N6 and N7 were not useful. No re-queries occurred.",
+            "sufficient": true,
+            "missing": ""
+          }
+        ],
+        "node_evaluation_log": {
+          "P7 (Tuition, Fees, & Aid)": {
+            "N2 (Program Tuition)": {
+              "node_id": "section:e67ff71cfd31a5e2",
+              "path": [
+                "Tuition, Fees, & Aid",
+                "Program Tuition"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E1",
+                  "chunk_id": "chunk:a04427237cb5ab1a",
+                  "text_preview": "Tuition and course fees displayed are for Summer 2025, Autumn 2025, Winter 2026, and Spring 2026. Visit the Office of the University Bursar website fo"
+                }
+              ],
+              "comment": "E1 explicitly states the $1,500 non-refundable enrollment deposit is credited toward the first quarter's tuition balance, directly answering how the deposit is applied. E2 discusses tuition increases and scholarships, which are not relevant to the deposit's application."
+            },
+            "N6 (Financial Aid)": {
+              "node_id": "section:1fe42f8c84e95c52",
+              "path": [
+                "Tuition, Fees, & Aid",
+                "Financial Aid"
+              ],
+              "eff_evidence": [],
+              "comment": "This node covers financial aid options such as scholarships, loans, and employment, but does not mention the enrollment deposit or its application, so no evidence is kept."
+            },
+            "N7 (Start Your Application)": {
+              "node_id": "section:81deaafff7e58dad",
+              "path": [
+                "Tuition, Fees, & Aid",
+                "Start Your Application"
+              ],
+              "eff_evidence": [],
+              "comment": "This node only mentions admission terms for full- and part-time students, with no information about the enrollment deposit, so no evidence is kept."
+            }
+          }
+        },
+        "log_path": "C:\\Users\\ss363\\Desktop\\Archive\\ads_rag_chatbot\\pipeline_grag_v2\\log\\2026-08-04_015905_b4b52922ce32.json"
+      }
+    }
+  },
+  "run_batch_id": "20260804T013937"
+}

@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp pipeline_grag_fixed/__init__.py pipeline_grag_v2/__init__.py)",
+      "Bash(cp pipeline_grag_fixed/requirements.txt pipeline_grag_v2/requirements.txt)",
+      "Bash(cp pipeline_grag_fixed/build_index.py pipeline_grag_v2/build_index.py)",
+      "Bash(cp -r pipeline_grag_fixed/raw/. pipeline_grag_v2/raw/)",
+      "Bash(cp pipeline_grag_fixed/docs/page_summaries.json pipeline_grag_v2/docs/page_summaries.json)"
+    ]
+  }
+}

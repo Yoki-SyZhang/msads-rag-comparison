@@ -1,0 +1,372 @@
+[
+  {
+    "id": "A01",
+    "question": "How many letters of recommendation do I need for the MS in Applied Data Science?",
+    "category": "admissions",
+    "difficulty": "easy",
+    "type": "single_fact",
+    "gold_urls": ["https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply/"],
+    "reference_answer": "The MS in Applied Data Science program requires two letters of recommendation.",
+    "expected_behavior": "direct_answer"
+  },
+  {
+    "id": "A04",
+    "question": "What application materials do I need to submit for the MS in Applied Data Science?",
+    "category": "admissions",
+    "difficulty": "medium",
+    "type": "multi_fact",
+    "gold_urls": ["https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply/"],
+    "reference_answer": "Applicants submit two letters of recommendation, a candidate statement, a resume or CV, a programming supplement, a virtual portfolio video, unofficial transcripts, and the application fee. Applicants who do not meet the English Language Proficiency criteria must also submit proof of English proficiency.",
+    "expected_behavior": "direct_answer"
+  },
+  {
+    "id": "A05",
+    "question": "Which MS-ADS program options are visa-eligible for international students?",
+    "category": "admissions",
+    "difficulty": "medium",
+    "type": "cross_page",
+    "gold_urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply/",
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/"
+    ],
+    "reference_answer": "Only the full-time In-Person MS-ADS program is visa-eligible. The Online program does not provide visa sponsorship.",
+    "expected_behavior": "direct_answer"
+  },
+  {
+    "id": "A06",
+    "question": "Under what circumstance must an MS-ADS applicant submit proof of English language proficiency?",
+    "category": "admissions",
+    "difficulty": "medium",
+    "type": "single_fact",
+    "gold_urls": ["https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply/"],
+    "reference_answer": "Applicants who do not meet the English Language Proficiency criteria must submit proof of English language proficiency.",
+    "expected_behavior": "direct_answer"
+  },
+  {
+    "id": "A07",
+    "question": "Which standardized test scores are optional for MS-ADS applicants?",
+    "category": "admissions",
+    "difficulty": "easy",
+    "type": "multi_fact",
+    "gold_urls": ["https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/"],
+    "reference_answer": "GRE and GMAT scores are optional: neither test is required, but applicants may submit either or both scores.",
+    "expected_behavior": "direct_answer"
+  },
+  {
+    "id": "C01",
+    "question": "Which six core courses are required in the In-Person MS-ADS program?",
+    "category": "curriculum",
+    "difficulty": "easy",
+    "type": "accordion",
+    "gold_urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/",
+      "https://datascience.uchicago.edu/education/masters-programs/in-person-program/"
+    ],
+    "reference_answer": "The six core courses are Time Series Analysis and Forecasting; Statistical Models for Data Science; Machine Learning I; Machine Learning II; Data Engineering Platforms for Analytics or Big Data and Cloud Computing; and Leadership and Consulting for Data Science.",
+    "expected_behavior": "direct_answer"
+  },
+  {
+    "id": "C02",
+    "question": "Which core courses are scheduled in Quarter 1 of the sample part-time program?",
+    "category": "curriculum",
+    "difficulty": "easy",
+    "type": "multi_fact",
+    "gold_urls": ["https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/"],
+    "reference_answer": "Quarter 1 includes Statistical Models for Data Science and Data Engineering Platforms for Analytics or Big Data and Cloud Computing as core courses.",
+    "expected_behavior": "direct_answer"
+  },
+  {
+    "id": "C03",
+    "question": "What kinds of electives are available in the MS-ADS online program?",
+    "category": "curriculum",
+    "difficulty": "medium",
+    "type": "multi_fact",
+    "gold_urls": ["https://datascience.uchicago.edu/education/masters-programs/online-program/"],
+    "reference_answer": "The listed Online sample electives are Advanced Computer Vision with Deep Learning; Advanced Machine Learning and Artificial Intelligence; Bayesian Machine Learning with Generative AI Applications; Data Science for Algorithmic Marketing; Data Science for Healthcare; Data Visualization Techniques; Digital Marketing Analytics in Theory and Practice; Quantitative Finance: Methods and Applications; Generative AI: Principles and Applications; Machine Learning Operations; Next-Gen NLP: LLM and Agentic AI in Practice; Real Time Intelligent Systems; Deep Reinforcement Learning; and Supply Chain Optimization.",
+    "expected_behavior": "direct_answer"
+  },
+  {
+    "id": "C05",
+    "question": "What's the difference between the 1-year 12-course program and the 2-year thesis track?",
+    "category": "curriculum",
+    "difficulty": "medium",
+    "type": "comparative",
+    "gold_urls": ["https://datascience.uchicago.edu/education/masters-programs/in-person-program/"],
+    "reference_answer": "The 1-year program requires 12 courses and is available full-time or part-time. The 2-year thesis track requires 18 courses, is full-time only, spans six academic quarters, includes more electives and two independent-study courses, and requires a master's thesis.",
+    "expected_behavior": "direct_answer"
+  },
+  {
+    "id": "C07",
+    "question": "At what time do weekday live synchronous classes in the Online MS-ADS program begin?",
+    "category": "program_format",
+    "difficulty": "medium",
+    "type": "single_fact",
+    "gold_urls": ["https://datascience.uchicago.edu/education/masters-programs/online-program/"],
+    "reference_answer": "Weekday live synchronous classes begin at 6 p.m. Central Time.",
+    "expected_behavior": "direct_answer"
+  },
+  {
+    "id": "C08",
+    "question": "In the sample full-time schedule, which quarter includes Machine Learning I?",
+    "category": "curriculum",
+    "difficulty": "medium",
+    "type": "table",
+    "gold_urls": ["https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/"],
+    "reference_answer": "Machine Learning I is included in Quarter 2 of the sample full-time schedule.",
+    "expected_behavior": "direct_answer"
+  },
+  {
+    "id": "C09",
+    "question": "Which noncredit courses are required or optional in the In-Person MS-ADS program?",
+    "category": "curriculum",
+    "difficulty": "easy",
+    "type": "accordion",
+    "gold_urls": ["https://datascience.uchicago.edu/education/masters-programs/in-person-program/"],
+    "reference_answer": "Career Seminar is required. Introduction to Statistical Concepts, R for Data Science, Python for Data Science, and Advanced Linear Algebra for Machine Learning are optional. Brush up on the Basics is an optional preparation resource, not a noncredit course.",
+    "expected_behavior": "direct_answer"
+  },
+  {
+    "id": "C10",
+    "question": "How are the six core courses sequenced across the sample full-time and part-time schedules?",
+    "category": "curriculum",
+    "difficulty": "hard",
+    "type": "multi_fact",
+    "gold_urls": ["https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/"],
+    "reference_answer": "In the full-time schedule, Quarter 1 has Statistical Models for Data Science, Leadership and Consulting for Data Science, and Data Engineering Platforms for Analytics or Big Data and Cloud Computing; Quarter 2 has Machine Learning I and Time Series Analysis and Forecasting; Quarter 3 has Machine Learning II. In the part-time schedule, Quarter 1 has Statistical Models for Data Science and Data Engineering Platforms for Analytics or Big Data and Cloud Computing; Quarter 2 has Machine Learning I and Time Series Analysis and Forecasting; Quarter 3 has Machine Learning II and Leadership and Consulting for Data Science.",
+    "expected_behavior": "direct_answer"
+  },
+  {
+    "id": "C12",
+    "question": "Which sample elective courses are listed for the in-person MS-ADS program?",
+    "category": "curriculum",
+    "difficulty": "easy",
+    "type": "multi_fact",
+    "gold_urls": ["https://datascience.uchicago.edu/education/masters-programs/in-person-program/"],
+    "reference_answer": "The listed sample electives are Advanced Computer Vision with Deep Learning; Advanced Machine Learning and Artificial Intelligence; Applied Generative AI: Agents and Multimodal Intelligence; Bayesian Machine Learning with Generative AI Applications; Causal Models for Data Science; Data Science for Algorithmic Marketing; Data Science for Healthcare; Data Visualization Techniques; Digital Marketing Analytics in Theory and Practice; Deep Reinforcement Learning; Generative AI: Principles and Applications; Machine Learning Operations; Next-Gen NLP: LLM and Agentic AI in Practice; Optimization and Simulation Methods for Data Science; Quantitative Finance: Methods and Applications; Real Time Intelligent Systems; and Supply Chain Optimization.",
+    "expected_behavior": "direct_answer"
+  },
+  {
+    "id": "C13",
+    "question": "How many academic quarters does the sample full-time schedule span?",
+    "category": "curriculum",
+    "difficulty": "medium",
+    "type": "table",
+    "gold_urls": ["https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/"],
+    "reference_answer": "The sample full-time schedule spans four academic quarters, Quarter 1 through Quarter 4; the five-week Prequarter is not an academic quarter.",
+    "expected_behavior": "direct_answer"
+  },
+  {
+    "id": "C14",
+    "question": "In which quarter of the sample 2-year full-time schedule is Thesis Course I taken?",
+    "category": "curriculum",
+    "difficulty": "hard",
+    "type": "single_fact",
+    "gold_urls": ["https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/"],
+    "reference_answer": "Thesis Course I is taken in Quarter 5 of the sample 2-year full-time schedule.",
+    "expected_behavior": "direct_answer"
+  },
+  {
+    "id": "C15",
+    "question": "Which downtown Chicago buildings host In-Person MS-ADS classes?",
+    "category": "campus",
+    "difficulty": "easy",
+    "type": "multi_fact",
+    "gold_urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+      "https://datascience.uchicago.edu/explore-the-ms-ads-campus/"
+    ],
+    "reference_answer": "In-Person MS-ADS classes are held at NBC Tower and the Gleacher Center in downtown Chicago.",
+    "expected_behavior": "direct_answer"
+  },
+  {
+    "id": "E01",
+    "question": "What is the capital of France?",
+    "category": "edge",
+    "difficulty": "easy",
+    "type": "out_of_scope",
+    "gold_urls": [],
+    "reference_answer": "This question is outside the scope of the supplied MS-ADS program corpus.",
+    "expected_behavior": "refuse_out_of_scope"
+  },
+  {
+    "id": "E02",
+    "question": "What is the dress code for the program?",
+    "category": "edge",
+    "difficulty": "easy",
+    "type": "missing_info",
+    "gold_urls": [],
+    "reference_answer": "The supplied MS-ADS corpus does not state a program dress code.",
+    "expected_behavior": "refuse_insufficient_context"
+  },
+  {
+    "id": "E03",
+    "question": "In which quarter does Leadership and Consulting for Data Science appear in the sample part-time schedule?",
+    "category": "curriculum",
+    "difficulty": "medium",
+    "type": "single_fact",
+    "gold_urls": ["https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/"],
+    "reference_answer": "Leadership and Consulting for Data Science appears in Quarter 3 of the sample part-time schedule.",
+    "expected_behavior": "direct_answer"
+  },
+  {
+    "id": "E04",
+    "question": "How does the UChicago MS in Applied Data Science compare to Northwestern's MS in Data Science program?",
+    "category": "edge",
+    "difficulty": "medium",
+    "type": "out_of_scope",
+    "gold_urls": [],
+    "reference_answer": "The supplied corpus does not contain information about Northwestern's MS in Data Science program, so it cannot support this comparison.",
+    "expected_behavior": "refuse_out_of_scope"
+  },
+  {
+    "id": "E05",
+    "question": "Between UChicago and Stanford, which school's program is better for someone focused on NLP?",
+    "category": "edge",
+    "difficulty": "hard",
+    "type": "out_of_scope",
+    "gold_urls": [],
+    "reference_answer": "The supplied corpus does not contain information about Stanford's program or an evidence-based criterion for deciding which program is better for NLP, so it cannot support this comparison.",
+    "expected_behavior": "refuse_out_of_scope"
+  },
+  {
+    "id": "E06",
+    "question": "What is the average class size for MS-ADS core courses?",
+    "category": "edge",
+    "difficulty": "medium",
+    "type": "missing_info",
+    "gold_urls": [],
+    "reference_answer": "The supplied MS-ADS corpus does not state the average class size for core courses.",
+    "expected_behavior": "refuse_insufficient_context"
+  },
+  {
+    "id": "F01",
+    "question": "Who is the director of the MS in Applied Data Science program at UChicago?",
+    "category": "faculty",
+    "difficulty": "easy",
+    "type": "single_fact",
+    "gold_urls": ["https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/instructors-staff/"],
+    "reference_answer": "Greg Green is the Director of the MS in Applied Data Science Program at the University of Chicago.",
+    "expected_behavior": "direct_answer"
+  },
+  {
+    "id": "F03",
+    "question": "Which courses does Arnab Bose teach in the MS-ADS program?",
+    "category": "faculty",
+    "difficulty": "medium",
+    "type": "multi_fact",
+    "gold_urls": ["https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/instructors-staff/"],
+    "reference_answer": "Arnab Bose teaches Machine Learning, Machine Learning Operations, Time Series Analysis and Forecasting, and Data Science in Healthcare.",
+    "expected_behavior": "direct_answer"
+  },
+  {
+    "id": "F04",
+    "question": "Which MS-ADS instructors have worked at Google?",
+    "category": "faculty",
+    "difficulty": "hard",
+    "type": "multi_fact",
+    "gold_urls": ["https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/instructors-staff/"],
+    "reference_answer": "Greg Green previously served as a Director at Google, and Mike Anderson is a Staff Data Scientist at Google.",
+    "expected_behavior": "direct_answer"
+  },
+  {
+    "id": "S01",
+    "question": "How does the age distribution differ between the Autumn 2025 In-Person and Online cohorts?",
+    "category": "students",
+    "difficulty": "hard",
+    "type": "table",
+    "gold_urls": ["https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/our-students/"],
+    "reference_answer": "In-Person: ages 21–24, 72%; 25–29, 20%; 30–34, 5%; 35+, 3%. Online: ages 21–24, 44.4%; 25–29, 14.8%; 30–34, 25.9%; 35+, 14.8%.",
+    "expected_behavior": "direct_answer"
+  },
+  {
+    "id": "T01",
+    "question": "How much does the MS in Applied Data Science program cost per course?",
+    "category": "tuition",
+    "difficulty": "easy",
+    "type": "single_fact",
+    "gold_urls": ["https://datascience.uchicago.edu/education/tuition-fees-aid/"],
+    "reference_answer": "The listed tuition is $6,384 per course for Summer 2025, Autumn 2025, Winter 2026, and Spring 2026.",
+    "expected_behavior": "direct_answer"
+  },
+  {
+    "id": "T02",
+    "question": "What financial aid options are available for MS-ADS students?",
+    "category": "tuition",
+    "difficulty": "medium",
+    "type": "multi_fact",
+    "gold_urls": ["https://datascience.uchicago.edu/education/tuition-fees-aid/"],
+    "reference_answer": "Funding options described in the corpus include partial-tuition merit scholarships, outside scholarships, student loans and federal-loan eligibility, international-student funding resources, employer tuition benefits, and student employment.",
+    "expected_behavior": "direct_answer"
+  },
+  {
+    "id": "T03",
+    "question": "How is the $1,500 non-refundable enrollment deposit applied?",
+    "category": "tuition",
+    "difficulty": "medium",
+    "type": "single_fact",
+    "gold_urls": ["https://datascience.uchicago.edu/education/tuition-fees-aid/"],
+    "reference_answer": "The $1,500 non-refundable enrollment deposit is credited toward the student's first-quarter tuition balance.",
+    "expected_behavior": "direct_answer"
+  },
+  {
+    "id": "T04",
+    "question": "How are MS-ADS applicants considered for merit scholarships?",
+    "category": "tuition",
+    "difficulty": "easy",
+    "type": "single_fact",
+    "gold_urls": ["https://datascience.uchicago.edu/education/tuition-fees-aid/"],
+    "reference_answer": "Applicants are automatically considered for a merit scholarship once they apply to the MS-ADS program.",
+    "expected_behavior": "direct_answer"
+  },
+  {
+    "id": "T05",
+    "question": "Which MS-ADS faculty member led AI at William Blair after spending 20 years at IBM?",
+    "category": "faculty",
+    "difficulty": "hard",
+    "type": "single_fact",
+    "gold_urls": ["https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/instructors-staff/"],
+    "reference_answer": "The faculty member is Nick Kadochnikov.",
+    "expected_behavior": "direct_answer"
+  },
+  {
+    "id": "X03",
+    "question": "Which sample elective courses are listed for the In-Person MS-ADS program but not for the Online MS-ADS program?",
+    "category": "curriculum",
+    "difficulty": "hard",
+    "type": "cross_page",
+    "gold_urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+      "https://datascience.uchicago.edu/education/masters-programs/online-program/"
+    ],
+    "reference_answer": "The In-Person list additionally includes Applied Generative AI: Agents and Multimodal Intelligence; Causal Models for Data Science; and Optimization and Simulation Methods for Data Science.",
+    "expected_behavior": "direct_answer"
+  },
+  {
+    "id": "X04",
+    "question": "Are the required core courses the same for the In-Person and Online MS-ADS programs?",
+    "category": "curriculum",
+    "difficulty": "easy",
+    "type": "comparative",
+    "gold_urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+      "https://datascience.uchicago.edu/education/masters-programs/online-program/",
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/"
+    ],
+    "reference_answer": "Yes. Both programs require Time Series Analysis and Forecasting; Statistical Models for Data Science; Machine Learning I; Machine Learning II; Data Engineering Platforms for Analytics or Big Data and Cloud Computing; and Leadership and Consulting for Data Science.",
+    "expected_behavior": "direct_answer"
+  },
+  {
+    "id": "X05",
+    "question": "Which study-load options are available in both the In-Person and Online MS-ADS programs?",
+    "category": "program_format",
+    "difficulty": "easy",
+    "type": "comparative",
+    "gold_urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/",
+      "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+      "https://datascience.uchicago.edu/education/masters-programs/online-program/"
+    ],
+    "reference_answer": "Both the In-Person and Online MS-ADS programs offer full-time and part-time study options.",
+    "expected_behavior": "direct_answer"
+  }
+]

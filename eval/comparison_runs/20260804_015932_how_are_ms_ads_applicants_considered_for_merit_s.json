@@ -1,0 +1,473 @@
+{
+  "schema_version": 2,
+  "timestamp": "2026-08-04T01:59:32.081876",
+  "question": "How are MS-ADS applicants considered for merit scholarships?",
+  "question_id": "T04",
+  "question_meta": {
+    "category": "tuition",
+    "type": "single_fact",
+    "difficulty": "easy",
+    "expected_behavior": "direct_answer"
+  },
+  "results": {
+    "pipeline_flatrag": {
+      "pipeline_id": "pipeline_flatrag",
+      "display_name": "FlatRAG",
+      "answer": "Based on the retrieved context, MS-ADS applicants are automatically considered for merit scholarships once they apply to the program, with no separate application required [1]. Early applications are highly encouraged, and it is recommended that candidates submit their applications ahead of the early deadline to maximize their chances of securing a scholarship [1][2].\n\nSources:\n1. [Tuition Fees Aid | Financial Aid](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/tuition-fees-aid/)\n2. [Tuition Fees Aid | The Data Science Institute Scholarship, MS in Applied Data Science Alumni Scholarship](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/tuition-fees-aid/)",
+      "sources": [
+        {
+          "page_title": "Tuition Fees Aid",
+          "source_url": "https://datascience.uchicago.edu/education/tuition-fees-aid/"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "tool_calls": [
+            {
+              "name": "list_page_sections",
+              "args": {
+                "url": "tuition_fees_aid"
+              }
+            },
+            {
+              "name": "list_page_sections",
+              "args": {
+                "url": "faqs"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "list_page_sections",
+              "content": "Sections in https://datascience.uchicago.edu/education/tuition-fees-aid/:\n  - \"Financial Aid\" (2 chunks)\n  - \"Noncredit Courses\" (1 chunk)\n  - \"Other Scholarships\" (1 chunk)\n  - \"Program Tuition\" (3 chunks)\n  - \"Start Your Application\" (1 chunk)\n  - \"The Data Science Institute Scholarship, MS in Applied Data Science Alumni Scholarship\" (1 chunk)\n  - \"Tuition Fees Aid\" (1 chunk)"
+            },
+            {
+              "name": "list_page_sections",
+              "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/:\n  - \"2-Year Thesis Track Program > How many spots are available in the new 2-year program?\" (1 chunk)\n  - \"2-Year Thesis Track Program > If I am admitted to the In-Person, Full-Time 1-year program, may I take any of the 2-year program electives?\" (1 chunk)\n  - \"2-Year Thesis Track Program > May I switch between the 1- and 2-year programs after officially enrolling in the MS-ADS program?\" (1 chunk)\n  - \"2-Year Thesis Track Program > What is the 2-year program's thesis requirement?\" (1 chunk)\n  - \"2-Year Thesis Track Program > What is the new 2-year thesis track program (18 courses), and how is it different from the 1-year program (12 courses)?\" (2 chunks)\n  - \"2-Year Thesis Track Program > When can I apply for the 2-year thesis track program?\" (1 chunk)\n  - \"Application Process > Do I need to provide my recommenders with instructions?\" (1 chunk)\n  - \"Application Process > Does the admissions office allow recommenders to email their letter directly as an attachment to be included in an applicant’s file?\" (1 chunk)\n  - \"Application Process > How do I submit the materials that will accompany my Master's in Applied Data Science application?\" (1 chunk)\n  - \"Application Process > How will I be notified that I am admitted to the Master's in Applied Data Science program?\" (1 chunk)\n  - \"Application Process > I took the GRE and/or GMAT and want to include my score(s) with my Master's in Applied Data Science application.\" (1 chunk)\n  - \"Application Process > I took the TOEFL over two years ago. Can I still use those TOEFL results?\" (1 chunk)\n  - \"Application Process > If I am admitted to the Master's in Applied Data Science program, what do I do next?\" (1 chunk)\n  - \"Application Process > If I finish my Master's in Applied Data Science application before the deadline, will I receive my decision early?\" (1 chunk)\n  - \"Application Process > Is the GRE or GMAT required for th"
+            }
+          ],
+          "judger": null
+        },
+        {
+          "step": 2,
+          "tool_calls": [
+            {
+              "name": "fetch_section_chunks",
+              "args": {
+                "url": "tuition_fees_aid",
+                "section_breadcrumb": "Financial Aid"
+              }
+            },
+            {
+              "name": "fetch_section_chunks",
+              "args": {
+                "url": "tuition_fees_aid",
+                "section_breadcrumb": "The Data Science Institute Scholarship, MS in Applied Data Science Alumni Scholarship"
+              }
+            },
+            {
+              "name": "fetch_section_chunks",
+              "args": {
+                "url": "tuition_fees_aid",
+                "section_breadcrumb": "Other Scholarships"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_section_chunks",
+              "content": "Fetched 2 chunk(s) from \"Financial Aid\":\n\n[0] Tuition Fees Aid | Financial Aid\n[Page: Tuition Fees Aid | Section: Financial Aid]\n\nMerit scholarships are available for eligible applicants. Once you apply to the program, you will be automatically considered for a scholarship. Early applications are highly encouraged. In addition, if you are interested in financial aid to help fi...\n\n[1] Tuition Fees Aid | Financial Aid\n[Page: Tuition Fees Aid | Section: Financial Aid]\n\npage](https://financialaid.uchicago.edu/graduate/types-aid/aid-eligibility-criteria) . We have administrative systems in place to assist students in applying for financial aid upon admission to programs. Please visit our Tuition, Financing, and Bill..."
+            },
+            {
+              "name": "fetch_section_chunks",
+              "content": "Fetched 1 chunk(s) from \"The Data Science Institute Scholarship, MS in Applied Data Science Alumni Scholarship\":\n\n[0] Tuition Fees Aid | The Data Science Institute Scholarship, MS in Applied Data Science Alumni Scholarship\n[Page: Tuition Fees Aid | Section: The Data Science Institute Scholarship, MS in Applied Data Science Alumni Scholarship]\n\nThe MS in Applied Data Science program offers partial tuition scholarships to top applicants. These scholarships do not require a separate application but it is recommended that..."
+            },
+            {
+              "name": "fetch_section_chunks",
+              "content": "Fetched 1 chunk(s) from \"Other Scholarships\":\n\n[0] Tuition Fees Aid | Other Scholarships\n[Page: Tuition Fees Aid | Section: Other Scholarships]\n\nStudents are encouraged to investigate scholarships offered through various civic and professional organizations, foundations and state agencies. One place to search for scholarships is the financial aid information web page sponsored by the Na..."
+            }
+          ],
+          "judger": {
+            "completeness": "partial",
+            "useful_indices": [
+              0,
+              2
+            ],
+            "decision": "done",
+            "candidate_chunk_count": 4,
+            "accepted_chunk_count": 2
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "text": "[Page: Tuition Fees Aid | Section: Financial Aid]\n\nMerit scholarships are available for eligible applicants. Once you apply to the program, you will be automatically considered for a scholarship. Early applications are highly encouraged. In addition, if you are interested in financial aid to help finance your graduate education, once admitted, you will work with the University of Chicago’s Student Loan Administration office. To understand the types of financial assistance available and to gather additional information, please visit the [Graduate Aid page](https://financialaid.uchicago.edu/graduate) . For international student funding options, please visit the [International Student Funding Options page](https://internationalaffairs.uchicago.edu/fundingoptions) . To find out if you are eligible for federal loans, please visit our [Aid Eligibility page](https://financialaid.uchicago.edu/graduate/types-aid/aid-eligibility-criteria) . We",
+          "chunk_id": "education__tuition_fees_aid__financial_aid__7",
+          "source_url": "https://datascience.uchicago.edu/education/tuition-fees-aid/",
+          "page_title": "Tuition Fees Aid",
+          "section": "Financial Aid",
+          "section_breadcrumb": "Financial Aid",
+          "content_type": "text",
+          "program_type": "general",
+          "distance": 0.0
+        },
+        {
+          "text": "[Page: Tuition Fees Aid | Section: The Data Science Institute Scholarship, MS in Applied Data Science Alumni Scholarship]\n\nThe MS in Applied Data Science program offers partial tuition scholarships to top applicants. These scholarships do not require a separate application but it is recommended that candidates submit their applications ahead of the early deadline to maximize their chances of securing a scholarship.",
+          "chunk_id": "education__tuition_fees_aid__the_data_science_institute_scholarship_ms_in_applied_data_science_alumni_scholarship__5",
+          "source_url": "https://datascience.uchicago.edu/education/tuition-fees-aid/",
+          "page_title": "Tuition Fees Aid",
+          "section": "The Data Science Institute Scholarship, MS in Applied Data Science Alumni Scholarship",
+          "section_breadcrumb": "The Data Science Institute Scholarship, MS in Applied Data Science Alumni Scholarship",
+          "content_type": "text",
+          "program_type": "general",
+          "distance": 0.0
+        }
+      ],
+      "time_sec": 14.734,
+      "low_confidence": true,
+      "error": null,
+      "raw_debug": {
+        "answer": "Based on the retrieved context, MS-ADS applicants are automatically considered for merit scholarships once they apply to the program, with no separate application required [1]. Early applications are highly encouraged, and it is recommended that candidates submit their applications ahead of the early deadline to maximize their chances of securing a scholarship [1][2].\n\nSources:\n1. [Tuition Fees Aid | Financial Aid](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/tuition-fees-aid/)\n2. [Tuition Fees Aid | The Data Science Institute Scholarship, MS in Applied Data Science Alumni Scholarship](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/tuition-fees-aid/)",
+        "sources": [
+          {
+            "page_title": "Tuition Fees Aid",
+            "source_url": "https://datascience.uchicago.edu/education/tuition-fees-aid/"
+          }
+        ],
+        "completeness": "partial",
+        "low_confidence": true,
+        "attempts": 2,
+        "agent_steps": [
+          {
+            "step": 1,
+            "tool_calls": [
+              {
+                "name": "list_page_sections",
+                "args": {
+                  "url": "tuition_fees_aid"
+                }
+              },
+              {
+                "name": "list_page_sections",
+                "args": {
+                  "url": "faqs"
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "list_page_sections",
+                "content": "Sections in https://datascience.uchicago.edu/education/tuition-fees-aid/:\n  - \"Financial Aid\" (2 chunks)\n  - \"Noncredit Courses\" (1 chunk)\n  - \"Other Scholarships\" (1 chunk)\n  - \"Program Tuition\" (3 chunks)\n  - \"Start Your Application\" (1 chunk)\n  - \"The Data Science Institute Scholarship, MS in Applied Data Science Alumni Scholarship\" (1 chunk)\n  - \"Tuition Fees Aid\" (1 chunk)"
+              },
+              {
+                "name": "list_page_sections",
+                "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/:\n  - \"2-Year Thesis Track Program > How many spots are available in the new 2-year program?\" (1 chunk)\n  - \"2-Year Thesis Track Program > If I am admitted to the In-Person, Full-Time 1-year program, may I take any of the 2-year program electives?\" (1 chunk)\n  - \"2-Year Thesis Track Program > May I switch between the 1- and 2-year programs after officially enrolling in the MS-ADS program?\" (1 chunk)\n  - \"2-Year Thesis Track Program > What is the 2-year program's thesis requirement?\" (1 chunk)\n  - \"2-Year Thesis Track Program > What is the new 2-year thesis track program (18 courses), and how is it different from the 1-year program (12 courses)?\" (2 chunks)\n  - \"2-Year Thesis Track Program > When can I apply for the 2-year thesis track program?\" (1 chunk)\n  - \"Application Process > Do I need to provide my recommenders with instructions?\" (1 chunk)\n  - \"Application Process > Does the admissions office allow recommenders to email their letter directly as an attachment to be included in an applicant’s file?\" (1 chunk)\n  - \"Application Process > How do I submit the materials that will accompany my Master's in Applied Data Science application?\" (1 chunk)\n  - \"Application Process > How will I be notified that I am admitted to the Master's in Applied Data Science program?\" (1 chunk)\n  - \"Application Process > I took the GRE and/or GMAT and want to include my score(s) with my Master's in Applied Data Science application.\" (1 chunk)\n  - \"Application Process > I took the TOEFL over two years ago. Can I still use those TOEFL results?\" (1 chunk)\n  - \"Application Process > If I am admitted to the Master's in Applied Data Science program, what do I do next?\" (1 chunk)\n  - \"Application Process > If I finish my Master's in Applied Data Science application before the deadline, will I receive my decision early?\" (1 chunk)\n  - \"Application Process > Is the GRE or GMAT required for th"
+              }
+            ],
+            "judger": null
+          },
+          {
+            "step": 2,
+            "tool_calls": [
+              {
+                "name": "fetch_section_chunks",
+                "args": {
+                  "url": "tuition_fees_aid",
+                  "section_breadcrumb": "Financial Aid"
+                }
+              },
+              {
+                "name": "fetch_section_chunks",
+                "args": {
+                  "url": "tuition_fees_aid",
+                  "section_breadcrumb": "The Data Science Institute Scholarship, MS in Applied Data Science Alumni Scholarship"
+                }
+              },
+              {
+                "name": "fetch_section_chunks",
+                "args": {
+                  "url": "tuition_fees_aid",
+                  "section_breadcrumb": "Other Scholarships"
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "fetch_section_chunks",
+                "content": "Fetched 2 chunk(s) from \"Financial Aid\":\n\n[0] Tuition Fees Aid | Financial Aid\n[Page: Tuition Fees Aid | Section: Financial Aid]\n\nMerit scholarships are available for eligible applicants. Once you apply to the program, you will be automatically considered for a scholarship. Early applications are highly encouraged. In addition, if you are interested in financial aid to help fi...\n\n[1] Tuition Fees Aid | Financial Aid\n[Page: Tuition Fees Aid | Section: Financial Aid]\n\npage](https://financialaid.uchicago.edu/graduate/types-aid/aid-eligibility-criteria) . We have administrative systems in place to assist students in applying for financial aid upon admission to programs. Please visit our Tuition, Financing, and Bill..."
+              },
+              {
+                "name": "fetch_section_chunks",
+                "content": "Fetched 1 chunk(s) from \"The Data Science Institute Scholarship, MS in Applied Data Science Alumni Scholarship\":\n\n[0] Tuition Fees Aid | The Data Science Institute Scholarship, MS in Applied Data Science Alumni Scholarship\n[Page: Tuition Fees Aid | Section: The Data Science Institute Scholarship, MS in Applied Data Science Alumni Scholarship]\n\nThe MS in Applied Data Science program offers partial tuition scholarships to top applicants. These scholarships do not require a separate application but it is recommended that..."
+              },
+              {
+                "name": "fetch_section_chunks",
+                "content": "Fetched 1 chunk(s) from \"Other Scholarships\":\n\n[0] Tuition Fees Aid | Other Scholarships\n[Page: Tuition Fees Aid | Section: Other Scholarships]\n\nStudents are encouraged to investigate scholarships offered through various civic and professional organizations, foundations and state agencies. One place to search for scholarships is the financial aid information web page sponsored by the Na..."
+              }
+            ],
+            "judger": {
+              "completeness": "partial",
+              "useful_indices": [
+                0,
+                2
+              ],
+              "decision": "done",
+              "candidate_chunk_count": 4,
+              "accepted_chunk_count": 2
+            }
+          }
+        ],
+        "evidence": [
+          {
+            "text": "[Page: Tuition Fees Aid | Section: Financial Aid]\n\nMerit scholarships are available for eligible applicants. Once you apply to the program, you will be automatically considered for a scholarship. Early applications are highly encouraged. In addition, if you are interested in financial aid to help finance your graduate education, once admitted, you will work with the University of Chicago’s Student Loan Administration office. To understand the types of financial assistance available and to gather additional information, please visit the [Graduate Aid page](https://financialaid.uchicago.edu/graduate) . For international student funding options, please visit the [International Student Funding Options page](https://internationalaffairs.uchicago.edu/fundingoptions) . To find out if you are eligible for federal loans, please visit our [Aid Eligibility page](https://financialaid.uchicago.edu/graduate/types-aid/aid-eligibility-criteria) . We",
+            "chunk_id": "education__tuition_fees_aid__financial_aid__7",
+            "source_url": "https://datascience.uchicago.edu/education/tuition-fees-aid/",
+            "page_title": "Tuition Fees Aid",
+            "section": "Financial Aid",
+            "section_breadcrumb": "Financial Aid",
+            "content_type": "text",
+            "program_type": "general",
+            "distance": 0.0
+          },
+          {
+            "text": "[Page: Tuition Fees Aid | Section: The Data Science Institute Scholarship, MS in Applied Data Science Alumni Scholarship]\n\nThe MS in Applied Data Science program offers partial tuition scholarships to top applicants. These scholarships do not require a separate application but it is recommended that candidates submit their applications ahead of the early deadline to maximize their chances of securing a scholarship.",
+            "chunk_id": "education__tuition_fees_aid__the_data_science_institute_scholarship_ms_in_applied_data_science_alumni_scholarship__5",
+            "source_url": "https://datascience.uchicago.edu/education/tuition-fees-aid/",
+            "page_title": "Tuition Fees Aid",
+            "section": "The Data Science Institute Scholarship, MS in Applied Data Science Alumni Scholarship",
+            "section_breadcrumb": "The Data Science Institute Scholarship, MS in Applied Data Science Alumni Scholarship",
+            "content_type": "text",
+            "program_type": "general",
+            "distance": 0.0
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 5993,
+          "completion_tokens": 503,
+          "total_tokens": 6496,
+          "llm_calls": 6
+        },
+        "metrics": {
+          "tool_calls": 5,
+          "loop_count": 2,
+          "evidence_count": 2,
+          "llm_calls": 6,
+          "judge_calls": null,
+          "valid_fetch_count": null,
+          "invalid_fetch_count": null,
+          "fallback_triggered": null
+        }
+      }
+    },
+    "pipeline_grag_v2": {
+      "pipeline_id": "pipeline_grag_v2",
+      "display_name": "GRAG v2",
+      "answer": "MS-ADS applicants are considered for merit scholarships as top applicants, and these scholarships are partial tuition awards [1]. No separate application is required, but submitting your application before the early deadline is recommended to maximize your chances of receiving a scholarship [1].",
+      "sources": [
+        {
+          "page_title": "Tuition, Fees, & Aid",
+          "source_url": "https://datascience.uchicago.edu/education/tuition-fees-aid"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P7"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P7] Tuition, Fees, & Aid\n[N1] Page Introduction — Section (1 content block)\n[N2] Program Tuition — Section (2 content blocks)\n[N3] Noncredit Courses — Section (1 content block)\n[N4] The Data Science Institute Scholarship, MS in Applied Data Science Alumni Scholarship — Section (1 content block)\n[N5] Other Scholarships — Section (1 content block)\n[N6] Financial Aid — Section (2 content blocks)\n[N7] Start Your Application — Section (1 content block)"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "The question is about merit scholarships for MS-ADS applicants, which is directly covered under tuition, fees, and aid. Inspect P7 to find relevant nodes on scholarship consideration."
+        },
+        {
+          "step": 2,
+          "tool_calls": [
+            {
+              "name": "fetch_graph_content",
+              "args": {
+                "node_refs": [
+                  "N4",
+                  "N5"
+                ]
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_graph_content",
+              "content": "[N4] The Data Science Institute Scholarship, MS in Applied Data Science Alumni Scholarship — path: Tuition, Fees, & Aid > The Data Science Institute Scholarship, MS in Applied Data Science Alumni Scholarship\n  [E1] The MS in Applied Data Science program offers partial tuition scholarships to top applicants. These scholarships do not require a separate application but it is recommended that candidates submit their applications ahead of the early deadline to maximize their chances of securing a scholarship.\n\n[N5] Other Scholarships — path: Tuition, Fees, & Aid > Other Scholarships\n  [E2] Students are encouraged to investigate scholarships offered through various civic and professional organizations, foundations and state agencies. One place to search for scholarships is the financial aid information web page sponsored by the National Association of Student Aid Administration."
+            }
+          ],
+          "judger": {
+            "node_assessments": [
+              {
+                "node_ref": "N4",
+                "keep_evidence": [
+                  "E1"
+                ],
+                "comment": "E1 directly explains that MS-ADS applicants are considered for merit scholarships based on being top applicants, with no separate application required, and recommends applying before the early deadline to maximize chances."
+              },
+              {
+                "node_ref": "N5",
+                "keep_evidence": [],
+                "comment": "This node covers external scholarships from civic/professional organizations, not merit scholarships for MS-ADS applicants, so no evidence is useful."
+              }
+            ]
+          },
+          "decision_reason": "The question asks about merit scholarship consideration. Nodes N4 and N5 on the Tuition, Fees, & Aid page directly address scholarships, including the Data Science Institute Scholarship and other scholarships, which likely contain the merit-based criteria."
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E1",
+          "status": "accepted",
+          "page_title": "Tuition, Fees, & Aid",
+          "source_url": "https://datascience.uchicago.edu/education/tuition-fees-aid",
+          "text": "The MS in Applied Data Science program offers partial tuition scholarships to top applicants. These scholarships do not require a separate application but it is recommended that candidates submit their applications ahead of the early deadline to maximize their chances of securing a scholarship.",
+          "path": [
+            "Tuition, Fees, & Aid",
+            "The Data Science Institute Scholarship, MS in Applied Data Science Alumni Scholarship"
+          ],
+          "section_breadcrumb": "Tuition, Fees, & Aid > The Data Science Institute Scholarship, MS in Applied Data Science Alumni Scholarship",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N4"
+            }
+          ],
+          "chunk_id": "chunk:dd64685ab2b28265",
+          "owner_node_id": "section:1a045a47ab1136da",
+          "page_id": "page:a5c1f12af4c1e404",
+          "internal_metadata": {
+            "source_type": "p",
+            "score": null,
+            "score_breakdown": {}
+          }
+        }
+      ],
+      "time_sec": 11.652,
+      "low_confidence": false,
+      "error": null,
+      "progress_summary": {
+        "summary_covering": "Page P7 (Tuition, Fees, & Aid): Checked N4 (The Data Science Institute Scholarship, MS in Applied Data Science Alumni Scholarship) — useful, provides evidence E1 that MS-ADS applicants are considered for merit scholarships based on being top applicants, no separate application required, and early application recommended. Checked N5 (Other Scholarships) — not useful, covers external scholarships not relevant to merit scholarships for MS-ADS. Still missing: no other pages or nodes have been checked; the question is fully answered by E1.",
+        "decision_trace_narrative": "Turn 1: Fetched graph content for P7 (Tuition, Fees, & Aid) because the question asks about merit scholarships, and nodes N4 and N5 on that page directly address scholarships. The fetch succeeded. N4 provided useful evidence (E1) directly answering the question. N5 was checked but found not useful. No re-queries or invalid references occurred."
+      },
+      "raw_debug": {
+        "response": {
+          "answer": "MS-ADS applicants are considered for merit scholarships as top applicants, and these scholarships are partial tuition awards [1]. No separate application is required, but submitting your application before the early deadline is recommended to maximize your chances of receiving a scholarship [1].",
+          "citations": [
+            {
+              "index": 1,
+              "title": "Tuition, Fees, & Aid",
+              "source_url": "https://datascience.uchicago.edu/education/tuition-fees-aid",
+              "snippet": "The MS in Applied Data Science program offers partial tuition scholarships to top applicants. These scholarships do not require a separate application but it is recommended that ca"
+            }
+          ],
+          "debug": {
+            "tool_turns": 2,
+            "stop_reason": "sufficient_evidence",
+            "evidence_count": 1,
+            "sufficient": true,
+            "missing": "",
+            "log_path": "C:\\Users\\ss363\\Desktop\\Archive\\ads_rag_chatbot\\pipeline_grag_v2\\log\\2026-08-04_015932_25c9537913ff.json",
+            "run_id": "25c9537913ff"
+          }
+        },
+        "run_id": "25c9537913ff",
+        "rewritten_queries": [
+          {
+            "id": "q1",
+            "query": "How are MS-ADS applicants considered for merit scholarships?",
+            "target": "university-program"
+          }
+        ],
+        "judgment": {
+          "sufficient": true,
+          "missing": "",
+          "comment": "Page P7 (Tuition, Fees, & Aid): Checked N4 (The Data Science Institute Scholarship, MS in Applied Data Science Alumni Scholarship) — useful, provides evidence E1 that MS-ADS applicants are considered for merit scholarships based on being top applicants, no separate application required, and early application recommended. Checked N5 (Other Scholarships) — not useful, covers external scholarships not relevant to merit scholarships for MS-ADS. Still missing: no other pages or nodes have been checked; the question is fully answered by E1."
+        },
+        "stop_reason": "sufficient_evidence",
+        "fallback": {
+          "triggered": false,
+          "pages_selected": [],
+          "reason": ""
+        },
+        "metrics": {
+          "agent_turns": 2,
+          "tool_calls": 2,
+          "judge_calls": 1,
+          "llm_calls": 7,
+          "valid_fetch_count": 1,
+          "invalid_fetch_count": 0,
+          "accepted_evidence_count": 1,
+          "stop_reason": "sufficient_evidence",
+          "fallback_triggered": false
+        },
+        "usage": {
+          "prompt_tokens": 4830,
+          "completion_tokens": 662,
+          "total_tokens": 5492,
+          "llm_calls": 7
+        },
+        "progress_summary_history": [
+          {
+            "turn": 1,
+            "summary_covering": "No pages have been inspected yet, so no node paths have been checked. Nothing is missing yet because the investigation has just begun.",
+            "decision_trace_narrative": "Turn 1: The agent decided to inspect page P7, reasoning that the question about merit scholarships for MS-ADS applicants is directly covered under tuition, fees, and aid. The inspection was successful, but no nodes have been evaluated yet.",
+            "sufficient": false,
+            "missing": "All parts of the question remain unanswered: how MS-ADS applicants are considered for merit scholarships."
+          },
+          {
+            "turn": 2,
+            "summary_covering": "Page P7 (Tuition, Fees, & Aid): Checked N4 (The Data Science Institute Scholarship, MS in Applied Data Science Alumni Scholarship) — useful, provides evidence E1 that MS-ADS applicants are considered for merit scholarships based on being top applicants, no separate application required, and early application recommended. Checked N5 (Other Scholarships) — not useful, covers external scholarships not relevant to merit scholarships for MS-ADS. Still missing: no other pages or nodes have been checked; the question is fully answered by E1.",
+            "decision_trace_narrative": "Turn 1: Fetched graph content for P7 (Tuition, Fees, & Aid) because the question asks about merit scholarships, and nodes N4 and N5 on that page directly address scholarships. The fetch succeeded. N4 provided useful evidence (E1) directly answering the question. N5 was checked but found not useful. No re-queries or invalid references occurred.",
+            "sufficient": true,
+            "missing": ""
+          }
+        ],
+        "node_evaluation_log": {
+          "P7 (Tuition, Fees, & Aid)": {
+            "N4 (The Data Science Institute Scholarship, MS in Applied Data Science Alumni Scholarship)": {
+              "node_id": "section:1a045a47ab1136da",
+              "path": [
+                "Tuition, Fees, & Aid",
+                "The Data Science Institute Scholarship, MS in Applied Data Science Alumni Scholarship"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E1",
+                  "chunk_id": "chunk:dd64685ab2b28265",
+                  "text_preview": "The MS in Applied Data Science program offers partial tuition scholarships to top applicants. These scholarships do not require a separate application"
+                }
+              ],
+              "comment": "E1 directly explains that MS-ADS applicants are considered for merit scholarships based on being top applicants, with no separate application required, and recommends applying before the early deadline to maximize chances."
+            },
+            "N5 (Other Scholarships)": {
+              "node_id": "section:3534f9d77ca3a4bc",
+              "path": [
+                "Tuition, Fees, & Aid",
+                "Other Scholarships"
+              ],
+              "eff_evidence": [],
+              "comment": "This node covers external scholarships from civic/professional organizations, not merit scholarships for MS-ADS applicants, so no evidence is useful."
+            }
+          }
+        },
+        "log_path": "C:\\Users\\ss363\\Desktop\\Archive\\ads_rag_chatbot\\pipeline_grag_v2\\log\\2026-08-04_015932_25c9537913ff.json"
+      }
+    }
+  },
+  "run_batch_id": "20260804T013937"
+}

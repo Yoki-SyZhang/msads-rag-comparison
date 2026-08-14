@@ -1,0 +1,626 @@
+{
+  "schema_version": 2,
+  "timestamp": "2026-08-04T02:02:02.639688",
+  "question": "Are the required core courses the same for the In-Person and Online MS-ADS programs?",
+  "question_id": "X04",
+  "question_meta": {
+    "category": "curriculum",
+    "type": "comparative",
+    "difficulty": "easy",
+    "expected_behavior": "direct_answer"
+  },
+  "results": {
+    "pipeline_flatrag": {
+      "pipeline_id": "pipeline_flatrag",
+      "display_name": "FlatRAG",
+      "answer": "Yes, the required core courses are the same for both the In-Person and Online MS-ADS programs. Both programs list the identical set of core courses: Time Series Analysis and Forecasting, Statistical Models for Data Science, Machine Learning I, Machine Learning II, Data Engineering Platforms for Analytics or Big Data and Cloud Computing, Leadership and Consulting for Data Science, and Data Science Capstone Project [1][2].\n\nSources:\n1. [In Person Program](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person/)\n2. [Online Program](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/online/)",
+      "sources": [
+        {
+          "page_title": "In Person Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/"
+        },
+        {
+          "page_title": "Online Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/online-program/"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "tool_calls": [
+            {
+              "name": "list_page_sections",
+              "args": {
+                "url": "in_person_program"
+              }
+            },
+            {
+              "name": "list_page_sections",
+              "args": {
+                "url": "online_program"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "list_page_sections",
+              "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/in-person-program/:\n  - \"1-Year 12 Course Program (Full- and Part-Time Options)\" (3 chunks)\n  - \"2-Year Thesis Track, 18 Course Program (Full-Time Only)\" (3 chunks)\n  - \"By and For Data Science Innovators\" (1 chunk)\n  - \"Career Outcomes in Data Science\" (1 chunk)\n  - \"Comparison Chart\" (1 chunk)\n  - \"Core Courses > Data Engineering Platforms for Analytics or Big Data and Cloud Computing\" (1 chunk)\n  - \"Core Courses > Data Science Capstone Project\" (1 chunk)\n  - \"Core Courses > Leadership and Consulting for Data Science\" (1 chunk)\n  - \"Core Courses > Machine Learning I\" (1 chunk)\n  - \"Core Courses > Machine Learning II\" (1 chunk)\n  - \"Core Courses > Statistical Models for Data Science\" (1 chunk)\n  - \"Core Courses > Time Series Analysis and Forecasting\" (1 chunk)\n  - \"Get in Touch\" (1 chunk)\n  - \"In Person Program\" (1 chunk)\n  - \"In Person Program - Accordion Overview > Core Courses\" (1 chunk)\n  - \"In Person Program - Accordion Overview > Noncredit Courses\" (1 chunk)\n  - \"In Person Program - Accordion Overview > Sample Elective Courses\" (1 chunk)\n  - \"Noncredit Courses > Advanced Linear Algebra for Machine Learning (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Brush up on the Basics (Optional resource)\" (1 chunk)\n  - \"Noncredit Courses > Career Seminar (Seminar, required)\" (1 chunk)\n  - \"Noncredit Courses > Introduction to Statistical Concepts (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Python for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > R for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Sample Elective Courses > Advanced Computer Vision with Deep Learning\" (2 chunks)\n  - \"Sample Elective Courses > Advanced Machine Learning and Artificial Intelligence\" (2 chunks)\n  - \"Sample Elective Courses > Applied Generative AI: Agents and Multimodal Intelligence\" (2 chunks)\n  - \"Sample Elective Courses > Bayesian Machine Learning with G"
+            },
+            {
+              "name": "list_page_sections",
+              "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/online-program/:\n  - \"Academic Rigor Meets Work/Life Balance\" (1 chunk)\n  - \"Additional Resources\" (1 chunk)\n  - \"Capstone (2)\" (1 chunk)\n  - \"Career Seminar (noncredit, required)\" (1 chunk)\n  - \"Core Courses (6)\" (1 chunk)\n  - \"Core Courses > Data Engineering Platforms for Analytics or Big Data and Cloud Computing\" (1 chunk)\n  - \"Core Courses > Data Science Capstone Project\" (1 chunk)\n  - \"Core Courses > Leadership and Consulting for Data Science\" (1 chunk)\n  - \"Core Courses > Machine Learning I\" (1 chunk)\n  - \"Core Courses > Machine Learning II\" (1 chunk)\n  - \"Core Courses > Statistical Models for Data Science\" (1 chunk)\n  - \"Core Courses > Time Series Analysis and Forecasting\" (1 chunk)\n  - \"Curriculum\" (1 chunk)\n  - \"Elective Courses (4)\" (1 chunk)\n  - \"Foundational Courses (noncredit, optional)\" (2 chunks)\n  - \"Get in Touch\" (1 chunk)\n  - \"In-Person ‘Immersion Weekend’\" (5 chunks)\n  - \"Master Data Science, Master Your Career\" (1 chunk)\n  - \"Noncredit Courses > Advanced Linear Algebra for Machine Learning (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Brush up on the Basics (Optional resource)\" (1 chunk)\n  - \"Noncredit Courses > Career Seminar (Seminar, required)\" (1 chunk)\n  - \"Noncredit Courses > Introduction to Statistical Concepts (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Python for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > R for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Note for International Students\" (1 chunk)\n  - \"Online Program\" (1 chunk)\n  - \"Online Program - Accordion Overview > Core Courses\" (1 chunk)\n  - \"Online Program - Accordion Overview > Noncredit Courses\" (1 chunk)\n  - \"Online Program - Accordion Overview > Sample Elective Courses\" (1 chunk)\n  - \"Sample Elective Courses > Advanced Computer Vision with Deep Learning\" (2 chunks)\n  - \"Sample Elective Courses > Advanced Machine Learning and Artificial"
+            }
+          ],
+          "judger": null
+        },
+        {
+          "step": 2,
+          "tool_calls": [
+            {
+              "name": "fetch_section_chunks",
+              "args": {
+                "url": "in_person_program",
+                "section_breadcrumb": "In Person Program - Accordion Overview > Core Courses"
+              }
+            },
+            {
+              "name": "fetch_section_chunks",
+              "args": {
+                "url": "online_program",
+                "section_breadcrumb": "Online Program - Accordion Overview > Core Courses"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_section_chunks",
+              "content": "Fetched 1 chunk(s) from \"In Person Program - Accordion Overview > Core Courses\":\n\n[0] In Person Program | In Person Program - Accordion Overview > Core Courses\n[Page: In Person Program | Section: In Person Program - Accordion Overview > Core Courses]\n\nCore Courses:\nTime Series Analysis and Forecasting, Statistical Models for Data Science, Machine Learning I, Machine Learning II, Data Engineering Platforms for Analytics or Big Data and Cloud Computing, Lead..."
+            },
+            {
+              "name": "fetch_section_chunks",
+              "content": "Fetched 1 chunk(s) from \"Online Program - Accordion Overview > Core Courses\":\n\n[0] Online Program | Online Program - Accordion Overview > Core Courses\n[Page: Online Program | Section: Online Program - Accordion Overview > Core Courses]\n\nCore Courses:\nTime Series Analysis and Forecasting, Statistical Models for Data Science, Machine Learning I, Machine Learning II, Data Engineering Platforms for Analytics or Big Data and Cloud Computing, Leadership..."
+            }
+          ],
+          "judger": {
+            "completeness": "partial",
+            "useful_indices": [
+              0,
+              1
+            ],
+            "decision": "done",
+            "candidate_chunk_count": 2,
+            "accepted_chunk_count": 2
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "text": "[Page: In Person Program | Section: In Person Program - Accordion Overview > Core Courses]\n\nCore Courses:\nTime Series Analysis and Forecasting, Statistical Models for Data Science, Machine Learning I, Machine Learning II, Data Engineering Platforms for Analytics or Big Data and Cloud Computing, Leadership and Consulting for Data Science, Data Science Capstone Project",
+          "chunk_id": "education__masters_programs__in_person_program__core_courses__16",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+          "page_title": "In Person Program",
+          "section": "Core Courses",
+          "section_breadcrumb": "In Person Program - Accordion Overview > Core Courses",
+          "content_type": "accordion_overview",
+          "program_type": "in_person",
+          "distance": 0.0
+        },
+        {
+          "text": "[Page: Online Program | Section: Online Program - Accordion Overview > Core Courses]\n\nCore Courses:\nTime Series Analysis and Forecasting, Statistical Models for Data Science, Machine Learning I, Machine Learning II, Data Engineering Platforms for Analytics or Big Data and Cloud Computing, Leadership and Consulting for Data Science, Data Science Capstone Project",
+          "chunk_id": "education__masters_programs__online_program__core_courses__24",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/online-program/",
+          "page_title": "Online Program",
+          "section": "Core Courses",
+          "section_breadcrumb": "Online Program - Accordion Overview > Core Courses",
+          "content_type": "accordion_overview",
+          "program_type": "online",
+          "distance": 0.0
+        }
+      ],
+      "time_sec": 11.66,
+      "low_confidence": true,
+      "error": null,
+      "raw_debug": {
+        "answer": "Yes, the required core courses are the same for both the In-Person and Online MS-ADS programs. Both programs list the identical set of core courses: Time Series Analysis and Forecasting, Statistical Models for Data Science, Machine Learning I, Machine Learning II, Data Engineering Platforms for Analytics or Big Data and Cloud Computing, Leadership and Consulting for Data Science, and Data Science Capstone Project [1][2].\n\nSources:\n1. [In Person Program](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person/)\n2. [Online Program](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/online/)",
+        "sources": [
+          {
+            "page_title": "In Person Program",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/"
+          },
+          {
+            "page_title": "Online Program",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/online-program/"
+          }
+        ],
+        "completeness": "partial",
+        "low_confidence": true,
+        "attempts": 2,
+        "agent_steps": [
+          {
+            "step": 1,
+            "tool_calls": [
+              {
+                "name": "list_page_sections",
+                "args": {
+                  "url": "in_person_program"
+                }
+              },
+              {
+                "name": "list_page_sections",
+                "args": {
+                  "url": "online_program"
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "list_page_sections",
+                "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/in-person-program/:\n  - \"1-Year 12 Course Program (Full- and Part-Time Options)\" (3 chunks)\n  - \"2-Year Thesis Track, 18 Course Program (Full-Time Only)\" (3 chunks)\n  - \"By and For Data Science Innovators\" (1 chunk)\n  - \"Career Outcomes in Data Science\" (1 chunk)\n  - \"Comparison Chart\" (1 chunk)\n  - \"Core Courses > Data Engineering Platforms for Analytics or Big Data and Cloud Computing\" (1 chunk)\n  - \"Core Courses > Data Science Capstone Project\" (1 chunk)\n  - \"Core Courses > Leadership and Consulting for Data Science\" (1 chunk)\n  - \"Core Courses > Machine Learning I\" (1 chunk)\n  - \"Core Courses > Machine Learning II\" (1 chunk)\n  - \"Core Courses > Statistical Models for Data Science\" (1 chunk)\n  - \"Core Courses > Time Series Analysis and Forecasting\" (1 chunk)\n  - \"Get in Touch\" (1 chunk)\n  - \"In Person Program\" (1 chunk)\n  - \"In Person Program - Accordion Overview > Core Courses\" (1 chunk)\n  - \"In Person Program - Accordion Overview > Noncredit Courses\" (1 chunk)\n  - \"In Person Program - Accordion Overview > Sample Elective Courses\" (1 chunk)\n  - \"Noncredit Courses > Advanced Linear Algebra for Machine Learning (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Brush up on the Basics (Optional resource)\" (1 chunk)\n  - \"Noncredit Courses > Career Seminar (Seminar, required)\" (1 chunk)\n  - \"Noncredit Courses > Introduction to Statistical Concepts (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Python for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > R for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Sample Elective Courses > Advanced Computer Vision with Deep Learning\" (2 chunks)\n  - \"Sample Elective Courses > Advanced Machine Learning and Artificial Intelligence\" (2 chunks)\n  - \"Sample Elective Courses > Applied Generative AI: Agents and Multimodal Intelligence\" (2 chunks)\n  - \"Sample Elective Courses > Bayesian Machine Learning with G"
+              },
+              {
+                "name": "list_page_sections",
+                "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/online-program/:\n  - \"Academic Rigor Meets Work/Life Balance\" (1 chunk)\n  - \"Additional Resources\" (1 chunk)\n  - \"Capstone (2)\" (1 chunk)\n  - \"Career Seminar (noncredit, required)\" (1 chunk)\n  - \"Core Courses (6)\" (1 chunk)\n  - \"Core Courses > Data Engineering Platforms for Analytics or Big Data and Cloud Computing\" (1 chunk)\n  - \"Core Courses > Data Science Capstone Project\" (1 chunk)\n  - \"Core Courses > Leadership and Consulting for Data Science\" (1 chunk)\n  - \"Core Courses > Machine Learning I\" (1 chunk)\n  - \"Core Courses > Machine Learning II\" (1 chunk)\n  - \"Core Courses > Statistical Models for Data Science\" (1 chunk)\n  - \"Core Courses > Time Series Analysis and Forecasting\" (1 chunk)\n  - \"Curriculum\" (1 chunk)\n  - \"Elective Courses (4)\" (1 chunk)\n  - \"Foundational Courses (noncredit, optional)\" (2 chunks)\n  - \"Get in Touch\" (1 chunk)\n  - \"In-Person ‘Immersion Weekend’\" (5 chunks)\n  - \"Master Data Science, Master Your Career\" (1 chunk)\n  - \"Noncredit Courses > Advanced Linear Algebra for Machine Learning (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Brush up on the Basics (Optional resource)\" (1 chunk)\n  - \"Noncredit Courses > Career Seminar (Seminar, required)\" (1 chunk)\n  - \"Noncredit Courses > Introduction to Statistical Concepts (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Python for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > R for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Note for International Students\" (1 chunk)\n  - \"Online Program\" (1 chunk)\n  - \"Online Program - Accordion Overview > Core Courses\" (1 chunk)\n  - \"Online Program - Accordion Overview > Noncredit Courses\" (1 chunk)\n  - \"Online Program - Accordion Overview > Sample Elective Courses\" (1 chunk)\n  - \"Sample Elective Courses > Advanced Computer Vision with Deep Learning\" (2 chunks)\n  - \"Sample Elective Courses > Advanced Machine Learning and Artificial"
+              }
+            ],
+            "judger": null
+          },
+          {
+            "step": 2,
+            "tool_calls": [
+              {
+                "name": "fetch_section_chunks",
+                "args": {
+                  "url": "in_person_program",
+                  "section_breadcrumb": "In Person Program - Accordion Overview > Core Courses"
+                }
+              },
+              {
+                "name": "fetch_section_chunks",
+                "args": {
+                  "url": "online_program",
+                  "section_breadcrumb": "Online Program - Accordion Overview > Core Courses"
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "fetch_section_chunks",
+                "content": "Fetched 1 chunk(s) from \"In Person Program - Accordion Overview > Core Courses\":\n\n[0] In Person Program | In Person Program - Accordion Overview > Core Courses\n[Page: In Person Program | Section: In Person Program - Accordion Overview > Core Courses]\n\nCore Courses:\nTime Series Analysis and Forecasting, Statistical Models for Data Science, Machine Learning I, Machine Learning II, Data Engineering Platforms for Analytics or Big Data and Cloud Computing, Lead..."
+              },
+              {
+                "name": "fetch_section_chunks",
+                "content": "Fetched 1 chunk(s) from \"Online Program - Accordion Overview > Core Courses\":\n\n[0] Online Program | Online Program - Accordion Overview > Core Courses\n[Page: Online Program | Section: Online Program - Accordion Overview > Core Courses]\n\nCore Courses:\nTime Series Analysis and Forecasting, Statistical Models for Data Science, Machine Learning I, Machine Learning II, Data Engineering Platforms for Analytics or Big Data and Cloud Computing, Leadership..."
+              }
+            ],
+            "judger": {
+              "completeness": "partial",
+              "useful_indices": [
+                0,
+                1
+              ],
+              "decision": "done",
+              "candidate_chunk_count": 2,
+              "accepted_chunk_count": 2
+            }
+          }
+        ],
+        "evidence": [
+          {
+            "text": "[Page: In Person Program | Section: In Person Program - Accordion Overview > Core Courses]\n\nCore Courses:\nTime Series Analysis and Forecasting, Statistical Models for Data Science, Machine Learning I, Machine Learning II, Data Engineering Platforms for Analytics or Big Data and Cloud Computing, Leadership and Consulting for Data Science, Data Science Capstone Project",
+            "chunk_id": "education__masters_programs__in_person_program__core_courses__16",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+            "page_title": "In Person Program",
+            "section": "Core Courses",
+            "section_breadcrumb": "In Person Program - Accordion Overview > Core Courses",
+            "content_type": "accordion_overview",
+            "program_type": "in_person",
+            "distance": 0.0
+          },
+          {
+            "text": "[Page: Online Program | Section: Online Program - Accordion Overview > Core Courses]\n\nCore Courses:\nTime Series Analysis and Forecasting, Statistical Models for Data Science, Machine Learning I, Machine Learning II, Data Engineering Platforms for Analytics or Big Data and Cloud Computing, Leadership and Consulting for Data Science, Data Science Capstone Project",
+            "chunk_id": "education__masters_programs__online_program__core_courses__24",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/online-program/",
+            "page_title": "Online Program",
+            "section": "Core Courses",
+            "section_breadcrumb": "Online Program - Accordion Overview > Core Courses",
+            "content_type": "accordion_overview",
+            "program_type": "online",
+            "distance": 0.0
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 5946,
+          "completion_tokens": 445,
+          "total_tokens": 6391,
+          "llm_calls": 6
+        },
+        "metrics": {
+          "tool_calls": 4,
+          "loop_count": 2,
+          "evidence_count": 2,
+          "llm_calls": 6,
+          "judge_calls": null,
+          "valid_fetch_count": null,
+          "invalid_fetch_count": null,
+          "fallback_triggered": null
+        }
+      }
+    },
+    "pipeline_grag_v2": {
+      "pipeline_id": "pipeline_grag_v2",
+      "display_name": "GRAG v2",
+      "answer": "Yes, the required core courses are the same for the In-Person and Online MS-ADS programs. Both programs list the same core courses: Time Series Analysis and Forecasting; Statistical Models for Data Science; Machine Learning I; Machine Learning II; Data Engineering Platforms for Analytics or Big Data and Cloud Computing; Leadership and Consulting for Data Science; and Data Science Capstone Project [1][3]. The online program requires 6 core courses, which matches this identical list [2][3].",
+      "sources": [
+        {
+          "page_title": "In-Person Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program"
+        },
+        {
+          "page_title": "Online Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/online-program"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P2"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P2] In-Person Program\n[N1] Page Introduction — Section (1 content block)\n[N2] Tailor Your Data Science Journey — Section (1 content block)\n[N3] 1-Year 12 Course Program (Full- and Part-Time Options) — Section (1 content block)\n[N4] 2-Year Thesis Track, 18 Course Program (Full-Time Only) — Section (2 content blocks)\n[N5] Comparison Chart — Section (1 content block)\n[N6] Your Career Success — Section (1 content block)\n[N7] Your Engagement — Section (1 content block)\n[N8] Your Student Experience — Section (1 content block)\n[N9] Career Outcomes in Data Science — Section (1 content block)\n[N10] By and For Data Science Innovators — Section (1 content block)\n[N11] Get in Touch — Section (1 content block)\n[N12] Course Progression Tabs — ProgressionTabs (47 content blocks)\n    ├── [N13] Noncredit Courses — ProgressionTab (7 content blocks)\n        preview: This accordion contains: Career Seminar (Seminar, required); Introduction to Statistical Concepts (Foundational, optional); R for Data Science (Foundational, optional); Python for Data Science (Foundational, optional); Advanced Linear Algebra for Machine Learning (Foundational, optional); Brush up on the Basics (Optional resource)\n    ├── [N14] Core Courses — ProgressionTab (8 content blocks)\n        preview: This accordion contains: Time Series Analysis and Forecasting; Statistical Models for Data Science; Machine Learning I; Machine Learning II; Data Engineering Platforms for Analytics or Big Data and Cloud Computing; Leadership and Consulting for Data Science; Data Science Capstone Project\n    ├── [N15] Sample Elective Courses — ProgressionTab (32 content blocks)\n        ├── [N16] Accordion — Accordion (32 content blocks)\n            preview: This accordion contains: Advanced Computer Vision with Deep Learning; Advanced Machine Learning and Artificial Intelligence; Applied Generative AI: Agents and Multimodal Intelligence; Bayesian Machine Learning with Generative AI Applications; Causal Models for Data Science; Data Science for Algorithmic Marketing; Data Science for Healthcare; Data Visualization Techniques; Digital Marketing Analytics in Theory and Practice; Deep Reinforcement Learning; Generative AI: Principles and Applications; Machine Learning Operations; Next-Gen NLP: LLM and Agentic AI in Practice; Optimization and Simulation Methods for Data Science; Quantitative Finance: Methods and Applications; Real Time Intelligent Systems; Supply Chain Optimization"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "P2 (In-Person Program) lists required core courses for the in-person track; I'll inspect it first to find the core course names, then compare with P3 (Online Program) which likely lists the online core courses."
+        },
+        {
+          "step": 2,
+          "tool_calls": [
+            {
+              "name": "fetch_graph_content",
+              "args": {
+                "node_refs": [
+                  "N14",
+                  "N12"
+                ]
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_graph_content",
+              "content": "N12 has 47 content blocks — too broad. Consider its children instead: N13 (7), N14 (8), N15 (32).\n\n[N14] Core Courses — path: In-Person Program > Core Courses\n  [N14.1] Accordion\n    [E1] (structure summary) This accordion contains: Time Series Analysis and Forecasting; Statistical Models for Data Science; Machine Learning I; Machine Learning II; Data Engineering Platforms for Analytics or Big Data and Cloud Computing; Leadership and Consulting for Data Science; Data Science Capstone Project\n    [N14.1.1] Time Series Analysis and Forecasting\n      [E2] Time Series Analysis is a science as well as the art of making rational predictions based on previous records. It is widely used in various fields in today’s business settings.\n    [N14.1.2] Statistical Models for Data Science\n      [E3] In a traditional linear model, the observed response follows a normal distribution, and the expected response value is a linear combination of the predictors. Since Carl Friedrich Gauss (1777-1855) and Adrien-Marie Legendre (1752-1833) created this linear model framework in the early 1800s, the “Linear Normal” assumption has been the norm in statistics/data science for almost two centuries. New methods based on probability distributions other than Gaussian appeared only in the second half of the twentieth century. These methods allowed working with variables that span a broader variety of domains and probability distributions. Besides, methods for the analysis of general associations were developed that are different from the Pearson correlation.\n    [N14.1.3] Machine Learning I\n      [E4] This course is aimed at providing students an introduction to machine learning with data mining techniques and algorithms. It gives a rigorous methodological foundation in analytical and software tools to successfully undertake projects in Data Science. Students are exposed to concepts of exploratory analyses for uncovering and detecting patterns in multivariate data, hypothesizing and detecting relationships among variables, conducting confirmatory analyses, and building models for predictive and descriptive purposes. It will present predictive modeling in the context of balancing predictive and descriptive accuracies.\n    [N14.1.4] Machine Learning II\n      [E5] The objective of this course is three-folds–first, to extend student understanding of predictive modeling with machine learning concepts and methodologies from Machine Learning 1 into the realm of Deep Learning and Generative AI. Second, to develop the ability to apply those concepts and methodologies to diverse practical applications, evaluate the results and recommend the next best action. Third, to discuss and understand state-of-the machine learning and deep learning research and development and their applications.\n    [N14.1.5] Data Engineering Platforms for Analytics or Big Data and Cloud Computing\n      [E6] Data Engineering Platforms teaches effective data engineering—an essential first step in building an analytics-driven competitive advantage in the market.\nBig Data and Cloud Computing teaches students how to approach big data and large-scale machine learning applications. There is no single definition of big data and multiple emerging software packages exist to work with it, and we will cover the most popular approaches.\n    [N14.1.6] Leadership and Consulting for Data Science\n      [E7] The Leadership and Consulting for Data Scientist course is focused on:\n• Learning techniques and proven methods to effectively grasp the business domain including organizational dynamics of consultancies and client organizations • Developing relevant solutions to enterprise problems using the sampling methods, traditional statistical techniques and modern machine learning models that deliver value to the organization • Practicing successful project delivery through effective data discovery, influential team membership and leadership, project management, and communication at every stage\nThis course will not only make you a better data scientist; it will make you and your analyses more approachable, more persuasive, and ultimately more successful.\n    [N14.1.7] Data Science Capstone Project\n      [E8] The required Capstone Project is completed over two quarters and covers research design, implementation, and writing.\nFull-time students start their capstone project in their third quarter. Part-time students generally begin the capstone project in their fifth quarter."
+            }
+          ],
+          "judger": {
+            "node_assessments": [
+              {
+                "node_ref": "N14",
+                "keep_evidence": [
+                  "E1"
+                ],
+                "comment": "E1 lists the core courses for the In-Person MS-ADS program, which is directly relevant to comparing with the Online program's core courses. The other blocks (E2-E8) provide course descriptions but do not list the full set of required core courses, so they are not kept."
+              }
+            ]
+          },
+          "decision_reason": "Fetch the Core Courses node and the Course Progression Tabs node from the In-Person page to identify the required core courses for the in-person program, which will be compared with the Online program's core courses."
+        },
+        {
+          "step": 3,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P3"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P3] Online Program\n[N17] Page Introduction — Section (1 content block)\n[N18] Academic Rigor Meets Work/Life Balance — Section (1 content block)\n[N19] Master Data Science, Master Your Career — Section (1 content block)\n[N20] Get in Touch — Section (1 content block)\n[N21] Your Outcomes — Section (1 content block)\n[N22] Your Online Applied Data Science Experience — Section (1 content block)\n[N23] Your Access to Alumni — Section (1 content block)\n[N24] Your Time, Your Advancement — Section (2 content blocks)\n[N25] In-Person ‘Immersion Weekend’ — Section (1 content block)\n[N26] Note for International Students — Section (1 content block)\n[N27] Curriculum — Section (1 content block)\n[N28] Foundational Courses (noncredit, optional) — Section (2 content blocks)\n[N29] Career Seminar (noncredit, required) — Section (1 content block)\n[N30] Core Courses (6) — Section (1 content block)\n[N31] Elective Courses (4) — Section (1 content block)\n[N32] Capstone (2) — Section (1 content block)\n[N33] Additional Resources — Section (1 content block)\n[N34] Course Progression Tabs — ProgressionTabs (42 content blocks)\n    ├── [N35] Noncredit Courses — ProgressionTab (7 content blocks)\n        preview: This accordion contains: Career Seminar (Seminar, required); Introduction to Statistical Concepts (Foundational, optional); R for Data Science (Foundational, optional); Python for Data Science (Foundational, optional); Advanced Linear Algebra for Machine Learning (Foundational, optional); Brush up on the Basics (Optional resource)\n    ├── [N36] Core Courses — ProgressionTab (8 content blocks)\n        preview: This accordion contains: Time Series Analysis and Forecasting; Statistical Models for Data Science; Machine Learning I; Machine Learning II; Data Engineering Platforms for Analytics or Big Data and Cloud Computing; Leadership and Consulting for Data Science; Data Science Capstone Project\n    ├── [N37] Sample Elective Courses — ProgressionTab (27 content blocks)\n        ├── [N38] Accordion — Accordion (27 content blocks)\n            preview: This accordion contains: Advanced Computer Vision with Deep Learning; Advanced Machine Learning and Artificial Intelligence; Bayesian Machine Learning with Generative AI Applications; Data Science for Algorithmic Marketing; Data Science for Healthcare; Data Visualization Techniques; Digital Marketing Analytics in Theory and Practice; Quantitative Finance: Methods and Applications; Generative AI: Principles and Applications; Machine Learning Operations; Next-Gen NLP: LLM and Agentic AI in Practice; Real Time Intelligent Systems; Deep Reinforcement Learning; Supply Chain Optimization"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "Need to find the core courses for the Online MS-ADS program to compare with the in-person list. Inspect the Online Program page to locate its core courses node."
+        },
+        {
+          "step": 4,
+          "tool_calls": [
+            {
+              "name": "fetch_graph_content",
+              "args": {
+                "node_refs": [
+                  "N30",
+                  "N36"
+                ]
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_graph_content",
+              "content": "[N30] Core Courses (6) — path: Online Program > Core Courses (6)\n  [E9] You will complete 6 core courses toward your Master’s in Applied Data Science degree. Core courses allow you to build your theoretical data science knowledge and practice applying this theory to examine real-world business problems.\n\n[N36] Core Courses — path: Online Program > Core Courses\n  [N36.1] Accordion\n    [E10] (structure summary) This accordion contains: Time Series Analysis and Forecasting; Statistical Models for Data Science; Machine Learning I; Machine Learning II; Data Engineering Platforms for Analytics or Big Data and Cloud Computing; Leadership and Consulting for Data Science; Data Science Capstone Project\n    [N36.1.1] Time Series Analysis and Forecasting\n      [E11] Time Series Analysis is a science as well as the art of making rational predictions based on previous records. It is widely used in various fields in today’s business settings.\n    [N36.1.2] Statistical Models for Data Science\n      [E12] In a traditional linear model, the observed response follows a normal distribution, and the expected response value is a linear combination of the predictors. Since Carl Friedrich Gauss (1777-1855) and Adrien-Marie Legendre (1752-1833) created this linear model framework in the early 1800s, the “Linear Normal” assumption has been the norm in statistics/data science for almost two centuries. New methods based on probability distributions other than Gaussian appeared only in the second half of the twentieth century. These methods allowed working with variables that span a broader variety of domains and probability distributions. Besides, methods for the analysis of general associations were developed that are different from the Pearson correlation.\n    [N36.1.3] Machine Learning I\n      [E13] This course is aimed at providing students an introduction to machine learning with data mining techniques and algorithms. It gives a rigorous methodological foundation in analytical and software tools to successfully undertake projects in Data Science. Students are exposed to concepts of exploratory analyses for uncovering and detecting patterns in multivariate data, hypothesizing and detecting relationships among variables, conducting confirmatory analyses, and building models for predictive and descriptive purposes. It will present predictive modeling in the context of balancing predictive and descriptive accuracies.\n    [N36.1.4] Machine Learning II\n      [E14] The objective of this course is three-folds–first, to extend student understanding of predictive modeling with machine learning concepts and methodologies from Machine Learning 1 into the realm of Deep Learning and Generative AI. Second, to develop the ability to apply those concepts and methodologies to diverse practical applications, evaluate the results and recommend the next best action. Third, to discuss and understand state-of-the machine learning and deep learning research and development and their applications.\n    [N36.1.5] Data Engineering Platforms for Analytics or Big Data and Cloud Computing\n      [E15] Data Engineering Platforms teaches effective data engineering—an essential first step in building an analytics-driven competitive advantage in the market.\nBig Data and Cloud Computing teaches students how to approach big data and large-scale machine learning applications. There is no single definition of big data and multiple emerging software packages exist to work with it, and we will cover the most popular approaches.\n    [N36.1.6] Leadership and Consulting for Data Science\n      [E16] The Leadership and Consulting for Data Scientist course is focused on:\n• Learning techniques and proven methods to effectively grasp the business domain including organizational dynamics of consultancies and client organizations • Developing relevant solutions to enterprise problems using the sampling methods, traditional statistical techniques and modern machine learning models that deliver value to the organization • Practicing successful project delivery through effective data discovery, influential team membership and leadership, project management, and communication at every stage\nThis course will not only make you a better data scientist; it will make you and your analyses more approachable, more persuasive, and ultimately more successful.\n    [N36.1.7] Data Science Capstone Project\n      [E17] The required Capstone Project is completed over two quarters and covers research design, implementation, and writing.\nFull-time students start their capstone project in their third quarter. Part-time students generally begin the capstone project in their fifth quarter."
+            }
+          ],
+          "judger": {
+            "node_assessments": [
+              {
+                "node_ref": "N30",
+                "keep_evidence": [
+                  "E9"
+                ],
+                "comment": "E9 states that the Online MS-ADS program requires 6 core courses, which is relevant to comparing core course requirements between programs, though it does not list the specific courses."
+              },
+              {
+                "node_ref": "N36",
+                "keep_evidence": [
+                  "E10"
+                ],
+                "comment": "E10 lists the specific core courses for the Online program, which is directly relevant to comparing with the In-Person program's core courses. Other content blocks provide course descriptions but are not needed for the comparison of course names."
+              }
+            ]
+          },
+          "decision_reason": "Need the online program's core course list to compare with the in-person list (E1). N30 (Core Courses (6)) and N36 (Core Courses (8)) are the most likely nodes on P3 to contain the online core courses."
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E1",
+          "status": "accepted",
+          "page_title": "In-Person Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program",
+          "text": "This accordion contains: Time Series Analysis and Forecasting; Statistical Models for Data Science; Machine Learning I; Machine Learning II; Data Engineering Platforms for Analytics or Big Data and Cloud Computing; Leadership and Consulting for Data Science; Data Science Capstone Project",
+          "path": [
+            "In-Person Program",
+            "Core Courses",
+            "Accordion"
+          ],
+          "section_breadcrumb": "In-Person Program > Core Courses > Accordion",
+          "visible_type": "structure summary",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N14"
+            }
+          ],
+          "chunk_id": "chunk:e6b52671216acc90",
+          "owner_node_id": "accordion:cab847ddd2a8ff4b",
+          "page_id": "page:fe9d95e97a7ee76f",
+          "internal_metadata": {
+            "source_type": "accordion_index",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E9",
+          "status": "accepted",
+          "page_title": "Online Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/online-program",
+          "text": "You will complete 6 core courses toward your Master’s in Applied Data Science degree. Core courses allow you to build your theoretical data science knowledge and practice applying this theory to examine real-world business problems.",
+          "path": [
+            "Online Program",
+            "Core Courses (6)"
+          ],
+          "section_breadcrumb": "Online Program > Core Courses (6)",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N30"
+            }
+          ],
+          "chunk_id": "chunk:75a3eef31d105704",
+          "owner_node_id": "section:4e0acb9995e0492d",
+          "page_id": "page:dd76146bcccd1e59",
+          "internal_metadata": {
+            "source_type": "p",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E10",
+          "status": "accepted",
+          "page_title": "Online Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/online-program",
+          "text": "This accordion contains: Time Series Analysis and Forecasting; Statistical Models for Data Science; Machine Learning I; Machine Learning II; Data Engineering Platforms for Analytics or Big Data and Cloud Computing; Leadership and Consulting for Data Science; Data Science Capstone Project",
+          "path": [
+            "Online Program",
+            "Core Courses",
+            "Accordion"
+          ],
+          "section_breadcrumb": "Online Program > Core Courses > Accordion",
+          "visible_type": "structure summary",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N36"
+            }
+          ],
+          "chunk_id": "chunk:0538bbc6e5174524",
+          "owner_node_id": "accordion:9daacfb4f50e5a78",
+          "page_id": "page:dd76146bcccd1e59",
+          "internal_metadata": {
+            "source_type": "accordion_index",
+            "score": null,
+            "score_breakdown": {}
+          }
+        }
+      ],
+      "time_sec": 31.662,
+      "low_confidence": false,
+      "error": null,
+      "progress_summary": {
+        "summary_covering": "P2 (In-Person Program): N14 (Core Courses) checked and useful; E1 lists the in-person core courses. P3 (Online Program): N30 (Core Courses (6)) checked and useful; E9 states the online program requires 6 core courses. N36 (Core Courses) checked and useful; E10 lists the online core courses. The core course lists in E1 and E10 are identical (Time Series Analysis and Forecasting; Statistical Models for Data Science; Machine Learning I; Machine Learning II; Data Engineering Platforms for Analytic). Missing: None; the question is fully answered.",
+        "decision_trace_narrative": "Turn 1: Fetched P2 N14 (Core Courses) to obtain the in-person core course list; succeeded and kept E1. Turn 2: Fetched P3 N30 (Core Courses (6)) to find the online core course count; succeeded and kept E9. Turn 3: Fetched P3 N36 (Core Courses) to obtain the online core course list; succeeded and kept E10. No re-queries of already-fetched nodes occurred."
+      },
+      "raw_debug": {
+        "response": {
+          "answer": "Yes, the required core courses are the same for the In-Person and Online MS-ADS programs. Both programs list the same core courses: Time Series Analysis and Forecasting; Statistical Models for Data Science; Machine Learning I; Machine Learning II; Data Engineering Platforms for Analytics or Big Data and Cloud Computing; Leadership and Consulting for Data Science; and Data Science Capstone Project [1][3]. The online program requires 6 core courses, which matches this identical list [2][3].",
+          "citations": [
+            {
+              "index": 1,
+              "title": "In-Person Program",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program",
+              "snippet": "This accordion contains: Time Series Analysis and Forecasting; Statistical Models for Data Science; Machine Learning I; Machine Learning II; Data Engineering Platforms for Analytic"
+            },
+            {
+              "index": 2,
+              "title": "Online Program",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/online-program",
+              "snippet": "You will complete 6 core courses toward your Master’s in Applied Data Science degree. Core courses allow you to build your theoretical data science knowledge and practice applying "
+            },
+            {
+              "index": 3,
+              "title": "Online Program",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/online-program",
+              "snippet": "This accordion contains: Time Series Analysis and Forecasting; Statistical Models for Data Science; Machine Learning I; Machine Learning II; Data Engineering Platforms for Analytic"
+            }
+          ],
+          "debug": {
+            "tool_turns": 4,
+            "stop_reason": "sufficient_evidence",
+            "evidence_count": 3,
+            "sufficient": true,
+            "missing": "",
+            "log_path": "C:\\Users\\ss363\\Desktop\\Archive\\ads_rag_chatbot\\pipeline_grag_v2\\log\\2026-08-04_020202_f4d98f0b5ae2.json",
+            "run_id": "f4d98f0b5ae2"
+          }
+        },
+        "run_id": "f4d98f0b5ae2",
+        "rewritten_queries": [
+          {
+            "id": "q1",
+            "query": "required core courses In-Person MS-ADS program",
+            "target": "search"
+          },
+          {
+            "id": "q2",
+            "query": "required core courses Online MS-ADS program",
+            "target": "search"
+          }
+        ],
+        "judgment": {
+          "sufficient": true,
+          "missing": "",
+          "comment": "P2 (In-Person Program): N14 (Core Courses) checked and useful; E1 lists the in-person core courses. P3 (Online Program): N30 (Core Courses (6)) checked and useful; E9 states the online program requires 6 core courses. N36 (Core Courses) checked and useful; E10 lists the online core courses. The core course lists in E1 and E10 are identical (Time Series Analysis and Forecasting; Statistical Models for Data Science; Machine Learning I; Machine Learning II; Data Engineering Platforms for Analytic). Missing: None; the question is fully answered."
+        },
+        "stop_reason": "sufficient_evidence",
+        "fallback": {
+          "triggered": false,
+          "pages_selected": [],
+          "reason": ""
+        },
+        "metrics": {
+          "agent_turns": 4,
+          "tool_calls": 4,
+          "judge_calls": 2,
+          "llm_calls": 12,
+          "valid_fetch_count": 2,
+          "invalid_fetch_count": 0,
+          "accepted_evidence_count": 3,
+          "stop_reason": "sufficient_evidence",
+          "fallback_triggered": false
+        },
+        "usage": {
+          "prompt_tokens": 12377,
+          "completion_tokens": 1389,
+          "total_tokens": 13766,
+          "llm_calls": 12
+        },
+        "progress_summary_history": [
+          {
+            "turn": 1,
+            "summary_covering": "No pages have been inspected yet. Nothing is known about the core courses for either program. Still missing: the list of required core courses for the In-Person MS-ADS program and the list for the Online MS-ADS program, and a comparison of the two lists.",
+            "decision_trace_narrative": "Turn 1: The agent decided to inspect page P2 (In-Person Program) first, reasoning that it lists the required core courses for the in-person track, and then compare with P3 (Online Program). The inspection was successful (OK), but no node evaluations have been recorded yet.",
+            "sufficient": false,
+            "missing": "Required core course lists for both In-Person and Online MS-ADS programs, and their comparison."
+          },
+          {
+            "turn": 2,
+            "summary_covering": "Page: P2 (In-Person Program) - Checked N14 (Core Courses) node. It was useful: E1 lists the core courses for the In-Person MS-ADS program (Time Series Analysis and Forecasting; Statistical Models for Data Science; Machine Learning I; Machine Learning II; Data Engineering Platforms for Analytic). Other blocks (E2-E8) were not useful as they only provide course descriptions. Still missing: the core courses for the Online MS-ADS program to compare with the in-person list.",
+            "decision_trace_narrative": "Turn 1: Fetched the Core Courses node from the In-Person page to identify required core courses for comparison. The fetch succeeded and provided a list of core courses (E1). No re-queries of already-fetched nodes occurred.",
+            "sufficient": false,
+            "missing": "Core courses for the Online MS-ADS program."
+          },
+          {
+            "turn": 3,
+            "summary_covering": "P2 (In-Person Program): Checked N14 (Core Courses) — useful, provides E1 listing the in-person core courses. Other blocks (E2-E8) were course descriptions, not kept. Still missing: the core courses for the Online MS-ADS program to compare with E1.",
+            "decision_trace_narrative": "Turn 1: Inspected P2 (In-Person Program) to find core courses; found N14 with E1 listing the in-person core courses. Reason: need to compare with online program's core courses. Outcome: obtained in-person list.",
+            "sufficient": false,
+            "missing": "Core courses for the Online MS-ADS program."
+          },
+          {
+            "turn": 4,
+            "summary_covering": "P2 (In-Person Program): N14 (Core Courses) checked and useful; E1 lists the in-person core courses. P3 (Online Program): N30 (Core Courses (6)) checked and useful; E9 states the online program requires 6 core courses. N36 (Core Courses) checked and useful; E10 lists the online core courses. The core course lists in E1 and E10 are identical (Time Series Analysis and Forecasting; Statistical Models for Data Science; Machine Learning I; Machine Learning II; Data Engineering Platforms for Analytic). Missing: None; the question is fully answered.",
+            "decision_trace_narrative": "Turn 1: Fetched P2 N14 (Core Courses) to obtain the in-person core course list; succeeded and kept E1. Turn 2: Fetched P3 N30 (Core Courses (6)) to find the online core course count; succeeded and kept E9. Turn 3: Fetched P3 N36 (Core Courses) to obtain the online core course list; succeeded and kept E10. No re-queries of already-fetched nodes occurred.",
+            "sufficient": true,
+            "missing": ""
+          }
+        ],
+        "node_evaluation_log": {
+          "P2 (In-Person Program)": {
+            "N14 (Core Courses)": {
+              "node_id": "progression_tab:01d853350db1e361",
+              "path": [
+                "In-Person Program",
+                "Core Courses"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E1",
+                  "chunk_id": "chunk:e6b52671216acc90",
+                  "text_preview": "This accordion contains: Time Series Analysis and Forecasting; Statistical Models for Data Science; Machine Learning I; Machine Learning II; Data Engi"
+                }
+              ],
+              "comment": "E1 lists the core courses for the In-Person MS-ADS program, which is directly relevant to comparing with the Online program's core courses. The other blocks (E2-E8) provide course descriptions but do not list the full set of required core courses, so they are not kept."
+            }
+          },
+          "P3 (Online Program)": {
+            "N30 (Core Courses (6))": {
+              "node_id": "section:4e0acb9995e0492d",
+              "path": [
+                "Online Program",
+                "Core Courses (6)"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E9",
+                  "chunk_id": "chunk:75a3eef31d105704",
+                  "text_preview": "You will complete 6 core courses toward your Master’s in Applied Data Science degree. Core courses allow you to build your theoretical data science kn"
+                }
+              ],
+              "comment": "E9 states that the Online MS-ADS program requires 6 core courses, which is relevant to comparing core course requirements between programs, though it does not list the specific courses."
+            },
+            "N36 (Core Courses)": {
+              "node_id": "progression_tab:238252a07b49a93f",
+              "path": [
+                "Online Program",
+                "Core Courses"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E10",
+                  "chunk_id": "chunk:0538bbc6e5174524",
+                  "text_preview": "This accordion contains: Time Series Analysis and Forecasting; Statistical Models for Data Science; Machine Learning I; Machine Learning II; Data Engi"
+                }
+              ],
+              "comment": "E10 lists the specific core courses for the Online program, which is directly relevant to comparing with the In-Person program's core courses. Other content blocks provide course descriptions but are not needed for the comparison of course names."
+            }
+          }
+        },
+        "log_path": "C:\\Users\\ss363\\Desktop\\Archive\\ads_rag_chatbot\\pipeline_grag_v2\\log\\2026-08-04_020202_f4d98f0b5ae2.json"
+      }
+    }
+  },
+  "run_batch_id": "20260804T013937"
+}

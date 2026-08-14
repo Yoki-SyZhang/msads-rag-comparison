@@ -1,0 +1,139 @@
+[
+  {
+    "label": "main",
+    "description": "UChicago MS in Applied Data Science program overview: mission, degree types offered (In-Person and Online), program highlights, and general program information.",
+    "urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/"
+    ]
+  },
+  {
+    "label": "in_person_program",
+    "description": "In-Person MSADS program details: 1-year track (intensive summer + autumn/winter/spring quarters) and 2-year track structure; required core courses (Data Engineering Platforms, Machine Learning, Leadership); elective concentrations; on-campus Chicago experience; schedule and format.",
+    "urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/in-person-program/"
+    ]
+  },
+  {
+    "label": "online_program",
+    "description": "Online MSADS program details: course schedule and format; asynchronous and synchronous learning; how the online program differs from in-person; delivery modality and student expectations.",
+    "urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/online-program/"
+    ]
+  },
+  {
+    "label": "course_progressions",
+    "description": "Detailed quarter-by-quarter course lists for each track and program type (in-person 1-year, in-person 2-year, online). Specific course names, sequencing, and elective options by academic quarter.",
+    "urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/"
+    ]
+  },
+  {
+    "label": "faqs",
+    "description": "Comprehensive frequently asked questions covering all aspects of the MSADS program that prospective and current students may ask, including but not limited to: admissions requirements and prerequisites, scholarships and financial aid, housing and living arrangements, program format differences (1-year vs 2-year vs online), workload, internship and career support, graduation requirements, and any other program-related topics.",
+    "urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/"
+    ]
+  },
+  {
+    "label": "how_to_apply",
+    "description": "Application process and requirements: required materials (transcripts, letters of recommendation, personal statement), application rounds, deadlines, prerequisite coursework, and how to submit an application.",
+    "urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply/"
+    ]
+  },
+  {
+    "label": "tuition_fees_aid",
+    "description": "Program costs: per-course tuition, quarterly and total program fees, scholarship types and amounts, financial aid options, and cost of attendance for in-person and online tracks.",
+    "urls": [
+      "https://datascience.uchicago.edu/education/tuition-fees-aid/"
+    ]
+  },
+  {
+    "label": "events_deadlines",
+    "description": "Application deadlines by round, upcoming information sessions and virtual events, open house dates. Time-sensitive scheduling information for prospective applicants.",
+    "urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/events-deadlines/"
+    ]
+  },
+  {
+    "label": "career_outcomes",
+    "description": "Career outcomes and post-graduation employment overview, career support services. NOTE: Employer and alumni company names are displayed as logo images on this page and are not accessible as text — only general career statistics and descriptions (in text form) are available.",
+    "urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/career-outcomes/"
+    ]
+  },
+  {
+    "label": "capstone",
+    "description": "Capstone project program requirements, overview, and the capstone project archive index listing featured student projects across various industries.",
+    "urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/capstone-projects/",
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/capstone-project-archive/"
+    ]
+  },
+  {
+    "label": "capstone_projects",
+    "description": "Detailed descriptions of individual capstone projects completed by MSADS students, covering domains such as healthcare AI, retail analytics, financial modeling, NLP, computer vision, LLM applications, and other applied data science topics. Use when asking about specific project topics, partner companies, or examples of student work.",
+    "urls": [
+      "https://datascience.uchicago.edu/research/aetna-developing-a-predictive-medicare-grievance-model-for-cms-star-ratings-improvement/",
+      "https://datascience.uchicago.edu/research/aetna-measuring-the-impact-of-diverse-marketing-campaigns-on-medicare-stars-performance/",
+      "https://datascience.uchicago.edu/research/aetna-optimization-engine-creation-multi-objective-optimization-model/",
+      "https://datascience.uchicago.edu/research/aetna-optimization-engine-creation-scenario-planning-and-sensitivity-analysis-tool/",
+      "https://datascience.uchicago.edu/research/argonne-lead-vehicle-distance-estimation-using-forward-vision-in-ego-vehicles/",
+      "https://datascience.uchicago.edu/research/argonne-rezzy-ai-support-chatbot-for-ev-charger-reservation-app-evrez/",
+      "https://datascience.uchicago.edu/research/ateema-ai-driven-media-kit/",
+      "https://datascience.uchicago.edu/research/charactour-ai-developing-a-personality-driven-generative-ai-model-for-capturing-diverse-linguistic-styles/",
+      "https://datascience.uchicago.edu/research/chicago-white-sox-measuring-pitcher-deception-and-command-using-motion-tracking-data/",
+      "https://datascience.uchicago.edu/research/global-iq-optimizing-roi-of-global-talent-mobility-through-llm-based-corporate-employee-decision-support/",
+      "https://datascience.uchicago.edu/research/global-iq-optimizing-roi-of-global-talent-mobility-through-predictive-modeling-and-optimization-for-corporate-programs-policies/",
+      "https://datascience.uchicago.edu/research/global-iq-optimizing-roi-of-global-talent-mobility-through-predictive-modeling-and-optimization-of-employee-compensation/",
+      "https://datascience.uchicago.edu/research/global-iq-soup-to-nuts-creating-a-global-living-wage-data-product/",
+      "https://datascience.uchicago.edu/research/grai-matter-total-value-of-workforce-tvow/",
+      "https://datascience.uchicago.edu/research/healthlab-innovations-inc-continuity-engines-unlock-dark-data-to-save-lives-through-ai-driven-follow-ups/",
+      "https://datascience.uchicago.edu/research/healthlab-innovations-inc-synergy-engines-unlocking-business-strategies-with-ai-4000-digital-health-companies/",
+      "https://datascience.uchicago.edu/research/here-technologies-ai-powered-feature-extraction-from-street-level-imagery-for-automated-mapmaking/",
+      "https://datascience.uchicago.edu/research/here-technologies-ensuring-map-freshness-with-an-ai-powered-places-data-pipeline/",
+      "https://datascience.uchicago.edu/research/here-technologies-vehicle-perception-data-vpd-and-here-lane-model-alignment/",
+      "https://datascience.uchicago.edu/research/inference-analytics-ai-powered-scientific-research-assistant/",
+      "https://datascience.uchicago.edu/research/inference-analytics-automated-icd-10-code-prediction-for-healthcare-reports-using-large-language-models/",
+      "https://datascience.uchicago.edu/research/inference-analytics-healthcare-specialized-llm-with-reinforcement-learning/",
+      "https://datascience.uchicago.edu/research/labelmaster-digital-marketing-alchemy-unlocking-data-driven-success-or-the-roi-playbook-mastering-ads-emails-web-traffic/",
+      "https://datascience.uchicago.edu/research/latentview-analytics-visual-defect-detection/",
+      "https://datascience.uchicago.edu/research/lexlead-ai-legal-services-recommendation-system/",
+      "https://datascience.uchicago.edu/research/rakuten-graphrag-or-similar-llm-applications-for-analyzing-advertiser-and-publisher-partnership/",
+      "https://datascience.uchicago.edu/research/rakuten-llm-driven-large-scale-scraping-and-competitive-marketing-strategy/",
+      "https://datascience.uchicago.edu/research/research-gpt-for-healthcare/",
+      "https://datascience.uchicago.edu/research/research-gpt-for-healthcare-agentic-clinical-rag-model-context-protocol-based-framework/",
+      "https://datascience.uchicago.edu/research/research-gpt-for-healthcare-applications-of-generative-ai-in-emergency-department-admission-evaluation/",
+      "https://datascience.uchicago.edu/research/research-gpt-for-healthcare-concordagent-an-integrated-ai-agent-for-ultrasound-pathology/",
+      "https://datascience.uchicago.edu/research/research-gpt-for-healthcare-mcp-driven-multi-agent-rag-enhanced-llm-system-for-prostate-cancer-temporal-summarization/",
+      "https://datascience.uchicago.edu/research/research-gpt-for-healthcare-reinforcement-learning-driven-multi-agent-framework-for-unifying-clinical-imaging-and-text-retrieval/",
+      "https://datascience.uchicago.edu/research/research-robotics-enders-game4/",
+      "https://datascience.uchicago.edu/research/research-robotics-robartists4/",
+      "https://datascience.uchicago.edu/research/royal-cyber-llm-powered-auto-grading-assignment-with-feedback/",
+      "https://datascience.uchicago.edu/research/tokio-marine-highland-flood-risk-rating-of-a-property-leveraging-digital-elevation-model/",
+      "https://datascience.uchicago.edu/research/uniqlo-china-enhancing-actionability-of-external-market-data-with-ai/",
+      "https://datascience.uchicago.edu/research/united-airlines-intelligent-airport-agent-for-enhanced-gate-service/"
+    ]
+  },
+  {
+    "label": "instructors_staff",
+    "description": "MSADS faculty and staff directory: instructor names, their specializations, academic backgrounds, and industry experience. Use for questions about who teaches specific topics, faculty expertise, research interests, or staff contacts.",
+    "urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/instructors-staff/"
+    ]
+  },
+  {
+    "label": "our_students",
+    "description": "Current student demographics, backgrounds, and student spotlights. Information about the MSADS student community, diversity, and student experience.",
+    "urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/our-students/"
+    ]
+  },
+  {
+    "label": "explore_campus",
+    "description": "Campus life, Chicago living, and the in-person student experience. Information about the UChicago campus environment, Chicago city life, and extracurricular aspects of the in-person program.",
+    "urls": [
+      "https://datascience.uchicago.edu/explore-the-ms-ads-campus/"
+    ]
+  }
+]

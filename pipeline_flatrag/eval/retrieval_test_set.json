@@ -1,0 +1,104 @@
+[
+  {
+    "id": "Q01",
+    "query": "What are the core courses required in the in-person MS in Applied Data Science program?",
+    "expected_pages": [
+      "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/"
+    ],
+    "difficulty": "easy",
+    "type": "categorical",
+    "notes": "Tests basic factual retrieval. Both core curriculum pages should be candidates."
+  },
+  {
+    "id": "Q02",
+    "query": "What's the application deadline for the online program?",
+    "expected_pages": [
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/events-deadlines/",
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply/"
+    ],
+    "difficulty": "easy",
+    "type": "factual",
+    "notes": "Tests time-sensitive content retrieval."
+  },
+  {
+    "id": "Q03",
+    "query": "How much does the entire program cost?",
+    "expected_pages": [
+      "https://datascience.uchicago.edu/education/tuition-fees-aid/"
+    ],
+    "difficulty": "medium",
+    "type": "factual",
+    "notes": "User asks 'entire cost' but page lists per-course tuition. Tests semantic matching beyond keyword overlap."
+  },
+  {
+    "id": "Q04",
+    "query": "Tell me about the capstone project experience.",
+    "expected_pages": [
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/capstone-projects/",
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/capstone-project-archive/"
+    ],
+    "difficulty": "easy",
+    "type": "descriptive",
+    "notes": "Open-ended descriptive query."
+  },
+  {
+    "id": "Q05",
+    "query": "Which faculty members have research interests in machine learning? And pls describe more details about their specialties.",
+    "expected_pages": [
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/instructors-staff/"
+    ],
+    "difficulty": "medium",
+    "type": "synthesis",
+    "notes": "Requires retrieving multiple faculty bios that mention ML. Tests faculty-name preservation in chunks."
+  },
+  {
+    "id": "Q06",
+    "query": "What's the difference between the in-person 1-year and 2-year programs?",
+    "expected_pages": [
+      "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/"
+    ],
+    "difficulty": "hard",
+    "type": "synthesis",
+    "notes": "Requires retrieving from both pages to compare. The single-page hit alone is not sufficient."
+  },
+  {
+    "id": "Q07",
+    "query": "What are the admission requirements for the MS in Applied Data Science program?",
+    "expected_pages": [
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply/"
+    ],
+    "difficulty": "medium",
+    "type": "factual",
+    "notes": "User asks 'background' but document phrasing is 'prerequisites' or 'admission requirements'. Tests vocabulary mismatch."
+  },
+  {
+    "id": "Q08",
+    "query": "Where do graduates of this program typically work?",
+    "expected_pages": [
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/career-outcomes/"
+    ],
+    "difficulty": "medium",
+    "type": "factual",
+    "notes": "Career outcomes page is short (~250 words text only, employer logos are images and out of scope). Tests if retrieval still finds the page despite limited textual content."
+  },
+  {
+    "id": "Q09",
+    "query": "Are there any scholarships available?",
+    "expected_pages": [
+      "https://datascience.uchicago.edu/education/tuition-fees-aid/"
+    ],
+    "difficulty": "easy",
+    "type": "factual",
+    "notes": "Tests retrieval of niche info."
+  },
+  {
+    "id": "Q10",
+    "query": "What is the dress code for the program?",
+    "expected_pages": [],
+    "difficulty": "edge",
+    "type": "edge",
+    "notes": "No information about dress code exists in the corpus. expected_pages is empty. This tests how the system behaves when there's no good answer — retrieval should still return its best guesses, but Stage 3 LLM should refuse to fabricate an answer."
+  }
+]

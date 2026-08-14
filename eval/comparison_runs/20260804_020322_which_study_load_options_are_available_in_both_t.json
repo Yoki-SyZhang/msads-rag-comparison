@@ -1,0 +1,1439 @@
+{
+  "schema_version": 2,
+  "timestamp": "2026-08-04T02:03:22.007214",
+  "question": "Which study-load options are available in both the In-Person and Online MS-ADS programs?",
+  "question_id": "X05",
+  "question_meta": {
+    "category": "program_format",
+    "type": "comparative",
+    "difficulty": "easy",
+    "expected_behavior": "direct_answer"
+  },
+  "results": {
+    "pipeline_flatrag": {
+      "pipeline_id": "pipeline_flatrag",
+      "display_name": "FlatRAG",
+      "answer": "Based on the available program materials, both the In-Person and Online MS-ADS programs offer full-time and part-time study options.\n\n- The In-Person 1-Year 12 Course Program is available on a full-time or part-time basis [1].\n- The Online program can also be completed full- or part-time [2].\n\nSources:\n1. [In Person Program | 1-Year 12 Course Program (Full- and Part-Time Options)](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/)\n2. [Online Program | Academic Rigor Meets Work/Life Balance](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/)",
+      "sources": [
+        {
+          "page_title": "In Person Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/"
+        },
+        {
+          "page_title": "Online Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/online-program/"
+        },
+        {
+          "page_title": "Faqs",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "tool_calls": [
+            {
+              "name": "list_page_sections",
+              "args": {
+                "url": "in_person_program"
+              }
+            },
+            {
+              "name": "list_page_sections",
+              "args": {
+                "url": "faqs"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "list_page_sections",
+              "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/in-person-program/:\n  - \"1-Year 12 Course Program (Full- and Part-Time Options)\" (3 chunks)\n  - \"2-Year Thesis Track, 18 Course Program (Full-Time Only)\" (3 chunks)\n  - \"By and For Data Science Innovators\" (1 chunk)\n  - \"Career Outcomes in Data Science\" (1 chunk)\n  - \"Comparison Chart\" (1 chunk)\n  - \"Core Courses > Data Engineering Platforms for Analytics or Big Data and Cloud Computing\" (1 chunk)\n  - \"Core Courses > Data Science Capstone Project\" (1 chunk)\n  - \"Core Courses > Leadership and Consulting for Data Science\" (1 chunk)\n  - \"Core Courses > Machine Learning I\" (1 chunk)\n  - \"Core Courses > Machine Learning II\" (1 chunk)\n  - \"Core Courses > Statistical Models for Data Science\" (1 chunk)\n  - \"Core Courses > Time Series Analysis and Forecasting\" (1 chunk)\n  - \"Get in Touch\" (1 chunk)\n  - \"In Person Program\" (1 chunk)\n  - \"In Person Program - Accordion Overview > Core Courses\" (1 chunk)\n  - \"In Person Program - Accordion Overview > Noncredit Courses\" (1 chunk)\n  - \"In Person Program - Accordion Overview > Sample Elective Courses\" (1 chunk)\n  - \"Noncredit Courses > Advanced Linear Algebra for Machine Learning (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Brush up on the Basics (Optional resource)\" (1 chunk)\n  - \"Noncredit Courses > Career Seminar (Seminar, required)\" (1 chunk)\n  - \"Noncredit Courses > Introduction to Statistical Concepts (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Python for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > R for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Sample Elective Courses > Advanced Computer Vision with Deep Learning\" (2 chunks)\n  - \"Sample Elective Courses > Advanced Machine Learning and Artificial Intelligence\" (2 chunks)\n  - \"Sample Elective Courses > Applied Generative AI: Agents and Multimodal Intelligence\" (2 chunks)\n  - \"Sample Elective Courses > Bayesian Machine Learning with G"
+            },
+            {
+              "name": "list_page_sections",
+              "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/:\n  - \"2-Year Thesis Track Program > How many spots are available in the new 2-year program?\" (1 chunk)\n  - \"2-Year Thesis Track Program > If I am admitted to the In-Person, Full-Time 1-year program, may I take any of the 2-year program electives?\" (1 chunk)\n  - \"2-Year Thesis Track Program > May I switch between the 1- and 2-year programs after officially enrolling in the MS-ADS program?\" (1 chunk)\n  - \"2-Year Thesis Track Program > What is the 2-year program's thesis requirement?\" (1 chunk)\n  - \"2-Year Thesis Track Program > What is the new 2-year thesis track program (18 courses), and how is it different from the 1-year program (12 courses)?\" (2 chunks)\n  - \"2-Year Thesis Track Program > When can I apply for the 2-year thesis track program?\" (1 chunk)\n  - \"Application Process > Do I need to provide my recommenders with instructions?\" (1 chunk)\n  - \"Application Process > Does the admissions office allow recommenders to email their letter directly as an attachment to be included in an applicant’s file?\" (1 chunk)\n  - \"Application Process > How do I submit the materials that will accompany my Master's in Applied Data Science application?\" (1 chunk)\n  - \"Application Process > How will I be notified that I am admitted to the Master's in Applied Data Science program?\" (1 chunk)\n  - \"Application Process > I took the GRE and/or GMAT and want to include my score(s) with my Master's in Applied Data Science application.\" (1 chunk)\n  - \"Application Process > I took the TOEFL over two years ago. Can I still use those TOEFL results?\" (1 chunk)\n  - \"Application Process > If I am admitted to the Master's in Applied Data Science program, what do I do next?\" (1 chunk)\n  - \"Application Process > If I finish my Master's in Applied Data Science application before the deadline, will I receive my decision early?\" (1 chunk)\n  - \"Application Process > Is the GRE or GMAT required for th"
+            }
+          ],
+          "judger": null
+        },
+        {
+          "step": 2,
+          "tool_calls": [
+            {
+              "name": "fetch_section_chunks",
+              "args": {
+                "url": "in_person_program",
+                "section_breadcrumb": "1-Year 12 Course Program (Full- and Part-Time Options)"
+              }
+            },
+            {
+              "name": "fetch_section_chunks",
+              "args": {
+                "url": "in_person_program",
+                "section_breadcrumb": "2-Year Thesis Track, 18 Course Program (Full-Time Only)"
+              }
+            },
+            {
+              "name": "fetch_section_chunks",
+              "args": {
+                "url": "in_person_program",
+                "section_breadcrumb": "Comparison Chart"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_section_chunks",
+              "content": "Fetched 3 chunk(s) from \"1-Year 12 Course Program (Full- and Part-Time Options)\":\n\n[0] In Person Program | 1-Year 12 Course Program (Full- and Part-Time Options)\n[Page: In Person Program | Section: 1-Year 12 Course Program (Full- and Part-Time Options)]\n\nThe signature 1-year 12 course program is ideal for those who wish to fast-track their graduate studies. Full-time students typically graduate in 4–5 quarters; part-time students may take up to 6 quarters. A...\n\n[1] In Person Program | 1-Year 12 Course Program (Full- and Part-Time Options)\n[Page: In Person Program | Section: 1-Year 12 Course Program (Full- and Part-Time Options)]\n\n• 12 courses (6 Core, 4 Electives, 2 Capstone).\n• A required Career Seminar throughout the program. Those with 3+ years of full-time work experience may petition for exemption.\n• A 2-quarter Capstone Project...\n\n[2] In Person Program | 1-Year 12 Course Program (Full- and Part-Time Options)\n[Page: In Person Program | Section: 1-Year 12 Course Program (Full- and Part-Time Options)]\n\nCourses are primarily offered in the evenings and on weekends to support working professionals. The program is STEM/OPT eligible . Read More + Show Less -"
+            },
+            {
+              "name": "fetch_section_chunks",
+              "content": "Fetched 3 chunk(s) from \"2-Year Thesis Track, 18 Course Program (Full-Time Only)\":\n\n[0] In Person Program | 2-Year Thesis Track, 18 Course Program (Full-Time Only)\n[Page: In Person Program | Section: 2-Year Thesis Track, 18 Course Program (Full-Time Only)]\n\nBeginning in academic year 2026-27, UChicago will offer an additional 2-year (21 month) pathway for In-Person, Full-Time applicants. The application for the 2-Year Thesis Track (Autumn 2026 start) closed on...\n\n[1] In Person Program | 2-Year Thesis Track, 18 Course Program (Full-Time Only)\n[Page: In Person Program | Section: 2-Year Thesis Track, 18 Course Program (Full-Time Only)]\n\n• 18 total courses (6 Core, 8 Electives, 2 Capstone, 2 Independent Study).\n• A required Career Seminar throughout the program. Those with 3+ years of full-time work experience may petition for exemption.\n• ...\n\n[2] In Person Program | 2-Year Thesis Track, 18 Course Program (Full-Time Only)\n[Page: In Person Program | Section: 2-Year Thesis Track, 18 Course Program (Full-Time Only)]\n\nThis option is ideal for students seeking a longer academic experience with more time to complete more elective courses. Students must also have the capacity to complete a traditional written thesis or thes..."
+            },
+            {
+              "name": "fetch_section_chunks",
+              "content": "Fetched 1 chunk(s) from \"Comparison Chart\":\n\n[0] In Person Program | Comparison Chart\n[Page: In Person Program | Section: Comparison Chart]\n\nThis program is listed as a STEM designated degree by the U.S. Department of Homeland Security for the purposes of the STEM OPT extension allowing eligible students to apply. However, approval of STEM OPT is at the discretion of U.S. Citizenship..."
+            }
+          ],
+          "judger": {
+            "completeness": "full",
+            "useful_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "decision": "done",
+            "candidate_chunk_count": 7,
+            "accepted_chunk_count": 6
+          }
+        },
+        {
+          "step": 1,
+          "tool_calls": [
+            {
+              "name": "list_page_sections",
+              "args": {
+                "url": "online_program"
+              }
+            },
+            {
+              "name": "list_page_sections",
+              "args": {
+                "url": "faqs"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "list_page_sections",
+              "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/online-program/:\n  - \"Academic Rigor Meets Work/Life Balance\" (1 chunk)\n  - \"Additional Resources\" (1 chunk)\n  - \"Capstone (2)\" (1 chunk)\n  - \"Career Seminar (noncredit, required)\" (1 chunk)\n  - \"Core Courses (6)\" (1 chunk)\n  - \"Core Courses > Data Engineering Platforms for Analytics or Big Data and Cloud Computing\" (1 chunk)\n  - \"Core Courses > Data Science Capstone Project\" (1 chunk)\n  - \"Core Courses > Leadership and Consulting for Data Science\" (1 chunk)\n  - \"Core Courses > Machine Learning I\" (1 chunk)\n  - \"Core Courses > Machine Learning II\" (1 chunk)\n  - \"Core Courses > Statistical Models for Data Science\" (1 chunk)\n  - \"Core Courses > Time Series Analysis and Forecasting\" (1 chunk)\n  - \"Curriculum\" (1 chunk)\n  - \"Elective Courses (4)\" (1 chunk)\n  - \"Foundational Courses (noncredit, optional)\" (2 chunks)\n  - \"Get in Touch\" (1 chunk)\n  - \"In-Person ‘Immersion Weekend’\" (5 chunks)\n  - \"Master Data Science, Master Your Career\" (1 chunk)\n  - \"Noncredit Courses > Advanced Linear Algebra for Machine Learning (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Brush up on the Basics (Optional resource)\" (1 chunk)\n  - \"Noncredit Courses > Career Seminar (Seminar, required)\" (1 chunk)\n  - \"Noncredit Courses > Introduction to Statistical Concepts (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Python for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > R for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Note for International Students\" (1 chunk)\n  - \"Online Program\" (1 chunk)\n  - \"Online Program - Accordion Overview > Core Courses\" (1 chunk)\n  - \"Online Program - Accordion Overview > Noncredit Courses\" (1 chunk)\n  - \"Online Program - Accordion Overview > Sample Elective Courses\" (1 chunk)\n  - \"Sample Elective Courses > Advanced Computer Vision with Deep Learning\" (2 chunks)\n  - \"Sample Elective Courses > Advanced Machine Learning and Artificial"
+            },
+            {
+              "name": "list_page_sections",
+              "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/:\n  - \"2-Year Thesis Track Program > How many spots are available in the new 2-year program?\" (1 chunk)\n  - \"2-Year Thesis Track Program > If I am admitted to the In-Person, Full-Time 1-year program, may I take any of the 2-year program electives?\" (1 chunk)\n  - \"2-Year Thesis Track Program > May I switch between the 1- and 2-year programs after officially enrolling in the MS-ADS program?\" (1 chunk)\n  - \"2-Year Thesis Track Program > What is the 2-year program's thesis requirement?\" (1 chunk)\n  - \"2-Year Thesis Track Program > What is the new 2-year thesis track program (18 courses), and how is it different from the 1-year program (12 courses)?\" (2 chunks)\n  - \"2-Year Thesis Track Program > When can I apply for the 2-year thesis track program?\" (1 chunk)\n  - \"Application Process > Do I need to provide my recommenders with instructions?\" (1 chunk)\n  - \"Application Process > Does the admissions office allow recommenders to email their letter directly as an attachment to be included in an applicant’s file?\" (1 chunk)\n  - \"Application Process > How do I submit the materials that will accompany my Master's in Applied Data Science application?\" (1 chunk)\n  - \"Application Process > How will I be notified that I am admitted to the Master's in Applied Data Science program?\" (1 chunk)\n  - \"Application Process > I took the GRE and/or GMAT and want to include my score(s) with my Master's in Applied Data Science application.\" (1 chunk)\n  - \"Application Process > I took the TOEFL over two years ago. Can I still use those TOEFL results?\" (1 chunk)\n  - \"Application Process > If I am admitted to the Master's in Applied Data Science program, what do I do next?\" (1 chunk)\n  - \"Application Process > If I finish my Master's in Applied Data Science application before the deadline, will I receive my decision early?\" (1 chunk)\n  - \"Application Process > Is the GRE or GMAT required for th"
+            }
+          ],
+          "judger": null
+        },
+        {
+          "step": 2,
+          "tool_calls": [
+            {
+              "name": "fetch_section_chunks",
+              "args": {
+                "url": "online_program",
+                "section_breadcrumb": "Your Time, Your Advancement"
+              }
+            },
+            {
+              "name": "fetch_section_chunks",
+              "args": {
+                "url": "online_program",
+                "section_breadcrumb": "Academic Rigor Meets Work/Life Balance"
+              }
+            },
+            {
+              "name": "fetch_section_chunks",
+              "args": {
+                "url": "faqs",
+                "section_breadcrumb": "Online Program > How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_section_chunks",
+              "content": "Fetched 2 chunk(s) from \"Your Time, Your Advancement\":\n\n[0] Online Program | Your Time, Your Advancement\n[Page: Online Program | Section: Your Time, Your Advancement]\n\nThe online applied data science format combines live synchronous classes with structured asynchronous coursework. You will engage in weekly, synchronous (real-time) classes with your instructors and peers. Live lectures provide the right...\n\n[1] Online Program | Your Time, Your Advancement\n[Page: Online Program | Section: Your Time, Your Advancement]\n\nyou for synchronous classes through lecture videos, readings, and discussions. The online format allows you to work on data science projects, group collaborations, and assignments around your personal and professional commitments."
+            },
+            {
+              "name": "fetch_section_chunks",
+              "content": "Fetched 1 chunk(s) from \"Academic Rigor Meets Work/Life Balance\":\n\n[0] Online Program | Academic Rigor Meets Work/Life Balance\n[Page: Online Program | Section: Academic Rigor Meets Work/Life Balance]\n\nThe Online MS in Applied Data Science program at the University of Chicago delivers a structured online learning experience with live classes designed for working professionals. You will benefit from the same top faculty, brig..."
+            },
+            {
+              "name": "fetch_section_chunks",
+              "content": "Fetched 1 chunk(s) from \"Online Program > How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?\":\n\n[0] Faqs | Online Program > How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?\n[Page: Faqs | Section: Online Program > How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?]\n\nClasses generally take place on evenings and weekends in order to allow our students and instructors to maintai..."
+            }
+          ],
+          "judger": {
+            "completeness": "partial",
+            "useful_indices": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "decision": "done",
+            "candidate_chunk_count": 4,
+            "accepted_chunk_count": 4
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "text": "[Page: In Person Program | Section: 1-Year 12 Course Program (Full- and Part-Time Options)]\n\nThe signature 1-year 12 course program is ideal for those who wish to fast-track their graduate studies. Full-time students typically graduate in 4–5 quarters; part-time students may take up to 6 quarters. All students must graduate within 4 years maximum. All students complete:",
+          "chunk_id": "education__masters_programs__in_person_program__1_year_12_course_program_full_and_part_time_options__2",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+          "page_title": "In Person Program",
+          "section": "1-Year 12 Course Program (Full- and Part-Time Options)",
+          "section_breadcrumb": "1-Year 12 Course Program (Full- and Part-Time Options)",
+          "content_type": "text",
+          "program_type": "in_person",
+          "distance": 0.0
+        },
+        {
+          "text": "[Page: In Person Program | Section: 1-Year 12 Course Program (Full- and Part-Time Options)]\n\n• 12 courses (6 Core, 4 Electives, 2 Capstone).\n• A required Career Seminar throughout the program. Those with 3+ years of full-time work experience may petition for exemption.\n• A 2-quarter Capstone Project with a real industry partner; some students opt to complete a research Capstone.",
+          "chunk_id": "education__masters_programs__in_person_program__1_year_12_course_program_full_and_part_time_options__3",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+          "page_title": "In Person Program",
+          "section": "1-Year 12 Course Program (Full- and Part-Time Options)",
+          "section_breadcrumb": "1-Year 12 Course Program (Full- and Part-Time Options)",
+          "content_type": "list",
+          "program_type": "in_person",
+          "distance": 0.0
+        },
+        {
+          "text": "[Page: In Person Program | Section: 1-Year 12 Course Program (Full- and Part-Time Options)]\n\nCourses are primarily offered in the evenings and on weekends to support working professionals. The program is STEM/OPT eligible . Read More + Show Less -",
+          "chunk_id": "education__masters_programs__in_person_program__1_year_12_course_program_full_and_part_time_options__4",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+          "page_title": "In Person Program",
+          "section": "1-Year 12 Course Program (Full- and Part-Time Options)",
+          "section_breadcrumb": "1-Year 12 Course Program (Full- and Part-Time Options)",
+          "content_type": "text",
+          "program_type": "in_person",
+          "distance": 0.0
+        },
+        {
+          "text": "[Page: In Person Program | Section: 2-Year Thesis Track, 18 Course Program (Full-Time Only)]\n\nBeginning in academic year 2026-27, UChicago will offer an additional 2-year (21 month) pathway for In-Person, Full-Time applicants. The application for the 2-Year Thesis Track (Autumn 2026 start) closed on December 4, 2025. The 2-year Thesis Track (18 courses) pathway is optimized for those who want a longer master’s program, are interested in taking more elective courses, and have the capacity to complete a master’s thesis. The 2-year (21 month) pathway is completed over 6 academic quarters. The summer in between years 1 and 2 serves as a vacation quarter. Within the application portal, applicants will indicate their selection of this pathway. Read more about applying to the 2-Year program. All students complete:",
+          "chunk_id": "education__masters_programs__in_person_program__2_year_thesis_track_18_course_program_full_time_only__5",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+          "page_title": "In Person Program",
+          "section": "2-Year Thesis Track, 18 Course Program (Full-Time Only)",
+          "section_breadcrumb": "2-Year Thesis Track, 18 Course Program (Full-Time Only)",
+          "content_type": "text",
+          "program_type": "in_person",
+          "distance": 0.0
+        },
+        {
+          "text": "[Page: In Person Program | Section: 2-Year Thesis Track, 18 Course Program (Full-Time Only)]\n\n• 18 total courses (6 Core, 8 Electives, 2 Capstone, 2 Independent Study).\n• A required Career Seminar throughout the program. Those with 3+ years of full-time work experience may petition for exemption.\n• A 2-quarter Capstone Project .\n• A Master’s Thesis (traditional written thesis or project-based thesis).",
+          "chunk_id": "education__masters_programs__in_person_program__2_year_thesis_track_18_course_program_full_time_only__6",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+          "page_title": "In Person Program",
+          "section": "2-Year Thesis Track, 18 Course Program (Full-Time Only)",
+          "section_breadcrumb": "2-Year Thesis Track, 18 Course Program (Full-Time Only)",
+          "content_type": "list",
+          "program_type": "in_person",
+          "distance": 0.0
+        },
+        {
+          "text": "[Page: In Person Program | Section: 2-Year Thesis Track, 18 Course Program (Full-Time Only)]\n\nThis option is ideal for students seeking a longer academic experience with more time to complete more elective courses. Students must also have the capacity to complete a traditional written thesis or thesis project. Read More + Show Less -",
+          "chunk_id": "education__masters_programs__in_person_program__2_year_thesis_track_18_course_program_full_time_only__7",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+          "page_title": "In Person Program",
+          "section": "2-Year Thesis Track, 18 Course Program (Full-Time Only)",
+          "section_breadcrumb": "2-Year Thesis Track, 18 Course Program (Full-Time Only)",
+          "content_type": "text",
+          "program_type": "in_person",
+          "distance": 0.0
+        },
+        {
+          "text": "[Page: Online Program | Section: Your Time, Your Advancement]\n\nThe online applied data science format combines live synchronous classes with structured asynchronous coursework. You will engage in weekly, synchronous (real-time) classes with your instructors and peers. Live lectures provide the right forum to ask questions, work with peers, and maximize understanding of key concepts.  Collaborative and interactive learning with your classmates is facilitated by advanced meeting technology during and beyond synchronous classes. Synchronous classes are scheduled on weekday evenings at 6 pm, CT and on occasional Saturdays at 9 am, CT. Students admitted into the online program are expected to attend the live class sessions. Each week also includes asynchronous content (learning at your own pace) to complete when it is convenient for you. These activities prepare you for synchronous classes through lecture videos, readings, and discussions. The online",
+          "chunk_id": "education__masters_programs__online_program__your_time_your_advancement__7",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/online-program/",
+          "page_title": "Online Program",
+          "section": "Your Time, Your Advancement",
+          "section_breadcrumb": "Your Time, Your Advancement",
+          "content_type": "text",
+          "program_type": "online",
+          "distance": 0.0
+        },
+        {
+          "text": "[Page: Online Program | Section: Your Time, Your Advancement]\n\nyou for synchronous classes through lecture videos, readings, and discussions. The online format allows you to work on data science projects, group collaborations, and assignments around your personal and professional commitments.",
+          "chunk_id": "education__masters_programs__online_program__your_time_your_advancement__8",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/online-program/",
+          "page_title": "Online Program",
+          "section": "Your Time, Your Advancement",
+          "section_breadcrumb": "Your Time, Your Advancement",
+          "content_type": "text",
+          "program_type": "online",
+          "distance": 0.0
+        },
+        {
+          "text": "[Page: Online Program | Section: Academic Rigor Meets Work/Life Balance]\n\nThe Online MS in Applied Data Science program at the University of Chicago delivers a structured online learning experience with live classes designed for working professionals. You will benefit from the same top faculty, bright peer group, and academic rigor as the In-Person program. You may complete the program full- or part-time. Full-time and part-time students begin in Autumn quarter. Please visit the In-Person program page if you are interested in exploring those full- and part-time options for entrance Autumn quarter. Online Program Director, Arnab Bose, PhD",
+          "chunk_id": "education__masters_programs__online_program__academic_rigor_meets_work_life_balance__1",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/online-program/",
+          "page_title": "Online Program",
+          "section": "Academic Rigor Meets Work/Life Balance",
+          "section_breadcrumb": "Academic Rigor Meets Work/Life Balance",
+          "content_type": "text",
+          "program_type": "online",
+          "distance": 0.0
+        },
+        {
+          "text": "[Page: Faqs | Section: Online Program > How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?]\n\nClasses generally take place on evenings and weekends in order to allow our students and instructors to maintain their professional schedules. The Master’s in Applied Data Science Online Program is both synchronous and asynchronous. The same as our In-Person program, students are required to participate in weekly, live meetings with their instructors and peers, complete readings and coursework, and engage in discussion.",
+          "chunk_id": "education__masters_programs__ms_in_applied_data_science__faqs__how_will_enrolling_in_master_s_in_applied_data_science_online_program_impact_my_schedule_are_classes_held_synchronously_asynchronously_or_both__32",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/",
+          "page_title": "Faqs",
+          "section": "How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?",
+          "section_breadcrumb": "Online Program > How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?",
+          "content_type": "text",
+          "program_type": "general",
+          "distance": 0.0
+        }
+      ],
+      "time_sec": 20.154,
+      "low_confidence": false,
+      "error": null,
+      "raw_debug": {
+        "answer": "Based on the available program materials, both the In-Person and Online MS-ADS programs offer full-time and part-time study options.\n\n- The In-Person 1-Year 12 Course Program is available on a full-time or part-time basis [1].\n- The Online program can also be completed full- or part-time [2].\n\nSources:\n1. [In Person Program | 1-Year 12 Course Program (Full- and Part-Time Options)](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/)\n2. [Online Program | Academic Rigor Meets Work/Life Balance](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/)",
+        "sources": [
+          {
+            "page_title": "In Person Program",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/"
+          },
+          {
+            "page_title": "Online Program",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/online-program/"
+          },
+          {
+            "page_title": "Faqs",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/"
+          }
+        ],
+        "completeness": "full",
+        "low_confidence": false,
+        "attempts": 4,
+        "agent_steps": [
+          {
+            "step": 1,
+            "tool_calls": [
+              {
+                "name": "list_page_sections",
+                "args": {
+                  "url": "in_person_program"
+                }
+              },
+              {
+                "name": "list_page_sections",
+                "args": {
+                  "url": "faqs"
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "list_page_sections",
+                "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/in-person-program/:\n  - \"1-Year 12 Course Program (Full- and Part-Time Options)\" (3 chunks)\n  - \"2-Year Thesis Track, 18 Course Program (Full-Time Only)\" (3 chunks)\n  - \"By and For Data Science Innovators\" (1 chunk)\n  - \"Career Outcomes in Data Science\" (1 chunk)\n  - \"Comparison Chart\" (1 chunk)\n  - \"Core Courses > Data Engineering Platforms for Analytics or Big Data and Cloud Computing\" (1 chunk)\n  - \"Core Courses > Data Science Capstone Project\" (1 chunk)\n  - \"Core Courses > Leadership and Consulting for Data Science\" (1 chunk)\n  - \"Core Courses > Machine Learning I\" (1 chunk)\n  - \"Core Courses > Machine Learning II\" (1 chunk)\n  - \"Core Courses > Statistical Models for Data Science\" (1 chunk)\n  - \"Core Courses > Time Series Analysis and Forecasting\" (1 chunk)\n  - \"Get in Touch\" (1 chunk)\n  - \"In Person Program\" (1 chunk)\n  - \"In Person Program - Accordion Overview > Core Courses\" (1 chunk)\n  - \"In Person Program - Accordion Overview > Noncredit Courses\" (1 chunk)\n  - \"In Person Program - Accordion Overview > Sample Elective Courses\" (1 chunk)\n  - \"Noncredit Courses > Advanced Linear Algebra for Machine Learning (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Brush up on the Basics (Optional resource)\" (1 chunk)\n  - \"Noncredit Courses > Career Seminar (Seminar, required)\" (1 chunk)\n  - \"Noncredit Courses > Introduction to Statistical Concepts (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Python for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > R for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Sample Elective Courses > Advanced Computer Vision with Deep Learning\" (2 chunks)\n  - \"Sample Elective Courses > Advanced Machine Learning and Artificial Intelligence\" (2 chunks)\n  - \"Sample Elective Courses > Applied Generative AI: Agents and Multimodal Intelligence\" (2 chunks)\n  - \"Sample Elective Courses > Bayesian Machine Learning with G"
+              },
+              {
+                "name": "list_page_sections",
+                "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/:\n  - \"2-Year Thesis Track Program > How many spots are available in the new 2-year program?\" (1 chunk)\n  - \"2-Year Thesis Track Program > If I am admitted to the In-Person, Full-Time 1-year program, may I take any of the 2-year program electives?\" (1 chunk)\n  - \"2-Year Thesis Track Program > May I switch between the 1- and 2-year programs after officially enrolling in the MS-ADS program?\" (1 chunk)\n  - \"2-Year Thesis Track Program > What is the 2-year program's thesis requirement?\" (1 chunk)\n  - \"2-Year Thesis Track Program > What is the new 2-year thesis track program (18 courses), and how is it different from the 1-year program (12 courses)?\" (2 chunks)\n  - \"2-Year Thesis Track Program > When can I apply for the 2-year thesis track program?\" (1 chunk)\n  - \"Application Process > Do I need to provide my recommenders with instructions?\" (1 chunk)\n  - \"Application Process > Does the admissions office allow recommenders to email their letter directly as an attachment to be included in an applicant’s file?\" (1 chunk)\n  - \"Application Process > How do I submit the materials that will accompany my Master's in Applied Data Science application?\" (1 chunk)\n  - \"Application Process > How will I be notified that I am admitted to the Master's in Applied Data Science program?\" (1 chunk)\n  - \"Application Process > I took the GRE and/or GMAT and want to include my score(s) with my Master's in Applied Data Science application.\" (1 chunk)\n  - \"Application Process > I took the TOEFL over two years ago. Can I still use those TOEFL results?\" (1 chunk)\n  - \"Application Process > If I am admitted to the Master's in Applied Data Science program, what do I do next?\" (1 chunk)\n  - \"Application Process > If I finish my Master's in Applied Data Science application before the deadline, will I receive my decision early?\" (1 chunk)\n  - \"Application Process > Is the GRE or GMAT required for th"
+              }
+            ],
+            "judger": null
+          },
+          {
+            "step": 2,
+            "tool_calls": [
+              {
+                "name": "fetch_section_chunks",
+                "args": {
+                  "url": "in_person_program",
+                  "section_breadcrumb": "1-Year 12 Course Program (Full- and Part-Time Options)"
+                }
+              },
+              {
+                "name": "fetch_section_chunks",
+                "args": {
+                  "url": "in_person_program",
+                  "section_breadcrumb": "2-Year Thesis Track, 18 Course Program (Full-Time Only)"
+                }
+              },
+              {
+                "name": "fetch_section_chunks",
+                "args": {
+                  "url": "in_person_program",
+                  "section_breadcrumb": "Comparison Chart"
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "fetch_section_chunks",
+                "content": "Fetched 3 chunk(s) from \"1-Year 12 Course Program (Full- and Part-Time Options)\":\n\n[0] In Person Program | 1-Year 12 Course Program (Full- and Part-Time Options)\n[Page: In Person Program | Section: 1-Year 12 Course Program (Full- and Part-Time Options)]\n\nThe signature 1-year 12 course program is ideal for those who wish to fast-track their graduate studies. Full-time students typically graduate in 4–5 quarters; part-time students may take up to 6 quarters. A...\n\n[1] In Person Program | 1-Year 12 Course Program (Full- and Part-Time Options)\n[Page: In Person Program | Section: 1-Year 12 Course Program (Full- and Part-Time Options)]\n\n• 12 courses (6 Core, 4 Electives, 2 Capstone).\n• A required Career Seminar throughout the program. Those with 3+ years of full-time work experience may petition for exemption.\n• A 2-quarter Capstone Project...\n\n[2] In Person Program | 1-Year 12 Course Program (Full- and Part-Time Options)\n[Page: In Person Program | Section: 1-Year 12 Course Program (Full- and Part-Time Options)]\n\nCourses are primarily offered in the evenings and on weekends to support working professionals. The program is STEM/OPT eligible . Read More + Show Less -"
+              },
+              {
+                "name": "fetch_section_chunks",
+                "content": "Fetched 3 chunk(s) from \"2-Year Thesis Track, 18 Course Program (Full-Time Only)\":\n\n[0] In Person Program | 2-Year Thesis Track, 18 Course Program (Full-Time Only)\n[Page: In Person Program | Section: 2-Year Thesis Track, 18 Course Program (Full-Time Only)]\n\nBeginning in academic year 2026-27, UChicago will offer an additional 2-year (21 month) pathway for In-Person, Full-Time applicants. The application for the 2-Year Thesis Track (Autumn 2026 start) closed on...\n\n[1] In Person Program | 2-Year Thesis Track, 18 Course Program (Full-Time Only)\n[Page: In Person Program | Section: 2-Year Thesis Track, 18 Course Program (Full-Time Only)]\n\n• 18 total courses (6 Core, 8 Electives, 2 Capstone, 2 Independent Study).\n• A required Career Seminar throughout the program. Those with 3+ years of full-time work experience may petition for exemption.\n• ...\n\n[2] In Person Program | 2-Year Thesis Track, 18 Course Program (Full-Time Only)\n[Page: In Person Program | Section: 2-Year Thesis Track, 18 Course Program (Full-Time Only)]\n\nThis option is ideal for students seeking a longer academic experience with more time to complete more elective courses. Students must also have the capacity to complete a traditional written thesis or thes..."
+              },
+              {
+                "name": "fetch_section_chunks",
+                "content": "Fetched 1 chunk(s) from \"Comparison Chart\":\n\n[0] In Person Program | Comparison Chart\n[Page: In Person Program | Section: Comparison Chart]\n\nThis program is listed as a STEM designated degree by the U.S. Department of Homeland Security for the purposes of the STEM OPT extension allowing eligible students to apply. However, approval of STEM OPT is at the discretion of U.S. Citizenship..."
+              }
+            ],
+            "judger": {
+              "completeness": "full",
+              "useful_indices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "decision": "done",
+              "candidate_chunk_count": 7,
+              "accepted_chunk_count": 6
+            }
+          },
+          {
+            "step": 1,
+            "tool_calls": [
+              {
+                "name": "list_page_sections",
+                "args": {
+                  "url": "online_program"
+                }
+              },
+              {
+                "name": "list_page_sections",
+                "args": {
+                  "url": "faqs"
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "list_page_sections",
+                "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/online-program/:\n  - \"Academic Rigor Meets Work/Life Balance\" (1 chunk)\n  - \"Additional Resources\" (1 chunk)\n  - \"Capstone (2)\" (1 chunk)\n  - \"Career Seminar (noncredit, required)\" (1 chunk)\n  - \"Core Courses (6)\" (1 chunk)\n  - \"Core Courses > Data Engineering Platforms for Analytics or Big Data and Cloud Computing\" (1 chunk)\n  - \"Core Courses > Data Science Capstone Project\" (1 chunk)\n  - \"Core Courses > Leadership and Consulting for Data Science\" (1 chunk)\n  - \"Core Courses > Machine Learning I\" (1 chunk)\n  - \"Core Courses > Machine Learning II\" (1 chunk)\n  - \"Core Courses > Statistical Models for Data Science\" (1 chunk)\n  - \"Core Courses > Time Series Analysis and Forecasting\" (1 chunk)\n  - \"Curriculum\" (1 chunk)\n  - \"Elective Courses (4)\" (1 chunk)\n  - \"Foundational Courses (noncredit, optional)\" (2 chunks)\n  - \"Get in Touch\" (1 chunk)\n  - \"In-Person ‘Immersion Weekend’\" (5 chunks)\n  - \"Master Data Science, Master Your Career\" (1 chunk)\n  - \"Noncredit Courses > Advanced Linear Algebra for Machine Learning (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Brush up on the Basics (Optional resource)\" (1 chunk)\n  - \"Noncredit Courses > Career Seminar (Seminar, required)\" (1 chunk)\n  - \"Noncredit Courses > Introduction to Statistical Concepts (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Python for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > R for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Note for International Students\" (1 chunk)\n  - \"Online Program\" (1 chunk)\n  - \"Online Program - Accordion Overview > Core Courses\" (1 chunk)\n  - \"Online Program - Accordion Overview > Noncredit Courses\" (1 chunk)\n  - \"Online Program - Accordion Overview > Sample Elective Courses\" (1 chunk)\n  - \"Sample Elective Courses > Advanced Computer Vision with Deep Learning\" (2 chunks)\n  - \"Sample Elective Courses > Advanced Machine Learning and Artificial"
+              },
+              {
+                "name": "list_page_sections",
+                "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/:\n  - \"2-Year Thesis Track Program > How many spots are available in the new 2-year program?\" (1 chunk)\n  - \"2-Year Thesis Track Program > If I am admitted to the In-Person, Full-Time 1-year program, may I take any of the 2-year program electives?\" (1 chunk)\n  - \"2-Year Thesis Track Program > May I switch between the 1- and 2-year programs after officially enrolling in the MS-ADS program?\" (1 chunk)\n  - \"2-Year Thesis Track Program > What is the 2-year program's thesis requirement?\" (1 chunk)\n  - \"2-Year Thesis Track Program > What is the new 2-year thesis track program (18 courses), and how is it different from the 1-year program (12 courses)?\" (2 chunks)\n  - \"2-Year Thesis Track Program > When can I apply for the 2-year thesis track program?\" (1 chunk)\n  - \"Application Process > Do I need to provide my recommenders with instructions?\" (1 chunk)\n  - \"Application Process > Does the admissions office allow recommenders to email their letter directly as an attachment to be included in an applicant’s file?\" (1 chunk)\n  - \"Application Process > How do I submit the materials that will accompany my Master's in Applied Data Science application?\" (1 chunk)\n  - \"Application Process > How will I be notified that I am admitted to the Master's in Applied Data Science program?\" (1 chunk)\n  - \"Application Process > I took the GRE and/or GMAT and want to include my score(s) with my Master's in Applied Data Science application.\" (1 chunk)\n  - \"Application Process > I took the TOEFL over two years ago. Can I still use those TOEFL results?\" (1 chunk)\n  - \"Application Process > If I am admitted to the Master's in Applied Data Science program, what do I do next?\" (1 chunk)\n  - \"Application Process > If I finish my Master's in Applied Data Science application before the deadline, will I receive my decision early?\" (1 chunk)\n  - \"Application Process > Is the GRE or GMAT required for th"
+              }
+            ],
+            "judger": null
+          },
+          {
+            "step": 2,
+            "tool_calls": [
+              {
+                "name": "fetch_section_chunks",
+                "args": {
+                  "url": "online_program",
+                  "section_breadcrumb": "Your Time, Your Advancement"
+                }
+              },
+              {
+                "name": "fetch_section_chunks",
+                "args": {
+                  "url": "online_program",
+                  "section_breadcrumb": "Academic Rigor Meets Work/Life Balance"
+                }
+              },
+              {
+                "name": "fetch_section_chunks",
+                "args": {
+                  "url": "faqs",
+                  "section_breadcrumb": "Online Program > How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?"
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "fetch_section_chunks",
+                "content": "Fetched 2 chunk(s) from \"Your Time, Your Advancement\":\n\n[0] Online Program | Your Time, Your Advancement\n[Page: Online Program | Section: Your Time, Your Advancement]\n\nThe online applied data science format combines live synchronous classes with structured asynchronous coursework. You will engage in weekly, synchronous (real-time) classes with your instructors and peers. Live lectures provide the right...\n\n[1] Online Program | Your Time, Your Advancement\n[Page: Online Program | Section: Your Time, Your Advancement]\n\nyou for synchronous classes through lecture videos, readings, and discussions. The online format allows you to work on data science projects, group collaborations, and assignments around your personal and professional commitments."
+              },
+              {
+                "name": "fetch_section_chunks",
+                "content": "Fetched 1 chunk(s) from \"Academic Rigor Meets Work/Life Balance\":\n\n[0] Online Program | Academic Rigor Meets Work/Life Balance\n[Page: Online Program | Section: Academic Rigor Meets Work/Life Balance]\n\nThe Online MS in Applied Data Science program at the University of Chicago delivers a structured online learning experience with live classes designed for working professionals. You will benefit from the same top faculty, brig..."
+              },
+              {
+                "name": "fetch_section_chunks",
+                "content": "Fetched 1 chunk(s) from \"Online Program > How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?\":\n\n[0] Faqs | Online Program > How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?\n[Page: Faqs | Section: Online Program > How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?]\n\nClasses generally take place on evenings and weekends in order to allow our students and instructors to maintai..."
+              }
+            ],
+            "judger": {
+              "completeness": "partial",
+              "useful_indices": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "decision": "done",
+              "candidate_chunk_count": 4,
+              "accepted_chunk_count": 4
+            }
+          }
+        ],
+        "evidence": [
+          {
+            "text": "[Page: In Person Program | Section: 1-Year 12 Course Program (Full- and Part-Time Options)]\n\nThe signature 1-year 12 course program is ideal for those who wish to fast-track their graduate studies. Full-time students typically graduate in 4–5 quarters; part-time students may take up to 6 quarters. All students must graduate within 4 years maximum. All students complete:",
+            "chunk_id": "education__masters_programs__in_person_program__1_year_12_course_program_full_and_part_time_options__2",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+            "page_title": "In Person Program",
+            "section": "1-Year 12 Course Program (Full- and Part-Time Options)",
+            "section_breadcrumb": "1-Year 12 Course Program (Full- and Part-Time Options)",
+            "content_type": "text",
+            "program_type": "in_person",
+            "distance": 0.0
+          },
+          {
+            "text": "[Page: In Person Program | Section: 1-Year 12 Course Program (Full- and Part-Time Options)]\n\n• 12 courses (6 Core, 4 Electives, 2 Capstone).\n• A required Career Seminar throughout the program. Those with 3+ years of full-time work experience may petition for exemption.\n• A 2-quarter Capstone Project with a real industry partner; some students opt to complete a research Capstone.",
+            "chunk_id": "education__masters_programs__in_person_program__1_year_12_course_program_full_and_part_time_options__3",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+            "page_title": "In Person Program",
+            "section": "1-Year 12 Course Program (Full- and Part-Time Options)",
+            "section_breadcrumb": "1-Year 12 Course Program (Full- and Part-Time Options)",
+            "content_type": "list",
+            "program_type": "in_person",
+            "distance": 0.0
+          },
+          {
+            "text": "[Page: In Person Program | Section: 1-Year 12 Course Program (Full- and Part-Time Options)]\n\nCourses are primarily offered in the evenings and on weekends to support working professionals. The program is STEM/OPT eligible . Read More + Show Less -",
+            "chunk_id": "education__masters_programs__in_person_program__1_year_12_course_program_full_and_part_time_options__4",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+            "page_title": "In Person Program",
+            "section": "1-Year 12 Course Program (Full- and Part-Time Options)",
+            "section_breadcrumb": "1-Year 12 Course Program (Full- and Part-Time Options)",
+            "content_type": "text",
+            "program_type": "in_person",
+            "distance": 0.0
+          },
+          {
+            "text": "[Page: In Person Program | Section: 2-Year Thesis Track, 18 Course Program (Full-Time Only)]\n\nBeginning in academic year 2026-27, UChicago will offer an additional 2-year (21 month) pathway for In-Person, Full-Time applicants. The application for the 2-Year Thesis Track (Autumn 2026 start) closed on December 4, 2025. The 2-year Thesis Track (18 courses) pathway is optimized for those who want a longer master’s program, are interested in taking more elective courses, and have the capacity to complete a master’s thesis. The 2-year (21 month) pathway is completed over 6 academic quarters. The summer in between years 1 and 2 serves as a vacation quarter. Within the application portal, applicants will indicate their selection of this pathway. Read more about applying to the 2-Year program. All students complete:",
+            "chunk_id": "education__masters_programs__in_person_program__2_year_thesis_track_18_course_program_full_time_only__5",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+            "page_title": "In Person Program",
+            "section": "2-Year Thesis Track, 18 Course Program (Full-Time Only)",
+            "section_breadcrumb": "2-Year Thesis Track, 18 Course Program (Full-Time Only)",
+            "content_type": "text",
+            "program_type": "in_person",
+            "distance": 0.0
+          },
+          {
+            "text": "[Page: In Person Program | Section: 2-Year Thesis Track, 18 Course Program (Full-Time Only)]\n\n• 18 total courses (6 Core, 8 Electives, 2 Capstone, 2 Independent Study).\n• A required Career Seminar throughout the program. Those with 3+ years of full-time work experience may petition for exemption.\n• A 2-quarter Capstone Project .\n• A Master’s Thesis (traditional written thesis or project-based thesis).",
+            "chunk_id": "education__masters_programs__in_person_program__2_year_thesis_track_18_course_program_full_time_only__6",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+            "page_title": "In Person Program",
+            "section": "2-Year Thesis Track, 18 Course Program (Full-Time Only)",
+            "section_breadcrumb": "2-Year Thesis Track, 18 Course Program (Full-Time Only)",
+            "content_type": "list",
+            "program_type": "in_person",
+            "distance": 0.0
+          },
+          {
+            "text": "[Page: In Person Program | Section: 2-Year Thesis Track, 18 Course Program (Full-Time Only)]\n\nThis option is ideal for students seeking a longer academic experience with more time to complete more elective courses. Students must also have the capacity to complete a traditional written thesis or thesis project. Read More + Show Less -",
+            "chunk_id": "education__masters_programs__in_person_program__2_year_thesis_track_18_course_program_full_time_only__7",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+            "page_title": "In Person Program",
+            "section": "2-Year Thesis Track, 18 Course Program (Full-Time Only)",
+            "section_breadcrumb": "2-Year Thesis Track, 18 Course Program (Full-Time Only)",
+            "content_type": "text",
+            "program_type": "in_person",
+            "distance": 0.0
+          },
+          {
+            "text": "[Page: Online Program | Section: Your Time, Your Advancement]\n\nThe online applied data science format combines live synchronous classes with structured asynchronous coursework. You will engage in weekly, synchronous (real-time) classes with your instructors and peers. Live lectures provide the right forum to ask questions, work with peers, and maximize understanding of key concepts.  Collaborative and interactive learning with your classmates is facilitated by advanced meeting technology during and beyond synchronous classes. Synchronous classes are scheduled on weekday evenings at 6 pm, CT and on occasional Saturdays at 9 am, CT. Students admitted into the online program are expected to attend the live class sessions. Each week also includes asynchronous content (learning at your own pace) to complete when it is convenient for you. These activities prepare you for synchronous classes through lecture videos, readings, and discussions. The online",
+            "chunk_id": "education__masters_programs__online_program__your_time_your_advancement__7",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/online-program/",
+            "page_title": "Online Program",
+            "section": "Your Time, Your Advancement",
+            "section_breadcrumb": "Your Time, Your Advancement",
+            "content_type": "text",
+            "program_type": "online",
+            "distance": 0.0
+          },
+          {
+            "text": "[Page: Online Program | Section: Your Time, Your Advancement]\n\nyou for synchronous classes through lecture videos, readings, and discussions. The online format allows you to work on data science projects, group collaborations, and assignments around your personal and professional commitments.",
+            "chunk_id": "education__masters_programs__online_program__your_time_your_advancement__8",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/online-program/",
+            "page_title": "Online Program",
+            "section": "Your Time, Your Advancement",
+            "section_breadcrumb": "Your Time, Your Advancement",
+            "content_type": "text",
+            "program_type": "online",
+            "distance": 0.0
+          },
+          {
+            "text": "[Page: Online Program | Section: Academic Rigor Meets Work/Life Balance]\n\nThe Online MS in Applied Data Science program at the University of Chicago delivers a structured online learning experience with live classes designed for working professionals. You will benefit from the same top faculty, bright peer group, and academic rigor as the In-Person program. You may complete the program full- or part-time. Full-time and part-time students begin in Autumn quarter. Please visit the In-Person program page if you are interested in exploring those full- and part-time options for entrance Autumn quarter. Online Program Director, Arnab Bose, PhD",
+            "chunk_id": "education__masters_programs__online_program__academic_rigor_meets_work_life_balance__1",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/online-program/",
+            "page_title": "Online Program",
+            "section": "Academic Rigor Meets Work/Life Balance",
+            "section_breadcrumb": "Academic Rigor Meets Work/Life Balance",
+            "content_type": "text",
+            "program_type": "online",
+            "distance": 0.0
+          },
+          {
+            "text": "[Page: Faqs | Section: Online Program > How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?]\n\nClasses generally take place on evenings and weekends in order to allow our students and instructors to maintain their professional schedules. The Master’s in Applied Data Science Online Program is both synchronous and asynchronous. The same as our In-Person program, students are required to participate in weekly, live meetings with their instructors and peers, complete readings and coursework, and engage in discussion.",
+            "chunk_id": "education__masters_programs__ms_in_applied_data_science__faqs__how_will_enrolling_in_master_s_in_applied_data_science_online_program_impact_my_schedule_are_classes_held_synchronously_asynchronously_or_both__32",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/",
+            "page_title": "Faqs",
+            "section": "How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?",
+            "section_breadcrumb": "Online Program > How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?",
+            "content_type": "text",
+            "program_type": "general",
+            "distance": 0.0
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 13784,
+          "completion_tokens": 939,
+          "total_tokens": 14723,
+          "llm_calls": 10
+        },
+        "metrics": {
+          "tool_calls": 10,
+          "loop_count": 4,
+          "evidence_count": 10,
+          "llm_calls": 10,
+          "judge_calls": null,
+          "valid_fetch_count": null,
+          "invalid_fetch_count": null,
+          "fallback_triggered": null
+        }
+      }
+    },
+    "pipeline_grag_v2": {
+      "pipeline_id": "pipeline_grag_v2",
+      "display_name": "GRAG v2",
+      "answer": "Both the In-Person and Online MS-ADS programs offer full-time and part-time study-load options [8]. \n\n- **In-Person**: The 1-year 12-course program supports both full-time (typically 4–5 quarters) and part-time (up to 6 quarters) enrollment [1]. The 2-year Thesis Track is full-time only [2][3].\n- **Online**: Students may pursue the degree on a part-time (2 courses per quarter) or full-time (3 courses per quarter) schedule [6]. The online format also combines synchronous evening/Saturday classes with asynchronous coursework to accommodate professional schedules [4][5][7].\n\nFull-time students generally take 3 classes per quarter, while part-time students take 2 classes per quarter in both formats [8].",
+      "sources": [
+        {
+          "page_title": "In-Person Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program"
+        },
+        {
+          "page_title": "Online Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/online-program"
+        },
+        {
+          "page_title": "FAQs",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs"
+        },
+        {
+          "page_title": "Course Progressions",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P2"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P2] In-Person Program\n[N1] Page Introduction — Section (1 content block)\n[N2] Tailor Your Data Science Journey — Section (1 content block)\n[N3] 1-Year 12 Course Program (Full- and Part-Time Options) — Section (1 content block)\n[N4] 2-Year Thesis Track, 18 Course Program (Full-Time Only) — Section (2 content blocks)\n[N5] Comparison Chart — Section (1 content block)\n[N6] Your Career Success — Section (1 content block)\n[N7] Your Engagement — Section (1 content block)\n[N8] Your Student Experience — Section (1 content block)\n[N9] Career Outcomes in Data Science — Section (1 content block)\n[N10] By and For Data Science Innovators — Section (1 content block)\n[N11] Get in Touch — Section (1 content block)\n[N12] Course Progression Tabs — ProgressionTabs (47 content blocks)\n    ├── [N13] Noncredit Courses — ProgressionTab (7 content blocks)\n        preview: This accordion contains: Career Seminar (Seminar, required); Introduction to Statistical Concepts (Foundational, optional); R for Data Science (Foundational, optional); Python for Data Science (Foundational, optional); Advanced Linear Algebra for Machine Learning (Foundational, optional); Brush up on the Basics (Optional resource)\n    ├── [N14] Core Courses — ProgressionTab (8 content blocks)\n        preview: This accordion contains: Time Series Analysis and Forecasting; Statistical Models for Data Science; Machine Learning I; Machine Learning II; Data Engineering Platforms for Analytics or Big Data and Cloud Computing; Leadership and Consulting for Data Science; Data Science Capstone Project\n    ├── [N15] Sample Elective Courses — ProgressionTab (32 content blocks)\n        ├── [N16] Accordion — Accordion (32 content blocks)\n            preview: This accordion contains: Advanced Computer Vision with Deep Learning; Advanced Machine Learning and Artificial Intelligence; Applied Generative AI: Agents and Multimodal Intelligence; Bayesian Machine Learning with Generative AI Applications; Causal Models for Data Science; Data Science for Algorithmic Marketing; Data Science for Healthcare; Data Visualization Techniques; Digital Marketing Analytics in Theory and Practice; Deep Reinforcement Learning; Generative AI: Principles and Applications; Machine Learning Operations; Next-Gen NLP: LLM and Agentic AI in Practice; Optimization and Simulation Methods for Data Science; Quantitative Finance: Methods and Applications; Real Time Intelligent Systems; Supply Chain Optimization"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "P2 covers in-person program details including track structures; likely lists study-load options. Inspect to find relevant nodes."
+        },
+        {
+          "step": 2,
+          "tool_calls": [
+            {
+              "name": "fetch_graph_content",
+              "args": {
+                "node_refs": [
+                  "N3",
+                  "N4",
+                  "N5"
+                ]
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_graph_content",
+              "content": "[N3] 1-Year 12 Course Program (Full- and Part-Time Options) — path: In-Person Program > 1-Year 12 Course Program (Full- and Part-Time Options)\n  [E1] The signature 1-year 12 course program is ideal for those who wish to fast-track their graduate studies. Full-time students typically graduate in 4–5 quarters; part-time students may take up to 6 quarters. All students must graduate within 4 years maximum.\nAll students complete:\n1. 12 courses (6 Core, 4 Electives, 2 Capstone).\n2. A required Career Seminar throughout the program. Those with 3+ years of full-time work experience may petition for exemption.\n3. A 2-quarter Capstone Project with a real industry partner; some students opt to complete a research Capstone.\nCourses are primarily offered in the evenings and on weekends to support working professionals. The program is STEM/OPT eligible .\n\n[N4] 2-Year Thesis Track, 18 Course Program (Full-Time Only) — path: In-Person Program > 2-Year Thesis Track, 18 Course Program (Full-Time Only)\n  [E2] Beginning in academic year 2026-27, UChicago will offer an additional 2-year (21 month) pathway for In-Person, Full-Time applicants. The application for the 2-Year Thesis Track (Autumn 2026 start) closed on December 4, 2025.\nThe 2-year Thesis Track (18 courses) pathway is optimized for those who want a longer master’s program, are interested in taking more elective courses, and have the capacity to complete a master’s thesis. The 2-year (21 month) pathway is completed over 6 academic quarters. The summer in between years 1 and 2 serves as a vacation quarter.\nWithin the application portal, applicants will indicate their selection of this pathway. Read more about applying to the 2-Year program.\nAll students complete:\n1. 18 total courses (6 Core, 8 Electives, 2 Capstone, 2 Independent Study).\n2. A required Career Seminar throughout the program.\n  [E3] 2 Capstone, 2 Independent Study).\n2. A required Career Seminar throughout the program. Those with 3+ years of full-time work experience may petition for exemption.\n3. A 2-quarter Capstone Project .\n4. A Master’s Thesis (traditional written thesis or project-based thesis).\nThis option is ideal for students seeking a longer academic experience with more time to complete more elective courses. Students must also have the capacity to complete a traditional written thesis or thesis project.\n\n[N5] Comparison Chart — path: In-Person Program > Comparison Chart\n  [E4] This program is listed as a STEM designated degree by the U.S. Department of Homeland Security for the purposes of the STEM OPT extension allowing eligible students to apply. However, approval of STEM OPT is at the discretion of U.S. Citizenship & Immigration Services."
+            }
+          ],
+          "judger": {
+            "node_assessments": [
+              {
+                "node_ref": "N3",
+                "keep_evidence": [
+                  "E1"
+                ],
+                "comment": "E1 describes the 1-year 12-course program's structure (12 courses, full-time 4-5 quarters, part-time up to 6 quarters) and is relevant to study-load options for the In-Person program, but does not mention Online program options."
+              },
+              {
+                "node_ref": "N4",
+                "keep_evidence": [
+                  "E2",
+                  "E3"
+                ],
+                "comment": "E2 and E3 describe the 2-year thesis track (18 courses, full-time only, 6 quarters) as a study-load option for the In-Person program, but do not address Online program options."
+              },
+              {
+                "node_ref": "N5",
+                "keep_evidence": [],
+                "comment": "E4 only mentions STEM designation and OPT eligibility, which is not relevant to study-load options in either program."
+              }
+            ]
+          },
+          "decision_reason": "These nodes likely contain the study-load options (full-time/part-time) for the in-person program, which are needed to answer the question about both programs."
+        },
+        {
+          "step": 3,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P3"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P3] Online Program\n[N17] Page Introduction — Section (1 content block)\n[N18] Academic Rigor Meets Work/Life Balance — Section (1 content block)\n[N19] Master Data Science, Master Your Career — Section (1 content block)\n[N20] Get in Touch — Section (1 content block)\n[N21] Your Outcomes — Section (1 content block)\n[N22] Your Online Applied Data Science Experience — Section (1 content block)\n[N23] Your Access to Alumni — Section (1 content block)\n[N24] Your Time, Your Advancement — Section (2 content blocks)\n[N25] In-Person ‘Immersion Weekend’ — Section (1 content block)\n[N26] Note for International Students — Section (1 content block)\n[N27] Curriculum — Section (1 content block)\n[N28] Foundational Courses (noncredit, optional) — Section (2 content blocks)\n[N29] Career Seminar (noncredit, required) — Section (1 content block)\n[N30] Core Courses (6) — Section (1 content block)\n[N31] Elective Courses (4) — Section (1 content block)\n[N32] Capstone (2) — Section (1 content block)\n[N33] Additional Resources — Section (1 content block)\n[N34] Course Progression Tabs — ProgressionTabs (42 content blocks)\n    ├── [N35] Noncredit Courses — ProgressionTab (7 content blocks)\n        preview: This accordion contains: Career Seminar (Seminar, required); Introduction to Statistical Concepts (Foundational, optional); R for Data Science (Foundational, optional); Python for Data Science (Foundational, optional); Advanced Linear Algebra for Machine Learning (Foundational, optional); Brush up on the Basics (Optional resource)\n    ├── [N36] Core Courses — ProgressionTab (8 content blocks)\n        preview: This accordion contains: Time Series Analysis and Forecasting; Statistical Models for Data Science; Machine Learning I; Machine Learning II; Data Engineering Platforms for Analytics or Big Data and Cloud Computing; Leadership and Consulting for Data Science; Data Science Capstone Project\n    ├── [N37] Sample Elective Courses — ProgressionTab (27 content blocks)\n        ├── [N38] Accordion — Accordion (27 content blocks)\n            preview: This accordion contains: Advanced Computer Vision with Deep Learning; Advanced Machine Learning and Artificial Intelligence; Bayesian Machine Learning with Generative AI Applications; Data Science for Algorithmic Marketing; Data Science for Healthcare; Data Visualization Techniques; Digital Marketing Analytics in Theory and Practice; Quantitative Finance: Methods and Applications; Generative AI: Principles and Applications; Machine Learning Operations; Next-Gen NLP: LLM and Agentic AI in Practice; Real Time Intelligent Systems; Deep Reinforcement Learning; Supply Chain Optimization"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "Need to find study-load options for the Online MS-ADS program; P3 is the Online Program page and has not been inspected yet."
+        },
+        {
+          "step": 4,
+          "tool_calls": [
+            {
+              "name": "fetch_graph_content",
+              "args": {
+                "node_refs": [
+                  "N24",
+                  "N27"
+                ]
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_graph_content",
+              "content": "[N24] Your Time, Your Advancement — path: Online Program > Your Time, Your Advancement\n  [E5] The online applied data science format combines live synchronous classes with structured asynchronous coursework.\nYou will engage in weekly, synchronous (real-time) classes with your instructors and peers. Live lectures provide the right forum to ask questions, work with peers, and maximize understanding of key concepts. Collaborative and interactive learning with your classmates is facilitated by advanced meeting technology during and beyond synchronous classes.\nSynchronous classes are scheduled on weekday evenings at 6 pm, CT and on occasional Saturdays at 9 am, CT. Students admitted into the online program are expected to attend the live class sessions.\nEach week also includes asynchronous content (learning at your own pace) to complete when it is convenient for you. These activities prepare you for synchronous classes through lecture videos, readings, and discussions.\n  [E6] prepare you for synchronous classes through lecture videos, readings, and discussions. The online format allows you to work on data science projects, group collaborations, and assignments around your personal and professional commitments.\n\n[N27] Curriculum — path: Online Program > Curriculum\n  [E7] Students in the online applied data science program complete 12 courses (6 core, 4 elective, 2 Capstone) and our tailored Career Seminar*.\nOur rigorous curriculum is designed by and for data science innovators and leaders. Courses are reviewed annually to ensure the content keeps pace with the rapidly evolving landscape of data science .\nYou have the option to pursue the Master’s in Applied Data Science degree on a part- or full-time schedule. Part-time students enroll in two courses each quarter and take their courses in the evenings or on Saturdays. Full-time students take three courses per quarter. Some of their courses may be offered during the day."
+            }
+          ],
+          "judger": {
+            "node_assessments": [
+              {
+                "node_ref": "N24",
+                "keep_evidence": [
+                  "E5",
+                  "E6"
+                ],
+                "comment": "E5 and E6 describe the online program's study-load options: synchronous classes on weekday evenings and Saturdays, plus asynchronous coursework. This directly addresses the study-load options available in the Online MS-ADS program, which is relevant to the question about options in both programs."
+              },
+              {
+                "node_ref": "N27",
+                "keep_evidence": [
+                  "E7"
+                ],
+                "comment": "E7 explicitly states that students in the online program can pursue the degree on a part- or full-time schedule, with part-time enrolling in two courses per quarter and full-time in three courses per quarter. This directly provides study-load options for the Online MS-ADS program, relevant to the question."
+              }
+            ]
+          },
+          "decision_reason": "Need to find study-load options for the Online MS-ADS program. N24 'Your Time, Your Advancement' likely describes pacing/study-load options, and N27 'Curriculum' may outline program structure. Fetching both to gather evidence."
+        },
+        {
+          "step": 5,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P5"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P5] FAQs\n[N39] Page Introduction — Section (1 content block)\n[N40] Master’s in Applied Data Science FAQs — Section (1 content block)\n[N41] Course Progression Tabs — ProgressionTabs (46 content blocks)\n    ├── [N42] Application Process — ProgressionTab (18 content blocks)\n        ├── [N43] Accordion — Accordion (18 content blocks)\n            preview: This accordion contains: When will I receive my Master's in Applied Data Science admission decision?; If I finish my Master's in Applied Data Science application before the deadline, will I receive my decision early?; How do I submit the materials that will accompany my Master's in Applied Data Science application?; Does the admissions office allow recommenders to email their letter directly as an attachment to be included in an applicant’s file?; Do I need to provide my recommenders with instructions?; My recommender did not receive notification, can I resend it?; What materials do I need to submit to accompany my application for admission to the Masters in Applied Data Science program?; Once I upload my unofficial transcripts to my application, do I still need to provide an official transcript?; Is the GRE or GMAT required for the Master's in Applied Data Science program?; I took the\n    ├── [N44] International Students — ProgressionTab (4 content blocks)\n        preview: This accordion contains: Which Master's in Applied Data Science provides students with visas?; What is the total cost of tuition for the Master's in Applied Data Science program?; Is the Master's in Applied Data Science an approved OPT/STEM program?; Does the Master's in Applied Data Science program offer Curricular Practical Training (CPT)?; I have worked in the U.S. for more than two years. Does that mean that I am exempt from the TOEFL/IELTS requirement?\n    ├── [N45] Online Program — ProgressionTab (9 content blocks)\n        preview: This accordion contains: If I am a student in the In-Person Master's in Applied Data Science Program, may I take courses in the Online Program? Conversely, if I am a student in the Online Program, may I take courses in the In-Person program?; Do I need to be a US citizen or permanent resident to apply to Master's in Applied Data Science Online Program?; How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?; Will enrolling in Master's in Applied Data Science Online Program give me the opportunity to network with on-campus students, faculty/instructors, and advisors?; What value do employers place on the Master's in Applied Data Science Online degree?; Is the Master's in Applied Data Science Online program equally academically rigorous as the In-Person program?; Will my diploma indicate I\n    ├── [N46] MBA/MS — ProgressionTab (7 content blocks)\n        preview: This accordion contains: How do I apply to the MBA/MS joint degree program?; What courses will I take in the MBA/MS program?; Will MBA/MS courses be in-person or online?; Are standardized tests required for admission?; What are the main differences in programs and outcomes between the MBA/MS in Applied Data Science compared to Computer Science?\n    ├── [N47] 2-Year Thesis Track Program — ProgressionTab (8 content blocks)\n        preview: This accordion contains: What is the new 2-year thesis track program (18 courses), and how is it different from the 1-year program (12 courses)?; When can I apply for the 2-year thesis track program?; May I switch between the 1- and 2-year programs after officially enrolling in the MS-ADS program?; If I am admitted to the In-Person, Full-Time 1-year program, may I take any of the 2-year program electives?; What is the 2-year program's thesis requirement?; How many spots are available in the new 2-year program?"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "Need to find a source that explicitly compares study-load options across both programs; FAQs likely contain a direct comparison or statement of common options."
+        },
+        {
+          "step": 6,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P5"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P5] FAQs\n[N39] Page Introduction — Section (1 content block)\n[N40] Master’s in Applied Data Science FAQs — Section (1 content block)\n[N41] Course Progression Tabs — ProgressionTabs (46 content blocks)\n    ├── [N42] Application Process — ProgressionTab (18 content blocks)\n        ├── [N43] Accordion — Accordion (18 content blocks)\n            preview: This accordion contains: When will I receive my Master's in Applied Data Science admission decision?; If I finish my Master's in Applied Data Science application before the deadline, will I receive my decision early?; How do I submit the materials that will accompany my Master's in Applied Data Science application?; Does the admissions office allow recommenders to email their letter directly as an attachment to be included in an applicant’s file?; Do I need to provide my recommenders with instructions?; My recommender did not receive notification, can I resend it?; What materials do I need to submit to accompany my application for admission to the Masters in Applied Data Science program?; Once I upload my unofficial transcripts to my application, do I still need to provide an official transcript?; Is the GRE or GMAT required for the Master's in Applied Data Science program?; I took the\n    ├── [N44] International Students — ProgressionTab (4 content blocks)\n        preview: This accordion contains: Which Master's in Applied Data Science provides students with visas?; What is the total cost of tuition for the Master's in Applied Data Science program?; Is the Master's in Applied Data Science an approved OPT/STEM program?; Does the Master's in Applied Data Science program offer Curricular Practical Training (CPT)?; I have worked in the U.S. for more than two years. Does that mean that I am exempt from the TOEFL/IELTS requirement?\n    ├── [N45] Online Program — ProgressionTab (9 content blocks)\n        preview: This accordion contains: If I am a student in the In-Person Master's in Applied Data Science Program, may I take courses in the Online Program? Conversely, if I am a student in the Online Program, may I take courses in the In-Person program?; Do I need to be a US citizen or permanent resident to apply to Master's in Applied Data Science Online Program?; How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?; Will enrolling in Master's in Applied Data Science Online Program give me the opportunity to network with on-campus students, faculty/instructors, and advisors?; What value do employers place on the Master's in Applied Data Science Online degree?; Is the Master's in Applied Data Science Online program equally academically rigorous as the In-Person program?; Will my diploma indicate I\n    ├── [N46] MBA/MS — ProgressionTab (7 content blocks)\n        preview: This accordion contains: How do I apply to the MBA/MS joint degree program?; What courses will I take in the MBA/MS program?; Will MBA/MS courses be in-person or online?; Are standardized tests required for admission?; What are the main differences in programs and outcomes between the MBA/MS in Applied Data Science compared to Computer Science?\n    ├── [N47] 2-Year Thesis Track Program — ProgressionTab (8 content blocks)\n        preview: This accordion contains: What is the new 2-year thesis track program (18 courses), and how is it different from the 1-year program (12 courses)?; When can I apply for the 2-year thesis track program?; May I switch between the 1- and 2-year programs after officially enrolling in the MS-ADS program?; If I am admitted to the In-Person, Full-Time 1-year program, may I take any of the 2-year program electives?; What is the 2-year program's thesis requirement?; How many spots are available in the new 2-year program?"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "Need a source that explicitly compares study-load options across both programs or states which options are common to both. P5 (FAQs) likely contains a comparison or FAQ entry addressing study-load options for both In-Person and Online programs."
+        },
+        {
+          "step": 7,
+          "tool_calls": [
+            {
+              "name": "fetch_graph_content",
+              "args": {
+                "node_refs": [
+                  "N45",
+                  "N40"
+                ]
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_graph_content",
+              "content": "[N45] Online Program — path: FAQs > Online Program\n  [N45.1] Accordion\n    [E8] (structure summary) This accordion contains: If I am a student in the In-Person Master's in Applied Data Science Program, may I take courses in the Online Program? Conversely, if I am a student in the Online Program, may I take courses in the In-Person program?; Do I need to be a US citizen or permanent resident to apply to Master's in Applied Data Science Online Program?; How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?; Will enrolling in Master's in Applied Data Science Online Program give me the opportunity to network with on-campus students, faculty/instructors, and advisors?; What value do employers place on the Master's in Applied Data Science Online degree?; Is the Master's in Applied Data Science Online program equally academically rigorous as the In-Person program?; Will my diploma indicate I\n    [E9] (structure summary) equally academically rigorous as the In-Person program?; Will my diploma indicate I completed the Master's in Applied Data Science Program Online?\n    [N45.1.1] If I am a student in the In-Person Master's in Applied Data Science Program, may I take courses in the Online Program? Conversely, if I am a student in the Online Program, may I take courses in the In-Person program?\n      [E10] Currently, students may only take Master’s in Applied Data Science courses in the modality in which they are officially enrolled.\n    [N45.1.2] Do I need to be a US citizen or permanent resident to apply to Master's in Applied Data Science Online Program?\n      [E11] No, students do not have to be US citizen or resident to partake in the Online Program . Please note that the Online Program is not eligible for visa sponsorship.\n    [N45.1.3] How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?\n      [E12] Classes generally take place on evenings and weekends in order to allow our students and instructors to maintain their professional schedules. The Master’s in Applied Data Science Online Program is both synchronous and asynchronous. The same as our In-Person program, students are required to participate in weekly, live meetings with their instructors and peers, complete readings and coursework, and engage in discussion.\n    [N45.1.4] Will enrolling in Master's in Applied Data Science Online Program give me the opportunity to network with on-campus students, faculty/instructors, and advisors?\n      [E13] Yes. All Master’s in Applied Data Science Online Program students are invited to an annual ‘ Immersion Weekend ’ where attendees have opportunities to network and participate in other activities. On a rolling basis, our Career Services team will advertise additional opportunities to connect with employers and peers (e.g., virtual career fairs, virtual career advising/coaching appointments, and more).\n    [N45.1.5] What value do employers place on the Master's in Applied Data Science Online degree?\n      [E14] The value employers place on the Master’s in Applied Data Science degree is significant. As they hire Data Scientist, Data Engineers, and Data Analysts from the University of Chicago the expectations for technical competence, communication and influence skills, and exposure to advanced Data Science evolving technologies is high. The skills learned in the program translate directly into practice due to the program’s balance between theory and rigorous application experience developed in coursework and the Capstone project work delivered across the curriculum.\n    [N45.1.6] Is the Master's in Applied Data Science Online program equally academically rigorous as the In-Person program?\n      [E15] Yes. The Online Program curriculum is overseen by the same faculty curriculum committee as the In-Person program. Both programs are jointly reviewed and are held to the same high standards. Additionally, both programs are granted by the University of Chicago Physical Sciences Division .\n    [N45.1.7] Will my diploma indicate I completed the Master's in Applied Data Science Program Online?\n      [E16] No, your diploma will not include ‘Online’ in the name of your degree.\n\n[N40] Master’s in Applied Data Science FAQs — path: FAQs > Master’s in Applied Data Science FAQs\n  [E17] Learn more about what makes our program unique.\nDavid Uminsky, PhD – UChicago Data Science Institute, Executive Director"
+            }
+          ],
+          "judger": {
+            "node_assessments": [
+              {
+                "node_ref": "N45",
+                "keep_evidence": [
+                  "E12"
+                ],
+                "comment": "E12 directly states that the Online Program is both synchronous and asynchronous, and mentions that students are required to participate in weekly live meetings, complete readings and coursework, and engage in discussion, which are study-load options. Other content in this node covers topics like cross-enrollment, citizenship, networking, employer value, academic rigor, and diploma wording, which are not directly about study-load options."
+              },
+              {
+                "node_ref": "N40",
+                "keep_evidence": [],
+                "comment": "This node contains only a general promotional statement about the program's uniqueness and does not provide any specific information about study-load options."
+              }
+            ]
+          },
+          "decision_reason": "P5 FAQs likely contains a section on the Online Program (N45) and general FAQs (N40) that may explicitly compare study-load options across both In-Person and Online programs, providing the missing cross-program evidence."
+        },
+        {
+          "step": 8,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P4"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P4] Course Progressions\n[N48] Page Introduction — Section (1 content block)\n[N49] Flexible Formats — Section (1 content block)\n[N50] Curriculum Details — Section (4 content blocks)\n[N51] Course Progression Tabs — ProgressionTabs (144 content blocks)\n    ├── [N52] Sample Full-Time Schedule — ProgressionTab (44 content blocks)\n        ├── [N53] Prequarter • 5 Weeks — Quarter (4 content blocks)\n            preview: Prequarter • 5 Weeks includes: Optional: Introduction to Statistical Concepts (Foundational) (Optional), R for Data Science (Foundational) (Optional)\n        ├── [N54] Quarter 1 • 10 Weeks — Quarter (12 content blocks)\n            preview: Quarter 1 • 10 Weeks includes: Optional: Python for Data Science (Foundational) (Optional), Advanced Linear Algebra for Machine Learning (Foundational) (Optional); Core: Statistical Models for Data Science (Letter Grade); Core: Leadership and Consulting for Data Science (Letter Grade); Core (Choose 1): Data Engineering Platforms for Analytics or Big Data and Cloud Computing (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N55] Quarter 2 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 2 • 10 Weeks includes: Core: Machine Learning I (Letter Grade); Core: Time Series Analysis and Forecasting (Letter Grade); Elective: Elective 1 (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N56] Quarter 3 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 3 • 10 Weeks includes: Core: Machine Learning II (Letter Grade); Elective: Elective 2 (Letter Grade); Capstone: Data Science Capstone Project (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N57] Quarter 4 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 4 • 10 Weeks includes: Elective: Elective 3 (Letter Grade); Elective: Elective 4 (Letter Grade); Capstone: Data Science Capstone Project (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n    ├── [N58] Sample Part-Time Schedule — ProgressionTab (38 content blocks)\n        ├── [N59] Prequarter • 5 Weeks — Quarter (4 content blocks)\n            preview: Prequarter • 5 Weeks includes: Optional: Introduction to Statistical Concepts (Foundational) (Optional), R for Data Science (Foundational) (Optional)\n        ├── [N60] Quarter 1 • 10 Weeks — Quarter (8 content blocks)\n            preview: Quarter 1 • 10 Weeks includes: Optional: Python for Data Science (Foundational) (Optional), Advanced Linear Algebra for Machine Learning (Foundational) (Optional); Core: Statistical Models for Data Science (Letter Grade); Core: Data Engineering Platforms for Analytics or Big Data and Cloud Computing (Letter Grade)\n        ├── [N61] Quarter 2 • 10 Weeks — Quarter (5 content blocks)\n            preview: Quarter 2 • 10 Weeks includes: Core: Machine Learning I (Letter Grade); Core: Time Series Analysis and Forecasting (Letter Grade)\n        ├── [N62] Quarter 3 • 10 Weeks — Quarter (5 content blocks)\n            preview: Quarter 3 • 10 Weeks includes: Core: Machine Learning II (Letter Grade); Core: Leadership and Consulting for Data Science (Letter Grade)\n        ├── [N63] Quarter 4 • 10 Weeks — Quarter (5 content blocks)\n            preview: Quarter 4 • 10 Weeks includes: Elective: Elective 1 (Letter Grade); Elective: Elective 2 (Letter Grade)\n        ├── [N64] Quarter 5 • 10 Weeks — Quarter (5 content blocks)\n            preview: Quarter 5 • 10 Weeks includes: Capstone: Data Science Capstone Project (Letter Grade); Elective: Elective 3 (Letter Grade)\n        ├── [N65] Quarter 6 • 10 Weeks — Quarter (5 content blocks)\n            preview: Quarter 6 • 10 Weeks includes: Capstone: Data Science Capstone Project (Letter Grade); Elective: Elective 4 (Letter Grade)\n    ├── [N66] Sample 2-Year Full-Time Schedule — ProgressionTab (62 content blocks)\n        ├── [N67] Prequarter • 5 Weeks — Quarter (4 content blocks)\n            preview: Prequarter • 5 Weeks includes: Optional: Introduction to Statistical Concepts (Foundational) (Optional), R for Data Science (Foundational) (Optional)\n        ├── [N68] Quarter 1 • 10 Weeks — Quarter (12 content blocks)\n            preview: Quarter 1 • 10 Weeks includes: Optional: Python for Data Science (Foundational) (Optional), Advanced Linear Algebra for Machine Learning (Foundational) (Optional); Core: Statistical Models for Data Science (Letter Grade); Core: Data Engineering Platforms for Analytics or Big Data and Cloud Computing (Letter Grade); Core: Leadership and Consulting for Data Science (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N69] Quarter 2 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 2 • 10 Weeks includes: Core: Machine Learning I (Letter Grade); Core: Time Series Analysis and Forecasting (Letter Grade); Elective: Elective 1 (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N70] Quarter 3 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 3 • 10 Weeks includes: Core: Machine Learning II (Letter Grade); Elective: Elective 2 (Letter Grade); Capstone: Data Science Capstone Project (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N71] Quarter 4 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 4 • 10 Weeks includes: Elective: Elective 3 (Letter Grade); Elective: Elective 4 (Letter Grade); Capstone: Data Science Capstone Project (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N72] Quarter 5 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 5 • 10 Weeks includes: Elective: Elective 5 (Letter Grade); Elective: Elective 6 (Letter Grade); Indep Study I: Thesis Course I (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N73] Quarter 6 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 6 • 10 Weeks includes: Elective: Elective 7 (Letter Grade); Elective: Elective 8 (Letter Grade); Indep Study II: Thesis Course II (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "Need to find a direct comparison of study-load options across both programs; P4 (Course Progressions) may list options for each track and could clarify commonalities."
+        },
+        {
+          "step": 9,
+          "tool_calls": [
+            {
+              "name": "fetch_graph_content",
+              "args": {
+                "node_refs": [
+                  "N49",
+                  "N50"
+                ]
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_graph_content",
+              "content": "[N49] Flexible Formats — path: Course Progressions > Flexible Formats\n  [E18] We prepare you to advance in the competitive landscape of data science career paths with a focus on industry applications . Full- and Part-time options are available in both the Online and In-Person formats. Full-time students take 3 classes per quarter (300 units). Part-time students take 2 classes per quarter (200 units).\nA sample schedule for the MBA/MS can be found on the Booth website .\nPlease note: Courses offerings are subject to change. The Pass/Fail, Career Seminar is a degree requirement for all students unless eligible to waive. There is no tuition or fees for the Career Seminar. Similarly, the optional Foundational noncredit courses are available at no additional cost.\n\n[N50] Curriculum Details — path: Course Progressions > Curriculum Details\n  [E19] The Master’s in Applied Data Science program offers two curriculum pathways: a 12-course program and an 18-course thesis track. Both include core courses, electives, a multi-quarter Capstone Project, and a required Career Seminar. The 18-course program includes additional electives and a thesis requirement. See below for a breakdown of each component.\nFoundational Courses (Optional, Noncredit) : Foundational noncredit courses are designed and taught by Master’s in Applied Data Science faculty and instructors . These optional courses—available at no additional cost— provide the basis for the rigorous Applied Data Science degree. Course content undergirds the theoretical, strategic, and practical data science studies you will encounter in the rest of the curriculum.\nBeginning in academic year 2024-25, all entering students will complete a required online Foundational Skills Assessment.\n  [E20] all entering students will complete a required online Foundational Skills Assessment. This required assessment helps faculty and advisors understand how to best support you once you begin in the program. You may choose to opt-out of taking the Foundational Skill Assessments and instead register for all four Foundational courses. The four Foundational noncredit courses are listed below. Please note that Introduction to Statistical Concepts and R are considered pre-quarter courses and therefore take place during the 5 weeks leading up to your first quarter in the program. All Foundational courses are completed virtually for all students regardless of enrollment in the In-Person or Online Program.\nCareer Seminar (Required, Noncredit) : A multi-quarter seminar focused on building real-world skills like communication, collaboration, and ethical problem-solving.\n  [E21] real-world skills like communication, collaboration, and ethical problem-solving. Students with 3+ years of relevant full-time work experience may petition for a waiver.\nCore Courses : All students complete 6 core courses that build theoretical understanding and teach students to apply data science methods to real-world problems.\nElective Courses : Students in the 12-course track complete 4 electives. Students in the 18-course thesis track complete 8 electives and 2 independent study courses. Past electives include topics like Generative AI Principles, Natural Language Processing and Cognitive Computing, Health Analytics, Supply Chain Optimization, and more.\nCapstone Project : A required 2-quarter Capstone Project in which students work in teams to address a real industry or research problem.\n  [E22] Project in which students work in teams to address a real industry or research problem. Full-time students typically begin Capstone in their third quarter; part-time students begin two quarters before graduation."
+            }
+          ],
+          "judger": {
+            "node_assessments": [
+              {
+                "node_ref": "N49",
+                "keep_evidence": [
+                  "E18"
+                ],
+                "comment": "E18 explicitly states that full- and part-time options are available in both Online and In-Person formats, directly answering the question about study-load options."
+              },
+              {
+                "node_ref": "N50",
+                "keep_evidence": [],
+                "comment": "This node covers curriculum details such as pathways, foundational courses, career seminar, core/elective courses, and capstone, but does not mention study-load options (full-time/part-time) for the programs."
+              }
+            ]
+          },
+          "decision_reason": "P4 (Course Progressions) has 'Flexible Formats' and 'Curriculum Details' nodes that may explicitly compare study-load options across both In-Person and Online programs, which is the missing direct comparison."
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E1",
+          "status": "accepted",
+          "page_title": "In-Person Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program",
+          "text": "The signature 1-year 12 course program is ideal for those who wish to fast-track their graduate studies. Full-time students typically graduate in 4–5 quarters; part-time students may take up to 6 quarters. All students must graduate within 4 years maximum.\nAll students complete:\n1. 12 courses (6 Core, 4 Electives, 2 Capstone).\n2. A required Career Seminar throughout the program. Those with 3+ years of full-time work experience may petition for exemption.\n3. A 2-quarter Capstone Project with a real industry partner; some students opt to complete a research Capstone.\nCourses are primarily offered in the evenings and on weekends to support working professionals. The program is STEM/OPT eligible .",
+          "path": [
+            "In-Person Program",
+            "1-Year 12 Course Program (Full- and Part-Time Options)"
+          ],
+          "section_breadcrumb": "In-Person Program > 1-Year 12 Course Program (Full- and Part-Time Options)",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N3"
+            }
+          ],
+          "chunk_id": "chunk:300af5f88c174fa2",
+          "owner_node_id": "section:3cac986ae97c9914",
+          "page_id": "page:fe9d95e97a7ee76f",
+          "internal_metadata": {
+            "source_type": "body_text",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E2",
+          "status": "accepted",
+          "page_title": "In-Person Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program",
+          "text": "Beginning in academic year 2026-27, UChicago will offer an additional 2-year (21 month) pathway for In-Person, Full-Time applicants. The application for the 2-Year Thesis Track (Autumn 2026 start) closed on December 4, 2025.\nThe 2-year Thesis Track (18 courses) pathway is optimized for those who want a longer master’s program, are interested in taking more elective courses, and have the capacity to complete a master’s thesis. The 2-year (21 month) pathway is completed over 6 academic quarters. The summer in between years 1 and 2 serves as a vacation quarter.\nWithin the application portal, applicants will indicate their selection of this pathway. Read more about applying to the 2-Year program.\nAll students complete:\n1. 18 total courses (6 Core, 8 Electives, 2 Capstone, 2 Independent Study).\n2. A required Career Seminar throughout the program.",
+          "path": [
+            "In-Person Program",
+            "2-Year Thesis Track, 18 Course Program (Full-Time Only)"
+          ],
+          "section_breadcrumb": "In-Person Program > 2-Year Thesis Track, 18 Course Program (Full-Time Only)",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N4"
+            }
+          ],
+          "chunk_id": "chunk:46c54f125eb1965a",
+          "owner_node_id": "section:a19859c1a0178718",
+          "page_id": "page:fe9d95e97a7ee76f",
+          "internal_metadata": {
+            "source_type": "body_text",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E3",
+          "status": "accepted",
+          "page_title": "In-Person Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program",
+          "text": "2 Capstone, 2 Independent Study).\n2. A required Career Seminar throughout the program. Those with 3+ years of full-time work experience may petition for exemption.\n3. A 2-quarter Capstone Project .\n4. A Master’s Thesis (traditional written thesis or project-based thesis).\nThis option is ideal for students seeking a longer academic experience with more time to complete more elective courses. Students must also have the capacity to complete a traditional written thesis or thesis project.",
+          "path": [
+            "In-Person Program",
+            "2-Year Thesis Track, 18 Course Program (Full-Time Only)"
+          ],
+          "section_breadcrumb": "In-Person Program > 2-Year Thesis Track, 18 Course Program (Full-Time Only)",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N4"
+            }
+          ],
+          "chunk_id": "chunk:1e77600115aeb5ac",
+          "owner_node_id": "section:a19859c1a0178718",
+          "page_id": "page:fe9d95e97a7ee76f",
+          "internal_metadata": {
+            "source_type": "body_text",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E5",
+          "status": "accepted",
+          "page_title": "Online Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/online-program",
+          "text": "The online applied data science format combines live synchronous classes with structured asynchronous coursework.\nYou will engage in weekly, synchronous (real-time) classes with your instructors and peers. Live lectures provide the right forum to ask questions, work with peers, and maximize understanding of key concepts. Collaborative and interactive learning with your classmates is facilitated by advanced meeting technology during and beyond synchronous classes.\nSynchronous classes are scheduled on weekday evenings at 6 pm, CT and on occasional Saturdays at 9 am, CT. Students admitted into the online program are expected to attend the live class sessions.\nEach week also includes asynchronous content (learning at your own pace) to complete when it is convenient for you. These activities prepare you for synchronous classes through lecture videos, readings, and discussions.",
+          "path": [
+            "Online Program",
+            "Your Time, Your Advancement"
+          ],
+          "section_breadcrumb": "Online Program > Your Time, Your Advancement",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N24"
+            }
+          ],
+          "chunk_id": "chunk:71bbb9b08d994663",
+          "owner_node_id": "section:60673f375af177c4",
+          "page_id": "page:dd76146bcccd1e59",
+          "internal_metadata": {
+            "source_type": "p",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E6",
+          "status": "accepted",
+          "page_title": "Online Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/online-program",
+          "text": "prepare you for synchronous classes through lecture videos, readings, and discussions. The online format allows you to work on data science projects, group collaborations, and assignments around your personal and professional commitments.",
+          "path": [
+            "Online Program",
+            "Your Time, Your Advancement"
+          ],
+          "section_breadcrumb": "Online Program > Your Time, Your Advancement",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N24"
+            }
+          ],
+          "chunk_id": "chunk:f32097b41bdf8921",
+          "owner_node_id": "section:60673f375af177c4",
+          "page_id": "page:dd76146bcccd1e59",
+          "internal_metadata": {
+            "source_type": "p",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E7",
+          "status": "accepted",
+          "page_title": "Online Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/online-program",
+          "text": "Students in the online applied data science program complete 12 courses (6 core, 4 elective, 2 Capstone) and our tailored Career Seminar*.\nOur rigorous curriculum is designed by and for data science innovators and leaders. Courses are reviewed annually to ensure the content keeps pace with the rapidly evolving landscape of data science .\nYou have the option to pursue the Master’s in Applied Data Science degree on a part- or full-time schedule. Part-time students enroll in two courses each quarter and take their courses in the evenings or on Saturdays. Full-time students take three courses per quarter. Some of their courses may be offered during the day.",
+          "path": [
+            "Online Program",
+            "Curriculum"
+          ],
+          "section_breadcrumb": "Online Program > Curriculum",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N27"
+            }
+          ],
+          "chunk_id": "chunk:21a0edf2e9aa6e6c",
+          "owner_node_id": "section:447bc4186ac70560",
+          "page_id": "page:dd76146bcccd1e59",
+          "internal_metadata": {
+            "source_type": "p",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E12",
+          "status": "accepted",
+          "page_title": "FAQs",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs",
+          "text": "Classes generally take place on evenings and weekends in order to allow our students and instructors to maintain their professional schedules. The Master’s in Applied Data Science Online Program is both synchronous and asynchronous. The same as our In-Person program, students are required to participate in weekly, live meetings with their instructors and peers, complete readings and coursework, and engage in discussion.",
+          "path": [
+            "FAQs",
+            "Online Program",
+            "How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?"
+          ],
+          "section_breadcrumb": "FAQs > Online Program > How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N45"
+            }
+          ],
+          "chunk_id": "chunk:96ba88ec970ae05e",
+          "owner_node_id": "accordion_item:c38699c5aea340ff",
+          "page_id": "page:a1d4f5293a26528e",
+          "internal_metadata": {
+            "source_type": "p",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E18",
+          "status": "accepted",
+          "page_title": "Course Progressions",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+          "text": "We prepare you to advance in the competitive landscape of data science career paths with a focus on industry applications . Full- and Part-time options are available in both the Online and In-Person formats. Full-time students take 3 classes per quarter (300 units). Part-time students take 2 classes per quarter (200 units).\nA sample schedule for the MBA/MS can be found on the Booth website .\nPlease note: Courses offerings are subject to change. The Pass/Fail, Career Seminar is a degree requirement for all students unless eligible to waive. There is no tuition or fees for the Career Seminar. Similarly, the optional Foundational noncredit courses are available at no additional cost.",
+          "path": [
+            "Course Progressions",
+            "Flexible Formats"
+          ],
+          "section_breadcrumb": "Course Progressions > Flexible Formats",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N49"
+            }
+          ],
+          "chunk_id": "chunk:b457d1b6dcda29e6",
+          "owner_node_id": "section:7bffbe0db21f8ac3",
+          "page_id": "page:4f1aba5696f12664",
+          "internal_metadata": {
+            "source_type": "body_text",
+            "score": null,
+            "score_breakdown": {}
+          }
+        }
+      ],
+      "time_sec": 59.205,
+      "low_confidence": false,
+      "error": null,
+      "progress_summary": {
+        "summary_covering": "P2 (In-Person Program): N3 (1-Year 12 Course Program) and N4 (2-Year Thesis Track) were checked; both provide study-load options (full-time/part-time for N3, full-time only for N4) but only for In-Person. N5 (Comparison Chart) was not useful. P3 (Online Program): N24 (Your Time, Your Advancement) and N27 (Curriculum) were checked; both provide study-load options (synchronous/asynchronous, part-time/full-time) for Online. P5 (FAQs): N45 (Online Program) was useful for online study-load; N40 (Master's FAQs) was not. P4 (Course Progressions): N49 (Flexible Formats) was useful, explicitly stating full- and part-time options in both formats; N50 (Curriculum Details) was not. Missing: None; all parts of the question are covered by accepted evidence.",
+        "decision_trace_narrative": "Turn 1: Fetched P2 N3 and N4 to find In-Person study-load options; found full-time/part-time for 1-year and full-time for 2-year. Turn 2: Fetched P3 N24 and N27 to find Online study-load options; found synchronous/asynchronous and part-time/full-time. Turn 3: Fetched P5 N45 and N40 to check FAQs for any additional comparison; N45 provided online schedule details, N40 was not useful. Turn 4: Fetched P4 N49 and N50 to find explicit comparison; N49 directly states full- and part-time options in both formats, N50 was not useful. No re-queries of already-fetched nodes."
+      },
+      "raw_debug": {
+        "response": {
+          "answer": "Both the In-Person and Online MS-ADS programs offer full-time and part-time study-load options [8]. \n\n- **In-Person**: The 1-year 12-course program supports both full-time (typically 4–5 quarters) and part-time (up to 6 quarters) enrollment [1]. The 2-year Thesis Track is full-time only [2][3].\n- **Online**: Students may pursue the degree on a part-time (2 courses per quarter) or full-time (3 courses per quarter) schedule [6]. The online format also combines synchronous evening/Saturday classes with asynchronous coursework to accommodate professional schedules [4][5][7].\n\nFull-time students generally take 3 classes per quarter, while part-time students take 2 classes per quarter in both formats [8].",
+          "citations": [
+            {
+              "index": 1,
+              "title": "In-Person Program",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program",
+              "snippet": "The signature 1-year 12 course program is ideal for those who wish to fast-track their graduate studies. Full-time students typically graduate in 4–5 quarters; part-time students m"
+            },
+            {
+              "index": 2,
+              "title": "In-Person Program",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program",
+              "snippet": "Beginning in academic year 2026-27, UChicago will offer an additional 2-year (21 month) pathway for In-Person, Full-Time applicants. The application for the 2-Year Thesis Track (Au"
+            },
+            {
+              "index": 3,
+              "title": "In-Person Program",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program",
+              "snippet": "2 Capstone, 2 Independent Study). 2. A required Career Seminar throughout the program. Those with 3+ years of full-time work experience may petition for exemption. 3. A 2-quarter C"
+            },
+            {
+              "index": 4,
+              "title": "Online Program",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/online-program",
+              "snippet": "The online applied data science format combines live synchronous classes with structured asynchronous coursework. You will engage in weekly, synchronous (real-time) classes with yo"
+            },
+            {
+              "index": 5,
+              "title": "Online Program",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/online-program",
+              "snippet": "prepare you for synchronous classes through lecture videos, readings, and discussions. The online format allows you to work on data science projects, group collaborations, and assi"
+            },
+            {
+              "index": 6,
+              "title": "Online Program",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/online-program",
+              "snippet": "Students in the online applied data science program complete 12 courses (6 core, 4 elective, 2 Capstone) and our tailored Career Seminar*. Our rigorous curriculum is designed by an"
+            },
+            {
+              "index": 7,
+              "title": "FAQs",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs",
+              "snippet": "Classes generally take place on evenings and weekends in order to allow our students and instructors to maintain their professional schedules. The Master’s in Applied Data Science "
+            },
+            {
+              "index": 8,
+              "title": "Course Progressions",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+              "snippet": "We prepare you to advance in the competitive landscape of data science career paths with a focus on industry applications . Full- and Part-time options are available in both the On"
+            }
+          ],
+          "debug": {
+            "tool_turns": 9,
+            "stop_reason": "sufficient_evidence",
+            "evidence_count": 8,
+            "sufficient": true,
+            "missing": "",
+            "log_path": "C:\\Users\\ss363\\Desktop\\Archive\\ads_rag_chatbot\\pipeline_grag_v2\\log\\2026-08-04_020322_d3a2f9505ab3.json",
+            "run_id": "d3a2f9505ab3"
+          }
+        },
+        "run_id": "d3a2f9505ab3",
+        "rewritten_queries": [
+          {
+            "id": "q1",
+            "query": "Which study-load options are available in the In-Person MS-ADS program?",
+            "target": "university-program"
+          },
+          {
+            "id": "q2",
+            "query": "Which study-load options are available in the Online MS-ADS program?",
+            "target": "university-program"
+          }
+        ],
+        "judgment": {
+          "sufficient": true,
+          "missing": "",
+          "comment": "P2 (In-Person Program): N3 (1-Year 12 Course Program) and N4 (2-Year Thesis Track) were checked; both provide study-load options (full-time/part-time for N3, full-time only for N4) but only for In-Person. N5 (Comparison Chart) was not useful. P3 (Online Program): N24 (Your Time, Your Advancement) and N27 (Curriculum) were checked; both provide study-load options (synchronous/asynchronous, part-time/full-time) for Online. P5 (FAQs): N45 (Online Program) was useful for online study-load; N40 (Master's FAQs) was not. P4 (Course Progressions): N49 (Flexible Formats) was useful, explicitly stating full- and part-time options in both formats; N50 (Curriculum Details) was not. Missing: None; all parts of the question are covered by accepted evidence."
+        },
+        "stop_reason": "sufficient_evidence",
+        "fallback": {
+          "triggered": false,
+          "pages_selected": [],
+          "reason": ""
+        },
+        "metrics": {
+          "agent_turns": 9,
+          "tool_calls": 9,
+          "judge_calls": 4,
+          "llm_calls": 24,
+          "valid_fetch_count": 4,
+          "invalid_fetch_count": 0,
+          "accepted_evidence_count": 8,
+          "stop_reason": "sufficient_evidence",
+          "fallback_triggered": false
+        },
+        "usage": {
+          "prompt_tokens": 37891,
+          "completion_tokens": 4212,
+          "total_tokens": 42103,
+          "llm_calls": 24
+        },
+        "progress_summary_history": [
+          {
+            "turn": 1,
+            "summary_covering": "No pages have been inspected yet, so no node paths have been checked. Nothing is covered; the question about study-load options in both programs remains entirely unanswered.",
+            "decision_trace_narrative": "Turn 1: The agent decided to inspect page P2, reasoning that it likely contains in-person program details including track structures and study-load options. The inspection succeeded, but no nodes have been evaluated yet.",
+            "sufficient": false,
+            "missing": "Evidence for study-load options in both In-Person and Online MS-ADS programs."
+          },
+          {
+            "turn": 2,
+            "summary_covering": "Page P2 (In-Person Program): Checked N3 (1-Year 12 Course Program) — useful, provides full-time and part-time options for the In-Person program. Checked N4 (2-Year Thesis Track) — useful, provides full-time only option for the In-Person program. Checked N5 (Comparison Chart) — not useful, only mentions STEM/OPT. Still missing: study-load options for the Online MS-ADS program; no Online program page has been evaluated yet.",
+            "decision_trace_narrative": "Turn 1: Fetched nodes on the In-Person Program page (N3, N4, N5) to identify study-load options for that program. N3 and N4 provided relevant options (full-time/part-time for 1-year, full-time only for 2-year), N5 was irrelevant. No Online program nodes have been fetched yet.",
+            "sufficient": false,
+            "missing": "Study-load options for the Online MS-ADS program."
+          },
+          {
+            "turn": 3,
+            "summary_covering": "P2 (In-Person Program): Checked N3 (1-Year 12 Course Program) and N4 (2-Year Thesis Track) — both provide study-load options for the In-Person program (full-time/part-time for 1-year; full-time only for 2-year). N5 (Comparison Chart) was not useful. Still missing: study-load options for the Online MS-ADS program (P3).",
+            "decision_trace_narrative": "Turn 1: Inspected P2 N3 to find study-load options for In-Person program; found E1 (1-year program with full-time/part-time). Turn 2: Inspected P2 N4 to find additional study-load options; found E2/E3 (2-year thesis track, full-time only). Turn 3: Inspected P2 N5 to compare options; found E4 not relevant. Turn 4: Inspected P3 (Online Program) to find study-load options for Online program; page fetched successfully, but no evidence extracted yet.",
+            "sufficient": false,
+            "missing": "Study-load options for the Online MS-ADS program (P3) have not been extracted yet."
+          },
+          {
+            "turn": 4,
+            "summary_covering": "Page P2 (In-Person Program): Checked N3 (1-Year 12 Course Program) and N4 (2-Year Thesis Track). Both provide study-load options for the In-Person program (full-time/part-time for 1-year; full-time only for 2-year). N5 (Comparison Chart) was not useful. Page P3 (Online Program): Checked N24 (Your Time, Your Advancement) and N27 (Curriculum). Both provide study-load options for the Online program (synchronous/asynchronous format; part-time/full-time schedules). Still missing: A direct comparison or explicit statement that the same study-load options are available in both programs. The evidence covers options for each program separately, but does not explicitly state which options are common to both.",
+            "decision_trace_narrative": "Turn 1: Fetched N3 and N4 from In-Person Program to identify study-load options for that program. Found full-time/part-time for 1-year and full-time only for 2-year. Turn 2: Fetched N24 and N27 from Online Program to identify study-load options for that program. Found part-time/full-time schedules and synchronous/asynchronous format. No re-queries. The agent has gathered evidence for both programs but has not yet found a source that explicitly compares or lists common options.",
+            "sufficient": false,
+            "missing": "Explicit evidence that the same study-load options (e.g., full-time/part-time) are available in both In-Person and Online MS-ADS programs, or a direct comparison of study-load options across the two programs."
+          },
+          {
+            "turn": 5,
+            "summary_covering": "Page P2 (In-Person Program): Checked N3 (1-Year 12 Course Program) and N4 (2-Year Thesis Track) — both provide study-load options (full-time/part-time for 1-year; full-time only for 2-year) but do not mention Online program. N5 (Comparison Chart) was not useful (only STEM/OPT). Page P3 (Online Program): Checked N24 (Your Time, Your Advancement) and N27 (Curriculum) — both provide study-load options for Online (synchronous/asynchronous, part-time/full-time with course counts). Still missing: a source that explicitly compares study-load options across both programs or states which options are common to both.",
+            "decision_trace_narrative": "Turn 1: Inspected P2 N3 (1-Year 12 Course Program) to find study-load options for In-Person; found full-time/part-time but no comparison to Online. Turn 2: Inspected P2 N4 (2-Year Thesis Track) to find another In-Person option; found full-time only, still no Online comparison. Turn 3: Inspected P2 N5 (Comparison Chart) hoping for a direct comparison; found only STEM/OPT, not relevant. Turn 4: Inspected P3 N24 (Your Time, Your Advancement) to find Online study-load options; found synchronous/asynchronous format. Turn 5: Inspected P3 N27 (Curriculum) to find Online study-load options; found part-time/full-time schedules with course counts. No turn re-queried an already-fetched node.",
+            "sufficient": false,
+            "missing": "A source that explicitly compares study-load options across both programs or states which options are common to both (e.g., part-time and full-time availability in both)."
+          },
+          {
+            "turn": 6,
+            "summary_covering": "P2 (In-Person Program): Checked N3 (1-Year 12 Course Program) and N4 (2-Year Thesis Track) — both provide study-load options (full-time/part-time for 1-year; full-time only for 2-year) but do not mention Online program. N5 (Comparison Chart) was not useful (only STEM/OPT). P3 (Online Program): Checked N24 (Your Time, Your Advancement) and N27 (Curriculum) — both provide study-load options (synchronous/asynchronous, part-time/full-time schedules) but do not mention In-Person program. Missing: A source that explicitly compares study-load options across both programs or states which options are common to both.",
+            "decision_trace_narrative": "Turn 1: Inspected P2 N3 and N4 to gather In-Person study-load options; found evidence but no cross-program comparison. Turn 2: Inspected P2 N5 (Comparison Chart) hoping for a comparison; not useful. Turn 3: Inspected P3 N24 and N27 to gather Online study-load options; found evidence but no cross-program comparison. Turn 4 (this turn): Inspected P5 (FAQs) to find a source that explicitly compares study-load options across both programs; the inspection was successful, but the node evaluation log does not yet include any findings from P5, so no new evidence has been added.",
+            "sufficient": false,
+            "missing": "A source that explicitly compares study-load options across both In-Person and Online MS-ADS programs, or states which options are common to both."
+          },
+          {
+            "turn": 7,
+            "summary_covering": "Page P2 (In-Person Program): Checked N3 (1-Year 12 Course Program) and N4 (2-Year Thesis Track) — both provide study-load options (full-time/part-time for N3; full-time only for N4) for the In-Person program. N5 (Comparison Chart) was not useful (only STEM/OPT info). Page P3 (Online Program): Checked N24 (Your Time, Your Advancement) and N27 (Curriculum) — both provide study-load options for the Online program (synchronous/asynchronous, part-time/full-time schedules). Page P5 (FAQs): Checked N45 (Online Program) — provides some study-load info (evenings/weekends, synchronous/asynchronous) but not a direct comparison; N40 (Master's FAQs) was not useful (promotional only). Missing: Direct evidence that explicitly lists study-load options available in both programs, or a comparison chart showing which options are common to both.",
+            "decision_trace_narrative": "Turn 1: Fetched P2 nodes N3, N4, N5 to find study-load options for In-Person program. N3 and N4 provided relevant options; N5 was not useful. Turn 2: Fetched P3 nodes N24 and N27 to find study-load options for Online program. Both provided relevant options. Turn 3: Fetched P5 nodes N45 and N40 to find cross-program comparison or explicit mention of options in both. N45 provided some online study-load details but no direct comparison; N40 was not useful. No re-queries of already-fetched nodes occurred.",
+            "sufficient": false,
+            "missing": "Direct evidence that explicitly lists study-load options available in both In-Person and Online programs, or a comparison chart showing which options are common to both."
+          },
+          {
+            "turn": 8,
+            "summary_covering": "P2 (In-Person Program): Checked N3 (1-Year 12 Course Program) and N4 (2-Year Thesis Track) — both provide study-load options (full-time/part-time for 1-year; full-time only for 2-year) but do not mention Online. N5 (Comparison Chart) was not useful. P3 (Online Program): Checked N24 (Your Time, Your Advancement) and N27 (Curriculum) — both provide study-load options (synchronous/asynchronous, part-time/full-time schedules) but do not mention In-Person. P5 (FAQs): Checked N45 (Online Program) — provides online study-load details (evenings/weekends, synchronous/asynchronous) but no In-Person comparison. N40 (Master's in Applied Data Science FAQs) was not useful. Still missing: a direct comparison or explicit statement of study-load options common to both programs.",
+            "decision_trace_narrative": "Turn 1: Inspected P2 (In-Person Program) to find study-load options; found 1-year (full/part-time) and 2-year (full-time) options, but no mention of Online. Turn 2: Inspected P3 (Online Program) to find study-load options; found synchronous/asynchronous and part/full-time schedules, but no mention of In-Person. Turn 3: Inspected P5 (FAQs) to find a direct comparison; found online-specific schedule details but no cross-program comparison. No re-queries of already-fetched nodes.",
+            "sufficient": false,
+            "missing": "A source that explicitly lists study-load options available in both In-Person and Online programs, or a comparison chart that includes both programs' study-load options."
+          },
+          {
+            "turn": 9,
+            "summary_covering": "P2 (In-Person Program): N3 (1-Year 12 Course Program) and N4 (2-Year Thesis Track) were checked; both provide study-load options (full-time/part-time for N3, full-time only for N4) but only for In-Person. N5 (Comparison Chart) was not useful. P3 (Online Program): N24 (Your Time, Your Advancement) and N27 (Curriculum) were checked; both provide study-load options (synchronous/asynchronous, part-time/full-time) for Online. P5 (FAQs): N45 (Online Program) was useful for online study-load; N40 (Master's FAQs) was not. P4 (Course Progressions): N49 (Flexible Formats) was useful, explicitly stating full- and part-time options in both formats; N50 (Curriculum Details) was not. Missing: None; all parts of the question are covered by accepted evidence.",
+            "decision_trace_narrative": "Turn 1: Fetched P2 N3 and N4 to find In-Person study-load options; found full-time/part-time for 1-year and full-time for 2-year. Turn 2: Fetched P3 N24 and N27 to find Online study-load options; found synchronous/asynchronous and part-time/full-time. Turn 3: Fetched P5 N45 and N40 to check FAQs for any additional comparison; N45 provided online schedule details, N40 was not useful. Turn 4: Fetched P4 N49 and N50 to find explicit comparison; N49 directly states full- and part-time options in both formats, N50 was not useful. No re-queries of already-fetched nodes.",
+            "sufficient": true,
+            "missing": ""
+          }
+        ],
+        "node_evaluation_log": {
+          "P2 (In-Person Program)": {
+            "N3 (1-Year 12 Course Program (Full- and Part-Time Options))": {
+              "node_id": "section:3cac986ae97c9914",
+              "path": [
+                "In-Person Program",
+                "1-Year 12 Course Program (Full- and Part-Time Options)"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E1",
+                  "chunk_id": "chunk:300af5f88c174fa2",
+                  "text_preview": "The signature 1-year 12 course program is ideal for those who wish to fast-track their graduate studies. Full-time students typically graduate in 4–5 "
+                }
+              ],
+              "comment": "E1 describes the 1-year 12-course program's structure (12 courses, full-time 4-5 quarters, part-time up to 6 quarters) and is relevant to study-load options for the In-Person program, but does not mention Online program options."
+            },
+            "N4 (2-Year Thesis Track, 18 Course Program (Full-Time Only))": {
+              "node_id": "section:a19859c1a0178718",
+              "path": [
+                "In-Person Program",
+                "2-Year Thesis Track, 18 Course Program (Full-Time Only)"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E2",
+                  "chunk_id": "chunk:46c54f125eb1965a",
+                  "text_preview": "Beginning in academic year 2026-27, UChicago will offer an additional 2-year (21 month) pathway for In-Person, Full-Time applicants. The application f"
+                },
+                {
+                  "evidence_ref": "E3",
+                  "chunk_id": "chunk:1e77600115aeb5ac",
+                  "text_preview": "2 Capstone, 2 Independent Study).\n2. A required Career Seminar throughout the program. Those with 3+ years of full-time work experience may petition f"
+                }
+              ],
+              "comment": "E2 and E3 describe the 2-year thesis track (18 courses, full-time only, 6 quarters) as a study-load option for the In-Person program, but do not address Online program options."
+            },
+            "N5 (Comparison Chart)": {
+              "node_id": "section:d145b7000f73fe04",
+              "path": [
+                "In-Person Program",
+                "Comparison Chart"
+              ],
+              "eff_evidence": [],
+              "comment": "E4 only mentions STEM designation and OPT eligibility, which is not relevant to study-load options in either program."
+            }
+          },
+          "P3 (Online Program)": {
+            "N24 (Your Time, Your Advancement)": {
+              "node_id": "section:60673f375af177c4",
+              "path": [
+                "Online Program",
+                "Your Time, Your Advancement"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E5",
+                  "chunk_id": "chunk:71bbb9b08d994663",
+                  "text_preview": "The online applied data science format combines live synchronous classes with structured asynchronous coursework.\nYou will engage in weekly, synchrono"
+                },
+                {
+                  "evidence_ref": "E6",
+                  "chunk_id": "chunk:f32097b41bdf8921",
+                  "text_preview": "prepare you for synchronous classes through lecture videos, readings, and discussions. The online format allows you to work on data science projects, "
+                }
+              ],
+              "comment": "E5 and E6 describe the online program's study-load options: synchronous classes on weekday evenings and Saturdays, plus asynchronous coursework. This directly addresses the study-load options available in the Online MS-ADS program, which is relevant to the question about options in both programs."
+            },
+            "N27 (Curriculum)": {
+              "node_id": "section:447bc4186ac70560",
+              "path": [
+                "Online Program",
+                "Curriculum"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E7",
+                  "chunk_id": "chunk:21a0edf2e9aa6e6c",
+                  "text_preview": "Students in the online applied data science program complete 12 courses (6 core, 4 elective, 2 Capstone) and our tailored Career Seminar*.\nOur rigorou"
+                }
+              ],
+              "comment": "E7 explicitly states that students in the online program can pursue the degree on a part- or full-time schedule, with part-time enrolling in two courses per quarter and full-time in three courses per quarter. This directly provides study-load options for the Online MS-ADS program, relevant to the question."
+            }
+          },
+          "P5 (FAQs)": {
+            "N45 (Online Program)": {
+              "node_id": "progression_tab:bd389bc188ec2e10",
+              "path": [
+                "FAQs",
+                "Online Program"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E12",
+                  "chunk_id": "chunk:96ba88ec970ae05e",
+                  "text_preview": "Classes generally take place on evenings and weekends in order to allow our students and instructors to maintain their professional schedules. The Mas"
+                }
+              ],
+              "comment": "E12 directly states that the Online Program is both synchronous and asynchronous, and mentions that students are required to participate in weekly live meetings, complete readings and coursework, and engage in discussion, which are study-load options. Other content in this node covers topics like cross-enrollment, citizenship, networking, employer value, academic rigor, and diploma wording, which are not directly about study-load options."
+            },
+            "N40 (Master’s in Applied Data Science FAQs)": {
+              "node_id": "section:b1a823dd798ad79a",
+              "path": [
+                "FAQs",
+                "Master’s in Applied Data Science FAQs"
+              ],
+              "eff_evidence": [],
+              "comment": "This node contains only a general promotional statement about the program's uniqueness and does not provide any specific information about study-load options."
+            }
+          },
+          "P4 (Course Progressions)": {
+            "N49 (Flexible Formats)": {
+              "node_id": "section:7bffbe0db21f8ac3",
+              "path": [
+                "Course Progressions",
+                "Flexible Formats"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E18",
+                  "chunk_id": "chunk:b457d1b6dcda29e6",
+                  "text_preview": "We prepare you to advance in the competitive landscape of data science career paths with a focus on industry applications . Full- and Part-time option"
+                }
+              ],
+              "comment": "E18 explicitly states that full- and part-time options are available in both Online and In-Person formats, directly answering the question about study-load options."
+            },
+            "N50 (Curriculum Details)": {
+              "node_id": "section:43d53660b5b41187",
+              "path": [
+                "Course Progressions",
+                "Curriculum Details"
+              ],
+              "eff_evidence": [],
+              "comment": "This node covers curriculum details such as pathways, foundational courses, career seminar, core/elective courses, and capstone, but does not mention study-load options (full-time/part-time) for the programs."
+            }
+          }
+        },
+        "log_path": "C:\\Users\\ss363\\Desktop\\Archive\\ads_rag_chatbot\\pipeline_grag_v2\\log\\2026-08-04_020322_d3a2f9505ab3.json"
+      }
+    }
+  },
+  "run_batch_id": "20260804T013937"
+}

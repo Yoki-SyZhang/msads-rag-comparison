@@ -1,0 +1,655 @@
+{
+  "schema_version": 2,
+  "timestamp": "2026-08-04T01:49:38.802183",
+  "question": "What is the capital of France?",
+  "question_id": "E01",
+  "question_meta": {
+    "category": "edge",
+    "type": "out_of_scope",
+    "difficulty": "easy",
+    "expected_behavior": "refuse_out_of_scope"
+  },
+  "results": {
+    "pipeline_flatrag": {
+      "pipeline_id": "pipeline_flatrag",
+      "display_name": "FlatRAG",
+      "answer": "I can only answer questions about the UChicago MS in Applied Data Science program.",
+      "sources": [
+        {
+          "page_title": "Instructors Staff",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/instructors-staff/"
+        },
+        {
+          "page_title": "Our Students",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/our-students/"
+        },
+        {
+          "page_title": "Online Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/online-program/"
+        },
+        {
+          "page_title": "Global Iq Soup To Nuts Creating A Global Living Wage Data Product",
+          "source_url": "https://datascience.uchicago.edu/research/global-iq-soup-to-nuts-creating-a-global-living-wage-data-product/"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "tool_calls": [
+            {
+              "name": "semantic_search",
+              "args": {
+                "query": "capital of France Paris"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "semantic_search",
+              "content": "Semantic search returned 5 result(s):\n\n[0] Instructors Staff | Faculty & Staff > Faculty, Instructors > Fouad Bousetouane, PhD (distance: 1.036)\n[Page: Instructors Staff | Section: Faculty & Staff > Faculty, Instructors > Fouad Bousetouane, PhD]\n\ninnovator in AI-driven business transformation. Dr. Bousetouane’s academic background is rooted in rigorous research and scholarship. He completed his doctorate at UBMA in Algeria, in collaboration ...\n\n[1] Explore The Ms Ads Campus | Explore The Ms Ads Campus (distance: 1.054)\n[Page: Explore The Ms Ads Campus | Section: Explore The Ms Ads Campus]\n\n• Campus Location: Our campus is strategically situated at the NBC Tower and Gleacher Center in downtown Chicago’s Streeterville neighborhood. These buildings will serve as the backdrop for your data science journey.\n• Data Scie...\n\n[2] Here Technologies Ensuring Map Freshness With An Ai Powered Places Data Pipeline | Here Technologies Ensuring Map Freshness With An Ai Powered Places Data Pipeline (distance: 1.072)\n[Page: Here Technologies Ensuring Map Freshness With An Ai Powered Places Data Pipeline | Section: Here Technologies Ensuring Map Freshness With An Ai Powered Places Data Pipeline]\n\nCapstone Project • 2025 HERE Technologies | Ensuring Map Freshness with an AI-Powered Places Data Pipeline Akanksha Ma...\n\n[3] Research Gpt For Healthcare | Research Gpt For Healthcare (distance: 1.072)\n[Page: Research Gpt For Healthcare | Section: Research Gpt For Healthcare]\n\nadaptation of foundation models for molecular biomarker classification in precision oncology. Watch the team present this project at 01:45:27 in the session recording here . Keywords: computational pathology, foundation mode...\n\n[4] Capstone Project Archive | Capstone Project Archive (distance: 1.076)\n[Page: Capstone Project Archive | Section: Capstone Project Archive]\n\nthe program—from data engineering and machine learning to experimentation, modeling, and data storytelling. Search project abstracts by keyword , inc"
+            }
+          ],
+          "judger": {
+            "completeness": "none",
+            "useful_indices": [],
+            "decision": "continue",
+            "candidate_chunk_count": 5,
+            "accepted_chunk_count": 0
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "text": "[Page: Instructors Staff | Section: Faculty & Staff > Faculty, Instructors > Fouad Bousetouane, PhD]\n\ninnovator in AI-driven business transformation. Dr. Bousetouane’s academic background is rooted in rigorous research and scholarship. He completed his doctorate at UBMA in Algeria, in collaboration with ULCO in France, and later received an accredited Ph.D. from the University of Nevada, Las Vegas (UNLV). His postdoctoral work at UNLV focused on deep learning for multimodal data, leading to numerous publications in top-tier journals and conferences. As a respected reviewer, he contributes his expertise to prominent journals and conferences, including IET-Image Processing Journal, IEEE Transactions on Intelligent Transportation Systems, IEEE-IROS2012, and IEEE-ITSC-2015. Throughout his career, Dr. Bousetouane has been honored with multiple awards, including recognition as one of the top 30 AI scientists by MIT-Arabia Magazine, the Timmy Award for Best Tech Manager in Chicago (2020), and",
+          "chunk_id": "education__masters_programs__ms_in_applied_data_science__instructors_staff__fouad_bousetouane_phd__33",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/instructors-staff/",
+          "page_title": "Instructors Staff",
+          "section": "Fouad Bousetouane, PhD",
+          "section_breadcrumb": "Faculty & Staff > Faculty, Instructors > Fouad Bousetouane, PhD",
+          "content_type": "text",
+          "program_type": "general",
+          "distance": 1.023480772972107
+        },
+        {
+          "text": "[Page: Our Students | Section: Primary Citizenship (In-Person Students)]\n\nThe Autumn 2025 in-person cohort includes students from around the world. This map highlights the primary citizenship of students in this incoming class.",
+          "chunk_id": "education__masters_programs__ms_in_applied_data_science__our_students__primary_citizenship_in_person_students__15",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/our-students/",
+          "page_title": "Our Students",
+          "section": "Primary Citizenship (In-Person Students)",
+          "section_breadcrumb": "Primary Citizenship (In-Person Students)",
+          "content_type": "text",
+          "program_type": "general",
+          "distance": 1.0474501848220825
+        },
+        {
+          "text": "[Page: Online Program | Section: Note for International Students]\n\nIf you are coming from a non-US location for Immersion Weekend programming, you are encouraged to come to the U.S. in visitor/tourist status; using a B-1/B-2 visa or ESTA clearance depending on whether you hold citizenship from a Visa Waiver Country or not. The immersion days are optional for students and do not carry any course enrollment for the time you are in Chicago. Please be clear when entering the U.S. that while you are a student in an online program at the University of Chicago, your visit for immersion weekend is not to attend credit-bearing classes, but to meet classmates and as a result you are coming to the U.S. as a visitor. Read More + Show Less -",
+          "chunk_id": "education__masters_programs__online_program__note_for_international_students__14",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/online-program/",
+          "page_title": "Online Program",
+          "section": "Note for International Students",
+          "section_breadcrumb": "Note for International Students",
+          "content_type": "text",
+          "program_type": "online",
+          "distance": 1.0605969429016113
+        },
+        {
+          "text": "[Page: Instructors Staff | Section: Faculty & Staff > Faculty, Instructors > Arnab Bose, PhD]\n\nbook chapters, and numerous peer-reviewed conference & journal papers. He enjoys public speaking and has given talks in the US, Australia, Saudi Arabia, and India. He is an avid traveler and has visited the 7 wonders of the world. Arnab holds MS and PhD degrees from the University of Southern California and a BTech from the Indian Institute of Technology, Kharagpur, India.",
+          "chunk_id": "education__masters_programs__ms_in_applied_data_science__instructors_staff__arnab_bose_phd__7",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/instructors-staff/",
+          "page_title": "Instructors Staff",
+          "section": "Arnab Bose, PhD",
+          "section_breadcrumb": "Faculty & Staff > Faculty, Instructors > Arnab Bose, PhD",
+          "content_type": "text",
+          "program_type": "general",
+          "distance": 1.0654295682907104
+        },
+        {
+          "text": "[Page: Our Students | Section: Primary Citizenship (In-Person Students) > Student Geographic Origin]\n\nStudent Geographic Origin: United States: 71%, Canada: 6%, Mexico: 3%, COL: 3%, BOL: 1%, France: 1%, ESP: 2%, GHA: 1%, United Kingdom: 1%, POL: 1%, NGA: 1%, UGA: 2%, TUR: 1%, SAU: 2%, KAZ: 1%, AFG: 1%, \tPAK: 4%, India: 22%, China: 47%, MNG: 1%, THA: 1%, VNM: 6%, South Korea: 9%, Japan: 2%, PHL: 1%, New Zealand: 1%",
+          "chunk_id": "education__masters_programs__ms_in_applied_data_science__our_students__student_geographic_origin__16",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/our-students/",
+          "page_title": "Our Students",
+          "section": "Student Geographic Origin",
+          "section_breadcrumb": "Primary Citizenship (In-Person Students) > Student Geographic Origin",
+          "content_type": "table",
+          "program_type": "general",
+          "distance": 1.065586805343628
+        },
+        {
+          "text": "[Page: Instructors Staff | Section: Faculty & Staff > Faculty, Instructors > Sebastien Donadio, PhD]\n\nacademic institutions, including the University of Versailles, Columbia University’s Fu Foundation School of Engineering and Applied Science, University of Chicago and NYU Tandon School of Engineering. Courses taught include: Computer Architecture, Parallel Architecture, Operating Systems, Machine Learning, Advanced Programming, Real-time Smart Systems, Computing for Finance in Python, and Advanced Computing for Finance. Sebastien holds a PhD in High Performance Computing Optimization, an MBA in Finance and Management, and an MSc in Analytics from the University of Chicago. His main passion is technology, but he is also a scuba diving instructor and an experienced rock-climber.",
+          "chunk_id": "education__masters_programs__ms_in_applied_data_science__instructors_staff__sebastien_donadio_phd__37",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/instructors-staff/",
+          "page_title": "Instructors Staff",
+          "section": "Sebastien Donadio, PhD",
+          "section_breadcrumb": "Faculty & Staff > Faculty, Instructors > Sebastien Donadio, PhD",
+          "content_type": "text",
+          "program_type": "general",
+          "distance": 1.0706000328063965
+        },
+        {
+          "text": "[Page: Global Iq Soup To Nuts Creating A Global Living Wage Data Product | Section: Global Iq Soup To Nuts Creating A Global Living Wage Data Product]\n\nCapstone Project • 2025 Global IQ | Soup to Nuts: Creating a Global Living Wage Data Product Jingxuan Li, Aida Sarinzhipova, Lejun Zhang, Yulin Feng As global organizations face mounting pressure to demonstrate fair compensation practices, there is a critical need for transparent, scalable, and internationally comparable living wage benchmarks. This capstone project with Global IQ, a data-as-a-service company specializing in global mobility and compensation data analytics, aims to develop a reproducible living wage data product covering over 1,300 cities across 130 countries. Leveraging proprietary cost-of-living datasets, statistical modeling, and clustering algorithms, our team is building a robust framework to estimate localized living wages and align them with ESG goals and global labor standards. The resulting tool will support policy-makers, HR leaders, and sustainability",
+          "chunk_id": "research__global_iq_soup_to_nuts_creating_a_global_living_wage_data_product__global_iq_soup_to_nuts_creating_a_global_living_wage_data_product__0",
+          "source_url": "https://datascience.uchicago.edu/research/global-iq-soup-to-nuts-creating-a-global-living-wage-data-product/",
+          "page_title": "Global Iq Soup To Nuts Creating A Global Living Wage Data Product",
+          "section": "Global Iq Soup To Nuts Creating A Global Living Wage Data Product",
+          "section_breadcrumb": "Global Iq Soup To Nuts Creating A Global Living Wage Data Product",
+          "content_type": "text",
+          "program_type": "general",
+          "distance": 1.0824975967407227
+        }
+      ],
+      "time_sec": 7.473,
+      "low_confidence": true,
+      "error": null,
+      "raw_debug": {
+        "answer": "I can only answer questions about the UChicago MS in Applied Data Science program.",
+        "sources": [
+          {
+            "page_title": "Instructors Staff",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/instructors-staff/"
+          },
+          {
+            "page_title": "Our Students",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/our-students/"
+          },
+          {
+            "page_title": "Online Program",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/online-program/"
+          },
+          {
+            "page_title": "Global Iq Soup To Nuts Creating A Global Living Wage Data Product",
+            "source_url": "https://datascience.uchicago.edu/research/global-iq-soup-to-nuts-creating-a-global-living-wage-data-product/"
+          }
+        ],
+        "completeness": "none",
+        "low_confidence": true,
+        "attempts": 1,
+        "agent_steps": [
+          {
+            "step": 1,
+            "tool_calls": [
+              {
+                "name": "semantic_search",
+                "args": {
+                  "query": "capital of France Paris"
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "semantic_search",
+                "content": "Semantic search returned 5 result(s):\n\n[0] Instructors Staff | Faculty & Staff > Faculty, Instructors > Fouad Bousetouane, PhD (distance: 1.036)\n[Page: Instructors Staff | Section: Faculty & Staff > Faculty, Instructors > Fouad Bousetouane, PhD]\n\ninnovator in AI-driven business transformation. Dr. Bousetouane’s academic background is rooted in rigorous research and scholarship. He completed his doctorate at UBMA in Algeria, in collaboration ...\n\n[1] Explore The Ms Ads Campus | Explore The Ms Ads Campus (distance: 1.054)\n[Page: Explore The Ms Ads Campus | Section: Explore The Ms Ads Campus]\n\n• Campus Location: Our campus is strategically situated at the NBC Tower and Gleacher Center in downtown Chicago’s Streeterville neighborhood. These buildings will serve as the backdrop for your data science journey.\n• Data Scie...\n\n[2] Here Technologies Ensuring Map Freshness With An Ai Powered Places Data Pipeline | Here Technologies Ensuring Map Freshness With An Ai Powered Places Data Pipeline (distance: 1.072)\n[Page: Here Technologies Ensuring Map Freshness With An Ai Powered Places Data Pipeline | Section: Here Technologies Ensuring Map Freshness With An Ai Powered Places Data Pipeline]\n\nCapstone Project • 2025 HERE Technologies | Ensuring Map Freshness with an AI-Powered Places Data Pipeline Akanksha Ma...\n\n[3] Research Gpt For Healthcare | Research Gpt For Healthcare (distance: 1.072)\n[Page: Research Gpt For Healthcare | Section: Research Gpt For Healthcare]\n\nadaptation of foundation models for molecular biomarker classification in precision oncology. Watch the team present this project at 01:45:27 in the session recording here . Keywords: computational pathology, foundation mode...\n\n[4] Capstone Project Archive | Capstone Project Archive (distance: 1.076)\n[Page: Capstone Project Archive | Section: Capstone Project Archive]\n\nthe program—from data engineering and machine learning to experimentation, modeling, and data storytelling. Search project abstracts by keyword , inc"
+              }
+            ],
+            "judger": {
+              "completeness": "none",
+              "useful_indices": [],
+              "decision": "continue",
+              "candidate_chunk_count": 5,
+              "accepted_chunk_count": 0
+            }
+          }
+        ],
+        "evidence": [
+          {
+            "text": "[Page: Instructors Staff | Section: Faculty & Staff > Faculty, Instructors > Fouad Bousetouane, PhD]\n\ninnovator in AI-driven business transformation. Dr. Bousetouane’s academic background is rooted in rigorous research and scholarship. He completed his doctorate at UBMA in Algeria, in collaboration with ULCO in France, and later received an accredited Ph.D. from the University of Nevada, Las Vegas (UNLV). His postdoctoral work at UNLV focused on deep learning for multimodal data, leading to numerous publications in top-tier journals and conferences. As a respected reviewer, he contributes his expertise to prominent journals and conferences, including IET-Image Processing Journal, IEEE Transactions on Intelligent Transportation Systems, IEEE-IROS2012, and IEEE-ITSC-2015. Throughout his career, Dr. Bousetouane has been honored with multiple awards, including recognition as one of the top 30 AI scientists by MIT-Arabia Magazine, the Timmy Award for Best Tech Manager in Chicago (2020), and",
+            "chunk_id": "education__masters_programs__ms_in_applied_data_science__instructors_staff__fouad_bousetouane_phd__33",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/instructors-staff/",
+            "page_title": "Instructors Staff",
+            "section": "Fouad Bousetouane, PhD",
+            "section_breadcrumb": "Faculty & Staff > Faculty, Instructors > Fouad Bousetouane, PhD",
+            "content_type": "text",
+            "program_type": "general",
+            "distance": 1.023480772972107
+          },
+          {
+            "text": "[Page: Our Students | Section: Primary Citizenship (In-Person Students)]\n\nThe Autumn 2025 in-person cohort includes students from around the world. This map highlights the primary citizenship of students in this incoming class.",
+            "chunk_id": "education__masters_programs__ms_in_applied_data_science__our_students__primary_citizenship_in_person_students__15",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/our-students/",
+            "page_title": "Our Students",
+            "section": "Primary Citizenship (In-Person Students)",
+            "section_breadcrumb": "Primary Citizenship (In-Person Students)",
+            "content_type": "text",
+            "program_type": "general",
+            "distance": 1.0474501848220825
+          },
+          {
+            "text": "[Page: Online Program | Section: Note for International Students]\n\nIf you are coming from a non-US location for Immersion Weekend programming, you are encouraged to come to the U.S. in visitor/tourist status; using a B-1/B-2 visa or ESTA clearance depending on whether you hold citizenship from a Visa Waiver Country or not. The immersion days are optional for students and do not carry any course enrollment for the time you are in Chicago. Please be clear when entering the U.S. that while you are a student in an online program at the University of Chicago, your visit for immersion weekend is not to attend credit-bearing classes, but to meet classmates and as a result you are coming to the U.S. as a visitor. Read More + Show Less -",
+            "chunk_id": "education__masters_programs__online_program__note_for_international_students__14",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/online-program/",
+            "page_title": "Online Program",
+            "section": "Note for International Students",
+            "section_breadcrumb": "Note for International Students",
+            "content_type": "text",
+            "program_type": "online",
+            "distance": 1.0605969429016113
+          },
+          {
+            "text": "[Page: Instructors Staff | Section: Faculty & Staff > Faculty, Instructors > Arnab Bose, PhD]\n\nbook chapters, and numerous peer-reviewed conference & journal papers. He enjoys public speaking and has given talks in the US, Australia, Saudi Arabia, and India. He is an avid traveler and has visited the 7 wonders of the world. Arnab holds MS and PhD degrees from the University of Southern California and a BTech from the Indian Institute of Technology, Kharagpur, India.",
+            "chunk_id": "education__masters_programs__ms_in_applied_data_science__instructors_staff__arnab_bose_phd__7",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/instructors-staff/",
+            "page_title": "Instructors Staff",
+            "section": "Arnab Bose, PhD",
+            "section_breadcrumb": "Faculty & Staff > Faculty, Instructors > Arnab Bose, PhD",
+            "content_type": "text",
+            "program_type": "general",
+            "distance": 1.0654295682907104
+          },
+          {
+            "text": "[Page: Our Students | Section: Primary Citizenship (In-Person Students) > Student Geographic Origin]\n\nStudent Geographic Origin: United States: 71%, Canada: 6%, Mexico: 3%, COL: 3%, BOL: 1%, France: 1%, ESP: 2%, GHA: 1%, United Kingdom: 1%, POL: 1%, NGA: 1%, UGA: 2%, TUR: 1%, SAU: 2%, KAZ: 1%, AFG: 1%, \tPAK: 4%, India: 22%, China: 47%, MNG: 1%, THA: 1%, VNM: 6%, South Korea: 9%, Japan: 2%, PHL: 1%, New Zealand: 1%",
+            "chunk_id": "education__masters_programs__ms_in_applied_data_science__our_students__student_geographic_origin__16",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/our-students/",
+            "page_title": "Our Students",
+            "section": "Student Geographic Origin",
+            "section_breadcrumb": "Primary Citizenship (In-Person Students) > Student Geographic Origin",
+            "content_type": "table",
+            "program_type": "general",
+            "distance": 1.065586805343628
+          },
+          {
+            "text": "[Page: Instructors Staff | Section: Faculty & Staff > Faculty, Instructors > Sebastien Donadio, PhD]\n\nacademic institutions, including the University of Versailles, Columbia University’s Fu Foundation School of Engineering and Applied Science, University of Chicago and NYU Tandon School of Engineering. Courses taught include: Computer Architecture, Parallel Architecture, Operating Systems, Machine Learning, Advanced Programming, Real-time Smart Systems, Computing for Finance in Python, and Advanced Computing for Finance. Sebastien holds a PhD in High Performance Computing Optimization, an MBA in Finance and Management, and an MSc in Analytics from the University of Chicago. His main passion is technology, but he is also a scuba diving instructor and an experienced rock-climber.",
+            "chunk_id": "education__masters_programs__ms_in_applied_data_science__instructors_staff__sebastien_donadio_phd__37",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/instructors-staff/",
+            "page_title": "Instructors Staff",
+            "section": "Sebastien Donadio, PhD",
+            "section_breadcrumb": "Faculty & Staff > Faculty, Instructors > Sebastien Donadio, PhD",
+            "content_type": "text",
+            "program_type": "general",
+            "distance": 1.0706000328063965
+          },
+          {
+            "text": "[Page: Global Iq Soup To Nuts Creating A Global Living Wage Data Product | Section: Global Iq Soup To Nuts Creating A Global Living Wage Data Product]\n\nCapstone Project • 2025 Global IQ | Soup to Nuts: Creating a Global Living Wage Data Product Jingxuan Li, Aida Sarinzhipova, Lejun Zhang, Yulin Feng As global organizations face mounting pressure to demonstrate fair compensation practices, there is a critical need for transparent, scalable, and internationally comparable living wage benchmarks. This capstone project with Global IQ, a data-as-a-service company specializing in global mobility and compensation data analytics, aims to develop a reproducible living wage data product covering over 1,300 cities across 130 countries. Leveraging proprietary cost-of-living datasets, statistical modeling, and clustering algorithms, our team is building a robust framework to estimate localized living wages and align them with ESG goals and global labor standards. The resulting tool will support policy-makers, HR leaders, and sustainability",
+            "chunk_id": "research__global_iq_soup_to_nuts_creating_a_global_living_wage_data_product__global_iq_soup_to_nuts_creating_a_global_living_wage_data_product__0",
+            "source_url": "https://datascience.uchicago.edu/research/global-iq-soup-to-nuts-creating-a-global-living-wage-data-product/",
+            "page_title": "Global Iq Soup To Nuts Creating A Global Living Wage Data Product",
+            "section": "Global Iq Soup To Nuts Creating A Global Living Wage Data Product",
+            "section_breadcrumb": "Global Iq Soup To Nuts Creating A Global Living Wage Data Product",
+            "content_type": "text",
+            "program_type": "general",
+            "distance": 1.0824975967407227
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 6013,
+          "completion_tokens": 289,
+          "total_tokens": 6302,
+          "llm_calls": 6
+        },
+        "metrics": {
+          "tool_calls": 1,
+          "loop_count": 1,
+          "evidence_count": 7,
+          "llm_calls": 6,
+          "judge_calls": null,
+          "valid_fetch_count": null,
+          "invalid_fetch_count": null,
+          "fallback_triggered": null
+        }
+      }
+    },
+    "pipeline_grag_v2": {
+      "pipeline_id": "pipeline_grag_v2",
+      "display_name": "GRAG v2",
+      "answer": "I can only answer questions about the UChicago MS in Applied Data Science program.",
+      "sources": [],
+      "steps": [
+        {
+          "step": 1,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P5"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P5] FAQs\n[N1] Page Introduction — Section (1 content block)\n[N2] Master’s in Applied Data Science FAQs — Section (1 content block)\n[N3] Course Progression Tabs — ProgressionTabs (46 content blocks)\n    ├── [N4] Application Process — ProgressionTab (18 content blocks)\n        ├── [N5] Accordion — Accordion (18 content blocks)\n            preview: This accordion contains: When will I receive my Master's in Applied Data Science admission decision?; If I finish my Master's in Applied Data Science application before the deadline, will I receive my decision early?; How do I submit the materials that will accompany my Master's in Applied Data Science application?; Does the admissions office allow recommenders to email their letter directly as an attachment to be included in an applicant’s file?; Do I need to provide my recommenders with instructions?; My recommender did not receive notification, can I resend it?; What materials do I need to submit to accompany my application for admission to the Masters in Applied Data Science program?; Once I upload my unofficial transcripts to my application, do I still need to provide an official transcript?; Is the GRE or GMAT required for the Master's in Applied Data Science program?; I took the\n    ├── [N6] International Students — ProgressionTab (4 content blocks)\n        preview: This accordion contains: Which Master's in Applied Data Science provides students with visas?; What is the total cost of tuition for the Master's in Applied Data Science program?; Is the Master's in Applied Data Science an approved OPT/STEM program?; Does the Master's in Applied Data Science program offer Curricular Practical Training (CPT)?; I have worked in the U.S. for more than two years. Does that mean that I am exempt from the TOEFL/IELTS requirement?\n    ├── [N7] Online Program — ProgressionTab (9 content blocks)\n        preview: This accordion contains: If I am a student in the In-Person Master's in Applied Data Science Program, may I take courses in the Online Program? Conversely, if I am a student in the Online Program, may I take courses in the In-Person program?; Do I need to be a US citizen or permanent resident to apply to Master's in Applied Data Science Online Program?; How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?; Will enrolling in Master's in Applied Data Science Online Program give me the opportunity to network with on-campus students, faculty/instructors, and advisors?; What value do employers place on the Master's in Applied Data Science Online degree?; Is the Master's in Applied Data Science Online program equally academically rigorous as the In-Person program?; Will my diploma indicate I\n    ├── [N8] MBA/MS — ProgressionTab (7 content blocks)\n        preview: This accordion contains: How do I apply to the MBA/MS joint degree program?; What courses will I take in the MBA/MS program?; Will MBA/MS courses be in-person or online?; Are standardized tests required for admission?; What are the main differences in programs and outcomes between the MBA/MS in Applied Data Science compared to Computer Science?\n    ├── [N9] 2-Year Thesis Track Program — ProgressionTab (8 content blocks)\n        preview: This accordion contains: What is the new 2-year thesis track program (18 courses), and how is it different from the 1-year program (12 courses)?; When can I apply for the 2-year thesis track program?; May I switch between the 1- and 2-year programs after officially enrolling in the MS-ADS program?; If I am admitted to the In-Person, Full-Time 1-year program, may I take any of the 2-year program electives?; What is the 2-year program's thesis requirement?; How many spots are available in the new 2-year program?"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "The question is a general knowledge question unrelated to the MSADS program. However, the system is designed to answer questions via the knowledge graph. Since no specific program page matches, the FAQs page (P5) is the most likely to contain general information or a fallback. Inspecting it first to see if it addresses such queries or provides guidance."
+        },
+        {
+          "step": 2,
+          "tool_calls": [
+            {
+              "name": "fetch_graph_content",
+              "args": {
+                "node_refs": [
+                  "N2"
+                ]
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_graph_content",
+              "content": "[N2] Master’s in Applied Data Science FAQs — path: FAQs > Master’s in Applied Data Science FAQs\n  [E1] Learn more about what makes our program unique.\nDavid Uminsky, PhD – UChicago Data Science Institute, Executive Director"
+            }
+          ],
+          "judger": {
+            "node_assessments": [
+              {
+                "node_ref": "N2",
+                "keep_evidence": [],
+                "comment": "The node contains only a generic program introduction and a staff name, with no information about the capital of France. No evidence supports the question."
+              }
+            ]
+          },
+          "decision_reason": "The FAQs page is the most likely source for general knowledge questions, and N2 is the main FAQ node. Fetching it may reveal whether the capital of France is addressed or provide a redirect to relevant information."
+        },
+        {
+          "step": 3,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P5"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P5] FAQs\n[N1] Page Introduction — Section (1 content block)\n[N2] Master’s in Applied Data Science FAQs — Section (1 content block)\n[N3] Course Progression Tabs — ProgressionTabs (46 content blocks)\n    ├── [N4] Application Process — ProgressionTab (18 content blocks)\n        ├── [N5] Accordion — Accordion (18 content blocks)\n            preview: This accordion contains: When will I receive my Master's in Applied Data Science admission decision?; If I finish my Master's in Applied Data Science application before the deadline, will I receive my decision early?; How do I submit the materials that will accompany my Master's in Applied Data Science application?; Does the admissions office allow recommenders to email their letter directly as an attachment to be included in an applicant’s file?; Do I need to provide my recommenders with instructions?; My recommender did not receive notification, can I resend it?; What materials do I need to submit to accompany my application for admission to the Masters in Applied Data Science program?; Once I upload my unofficial transcripts to my application, do I still need to provide an official transcript?; Is the GRE or GMAT required for the Master's in Applied Data Science program?; I took the\n    ├── [N6] International Students — ProgressionTab (4 content blocks)\n        preview: This accordion contains: Which Master's in Applied Data Science provides students with visas?; What is the total cost of tuition for the Master's in Applied Data Science program?; Is the Master's in Applied Data Science an approved OPT/STEM program?; Does the Master's in Applied Data Science program offer Curricular Practical Training (CPT)?; I have worked in the U.S. for more than two years. Does that mean that I am exempt from the TOEFL/IELTS requirement?\n    ├── [N7] Online Program — ProgressionTab (9 content blocks)\n        preview: This accordion contains: If I am a student in the In-Person Master's in Applied Data Science Program, may I take courses in the Online Program? Conversely, if I am a student in the Online Program, may I take courses in the In-Person program?; Do I need to be a US citizen or permanent resident to apply to Master's in Applied Data Science Online Program?; How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?; Will enrolling in Master's in Applied Data Science Online Program give me the opportunity to network with on-campus students, faculty/instructors, and advisors?; What value do employers place on the Master's in Applied Data Science Online degree?; Is the Master's in Applied Data Science Online program equally academically rigorous as the In-Person program?; Will my diploma indicate I\n    ├── [N8] MBA/MS — ProgressionTab (7 content blocks)\n        preview: This accordion contains: How do I apply to the MBA/MS joint degree program?; What courses will I take in the MBA/MS program?; Will MBA/MS courses be in-person or online?; Are standardized tests required for admission?; What are the main differences in programs and outcomes between the MBA/MS in Applied Data Science compared to Computer Science?\n    ├── [N9] 2-Year Thesis Track Program — ProgressionTab (8 content blocks)\n        preview: This accordion contains: What is the new 2-year thesis track program (18 courses), and how is it different from the 1-year program (12 courses)?; When can I apply for the 2-year thesis track program?; May I switch between the 1- and 2-year programs after officially enrolling in the MS-ADS program?; If I am admitted to the In-Person, Full-Time 1-year program, may I take any of the 2-year program electives?; What is the 2-year program's thesis requirement?; How many spots are available in the new 2-year program?"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "The question about the capital of France is unrelated to the MSADS program. The FAQs page (P5) is the most likely to contain general knowledge or miscellaneous information, but the previous fetch of N2 was not useful. Re-inspecting P5 may reveal other nodes that could contain the answer, though it is unlikely. Since no other page seems relevant, re-inspecting P5 is the best option to exhaust possibilities."
+        },
+        {
+          "step": 4,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P5"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P5] FAQs\n[N1] Page Introduction — Section (1 content block)\n[N2] Master’s in Applied Data Science FAQs — Section (1 content block)\n[N3] Course Progression Tabs — ProgressionTabs (46 content blocks)\n    ├── [N4] Application Process — ProgressionTab (18 content blocks)\n        ├── [N5] Accordion — Accordion (18 content blocks)\n            preview: This accordion contains: When will I receive my Master's in Applied Data Science admission decision?; If I finish my Master's in Applied Data Science application before the deadline, will I receive my decision early?; How do I submit the materials that will accompany my Master's in Applied Data Science application?; Does the admissions office allow recommenders to email their letter directly as an attachment to be included in an applicant’s file?; Do I need to provide my recommenders with instructions?; My recommender did not receive notification, can I resend it?; What materials do I need to submit to accompany my application for admission to the Masters in Applied Data Science program?; Once I upload my unofficial transcripts to my application, do I still need to provide an official transcript?; Is the GRE or GMAT required for the Master's in Applied Data Science program?; I took the\n    ├── [N6] International Students — ProgressionTab (4 content blocks)\n        preview: This accordion contains: Which Master's in Applied Data Science provides students with visas?; What is the total cost of tuition for the Master's in Applied Data Science program?; Is the Master's in Applied Data Science an approved OPT/STEM program?; Does the Master's in Applied Data Science program offer Curricular Practical Training (CPT)?; I have worked in the U.S. for more than two years. Does that mean that I am exempt from the TOEFL/IELTS requirement?\n    ├── [N7] Online Program — ProgressionTab (9 content blocks)\n        preview: This accordion contains: If I am a student in the In-Person Master's in Applied Data Science Program, may I take courses in the Online Program? Conversely, if I am a student in the Online Program, may I take courses in the In-Person program?; Do I need to be a US citizen or permanent resident to apply to Master's in Applied Data Science Online Program?; How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?; Will enrolling in Master's in Applied Data Science Online Program give me the opportunity to network with on-campus students, faculty/instructors, and advisors?; What value do employers place on the Master's in Applied Data Science Online degree?; Is the Master's in Applied Data Science Online program equally academically rigorous as the In-Person program?; Will my diploma indicate I\n    ├── [N8] MBA/MS — ProgressionTab (7 content blocks)\n        preview: This accordion contains: How do I apply to the MBA/MS joint degree program?; What courses will I take in the MBA/MS program?; Will MBA/MS courses be in-person or online?; Are standardized tests required for admission?; What are the main differences in programs and outcomes between the MBA/MS in Applied Data Science compared to Computer Science?\n    ├── [N9] 2-Year Thesis Track Program — ProgressionTab (8 content blocks)\n        preview: This accordion contains: What is the new 2-year thesis track program (18 courses), and how is it different from the 1-year program (12 courses)?; When can I apply for the 2-year thesis track program?; May I switch between the 1- and 2-year programs after officially enrolling in the MS-ADS program?; If I am admitted to the In-Person, Full-Time 1-year program, may I take any of the 2-year program electives?; What is the 2-year program's thesis requirement?; How many spots are available in the new 2-year program?"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "The question is unrelated to MSADS, and P5 FAQs is the only page that might contain general knowledge. Re-inspecting P5 to look for any other nodes that might contain the answer, since the previous node N2 was not useful."
+        },
+        {
+          "step": 5,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P5"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P5] FAQs\n[N1] Page Introduction — Section (1 content block)\n[N2] Master’s in Applied Data Science FAQs — Section (1 content block)\n[N3] Course Progression Tabs — ProgressionTabs (46 content blocks)\n    ├── [N4] Application Process — ProgressionTab (18 content blocks)\n        ├── [N5] Accordion — Accordion (18 content blocks)\n            preview: This accordion contains: When will I receive my Master's in Applied Data Science admission decision?; If I finish my Master's in Applied Data Science application before the deadline, will I receive my decision early?; How do I submit the materials that will accompany my Master's in Applied Data Science application?; Does the admissions office allow recommenders to email their letter directly as an attachment to be included in an applicant’s file?; Do I need to provide my recommenders with instructions?; My recommender did not receive notification, can I resend it?; What materials do I need to submit to accompany my application for admission to the Masters in Applied Data Science program?; Once I upload my unofficial transcripts to my application, do I still need to provide an official transcript?; Is the GRE or GMAT required for the Master's in Applied Data Science program?; I took the\n    ├── [N6] International Students — ProgressionTab (4 content blocks)\n        preview: This accordion contains: Which Master's in Applied Data Science provides students with visas?; What is the total cost of tuition for the Master's in Applied Data Science program?; Is the Master's in Applied Data Science an approved OPT/STEM program?; Does the Master's in Applied Data Science program offer Curricular Practical Training (CPT)?; I have worked in the U.S. for more than two years. Does that mean that I am exempt from the TOEFL/IELTS requirement?\n    ├── [N7] Online Program — ProgressionTab (9 content blocks)\n        preview: This accordion contains: If I am a student in the In-Person Master's in Applied Data Science Program, may I take courses in the Online Program? Conversely, if I am a student in the Online Program, may I take courses in the In-Person program?; Do I need to be a US citizen or permanent resident to apply to Master's in Applied Data Science Online Program?; How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?; Will enrolling in Master's in Applied Data Science Online Program give me the opportunity to network with on-campus students, faculty/instructors, and advisors?; What value do employers place on the Master's in Applied Data Science Online degree?; Is the Master's in Applied Data Science Online program equally academically rigorous as the In-Person program?; Will my diploma indicate I\n    ├── [N8] MBA/MS — ProgressionTab (7 content blocks)\n        preview: This accordion contains: How do I apply to the MBA/MS joint degree program?; What courses will I take in the MBA/MS program?; Will MBA/MS courses be in-person or online?; Are standardized tests required for admission?; What are the main differences in programs and outcomes between the MBA/MS in Applied Data Science compared to Computer Science?\n    ├── [N9] 2-Year Thesis Track Program — ProgressionTab (8 content blocks)\n        preview: This accordion contains: What is the new 2-year thesis track program (18 courses), and how is it different from the 1-year program (12 courses)?; When can I apply for the 2-year thesis track program?; May I switch between the 1- and 2-year programs after officially enrolling in the MS-ADS program?; If I am admitted to the In-Person, Full-Time 1-year program, may I take any of the 2-year program electives?; What is the 2-year program's thesis requirement?; How many spots are available in the new 2-year program?"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "The question about the capital of France is unrelated to the MSADS knowledge graph. P5 (FAQs) is the only page that might contain general knowledge, but the previously inspected node N2 was not useful. Re-inspecting P5 to look for other nodes that might contain the answer, though it is unlikely. Since the question is out of scope, this is a final attempt to find any relevant information before concluding."
+        },
+        {
+          "step": 6,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P5"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P5] FAQs\n[N1] Page Introduction — Section (1 content block)\n[N2] Master’s in Applied Data Science FAQs — Section (1 content block)\n[N3] Course Progression Tabs — ProgressionTabs (46 content blocks)\n    ├── [N4] Application Process — ProgressionTab (18 content blocks)\n        ├── [N5] Accordion — Accordion (18 content blocks)\n            preview: This accordion contains: When will I receive my Master's in Applied Data Science admission decision?; If I finish my Master's in Applied Data Science application before the deadline, will I receive my decision early?; How do I submit the materials that will accompany my Master's in Applied Data Science application?; Does the admissions office allow recommenders to email their letter directly as an attachment to be included in an applicant’s file?; Do I need to provide my recommenders with instructions?; My recommender did not receive notification, can I resend it?; What materials do I need to submit to accompany my application for admission to the Masters in Applied Data Science program?; Once I upload my unofficial transcripts to my application, do I still need to provide an official transcript?; Is the GRE or GMAT required for the Master's in Applied Data Science program?; I took the\n    ├── [N6] International Students — ProgressionTab (4 content blocks)\n        preview: This accordion contains: Which Master's in Applied Data Science provides students with visas?; What is the total cost of tuition for the Master's in Applied Data Science program?; Is the Master's in Applied Data Science an approved OPT/STEM program?; Does the Master's in Applied Data Science program offer Curricular Practical Training (CPT)?; I have worked in the U.S. for more than two years. Does that mean that I am exempt from the TOEFL/IELTS requirement?\n    ├── [N7] Online Program — ProgressionTab (9 content blocks)\n        preview: This accordion contains: If I am a student in the In-Person Master's in Applied Data Science Program, may I take courses in the Online Program? Conversely, if I am a student in the Online Program, may I take courses in the In-Person program?; Do I need to be a US citizen or permanent resident to apply to Master's in Applied Data Science Online Program?; How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?; Will enrolling in Master's in Applied Data Science Online Program give me the opportunity to network with on-campus students, faculty/instructors, and advisors?; What value do employers place on the Master's in Applied Data Science Online degree?; Is the Master's in Applied Data Science Online program equally academically rigorous as the In-Person program?; Will my diploma indicate I\n    ├── [N8] MBA/MS — ProgressionTab (7 content blocks)\n        preview: This accordion contains: How do I apply to the MBA/MS joint degree program?; What courses will I take in the MBA/MS program?; Will MBA/MS courses be in-person or online?; Are standardized tests required for admission?; What are the main differences in programs and outcomes between the MBA/MS in Applied Data Science compared to Computer Science?\n    ├── [N9] 2-Year Thesis Track Program — ProgressionTab (8 content blocks)\n        preview: This accordion contains: What is the new 2-year thesis track program (18 courses), and how is it different from the 1-year program (12 courses)?; When can I apply for the 2-year thesis track program?; May I switch between the 1- and 2-year programs after officially enrolling in the MS-ADS program?; If I am admitted to the In-Person, Full-Time 1-year program, may I take any of the 2-year program electives?; What is the 2-year program's thesis requirement?; How many spots are available in the new 2-year program?"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "The question is unrelated to the MSADS knowledge graph, and no page has provided relevant information. Re-inspecting P5 to check remaining nodes (N3-N9) for any general knowledge, though unlikely, as a final attempt before exhausting turns."
+        },
+        {
+          "step": 7,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P5"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P5] FAQs\n[N1] Page Introduction — Section (1 content block)\n[N2] Master’s in Applied Data Science FAQs — Section (1 content block)\n[N3] Course Progression Tabs — ProgressionTabs (46 content blocks)\n    ├── [N4] Application Process — ProgressionTab (18 content blocks)\n        ├── [N5] Accordion — Accordion (18 content blocks)\n            preview: This accordion contains: When will I receive my Master's in Applied Data Science admission decision?; If I finish my Master's in Applied Data Science application before the deadline, will I receive my decision early?; How do I submit the materials that will accompany my Master's in Applied Data Science application?; Does the admissions office allow recommenders to email their letter directly as an attachment to be included in an applicant’s file?; Do I need to provide my recommenders with instructions?; My recommender did not receive notification, can I resend it?; What materials do I need to submit to accompany my application for admission to the Masters in Applied Data Science program?; Once I upload my unofficial transcripts to my application, do I still need to provide an official transcript?; Is the GRE or GMAT required for the Master's in Applied Data Science program?; I took the\n    ├── [N6] International Students — ProgressionTab (4 content blocks)\n        preview: This accordion contains: Which Master's in Applied Data Science provides students with visas?; What is the total cost of tuition for the Master's in Applied Data Science program?; Is the Master's in Applied Data Science an approved OPT/STEM program?; Does the Master's in Applied Data Science program offer Curricular Practical Training (CPT)?; I have worked in the U.S. for more than two years. Does that mean that I am exempt from the TOEFL/IELTS requirement?\n    ├── [N7] Online Program — ProgressionTab (9 content blocks)\n        preview: This accordion contains: If I am a student in the In-Person Master's in Applied Data Science Program, may I take courses in the Online Program? Conversely, if I am a student in the Online Program, may I take courses in the In-Person program?; Do I need to be a US citizen or permanent resident to apply to Master's in Applied Data Science Online Program?; How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?; Will enrolling in Master's in Applied Data Science Online Program give me the opportunity to network with on-campus students, faculty/instructors, and advisors?; What value do employers place on the Master's in Applied Data Science Online degree?; Is the Master's in Applied Data Science Online program equally academically rigorous as the In-Person program?; Will my diploma indicate I\n    ├── [N8] MBA/MS — ProgressionTab (7 content blocks)\n        preview: This accordion contains: How do I apply to the MBA/MS joint degree program?; What courses will I take in the MBA/MS program?; Will MBA/MS courses be in-person or online?; Are standardized tests required for admission?; What are the main differences in programs and outcomes between the MBA/MS in Applied Data Science compared to Computer Science?\n    ├── [N9] 2-Year Thesis Track Program — ProgressionTab (8 content blocks)\n        preview: This accordion contains: What is the new 2-year thesis track program (18 courses), and how is it different from the 1-year program (12 courses)?; When can I apply for the 2-year thesis track program?; May I switch between the 1- and 2-year programs after officially enrolling in the MS-ADS program?; If I am admitted to the In-Person, Full-Time 1-year program, may I take any of the 2-year program electives?; What is the 2-year program's thesis requirement?; How many spots are available in the new 2-year program?"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "The question about the capital of France is unrelated to the MSADS program. The FAQ page has been inspected and its nodes are not relevant. Since the system is limited to the knowledge graph, I will re-inspect the FAQ page to see if any other nodes might contain general knowledge, though it is unlikely. This is the only page with broad coverage."
+        },
+        {
+          "step": 8,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P5"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P5] FAQs\n[N1] Page Introduction — Section (1 content block)\n[N2] Master’s in Applied Data Science FAQs — Section (1 content block)\n[N3] Course Progression Tabs — ProgressionTabs (46 content blocks)\n    ├── [N4] Application Process — ProgressionTab (18 content blocks)\n        ├── [N5] Accordion — Accordion (18 content blocks)\n            preview: This accordion contains: When will I receive my Master's in Applied Data Science admission decision?; If I finish my Master's in Applied Data Science application before the deadline, will I receive my decision early?; How do I submit the materials that will accompany my Master's in Applied Data Science application?; Does the admissions office allow recommenders to email their letter directly as an attachment to be included in an applicant’s file?; Do I need to provide my recommenders with instructions?; My recommender did not receive notification, can I resend it?; What materials do I need to submit to accompany my application for admission to the Masters in Applied Data Science program?; Once I upload my unofficial transcripts to my application, do I still need to provide an official transcript?; Is the GRE or GMAT required for the Master's in Applied Data Science program?; I took the\n    ├── [N6] International Students — ProgressionTab (4 content blocks)\n        preview: This accordion contains: Which Master's in Applied Data Science provides students with visas?; What is the total cost of tuition for the Master's in Applied Data Science program?; Is the Master's in Applied Data Science an approved OPT/STEM program?; Does the Master's in Applied Data Science program offer Curricular Practical Training (CPT)?; I have worked in the U.S. for more than two years. Does that mean that I am exempt from the TOEFL/IELTS requirement?\n    ├── [N7] Online Program — ProgressionTab (9 content blocks)\n        preview: This accordion contains: If I am a student in the In-Person Master's in Applied Data Science Program, may I take courses in the Online Program? Conversely, if I am a student in the Online Program, may I take courses in the In-Person program?; Do I need to be a US citizen or permanent resident to apply to Master's in Applied Data Science Online Program?; How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?; Will enrolling in Master's in Applied Data Science Online Program give me the opportunity to network with on-campus students, faculty/instructors, and advisors?; What value do employers place on the Master's in Applied Data Science Online degree?; Is the Master's in Applied Data Science Online program equally academically rigorous as the In-Person program?; Will my diploma indicate I\n    ├── [N8] MBA/MS — ProgressionTab (7 content blocks)\n        preview: This accordion contains: How do I apply to the MBA/MS joint degree program?; What courses will I take in the MBA/MS program?; Will MBA/MS courses be in-person or online?; Are standardized tests required for admission?; What are the main differences in programs and outcomes between the MBA/MS in Applied Data Science compared to Computer Science?\n    ├── [N9] 2-Year Thesis Track Program — ProgressionTab (8 content blocks)\n        preview: This accordion contains: What is the new 2-year thesis track program (18 courses), and how is it different from the 1-year program (12 courses)?; When can I apply for the 2-year thesis track program?; May I switch between the 1- and 2-year programs after officially enrolling in the MS-ADS program?; If I am admitted to the In-Person, Full-Time 1-year program, may I take any of the 2-year program electives?; What is the 2-year program's thesis requirement?; How many spots are available in the new 2-year program?"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "The question about the capital of France is unrelated to the MSADS program, but the system is limited to the knowledge graph. Since only one turn remains, re-inspecting the FAQ page is the most efficient way to check if any other nodes might contain general knowledge, as the FAQ page is the most comprehensive and likely to have miscellaneous information."
+        },
+        {
+          "step": 9,
+          "tool_calls": [
+            {
+              "name": "fetch_graph_content",
+              "args": {
+                "node_refs": [
+                  "N1",
+                  "N2",
+                  "N3",
+                  "N4",
+                  "N5"
+                ]
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_graph_content",
+              "content": "N3 has 46 content blocks — too broad. Consider its children instead: N4 (18), N6 (4), N7 (9), N8 (7), N9 (8).\n\nN4 has 18 content blocks — too broad. Consider its children instead: N5 (18).\n\nALREADY_CHECKED [N2] — kept evidence: none; previous assessment: The node contains only a generic program introduction and a staff name, with no information about the capital of France. No evidence supports the question.\n\n[N1] Page Introduction — path: FAQs > Page Introduction\n  [E2] FAQs\n\n[N5] Accordion — path: FAQs > Application Process\n  [E3] (structure summary) This accordion contains: When will I receive my Master's in Applied Data Science admission decision?; If I finish my Master's in Applied Data Science application before the deadline, will I receive my decision early?; How do I submit the materials that will accompany my Master's in Applied Data Science application?; Does the admissions office allow recommenders to email their letter directly as an attachment to be included in an applicant’s file?; Do I need to provide my recommenders with instructions?; My recommender did not receive notification, can I resend it?; What materials do I need to submit to accompany my application for admission to the Masters in Applied Data Science program?; Once I upload my unofficial transcripts to my application, do I still need to provide an official transcript?; Is the GRE or GMAT required for the Master's in Applied Data Science program?; I took the\n  [E4] (structure summary) the GRE or GMAT required for the Master's in Applied Data Science program?; I took the GRE and/or GMAT and want to include my score(s) with my Master's in Applied Data Science application.; Who is exempt from providing proof of English proficiency?; How will I be notified that I am admitted to the Master's in Applied Data Science program?; If I am admitted to the Master's in Applied Data Science program, what do I do next?; What test scores does UChicago accept as proof of English proficiency?; What are the minimum scores required?; Where do I send my test scores?; I took the TOEFL over two years ago. Can I still use those TOEFL results?; What’s the difference between the MS in Applied Data Science and the MS in Data Science programs at UChicago?\n  [N5.1] When will I receive my Master's in Applied Data Science admission decision?\n    [E5] Admissions decisions are typically released 1-2 months after each application deadline. Only completed applications are reviewed. Please refer to the How to Apply page for guidelines.\n  [N5.2] If I finish my Master's in Applied Data Science application before the deadline, will I receive my decision early?\n    [E6] No, admissions decisions for the in-person program are typically released 1-2 months after each application deadline. Your application must be complete to be considered for review.\n  [N5.3] Does the admissions office allow recommenders to email their letter directly as an attachment to be included in an applicant’s file?\n    [E7] Unfortunately, no. Recommenders must upload their letter of support by using the URL that is sent to them electronically by our online application system.\n  [N5.4] Do I need to provide my recommenders with instructions?\n    [E8] No. Recommendation forms and instructions are sent electronically to recommenders once their names are entered within the online application.\n  [N5.5] My recommender did not receive notification, can I resend it?\n    [E9] Yes. If a recommender does not receive a URL, the applicant can resend the link through the online application or ask the recommender to check their spam folder.\n  [N5.6] Once I upload my unofficial transcripts to my application, do I still need to provide an official transcript?\n    [E10] You must upload one unofficial transcript from each university you attended within your application. An unofficial undergraduate transcript is required, even if you hold advanced degrees. Do not mail transcripts with your application; only uploads are needed for evaluation. If admitted, you will need to submit official transcripts from each university before matriculation.\n  [N5.7] Is the GRE or GMAT required for the Master's in Applied Data Science program?\n    [E11] No, the GRE/GMAT is not required for admissions.\n  [N5.8] I took the GRE and/or GMAT and want to include my score(s) with my Master's in Applied Data Science application.\n    [E12] While the GRE/GMAT is not required, applicants can still submit their scores. The GRE school code is 1832; the GMAT school code is H9X-WG-70.\n  [N5.9] Who is exempt from providing proof of English proficiency?\n    [E13] Please refer to the University of Chicago’s English Language Proficiency requirements.\n  [N5.10] How will I be notified that I am admitted to the Master's in Applied Data Science program?\n    [E14] Applicants will be notified to check their application portal via the email they used to submit their application.\n  [N5.11] If I am admitted to the Master's in Applied Data Science program, what do I do next?\n    [E15] Have official e-transcripts sent to applieddatascience-admissions@uchicago.edu.\nIf your institution cannot send your documents electronically, please have them send your transcripts to the following mailing address:\nAttention: MS in Applied Data Science Admissions\n455 N Cityfront Plaza Dr., Suite 2800\n  [N5.12] What test scores does UChicago accept as proof of English proficiency?\n    [E16] Please refer to the Proof of English Proficiency guidelines.\n  [N5.13] What are the minimum scores required?\n    [E17] Please refer to the Required Minimum Score guidelines.\n  [N5.14] Where do I send my test scores?\n    [E18] Please send TOEFL scores to the University of Chicago using these instructions at the bottom of the page.\n  [N5.15] What’s the difference between the MS in Applied Data Science and the MS in Data Science programs at UChicago?\n    [E19] The two programs share a strong foundation in data science but differ in structure, location, and focus.\n- The MS in Data Science is a 10-course program based on UChicago’s Hyde Park campus. It includes a comprehensive research project and is designed for students who want to dive deeper into the theoretical and research side of data science—often as preparation for PhD study or research-focused careers.\n- The MS in Applied Data Science program offers both a 12-course track and an 18-course thesis track. It is offered in online and in-person formats, with in-person classes held at the NBC Tower in downtown Chicago. The program focuses on applying data science and machine learning methods to real-world problems through hands-on coursework, industry collaborations, and a two-quarter capstone or research project.\n    [E20] coursework, industry collaborations, and a two-quarter capstone or research project.\nFor a more detailed breakdown of the differences between the two programs, check out this article here ."
+            }
+          ],
+          "judger": {
+            "node_assessments": [
+              {
+                "node_ref": "N1",
+                "keep_evidence": [],
+                "comment": "The node contains only a generic FAQ page introduction with no information about the capital of France. No evidence supports the question."
+              },
+              {
+                "node_ref": "N5",
+                "keep_evidence": [],
+                "comment": "The node covers application process FAQs for a Master's program, including admissions decisions, recommendations, transcripts, test scores, and program differences. None of the content relates to the capital of France, so no evidence is kept."
+              }
+            ]
+          },
+          "decision_reason": "The question about the capital of France is unrelated to the MSADS program, and the knowledge graph likely contains no relevant information. With only one turn remaining, I will fetch multiple nodes from the already-inspected FAQ page to maximize the chance of finding any general knowledge, though it is unlikely to contain the answer."
+        }
+      ],
+      "evidence": [],
+      "time_sec": 45.457,
+      "low_confidence": true,
+      "error": null,
+      "progress_summary": {
+        "summary_covering": "Page P5 (FAQs): Checked nodes N2 (Master's in Applied Data Science FAQs), N1 (Page Introduction), and N5 (Accordion under Application Process). All were not useful; they contain program-specific information and no general knowledge about the capital of France. Still missing: any evidence identifying the capital of France.",
+        "decision_trace_narrative": "Turn 1: The agent noted the question is unrelated to the MSADS program and the knowledge graph likely lacks relevant info. With one turn remaining, it fetched multiple nodes from the already-inspected FAQ page to maximize chances, but all were program-specific and yielded no relevant evidence. No new information was obtained."
+      },
+      "raw_debug": {
+        "response": {
+          "answer": "I can only answer questions about the UChicago MS in Applied Data Science program.",
+          "citations": [],
+          "debug": {
+            "tool_turns": 9,
+            "stop_reason": "empty_evidence",
+            "evidence_count": 0,
+            "sufficient": false,
+            "missing": "The capital of France is not mentioned in any accepted evidence.",
+            "log_path": "C:\\Users\\ss363\\Desktop\\Archive\\ads_rag_chatbot\\pipeline_grag_v2\\log\\2026-08-04_014938_ba2690e5a8e0.json",
+            "run_id": "ba2690e5a8e0"
+          }
+        },
+        "run_id": "ba2690e5a8e0",
+        "rewritten_queries": [
+          {
+            "id": "q1",
+            "query": "What is the capital of France?",
+            "target": "web_search"
+          }
+        ],
+        "judgment": {
+          "sufficient": false,
+          "missing": "The capital of France is not mentioned in any accepted evidence.",
+          "comment": "Page P5 (FAQs): Checked nodes N2 (Master's in Applied Data Science FAQs), N1 (Page Introduction), and N5 (Accordion under Application Process). All were not useful; they contain program-specific information and no general knowledge about the capital of France. Still missing: any evidence identifying the capital of France."
+        },
+        "stop_reason": "empty_evidence",
+        "fallback": {
+          "triggered": false,
+          "pages_selected": [],
+          "reason": ""
+        },
+        "metrics": {
+          "agent_turns": 9,
+          "tool_calls": 9,
+          "judge_calls": 2,
+          "llm_calls": 22,
+          "valid_fetch_count": 2,
+          "invalid_fetch_count": 0,
+          "accepted_evidence_count": 0,
+          "stop_reason": "empty_evidence",
+          "fallback_triggered": false
+        },
+        "usage": {
+          "prompt_tokens": 20784,
+          "completion_tokens": 2492,
+          "total_tokens": 23276,
+          "llm_calls": 22
+        },
+        "progress_summary_history": [
+          {
+            "turn": 1,
+            "summary_covering": "No pages have been inspected yet. The question is a general knowledge question, and no specific program page has been identified as relevant. The FAQs page (P5) has been proposed as a potential source, but it has not been inspected yet. Still missing: any evidence to answer the question.",
+            "decision_trace_narrative": "Turn 1: The agent decided to inspect the FAQs page (P5) because the question is general knowledge and not specific to the MSADS program, and the FAQs page might contain general information or guidance. The inspection was successful, but no nodes have been evaluated yet.",
+            "sufficient": false,
+            "missing": "Evidence for the capital of France."
+          },
+          {
+            "turn": 2,
+            "summary_covering": "Page: P5 (FAQs)\n  - N2 (Master's in Applied Data Science FAQs): Checked, not useful. Contains only program introduction and staff name, no capital of France info.\n\nStill missing: Any evidence about the capital of France.",
+            "decision_trace_narrative": "Turn 1: Fetched N2 on P5 (FAQs) because it was deemed the most likely source for general knowledge questions. The node did not contain relevant information, so no evidence was added.",
+            "sufficient": false,
+            "missing": "Evidence about the capital of France."
+          },
+          {
+            "turn": 3,
+            "summary_covering": "Page P5 (FAQs): Checked node N2 (Master's in Applied Data Science FAQs) — not useful; contains only program introduction and staff name, no capital of France. Still missing: any evidence about the capital of France.",
+            "decision_trace_narrative": "Turn 1: Inspected P5, node N2, because the question is unrelated to MSADS and FAQs might contain general knowledge. Outcome: not useful. Turn 2: Re-inspected P5 (same node N2) because no other page seemed relevant and to exhaust possibilities. Outcome: not useful; no new information.",
+            "sufficient": false,
+            "missing": "Evidence identifying the capital of France."
+          },
+          {
+            "turn": 4,
+            "summary_covering": "Page: P5 (FAQs)\n  - N2 (Master's in Applied Data Science FAQs) — checked, not useful: contains only program introduction and staff name, no capital of France info.\n\nStill missing: Any evidence about the capital of France.",
+            "decision_trace_narrative": "Turn 1: Inspected P5, node N2 (Master's in Applied Data Science FAQs) because the question is unrelated to MSADS and P5 is the only page that might contain general knowledge. The node was not useful, so the agent decided to re-inspect P5 to look for other nodes that might contain the answer. Turn 2: Re-inspected P5 (already fetched) to look for other nodes, but no new information was found.",
+            "sufficient": false,
+            "missing": "The capital of France is not mentioned in any accepted evidence."
+          },
+          {
+            "turn": 5,
+            "summary_covering": "Page: P5 (FAQs)\n  - N2 (Master's in Applied Data Science FAQs) — checked, not useful. Contains only program introduction and staff name, no capital of France info.\n\nStill missing: Any evidence about the capital of France. No page or node has provided relevant information.",
+            "decision_trace_narrative": "Turn 1: Inspected P5, node N2, because the question is unrelated to the MSADS knowledge graph and P5 was the only page that might contain general knowledge. Outcome: not useful. Turn 2: Re-inspected P5 to look for other nodes, as a final attempt, though unlikely. Outcome: no new information found; the node was already fetched and not useful.",
+            "sufficient": false,
+            "missing": "The capital of France is not mentioned in any inspected node."
+          },
+          {
+            "turn": 6,
+            "summary_covering": "Page P5 (FAQs): Checked node N2 (Master's in Applied Data Science FAQs) — not useful; contains only program intro and staff name, no capital of France. Still missing: any evidence about the capital of France.",
+            "decision_trace_narrative": "Turn 1: Inspected P5 N2 (reason: initial exploration of FAQ page). Outcome: no relevant evidence. Turn 2: Re-inspected P5 N2 (reason: question unrelated to MSADS, final attempt to check remaining nodes). Outcome: no new information; node already fetched.",
+            "sufficient": false,
+            "missing": "Evidence identifying the capital of France."
+          },
+          {
+            "turn": 7,
+            "summary_covering": "Page: P5 (FAQs) - Checked node N2 (Master's in Applied Data Science FAQs) under path FAQs > Master's in Applied Data Science FAQs. This node was not useful; it contains only program-related information and no mention of the capital of France. No other nodes on this page have been inspected. Still missing: any information about the capital of France.",
+            "decision_trace_narrative": "Turn 1: The agent inspected page P5 (FAQs) with the stated reason that the question about the capital of France is unrelated to the MSADS program, but since the system is limited to the knowledge graph, it re-inspected the FAQ page to see if any other nodes might contain general knowledge. The inspection returned OK, and the agent evaluated node N2, finding it not useful. No new evidence was accepted.",
+            "sufficient": false,
+            "missing": "Information about the capital of France."
+          },
+          {
+            "turn": 8,
+            "summary_covering": "Page P5 (FAQs): Checked node N2 (Master's in Applied Data Science FAQs) via path FAQs > Master's in Applied Data Science FAQs. The node contains only generic program introduction and a staff name; no information about the capital of France. Not useful. Still missing: any evidence about the capital of France.",
+            "decision_trace_narrative": "Turn 1: Inspected page P5, node N2 (FAQs > Master's in Applied Data Science FAQs) because the question about the capital of France is unrelated to the MSADS program, but the system is limited to the knowledge graph. Since only one turn remains, re-inspecting the FAQ page was deemed the most efficient way to check for any general knowledge. The node was fetched successfully but contained no relevant information.",
+            "sufficient": false,
+            "missing": "Evidence identifying the capital of France."
+          },
+          {
+            "turn": 9,
+            "summary_covering": "Page P5 (FAQs): Checked nodes N2 (Master's in Applied Data Science FAQs), N1 (Page Introduction), and N5 (Accordion under Application Process). All were not useful; they contain program-specific information and no general knowledge about the capital of France. Still missing: any evidence identifying the capital of France.",
+            "decision_trace_narrative": "Turn 1: The agent noted the question is unrelated to the MSADS program and the knowledge graph likely lacks relevant info. With one turn remaining, it fetched multiple nodes from the already-inspected FAQ page to maximize chances, but all were program-specific and yielded no relevant evidence. No new information was obtained.",
+            "sufficient": false,
+            "missing": "The capital of France is not mentioned in any accepted evidence."
+          }
+        ],
+        "node_evaluation_log": {
+          "P5 (FAQs)": {
+            "N2 (Master’s in Applied Data Science FAQs)": {
+              "node_id": "section:b1a823dd798ad79a",
+              "path": [
+                "FAQs",
+                "Master’s in Applied Data Science FAQs"
+              ],
+              "eff_evidence": [],
+              "comment": "The node contains only a generic program introduction and a staff name, with no information about the capital of France. No evidence supports the question."
+            },
+            "N1 (Page Introduction)": {
+              "node_id": "section:aa989e4ed2789a71",
+              "path": [
+                "FAQs",
+                "Page Introduction"
+              ],
+              "eff_evidence": [],
+              "comment": "The node contains only a generic FAQ page introduction with no information about the capital of France. No evidence supports the question."
+            },
+            "N5 (Accordion)": {
+              "node_id": "accordion:b6700d04c00529cd",
+              "path": [
+                "FAQs",
+                "Application Process"
+              ],
+              "eff_evidence": [],
+              "comment": "The node covers application process FAQs for a Master's program, including admissions decisions, recommendations, transcripts, test scores, and program differences. None of the content relates to the capital of France, so no evidence is kept."
+            }
+          }
+        },
+        "log_path": "C:\\Users\\ss363\\Desktop\\Archive\\ads_rag_chatbot\\pipeline_grag_v2\\log\\2026-08-04_014938_ba2690e5a8e0.json"
+      }
+    }
+  },
+  "run_batch_id": "20260804T013937"
+}

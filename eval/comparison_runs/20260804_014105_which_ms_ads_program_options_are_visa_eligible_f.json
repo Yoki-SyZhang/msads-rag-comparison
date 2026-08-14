@@ -1,0 +1,579 @@
+{
+  "schema_version": 2,
+  "timestamp": "2026-08-04T01:41:05.296703",
+  "question": "Which MS-ADS program options are visa-eligible for international students?",
+  "question_id": "A05",
+  "question_meta": {
+    "category": "admissions",
+    "type": "cross_page",
+    "difficulty": "medium",
+    "expected_behavior": "direct_answer"
+  },
+  "results": {
+    "pipeline_flatrag": {
+      "pipeline_id": "pipeline_flatrag",
+      "display_name": "FlatRAG",
+      "answer": "Based on the available program materials, the full-time, In-Person 1-Year 12-Course Program and the 2-Year Thesis Track 18-Course Program are visa-eligible for international students [1]. The Online Program is not eligible for visa sponsorship [2].\n\nSources:\n1. [Faqs | International Students > Which Master's in Applied Data Science provides students with visas?](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/)\n2. [Faqs | Online Program > Do I need to be a US citizen or permanent resident to apply to Master's in Applied Data Science Online Program?](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/)",
+      "sources": [
+        {
+          "page_title": "Faqs",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "tool_calls": [
+            {
+              "name": "list_page_sections",
+              "args": {
+                "url": "faqs"
+              }
+            },
+            {
+              "name": "list_page_sections",
+              "args": {
+                "url": "in_person_program"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "list_page_sections",
+              "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/:\n  - \"2-Year Thesis Track Program > How many spots are available in the new 2-year program?\" (1 chunk)\n  - \"2-Year Thesis Track Program > If I am admitted to the In-Person, Full-Time 1-year program, may I take any of the 2-year program electives?\" (1 chunk)\n  - \"2-Year Thesis Track Program > May I switch between the 1- and 2-year programs after officially enrolling in the MS-ADS program?\" (1 chunk)\n  - \"2-Year Thesis Track Program > What is the 2-year program's thesis requirement?\" (1 chunk)\n  - \"2-Year Thesis Track Program > What is the new 2-year thesis track program (18 courses), and how is it different from the 1-year program (12 courses)?\" (2 chunks)\n  - \"2-Year Thesis Track Program > When can I apply for the 2-year thesis track program?\" (1 chunk)\n  - \"Application Process > Do I need to provide my recommenders with instructions?\" (1 chunk)\n  - \"Application Process > Does the admissions office allow recommenders to email their letter directly as an attachment to be included in an applicant’s file?\" (1 chunk)\n  - \"Application Process > How do I submit the materials that will accompany my Master's in Applied Data Science application?\" (1 chunk)\n  - \"Application Process > How will I be notified that I am admitted to the Master's in Applied Data Science program?\" (1 chunk)\n  - \"Application Process > I took the GRE and/or GMAT and want to include my score(s) with my Master's in Applied Data Science application.\" (1 chunk)\n  - \"Application Process > I took the TOEFL over two years ago. Can I still use those TOEFL results?\" (1 chunk)\n  - \"Application Process > If I am admitted to the Master's in Applied Data Science program, what do I do next?\" (1 chunk)\n  - \"Application Process > If I finish my Master's in Applied Data Science application before the deadline, will I receive my decision early?\" (1 chunk)\n  - \"Application Process > Is the GRE or GMAT required for th"
+            },
+            {
+              "name": "list_page_sections",
+              "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/in-person-program/:\n  - \"1-Year 12 Course Program (Full- and Part-Time Options)\" (3 chunks)\n  - \"2-Year Thesis Track, 18 Course Program (Full-Time Only)\" (3 chunks)\n  - \"By and For Data Science Innovators\" (1 chunk)\n  - \"Career Outcomes in Data Science\" (1 chunk)\n  - \"Comparison Chart\" (1 chunk)\n  - \"Core Courses > Data Engineering Platforms for Analytics or Big Data and Cloud Computing\" (1 chunk)\n  - \"Core Courses > Data Science Capstone Project\" (1 chunk)\n  - \"Core Courses > Leadership and Consulting for Data Science\" (1 chunk)\n  - \"Core Courses > Machine Learning I\" (1 chunk)\n  - \"Core Courses > Machine Learning II\" (1 chunk)\n  - \"Core Courses > Statistical Models for Data Science\" (1 chunk)\n  - \"Core Courses > Time Series Analysis and Forecasting\" (1 chunk)\n  - \"Get in Touch\" (1 chunk)\n  - \"In Person Program\" (1 chunk)\n  - \"In Person Program - Accordion Overview > Core Courses\" (1 chunk)\n  - \"In Person Program - Accordion Overview > Noncredit Courses\" (1 chunk)\n  - \"In Person Program - Accordion Overview > Sample Elective Courses\" (1 chunk)\n  - \"Noncredit Courses > Advanced Linear Algebra for Machine Learning (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Brush up on the Basics (Optional resource)\" (1 chunk)\n  - \"Noncredit Courses > Career Seminar (Seminar, required)\" (1 chunk)\n  - \"Noncredit Courses > Introduction to Statistical Concepts (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Python for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > R for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Sample Elective Courses > Advanced Computer Vision with Deep Learning\" (2 chunks)\n  - \"Sample Elective Courses > Advanced Machine Learning and Artificial Intelligence\" (2 chunks)\n  - \"Sample Elective Courses > Applied Generative AI: Agents and Multimodal Intelligence\" (2 chunks)\n  - \"Sample Elective Courses > Bayesian Machine Learning with G"
+            }
+          ],
+          "judger": null
+        },
+        {
+          "step": 2,
+          "tool_calls": [
+            {
+              "name": "fetch_section_chunks",
+              "args": {
+                "url": "faqs",
+                "section_breadcrumb": "International Students > Which Master's in Applied Data Science provides students with visas?"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_section_chunks",
+              "content": "Fetched 1 chunk(s) from \"International Students > Which Master's in Applied Data Science provides students with visas?\":\n\n[0] Faqs | International Students > Which Master's in Applied Data Science provides students with visas?\n[Page: Faqs | Section: International Students > Which Master's in Applied Data Science provides students with visas?]\n\nThe full-time, In-Person 1-Year 12-Course Program & 2-Year Thesis Track 18-Course Program are visa eligible."
+            }
+          ],
+          "judger": {
+            "completeness": "partial",
+            "useful_indices": [
+              0
+            ],
+            "decision": "continue",
+            "candidate_chunk_count": 1,
+            "accepted_chunk_count": 1
+          }
+        },
+        {
+          "step": 3,
+          "tool_calls": [
+            {
+              "name": "fetch_section_chunks",
+              "args": {
+                "section_breadcrumb": "Online Program > Do I need to be a US citizen or permanent resident to apply to Master's in Applied Data Science Online Program?",
+                "url": "faqs"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_section_chunks",
+              "content": "Fetched 1 chunk(s) from \"Online Program > Do I need to be a US citizen or permanent resident to apply to Master's in Applied Data Science Online Program?\":\n\n[0] Faqs | Online Program > Do I need to be a US citizen or permanent resident to apply to Master's in Applied Data Science Online Program?\n[Page: Faqs | Section: Online Program > Do I need to be a US citizen or permanent resident to apply to Master's in Applied Data Science Online Program?]\n\nNo, students do not have to be US citizen or resident to partake in the Online Program . Please note that the Online Program is not eligible for v..."
+            }
+          ],
+          "judger": {
+            "completeness": "partial",
+            "useful_indices": [
+              0
+            ],
+            "decision": "done",
+            "candidate_chunk_count": 1,
+            "accepted_chunk_count": 2
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "text": "[Page: Faqs | Section: International Students > Which Master's in Applied Data Science provides students with visas?]\n\nThe full-time, In-Person 1-Year 12-Course Program & 2-Year Thesis Track 18-Course Program are visa eligible.",
+          "chunk_id": "education__masters_programs__ms_in_applied_data_science__faqs__which_master_s_in_applied_data_science_provides_students_with_visas__25",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/",
+          "page_title": "Faqs",
+          "section": "Which Master's in Applied Data Science provides students with visas?",
+          "section_breadcrumb": "International Students > Which Master's in Applied Data Science provides students with visas?",
+          "content_type": "text",
+          "program_type": "general",
+          "distance": 0.0
+        },
+        {
+          "text": "[Page: Faqs | Section: Online Program > Do I need to be a US citizen or permanent resident to apply to Master's in Applied Data Science Online Program?]\n\nNo, students do not have to be US citizen or resident to partake in the Online Program . Please note that the Online Program is not eligible for visa sponsorship.",
+          "chunk_id": "education__masters_programs__ms_in_applied_data_science__faqs__do_i_need_to_be_a_us_citizen_or_permanent_resident_to_apply_to_master_s_in_applied_data_science_online_program__31",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/",
+          "page_title": "Faqs",
+          "section": "Do I need to be a US citizen or permanent resident to apply to Master's in Applied Data Science Online Program?",
+          "section_breadcrumb": "Online Program > Do I need to be a US citizen or permanent resident to apply to Master's in Applied Data Science Online Program?",
+          "content_type": "text",
+          "program_type": "general",
+          "distance": 0.0
+        }
+      ],
+      "time_sec": 10.244,
+      "low_confidence": true,
+      "error": null,
+      "raw_debug": {
+        "answer": "Based on the available program materials, the full-time, In-Person 1-Year 12-Course Program and the 2-Year Thesis Track 18-Course Program are visa-eligible for international students [1]. The Online Program is not eligible for visa sponsorship [2].\n\nSources:\n1. [Faqs | International Students > Which Master's in Applied Data Science provides students with visas?](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/)\n2. [Faqs | Online Program > Do I need to be a US citizen or permanent resident to apply to Master's in Applied Data Science Online Program?](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/)",
+        "sources": [
+          {
+            "page_title": "Faqs",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/"
+          }
+        ],
+        "completeness": "partial",
+        "low_confidence": true,
+        "attempts": 3,
+        "agent_steps": [
+          {
+            "step": 1,
+            "tool_calls": [
+              {
+                "name": "list_page_sections",
+                "args": {
+                  "url": "faqs"
+                }
+              },
+              {
+                "name": "list_page_sections",
+                "args": {
+                  "url": "in_person_program"
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "list_page_sections",
+                "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/:\n  - \"2-Year Thesis Track Program > How many spots are available in the new 2-year program?\" (1 chunk)\n  - \"2-Year Thesis Track Program > If I am admitted to the In-Person, Full-Time 1-year program, may I take any of the 2-year program electives?\" (1 chunk)\n  - \"2-Year Thesis Track Program > May I switch between the 1- and 2-year programs after officially enrolling in the MS-ADS program?\" (1 chunk)\n  - \"2-Year Thesis Track Program > What is the 2-year program's thesis requirement?\" (1 chunk)\n  - \"2-Year Thesis Track Program > What is the new 2-year thesis track program (18 courses), and how is it different from the 1-year program (12 courses)?\" (2 chunks)\n  - \"2-Year Thesis Track Program > When can I apply for the 2-year thesis track program?\" (1 chunk)\n  - \"Application Process > Do I need to provide my recommenders with instructions?\" (1 chunk)\n  - \"Application Process > Does the admissions office allow recommenders to email their letter directly as an attachment to be included in an applicant’s file?\" (1 chunk)\n  - \"Application Process > How do I submit the materials that will accompany my Master's in Applied Data Science application?\" (1 chunk)\n  - \"Application Process > How will I be notified that I am admitted to the Master's in Applied Data Science program?\" (1 chunk)\n  - \"Application Process > I took the GRE and/or GMAT and want to include my score(s) with my Master's in Applied Data Science application.\" (1 chunk)\n  - \"Application Process > I took the TOEFL over two years ago. Can I still use those TOEFL results?\" (1 chunk)\n  - \"Application Process > If I am admitted to the Master's in Applied Data Science program, what do I do next?\" (1 chunk)\n  - \"Application Process > If I finish my Master's in Applied Data Science application before the deadline, will I receive my decision early?\" (1 chunk)\n  - \"Application Process > Is the GRE or GMAT required for th"
+              },
+              {
+                "name": "list_page_sections",
+                "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/in-person-program/:\n  - \"1-Year 12 Course Program (Full- and Part-Time Options)\" (3 chunks)\n  - \"2-Year Thesis Track, 18 Course Program (Full-Time Only)\" (3 chunks)\n  - \"By and For Data Science Innovators\" (1 chunk)\n  - \"Career Outcomes in Data Science\" (1 chunk)\n  - \"Comparison Chart\" (1 chunk)\n  - \"Core Courses > Data Engineering Platforms for Analytics or Big Data and Cloud Computing\" (1 chunk)\n  - \"Core Courses > Data Science Capstone Project\" (1 chunk)\n  - \"Core Courses > Leadership and Consulting for Data Science\" (1 chunk)\n  - \"Core Courses > Machine Learning I\" (1 chunk)\n  - \"Core Courses > Machine Learning II\" (1 chunk)\n  - \"Core Courses > Statistical Models for Data Science\" (1 chunk)\n  - \"Core Courses > Time Series Analysis and Forecasting\" (1 chunk)\n  - \"Get in Touch\" (1 chunk)\n  - \"In Person Program\" (1 chunk)\n  - \"In Person Program - Accordion Overview > Core Courses\" (1 chunk)\n  - \"In Person Program - Accordion Overview > Noncredit Courses\" (1 chunk)\n  - \"In Person Program - Accordion Overview > Sample Elective Courses\" (1 chunk)\n  - \"Noncredit Courses > Advanced Linear Algebra for Machine Learning (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Brush up on the Basics (Optional resource)\" (1 chunk)\n  - \"Noncredit Courses > Career Seminar (Seminar, required)\" (1 chunk)\n  - \"Noncredit Courses > Introduction to Statistical Concepts (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Python for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > R for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Sample Elective Courses > Advanced Computer Vision with Deep Learning\" (2 chunks)\n  - \"Sample Elective Courses > Advanced Machine Learning and Artificial Intelligence\" (2 chunks)\n  - \"Sample Elective Courses > Applied Generative AI: Agents and Multimodal Intelligence\" (2 chunks)\n  - \"Sample Elective Courses > Bayesian Machine Learning with G"
+              }
+            ],
+            "judger": null
+          },
+          {
+            "step": 2,
+            "tool_calls": [
+              {
+                "name": "fetch_section_chunks",
+                "args": {
+                  "url": "faqs",
+                  "section_breadcrumb": "International Students > Which Master's in Applied Data Science provides students with visas?"
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "fetch_section_chunks",
+                "content": "Fetched 1 chunk(s) from \"International Students > Which Master's in Applied Data Science provides students with visas?\":\n\n[0] Faqs | International Students > Which Master's in Applied Data Science provides students with visas?\n[Page: Faqs | Section: International Students > Which Master's in Applied Data Science provides students with visas?]\n\nThe full-time, In-Person 1-Year 12-Course Program & 2-Year Thesis Track 18-Course Program are visa eligible."
+              }
+            ],
+            "judger": {
+              "completeness": "partial",
+              "useful_indices": [
+                0
+              ],
+              "decision": "continue",
+              "candidate_chunk_count": 1,
+              "accepted_chunk_count": 1
+            }
+          },
+          {
+            "step": 3,
+            "tool_calls": [
+              {
+                "name": "fetch_section_chunks",
+                "args": {
+                  "section_breadcrumb": "Online Program > Do I need to be a US citizen or permanent resident to apply to Master's in Applied Data Science Online Program?",
+                  "url": "faqs"
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "fetch_section_chunks",
+                "content": "Fetched 1 chunk(s) from \"Online Program > Do I need to be a US citizen or permanent resident to apply to Master's in Applied Data Science Online Program?\":\n\n[0] Faqs | Online Program > Do I need to be a US citizen or permanent resident to apply to Master's in Applied Data Science Online Program?\n[Page: Faqs | Section: Online Program > Do I need to be a US citizen or permanent resident to apply to Master's in Applied Data Science Online Program?]\n\nNo, students do not have to be US citizen or resident to partake in the Online Program . Please note that the Online Program is not eligible for v..."
+              }
+            ],
+            "judger": {
+              "completeness": "partial",
+              "useful_indices": [
+                0
+              ],
+              "decision": "done",
+              "candidate_chunk_count": 1,
+              "accepted_chunk_count": 2
+            }
+          }
+        ],
+        "evidence": [
+          {
+            "text": "[Page: Faqs | Section: International Students > Which Master's in Applied Data Science provides students with visas?]\n\nThe full-time, In-Person 1-Year 12-Course Program & 2-Year Thesis Track 18-Course Program are visa eligible.",
+            "chunk_id": "education__masters_programs__ms_in_applied_data_science__faqs__which_master_s_in_applied_data_science_provides_students_with_visas__25",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/",
+            "page_title": "Faqs",
+            "section": "Which Master's in Applied Data Science provides students with visas?",
+            "section_breadcrumb": "International Students > Which Master's in Applied Data Science provides students with visas?",
+            "content_type": "text",
+            "program_type": "general",
+            "distance": 0.0
+          },
+          {
+            "text": "[Page: Faqs | Section: Online Program > Do I need to be a US citizen or permanent resident to apply to Master's in Applied Data Science Online Program?]\n\nNo, students do not have to be US citizen or resident to partake in the Online Program . Please note that the Online Program is not eligible for visa sponsorship.",
+            "chunk_id": "education__masters_programs__ms_in_applied_data_science__faqs__do_i_need_to_be_a_us_citizen_or_permanent_resident_to_apply_to_master_s_in_applied_data_science_online_program__31",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/",
+            "page_title": "Faqs",
+            "section": "Do I need to be a US citizen or permanent resident to apply to Master's in Applied Data Science Online Program?",
+            "section_breadcrumb": "Online Program > Do I need to be a US citizen or permanent resident to apply to Master's in Applied Data Science Online Program?",
+            "content_type": "text",
+            "program_type": "general",
+            "distance": 0.0
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 10767,
+          "completion_tokens": 536,
+          "total_tokens": 11303,
+          "llm_calls": 8
+        },
+        "metrics": {
+          "tool_calls": 4,
+          "loop_count": 3,
+          "evidence_count": 2,
+          "llm_calls": 8,
+          "judge_calls": null,
+          "valid_fetch_count": null,
+          "invalid_fetch_count": null,
+          "fallback_triggered": null
+        }
+      }
+    },
+    "pipeline_grag_v2": {
+      "pipeline_id": "pipeline_grag_v2",
+      "display_name": "GRAG v2",
+      "answer": "The visa-eligible MS-ADS options for international students are the full-time, In-Person 1-Year 12-Course Program and the 2-Year Thesis Track 18-Course Program [1]. The full-time, In-Person program is also STEM-designated, which allows eligible students to apply for the STEM OPT extension [2]. The Online Program is not eligible for visa sponsorship [3].",
+      "sources": [
+        {
+          "page_title": "FAQs",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P5"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P5] FAQs\n[N1] Page Introduction — Section (1 content block)\n[N2] Master’s in Applied Data Science FAQs — Section (1 content block)\n[N3] Course Progression Tabs — ProgressionTabs (46 content blocks)\n    ├── [N4] Application Process — ProgressionTab (18 content blocks)\n        ├── [N5] Accordion — Accordion (18 content blocks)\n            preview: This accordion contains: When will I receive my Master's in Applied Data Science admission decision?; If I finish my Master's in Applied Data Science application before the deadline, will I receive my decision early?; How do I submit the materials that will accompany my Master's in Applied Data Science application?; Does the admissions office allow recommenders to email their letter directly as an attachment to be included in an applicant’s file?; Do I need to provide my recommenders with instructions?; My recommender did not receive notification, can I resend it?; What materials do I need to submit to accompany my application for admission to the Masters in Applied Data Science program?; Once I upload my unofficial transcripts to my application, do I still need to provide an official transcript?; Is the GRE or GMAT required for the Master's in Applied Data Science program?; I took the\n    ├── [N6] International Students — ProgressionTab (4 content blocks)\n        preview: This accordion contains: Which Master's in Applied Data Science provides students with visas?; What is the total cost of tuition for the Master's in Applied Data Science program?; Is the Master's in Applied Data Science an approved OPT/STEM program?; Does the Master's in Applied Data Science program offer Curricular Practical Training (CPT)?; I have worked in the U.S. for more than two years. Does that mean that I am exempt from the TOEFL/IELTS requirement?\n    ├── [N7] Online Program — ProgressionTab (9 content blocks)\n        preview: This accordion contains: If I am a student in the In-Person Master's in Applied Data Science Program, may I take courses in the Online Program? Conversely, if I am a student in the Online Program, may I take courses in the In-Person program?; Do I need to be a US citizen or permanent resident to apply to Master's in Applied Data Science Online Program?; How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?; Will enrolling in Master's in Applied Data Science Online Program give me the opportunity to network with on-campus students, faculty/instructors, and advisors?; What value do employers place on the Master's in Applied Data Science Online degree?; Is the Master's in Applied Data Science Online program equally academically rigorous as the In-Person program?; Will my diploma indicate I\n    ├── [N8] MBA/MS — ProgressionTab (7 content blocks)\n        preview: This accordion contains: How do I apply to the MBA/MS joint degree program?; What courses will I take in the MBA/MS program?; Will MBA/MS courses be in-person or online?; Are standardized tests required for admission?; What are the main differences in programs and outcomes between the MBA/MS in Applied Data Science compared to Computer Science?\n    ├── [N9] 2-Year Thesis Track Program — ProgressionTab (8 content blocks)\n        preview: This accordion contains: What is the new 2-year thesis track program (18 courses), and how is it different from the 1-year program (12 courses)?; When can I apply for the 2-year thesis track program?; May I switch between the 1- and 2-year programs after officially enrolling in the MS-ADS program?; If I am admitted to the In-Person, Full-Time 1-year program, may I take any of the 2-year program electives?; What is the 2-year program's thesis requirement?; How many spots are available in the new 2-year program?"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "FAQs page likely covers visa eligibility for international students across program options."
+        },
+        {
+          "step": 2,
+          "tool_calls": [
+            {
+              "name": "fetch_graph_content",
+              "args": {
+                "node_refs": [
+                  "N6",
+                  "N7",
+                  "N2"
+                ]
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_graph_content",
+              "content": "[N6] International Students — path: FAQs > International Students\n  [N6.1] Accordion\n    [E1] (structure summary) This accordion contains: Which Master's in Applied Data Science provides students with visas?; What is the total cost of tuition for the Master's in Applied Data Science program?; Is the Master's in Applied Data Science an approved OPT/STEM program?; Does the Master's in Applied Data Science program offer Curricular Practical Training (CPT)?; I have worked in the U.S. for more than two years. Does that mean that I am exempt from the TOEFL/IELTS requirement?\n    [N6.1.1] Which Master's in Applied Data Science provides students with visas?\n      [E2] The full-time, In-Person 1-Year 12-Course Program & 2-Year Thesis Track 18-Course Program are visa eligible.\n    [N6.1.2] Is the Master's in Applied Data Science an approved OPT/STEM program?\n      [E3] Yes, the full-time, In-Person Master’s in Applied Data Science program is listed as a STEM-designated degree by the U.S. Department of Homeland Security for the purposes of the STEM OPT extension, allowing eligible students to apply. However, approval of STEM OPT is at the discretion of U.S. Citizenship & Immigration Services.\n    [N6.1.3] I have worked in the U.S. for more than two years. Does that mean that I am exempt from the TOEFL/IELTS requirement?\n      [E4] Please refer to the English Language Proficiency guidelines.\n\n[N7] Online Program — path: FAQs > Online Program\n  [N7.1] Accordion\n    [E5] (structure summary) This accordion contains: If I am a student in the In-Person Master's in Applied Data Science Program, may I take courses in the Online Program? Conversely, if I am a student in the Online Program, may I take courses in the In-Person program?; Do I need to be a US citizen or permanent resident to apply to Master's in Applied Data Science Online Program?; How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?; Will enrolling in Master's in Applied Data Science Online Program give me the opportunity to network with on-campus students, faculty/instructors, and advisors?; What value do employers place on the Master's in Applied Data Science Online degree?; Is the Master's in Applied Data Science Online program equally academically rigorous as the In-Person program?; Will my diploma indicate I\n    [E6] (structure summary) equally academically rigorous as the In-Person program?; Will my diploma indicate I completed the Master's in Applied Data Science Program Online?\n    [N7.1.1] If I am a student in the In-Person Master's in Applied Data Science Program, may I take courses in the Online Program? Conversely, if I am a student in the Online Program, may I take courses in the In-Person program?\n      [E7] Currently, students may only take Master’s in Applied Data Science courses in the modality in which they are officially enrolled.\n    [N7.1.2] Do I need to be a US citizen or permanent resident to apply to Master's in Applied Data Science Online Program?\n      [E8] No, students do not have to be US citizen or resident to partake in the Online Program . Please note that the Online Program is not eligible for visa sponsorship.\n    [N7.1.3] How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?\n      [E9] Classes generally take place on evenings and weekends in order to allow our students and instructors to maintain their professional schedules. The Master’s in Applied Data Science Online Program is both synchronous and asynchronous. The same as our In-Person program, students are required to participate in weekly, live meetings with their instructors and peers, complete readings and coursework, and engage in discussion.\n    [N7.1.4] Will enrolling in Master's in Applied Data Science Online Program give me the opportunity to network with on-campus students, faculty/instructors, and advisors?\n      [E10] Yes. All Master’s in Applied Data Science Online Program students are invited to an annual ‘ Immersion Weekend ’ where attendees have opportunities to network and participate in other activities. On a rolling basis, our Career Services team will advertise additional opportunities to connect with employers and peers (e.g., virtual career fairs, virtual career advising/coaching appointments, and more).\n    [N7.1.5] What value do employers place on the Master's in Applied Data Science Online degree?\n      [E11] The value employers place on the Master’s in Applied Data Science degree is significant. As they hire Data Scientist, Data Engineers, and Data Analysts from the University of Chicago the expectations for technical competence, communication and influence skills, and exposure to advanced Data Science evolving technologies is high. The skills learned in the program translate directly into practice due to the program’s balance between theory and rigorous application experience developed in coursework and the Capstone project work delivered across the curriculum.\n    [N7.1.6] Is the Master's in Applied Data Science Online program equally academically rigorous as the In-Person program?\n      [E12] Yes. The Online Program curriculum is overseen by the same faculty curriculum committee as the In-Person program. Both programs are jointly reviewed and are held to the same high standards. Additionally, both programs are granted by the University of Chicago Physical Sciences Division .\n    [N7.1.7] Will my diploma indicate I completed the Master's in Applied Data Science Program Online?\n      [E13] No, your diploma will not include ‘Online’ in the name of your degree.\n\n[N2] Master’s in Applied Data Science FAQs — path: FAQs > Master’s in Applied Data Science FAQs\n  [E14] Learn more about what makes our program unique.\nDavid Uminsky, PhD – UChicago Data Science Institute, Executive Director"
+            }
+          ],
+          "judger": {
+            "node_assessments": [
+              {
+                "node_ref": "N6",
+                "keep_evidence": [
+                  "E2",
+                  "E3"
+                ],
+                "comment": "E2 directly states which MS-ADS program options are visa-eligible (full-time In-Person 1-Year and 2-Year Thesis Track). E3 confirms the program is STEM-designated for OPT extension, relevant to visa eligibility. E1 is a structure summary listing questions, not directly answering; E4 is about TOEFL/IELTS exemption, not visa eligibility."
+              },
+              {
+                "node_ref": "N7",
+                "keep_evidence": [
+                  "E8"
+                ],
+                "comment": "E8 explicitly states that the Online Program is not eligible for visa sponsorship, directly answering the question for that option. Other E refs (E5, E6, E7, E9-E13) cover course modality, citizenship requirements, schedule, networking, employer value, academic rigor, and diploma naming, none of which address visa eligibility."
+              },
+              {
+                "node_ref": "N2",
+                "keep_evidence": [],
+                "comment": "This node contains only a general promotional statement (E14) about the program's uniqueness and an executive director's name, providing no information about visa eligibility for program options."
+              }
+            ]
+          },
+          "decision_reason": "The FAQs page has an 'International Students' node (N6) which likely directly addresses visa eligibility. Also fetch 'Online Program' (N7) to compare visa eligibility for online vs in-person, and the main FAQ node (N2) for any general visa statements."
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E2",
+          "status": "accepted",
+          "page_title": "FAQs",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs",
+          "text": "The full-time, In-Person 1-Year 12-Course Program & 2-Year Thesis Track 18-Course Program are visa eligible.",
+          "path": [
+            "FAQs",
+            "International Students",
+            "Which Master's in Applied Data Science provides students with visas?"
+          ],
+          "section_breadcrumb": "FAQs > International Students > Which Master's in Applied Data Science provides students with visas?",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N6"
+            }
+          ],
+          "chunk_id": "chunk:a26d62674928e460",
+          "owner_node_id": "accordion_item:07f661dfc51b6c31",
+          "page_id": "page:a1d4f5293a26528e",
+          "internal_metadata": {
+            "source_type": "p",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E3",
+          "status": "accepted",
+          "page_title": "FAQs",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs",
+          "text": "Yes, the full-time, In-Person Master’s in Applied Data Science program is listed as a STEM-designated degree by the U.S. Department of Homeland Security for the purposes of the STEM OPT extension, allowing eligible students to apply. However, approval of STEM OPT is at the discretion of U.S. Citizenship & Immigration Services.",
+          "path": [
+            "FAQs",
+            "International Students",
+            "Is the Master's in Applied Data Science an approved OPT/STEM program?"
+          ],
+          "section_breadcrumb": "FAQs > International Students > Is the Master's in Applied Data Science an approved OPT/STEM program?",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N6"
+            }
+          ],
+          "chunk_id": "chunk:7a4160bb674da928",
+          "owner_node_id": "accordion_item:8036f8036969da50",
+          "page_id": "page:a1d4f5293a26528e",
+          "internal_metadata": {
+            "source_type": "p",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E8",
+          "status": "accepted",
+          "page_title": "FAQs",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs",
+          "text": "No, students do not have to be US citizen or resident to partake in the Online Program . Please note that the Online Program is not eligible for visa sponsorship.",
+          "path": [
+            "FAQs",
+            "Online Program",
+            "Do I need to be a US citizen or permanent resident to apply to Master's in Applied Data Science Online Program?"
+          ],
+          "section_breadcrumb": "FAQs > Online Program > Do I need to be a US citizen or permanent resident to apply to Master's in Applied Data Science Online Program?",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N7"
+            }
+          ],
+          "chunk_id": "chunk:f482ddbfbf63d166",
+          "owner_node_id": "accordion_item:b42cc16080eaad5e",
+          "page_id": "page:a1d4f5293a26528e",
+          "internal_metadata": {
+            "source_type": "p",
+            "score": null,
+            "score_breakdown": {}
+          }
+        }
+      ],
+      "time_sec": 12.396,
+      "low_confidence": false,
+      "error": null,
+      "progress_summary": {
+        "summary_covering": "Page P5 (FAQs): Checked N6 (International Students) — useful, directly answers visa eligibility for full-time In-Person 1-Year and 2-Year Thesis Track, and confirms STEM designation. Checked N7 (Online Program) — useful, explicitly states Online Program is not visa-eligible. Checked N2 (Master's in Applied Data Science FAQs) — not useful, only general promotional content. Still missing: explicit confirmation of visa eligibility for any other program options (e.g., part-time or other tracks) if they exist.",
+        "decision_trace_narrative": "Turn 1: Fetched FAQs page, targeted N6 (International Students) because it likely addresses visa eligibility directly, N7 (Online Program) to compare online vs in-person, and N2 (main FAQ) for general visa statements. Outcome: N6 and N7 provided direct evidence; N2 did not. No re-queries."
+      },
+      "raw_debug": {
+        "response": {
+          "answer": "The visa-eligible MS-ADS options for international students are the full-time, In-Person 1-Year 12-Course Program and the 2-Year Thesis Track 18-Course Program [1]. The full-time, In-Person program is also STEM-designated, which allows eligible students to apply for the STEM OPT extension [2]. The Online Program is not eligible for visa sponsorship [3].",
+          "citations": [
+            {
+              "index": 1,
+              "title": "FAQs",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs",
+              "snippet": "The full-time, In-Person 1-Year 12-Course Program & 2-Year Thesis Track 18-Course Program are visa eligible."
+            },
+            {
+              "index": 2,
+              "title": "FAQs",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs",
+              "snippet": "Yes, the full-time, In-Person Master’s in Applied Data Science program is listed as a STEM-designated degree by the U.S. Department of Homeland Security for the purposes of the STE"
+            },
+            {
+              "index": 3,
+              "title": "FAQs",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs",
+              "snippet": "No, students do not have to be US citizen or resident to partake in the Online Program . Please note that the Online Program is not eligible for visa sponsorship."
+            }
+          ],
+          "debug": {
+            "tool_turns": 2,
+            "stop_reason": "sufficient_evidence",
+            "evidence_count": 3,
+            "sufficient": true,
+            "missing": "None",
+            "log_path": "C:\\Users\\ss363\\Desktop\\Archive\\ads_rag_chatbot\\pipeline_grag_v2\\log\\2026-08-04_014105_72005db2ba14.json",
+            "run_id": "72005db2ba14"
+          }
+        },
+        "run_id": "72005db2ba14",
+        "rewritten_queries": [
+          {
+            "id": "q1",
+            "query": "MS-ADS program options visa-eligible for international students",
+            "target": "university-program"
+          }
+        ],
+        "judgment": {
+          "sufficient": true,
+          "missing": "None",
+          "comment": "Page P5 (FAQs): Checked N6 (International Students) — useful, directly answers visa eligibility for full-time In-Person 1-Year and 2-Year Thesis Track, and confirms STEM designation. Checked N7 (Online Program) — useful, explicitly states Online Program is not visa-eligible. Checked N2 (Master's in Applied Data Science FAQs) — not useful, only general promotional content. Still missing: explicit confirmation of visa eligibility for any other program options (e.g., part-time or other tracks) if they exist."
+        },
+        "stop_reason": "sufficient_evidence",
+        "fallback": {
+          "triggered": false,
+          "pages_selected": [],
+          "reason": ""
+        },
+        "metrics": {
+          "agent_turns": 2,
+          "tool_calls": 2,
+          "judge_calls": 1,
+          "llm_calls": 7,
+          "valid_fetch_count": 1,
+          "invalid_fetch_count": 0,
+          "accepted_evidence_count": 3,
+          "stop_reason": "sufficient_evidence",
+          "fallback_triggered": false
+        },
+        "usage": {
+          "prompt_tokens": 6352,
+          "completion_tokens": 795,
+          "total_tokens": 7147,
+          "llm_calls": 7
+        },
+        "progress_summary_history": [
+          {
+            "turn": 1,
+            "summary_covering": "No pages have been evaluated yet. Nothing is covered.",
+            "decision_trace_narrative": "Turn 1: The agent decided to inspect the FAQs page, reasoning that it likely covers visa eligibility for international students across program options. The inspection succeeded, but no nodes have been evaluated yet.",
+            "sufficient": false,
+            "missing": "Visa eligibility information for each MS-ADS program option for international students."
+          },
+          {
+            "turn": 2,
+            "summary_covering": "Page P5 (FAQs): Checked N6 (International Students) — useful, directly answers visa eligibility for full-time In-Person 1-Year and 2-Year Thesis Track, and confirms STEM designation. Checked N7 (Online Program) — useful, explicitly states Online Program is not visa-eligible. Checked N2 (Master's in Applied Data Science FAQs) — not useful, only general promotional content. Still missing: explicit confirmation of visa eligibility for any other program options (e.g., part-time or other tracks) if they exist.",
+            "decision_trace_narrative": "Turn 1: Fetched FAQs page, targeted N6 (International Students) because it likely addresses visa eligibility directly, N7 (Online Program) to compare online vs in-person, and N2 (main FAQ) for general visa statements. Outcome: N6 and N7 provided direct evidence; N2 did not. No re-queries.",
+            "sufficient": true,
+            "missing": "None"
+          }
+        ],
+        "node_evaluation_log": {
+          "P5 (FAQs)": {
+            "N6 (International Students)": {
+              "node_id": "progression_tab:ee59deb05d3890d6",
+              "path": [
+                "FAQs",
+                "International Students"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E2",
+                  "chunk_id": "chunk:a26d62674928e460",
+                  "text_preview": "The full-time, In-Person 1-Year 12-Course Program & 2-Year Thesis Track 18-Course Program are visa eligible."
+                },
+                {
+                  "evidence_ref": "E3",
+                  "chunk_id": "chunk:7a4160bb674da928",
+                  "text_preview": "Yes, the full-time, In-Person Master’s in Applied Data Science program is listed as a STEM-designated degree by the U.S. Department of Homeland Securi"
+                }
+              ],
+              "comment": "E2 directly states which MS-ADS program options are visa-eligible (full-time In-Person 1-Year and 2-Year Thesis Track). E3 confirms the program is STEM-designated for OPT extension, relevant to visa eligibility. E1 is a structure summary listing questions, not directly answering; E4 is about TOEFL/IELTS exemption, not visa eligibility."
+            },
+            "N7 (Online Program)": {
+              "node_id": "progression_tab:bd389bc188ec2e10",
+              "path": [
+                "FAQs",
+                "Online Program"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E8",
+                  "chunk_id": "chunk:f482ddbfbf63d166",
+                  "text_preview": "No, students do not have to be US citizen or resident to partake in the Online Program . Please note that the Online Program is not eligible for visa "
+                }
+              ],
+              "comment": "E8 explicitly states that the Online Program is not eligible for visa sponsorship, directly answering the question for that option. Other E refs (E5, E6, E7, E9-E13) cover course modality, citizenship requirements, schedule, networking, employer value, academic rigor, and diploma naming, none of which address visa eligibility."
+            },
+            "N2 (Master’s in Applied Data Science FAQs)": {
+              "node_id": "section:b1a823dd798ad79a",
+              "path": [
+                "FAQs",
+                "Master’s in Applied Data Science FAQs"
+              ],
+              "eff_evidence": [],
+              "comment": "This node contains only a general promotional statement (E14) about the program's uniqueness and an executive director's name, providing no information about visa eligibility for program options."
+            }
+          }
+        },
+        "log_path": "C:\\Users\\ss363\\Desktop\\Archive\\ads_rag_chatbot\\pipeline_grag_v2\\log\\2026-08-04_014105_72005db2ba14.json"
+      }
+    }
+  },
+  "run_batch_id": "20260804T013937"
+}

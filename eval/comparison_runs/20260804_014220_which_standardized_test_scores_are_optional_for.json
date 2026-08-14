@@ -1,0 +1,710 @@
+{
+  "schema_version": 2,
+  "timestamp": "2026-08-04T01:42:20.541502",
+  "question": "Which standardized test scores are optional for MS-ADS applicants?",
+  "question_id": "A07",
+  "question_meta": {
+    "category": "admissions",
+    "type": "multi_fact",
+    "difficulty": "easy",
+    "expected_behavior": "direct_answer"
+  },
+  "results": {
+    "pipeline_flatrag": {
+      "pipeline_id": "pipeline_flatrag",
+      "display_name": "FlatRAG",
+      "answer": "Based on the retrieved context, the GRE and GMAT are both optional for MS-ADS applicants. The program does not require either test for admissions [1]. If you choose to submit scores, the GRE school code is 1832 and the GMAT school code is H9X-WG-70 [2].\n\nSources:\n1. [Faqs | Application Process > Is the GRE or GMAT required for the Master's in Applied Data Science program?](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/)\n2. [Faqs | Application Process > I took the GRE and/or GMAT and want to include my score(s) with my Master's in Applied Data Science application.](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/)",
+      "sources": [
+        {
+          "page_title": "Faqs",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "tool_calls": [
+            {
+              "name": "semantic_search",
+              "args": {
+                "query": "standardized test scores optional GRE GMAT MS-ADS applicants",
+                "include_urls": [
+                  "how_to_apply",
+                  "faqs"
+                ]
+              }
+            },
+            {
+              "name": "list_page_sections",
+              "args": {
+                "url": "how_to_apply"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "semantic_search",
+              "content": "Semantic search returned 5 result(s):\n\n[0] Faqs | MBA/MS > Are standardized tests required for admission? (distance: 0.493)\n[Page: Faqs | Section: MBA/MS > Are standardized tests required for admission?]\n\nAs part of the online application, candidates will be required to submit a GMAT or GRE score for the joint program. International applicants may be required to submit proof of English language proficiency by submitting ...\n\n[1] Faqs | Application Process > I took the GRE and/or GMAT and want to include my score(s) with my Master's in Applied Data Science application. (distance: 0.526)\n[Page: Faqs | Section: Application Process > I took the GRE and/or GMAT and want to include my score(s) with my Master's in Applied Data Science application.]\n\nWhile the GRE/GMAT is not required, applicants can still submit their scores. The GRE school code is 1832; the GMAT school code is H9X-WG-70...\n\n[2] Faqs | Application Process > Is the GRE or GMAT required for the Master's in Applied Data Science program? (distance: 0.562)\n[Page: Faqs | Section: Application Process > Is the GRE or GMAT required for the Master's in Applied Data Science program?]\n\nNo, the GRE/GMAT is not required for admissions.\n\n[3] How To Apply | English Language Requirement (distance: 0.654)\n[Page: How To Apply | Section: English Language Requirement]\n\nApplicants to the Master’s in Applied Data Science program who do not meet the English Language Proficiency criteria must submit proof of English language proficiency. Minimum scores for the Master’s in Applied Data Science program: TOEFL...\n\n[4] Faqs | Faqs - Accordion Overview > Application Process (distance: 0.696)\n[Page: Faqs | Section: Faqs - Accordion Overview > Application Process]\n\nApplication Process:\nWhen will I receive my Master's in Applied Data Science admission decision?, If I finish my Master's in Applied Data Science application before the deadline, will I receive my decision early?, How do I subm..."
+            },
+            {
+              "name": "list_page_sections",
+              "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply/:\n  - \"Application Fee\" (1 chunk)\n  - \"Candidate Statement\" (2 chunks)\n  - \"English Language Requirement\" (1 chunk)\n  - \"Get in Touch\" (1 chunk)\n  - \"How To Apply\" (1 chunk)\n  - \"International Students\" (1 chunk)\n  - \"Letters of Recommendation\" (1 chunk)\n  - \"Master’s in Applied Data Science Application Requirements\" (1 chunk)\n  - \"Meet your Admissions Counselor\" (2 chunks)\n  - \"Next Application Deadlines:\" (3 chunks)\n  - \"Programming Supplement\" (2 chunks)\n  - \"Resume/CV\" (3 chunks)\n  - \"Transcripts from all previous colleges and universities attended\" (2 chunks)\n  - \"Tuition, Fees, & Aid\" (1 chunk)\n  - \"Virtual Portfolio\" (1 chunk)"
+            }
+          ],
+          "judger": {
+            "completeness": "full",
+            "useful_indices": [
+              1,
+              2
+            ],
+            "decision": "done",
+            "candidate_chunk_count": 5,
+            "accepted_chunk_count": 2
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "text": "[Page: Faqs | Section: Application Process > I took the GRE and/or GMAT and want to include my score(s) with my Master's in Applied Data Science application.]\n\nWhile the GRE/GMAT is not required, applicants can still submit their scores. The GRE school code is 1832; the GMAT school code is H9X-WG-70.",
+          "chunk_id": "education__masters_programs__ms_in_applied_data_science__faqs__i_took_the_gre_and_or_gmat_and_want_to_include_my_score_s_with_my_master_s_in_applied_data_science_application__15",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/",
+          "page_title": "Faqs",
+          "section": "I took the GRE and/or GMAT and want to include my score(s) with my Master's in Applied Data Science application.",
+          "section_breadcrumb": "Application Process > I took the GRE and/or GMAT and want to include my score(s) with my Master's in Applied Data Science application.",
+          "content_type": "text",
+          "program_type": "general",
+          "distance": 0.5264307856559753
+        },
+        {
+          "text": "[Page: Faqs | Section: Application Process > Is the GRE or GMAT required for the Master's in Applied Data Science program?]\n\nNo, the GRE/GMAT is not required for admissions.",
+          "chunk_id": "education__masters_programs__ms_in_applied_data_science__faqs__is_the_gre_or_gmat_required_for_the_master_s_in_applied_data_science_program__14",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/",
+          "page_title": "Faqs",
+          "section": "Is the GRE or GMAT required for the Master's in Applied Data Science program?",
+          "section_breadcrumb": "Application Process > Is the GRE or GMAT required for the Master's in Applied Data Science program?",
+          "content_type": "text",
+          "program_type": "general",
+          "distance": 0.5619673728942871
+        }
+      ],
+      "time_sec": 6.381,
+      "low_confidence": false,
+      "error": null,
+      "raw_debug": {
+        "answer": "Based on the retrieved context, the GRE and GMAT are both optional for MS-ADS applicants. The program does not require either test for admissions [1]. If you choose to submit scores, the GRE school code is 1832 and the GMAT school code is H9X-WG-70 [2].\n\nSources:\n1. [Faqs | Application Process > Is the GRE or GMAT required for the Master's in Applied Data Science program?](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/)\n2. [Faqs | Application Process > I took the GRE and/or GMAT and want to include my score(s) with my Master's in Applied Data Science application.](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/)",
+        "sources": [
+          {
+            "page_title": "Faqs",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/"
+          }
+        ],
+        "completeness": "full",
+        "low_confidence": false,
+        "attempts": 1,
+        "agent_steps": [
+          {
+            "step": 1,
+            "tool_calls": [
+              {
+                "name": "semantic_search",
+                "args": {
+                  "query": "standardized test scores optional GRE GMAT MS-ADS applicants",
+                  "include_urls": [
+                    "how_to_apply",
+                    "faqs"
+                  ]
+                }
+              },
+              {
+                "name": "list_page_sections",
+                "args": {
+                  "url": "how_to_apply"
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "semantic_search",
+                "content": "Semantic search returned 5 result(s):\n\n[0] Faqs | MBA/MS > Are standardized tests required for admission? (distance: 0.493)\n[Page: Faqs | Section: MBA/MS > Are standardized tests required for admission?]\n\nAs part of the online application, candidates will be required to submit a GMAT or GRE score for the joint program. International applicants may be required to submit proof of English language proficiency by submitting ...\n\n[1] Faqs | Application Process > I took the GRE and/or GMAT and want to include my score(s) with my Master's in Applied Data Science application. (distance: 0.526)\n[Page: Faqs | Section: Application Process > I took the GRE and/or GMAT and want to include my score(s) with my Master's in Applied Data Science application.]\n\nWhile the GRE/GMAT is not required, applicants can still submit their scores. The GRE school code is 1832; the GMAT school code is H9X-WG-70...\n\n[2] Faqs | Application Process > Is the GRE or GMAT required for the Master's in Applied Data Science program? (distance: 0.562)\n[Page: Faqs | Section: Application Process > Is the GRE or GMAT required for the Master's in Applied Data Science program?]\n\nNo, the GRE/GMAT is not required for admissions.\n\n[3] How To Apply | English Language Requirement (distance: 0.654)\n[Page: How To Apply | Section: English Language Requirement]\n\nApplicants to the Master’s in Applied Data Science program who do not meet the English Language Proficiency criteria must submit proof of English language proficiency. Minimum scores for the Master’s in Applied Data Science program: TOEFL...\n\n[4] Faqs | Faqs - Accordion Overview > Application Process (distance: 0.696)\n[Page: Faqs | Section: Faqs - Accordion Overview > Application Process]\n\nApplication Process:\nWhen will I receive my Master's in Applied Data Science admission decision?, If I finish my Master's in Applied Data Science application before the deadline, will I receive my decision early?, How do I subm..."
+              },
+              {
+                "name": "list_page_sections",
+                "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply/:\n  - \"Application Fee\" (1 chunk)\n  - \"Candidate Statement\" (2 chunks)\n  - \"English Language Requirement\" (1 chunk)\n  - \"Get in Touch\" (1 chunk)\n  - \"How To Apply\" (1 chunk)\n  - \"International Students\" (1 chunk)\n  - \"Letters of Recommendation\" (1 chunk)\n  - \"Master’s in Applied Data Science Application Requirements\" (1 chunk)\n  - \"Meet your Admissions Counselor\" (2 chunks)\n  - \"Next Application Deadlines:\" (3 chunks)\n  - \"Programming Supplement\" (2 chunks)\n  - \"Resume/CV\" (3 chunks)\n  - \"Transcripts from all previous colleges and universities attended\" (2 chunks)\n  - \"Tuition, Fees, & Aid\" (1 chunk)\n  - \"Virtual Portfolio\" (1 chunk)"
+              }
+            ],
+            "judger": {
+              "completeness": "full",
+              "useful_indices": [
+                1,
+                2
+              ],
+              "decision": "done",
+              "candidate_chunk_count": 5,
+              "accepted_chunk_count": 2
+            }
+          }
+        ],
+        "evidence": [
+          {
+            "text": "[Page: Faqs | Section: Application Process > I took the GRE and/or GMAT and want to include my score(s) with my Master's in Applied Data Science application.]\n\nWhile the GRE/GMAT is not required, applicants can still submit their scores. The GRE school code is 1832; the GMAT school code is H9X-WG-70.",
+            "chunk_id": "education__masters_programs__ms_in_applied_data_science__faqs__i_took_the_gre_and_or_gmat_and_want_to_include_my_score_s_with_my_master_s_in_applied_data_science_application__15",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/",
+            "page_title": "Faqs",
+            "section": "I took the GRE and/or GMAT and want to include my score(s) with my Master's in Applied Data Science application.",
+            "section_breadcrumb": "Application Process > I took the GRE and/or GMAT and want to include my score(s) with my Master's in Applied Data Science application.",
+            "content_type": "text",
+            "program_type": "general",
+            "distance": 0.5264307856559753
+          },
+          {
+            "text": "[Page: Faqs | Section: Application Process > Is the GRE or GMAT required for the Master's in Applied Data Science program?]\n\nNo, the GRE/GMAT is not required for admissions.",
+            "chunk_id": "education__masters_programs__ms_in_applied_data_science__faqs__is_the_gre_or_gmat_required_for_the_master_s_in_applied_data_science_program__14",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/",
+            "page_title": "Faqs",
+            "section": "Is the GRE or GMAT required for the Master's in Applied Data Science program?",
+            "section_breadcrumb": "Application Process > Is the GRE or GMAT required for the Master's in Applied Data Science program?",
+            "content_type": "text",
+            "program_type": "general",
+            "distance": 0.5619673728942871
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 2840,
+          "completion_tokens": 359,
+          "total_tokens": 3199,
+          "llm_calls": 5
+        },
+        "metrics": {
+          "tool_calls": 2,
+          "loop_count": 1,
+          "evidence_count": 2,
+          "llm_calls": 5,
+          "judge_calls": null,
+          "valid_fetch_count": null,
+          "invalid_fetch_count": null,
+          "fallback_triggered": null
+        }
+      }
+    },
+    "pipeline_grag_v2": {
+      "pipeline_id": "pipeline_grag_v2",
+      "display_name": "GRAG v2",
+      "answer": "Based on the available materials, GRE and GMAT scores are optional for MS-ADS applicants: they are not required, but you may submit them voluntarily if you wish [2][3]. English proficiency tests (TOEFL/IELTS) are required only for applicants who do not meet the English Language Proficiency criteria, implying they are optional for those who do [1].\n\nHowever, the evidence does not explicitly confirm that all standardized tests (including English proficiency) are optional for all applicants, nor does it provide a comprehensive list of optional tests.",
+      "sources": [
+        {
+          "page_title": "How to Apply",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply"
+        },
+        {
+          "page_title": "FAQs",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P6"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P6] How to Apply\n[N1] Page Introduction — Section (1 content block)\n[N2] Master’s in Applied Data Science Application Requirements — Section (1 content block)\n[N3] Next Application Deadlines: — Section (1 content block)\n[N4] Letters of Recommendation — Section (1 content block)\n[N5] Candidate Statement — Section (1 content block)\n[N6] Resume/CV — Section (1 content block)\n[N7] Programming Supplement — Section (2 content blocks)\n    ├── [N8] Virtual Portfolio — Section (1 content block)\n[N9] International Students — Section (1 content block)\n[N10] English Language Requirement — Section (1 content block)\n[N11] Transcripts from all previous colleges and universities attended — Section (2 content blocks)\n[N12] Application Fee — Section (1 content block)\n[N13] Tuition, Fees, & Aid — Section (1 content block)\n[N14] Meet your Admissions Counselor — Section (1 content block)\n[N15] Get in Touch — Section (1 content block)"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "The question asks about optional standardized test scores for MS-ADS applicants, which is an admissions requirement topic. P6 (How to Apply) is the most directly relevant page for application requirements, including test scores."
+        },
+        {
+          "step": 2,
+          "tool_calls": [
+            {
+              "name": "fetch_graph_content",
+              "args": {
+                "node_refs": [
+                  "N2",
+                  "N10"
+                ]
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_graph_content",
+              "content": "[N2] Master’s in Applied Data Science Application Requirements — path: How to Apply > Master’s in Applied Data Science Application Requirements\n  [E1] The application portal * for 2026 entrance is now open. Check out our blog post here on tips for applying to the program.\nThe In-Person and Online program admits full- and part-time students for entrance in the autumn quarter annually.\nOnly completed applications are sent for committee review.\n*The may close early if the cohort is filled.\n\n[N10] English Language Requirement — path: How to Apply > English Language Requirement\n  [E2] Applicants to the Master’s in Applied Data Science program who do not meet the English Language Proficiency criteria must submit proof of English language proficiency.\nMinimum scores for the Master’s in Applied Data Science program: TOEFL: 102 (prior requirement) or 5 (current requirement; no subscore requirement); IELTS, 7 (no subscore requirement).\nPlease review our waiver policy here ."
+            }
+          ],
+          "judger": {
+            "node_assessments": [
+              {
+                "node_ref": "N2",
+                "keep_evidence": [],
+                "comment": "This node covers general application requirements (portal, deadlines, full/part-time status) but does not mention any standardized test scores, so no evidence is kept."
+              },
+              {
+                "node_ref": "N10",
+                "keep_evidence": [
+                  "E2"
+                ],
+                "comment": "This node directly addresses English language proficiency test scores (TOEFL, IELTS) and states that they are required only for applicants who do not meet proficiency criteria, implying they are optional for those who do. It provides the specific minimum scores and waiver policy."
+              }
+            ]
+          },
+          "decision_reason": "N2 is the application requirements node, which likely lists required materials and may mention optional test scores. N10 covers English language requirement, which often involves standardized tests (e.g., TOEFL/IELTS) and may state optionality. Fetching both together is efficient."
+        },
+        {
+          "step": 3,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P5"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P5] FAQs\n[N16] Page Introduction — Section (1 content block)\n[N17] Master’s in Applied Data Science FAQs — Section (1 content block)\n[N18] Course Progression Tabs — ProgressionTabs (46 content blocks)\n    ├── [N19] Application Process — ProgressionTab (18 content blocks)\n        ├── [N20] Accordion — Accordion (18 content blocks)\n            preview: This accordion contains: When will I receive my Master's in Applied Data Science admission decision?; If I finish my Master's in Applied Data Science application before the deadline, will I receive my decision early?; How do I submit the materials that will accompany my Master's in Applied Data Science application?; Does the admissions office allow recommenders to email their letter directly as an attachment to be included in an applicant’s file?; Do I need to provide my recommenders with instructions?; My recommender did not receive notification, can I resend it?; What materials do I need to submit to accompany my application for admission to the Masters in Applied Data Science program?; Once I upload my unofficial transcripts to my application, do I still need to provide an official transcript?; Is the GRE or GMAT required for the Master's in Applied Data Science program?; I took the\n    ├── [N21] International Students — ProgressionTab (4 content blocks)\n        preview: This accordion contains: Which Master's in Applied Data Science provides students with visas?; What is the total cost of tuition for the Master's in Applied Data Science program?; Is the Master's in Applied Data Science an approved OPT/STEM program?; Does the Master's in Applied Data Science program offer Curricular Practical Training (CPT)?; I have worked in the U.S. for more than two years. Does that mean that I am exempt from the TOEFL/IELTS requirement?\n    ├── [N22] Online Program — ProgressionTab (9 content blocks)\n        preview: This accordion contains: If I am a student in the In-Person Master's in Applied Data Science Program, may I take courses in the Online Program? Conversely, if I am a student in the Online Program, may I take courses in the In-Person program?; Do I need to be a US citizen or permanent resident to apply to Master's in Applied Data Science Online Program?; How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?; Will enrolling in Master's in Applied Data Science Online Program give me the opportunity to network with on-campus students, faculty/instructors, and advisors?; What value do employers place on the Master's in Applied Data Science Online degree?; Is the Master's in Applied Data Science Online program equally academically rigorous as the In-Person program?; Will my diploma indicate I\n    ├── [N23] MBA/MS — ProgressionTab (7 content blocks)\n        preview: This accordion contains: How do I apply to the MBA/MS joint degree program?; What courses will I take in the MBA/MS program?; Will MBA/MS courses be in-person or online?; Are standardized tests required for admission?; What are the main differences in programs and outcomes between the MBA/MS in Applied Data Science compared to Computer Science?\n    ├── [N24] 2-Year Thesis Track Program — ProgressionTab (8 content blocks)\n        preview: This accordion contains: What is the new 2-year thesis track program (18 courses), and how is it different from the 1-year program (12 courses)?; When can I apply for the 2-year thesis track program?; May I switch between the 1- and 2-year programs after officially enrolling in the MS-ADS program?; If I am admitted to the In-Person, Full-Time 1-year program, may I take any of the 2-year program electives?; What is the 2-year program's thesis requirement?; How many spots are available in the new 2-year program?"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "P6 (How to Apply) did not explicitly mention GRE/GMAT optionality. The FAQs page (P5) likely contains a direct answer about standardized test requirements for MS-ADS applicants, including whether GRE/GMAT are optional."
+        },
+        {
+          "step": 4,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P5"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P5] FAQs\n[N16] Page Introduction — Section (1 content block)\n[N17] Master’s in Applied Data Science FAQs — Section (1 content block)\n[N18] Course Progression Tabs — ProgressionTabs (46 content blocks)\n    ├── [N19] Application Process — ProgressionTab (18 content blocks)\n        ├── [N20] Accordion — Accordion (18 content blocks)\n            preview: This accordion contains: When will I receive my Master's in Applied Data Science admission decision?; If I finish my Master's in Applied Data Science application before the deadline, will I receive my decision early?; How do I submit the materials that will accompany my Master's in Applied Data Science application?; Does the admissions office allow recommenders to email their letter directly as an attachment to be included in an applicant’s file?; Do I need to provide my recommenders with instructions?; My recommender did not receive notification, can I resend it?; What materials do I need to submit to accompany my application for admission to the Masters in Applied Data Science program?; Once I upload my unofficial transcripts to my application, do I still need to provide an official transcript?; Is the GRE or GMAT required for the Master's in Applied Data Science program?; I took the\n    ├── [N21] International Students — ProgressionTab (4 content blocks)\n        preview: This accordion contains: Which Master's in Applied Data Science provides students with visas?; What is the total cost of tuition for the Master's in Applied Data Science program?; Is the Master's in Applied Data Science an approved OPT/STEM program?; Does the Master's in Applied Data Science program offer Curricular Practical Training (CPT)?; I have worked in the U.S. for more than two years. Does that mean that I am exempt from the TOEFL/IELTS requirement?\n    ├── [N22] Online Program — ProgressionTab (9 content blocks)\n        preview: This accordion contains: If I am a student in the In-Person Master's in Applied Data Science Program, may I take courses in the Online Program? Conversely, if I am a student in the Online Program, may I take courses in the In-Person program?; Do I need to be a US citizen or permanent resident to apply to Master's in Applied Data Science Online Program?; How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?; Will enrolling in Master's in Applied Data Science Online Program give me the opportunity to network with on-campus students, faculty/instructors, and advisors?; What value do employers place on the Master's in Applied Data Science Online degree?; Is the Master's in Applied Data Science Online program equally academically rigorous as the In-Person program?; Will my diploma indicate I\n    ├── [N23] MBA/MS — ProgressionTab (7 content blocks)\n        preview: This accordion contains: How do I apply to the MBA/MS joint degree program?; What courses will I take in the MBA/MS program?; Will MBA/MS courses be in-person or online?; Are standardized tests required for admission?; What are the main differences in programs and outcomes between the MBA/MS in Applied Data Science compared to Computer Science?\n    ├── [N24] 2-Year Thesis Track Program — ProgressionTab (8 content blocks)\n        preview: This accordion contains: What is the new 2-year thesis track program (18 courses), and how is it different from the 1-year program (12 courses)?; When can I apply for the 2-year thesis track program?; May I switch between the 1- and 2-year programs after officially enrolling in the MS-ADS program?; If I am admitted to the In-Person, Full-Time 1-year program, may I take any of the 2-year program electives?; What is the 2-year program's thesis requirement?; How many spots are available in the new 2-year program?"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "P6 did not mention GRE/GMAT; P5 FAQs likely contains the direct answer on standardized test optionality."
+        },
+        {
+          "step": 5,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P5"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P5] FAQs\n[N16] Page Introduction — Section (1 content block)\n[N17] Master’s in Applied Data Science FAQs — Section (1 content block)\n[N18] Course Progression Tabs — ProgressionTabs (46 content blocks)\n    ├── [N19] Application Process — ProgressionTab (18 content blocks)\n        ├── [N20] Accordion — Accordion (18 content blocks)\n            preview: This accordion contains: When will I receive my Master's in Applied Data Science admission decision?; If I finish my Master's in Applied Data Science application before the deadline, will I receive my decision early?; How do I submit the materials that will accompany my Master's in Applied Data Science application?; Does the admissions office allow recommenders to email their letter directly as an attachment to be included in an applicant’s file?; Do I need to provide my recommenders with instructions?; My recommender did not receive notification, can I resend it?; What materials do I need to submit to accompany my application for admission to the Masters in Applied Data Science program?; Once I upload my unofficial transcripts to my application, do I still need to provide an official transcript?; Is the GRE or GMAT required for the Master's in Applied Data Science program?; I took the\n    ├── [N21] International Students — ProgressionTab (4 content blocks)\n        preview: This accordion contains: Which Master's in Applied Data Science provides students with visas?; What is the total cost of tuition for the Master's in Applied Data Science program?; Is the Master's in Applied Data Science an approved OPT/STEM program?; Does the Master's in Applied Data Science program offer Curricular Practical Training (CPT)?; I have worked in the U.S. for more than two years. Does that mean that I am exempt from the TOEFL/IELTS requirement?\n    ├── [N22] Online Program — ProgressionTab (9 content blocks)\n        preview: This accordion contains: If I am a student in the In-Person Master's in Applied Data Science Program, may I take courses in the Online Program? Conversely, if I am a student in the Online Program, may I take courses in the In-Person program?; Do I need to be a US citizen or permanent resident to apply to Master's in Applied Data Science Online Program?; How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?; Will enrolling in Master's in Applied Data Science Online Program give me the opportunity to network with on-campus students, faculty/instructors, and advisors?; What value do employers place on the Master's in Applied Data Science Online degree?; Is the Master's in Applied Data Science Online program equally academically rigorous as the In-Person program?; Will my diploma indicate I\n    ├── [N23] MBA/MS — ProgressionTab (7 content blocks)\n        preview: This accordion contains: How do I apply to the MBA/MS joint degree program?; What courses will I take in the MBA/MS program?; Will MBA/MS courses be in-person or online?; Are standardized tests required for admission?; What are the main differences in programs and outcomes between the MBA/MS in Applied Data Science compared to Computer Science?\n    ├── [N24] 2-Year Thesis Track Program — ProgressionTab (8 content blocks)\n        preview: This accordion contains: What is the new 2-year thesis track program (18 courses), and how is it different from the 1-year program (12 courses)?; When can I apply for the 2-year thesis track program?; May I switch between the 1- and 2-year programs after officially enrolling in the MS-ADS program?; If I am admitted to the In-Person, Full-Time 1-year program, may I take any of the 2-year program electives?; What is the 2-year program's thesis requirement?; How many spots are available in the new 2-year program?"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "P6 did not mention GRE/GMAT; FAQs page likely contains direct answer about optional standardized tests. Inspect P5 to find relevant node."
+        },
+        {
+          "step": 6,
+          "tool_calls": [
+            {
+              "name": "fetch_graph_content",
+              "args": {
+                "node_refs": [
+                  "N19",
+                  "N20"
+                ]
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_graph_content",
+              "content": "N19 has 18 content blocks — too broad. Consider its children instead: N20 (18).\n\n[N20] Accordion — path: FAQs > Application Process\n  [E3] (structure summary) This accordion contains: When will I receive my Master's in Applied Data Science admission decision?; If I finish my Master's in Applied Data Science application before the deadline, will I receive my decision early?; How do I submit the materials that will accompany my Master's in Applied Data Science application?; Does the admissions office allow recommenders to email their letter directly as an attachment to be included in an applicant’s file?; Do I need to provide my recommenders with instructions?; My recommender did not receive notification, can I resend it?; What materials do I need to submit to accompany my application for admission to the Masters in Applied Data Science program?; Once I upload my unofficial transcripts to my application, do I still need to provide an official transcript?; Is the GRE or GMAT required for the Master's in Applied Data Science program?; I took the\n  [E4] (structure summary) the GRE or GMAT required for the Master's in Applied Data Science program?; I took the GRE and/or GMAT and want to include my score(s) with my Master's in Applied Data Science application.; Who is exempt from providing proof of English proficiency?; How will I be notified that I am admitted to the Master's in Applied Data Science program?; If I am admitted to the Master's in Applied Data Science program, what do I do next?; What test scores does UChicago accept as proof of English proficiency?; What are the minimum scores required?; Where do I send my test scores?; I took the TOEFL over two years ago. Can I still use those TOEFL results?; What’s the difference between the MS in Applied Data Science and the MS in Data Science programs at UChicago?\n  [N20.1] When will I receive my Master's in Applied Data Science admission decision?\n    [E5] Admissions decisions are typically released 1-2 months after each application deadline. Only completed applications are reviewed. Please refer to the How to Apply page for guidelines.\n  [N20.2] If I finish my Master's in Applied Data Science application before the deadline, will I receive my decision early?\n    [E6] No, admissions decisions for the in-person program are typically released 1-2 months after each application deadline. Your application must be complete to be considered for review.\n  [N20.3] Does the admissions office allow recommenders to email their letter directly as an attachment to be included in an applicant’s file?\n    [E7] Unfortunately, no. Recommenders must upload their letter of support by using the URL that is sent to them electronically by our online application system.\n  [N20.4] Do I need to provide my recommenders with instructions?\n    [E8] No. Recommendation forms and instructions are sent electronically to recommenders once their names are entered within the online application.\n  [N20.5] My recommender did not receive notification, can I resend it?\n    [E9] Yes. If a recommender does not receive a URL, the applicant can resend the link through the online application or ask the recommender to check their spam folder.\n  [N20.6] Once I upload my unofficial transcripts to my application, do I still need to provide an official transcript?\n    [E10] You must upload one unofficial transcript from each university you attended within your application. An unofficial undergraduate transcript is required, even if you hold advanced degrees. Do not mail transcripts with your application; only uploads are needed for evaluation. If admitted, you will need to submit official transcripts from each university before matriculation.\n  [N20.7] Is the GRE or GMAT required for the Master's in Applied Data Science program?\n    [E11] No, the GRE/GMAT is not required for admissions.\n  [N20.8] I took the GRE and/or GMAT and want to include my score(s) with my Master's in Applied Data Science application.\n    [E12] While the GRE/GMAT is not required, applicants can still submit their scores. The GRE school code is 1832; the GMAT school code is H9X-WG-70.\n  [N20.9] Who is exempt from providing proof of English proficiency?\n    [E13] Please refer to the University of Chicago’s English Language Proficiency requirements.\n  [N20.10] How will I be notified that I am admitted to the Master's in Applied Data Science program?\n    [E14] Applicants will be notified to check their application portal via the email they used to submit their application.\n  [N20.11] If I am admitted to the Master's in Applied Data Science program, what do I do next?\n    [E15] Have official e-transcripts sent to applieddatascience-admissions@uchicago.edu.\nIf your institution cannot send your documents electronically, please have them send your transcripts to the following mailing address:\nAttention: MS in Applied Data Science Admissions\n455 N Cityfront Plaza Dr., Suite 2800\n  [N20.12] What test scores does UChicago accept as proof of English proficiency?\n    [E16] Please refer to the Proof of English Proficiency guidelines.\n  [N20.13] What are the minimum scores required?\n    [E17] Please refer to the Required Minimum Score guidelines.\n  [N20.14] Where do I send my test scores?\n    [E18] Please send TOEFL scores to the University of Chicago using these instructions at the bottom of the page.\n  [N20.15] What’s the difference between the MS in Applied Data Science and the MS in Data Science programs at UChicago?\n    [E19] The two programs share a strong foundation in data science but differ in structure, location, and focus.\n- The MS in Data Science is a 10-course program based on UChicago’s Hyde Park campus. It includes a comprehensive research project and is designed for students who want to dive deeper into the theoretical and research side of data science—often as preparation for PhD study or research-focused careers.\n- The MS in Applied Data Science program offers both a 12-course track and an 18-course thesis track. It is offered in online and in-person formats, with in-person classes held at the NBC Tower in downtown Chicago. The program focuses on applying data science and machine learning methods to real-world problems through hands-on coursework, industry collaborations, and a two-quarter capstone or research project.\n    [E20] coursework, industry collaborations, and a two-quarter capstone or research project.\nFor a more detailed breakdown of the differences between the two programs, check out this article here ."
+            }
+          ],
+          "judger": {
+            "node_assessments": [
+              {
+                "node_ref": "N20",
+                "keep_evidence": [
+                  "E11",
+                  "E12"
+                ],
+                "comment": "E11 directly states that GRE/GMAT is not required for admissions, and E12 clarifies that while not required, applicants can still submit scores, providing school codes. Other content in this node covers unrelated topics such as decision timelines, recommendations, transcripts, English proficiency, and program differences, which do not address which standardized test scores are optional for MS-ADS applicants."
+              }
+            ]
+          },
+          "decision_reason": "P5 FAQs has an Application Process branch (N19) and an Accordion (N20) that likely contain the direct answer about optional standardized tests (GRE/GMAT). Fetching both together is efficient and likely to resolve the question."
+        },
+        {
+          "step": 7,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P5"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P5] FAQs\n[N16] Page Introduction — Section (1 content block)\n[N17] Master’s in Applied Data Science FAQs — Section (1 content block)\n[N18] Course Progression Tabs — ProgressionTabs (46 content blocks)\n    ├── [N19] Application Process — ProgressionTab (18 content blocks)\n        ├── [N20] Accordion — Accordion (18 content blocks)\n            preview: This accordion contains: When will I receive my Master's in Applied Data Science admission decision?; If I finish my Master's in Applied Data Science application before the deadline, will I receive my decision early?; How do I submit the materials that will accompany my Master's in Applied Data Science application?; Does the admissions office allow recommenders to email their letter directly as an attachment to be included in an applicant’s file?; Do I need to provide my recommenders with instructions?; My recommender did not receive notification, can I resend it?; What materials do I need to submit to accompany my application for admission to the Masters in Applied Data Science program?; Once I upload my unofficial transcripts to my application, do I still need to provide an official transcript?; Is the GRE or GMAT required for the Master's in Applied Data Science program?; I took the\n    ├── [N21] International Students — ProgressionTab (4 content blocks)\n        preview: This accordion contains: Which Master's in Applied Data Science provides students with visas?; What is the total cost of tuition for the Master's in Applied Data Science program?; Is the Master's in Applied Data Science an approved OPT/STEM program?; Does the Master's in Applied Data Science program offer Curricular Practical Training (CPT)?; I have worked in the U.S. for more than two years. Does that mean that I am exempt from the TOEFL/IELTS requirement?\n    ├── [N22] Online Program — ProgressionTab (9 content blocks)\n        preview: This accordion contains: If I am a student in the In-Person Master's in Applied Data Science Program, may I take courses in the Online Program? Conversely, if I am a student in the Online Program, may I take courses in the In-Person program?; Do I need to be a US citizen or permanent resident to apply to Master's in Applied Data Science Online Program?; How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?; Will enrolling in Master's in Applied Data Science Online Program give me the opportunity to network with on-campus students, faculty/instructors, and advisors?; What value do employers place on the Master's in Applied Data Science Online degree?; Is the Master's in Applied Data Science Online program equally academically rigorous as the In-Person program?; Will my diploma indicate I\n    ├── [N23] MBA/MS — ProgressionTab (7 content blocks)\n        preview: This accordion contains: How do I apply to the MBA/MS joint degree program?; What courses will I take in the MBA/MS program?; Will MBA/MS courses be in-person or online?; Are standardized tests required for admission?; What are the main differences in programs and outcomes between the MBA/MS in Applied Data Science compared to Computer Science?\n    ├── [N24] 2-Year Thesis Track Program — ProgressionTab (8 content blocks)\n        preview: This accordion contains: What is the new 2-year thesis track program (18 courses), and how is it different from the 1-year program (12 courses)?; When can I apply for the 2-year thesis track program?; May I switch between the 1- and 2-year programs after officially enrolling in the MS-ADS program?; If I am admitted to the In-Person, Full-Time 1-year program, may I take any of the 2-year program electives?; What is the 2-year program's thesis requirement?; How many spots are available in the new 2-year program?"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "Need to find explicit confirmation that English proficiency tests are optional for MS-ADS applicants, and check for any other optional standardized tests. Re-inspecting P5 to locate relevant FAQ nodes beyond N20."
+        },
+        {
+          "step": 8,
+          "tool_calls": [
+            {
+              "name": "fetch_graph_content",
+              "args": {
+                "node_refs": [
+                  "N21"
+                ]
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_graph_content",
+              "content": "[N21] International Students — path: FAQs > International Students\n  [N21.1] Accordion\n    [E21] (structure summary) This accordion contains: Which Master's in Applied Data Science provides students with visas?; What is the total cost of tuition for the Master's in Applied Data Science program?; Is the Master's in Applied Data Science an approved OPT/STEM program?; Does the Master's in Applied Data Science program offer Curricular Practical Training (CPT)?; I have worked in the U.S. for more than two years. Does that mean that I am exempt from the TOEFL/IELTS requirement?\n    [N21.1.1] Which Master's in Applied Data Science provides students with visas?\n      [E22] The full-time, In-Person 1-Year 12-Course Program & 2-Year Thesis Track 18-Course Program are visa eligible.\n    [N21.1.2] Is the Master's in Applied Data Science an approved OPT/STEM program?\n      [E23] Yes, the full-time, In-Person Master’s in Applied Data Science program is listed as a STEM-designated degree by the U.S. Department of Homeland Security for the purposes of the STEM OPT extension, allowing eligible students to apply. However, approval of STEM OPT is at the discretion of U.S. Citizenship & Immigration Services.\n    [N21.1.3] I have worked in the U.S. for more than two years. Does that mean that I am exempt from the TOEFL/IELTS requirement?\n      [E24] Please refer to the English Language Proficiency guidelines."
+            }
+          ],
+          "judger": {
+            "node_assessments": [
+              {
+                "node_ref": "N21",
+                "keep_evidence": [],
+                "comment": "This node covers international student topics such as visas, OPT/STEM, CPT, and TOEFL/IELTS exemption. It does not address which standardized test scores are optional for MS-ADS applicants, so no evidence is kept."
+              }
+            ]
+          },
+          "decision_reason": "N21 (International Students) on P5 may explicitly state that English proficiency tests are optional for applicants who meet criteria, confirming optionality for all standardized tests."
+        },
+        {
+          "step": 9,
+          "tool_calls": [
+            {
+              "name": "fetch_graph_content",
+              "args": {
+                "node_refs": [
+                  "N20"
+                ]
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_graph_content",
+              "content": "ALREADY_CHECKED [N20] — kept evidence: E11, E12; previous assessment: E11 directly states that GRE/GMAT is not required for admissions, and E12 clarifies that while not required, applicants can still submit scores, providing school codes. Other content in this node covers unrelated topics such as decision timelines, recommendations, transcripts, English proficiency, and program differences, which do not address which standardized test scores are optional for MS-ADS applicants."
+            }
+          ],
+          "judger": null,
+          "decision_reason": "Need to find explicit confirmation that all standardized tests are optional; N20 (Accordion) may contain a comprehensive list of optional tests beyond GRE/GMAT, such as English proficiency tests."
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E2",
+          "status": "accepted",
+          "page_title": "How to Apply",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply",
+          "text": "Applicants to the Master’s in Applied Data Science program who do not meet the English Language Proficiency criteria must submit proof of English language proficiency.\nMinimum scores for the Master’s in Applied Data Science program: TOEFL: 102 (prior requirement) or 5 (current requirement; no subscore requirement); IELTS, 7 (no subscore requirement).\nPlease review our waiver policy here .",
+          "path": [
+            "How to Apply",
+            "English Language Requirement"
+          ],
+          "section_breadcrumb": "How to Apply > English Language Requirement",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N10"
+            }
+          ],
+          "chunk_id": "chunk:90f070381d573878",
+          "owner_node_id": "section:fdc4d132e8a0caa5",
+          "page_id": "page:7fb2f6ecae8feeeb",
+          "internal_metadata": {
+            "source_type": "p",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E11",
+          "status": "accepted",
+          "page_title": "FAQs",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs",
+          "text": "No, the GRE/GMAT is not required for admissions.",
+          "path": [
+            "FAQs",
+            "Application Process",
+            "Is the GRE or GMAT required for the Master's in Applied Data Science program?"
+          ],
+          "section_breadcrumb": "FAQs > Application Process > Is the GRE or GMAT required for the Master's in Applied Data Science program?",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N20"
+            }
+          ],
+          "chunk_id": "chunk:fc46e11c20c0087d",
+          "owner_node_id": "accordion_item:b2bb4f35e6162209",
+          "page_id": "page:a1d4f5293a26528e",
+          "internal_metadata": {
+            "source_type": "p",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E12",
+          "status": "accepted",
+          "page_title": "FAQs",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs",
+          "text": "While the GRE/GMAT is not required, applicants can still submit their scores. The GRE school code is 1832; the GMAT school code is H9X-WG-70.",
+          "path": [
+            "FAQs",
+            "Application Process",
+            "I took the GRE and/or GMAT and want to include my score(s) with my Master's in Applied Data Science application."
+          ],
+          "section_breadcrumb": "FAQs > Application Process > I took the GRE and/or GMAT and want to include my score(s) with my Master's in Applied Data Science application.",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N20"
+            }
+          ],
+          "chunk_id": "chunk:e94c00a8a388ed82",
+          "owner_node_id": "accordion_item:fe132bb4e8627e37",
+          "page_id": "page:a1d4f5293a26528e",
+          "internal_metadata": {
+            "source_type": "p",
+            "score": null,
+            "score_breakdown": {}
+          }
+        }
+      ],
+      "time_sec": 50.235,
+      "low_confidence": true,
+      "error": null,
+      "progress_summary": {
+        "summary_covering": "Page P6 (How to Apply): Checked N2 (Application Requirements) — no mention of standardized tests, not useful. Checked N10 (English Language Requirement) — useful: states English proficiency tests (TOEFL/IELTS) are required only for applicants not meeting proficiency criteria, implying optional for those who do. Page P5 (FAQs): Checked N20 (Accordion) — useful: E11 confirms GRE/GMAT not required, E12 says scores can be submitted voluntarily. Checked N21 (International Students) — not useful for optional tests. Still missing: explicit confirmation that all standardized tests (including English proficiency) are optional for all applicants, or a comprehensive list of optional tests.",
+        "decision_trace_narrative": "Turn 1: Fetched P6 N2 to find application requirements; found no test info, so no evidence. Turn 2: Fetched P6 N10 to check English proficiency; found it is required only for non-proficient applicants, implying optional for others; kept E2. Turn 3: Fetched P5 N20 to find explicit confirmation of optional tests; found E11 and E12 confirming GRE/GMAT not required but can be submitted; kept evidence. Turn 4: Fetched P5 N21 to check international student info; found no relevant test optionality; no evidence. This turn: Re-fetched P5 N20 (already checked) to look for a comprehensive list of optional tests; no new information."
+      },
+      "raw_debug": {
+        "response": {
+          "answer": "Based on the available materials, GRE and GMAT scores are optional for MS-ADS applicants: they are not required, but you may submit them voluntarily if you wish [2][3]. English proficiency tests (TOEFL/IELTS) are required only for applicants who do not meet the English Language Proficiency criteria, implying they are optional for those who do [1].\n\nHowever, the evidence does not explicitly confirm that all standardized tests (including English proficiency) are optional for all applicants, nor does it provide a comprehensive list of optional tests.",
+          "citations": [
+            {
+              "index": 1,
+              "title": "How to Apply",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply",
+              "snippet": "Applicants to the Master’s in Applied Data Science program who do not meet the English Language Proficiency criteria must submit proof of English language proficiency. Minimum scor"
+            },
+            {
+              "index": 2,
+              "title": "FAQs",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs",
+              "snippet": "No, the GRE/GMAT is not required for admissions."
+            },
+            {
+              "index": 3,
+              "title": "FAQs",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs",
+              "snippet": "While the GRE/GMAT is not required, applicants can still submit their scores. The GRE school code is 1832; the GMAT school code is H9X-WG-70."
+            }
+          ],
+          "debug": {
+            "tool_turns": 9,
+            "stop_reason": "max_agent_turns",
+            "evidence_count": 3,
+            "sufficient": false,
+            "missing": "Explicit statement that all standardized tests (including English proficiency) are optional for MS-ADS applicants, or a comprehensive list of optional tests.",
+            "log_path": "C:\\Users\\ss363\\Desktop\\Archive\\ads_rag_chatbot\\pipeline_grag_v2\\log\\2026-08-04_014220_573b28483a55.json",
+            "run_id": "573b28483a55"
+          }
+        },
+        "run_id": "573b28483a55",
+        "rewritten_queries": [
+          {
+            "id": "q1",
+            "query": "Which standardized test scores are optional for MS-ADS applicants?",
+            "target": "university-program"
+          }
+        ],
+        "judgment": {
+          "sufficient": false,
+          "missing": "Explicit statement that all standardized tests (including English proficiency) are optional for MS-ADS applicants, or a comprehensive list of optional tests.",
+          "comment": "Page P6 (How to Apply): Checked N2 (Application Requirements) — no mention of standardized tests, not useful. Checked N10 (English Language Requirement) — useful: states English proficiency tests (TOEFL/IELTS) are required only for applicants not meeting proficiency criteria, implying optional for those who do. Page P5 (FAQs): Checked N20 (Accordion) — useful: E11 confirms GRE/GMAT not required, E12 says scores can be submitted voluntarily. Checked N21 (International Students) — not useful for optional tests. Still missing: explicit confirmation that all standardized tests (including English proficiency) are optional for all applicants, or a comprehensive list of optional tests."
+        },
+        "stop_reason": "max_agent_turns",
+        "fallback": {
+          "triggered": false,
+          "pages_selected": [],
+          "reason": ""
+        },
+        "metrics": {
+          "agent_turns": 9,
+          "tool_calls": 9,
+          "judge_calls": 3,
+          "llm_calls": 23,
+          "valid_fetch_count": 3,
+          "invalid_fetch_count": 1,
+          "accepted_evidence_count": 3,
+          "stop_reason": "max_agent_turns",
+          "fallback_triggered": false
+        },
+        "usage": {
+          "prompt_tokens": 26599,
+          "completion_tokens": 3313,
+          "total_tokens": 29912,
+          "llm_calls": 23
+        },
+        "progress_summary_history": [
+          {
+            "turn": 1,
+            "summary_covering": "No pages have been checked yet. The question asks which standardized test scores are optional for MS-ADS applicants. Still missing: any information about standardized test score requirements or optionality for MS-ADS applicants.",
+            "decision_trace_narrative": "Turn 1: The agent decided to inspect page P6 (How to Apply) because it is the most directly relevant page for application requirements, including test scores. The tool status was OK, but no nodes have been evaluated yet.",
+            "sufficient": false,
+            "missing": "Information about which standardized test scores are optional for MS-ADS applicants."
+          },
+          {
+            "turn": 2,
+            "summary_covering": "Page P6 (How to Apply): Checked N2 (Application Requirements) — not useful, no mention of test scores. Checked N10 (English Language Requirement) — useful, states English proficiency tests (TOEFL/IELTS) are required only for those not meeting proficiency criteria, implying optional for others. Still missing: explicit statement about GRE/GMAT optionality for MS-ADS applicants.",
+            "decision_trace_narrative": "Turn 1: Fetched N2 and N10 together. Reason: N2 likely lists requirements, N10 covers English tests. Outcome: N2 yielded no test score info; N10 provided evidence on English proficiency tests being conditionally required. No re-queries.",
+            "sufficient": false,
+            "missing": "Explicit information on whether GRE/GMAT scores are optional for MS-ADS applicants."
+          },
+          {
+            "turn": 3,
+            "summary_covering": "P6 (How to Apply): Checked N2 (Application Requirements) - not useful, no mention of standardized tests. Checked N10 (English Language Requirement) - useful, states English proficiency tests (TOEFL/IELTS) are required only for those not meeting criteria, implying optional for others. Still missing: explicit statement on GRE/GMAT optionality for MS-ADS applicants.",
+            "decision_trace_narrative": "Turn 1: Inspected P6 N2 (Application Requirements) because it seemed the most direct place for test requirements; found no mention of standardized tests. Turn 2: Inspected P6 N10 (English Language Requirement) because it was the only other node on P6 that could mention tests; found English proficiency tests are conditionally required, but no GRE/GMAT info. Next step: inspect P5 (FAQs) as it likely contains a direct answer on GRE/GMAT optionality.",
+            "sufficient": false,
+            "missing": "Explicit statement on whether GRE/GMAT are optional for MS-ADS applicants."
+          },
+          {
+            "turn": 4,
+            "summary_covering": "P6 (How to Apply): Checked N2 (Application Requirements) - not useful, no mention of standardized tests. Checked N10 (English Language Requirement) - useful, states English proficiency tests (TOEFL/IELTS) are required only for those not meeting criteria, implying optional for others. Still missing: explicit statement on GRE/GMAT optionality for MS-ADS applicants.",
+            "decision_trace_narrative": "Turn 1: Inspected P6 N2 (Application Requirements) because it seemed likely to contain test requirements, but found no mention of standardized tests. Turn 2: Inspected P6 N10 (English Language Requirement) because P6 did not mention GRE/GMAT and FAQs likely have direct answer; found evidence on English tests but not GRE/GMAT.",
+            "sufficient": false,
+            "missing": "Explicit information on whether GRE/GMAT are optional for MS-ADS applicants."
+          },
+          {
+            "turn": 5,
+            "summary_covering": "P6 (How to Apply): Checked N2 (Application Requirements) - not useful, no test scores mentioned. Checked N10 (English Language Requirement) - useful, states English proficiency tests (TOEFL/IELTS) are required only for those not meeting criteria, implying optional for others. Still missing: explicit statement about GRE/GMAT or other standardized tests being optional for MS-ADS applicants.",
+            "decision_trace_narrative": "Turn 1: Inspected P6 N2 (Application Requirements) because it seemed likely to list all requirements; found no mention of standardized tests, so no evidence. Turn 2: Inspected P6 N10 (English Language Requirement) because P6 N2 lacked test info and FAQs might have direct answer; found evidence about English tests being conditional, but not about GRE/GMAT. Turn 3: Inspected P5 (FAQs) because P6 did not mention GRE/GMAT; this turn's inspection was successful but no new evidence was added yet.",
+            "sufficient": false,
+            "missing": "Explicit information about GRE/GMAT or other standardized test scores being optional for MS-ADS applicants."
+          },
+          {
+            "turn": 6,
+            "summary_covering": "Page P6 (How to Apply): Checked N2 (Application Requirements) — no mention of standardized tests, not useful. Checked N10 (English Language Requirement) — useful: states English proficiency tests (TOEFL/IELTS) are required only for applicants not meeting criteria, implying optional for others. Page P5 (FAQs): Checked N20 (Accordion) — useful: E11 states GRE/GMAT not required, E12 says scores can be submitted voluntarily. Still missing: explicit confirmation that English proficiency tests are optional for MS-ADS applicants (though implied), and any other standardized tests (e.g., subject tests) that might be optional.",
+            "decision_trace_narrative": "Turn 1: Fetched P6 N2 and N10. Reason: N2 likely covers requirements, N10 covers English proficiency. Outcome: N2 not useful, N10 useful. Turn 2: Fetched P5 N20. Reason: FAQ accordion likely contains direct answer about GRE/GMAT. Outcome: N20 useful, providing E11 and E12. No re-queries.",
+            "sufficient": false,
+            "missing": "Explicit statement that English proficiency tests are optional for MS-ADS applicants (currently only implied). Also, any other standardized tests (e.g., subject tests) that might be optional."
+          },
+          {
+            "turn": 7,
+            "summary_covering": "Page P6 (How to Apply): Checked N2 (Application Requirements) - not useful, no mention of test scores. Checked N10 (English Language Requirement) - useful, states English proficiency tests (TOEFL/IELTS) are required only for applicants not meeting proficiency criteria, implying optional for those who do. Page P5 (FAQs): Checked N20 (Accordion) - useful, E11 states GRE/GMAT not required, E12 says scores can be submitted voluntarily. Still missing: explicit confirmation that English proficiency tests are optional for all applicants (the evidence implies but does not explicitly state optionality), and any other standardized tests (e.g., subject tests) that might be optional.",
+            "decision_trace_narrative": "Turn 1: Inspected P6 N2 to find general requirements; no test score info. Turn 2: Inspected P6 N10 to find English proficiency requirements; found that tests are required only for those not meeting criteria, implying optionality. Turn 3: Inspected P5 N20 to find explicit confirmation of optionality and other tests; found GRE/GMAT not required and can be submitted voluntarily. This turn: Re-inspected P5 to locate FAQ nodes beyond N20 for explicit English proficiency optionality; no new nodes found, so no new information.",
+            "sufficient": false,
+            "missing": "Explicit statement that English proficiency tests are optional for MS-ADS applicants (current evidence implies but does not explicitly state), and any other standardized tests (e.g., subject tests) that might be optional."
+          },
+          {
+            "turn": 8,
+            "summary_covering": "P6 (How to Apply): N2 (Application Requirements) checked, no mention of standardized tests. N10 (English Language Requirement) checked, states English proficiency tests (TOEFL/IELTS) are required only for applicants not meeting criteria, implying optional for those who do. P5 (FAQs): N20 (Accordion) checked, E11 and E12 confirm GRE/GMAT not required but can be submitted. N21 (International Students) checked, no relevant info on optional standardized tests. Still missing: explicit confirmation that all standardized tests (including English proficiency) are optional for MS-ADS applicants, or a comprehensive list of optional tests.",
+            "decision_trace_narrative": "Turn 1: Fetched P6 N2 (Application Requirements) to see if it lists required tests; found no mention, so no evidence. Turn 2: Fetched P6 N10 (English Language Requirement) to check if English tests are optional; found they are required only for those not meeting criteria, so evidence kept. Turn 3: Fetched P5 N20 (Accordion) to find GRE/GMAT policy; found they are not required, evidence kept. Turn 4: Fetched P5 N21 (International Students) to see if it explicitly states all tests optional; found no such statement, so no evidence. This turn re-queried N21, which was already fetched, and it still does not provide explicit confirmation of optionality for all standardized tests.",
+            "sufficient": false,
+            "missing": "Explicit statement that all standardized test scores (including English proficiency) are optional for MS-ADS applicants, or a comprehensive list of optional tests."
+          },
+          {
+            "turn": 9,
+            "summary_covering": "Page P6 (How to Apply): Checked N2 (Application Requirements) — no mention of standardized tests, not useful. Checked N10 (English Language Requirement) — useful: states English proficiency tests (TOEFL/IELTS) are required only for applicants not meeting proficiency criteria, implying optional for those who do. Page P5 (FAQs): Checked N20 (Accordion) — useful: E11 confirms GRE/GMAT not required, E12 says scores can be submitted voluntarily. Checked N21 (International Students) — not useful for optional tests. Still missing: explicit confirmation that all standardized tests (including English proficiency) are optional for all applicants, or a comprehensive list of optional tests.",
+            "decision_trace_narrative": "Turn 1: Fetched P6 N2 to find application requirements; found no test info, so no evidence. Turn 2: Fetched P6 N10 to check English proficiency; found it is required only for non-proficient applicants, implying optional for others; kept E2. Turn 3: Fetched P5 N20 to find explicit confirmation of optional tests; found E11 and E12 confirming GRE/GMAT not required but can be submitted; kept evidence. Turn 4: Fetched P5 N21 to check international student info; found no relevant test optionality; no evidence. This turn: Re-fetched P5 N20 (already checked) to look for a comprehensive list of optional tests; no new information.",
+            "sufficient": false,
+            "missing": "Explicit statement that all standardized tests (including English proficiency) are optional for MS-ADS applicants, or a comprehensive list of optional tests."
+          }
+        ],
+        "node_evaluation_log": {
+          "P6 (How to Apply)": {
+            "N2 (Master’s in Applied Data Science Application Requirements)": {
+              "node_id": "section:23865d257571496f",
+              "path": [
+                "How to Apply",
+                "Master’s in Applied Data Science Application Requirements"
+              ],
+              "eff_evidence": [],
+              "comment": "This node covers general application requirements (portal, deadlines, full/part-time status) but does not mention any standardized test scores, so no evidence is kept."
+            },
+            "N10 (English Language Requirement)": {
+              "node_id": "section:fdc4d132e8a0caa5",
+              "path": [
+                "How to Apply",
+                "English Language Requirement"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E2",
+                  "chunk_id": "chunk:90f070381d573878",
+                  "text_preview": "Applicants to the Master’s in Applied Data Science program who do not meet the English Language Proficiency criteria must submit proof of English lang"
+                }
+              ],
+              "comment": "This node directly addresses English language proficiency test scores (TOEFL, IELTS) and states that they are required only for applicants who do not meet proficiency criteria, implying they are optional for those who do. It provides the specific minimum scores and waiver policy."
+            }
+          },
+          "P5 (FAQs)": {
+            "N20 (Accordion)": {
+              "node_id": "accordion:b6700d04c00529cd",
+              "path": [
+                "FAQs",
+                "Application Process"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E11",
+                  "chunk_id": "chunk:fc46e11c20c0087d",
+                  "text_preview": "No, the GRE/GMAT is not required for admissions."
+                },
+                {
+                  "evidence_ref": "E12",
+                  "chunk_id": "chunk:e94c00a8a388ed82",
+                  "text_preview": "While the GRE/GMAT is not required, applicants can still submit their scores. The GRE school code is 1832; the GMAT school code is H9X-WG-70."
+                }
+              ],
+              "comment": "E11 directly states that GRE/GMAT is not required for admissions, and E12 clarifies that while not required, applicants can still submit scores, providing school codes. Other content in this node covers unrelated topics such as decision timelines, recommendations, transcripts, English proficiency, and program differences, which do not address which standardized test scores are optional for MS-ADS applicants."
+            },
+            "N21 (International Students)": {
+              "node_id": "progression_tab:ee59deb05d3890d6",
+              "path": [
+                "FAQs",
+                "International Students"
+              ],
+              "eff_evidence": [],
+              "comment": "This node covers international student topics such as visas, OPT/STEM, CPT, and TOEFL/IELTS exemption. It does not address which standardized test scores are optional for MS-ADS applicants, so no evidence is kept."
+            }
+          }
+        },
+        "log_path": "C:\\Users\\ss363\\Desktop\\Archive\\ads_rag_chatbot\\pipeline_grag_v2\\log\\2026-08-04_014220_573b28483a55.json"
+      }
+    }
+  },
+  "run_batch_id": "20260804T013937"
+}

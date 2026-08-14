@@ -1,0 +1,9 @@
+# Stage 1 — scraping dependencies
+# Runtime: conda activate adsp-nlp-backup (torch+cu128, sentence-transformers, chromadb already in env)
+# Install these if not already present: pip install -r requirements.txt
+
+requests==2.32.5
+beautifulsoup4==4.14.3
+lxml==6.0.2
+python-dotenv==1.2.1
+playwright

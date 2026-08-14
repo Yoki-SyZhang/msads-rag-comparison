@@ -1,0 +1,490 @@
+{
+  "schema_version": 2,
+  "timestamp": "2026-08-04T01:41:23.920024",
+  "question": "Under what circumstance must an MS-ADS applicant submit proof of English language proficiency?",
+  "question_id": "A06",
+  "question_meta": {
+    "category": "admissions",
+    "type": "single_fact",
+    "difficulty": "medium",
+    "expected_behavior": "direct_answer"
+  },
+  "results": {
+    "pipeline_flatrag": {
+      "pipeline_id": "pipeline_flatrag",
+      "display_name": "FlatRAG",
+      "answer": "Based on the retrieved context, an applicant to the Master's in Applied Data Science program must submit proof of English language proficiency if they do not meet the English Language Proficiency criteria [1]. The context does not specify the exact criteria for exemption, but it notes that applicants should review the waiver policy for details [1].\n\nSources:\n1. [How To Apply | English Language Requirement](https://grad.uchicago.edu/admissions/apply/english-language-requirements/)",
+      "sources": [
+        {
+          "page_title": "How To Apply",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply/"
+        },
+        {
+          "page_title": "Faqs",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "tool_calls": [
+            {
+              "name": "list_page_sections",
+              "args": {
+                "url": "how_to_apply"
+              }
+            },
+            {
+              "name": "list_page_sections",
+              "args": {
+                "url": "faqs"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "list_page_sections",
+              "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply/:\n  - \"Application Fee\" (1 chunk)\n  - \"Candidate Statement\" (2 chunks)\n  - \"English Language Requirement\" (1 chunk)\n  - \"Get in Touch\" (1 chunk)\n  - \"How To Apply\" (1 chunk)\n  - \"International Students\" (1 chunk)\n  - \"Letters of Recommendation\" (1 chunk)\n  - \"Master’s in Applied Data Science Application Requirements\" (1 chunk)\n  - \"Meet your Admissions Counselor\" (2 chunks)\n  - \"Next Application Deadlines:\" (3 chunks)\n  - \"Programming Supplement\" (2 chunks)\n  - \"Resume/CV\" (3 chunks)\n  - \"Transcripts from all previous colleges and universities attended\" (2 chunks)\n  - \"Tuition, Fees, & Aid\" (1 chunk)\n  - \"Virtual Portfolio\" (1 chunk)"
+            },
+            {
+              "name": "list_page_sections",
+              "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/:\n  - \"2-Year Thesis Track Program > How many spots are available in the new 2-year program?\" (1 chunk)\n  - \"2-Year Thesis Track Program > If I am admitted to the In-Person, Full-Time 1-year program, may I take any of the 2-year program electives?\" (1 chunk)\n  - \"2-Year Thesis Track Program > May I switch between the 1- and 2-year programs after officially enrolling in the MS-ADS program?\" (1 chunk)\n  - \"2-Year Thesis Track Program > What is the 2-year program's thesis requirement?\" (1 chunk)\n  - \"2-Year Thesis Track Program > What is the new 2-year thesis track program (18 courses), and how is it different from the 1-year program (12 courses)?\" (2 chunks)\n  - \"2-Year Thesis Track Program > When can I apply for the 2-year thesis track program?\" (1 chunk)\n  - \"Application Process > Do I need to provide my recommenders with instructions?\" (1 chunk)\n  - \"Application Process > Does the admissions office allow recommenders to email their letter directly as an attachment to be included in an applicant’s file?\" (1 chunk)\n  - \"Application Process > How do I submit the materials that will accompany my Master's in Applied Data Science application?\" (1 chunk)\n  - \"Application Process > How will I be notified that I am admitted to the Master's in Applied Data Science program?\" (1 chunk)\n  - \"Application Process > I took the GRE and/or GMAT and want to include my score(s) with my Master's in Applied Data Science application.\" (1 chunk)\n  - \"Application Process > I took the TOEFL over two years ago. Can I still use those TOEFL results?\" (1 chunk)\n  - \"Application Process > If I am admitted to the Master's in Applied Data Science program, what do I do next?\" (1 chunk)\n  - \"Application Process > If I finish my Master's in Applied Data Science application before the deadline, will I receive my decision early?\" (1 chunk)\n  - \"Application Process > Is the GRE or GMAT required for th"
+            }
+          ],
+          "judger": null
+        },
+        {
+          "step": 2,
+          "tool_calls": [
+            {
+              "name": "fetch_section_chunks",
+              "args": {
+                "url": "how_to_apply",
+                "section_breadcrumb": "English Language Requirement"
+              }
+            },
+            {
+              "name": "fetch_section_chunks",
+              "args": {
+                "url": "faqs",
+                "section_breadcrumb": "Application Process > Who is exempt from providing proof of English proficiency?"
+              }
+            },
+            {
+              "name": "fetch_section_chunks",
+              "args": {
+                "url": "faqs",
+                "section_breadcrumb": "Application Process > What test scores does UChicago accept as proof of English proficiency?"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_section_chunks",
+              "content": "Fetched 1 chunk(s) from \"English Language Requirement\":\n\n[0] How To Apply | English Language Requirement\n[Page: How To Apply | Section: English Language Requirement]\n\nApplicants to the Master’s in Applied Data Science program who do not meet the English Language Proficiency criteria must submit proof of English language proficiency. Minimum scores for the Master’s in Applied Data Science program: TOEFL..."
+            },
+            {
+              "name": "fetch_section_chunks",
+              "content": "Fetched 1 chunk(s) from \"Application Process > Who is exempt from providing proof of English proficiency?\":\n\n[0] Faqs | Application Process > Who is exempt from providing proof of English proficiency?\n[Page: Faqs | Section: Application Process > Who is exempt from providing proof of English proficiency?]\n\nPlease refer to the University of Chicago’s English Language Proficiency requirements."
+            },
+            {
+              "name": "fetch_section_chunks",
+              "content": "Fetched 1 chunk(s) from \"Application Process > What test scores does UChicago accept as proof of English proficiency?\":\n\n[0] Faqs | Application Process > What test scores does UChicago accept as proof of English proficiency?\n[Page: Faqs | Section: Application Process > What test scores does UChicago accept as proof of English proficiency?]\n\nPlease refer to the Proof of English Proficiency guidelines."
+            }
+          ],
+          "judger": {
+            "completeness": "partial",
+            "useful_indices": [
+              0,
+              1,
+              2
+            ],
+            "decision": "done",
+            "candidate_chunk_count": 3,
+            "accepted_chunk_count": 3
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "text": "[Page: How To Apply | Section: English Language Requirement]\n\nApplicants to the Master’s in Applied Data Science program who do not meet the English Language Proficiency criteria must submit proof of English language proficiency. Minimum scores for the Master’s in Applied Data Science program: TOEFL: 102 (prior requirement) or 5 (current requirement; no subscore requirement); IELTS, 7 (no subscore requirement). Please review our waiver policy [here](https://grad.uchicago.edu/admissions/apply/english-language-requirements/) .",
+          "chunk_id": "education__masters_programs__ms_in_applied_data_science__how_to_apply__english_language_requirement__15",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply/",
+          "page_title": "How To Apply",
+          "section": "English Language Requirement",
+          "section_breadcrumb": "English Language Requirement",
+          "content_type": "text",
+          "program_type": "general",
+          "distance": 0.0
+        },
+        {
+          "text": "[Page: Faqs | Section: Application Process > Who is exempt from providing proof of English proficiency?]\n\nPlease refer to the University of Chicago’s English Language Proficiency requirements.",
+          "chunk_id": "education__masters_programs__ms_in_applied_data_science__faqs__who_is_exempt_from_providing_proof_of_english_proficiency__16",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/",
+          "page_title": "Faqs",
+          "section": "Who is exempt from providing proof of English proficiency?",
+          "section_breadcrumb": "Application Process > Who is exempt from providing proof of English proficiency?",
+          "content_type": "text",
+          "program_type": "general",
+          "distance": 0.0
+        },
+        {
+          "text": "[Page: Faqs | Section: Application Process > What test scores does UChicago accept as proof of English proficiency?]\n\nPlease refer to the Proof of English Proficiency guidelines.",
+          "chunk_id": "education__masters_programs__ms_in_applied_data_science__faqs__what_test_scores_does_uchicago_accept_as_proof_of_english_proficiency__19",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/",
+          "page_title": "Faqs",
+          "section": "What test scores does UChicago accept as proof of English proficiency?",
+          "section_breadcrumb": "Application Process > What test scores does UChicago accept as proof of English proficiency?",
+          "content_type": "text",
+          "program_type": "general",
+          "distance": 0.0
+        }
+      ],
+      "time_sec": 8.058,
+      "low_confidence": true,
+      "error": null,
+      "raw_debug": {
+        "answer": "Based on the retrieved context, an applicant to the Master's in Applied Data Science program must submit proof of English language proficiency if they do not meet the English Language Proficiency criteria [1]. The context does not specify the exact criteria for exemption, but it notes that applicants should review the waiver policy for details [1].\n\nSources:\n1. [How To Apply | English Language Requirement](https://grad.uchicago.edu/admissions/apply/english-language-requirements/)",
+        "sources": [
+          {
+            "page_title": "How To Apply",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply/"
+          },
+          {
+            "page_title": "Faqs",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/"
+          }
+        ],
+        "completeness": "partial",
+        "low_confidence": true,
+        "attempts": 2,
+        "agent_steps": [
+          {
+            "step": 1,
+            "tool_calls": [
+              {
+                "name": "list_page_sections",
+                "args": {
+                  "url": "how_to_apply"
+                }
+              },
+              {
+                "name": "list_page_sections",
+                "args": {
+                  "url": "faqs"
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "list_page_sections",
+                "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply/:\n  - \"Application Fee\" (1 chunk)\n  - \"Candidate Statement\" (2 chunks)\n  - \"English Language Requirement\" (1 chunk)\n  - \"Get in Touch\" (1 chunk)\n  - \"How To Apply\" (1 chunk)\n  - \"International Students\" (1 chunk)\n  - \"Letters of Recommendation\" (1 chunk)\n  - \"Master’s in Applied Data Science Application Requirements\" (1 chunk)\n  - \"Meet your Admissions Counselor\" (2 chunks)\n  - \"Next Application Deadlines:\" (3 chunks)\n  - \"Programming Supplement\" (2 chunks)\n  - \"Resume/CV\" (3 chunks)\n  - \"Transcripts from all previous colleges and universities attended\" (2 chunks)\n  - \"Tuition, Fees, & Aid\" (1 chunk)\n  - \"Virtual Portfolio\" (1 chunk)"
+              },
+              {
+                "name": "list_page_sections",
+                "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/:\n  - \"2-Year Thesis Track Program > How many spots are available in the new 2-year program?\" (1 chunk)\n  - \"2-Year Thesis Track Program > If I am admitted to the In-Person, Full-Time 1-year program, may I take any of the 2-year program electives?\" (1 chunk)\n  - \"2-Year Thesis Track Program > May I switch between the 1- and 2-year programs after officially enrolling in the MS-ADS program?\" (1 chunk)\n  - \"2-Year Thesis Track Program > What is the 2-year program's thesis requirement?\" (1 chunk)\n  - \"2-Year Thesis Track Program > What is the new 2-year thesis track program (18 courses), and how is it different from the 1-year program (12 courses)?\" (2 chunks)\n  - \"2-Year Thesis Track Program > When can I apply for the 2-year thesis track program?\" (1 chunk)\n  - \"Application Process > Do I need to provide my recommenders with instructions?\" (1 chunk)\n  - \"Application Process > Does the admissions office allow recommenders to email their letter directly as an attachment to be included in an applicant’s file?\" (1 chunk)\n  - \"Application Process > How do I submit the materials that will accompany my Master's in Applied Data Science application?\" (1 chunk)\n  - \"Application Process > How will I be notified that I am admitted to the Master's in Applied Data Science program?\" (1 chunk)\n  - \"Application Process > I took the GRE and/or GMAT and want to include my score(s) with my Master's in Applied Data Science application.\" (1 chunk)\n  - \"Application Process > I took the TOEFL over two years ago. Can I still use those TOEFL results?\" (1 chunk)\n  - \"Application Process > If I am admitted to the Master's in Applied Data Science program, what do I do next?\" (1 chunk)\n  - \"Application Process > If I finish my Master's in Applied Data Science application before the deadline, will I receive my decision early?\" (1 chunk)\n  - \"Application Process > Is the GRE or GMAT required for th"
+              }
+            ],
+            "judger": null
+          },
+          {
+            "step": 2,
+            "tool_calls": [
+              {
+                "name": "fetch_section_chunks",
+                "args": {
+                  "url": "how_to_apply",
+                  "section_breadcrumb": "English Language Requirement"
+                }
+              },
+              {
+                "name": "fetch_section_chunks",
+                "args": {
+                  "url": "faqs",
+                  "section_breadcrumb": "Application Process > Who is exempt from providing proof of English proficiency?"
+                }
+              },
+              {
+                "name": "fetch_section_chunks",
+                "args": {
+                  "url": "faqs",
+                  "section_breadcrumb": "Application Process > What test scores does UChicago accept as proof of English proficiency?"
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "fetch_section_chunks",
+                "content": "Fetched 1 chunk(s) from \"English Language Requirement\":\n\n[0] How To Apply | English Language Requirement\n[Page: How To Apply | Section: English Language Requirement]\n\nApplicants to the Master’s in Applied Data Science program who do not meet the English Language Proficiency criteria must submit proof of English language proficiency. Minimum scores for the Master’s in Applied Data Science program: TOEFL..."
+              },
+              {
+                "name": "fetch_section_chunks",
+                "content": "Fetched 1 chunk(s) from \"Application Process > Who is exempt from providing proof of English proficiency?\":\n\n[0] Faqs | Application Process > Who is exempt from providing proof of English proficiency?\n[Page: Faqs | Section: Application Process > Who is exempt from providing proof of English proficiency?]\n\nPlease refer to the University of Chicago’s English Language Proficiency requirements."
+              },
+              {
+                "name": "fetch_section_chunks",
+                "content": "Fetched 1 chunk(s) from \"Application Process > What test scores does UChicago accept as proof of English proficiency?\":\n\n[0] Faqs | Application Process > What test scores does UChicago accept as proof of English proficiency?\n[Page: Faqs | Section: Application Process > What test scores does UChicago accept as proof of English proficiency?]\n\nPlease refer to the Proof of English Proficiency guidelines."
+              }
+            ],
+            "judger": {
+              "completeness": "partial",
+              "useful_indices": [
+                0,
+                1,
+                2
+              ],
+              "decision": "done",
+              "candidate_chunk_count": 3,
+              "accepted_chunk_count": 3
+            }
+          }
+        ],
+        "evidence": [
+          {
+            "text": "[Page: How To Apply | Section: English Language Requirement]\n\nApplicants to the Master’s in Applied Data Science program who do not meet the English Language Proficiency criteria must submit proof of English language proficiency. Minimum scores for the Master’s in Applied Data Science program: TOEFL: 102 (prior requirement) or 5 (current requirement; no subscore requirement); IELTS, 7 (no subscore requirement). Please review our waiver policy [here](https://grad.uchicago.edu/admissions/apply/english-language-requirements/) .",
+            "chunk_id": "education__masters_programs__ms_in_applied_data_science__how_to_apply__english_language_requirement__15",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply/",
+            "page_title": "How To Apply",
+            "section": "English Language Requirement",
+            "section_breadcrumb": "English Language Requirement",
+            "content_type": "text",
+            "program_type": "general",
+            "distance": 0.0
+          },
+          {
+            "text": "[Page: Faqs | Section: Application Process > Who is exempt from providing proof of English proficiency?]\n\nPlease refer to the University of Chicago’s English Language Proficiency requirements.",
+            "chunk_id": "education__masters_programs__ms_in_applied_data_science__faqs__who_is_exempt_from_providing_proof_of_english_proficiency__16",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/",
+            "page_title": "Faqs",
+            "section": "Who is exempt from providing proof of English proficiency?",
+            "section_breadcrumb": "Application Process > Who is exempt from providing proof of English proficiency?",
+            "content_type": "text",
+            "program_type": "general",
+            "distance": 0.0
+          },
+          {
+            "text": "[Page: Faqs | Section: Application Process > What test scores does UChicago accept as proof of English proficiency?]\n\nPlease refer to the Proof of English Proficiency guidelines.",
+            "chunk_id": "education__masters_programs__ms_in_applied_data_science__faqs__what_test_scores_does_uchicago_accept_as_proof_of_english_proficiency__19",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/",
+            "page_title": "Faqs",
+            "section": "What test scores does UChicago accept as proof of English proficiency?",
+            "section_breadcrumb": "Application Process > What test scores does UChicago accept as proof of English proficiency?",
+            "content_type": "text",
+            "program_type": "general",
+            "distance": 0.0
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 6026,
+          "completion_tokens": 462,
+          "total_tokens": 6488,
+          "llm_calls": 6
+        },
+        "metrics": {
+          "tool_calls": 5,
+          "loop_count": 2,
+          "evidence_count": 3,
+          "llm_calls": 6,
+          "judge_calls": null,
+          "valid_fetch_count": null,
+          "invalid_fetch_count": null,
+          "fallback_triggered": null
+        }
+      }
+    },
+    "pipeline_grag_v2": {
+      "pipeline_id": "pipeline_grag_v2",
+      "display_name": "GRAG v2",
+      "answer": "Applicants to the MS in Applied Data Science program must submit proof of English language proficiency if they do not meet the English Language Proficiency criteria [1].",
+      "sources": [
+        {
+          "page_title": "How to Apply",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P6"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P6] How to Apply\n[N1] Page Introduction — Section (1 content block)\n[N2] Master’s in Applied Data Science Application Requirements — Section (1 content block)\n[N3] Next Application Deadlines: — Section (1 content block)\n[N4] Letters of Recommendation — Section (1 content block)\n[N5] Candidate Statement — Section (1 content block)\n[N6] Resume/CV — Section (1 content block)\n[N7] Programming Supplement — Section (2 content blocks)\n    ├── [N8] Virtual Portfolio — Section (1 content block)\n[N9] International Students — Section (1 content block)\n[N10] English Language Requirement — Section (1 content block)\n[N11] Transcripts from all previous colleges and universities attended — Section (2 content blocks)\n[N12] Application Fee — Section (1 content block)\n[N13] Tuition, Fees, & Aid — Section (1 content block)\n[N14] Meet your Admissions Counselor — Section (1 content block)\n[N15] Get in Touch — Section (1 content block)"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "The question is about application requirements, specifically English language proficiency proof. P6 (How to Apply) is the most directly relevant page for application requirements and prerequisites."
+        },
+        {
+          "step": 2,
+          "tool_calls": [
+            {
+              "name": "fetch_graph_content",
+              "args": {
+                "node_refs": [
+                  "N10"
+                ]
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_graph_content",
+              "content": "[N10] English Language Requirement — path: How to Apply > English Language Requirement\n  [E1] Applicants to the Master’s in Applied Data Science program who do not meet the English Language Proficiency criteria must submit proof of English language proficiency.\nMinimum scores for the Master’s in Applied Data Science program: TOEFL: 102 (prior requirement) or 5 (current requirement; no subscore requirement); IELTS, 7 (no subscore requirement).\nPlease review our waiver policy here ."
+            }
+          ],
+          "judger": {
+            "node_assessments": [
+              {
+                "node_ref": "N10",
+                "keep_evidence": [
+                  "E1"
+                ],
+                "comment": "E1 directly states that applicants who do not meet the English Language Proficiency criteria must submit proof of English language proficiency, which answers the question."
+              }
+            ]
+          },
+          "decision_reason": "The question asks about the circumstance for submitting proof of English language proficiency. Node N10 is explicitly labeled 'English Language Requirement' on the How to Apply page, which is the most direct source for this information."
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E1",
+          "status": "accepted",
+          "page_title": "How to Apply",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply",
+          "text": "Applicants to the Master’s in Applied Data Science program who do not meet the English Language Proficiency criteria must submit proof of English language proficiency.\nMinimum scores for the Master’s in Applied Data Science program: TOEFL: 102 (prior requirement) or 5 (current requirement; no subscore requirement); IELTS, 7 (no subscore requirement).\nPlease review our waiver policy here .",
+          "path": [
+            "How to Apply",
+            "English Language Requirement"
+          ],
+          "section_breadcrumb": "How to Apply > English Language Requirement",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N10"
+            }
+          ],
+          "chunk_id": "chunk:90f070381d573878",
+          "owner_node_id": "section:fdc4d132e8a0caa5",
+          "page_id": "page:7fb2f6ecae8feeeb",
+          "internal_metadata": {
+            "source_type": "p",
+            "score": null,
+            "score_breakdown": {}
+          }
+        }
+      ],
+      "time_sec": 10.559,
+      "low_confidence": false,
+      "error": null,
+      "progress_summary": {
+        "summary_covering": "Page P6 (How to Apply): Checked node N10 (English Language Requirement) and found useful evidence E1, which directly states that applicants who do not meet the English Language Proficiency criteria must submit proof of English language proficiency. This answers the question. No other pages have been touched. Still missing: none, as the evidence fully covers the question.",
+        "decision_trace_narrative": "Turn 1: The agent fetched graph content for node N10 on page P6, reasoning that it is explicitly labeled 'English Language Requirement' and is the most direct source for the question. The fetch was successful and yielded evidence E1, which directly answers the question. No re-queries or invalid references occurred."
+      },
+      "raw_debug": {
+        "response": {
+          "answer": "Applicants to the MS in Applied Data Science program must submit proof of English language proficiency if they do not meet the English Language Proficiency criteria [1].",
+          "citations": [
+            {
+              "index": 1,
+              "title": "How to Apply",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply",
+              "snippet": "Applicants to the Master’s in Applied Data Science program who do not meet the English Language Proficiency criteria must submit proof of English language proficiency. Minimum scor"
+            }
+          ],
+          "debug": {
+            "tool_turns": 2,
+            "stop_reason": "sufficient_evidence",
+            "evidence_count": 1,
+            "sufficient": true,
+            "missing": "",
+            "log_path": "C:\\Users\\ss363\\Desktop\\Archive\\ads_rag_chatbot\\pipeline_grag_v2\\log\\2026-08-04_014123_fe2016315716.json",
+            "run_id": "fe2016315716"
+          }
+        },
+        "run_id": "fe2016315716",
+        "rewritten_queries": [
+          {
+            "id": "q1",
+            "query": "Under what circumstance must an MS-ADS applicant submit proof of English language proficiency?",
+            "target": "university-program"
+          }
+        ],
+        "judgment": {
+          "sufficient": true,
+          "missing": "",
+          "comment": "Page P6 (How to Apply): Checked node N10 (English Language Requirement) and found useful evidence E1, which directly states that applicants who do not meet the English Language Proficiency criteria must submit proof of English language proficiency. This answers the question. No other pages have been touched. Still missing: none, as the evidence fully covers the question."
+        },
+        "stop_reason": "sufficient_evidence",
+        "fallback": {
+          "triggered": false,
+          "pages_selected": [],
+          "reason": ""
+        },
+        "metrics": {
+          "agent_turns": 2,
+          "tool_calls": 2,
+          "judge_calls": 1,
+          "llm_calls": 7,
+          "valid_fetch_count": 1,
+          "invalid_fetch_count": 0,
+          "accepted_evidence_count": 1,
+          "stop_reason": "sufficient_evidence",
+          "fallback_triggered": false
+        },
+        "usage": {
+          "prompt_tokens": 4798,
+          "completion_tokens": 504,
+          "total_tokens": 5302,
+          "llm_calls": 7
+        },
+        "progress_summary_history": [
+          {
+            "turn": 1,
+            "summary_covering": "No pages have been evaluated yet. Nothing is covered.",
+            "decision_trace_narrative": "Turn 1: The agent decided to inspect page P6 (How to Apply) because the question concerns application requirements, specifically English language proficiency proof. The tool status was OK, but no nodes have been evaluated yet.",
+            "sufficient": false,
+            "missing": "Evidence from P6 (or other relevant pages) on the circumstances requiring proof of English language proficiency."
+          },
+          {
+            "turn": 2,
+            "summary_covering": "Page P6 (How to Apply): Checked node N10 (English Language Requirement) and found useful evidence E1, which directly states that applicants who do not meet the English Language Proficiency criteria must submit proof of English language proficiency. This answers the question. No other pages have been touched. Still missing: none, as the evidence fully covers the question.",
+            "decision_trace_narrative": "Turn 1: The agent fetched graph content for node N10 on page P6, reasoning that it is explicitly labeled 'English Language Requirement' and is the most direct source for the question. The fetch was successful and yielded evidence E1, which directly answers the question. No re-queries or invalid references occurred.",
+            "sufficient": true,
+            "missing": ""
+          }
+        ],
+        "node_evaluation_log": {
+          "P6 (How to Apply)": {
+            "N10 (English Language Requirement)": {
+              "node_id": "section:fdc4d132e8a0caa5",
+              "path": [
+                "How to Apply",
+                "English Language Requirement"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E1",
+                  "chunk_id": "chunk:90f070381d573878",
+                  "text_preview": "Applicants to the Master’s in Applied Data Science program who do not meet the English Language Proficiency criteria must submit proof of English lang"
+                }
+              ],
+              "comment": "E1 directly states that applicants who do not meet the English Language Proficiency criteria must submit proof of English language proficiency, which answers the question."
+            }
+          }
+        },
+        "log_path": "C:\\Users\\ss363\\Desktop\\Archive\\ads_rag_chatbot\\pipeline_grag_v2\\log\\2026-08-04_014123_fe2016315716.json"
+      }
+    }
+  },
+  "run_batch_id": "20260804T013937"
+}

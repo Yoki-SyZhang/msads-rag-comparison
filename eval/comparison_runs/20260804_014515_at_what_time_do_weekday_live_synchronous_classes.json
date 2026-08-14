@@ -1,0 +1,767 @@
+{
+  "schema_version": 2,
+  "timestamp": "2026-08-04T01:45:15.463098",
+  "question": "At what time do weekday live synchronous classes in the Online MS-ADS program begin?",
+  "question_id": "C07",
+  "question_meta": {
+    "category": "program_format",
+    "type": "single_fact",
+    "difficulty": "medium",
+    "expected_behavior": "direct_answer"
+  },
+  "results": {
+    "pipeline_flatrag": {
+      "pipeline_id": "pipeline_flatrag",
+      "display_name": "FlatRAG",
+      "answer": "I couldn't find relevant information about this in the available program materials. The context only states that classes generally take place on evenings and weekends and that the Online MS-ADS program is both synchronous and asynchronous, but it does not specify the exact start time for weekday live synchronous classes. I can only answer questions about the UChicago MS in Applied Data Science program.\n\nSources:\n1. [Faqs | Online Program](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/)",
+      "sources": [
+        {
+          "page_title": "Faqs",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "tool_calls": [
+            {
+              "name": "list_page_sections",
+              "args": {
+                "url": "online_program"
+              }
+            },
+            {
+              "name": "semantic_search",
+              "args": {
+                "query": "weekday live synchronous classes start time online program schedule",
+                "include_urls": [
+                  "online_program"
+                ]
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "list_page_sections",
+              "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/online-program/:\n  - \"Academic Rigor Meets Work/Life Balance\" (1 chunk)\n  - \"Additional Resources\" (1 chunk)\n  - \"Capstone (2)\" (1 chunk)\n  - \"Career Seminar (noncredit, required)\" (1 chunk)\n  - \"Core Courses (6)\" (1 chunk)\n  - \"Core Courses > Data Engineering Platforms for Analytics or Big Data and Cloud Computing\" (1 chunk)\n  - \"Core Courses > Data Science Capstone Project\" (1 chunk)\n  - \"Core Courses > Leadership and Consulting for Data Science\" (1 chunk)\n  - \"Core Courses > Machine Learning I\" (1 chunk)\n  - \"Core Courses > Machine Learning II\" (1 chunk)\n  - \"Core Courses > Statistical Models for Data Science\" (1 chunk)\n  - \"Core Courses > Time Series Analysis and Forecasting\" (1 chunk)\n  - \"Curriculum\" (1 chunk)\n  - \"Elective Courses (4)\" (1 chunk)\n  - \"Foundational Courses (noncredit, optional)\" (2 chunks)\n  - \"Get in Touch\" (1 chunk)\n  - \"In-Person ‘Immersion Weekend’\" (5 chunks)\n  - \"Master Data Science, Master Your Career\" (1 chunk)\n  - \"Noncredit Courses > Advanced Linear Algebra for Machine Learning (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Brush up on the Basics (Optional resource)\" (1 chunk)\n  - \"Noncredit Courses > Career Seminar (Seminar, required)\" (1 chunk)\n  - \"Noncredit Courses > Introduction to Statistical Concepts (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Python for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > R for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Note for International Students\" (1 chunk)\n  - \"Online Program\" (1 chunk)\n  - \"Online Program - Accordion Overview > Core Courses\" (1 chunk)\n  - \"Online Program - Accordion Overview > Noncredit Courses\" (1 chunk)\n  - \"Online Program - Accordion Overview > Sample Elective Courses\" (1 chunk)\n  - \"Sample Elective Courses > Advanced Computer Vision with Deep Learning\" (2 chunks)\n  - \"Sample Elective Courses > Advanced Machine Learning and Artificial"
+            },
+            {
+              "name": "semantic_search",
+              "content": "Semantic search returned 5 result(s):\n\n[0] Online Program | Your Time, Your Advancement (distance: 0.349)\n[Page: Online Program | Section: Your Time, Your Advancement]\n\nThe online applied data science format combines live synchronous classes with structured asynchronous coursework. You will engage in weekly, synchronous (real-time) classes with your instructors and peers. Live lectures provide the right...\n\n[1] Online Program | Your Time, Your Advancement (distance: 0.487)\n[Page: Online Program | Section: Your Time, Your Advancement]\n\nyou for synchronous classes through lecture videos, readings, and discussions. The online format allows you to work on data science projects, group collaborations, and assignments around your personal and professional commitments.\n\n[2] Online Program | Academic Rigor Meets Work/Life Balance (distance: 0.619)\n[Page: Online Program | Section: Academic Rigor Meets Work/Life Balance]\n\nThe Online MS in Applied Data Science program at the University of Chicago delivers a structured online learning experience with live classes designed for working professionals. You will benefit from the same top faculty, brig...\n\n[3] Online Program | In-Person ‘Immersion Weekend’ (distance: 0.666)\n[Page: Online Program | Section: In-Person ‘Immersion Weekend’]\n\n• Thursday , September 24 th – Saturday, September 26 th Thursday – Evening Welcome and Social Friday – Full Day Program TBA Saturday – Full Day Program TBA\n\n[4] Online Program | Additional Resources (distance: 0.673)\n[Page: Online Program | Section: Additional Resources]\n\n• Upcoming Events & Deadlines\n• FAQs\n• Tuition, Fees, & Aid"
+            }
+          ],
+          "judger": {
+            "completeness": "none",
+            "useful_indices": [],
+            "decision": "continue",
+            "candidate_chunk_count": 5,
+            "accepted_chunk_count": 0
+          }
+        },
+        {
+          "step": 2,
+          "tool_calls": [
+            {
+              "name": "fetch_section_chunks",
+              "args": {
+                "url": "online_program",
+                "section_breadcrumb": "Your Time, Your Advancement"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_section_chunks",
+              "content": "Fetched 2 chunk(s) from \"Your Time, Your Advancement\":\n\n[0] Online Program | Your Time, Your Advancement\n[Page: Online Program | Section: Your Time, Your Advancement]\n\nThe online applied data science format combines live synchronous classes with structured asynchronous coursework. You will engage in weekly, synchronous (real-time) classes with your instructors and peers. Live lectures provide the right...\n\n[1] Online Program | Your Time, Your Advancement\n[Page: Online Program | Section: Your Time, Your Advancement]\n\nyou for synchronous classes through lecture videos, readings, and discussions. The online format allows you to work on data science projects, group collaborations, and assignments around your personal and professional commitments."
+            }
+          ],
+          "judger": {
+            "completeness": "none",
+            "useful_indices": [],
+            "decision": "continue",
+            "candidate_chunk_count": 2,
+            "accepted_chunk_count": 0
+          }
+        },
+        {
+          "step": 3,
+          "tool_calls": [
+            {
+              "name": "semantic_search",
+              "args": {
+                "query": "weekday live synchronous classes begin time Central Time evening",
+                "include_urls": [
+                  "online_program",
+                  "faqs"
+                ]
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "semantic_search",
+              "content": "Semantic search returned 5 result(s):\n\n[0] Online Program | Your Time, Your Advancement (distance: 0.478)\n[Page: Online Program | Section: Your Time, Your Advancement]\n\nThe online applied data science format combines live synchronous classes with structured asynchronous coursework. You will engage in weekly, synchronous (real-time) classes with your instructors and peers. Live lectures provide the right...\n\n[1] Faqs | Online Program > How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both? (distance: 0.622)\n[Page: Faqs | Section: Online Program > How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?]\n\nClasses generally take place on evenings and weekends in order to allow our students and instructors to maintai...\n\n[2] Online Program | Your Time, Your Advancement (distance: 0.667)\n[Page: Online Program | Section: Your Time, Your Advancement]\n\nyou for synchronous classes through lecture videos, readings, and discussions. The online format allows you to work on data science projects, group collaborations, and assignments around your personal and professional commitments.\n\n[3] Online Program | In-Person ‘Immersion Weekend’ (distance: 0.703)\n[Page: Online Program | Section: In-Person ‘Immersion Weekend’]\n\n• Thursday , September 24 th – Saturday, September 26 th Thursday – Evening Welcome and Social Friday – Full Day Program TBA Saturday – Full Day Program TBA\n\n[4] Online Program | Academic Rigor Meets Work/Life Balance (distance: 0.766)\n[Page: Online Program | Section: Academic Rigor Meets Work/Life Balance]\n\nThe Online MS in Applied Data Science program at the University of Chicago delivers a structured online learning experience with live classes designed for working professionals. You will benefit from the same top faculty, brig..."
+            }
+          ],
+          "judger": {
+            "completeness": "none",
+            "useful_indices": [],
+            "decision": "continue",
+            "candidate_chunk_count": 5,
+            "accepted_chunk_count": 0
+          }
+        },
+        {
+          "step": 4,
+          "tool_calls": [
+            {
+              "name": "fetch_section_chunks",
+              "args": {
+                "section_breadcrumb": "Online Program > How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?",
+                "url": "faqs"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_section_chunks",
+              "content": "Fetched 1 chunk(s) from \"Online Program > How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?\":\n\n[0] Faqs | Online Program > How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?\n[Page: Faqs | Section: Online Program > How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?]\n\nClasses generally take place on evenings and weekends in order to allow our students and instructors to maintai..."
+            }
+          ],
+          "judger": {
+            "completeness": "partial",
+            "useful_indices": [
+              0
+            ],
+            "decision": "continue",
+            "candidate_chunk_count": 1,
+            "accepted_chunk_count": 1
+          }
+        },
+        {
+          "step": 5,
+          "tool_calls": [
+            {
+              "name": "semantic_search",
+              "args": {
+                "query": "weekday synchronous classes begin 6pm 7pm 8pm Central Time schedule",
+                "include_urls": [
+                  "online_program",
+                  "faqs",
+                  "course_progressions"
+                ]
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "semantic_search",
+              "content": "Semantic search returned 4 result(s):\n\n[0] Online Program | Your Time, Your Advancement (distance: 0.482)\n[Page: Online Program | Section: Your Time, Your Advancement]\n\nThe online applied data science format combines live synchronous classes with structured asynchronous coursework. You will engage in weekly, synchronous (real-time) classes with your instructors and peers. Live lectures provide the right...\n\n[1] Online Program | Your Time, Your Advancement (distance: 0.680)\n[Page: Online Program | Section: Your Time, Your Advancement]\n\nyou for synchronous classes through lecture videos, readings, and discussions. The online format allows you to work on data science projects, group collaborations, and assignments around your personal and professional commitments.\n\n[2] Course Progressions | Course Progressions - Accordion Overview > Sample Full-Time Schedule (distance: 0.733)\n[Page: Course Progressions | Section: Course Progressions - Accordion Overview > Sample Full-Time Schedule]\n\nSample Full-Time Schedule:\n  Prequarter:\nIntroduction to Statistical Concepts (Foundational) [Optional, 5 Weeks], R for Data Science (Foundational) [Optional, 5 Weeks]\n  Quarter 1:\nPython for...\n\n[3] Online Program | In-Person ‘Immersion Weekend’ (distance: 0.741)\n[Page: Online Program | Section: In-Person ‘Immersion Weekend’]\n\n• Thursday , September 24 th – Saturday, September 26 th Thursday – Evening Welcome and Social Friday – Full Day Program TBA Saturday – Full Day Program TBA"
+            }
+          ],
+          "judger": {
+            "completeness": "none",
+            "useful_indices": [],
+            "decision": "continue",
+            "candidate_chunk_count": 4,
+            "accepted_chunk_count": 1
+          }
+        },
+        {
+          "step": 6,
+          "tool_calls": [
+            {
+              "name": "list_page_sections",
+              "args": {
+                "url": "course_progressions"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "list_page_sections",
+              "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/:\n  - \"Course Progressions - Accordion Overview > Sample 2-Year Full-Time Schedule\" (1 chunk)\n  - \"Course Progressions - Accordion Overview > Sample Full-Time Schedule\" (1 chunk)\n  - \"Course Progressions - Accordion Overview > Sample Part-Time Schedule\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 5 > Elective 5\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 5 > Elective 6\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 5 > Thesis Course I\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 6 > Elective 7\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 6 > Elective 8\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 6 > Thesis Course II\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Prequarter > Introduction to Statistical Concepts (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Prequarter > R for Data Science (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Advanced Linear Algebra for Machine Learning (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Career Seminar (Required)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Data Engineering Platforms for Analytics or Big Data and Cloud Computing\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Leadership and Consulting for Data Science\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Python for Data Science (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Statistical Models for Data Science\" (1 chunk)\n  - \"Course Progressions > Sample Full-Ti"
+            }
+          ],
+          "judger": null
+        },
+        {
+          "step": 7,
+          "tool_calls": [
+            {
+              "name": "fetch_section_chunks",
+              "args": {
+                "section_breadcrumb": "Course Progressions - Accordion Overview > Sample Full-Time Schedule",
+                "url": "course_progressions"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_section_chunks",
+              "content": "Fetched 1 chunk(s) from \"Course Progressions - Accordion Overview > Sample Full-Time Schedule\":\n\n[0] Course Progressions | Course Progressions - Accordion Overview > Sample Full-Time Schedule\n[Page: Course Progressions | Section: Course Progressions - Accordion Overview > Sample Full-Time Schedule]\n\nSample Full-Time Schedule:\n  Prequarter:\nIntroduction to Statistical Concepts (Foundational) [Optional, 5 Weeks], R for Data Science (Foundational) [Optional, 5 Weeks]\n  Quarter 1:\nPython for..."
+            }
+          ],
+          "judger": {
+            "completeness": "none",
+            "useful_indices": [],
+            "decision": "continue",
+            "candidate_chunk_count": 1,
+            "accepted_chunk_count": 1
+          }
+        },
+        {
+          "step": 8,
+          "tool_calls": [
+            {
+              "name": "semantic_search",
+              "args": {
+                "query": "online program weekday live class start time 6:00 pm Central",
+                "include_urls": [
+                  "online_program",
+                  "faqs"
+                ],
+                "top_k": 8
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "semantic_search",
+              "content": "Semantic search returned 7 result(s):\n\n[0] Online Program | Your Time, Your Advancement (distance: 0.506)\n[Page: Online Program | Section: Your Time, Your Advancement]\n\nThe online applied data science format combines live synchronous classes with structured asynchronous coursework. You will engage in weekly, synchronous (real-time) classes with your instructors and peers. Live lectures provide the right...\n\n[1] Online Program | Your Time, Your Advancement (distance: 0.691)\n[Page: Online Program | Section: Your Time, Your Advancement]\n\nyou for synchronous classes through lecture videos, readings, and discussions. The online format allows you to work on data science projects, group collaborations, and assignments around your personal and professional commitments.\n\n[2] Online Program | Additional Resources (distance: 0.705)\n[Page: Online Program | Section: Additional Resources]\n\n• Upcoming Events & Deadlines\n• FAQs\n• Tuition, Fees, & Aid\n\n[3] Online Program | In-Person ‘Immersion Weekend’ (distance: 0.708)\n[Page: Online Program | Section: In-Person ‘Immersion Weekend’]\n\n• Thursday , September 24 th – Saturday, September 26 th Thursday – Evening Welcome and Social Friday – Full Day Program TBA Saturday – Full Day Program TBA\n\n[4] Online Program | Academic Rigor Meets Work/Life Balance (distance: 0.719)\n[Page: Online Program | Section: Academic Rigor Meets Work/Life Balance]\n\nThe Online MS in Applied Data Science program at the University of Chicago delivers a structured online learning experience with live classes designed for working professionals. You will benefit from the same top faculty, brig...\n\n[5] Faqs | MBA/MS > Will MBA/MS courses be in-person or online? (distance: 0.746)\n[Page: Faqs | Section: MBA/MS > Will MBA/MS courses be in-person or online?]\n\nYour Booth courses will be in person, while your MS courses will be online. Most students will earn both degrees in seven quarters—the same time it takes to earn the MBA. A combination of online and in-person course"
+            }
+          ],
+          "judger": {
+            "completeness": "none",
+            "useful_indices": [],
+            "decision": "continue",
+            "candidate_chunk_count": 7,
+            "accepted_chunk_count": 1
+          }
+        },
+        {
+          "step": 9,
+          "tool_calls": [
+            {
+              "name": "fetch_section_chunks",
+              "args": {
+                "section_breadcrumb": "Academic Rigor Meets Work/Life Balance",
+                "url": "online_program"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_section_chunks",
+              "content": "Fetched 1 chunk(s) from \"Academic Rigor Meets Work/Life Balance\":\n\n[0] Online Program | Academic Rigor Meets Work/Life Balance\n[Page: Online Program | Section: Academic Rigor Meets Work/Life Balance]\n\nThe Online MS in Applied Data Science program at the University of Chicago delivers a structured online learning experience with live classes designed for working professionals. You will benefit from the same top faculty, brig..."
+            }
+          ],
+          "judger": {
+            "completeness": "none",
+            "useful_indices": [],
+            "decision": "continue",
+            "candidate_chunk_count": 1,
+            "accepted_chunk_count": 1
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "text": "[Page: Faqs | Section: Online Program > How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?]\n\nClasses generally take place on evenings and weekends in order to allow our students and instructors to maintain their professional schedules. The Master’s in Applied Data Science Online Program is both synchronous and asynchronous. The same as our In-Person program, students are required to participate in weekly, live meetings with their instructors and peers, complete readings and coursework, and engage in discussion.",
+          "chunk_id": "education__masters_programs__ms_in_applied_data_science__faqs__how_will_enrolling_in_master_s_in_applied_data_science_online_program_impact_my_schedule_are_classes_held_synchronously_asynchronously_or_both__32",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/",
+          "page_title": "Faqs",
+          "section": "How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?",
+          "section_breadcrumb": "Online Program > How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?",
+          "content_type": "text",
+          "program_type": "general",
+          "distance": 0.0
+        }
+      ],
+      "time_sec": 34.816,
+      "low_confidence": true,
+      "error": null,
+      "raw_debug": {
+        "answer": "I couldn't find relevant information about this in the available program materials. The context only states that classes generally take place on evenings and weekends and that the Online MS-ADS program is both synchronous and asynchronous, but it does not specify the exact start time for weekday live synchronous classes. I can only answer questions about the UChicago MS in Applied Data Science program.\n\nSources:\n1. [Faqs | Online Program](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/)",
+        "sources": [
+          {
+            "page_title": "Faqs",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/"
+          }
+        ],
+        "completeness": "none",
+        "low_confidence": true,
+        "attempts": 9,
+        "agent_steps": [
+          {
+            "step": 1,
+            "tool_calls": [
+              {
+                "name": "list_page_sections",
+                "args": {
+                  "url": "online_program"
+                }
+              },
+              {
+                "name": "semantic_search",
+                "args": {
+                  "query": "weekday live synchronous classes start time online program schedule",
+                  "include_urls": [
+                    "online_program"
+                  ]
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "list_page_sections",
+                "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/online-program/:\n  - \"Academic Rigor Meets Work/Life Balance\" (1 chunk)\n  - \"Additional Resources\" (1 chunk)\n  - \"Capstone (2)\" (1 chunk)\n  - \"Career Seminar (noncredit, required)\" (1 chunk)\n  - \"Core Courses (6)\" (1 chunk)\n  - \"Core Courses > Data Engineering Platforms for Analytics or Big Data and Cloud Computing\" (1 chunk)\n  - \"Core Courses > Data Science Capstone Project\" (1 chunk)\n  - \"Core Courses > Leadership and Consulting for Data Science\" (1 chunk)\n  - \"Core Courses > Machine Learning I\" (1 chunk)\n  - \"Core Courses > Machine Learning II\" (1 chunk)\n  - \"Core Courses > Statistical Models for Data Science\" (1 chunk)\n  - \"Core Courses > Time Series Analysis and Forecasting\" (1 chunk)\n  - \"Curriculum\" (1 chunk)\n  - \"Elective Courses (4)\" (1 chunk)\n  - \"Foundational Courses (noncredit, optional)\" (2 chunks)\n  - \"Get in Touch\" (1 chunk)\n  - \"In-Person ‘Immersion Weekend’\" (5 chunks)\n  - \"Master Data Science, Master Your Career\" (1 chunk)\n  - \"Noncredit Courses > Advanced Linear Algebra for Machine Learning (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Brush up on the Basics (Optional resource)\" (1 chunk)\n  - \"Noncredit Courses > Career Seminar (Seminar, required)\" (1 chunk)\n  - \"Noncredit Courses > Introduction to Statistical Concepts (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > Python for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Noncredit Courses > R for Data Science (Foundational, optional)\" (1 chunk)\n  - \"Note for International Students\" (1 chunk)\n  - \"Online Program\" (1 chunk)\n  - \"Online Program - Accordion Overview > Core Courses\" (1 chunk)\n  - \"Online Program - Accordion Overview > Noncredit Courses\" (1 chunk)\n  - \"Online Program - Accordion Overview > Sample Elective Courses\" (1 chunk)\n  - \"Sample Elective Courses > Advanced Computer Vision with Deep Learning\" (2 chunks)\n  - \"Sample Elective Courses > Advanced Machine Learning and Artificial"
+              },
+              {
+                "name": "semantic_search",
+                "content": "Semantic search returned 5 result(s):\n\n[0] Online Program | Your Time, Your Advancement (distance: 0.349)\n[Page: Online Program | Section: Your Time, Your Advancement]\n\nThe online applied data science format combines live synchronous classes with structured asynchronous coursework. You will engage in weekly, synchronous (real-time) classes with your instructors and peers. Live lectures provide the right...\n\n[1] Online Program | Your Time, Your Advancement (distance: 0.487)\n[Page: Online Program | Section: Your Time, Your Advancement]\n\nyou for synchronous classes through lecture videos, readings, and discussions. The online format allows you to work on data science projects, group collaborations, and assignments around your personal and professional commitments.\n\n[2] Online Program | Academic Rigor Meets Work/Life Balance (distance: 0.619)\n[Page: Online Program | Section: Academic Rigor Meets Work/Life Balance]\n\nThe Online MS in Applied Data Science program at the University of Chicago delivers a structured online learning experience with live classes designed for working professionals. You will benefit from the same top faculty, brig...\n\n[3] Online Program | In-Person ‘Immersion Weekend’ (distance: 0.666)\n[Page: Online Program | Section: In-Person ‘Immersion Weekend’]\n\n• Thursday , September 24 th – Saturday, September 26 th Thursday – Evening Welcome and Social Friday – Full Day Program TBA Saturday – Full Day Program TBA\n\n[4] Online Program | Additional Resources (distance: 0.673)\n[Page: Online Program | Section: Additional Resources]\n\n• Upcoming Events & Deadlines\n• FAQs\n• Tuition, Fees, & Aid"
+              }
+            ],
+            "judger": {
+              "completeness": "none",
+              "useful_indices": [],
+              "decision": "continue",
+              "candidate_chunk_count": 5,
+              "accepted_chunk_count": 0
+            }
+          },
+          {
+            "step": 2,
+            "tool_calls": [
+              {
+                "name": "fetch_section_chunks",
+                "args": {
+                  "url": "online_program",
+                  "section_breadcrumb": "Your Time, Your Advancement"
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "fetch_section_chunks",
+                "content": "Fetched 2 chunk(s) from \"Your Time, Your Advancement\":\n\n[0] Online Program | Your Time, Your Advancement\n[Page: Online Program | Section: Your Time, Your Advancement]\n\nThe online applied data science format combines live synchronous classes with structured asynchronous coursework. You will engage in weekly, synchronous (real-time) classes with your instructors and peers. Live lectures provide the right...\n\n[1] Online Program | Your Time, Your Advancement\n[Page: Online Program | Section: Your Time, Your Advancement]\n\nyou for synchronous classes through lecture videos, readings, and discussions. The online format allows you to work on data science projects, group collaborations, and assignments around your personal and professional commitments."
+              }
+            ],
+            "judger": {
+              "completeness": "none",
+              "useful_indices": [],
+              "decision": "continue",
+              "candidate_chunk_count": 2,
+              "accepted_chunk_count": 0
+            }
+          },
+          {
+            "step": 3,
+            "tool_calls": [
+              {
+                "name": "semantic_search",
+                "args": {
+                  "query": "weekday live synchronous classes begin time Central Time evening",
+                  "include_urls": [
+                    "online_program",
+                    "faqs"
+                  ]
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "semantic_search",
+                "content": "Semantic search returned 5 result(s):\n\n[0] Online Program | Your Time, Your Advancement (distance: 0.478)\n[Page: Online Program | Section: Your Time, Your Advancement]\n\nThe online applied data science format combines live synchronous classes with structured asynchronous coursework. You will engage in weekly, synchronous (real-time) classes with your instructors and peers. Live lectures provide the right...\n\n[1] Faqs | Online Program > How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both? (distance: 0.622)\n[Page: Faqs | Section: Online Program > How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?]\n\nClasses generally take place on evenings and weekends in order to allow our students and instructors to maintai...\n\n[2] Online Program | Your Time, Your Advancement (distance: 0.667)\n[Page: Online Program | Section: Your Time, Your Advancement]\n\nyou for synchronous classes through lecture videos, readings, and discussions. The online format allows you to work on data science projects, group collaborations, and assignments around your personal and professional commitments.\n\n[3] Online Program | In-Person ‘Immersion Weekend’ (distance: 0.703)\n[Page: Online Program | Section: In-Person ‘Immersion Weekend’]\n\n• Thursday , September 24 th – Saturday, September 26 th Thursday – Evening Welcome and Social Friday – Full Day Program TBA Saturday – Full Day Program TBA\n\n[4] Online Program | Academic Rigor Meets Work/Life Balance (distance: 0.766)\n[Page: Online Program | Section: Academic Rigor Meets Work/Life Balance]\n\nThe Online MS in Applied Data Science program at the University of Chicago delivers a structured online learning experience with live classes designed for working professionals. You will benefit from the same top faculty, brig..."
+              }
+            ],
+            "judger": {
+              "completeness": "none",
+              "useful_indices": [],
+              "decision": "continue",
+              "candidate_chunk_count": 5,
+              "accepted_chunk_count": 0
+            }
+          },
+          {
+            "step": 4,
+            "tool_calls": [
+              {
+                "name": "fetch_section_chunks",
+                "args": {
+                  "section_breadcrumb": "Online Program > How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?",
+                  "url": "faqs"
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "fetch_section_chunks",
+                "content": "Fetched 1 chunk(s) from \"Online Program > How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?\":\n\n[0] Faqs | Online Program > How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?\n[Page: Faqs | Section: Online Program > How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?]\n\nClasses generally take place on evenings and weekends in order to allow our students and instructors to maintai..."
+              }
+            ],
+            "judger": {
+              "completeness": "partial",
+              "useful_indices": [
+                0
+              ],
+              "decision": "continue",
+              "candidate_chunk_count": 1,
+              "accepted_chunk_count": 1
+            }
+          },
+          {
+            "step": 5,
+            "tool_calls": [
+              {
+                "name": "semantic_search",
+                "args": {
+                  "query": "weekday synchronous classes begin 6pm 7pm 8pm Central Time schedule",
+                  "include_urls": [
+                    "online_program",
+                    "faqs",
+                    "course_progressions"
+                  ]
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "semantic_search",
+                "content": "Semantic search returned 4 result(s):\n\n[0] Online Program | Your Time, Your Advancement (distance: 0.482)\n[Page: Online Program | Section: Your Time, Your Advancement]\n\nThe online applied data science format combines live synchronous classes with structured asynchronous coursework. You will engage in weekly, synchronous (real-time) classes with your instructors and peers. Live lectures provide the right...\n\n[1] Online Program | Your Time, Your Advancement (distance: 0.680)\n[Page: Online Program | Section: Your Time, Your Advancement]\n\nyou for synchronous classes through lecture videos, readings, and discussions. The online format allows you to work on data science projects, group collaborations, and assignments around your personal and professional commitments.\n\n[2] Course Progressions | Course Progressions - Accordion Overview > Sample Full-Time Schedule (distance: 0.733)\n[Page: Course Progressions | Section: Course Progressions - Accordion Overview > Sample Full-Time Schedule]\n\nSample Full-Time Schedule:\n  Prequarter:\nIntroduction to Statistical Concepts (Foundational) [Optional, 5 Weeks], R for Data Science (Foundational) [Optional, 5 Weeks]\n  Quarter 1:\nPython for...\n\n[3] Online Program | In-Person ‘Immersion Weekend’ (distance: 0.741)\n[Page: Online Program | Section: In-Person ‘Immersion Weekend’]\n\n• Thursday , September 24 th – Saturday, September 26 th Thursday – Evening Welcome and Social Friday – Full Day Program TBA Saturday – Full Day Program TBA"
+              }
+            ],
+            "judger": {
+              "completeness": "none",
+              "useful_indices": [],
+              "decision": "continue",
+              "candidate_chunk_count": 4,
+              "accepted_chunk_count": 1
+            }
+          },
+          {
+            "step": 6,
+            "tool_calls": [
+              {
+                "name": "list_page_sections",
+                "args": {
+                  "url": "course_progressions"
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "list_page_sections",
+                "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/:\n  - \"Course Progressions - Accordion Overview > Sample 2-Year Full-Time Schedule\" (1 chunk)\n  - \"Course Progressions - Accordion Overview > Sample Full-Time Schedule\" (1 chunk)\n  - \"Course Progressions - Accordion Overview > Sample Part-Time Schedule\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 5 > Elective 5\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 5 > Elective 6\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 5 > Thesis Course I\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 6 > Elective 7\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 6 > Elective 8\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 6 > Thesis Course II\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Prequarter > Introduction to Statistical Concepts (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Prequarter > R for Data Science (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Advanced Linear Algebra for Machine Learning (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Career Seminar (Required)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Data Engineering Platforms for Analytics or Big Data and Cloud Computing\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Leadership and Consulting for Data Science\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Python for Data Science (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Statistical Models for Data Science\" (1 chunk)\n  - \"Course Progressions > Sample Full-Ti"
+              }
+            ],
+            "judger": null
+          },
+          {
+            "step": 7,
+            "tool_calls": [
+              {
+                "name": "fetch_section_chunks",
+                "args": {
+                  "section_breadcrumb": "Course Progressions - Accordion Overview > Sample Full-Time Schedule",
+                  "url": "course_progressions"
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "fetch_section_chunks",
+                "content": "Fetched 1 chunk(s) from \"Course Progressions - Accordion Overview > Sample Full-Time Schedule\":\n\n[0] Course Progressions | Course Progressions - Accordion Overview > Sample Full-Time Schedule\n[Page: Course Progressions | Section: Course Progressions - Accordion Overview > Sample Full-Time Schedule]\n\nSample Full-Time Schedule:\n  Prequarter:\nIntroduction to Statistical Concepts (Foundational) [Optional, 5 Weeks], R for Data Science (Foundational) [Optional, 5 Weeks]\n  Quarter 1:\nPython for..."
+              }
+            ],
+            "judger": {
+              "completeness": "none",
+              "useful_indices": [],
+              "decision": "continue",
+              "candidate_chunk_count": 1,
+              "accepted_chunk_count": 1
+            }
+          },
+          {
+            "step": 8,
+            "tool_calls": [
+              {
+                "name": "semantic_search",
+                "args": {
+                  "query": "online program weekday live class start time 6:00 pm Central",
+                  "include_urls": [
+                    "online_program",
+                    "faqs"
+                  ],
+                  "top_k": 8
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "semantic_search",
+                "content": "Semantic search returned 7 result(s):\n\n[0] Online Program | Your Time, Your Advancement (distance: 0.506)\n[Page: Online Program | Section: Your Time, Your Advancement]\n\nThe online applied data science format combines live synchronous classes with structured asynchronous coursework. You will engage in weekly, synchronous (real-time) classes with your instructors and peers. Live lectures provide the right...\n\n[1] Online Program | Your Time, Your Advancement (distance: 0.691)\n[Page: Online Program | Section: Your Time, Your Advancement]\n\nyou for synchronous classes through lecture videos, readings, and discussions. The online format allows you to work on data science projects, group collaborations, and assignments around your personal and professional commitments.\n\n[2] Online Program | Additional Resources (distance: 0.705)\n[Page: Online Program | Section: Additional Resources]\n\n• Upcoming Events & Deadlines\n• FAQs\n• Tuition, Fees, & Aid\n\n[3] Online Program | In-Person ‘Immersion Weekend’ (distance: 0.708)\n[Page: Online Program | Section: In-Person ‘Immersion Weekend’]\n\n• Thursday , September 24 th – Saturday, September 26 th Thursday – Evening Welcome and Social Friday – Full Day Program TBA Saturday – Full Day Program TBA\n\n[4] Online Program | Academic Rigor Meets Work/Life Balance (distance: 0.719)\n[Page: Online Program | Section: Academic Rigor Meets Work/Life Balance]\n\nThe Online MS in Applied Data Science program at the University of Chicago delivers a structured online learning experience with live classes designed for working professionals. You will benefit from the same top faculty, brig...\n\n[5] Faqs | MBA/MS > Will MBA/MS courses be in-person or online? (distance: 0.746)\n[Page: Faqs | Section: MBA/MS > Will MBA/MS courses be in-person or online?]\n\nYour Booth courses will be in person, while your MS courses will be online. Most students will earn both degrees in seven quarters—the same time it takes to earn the MBA. A combination of online and in-person course"
+              }
+            ],
+            "judger": {
+              "completeness": "none",
+              "useful_indices": [],
+              "decision": "continue",
+              "candidate_chunk_count": 7,
+              "accepted_chunk_count": 1
+            }
+          },
+          {
+            "step": 9,
+            "tool_calls": [
+              {
+                "name": "fetch_section_chunks",
+                "args": {
+                  "section_breadcrumb": "Academic Rigor Meets Work/Life Balance",
+                  "url": "online_program"
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "fetch_section_chunks",
+                "content": "Fetched 1 chunk(s) from \"Academic Rigor Meets Work/Life Balance\":\n\n[0] Online Program | Academic Rigor Meets Work/Life Balance\n[Page: Online Program | Section: Academic Rigor Meets Work/Life Balance]\n\nThe Online MS in Applied Data Science program at the University of Chicago delivers a structured online learning experience with live classes designed for working professionals. You will benefit from the same top faculty, brig..."
+              }
+            ],
+            "judger": {
+              "completeness": "none",
+              "useful_indices": [],
+              "decision": "continue",
+              "candidate_chunk_count": 1,
+              "accepted_chunk_count": 1
+            }
+          }
+        ],
+        "evidence": [
+          {
+            "text": "[Page: Faqs | Section: Online Program > How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?]\n\nClasses generally take place on evenings and weekends in order to allow our students and instructors to maintain their professional schedules. The Master’s in Applied Data Science Online Program is both synchronous and asynchronous. The same as our In-Person program, students are required to participate in weekly, live meetings with their instructors and peers, complete readings and coursework, and engage in discussion.",
+            "chunk_id": "education__masters_programs__ms_in_applied_data_science__faqs__how_will_enrolling_in_master_s_in_applied_data_science_online_program_impact_my_schedule_are_classes_held_synchronously_asynchronously_or_both__32",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/",
+            "page_title": "Faqs",
+            "section": "How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?",
+            "section_breadcrumb": "Online Program > How will enrolling in Master's in Applied Data Science Online Program impact my schedule? Are classes held synchronously, asynchronously, or both?",
+            "content_type": "text",
+            "program_type": "general",
+            "distance": 0.0
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 40468,
+          "completion_tokens": 1203,
+          "total_tokens": 41671,
+          "llm_calls": 20
+        },
+        "metrics": {
+          "tool_calls": 10,
+          "loop_count": 9,
+          "evidence_count": 1,
+          "llm_calls": 20,
+          "judge_calls": null,
+          "valid_fetch_count": null,
+          "invalid_fetch_count": null,
+          "fallback_triggered": null
+        }
+      }
+    },
+    "pipeline_grag_v2": {
+      "pipeline_id": "pipeline_grag_v2",
+      "display_name": "GRAG v2",
+      "answer": "Weekday live synchronous classes in the Online MS-ADS program begin at 6 pm CT [1].",
+      "sources": [
+        {
+          "page_title": "Online Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/online-program"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P3"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P3] Online Program\n[N1] Page Introduction — Section (1 content block)\n[N2] Academic Rigor Meets Work/Life Balance — Section (1 content block)\n[N3] Master Data Science, Master Your Career — Section (1 content block)\n[N4] Get in Touch — Section (1 content block)\n[N5] Your Outcomes — Section (1 content block)\n[N6] Your Online Applied Data Science Experience — Section (1 content block)\n[N7] Your Access to Alumni — Section (1 content block)\n[N8] Your Time, Your Advancement — Section (2 content blocks)\n[N9] In-Person ‘Immersion Weekend’ — Section (1 content block)\n[N10] Note for International Students — Section (1 content block)\n[N11] Curriculum — Section (1 content block)\n[N12] Foundational Courses (noncredit, optional) — Section (2 content blocks)\n[N13] Career Seminar (noncredit, required) — Section (1 content block)\n[N14] Core Courses (6) — Section (1 content block)\n[N15] Elective Courses (4) — Section (1 content block)\n[N16] Capstone (2) — Section (1 content block)\n[N17] Additional Resources — Section (1 content block)\n[N18] Course Progression Tabs — ProgressionTabs (42 content blocks)\n    ├── [N19] Noncredit Courses — ProgressionTab (7 content blocks)\n        preview: This accordion contains: Career Seminar (Seminar, required); Introduction to Statistical Concepts (Foundational, optional); R for Data Science (Foundational, optional); Python for Data Science (Foundational, optional); Advanced Linear Algebra for Machine Learning (Foundational, optional); Brush up on the Basics (Optional resource)\n    ├── [N20] Core Courses — ProgressionTab (8 content blocks)\n        preview: This accordion contains: Time Series Analysis and Forecasting; Statistical Models for Data Science; Machine Learning I; Machine Learning II; Data Engineering Platforms for Analytics or Big Data and Cloud Computing; Leadership and Consulting for Data Science; Data Science Capstone Project\n    ├── [N21] Sample Elective Courses — ProgressionTab (27 content blocks)\n        ├── [N22] Accordion — Accordion (27 content blocks)\n            preview: This accordion contains: Advanced Computer Vision with Deep Learning; Advanced Machine Learning and Artificial Intelligence; Bayesian Machine Learning with Generative AI Applications; Data Science for Algorithmic Marketing; Data Science for Healthcare; Data Visualization Techniques; Digital Marketing Analytics in Theory and Practice; Quantitative Finance: Methods and Applications; Generative AI: Principles and Applications; Machine Learning Operations; Next-Gen NLP: LLM and Agentic AI in Practice; Real Time Intelligent Systems; Deep Reinforcement Learning; Supply Chain Optimization"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "The question asks about the Online MS-ADS program's weekday live synchronous class start time. P3 is the Online Program page, which should contain schedule and format details including class times."
+        },
+        {
+          "step": 2,
+          "tool_calls": [
+            {
+              "name": "fetch_graph_content",
+              "args": {
+                "node_refs": [
+                  "N8",
+                  "N18"
+                ]
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_graph_content",
+              "content": "N18 has 42 content blocks — too broad. Consider its children instead: N19 (7), N20 (8), N21 (27).\n\n[N8] Your Time, Your Advancement — path: Online Program > Your Time, Your Advancement\n  [E1] The online applied data science format combines live synchronous classes with structured asynchronous coursework.\nYou will engage in weekly, synchronous (real-time) classes with your instructors and peers. Live lectures provide the right forum to ask questions, work with peers, and maximize understanding of key concepts. Collaborative and interactive learning with your classmates is facilitated by advanced meeting technology during and beyond synchronous classes.\nSynchronous classes are scheduled on weekday evenings at 6 pm, CT and on occasional Saturdays at 9 am, CT. Students admitted into the online program are expected to attend the live class sessions.\nEach week also includes asynchronous content (learning at your own pace) to complete when it is convenient for you. These activities prepare you for synchronous classes through lecture videos, readings, and discussions.\n  [E2] prepare you for synchronous classes through lecture videos, readings, and discussions. The online format allows you to work on data science projects, group collaborations, and assignments around your personal and professional commitments."
+            }
+          ],
+          "judger": {
+            "node_assessments": [
+              {
+                "node_ref": "N8",
+                "keep_evidence": [
+                  "E1"
+                ],
+                "comment": "E1 directly states that synchronous classes are scheduled on weekday evenings at 6 pm, CT, which answers the question. E2 does not provide timing information."
+              }
+            ]
+          },
+          "decision_reason": "The question asks about the start time of weekday live synchronous classes in the Online MS-ADS program. N8 'Your Time, Your Advancement' likely contains schedule details, and N18 'Course Progression Tabs' may include specific class times. Fetching both to find the exact time."
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E1",
+          "status": "accepted",
+          "page_title": "Online Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/online-program",
+          "text": "The online applied data science format combines live synchronous classes with structured asynchronous coursework.\nYou will engage in weekly, synchronous (real-time) classes with your instructors and peers. Live lectures provide the right forum to ask questions, work with peers, and maximize understanding of key concepts. Collaborative and interactive learning with your classmates is facilitated by advanced meeting technology during and beyond synchronous classes.\nSynchronous classes are scheduled on weekday evenings at 6 pm, CT and on occasional Saturdays at 9 am, CT. Students admitted into the online program are expected to attend the live class sessions.\nEach week also includes asynchronous content (learning at your own pace) to complete when it is convenient for you. These activities prepare you for synchronous classes through lecture videos, readings, and discussions.",
+          "path": [
+            "Online Program",
+            "Your Time, Your Advancement"
+          ],
+          "section_breadcrumb": "Online Program > Your Time, Your Advancement",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N8"
+            }
+          ],
+          "chunk_id": "chunk:71bbb9b08d994663",
+          "owner_node_id": "section:60673f375af177c4",
+          "page_id": "page:dd76146bcccd1e59",
+          "internal_metadata": {
+            "source_type": "p",
+            "score": null,
+            "score_breakdown": {}
+          }
+        }
+      ],
+      "time_sec": 14.381,
+      "low_confidence": false,
+      "error": null,
+      "progress_summary": {
+        "summary_covering": "Page P3 (Online Program): Checked node N8 (Your Time, Your Advancement). This node was useful; it contains evidence E1 that directly states weekday live synchronous classes begin at 6 pm CT. No other pages or nodes have been checked. The question is fully answered by E1.",
+        "decision_trace_narrative": "Turn 1: The agent fetched node N8 (Your Time, Your Advancement) and node N18 (Course Progression Tabs) from page P3, reasoning that these nodes likely contain schedule details. The fetch succeeded. N8 provided direct evidence (E1) of the class start time, while N18 was not fetched or evaluated in this turn. No re-queries occurred."
+      },
+      "raw_debug": {
+        "response": {
+          "answer": "Weekday live synchronous classes in the Online MS-ADS program begin at 6 pm CT [1].",
+          "citations": [
+            {
+              "index": 1,
+              "title": "Online Program",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/online-program",
+              "snippet": "The online applied data science format combines live synchronous classes with structured asynchronous coursework. You will engage in weekly, synchronous (real-time) classes with yo"
+            }
+          ],
+          "debug": {
+            "tool_turns": 2,
+            "stop_reason": "sufficient_evidence",
+            "evidence_count": 1,
+            "sufficient": true,
+            "missing": "",
+            "log_path": "C:\\Users\\ss363\\Desktop\\Archive\\ads_rag_chatbot\\pipeline_grag_v2\\log\\2026-08-04_014515_fb5112f23b06.json",
+            "run_id": "fb5112f23b06"
+          }
+        },
+        "run_id": "fb5112f23b06",
+        "rewritten_queries": [
+          {
+            "id": "q1",
+            "query": "What time do weekday live synchronous classes in the Online MS-ADS program begin?",
+            "target": "university-program"
+          }
+        ],
+        "judgment": {
+          "sufficient": true,
+          "missing": "",
+          "comment": "Page P3 (Online Program): Checked node N8 (Your Time, Your Advancement). This node was useful; it contains evidence E1 that directly states weekday live synchronous classes begin at 6 pm CT. No other pages or nodes have been checked. The question is fully answered by E1."
+        },
+        "stop_reason": "sufficient_evidence",
+        "fallback": {
+          "triggered": false,
+          "pages_selected": [],
+          "reason": ""
+        },
+        "metrics": {
+          "agent_turns": 2,
+          "tool_calls": 2,
+          "judge_calls": 1,
+          "llm_calls": 7,
+          "valid_fetch_count": 1,
+          "invalid_fetch_count": 0,
+          "accepted_evidence_count": 1,
+          "stop_reason": "sufficient_evidence",
+          "fallback_triggered": false
+        },
+        "usage": {
+          "prompt_tokens": 5213,
+          "completion_tokens": 559,
+          "total_tokens": 5772,
+          "llm_calls": 7
+        },
+        "progress_summary_history": [
+          {
+            "turn": 1,
+            "summary_covering": "No pages have been checked yet. Nothing is covered. Missing: the start time of weekday live synchronous classes in the Online MS-ADS program.",
+            "decision_trace_narrative": "Turn 1: The agent inspected page P3 (Online Program page) because the question asks about the Online MS-ADS program's weekday live synchronous class start time, and P3 should contain schedule and format details. The inspection succeeded, but no nodes have been evaluated yet.",
+            "sufficient": false,
+            "missing": "The start time of weekday live synchronous classes in the Online MS-ADS program."
+          },
+          {
+            "turn": 2,
+            "summary_covering": "Page P3 (Online Program): Checked node N8 (Your Time, Your Advancement). This node was useful; it contains evidence E1 that directly states weekday live synchronous classes begin at 6 pm CT. No other pages or nodes have been checked. The question is fully answered by E1.",
+            "decision_trace_narrative": "Turn 1: The agent fetched node N8 (Your Time, Your Advancement) and node N18 (Course Progression Tabs) from page P3, reasoning that these nodes likely contain schedule details. The fetch succeeded. N8 provided direct evidence (E1) of the class start time, while N18 was not fetched or evaluated in this turn. No re-queries occurred.",
+            "sufficient": true,
+            "missing": ""
+          }
+        ],
+        "node_evaluation_log": {
+          "P3 (Online Program)": {
+            "N8 (Your Time, Your Advancement)": {
+              "node_id": "section:60673f375af177c4",
+              "path": [
+                "Online Program",
+                "Your Time, Your Advancement"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E1",
+                  "chunk_id": "chunk:71bbb9b08d994663",
+                  "text_preview": "The online applied data science format combines live synchronous classes with structured asynchronous coursework.\nYou will engage in weekly, synchrono"
+                }
+              ],
+              "comment": "E1 directly states that synchronous classes are scheduled on weekday evenings at 6 pm, CT, which answers the question. E2 does not provide timing information."
+            }
+          }
+        },
+        "log_path": "C:\\Users\\ss363\\Desktop\\Archive\\ads_rag_chatbot\\pipeline_grag_v2\\log\\2026-08-04_014515_fb5112f23b06.json"
+      }
+    }
+  },
+  "run_batch_id": "20260804T013937"
+}

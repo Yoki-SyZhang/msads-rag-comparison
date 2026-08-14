@@ -1,0 +1,424 @@
+[
+  {
+    "qid": "C1-Q01",
+    "category": "admission",
+    "sub_type": "single_fact",
+    "difficulty": "easy",
+    "question": "How many letters of recommendation do I need for the MS in Applied Data Science?",
+    "ground_truth_answer": "The program requires two letters of recommendation. They strongly recommend that at least one come from a direct manager, supervisor, or internship supervisor who can speak to your professional skills. Letters from family members, friends, or peers are not accepted.",
+    "gold_urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply/"
+    ],
+    "gold_section_hint": "How to Apply — Letters of Recommendation",
+    "expected_behavior": "direct_answer",
+    "notes": "Core admission fact, low ambiguity."
+  },
+  {
+    "qid": "C1-Q02",
+    "category": "admission",
+    "sub_type": "single_fact",
+    "difficulty": "easy",
+    "question": "Is the GRE or GMAT required to apply?",
+    "ground_truth_answer": "No, the GRE/GMAT is not required for admission to the MS in Applied Data Science program. Applicants who have taken the test may still submit their scores if they wish — the GRE school code is 1832 and the GMAT school code is H9X-WG-70.",
+    "gold_urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/"
+    ],
+    "gold_section_hint": "FAQs — Application Process (GRE/GMAT)",
+    "expected_behavior": "direct_answer",
+    "notes": "Optional-submission detail comes from the FAQ page."
+  },
+  {
+    "qid": "C1-Q03",
+    "category": "admission",
+    "sub_type": "single_fact",
+    "difficulty": "easy",
+    "question": "How much is the application fee?",
+    "ground_truth_answer": "The application fee is $90 and is non-refundable. For information about fee waivers, applicants are referred to the Physical Sciences Division fee waiver policy.",
+    "gold_urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply/"
+    ],
+    "gold_section_hint": "How to Apply — Application Fee",
+    "expected_behavior": "direct_answer",
+    "notes": "Single discrete fact in one section."
+  },
+  {
+    "qid": "C1-Q04",
+    "category": "admission",
+    "sub_type": "multi_fact",
+    "difficulty": "medium",
+    "question": "What application materials do I need to submit for the MS in Applied Data Science?",
+    "ground_truth_answer": "Applicants must submit two letters of recommendation, a candidate statement of no more than 700 words, a resume/CV, a programming supplement (a PDF of no more than two pages demonstrating R or Python skills), and a short virtual portfolio video (one required prompt, ~1:30 minutes). They also upload unofficial transcripts from each university attended and pay a $90 non-refundable application fee. Applicants who do not meet the English Language Proficiency criteria must additionally submit TOEFL or IELTS scores.",
+    "gold_urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply/"
+    ],
+    "gold_section_hint": "How to Apply — Letters of Recommendation, Candidate Statement, Resume/CV, Programming Supplement, Virtual Portfolio, English Language Requirement, Transcripts, Application Fee",
+    "expected_behavior": "direct_answer",
+    "notes": "Synthesizes multiple sections of the How to Apply page; tests retrieval of several adjacent facts."
+  },
+  {
+    "qid": "C1-Q05",
+    "category": "admission",
+    "sub_type": "cross_page",
+    "difficulty": "hard",
+    "question": "I'm an international student who needs visa sponsorship — which version of the MS in Applied Data Science can I apply to, and is it STEM/OPT eligible?",
+    "ground_truth_answer": "Only the full-time, in-person MS in Applied Data Science program is visa-eligible — both the 1-Year 12-Course pathway and the 2-Year Thesis Track 18-Course pathway qualify. The Online program does not provide visa sponsorship and does not require U.S. citizenship or permanent residency. The full-time, in-person program is also designated as a STEM degree by the U.S. Department of Homeland Security, so eligible students may apply for the STEM OPT extension (final approval is at USCIS discretion).",
+    "gold_urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply/",
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/"
+    ],
+    "gold_section_hint": "How to Apply — International Students; FAQs — International Students (visa eligibility, STEM OPT)",
+    "expected_behavior": "direct_answer",
+    "notes": "Requires combining the visa-eligibility statement on How to Apply with the FAQ entries that name the two visa-eligible pathways and confirm STEM-OPT designation."
+  },
+  {
+    "qid": "C2-Q01",
+    "category": "curriculum",
+    "sub_type": "single_fact",
+    "difficulty": "easy",
+    "question": "How many courses are in the 1-year MS in Applied Data Science track?",
+    "ground_truth_answer": "The 1-year MS in Applied Data Science program is a 12-course track. The 12 courses break down into 6 Core courses, 4 Electives, and 2 Capstone courses. Students also complete a required Career Seminar throughout the program.",
+    "gold_urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/in-person-program/"
+    ],
+    "gold_section_hint": "1-Year 12 Course Program (Full- and Part-Time Options)",
+    "expected_behavior": "direct_answer",
+    "notes": "Same 12-course breakdown is also stated on the Online Program page; cited the In-Person page since the '1-year' framing is most explicit there."
+  },
+  {
+    "qid": "C2-Q02",
+    "category": "curriculum",
+    "sub_type": "single_fact",
+    "difficulty": "easy",
+    "question": "How many core courses do MS-ADS students have to take?",
+    "ground_truth_answer": "All MS in Applied Data Science students complete 6 core courses, regardless of whether they are in the 12-course track or the 18-course thesis track. The core courses are designed to build theoretical understanding and teach students to apply data science methods to real-world problems.",
+    "gold_urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/"
+    ],
+    "gold_section_hint": "Curriculum Details — Core Courses",
+    "expected_behavior": "direct_answer"
+  },
+  {
+    "qid": "C2-Q03",
+    "category": "curriculum",
+    "sub_type": "multi_fact",
+    "difficulty": "medium",
+    "question": "What kinds of electives are available in the MS-ADS online program?",
+    "ground_truth_answer": "Students in the online program complete 4 required electives toward the 12-course degree. Past electives have included Advanced Computer Vision with Deep Learning, Advanced Machine Learning and Artificial Intelligence, Bayesian Machine Learning with Generative AI Applications, Data Science for Algorithmic Marketing, Data Visualization Techniques, Digital Marketing Analytics, Quantitative Finance, Data Science for Healthcare, Machine Learning Operations, Next-Gen NLP (LLM and Agentic AI in Practice), Real Time Intelligent Systems, Deep Reinforcement Learning, and Supply Chain Optimization. The elective catalog is updated continually to keep pace with the data science landscape.",
+    "gold_urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/online-program/"
+    ],
+    "gold_section_hint": "Curriculum — Elective Courses (4)",
+    "expected_behavior": "direct_answer",
+    "notes": "Elective list is non-exhaustive ('past electives include...') — phrasing reflects that."
+  },
+  {
+    "qid": "C2-Q04",
+    "category": "curriculum",
+    "sub_type": "multi_fact",
+    "difficulty": "medium",
+    "question": "What does the online MS-ADS student experience look like week-to-week?",
+    "ground_truth_answer": "The online program combines weekly live synchronous classes with asynchronous coursework students complete on their own schedule. Synchronous classes are scheduled on weekday evenings at 6 pm CT and on occasional Saturdays at 9 am CT, and admitted students are expected to attend live sessions. Asynchronous content (lecture videos, readings, discussions) prepares students for the live classes. Online students also attend an in-person Immersion Weekend in Chicago during the Autumn quarter to network with peers, alumni, and faculty.",
+    "gold_urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/online-program/"
+    ],
+    "gold_section_hint": "Your Time, Your Advancement + In-Person 'Immersion Weekend'",
+    "expected_behavior": "direct_answer"
+  },
+  {
+    "qid": "C2-Q05",
+    "category": "curriculum",
+    "sub_type": "comparative",
+    "difficulty": "hard",
+    "question": "What's the difference between the 1-year 12-course program and the 2-year thesis track?",
+    "ground_truth_answer": "The 1-year 12-course program requires 12 courses (6 Core, 4 Electives, 2 Capstone) and is available in both Full- and Part-Time formats; full-time students typically graduate in 4-5 quarters and part-time students may take up to 6 quarters. The 2-Year Thesis Track is Full-Time only, completed over 6 academic quarters (about 21 months), and requires 18 total courses (6 Core, 8 Electives, 2 Capstone, 2 Independent Study) plus a Master's Thesis, which can be a traditional written thesis or a project-based thesis. The 2-year track is intended for students who want a longer program with more electives and the capacity to complete a thesis.",
+    "gold_urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/in-person-program/"
+    ],
+    "gold_section_hint": "1-Year 12 Course Program vs 2-Year Thesis Track, 18 Course Program",
+    "expected_behavior": "direct_answer",
+    "notes": "Both tracks described on the same In-Person page (sec_4 and sec_5), so this is comparative within one page rather than cross_page."
+  },
+  {
+    "qid": "C3-Q01",
+    "category": "faculty",
+    "sub_type": "single_fact",
+    "difficulty": "easy",
+    "question": "Who is the director of the MS in Applied Data Science program at UChicago?",
+    "ground_truth_answer": "Greg Green is the Director of the MS in Applied Data Science Program at the University of Chicago. He is a Senior Instructional Professor and also serves as Senior Director for Industrial Partnerships and Strategy at the Data Science Institute.",
+    "gold_urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/instructors-staff/"
+    ],
+    "gold_section_hint": "Greg Green profile (sec_0) on Faculty, Instructors, Staff page",
+    "expected_behavior": "direct_answer",
+    "notes": "Direct title fact from the first faculty bio on the instructors-staff page."
+  },
+  {
+    "qid": "C3-Q02",
+    "category": "faculty",
+    "sub_type": "single_fact",
+    "difficulty": "easy",
+    "question": "Who runs the online MS in Applied Data Science program?",
+    "ground_truth_answer": "Arnab Bose, PhD, is the Program Director of the MS in Applied Data Science Online Program. He is an Associate Senior Instructional Professor and also serves as Chief Scientific Officer at UST AlphaAI.",
+    "gold_urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/instructors-staff/"
+    ],
+    "gold_section_hint": "Arnab Bose profile (sec_1) on Faculty, Instructors, Staff page",
+    "expected_behavior": "direct_answer",
+    "notes": "Direct title fact; Arnab Bose is also referenced as Online Program Director on the Online Program page (page_147)."
+  },
+  {
+    "qid": "C3-Q03",
+    "category": "faculty",
+    "sub_type": "single_fact",
+    "difficulty": "easy",
+    "question": "What courses does Arnab Bose teach in the program?",
+    "ground_truth_answer": "Arnab Bose teaches Machine Learning, Machine Learning Operations, Time Series Analysis and Forecasting, and Data Science in Healthcare in the MS in Applied Data Science program at the University of Chicago.",
+    "gold_urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/instructors-staff/"
+    ],
+    "gold_section_hint": "Arnab Bose profile (sec_1) — paragraph listing the courses he teaches",
+    "expected_behavior": "direct_answer",
+    "notes": "List of courses is given verbatim in his bio."
+  },
+  {
+    "qid": "C3-Q04",
+    "category": "faculty",
+    "sub_type": "multi_fact",
+    "difficulty": "medium",
+    "question": "Which MS-ADS instructors have worked at Google?",
+    "ground_truth_answer": "Two instructors on the faculty page have Google experience. Greg Green previously served as Director at Google, and Mike Anderson is currently a Staff Data Scientist at Google where he consults with large advertisers on marketing data science problems.",
+    "gold_urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/instructors-staff/"
+    ],
+    "gold_section_hint": "Greg Green (sec_0) and Mike Anderson (sec_12) profiles on Faculty, Instructors, Staff page",
+    "expected_behavior": "direct_answer",
+    "notes": "Multi-fact: requires aggregating across two instructor bios on a long page (52 sections)."
+  },
+  {
+    "qid": "C3-Q05",
+    "category": "faculty",
+    "sub_type": "multi_fact",
+    "difficulty": "medium",
+    "question": "Which instructors are themselves alumni of the UChicago MS in Applied Data Science (or its predecessor MS in Analytics) program?",
+    "ground_truth_answer": "Several faculty are alumni of the program. Jonathan Williams is an alum of the MS in Analytics ('16), Steve Barry graduated from the master's program in 2020, Sebastien Donadio holds an MSc in Analytics from UChicago, Ignas Grabauskas is an alumnus of the MS in Applied Data Science program, John Navarro holds a Master of Science in Applied Data Science from UChicago, and Ashish Pujari holds a Master of Science in Analytics from UChicago.",
+    "gold_urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/instructors-staff/"
+    ],
+    "gold_section_hint": "Profiles of Jonathan Williams (sec_9), Steve Barry (sec_13), Sebastien Donadio (sec_18), Ignas Grabauskas (sec_19), John Navarro (sec_23), Ashish Pujari (sec_25)",
+    "expected_behavior": "direct_answer",
+    "notes": "Multi-fact across 6 instructor bios on a long page; tests retrieval over a long document."
+  },
+  {
+    "qid": "C4-Q01",
+    "category": "capstone",
+    "sub_type": "single_fact",
+    "difficulty": "easy",
+    "question": "How many students are on a capstone project team?",
+    "ground_truth_answer": "Each capstone team is composed of four students, guided by an instructor and a subject matter expert.",
+    "gold_urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/capstone-projects/"
+    ],
+    "gold_section_hint": "Capstone Sponsor Obligations",
+    "expected_behavior": "direct_answer",
+    "notes": "Stated directly in sec_11 of capstone-projects page."
+  },
+  {
+    "qid": "C4-Q02",
+    "category": "capstone",
+    "sub_type": "single_fact",
+    "difficulty": "easy",
+    "question": "Does sponsoring a capstone project cost money?",
+    "ground_truth_answer": "No. There is no monetary cost or contract necessary to sponsor a capstone project, though sponsors are expected to engage as a partner in the work.",
+    "gold_urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/capstone-projects/"
+    ],
+    "gold_section_hint": "Capstone Sponsor Obligations",
+    "expected_behavior": "direct_answer",
+    "notes": "Stated in sec_11 of capstone-projects page."
+  },
+  {
+    "qid": "C4-Q03",
+    "category": "capstone",
+    "sub_type": "multi_fact",
+    "difficulty": "medium",
+    "question": "What does my company need to provide if we sponsor a capstone project?",
+    "ground_truth_answer": "Sponsors are asked to provide a detailed problem statement describing the data and expected results, two or more points of contact, access to the relevant data by the first week of the applicable quarter, and engagement through regular (typically bi-weekly) meetings while classes are in session. If requested, sponsors can also have the student team sign a non-disclosure agreement.",
+    "gold_urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/capstone-projects/"
+    ],
+    "gold_section_hint": "Capstone Sponsor Obligations",
+    "expected_behavior": "direct_answer",
+    "notes": "Synthesizes the five-bullet sponsor obligations list in sec_11."
+  },
+  {
+    "qid": "C4-Q04",
+    "category": "capstone",
+    "sub_type": "multi_fact",
+    "difficulty": "medium",
+    "question": "Can you give me some examples of past capstone projects students have worked on?",
+    "ground_truth_answer": "Past capstone projects in the archive include Argonne's Rezzy AI support chatbot for an EV charger reservation app, Inference Analytics' automated ICD-10 code prediction using LLMs, an MCP-driven multi-agent RAG system for prostate cancer summarization, Aetna's optimization engine for scenario planning, Chicago Baseball's pitcher motion-tracking project, and HERE Technologies' vehicle perception data alignment work. Other archived sponsors include Global IQ, LatentView Analytics, and Ateema.",
+    "gold_urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/capstone-project-archive/"
+    ],
+    "gold_section_hint": "Capstone Project Archive listing",
+    "expected_behavior": "direct_answer",
+    "notes": "Drawn from the sec_3 through sec_12 project titles in the archive page."
+  },
+  {
+    "qid": "C4-Q05",
+    "category": "capstone",
+    "sub_type": "cross_page",
+    "difficulty": "hard",
+    "question": "What does the capstone project look like, and can I do a research-focused project instead of an industry one?",
+    "ground_truth_answer": "The capstone is the culminating experience of the MS-ADS program, where students work on a real business problem with project sponsors using authentic data to develop a data science solution. Students also have the option to join a research-focused team that leverages the university's research portfolio, with a faculty advisor, instead of an industry-sponsored project. Featured industry-sponsored examples include the AI-Powered Storytelling App and SkySearch drone vision system, while the broader archive lists projects with sponsors like Argonne, Aetna, and HERE Technologies.",
+    "gold_urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/capstone-projects/",
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/capstone-project-archive/"
+    ],
+    "gold_section_hint": "Capstone Projects overview + Capstone Project Archive",
+    "expected_behavior": "direct_answer",
+    "notes": "Combines the capstone-projects page (industry vs research-focused option, featured projects) with the archive page (sponsor breadth)."
+  },
+  {
+    "qid": "C5-Q01",
+    "category": "tuition_career_students",
+    "sub_type": "single_fact",
+    "difficulty": "easy",
+    "question": "How much does the MS in Applied Data Science program cost per course?",
+    "ground_truth_answer": "Tuition is $6,384 per course, which works out to $76,608 for the 12-course program or $114,912 for the 18-course program. There is also a non-refundable $1,500 program enrollment deposit that is credited toward the first quarter's tuition balance.",
+    "gold_urls": [
+      "https://datascience.uchicago.edu/education/tuition-fees-aid/"
+    ],
+    "gold_section_hint": "Program Tuition",
+    "expected_behavior": "direct_answer",
+    "notes": "From sec_3. Tuition rates listed are for Summer 2025 through Spring 2026."
+  },
+  {
+    "qid": "C5-Q02",
+    "category": "tuition_career_students",
+    "sub_type": "single_fact",
+    "difficulty": "easy",
+    "question": "What is the median post-graduation salary for MS-ADS graduates?",
+    "ground_truth_answer": "The median post-graduation salary for MS-ADS graduates is $130,000.",
+    "gold_urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/career-outcomes/"
+    ],
+    "gold_section_hint": "Career Outcomes - median salary",
+    "expected_behavior": "direct_answer",
+    "notes": "Stated explicitly in sec_6 / sec_11 of the career-outcomes page."
+  },
+  {
+    "qid": "C5-Q03",
+    "category": "tuition_career_students",
+    "sub_type": "multi_fact",
+    "difficulty": "medium",
+    "question": "What financial aid options are available for MS-ADS students?",
+    "ground_truth_answer": "MS-ADS applicants are automatically considered for merit scholarships, including the Data Science Institute Scholarship and the MS in Applied Data Science Alumni Scholarship, which provide partial tuition awards to top applicants. Once admitted, students can also work with UChicago's Student Loan Administration to apply for federal loans and other financial aid, and international students have separate funding options. Students are encouraged to look into outside scholarships, employer tuition benefits through the Bursar, and student employment opportunities.",
+    "gold_urls": [
+      "https://datascience.uchicago.edu/education/tuition-fees-aid/"
+    ],
+    "gold_section_hint": "Data Science Institute Scholarship + Other Scholarships + Financial Aid",
+    "expected_behavior": "direct_answer",
+    "notes": "Synthesizes sec_5, sec_6, and sec_7 of the tuition page."
+  },
+  {
+    "qid": "C5-Q04",
+    "category": "tuition_career_students",
+    "sub_type": "image_only",
+    "difficulty": "medium",
+    "question": "Which companies do MS-ADS graduates work at after graduation?",
+    "ground_truth_answer": "The Career Outcomes page lists employers under the heading 'MS-ADS program graduates work at the following places,' but the actual employer names are shown as logo images and are not available in the page's text. Please refer directly to the Career Outcomes page to view the full set of employer logos.",
+    "gold_urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/career-outcomes/"
+    ],
+    "gold_section_hint": "MS-ADS program graduates work at the following places",
+    "expected_behavior": "answer_with_image_caveat",
+    "notes": "Page metadata explicitly notes employer logos and outcome charts are image-embedded; only the section heading is in the cleaned text."
+  },
+  {
+    "qid": "C5-Q05",
+    "category": "tuition_career_students",
+    "sub_type": "multi_fact",
+    "difficulty": "medium",
+    "question": "What does the MS-ADS student body look like demographically?",
+    "ground_truth_answer": "The Our Students page profiles the Autumn 2025 in-person and online cohorts across age breakdown, gender breakdown, work experience, top 5 undergraduate majors, and primary citizenship. The page notes that students range from early-career analysts to seasoned engineers and managers, and that the in-person cohort includes students from around the world. Specific numeric breakdowns are presented as charts on the page rather than in the text.",
+    "gold_urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/our-students/"
+    ],
+    "gold_section_hint": "Age / Gender / Work Experience / Undergraduate Majors / Primary Citizenship sections",
+    "expected_behavior": "direct_answer",
+    "notes": "Synthesizes sec_4 through sec_8 of our-students page; numeric breakdowns are visual but section coverage is described in text."
+  },
+  {
+    "qid": "C6-Q01",
+    "category": "cross_page",
+    "sub_type": "cross_page",
+    "difficulty": "hard",
+    "question": "Who directs the In-Person and Online MS-ADS programs, and where can I learn more about them?",
+    "ground_truth_answer": "The In-Person MS in Applied Data Science program is directed by Greg Green, PhD, and the Online program is directed by Arnab Bose, PhD. Both are senior instructional professors with industry backgrounds, and their full bios are available on the Faculty, Instructors, Staff page.",
+    "gold_urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+      "https://datascience.uchicago.edu/education/masters-programs/online-program/",
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/instructors-staff/"
+    ],
+    "gold_section_hint": "In-Person 'Your Student Experience' (Program Director, Greg Green) + Online 'Academic Rigor Meets Work/Life Balance' (Online Program Director, Arnab Bose) + Faculty page bios for both",
+    "expected_behavior": "direct_answer",
+    "notes": "Genuine cross-page synthesis — directors named on their respective program pages, full credentials on faculty page."
+  },
+  {
+    "qid": "C6-Q02",
+    "category": "cross_page",
+    "sub_type": "cross_page",
+    "difficulty": "hard",
+    "question": "What's the total tuition for the 2-year thesis track program, and how many courses does it include?",
+    "ground_truth_answer": "The 2-year thesis track requires 18 total courses (6 Core, 8 Electives, 2 Capstone, 2 Independent Study) plus a master's thesis. At the listed rate of $6,384 per course for Summer 2025 through Spring 2026, the 18-course total is approximately $114,912, plus a $1,500 non-refundable enrollment deposit. Tuition is expected to increase 3-7% per fiscal year, so students completing the program over two fiscal years will pay an increased rate in year two.",
+    "gold_urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+      "https://datascience.uchicago.edu/education/tuition-fees-aid/"
+    ],
+    "gold_section_hint": "In-Person page '2-Year Thesis Track, 18 Course Program' (course breakdown) + Tuition page 'Program Tuition' ($6,384/course, $114,912 for 18 courses)",
+    "expected_behavior": "direct_answer",
+    "notes": "Requires combining course count from In-Person page with per-course tuition from Tuition page."
+  },
+  {
+    "qid": "C6-Q03",
+    "category": "cross_page",
+    "sub_type": "comparative",
+    "difficulty": "hard",
+    "question": "Which program is more flexible for someone working full-time — the Online or In-Person MS-ADS?",
+    "ground_truth_answer": "The Online program is generally more flexible for full-time workers — it combines weekly synchronous classes (weekday evenings at 6 pm CT and occasional Saturdays at 9 am CT) with asynchronous content you complete on your own schedule, and is optimized for students with 3+ years of full-time work experience. The In-Person program also offers part-time options, with courses primarily 6–9 pm Monday through Thursday at NBC Tower or Gleacher Center in downtown Chicago, but requires you to attend classes in person and is geared more toward students earlier in their careers (1+ year of work experience and relevant internships).",
+    "gold_urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/online-program/",
+      "https://datascience.uchicago.edu/education/masters-programs/in-person-program/"
+    ],
+    "gold_section_hint": "Online 'Your Time, Your Advancement' (synchronous schedule + asynchronous) + In-Person 'Your Engagement' (downtown Chicago class times) + 'Tailor Your Data Science Journey' (target work experience)",
+    "expected_behavior": "direct_answer",
+    "notes": "Explicit A vs B comparison drawing on flexibility-related sections of both program pages."
+  },
+  {
+    "qid": "C6-Q04",
+    "category": "cross_page",
+    "sub_type": "out_of_scope",
+    "difficulty": "easy",
+    "question": "How does the UChicago MS in Applied Data Science compare to Northwestern's MS in Data Science program?",
+    "ground_truth_answer": "I don't have information about Northwestern's MS in Data Science program — only the UChicago MS in Applied Data Science website is in scope for me. For comparison details, please consult Northwestern's official program page directly.",
+    "gold_urls": [],
+    "gold_section_hint": "N/A — out of scope; chatbot should not fabricate a comparison",
+    "expected_behavior": "refuse_out_of_scope",
+    "notes": "Common prospective-student question that pulls in an external program. Chatbot must refuse rather than invent comparisons."
+  },
+  {
+    "qid": "C6-Q05",
+    "category": "cross_page",
+    "sub_type": "time_sensitive",
+    "difficulty": "medium",
+    "question": "When is the next info session for the In-Person MS-ADS program?",
+    "ground_truth_answer": "As of the website at scrape time (April 2026), the next listed In-Person info session was on April 21, 2026, 5:00–6:00 PM CT, featuring Associate Clinical Professor Arnab Bose and Assistant Director of Enrollment Management Matthew Harris-Ridker. Event listings change frequently — please check the Events & Deadlines page on the official website for the most current schedule before registering.",
+    "gold_urls": [
+      "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/events-deadlines/"
+    ],
+    "gold_section_hint": "Events & Deadlines 'Info Session – MS in Applied Data Science (In-Person Program)' section",
+    "expected_behavior": "answer_with_time_caveat",
+    "notes": "Event date may have passed or been rescheduled since the 2026-04-19 scrape. Page itself carries a freshness warning — chatbot should mirror that caveat."
+  }
+]

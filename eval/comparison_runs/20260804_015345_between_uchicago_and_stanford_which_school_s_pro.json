@@ -1,0 +1,1037 @@
+{
+  "schema_version": 2,
+  "timestamp": "2026-08-04T01:53:45.535996",
+  "question": "Between UChicago and Stanford, which school's program is better for someone focused on NLP?",
+  "question_id": "E05",
+  "question_meta": {
+    "category": "edge",
+    "type": "out_of_scope",
+    "difficulty": "hard",
+    "expected_behavior": "refuse_out_of_scope"
+  },
+  "results": {
+    "pipeline_flatrag": {
+      "pipeline_id": "pipeline_flatrag",
+      "display_name": "FlatRAG",
+      "answer": "I can only answer questions about the UChicago MS in Applied Data Science program.",
+      "sources": [
+        {
+          "page_title": "Faqs",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/"
+        },
+        {
+          "page_title": "Ms In Applied Data Science",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/"
+        },
+        {
+          "page_title": "Inference Analytics Healthcare Specialized Llm With Reinforcement Learning",
+          "source_url": "https://datascience.uchicago.edu/research/inference-analytics-healthcare-specialized-llm-with-reinforcement-learning/"
+        },
+        {
+          "page_title": "In Person Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/"
+        },
+        {
+          "page_title": "Inference Analytics Ai Powered Scientific Research Assistant",
+          "source_url": "https://datascience.uchicago.edu/research/inference-analytics-ai-powered-scientific-research-assistant/"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "tool_calls": [
+            {
+              "name": "semantic_search",
+              "args": {
+                "query": "NLP natural language processing courses curriculum",
+                "top_k": 5
+              }
+            },
+            {
+              "name": "list_page_sections",
+              "args": {
+                "url": "course_progressions"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "semantic_search",
+              "content": "Semantic search returned 5 result(s):\n\n[0] Online Program | Sample Elective Courses > Next-Gen NLP: LLM and Agentic AI in Practice (distance: 0.435)\n[Page: Online Program | Section: Sample Elective Courses > Next-Gen NLP: LLM and Agentic AI in Practice]\n\nExtracting actionable insights from unstructured text and designing cognitive applications have become significant areas of application for analytics. Students in this course will learn foundati...\n\n[1] In Person Program | Sample Elective Courses > Next-Gen NLP: LLM and Agentic AI in Practice (distance: 0.436)\n[Page: In Person Program | Section: Sample Elective Courses > Next-Gen NLP: LLM and Agentic AI in Practice]\n\nExtracting actionable insights from unstructured text and designing cognitive applications have become significant areas of application for analytics. Students in this course will learn found...\n\n[2] Online Program | Sample Elective Courses > Data Science for Algorithmic Marketing (distance: 0.590)\n[Page: Online Program | Section: Sample Elective Courses > Data Science for Algorithmic Marketing]\n\nand analysis of covariance, advanced visualization techniques for mapping brand perceptions, and analysis of social media data using advanced NLP techniques.\n\n[3] In Person Program | Sample Elective Courses > Data Science for Algorithmic Marketing (distance: 0.594)\n[Page: In Person Program | Section: Sample Elective Courses > Data Science for Algorithmic Marketing]\n\nand analysis of covariance, advanced visualization techniques for mapping brand perceptions, and analysis of social media data using advanced NLP techniques.\n\n[4] In Person Program | Sample Elective Courses > Next-Gen NLP: LLM and Agentic AI in Practice (distance: 0.595)\n[Page: In Person Program | Section: Sample Elective Courses > Next-Gen NLP: LLM and Agentic AI in Practice]\n\nPython for text analysis tasks, as well as practice with multiple IBM Watson services, including: Watson Discovery, Watson Conversation, Watson Natural Language Classificatio"
+            },
+            {
+              "name": "list_page_sections",
+              "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/:\n  - \"Course Progressions - Accordion Overview > Sample 2-Year Full-Time Schedule\" (1 chunk)\n  - \"Course Progressions - Accordion Overview > Sample Full-Time Schedule\" (1 chunk)\n  - \"Course Progressions - Accordion Overview > Sample Part-Time Schedule\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 5 > Elective 5\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 5 > Elective 6\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 5 > Thesis Course I\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 6 > Elective 7\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 6 > Elective 8\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 6 > Thesis Course II\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Prequarter > Introduction to Statistical Concepts (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Prequarter > R for Data Science (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Advanced Linear Algebra for Machine Learning (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Career Seminar (Required)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Data Engineering Platforms for Analytics or Big Data and Cloud Computing\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Leadership and Consulting for Data Science\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Python for Data Science (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Statistical Models for Data Science\" (1 chunk)\n  - \"Course Progressions > Sample Full-Ti"
+            }
+          ],
+          "judger": {
+            "completeness": "none",
+            "useful_indices": [],
+            "decision": "continue",
+            "candidate_chunk_count": 5,
+            "accepted_chunk_count": 0
+          }
+        },
+        {
+          "step": 2,
+          "tool_calls": [
+            {
+              "name": "fetch_section_chunks",
+              "args": {
+                "url": "in_person_program",
+                "section_breadcrumb": "Sample Elective Courses > Next-Gen NLP: LLM and Agentic AI in Practice"
+              }
+            },
+            {
+              "name": "semantic_search",
+              "args": {
+                "query": "NLP elective courses offered in MSADS program",
+                "top_k": 5,
+                "exclude_chunk_ids": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4"
+                ]
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_section_chunks",
+              "content": "Fetched 2 chunk(s) from \"Sample Elective Courses > Next-Gen NLP: LLM and Agentic AI in Practice\":\n\n[0] In Person Program | Sample Elective Courses > Next-Gen NLP: LLM and Agentic AI in Practice\n[Page: In Person Program | Section: Sample Elective Courses > Next-Gen NLP: LLM and Agentic AI in Practice]\n\nExtracting actionable insights from unstructured text and designing cognitive applications have become significant areas of application for analytics. Students in this course will learn found...\n\n[1] In Person Program | Sample Elective Courses > Next-Gen NLP: LLM and Agentic AI in Practice\n[Page: In Person Program | Section: Sample Elective Courses > Next-Gen NLP: LLM and Agentic AI in Practice]\n\nPython for text analysis tasks, as well as practice with multiple IBM Watson services, including: Watson Discovery, Watson Conversation, Watson Natural Language Classification and Watson Natu..."
+            },
+            {
+              "name": "semantic_search",
+              "content": "Semantic search returned 5 result(s):\n\n[0] In Person Program | In Person Program - Accordion Overview > Sample Elective Courses (distance: 0.566)\n[Page: In Person Program | Section: In Person Program - Accordion Overview > Sample Elective Courses]\n\nSample Elective Courses:\nAdvanced Computer Vision with Deep Learning, Advanced Machine Learning and Artificial Intelligence, Applied Generative AI: Agents and Multimodal Intelligence, Bayesian Mach...\n\n[1] Online Program | Online Program - Accordion Overview > Sample Elective Courses (distance: 0.577)\n[Page: Online Program | Section: Online Program - Accordion Overview > Sample Elective Courses]\n\nSample Elective Courses:\nAdvanced Computer Vision with Deep Learning, Advanced Machine Learning and Artificial Intelligence, Bayesian Machine Learning with Generative AI Applications, Data Science for Al...\n\n[2] Online Program | Elective Courses (4) (distance: 0.616)\n[Page: Online Program | Section: Elective Courses (4)]\n\nYou will complete 4 required electives toward your 12-course degree program. We continually add electives to evolve with the data science landscape. Past electives include Advanced Computer Vision with Deep Learning, Advanced Machine Learning a...\n\n[3] Course Progressions | Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 5 > Elective 6 (distance: 0.647)\n[Page: Course Progressions | Section: Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 5 > Elective 6]\n\nElective 6 [Elective, Letter Grade, 10 Weeks]\nElective offerings vary. Students will work with their academic advisor to select electives based on their interests and course availa...\n\n[4] Online Program | Sample Elective Courses > Data Science for Algorithmic Marketing (distance: 0.649)\n[Page: Online Program | Section: Sample Elective Courses > Data Science for Algorithmic Marketing]\n\nand analysis of covariance, advanced visualization techniques for mapping brand perceptions, and analysis of social media data using advanced NLP"
+            }
+          ],
+          "judger": {
+            "completeness": "none",
+            "useful_indices": [],
+            "decision": "continue",
+            "candidate_chunk_count": 7,
+            "accepted_chunk_count": 0
+          }
+        },
+        {
+          "step": 3,
+          "tool_calls": [
+            {
+              "name": "fetch_section_chunks",
+              "args": {
+                "section_breadcrumb": "In Person Program - Accordion Overview > Sample Elective Courses",
+                "url": "in_person_program"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_section_chunks",
+              "content": "Fetched 1 chunk(s) from \"In Person Program - Accordion Overview > Sample Elective Courses\":\n\n[0] In Person Program | In Person Program - Accordion Overview > Sample Elective Courses\n[Page: In Person Program | Section: In Person Program - Accordion Overview > Sample Elective Courses]\n\nSample Elective Courses:\nAdvanced Computer Vision with Deep Learning, Advanced Machine Learning and Artificial Intelligence, Applied Generative AI: Agents and Multimodal Intelligence, Bayesian Mach..."
+            }
+          ],
+          "judger": {
+            "completeness": "none",
+            "useful_indices": [],
+            "decision": "continue",
+            "candidate_chunk_count": 1,
+            "accepted_chunk_count": 0
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "text": "[Page: Faqs | Section: Application Process > What’s the difference between the MS in Applied Data Science and the MS in Data Science programs at UChicago?]\n\nThe two programs share a strong foundation in data science but differ in structure, location, and focus. The MS in Data Science is a 10-course program based on UChicago’s Hyde Park campus. It includes a comprehensive research project and is designed for students who want to dive deeper into the theoretical and research side of data science—often as preparation for PhD study or research-focused careers. The MS in Applied Data Science program offers both a 12-course track and an 18-course thesis track. It is offered in online and in-person formats, with in-person classes held at the NBC Tower in downtown Chicago. The program focuses on applying data science and machine learning methods to real-world problems through hands-on coursework, industry collaborations, and a two-quarter capstone or research project. For a more detailed breakdown of the differences between the two programs, check",
+          "chunk_id": "education__masters_programs__ms_in_applied_data_science__faqs__what_s_the_difference_between_the_ms_in_applied_data_science_and_the_ms_in_data_science_programs_at_uchicago__23",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/",
+          "page_title": "Faqs",
+          "section": "What’s the difference between the MS in Applied Data Science and the MS in Data Science programs at UChicago?",
+          "section_breadcrumb": "Application Process > What’s the difference between the MS in Applied Data Science and the MS in Data Science programs at UChicago?",
+          "content_type": "text",
+          "program_type": "general",
+          "distance": 0.6495620012283325
+        },
+        {
+          "text": "[Page: Ms In Applied Data Science | Section: How UChicago’s MS in Applied Data Science Prepares Future Innovators]\n\nLearn how the University of Chicago’s MS in Applied Data Science equips students with strong foundations in machine learning, real-world problem solving, and communication. Current students and alumni share how the curriculum prepares graduates to translate data into meaningful, real-world impact. Learn More",
+          "chunk_id": "education__masters_programs__ms_in_applied_data_science__how_uchicago_s_ms_in_applied_data_science_prepares_future_innovators__9",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/",
+          "page_title": "Ms In Applied Data Science",
+          "section": "How UChicago’s MS in Applied Data Science Prepares Future Innovators",
+          "section_breadcrumb": "How UChicago’s MS in Applied Data Science Prepares Future Innovators",
+          "content_type": "text",
+          "program_type": "general",
+          "distance": 0.7098007202148438
+        },
+        {
+          "text": "[Page: Inference Analytics Healthcare Specialized Llm With Reinforcement Learning | Section: Faculty Advisor]\n\n500 companies, provided expert consultancy in architecting cloud-based machine learning solutions, and co-founded Inference Analytics in 2018. Under his leadership, Inference Analytics was recognized in 2023 as one of the top Machine Learning Companies in Illinois, marking a significant milestone in healthcare analytics in Chicago. Dr. Pamuksuz’s academic path has taken him through some of Illinois’ most prestigious universities. He completed his MS in Computer Engineering/Science at Northwestern University and went on to earn his Ph.D. from UIUC. Today, he contributes his expertise as a faculty member at the University of Chicago. This journey, connecting three significant academic institutions, reflects a strong foundation and dedication to his field and a deep engagement with the state’s rich educational landscape. Outside of his professional endeavors, Dr. Pamuksuz is enthusiastic",
+          "chunk_id": "research__inference_analytics_healthcare_specialized_llm_with_reinforcement_learning__faculty_advisor__5",
+          "source_url": "https://datascience.uchicago.edu/research/inference-analytics-healthcare-specialized-llm-with-reinforcement-learning/",
+          "page_title": "Inference Analytics Healthcare Specialized Llm With Reinforcement Learning",
+          "section": "Faculty Advisor",
+          "section_breadcrumb": "Faculty Advisor",
+          "content_type": "text",
+          "program_type": "general",
+          "distance": 0.711081862449646
+        },
+        {
+          "text": "[Page: In Person Program | Section: 2-Year Thesis Track, 18 Course Program (Full-Time Only)]\n\nBeginning in academic year 2026-27, UChicago will offer an additional 2-year (21 month) pathway for In-Person, Full-Time applicants. The application for the 2-Year Thesis Track (Autumn 2026 start) closed on December 4, 2025. The 2-year Thesis Track (18 courses) pathway is optimized for those who want a longer master’s program, are interested in taking more elective courses, and have the capacity to complete a master’s thesis. The 2-year (21 month) pathway is completed over 6 academic quarters. The summer in between years 1 and 2 serves as a vacation quarter. Within the application portal, applicants will indicate their selection of this pathway. Read more about applying to the 2-Year program. All students complete:",
+          "chunk_id": "education__masters_programs__in_person_program__2_year_thesis_track_18_course_program_full_time_only__5",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+          "page_title": "In Person Program",
+          "section": "2-Year Thesis Track, 18 Course Program (Full-Time Only)",
+          "section_breadcrumb": "2-Year Thesis Track, 18 Course Program (Full-Time Only)",
+          "content_type": "text",
+          "program_type": "in_person",
+          "distance": 0.7201288938522339
+        },
+        {
+          "text": "[Page: In Person Program | Section: By and For Data Science Innovators]\n\nYou will earn UChicago’s Master’s in Applied Data Science by successfully completing the required curriculum and our tailored, multi-quarter Career Seminar. To keep up with the rapidly evolving field and job market, you will be challenged by our rigorous curriculum that is designed by and for data science innovators and leaders. Courses are reviewed annually to ensure the content keeps pace with the rapidly evolving landscape of data science. You have the flexibility to pursue the Master’s in Applied Data Science degree on a part- or full-time schedule. Part-time students enroll in two courses each quarter and take their courses in the evenings or on Saturdays. Full-time students take three courses per quarter. Some of their courses may be offered during the day. All courses are taught at the NBC Tower or Gleacher Center in downtown Chicago.",
+          "chunk_id": "education__masters_programs__in_person_program__by_and_for_data_science_innovators__13",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+          "page_title": "In Person Program",
+          "section": "By and For Data Science Innovators",
+          "section_breadcrumb": "By and For Data Science Innovators",
+          "content_type": "text",
+          "program_type": "in_person",
+          "distance": 0.7244017124176025
+        },
+        {
+          "text": "[Page: Inference Analytics Ai Powered Scientific Research Assistant | Section: Faculty Advisor]\n\n500 companies, provided expert consultancy in architecting cloud-based machine learning solutions, and co-founded Inference Analytics in 2018. Under his leadership, Inference Analytics was recognized in 2023 as one of the top Machine Learning Companies in Illinois, marking a significant milestone in healthcare analytics in Chicago. Dr. Pamuksuz’s academic path has taken him through some of Illinois’ most prestigious universities. He completed his MS in Computer Engineering/Science at Northwestern University and went on to earn his Ph.D. from UIUC. Today, he contributes his expertise as a faculty member at the University of Chicago. This journey, connecting three significant academic institutions, reflects a strong foundation and dedication to his field and a deep engagement with the state’s rich educational landscape. Outside of his professional endeavors, Dr. Pamuksuz is enthusiastic",
+          "chunk_id": "research__inference_analytics_ai_powered_scientific_research_assistant__faculty_advisor__4",
+          "source_url": "https://datascience.uchicago.edu/research/inference-analytics-ai-powered-scientific-research-assistant/",
+          "page_title": "Inference Analytics Ai Powered Scientific Research Assistant",
+          "section": "Faculty Advisor",
+          "section_breadcrumb": "Faculty Advisor",
+          "content_type": "text",
+          "program_type": "general",
+          "distance": 0.7357152104377747
+        },
+        {
+          "text": "[Page: In Person Program | Section: Tailor Your Data Science Journey]\n\nThe In-Person MS in Applied Data Science program at the University of Chicago prepares students to work at the intersection of data science, machine learning, and artificial intelligence through rigorous, applied coursework and real-world projects. Complete your master’s degree full- or part-time with UChicago’s In-Person MS in Applied Data Science program. While many In-Person students are early in their careers, the most competitive applicants will have at least 1 year of full-time work experience and 1 or more relevant, sustained internships. For those seeking part-time study and those with more years of full-time work experience (3+), our Online program is optimized for you .",
+          "chunk_id": "education__masters_programs__in_person_program__tailor_your_data_science_journey__1",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+          "page_title": "In Person Program",
+          "section": "Tailor Your Data Science Journey",
+          "section_breadcrumb": "Tailor Your Data Science Journey",
+          "content_type": "text",
+          "program_type": "in_person",
+          "distance": 0.7371242046356201
+        }
+      ],
+      "time_sec": 27.603,
+      "low_confidence": true,
+      "error": null,
+      "raw_debug": {
+        "answer": "I can only answer questions about the UChicago MS in Applied Data Science program.",
+        "sources": [
+          {
+            "page_title": "Faqs",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/"
+          },
+          {
+            "page_title": "Ms In Applied Data Science",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/"
+          },
+          {
+            "page_title": "Inference Analytics Healthcare Specialized Llm With Reinforcement Learning",
+            "source_url": "https://datascience.uchicago.edu/research/inference-analytics-healthcare-specialized-llm-with-reinforcement-learning/"
+          },
+          {
+            "page_title": "In Person Program",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/"
+          },
+          {
+            "page_title": "Inference Analytics Ai Powered Scientific Research Assistant",
+            "source_url": "https://datascience.uchicago.edu/research/inference-analytics-ai-powered-scientific-research-assistant/"
+          }
+        ],
+        "completeness": "none",
+        "low_confidence": true,
+        "attempts": 3,
+        "agent_steps": [
+          {
+            "step": 1,
+            "tool_calls": [
+              {
+                "name": "semantic_search",
+                "args": {
+                  "query": "NLP natural language processing courses curriculum",
+                  "top_k": 5
+                }
+              },
+              {
+                "name": "list_page_sections",
+                "args": {
+                  "url": "course_progressions"
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "semantic_search",
+                "content": "Semantic search returned 5 result(s):\n\n[0] Online Program | Sample Elective Courses > Next-Gen NLP: LLM and Agentic AI in Practice (distance: 0.435)\n[Page: Online Program | Section: Sample Elective Courses > Next-Gen NLP: LLM and Agentic AI in Practice]\n\nExtracting actionable insights from unstructured text and designing cognitive applications have become significant areas of application for analytics. Students in this course will learn foundati...\n\n[1] In Person Program | Sample Elective Courses > Next-Gen NLP: LLM and Agentic AI in Practice (distance: 0.436)\n[Page: In Person Program | Section: Sample Elective Courses > Next-Gen NLP: LLM and Agentic AI in Practice]\n\nExtracting actionable insights from unstructured text and designing cognitive applications have become significant areas of application for analytics. Students in this course will learn found...\n\n[2] Online Program | Sample Elective Courses > Data Science for Algorithmic Marketing (distance: 0.590)\n[Page: Online Program | Section: Sample Elective Courses > Data Science for Algorithmic Marketing]\n\nand analysis of covariance, advanced visualization techniques for mapping brand perceptions, and analysis of social media data using advanced NLP techniques.\n\n[3] In Person Program | Sample Elective Courses > Data Science for Algorithmic Marketing (distance: 0.594)\n[Page: In Person Program | Section: Sample Elective Courses > Data Science for Algorithmic Marketing]\n\nand analysis of covariance, advanced visualization techniques for mapping brand perceptions, and analysis of social media data using advanced NLP techniques.\n\n[4] In Person Program | Sample Elective Courses > Next-Gen NLP: LLM and Agentic AI in Practice (distance: 0.595)\n[Page: In Person Program | Section: Sample Elective Courses > Next-Gen NLP: LLM and Agentic AI in Practice]\n\nPython for text analysis tasks, as well as practice with multiple IBM Watson services, including: Watson Discovery, Watson Conversation, Watson Natural Language Classificatio"
+              },
+              {
+                "name": "list_page_sections",
+                "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/:\n  - \"Course Progressions - Accordion Overview > Sample 2-Year Full-Time Schedule\" (1 chunk)\n  - \"Course Progressions - Accordion Overview > Sample Full-Time Schedule\" (1 chunk)\n  - \"Course Progressions - Accordion Overview > Sample Part-Time Schedule\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 5 > Elective 5\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 5 > Elective 6\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 5 > Thesis Course I\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 6 > Elective 7\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 6 > Elective 8\" (1 chunk)\n  - \"Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 6 > Thesis Course II\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Prequarter > Introduction to Statistical Concepts (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Prequarter > R for Data Science (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Advanced Linear Algebra for Machine Learning (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Career Seminar (Required)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Data Engineering Platforms for Analytics or Big Data and Cloud Computing\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Leadership and Consulting for Data Science\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Python for Data Science (Foundational)\" (1 chunk)\n  - \"Course Progressions > Sample Full-Time Schedule > Quarter 1 > Statistical Models for Data Science\" (1 chunk)\n  - \"Course Progressions > Sample Full-Ti"
+              }
+            ],
+            "judger": {
+              "completeness": "none",
+              "useful_indices": [],
+              "decision": "continue",
+              "candidate_chunk_count": 5,
+              "accepted_chunk_count": 0
+            }
+          },
+          {
+            "step": 2,
+            "tool_calls": [
+              {
+                "name": "fetch_section_chunks",
+                "args": {
+                  "url": "in_person_program",
+                  "section_breadcrumb": "Sample Elective Courses > Next-Gen NLP: LLM and Agentic AI in Practice"
+                }
+              },
+              {
+                "name": "semantic_search",
+                "args": {
+                  "query": "NLP elective courses offered in MSADS program",
+                  "top_k": 5,
+                  "exclude_chunk_ids": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                  ]
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "fetch_section_chunks",
+                "content": "Fetched 2 chunk(s) from \"Sample Elective Courses > Next-Gen NLP: LLM and Agentic AI in Practice\":\n\n[0] In Person Program | Sample Elective Courses > Next-Gen NLP: LLM and Agentic AI in Practice\n[Page: In Person Program | Section: Sample Elective Courses > Next-Gen NLP: LLM and Agentic AI in Practice]\n\nExtracting actionable insights from unstructured text and designing cognitive applications have become significant areas of application for analytics. Students in this course will learn found...\n\n[1] In Person Program | Sample Elective Courses > Next-Gen NLP: LLM and Agentic AI in Practice\n[Page: In Person Program | Section: Sample Elective Courses > Next-Gen NLP: LLM and Agentic AI in Practice]\n\nPython for text analysis tasks, as well as practice with multiple IBM Watson services, including: Watson Discovery, Watson Conversation, Watson Natural Language Classification and Watson Natu..."
+              },
+              {
+                "name": "semantic_search",
+                "content": "Semantic search returned 5 result(s):\n\n[0] In Person Program | In Person Program - Accordion Overview > Sample Elective Courses (distance: 0.566)\n[Page: In Person Program | Section: In Person Program - Accordion Overview > Sample Elective Courses]\n\nSample Elective Courses:\nAdvanced Computer Vision with Deep Learning, Advanced Machine Learning and Artificial Intelligence, Applied Generative AI: Agents and Multimodal Intelligence, Bayesian Mach...\n\n[1] Online Program | Online Program - Accordion Overview > Sample Elective Courses (distance: 0.577)\n[Page: Online Program | Section: Online Program - Accordion Overview > Sample Elective Courses]\n\nSample Elective Courses:\nAdvanced Computer Vision with Deep Learning, Advanced Machine Learning and Artificial Intelligence, Bayesian Machine Learning with Generative AI Applications, Data Science for Al...\n\n[2] Online Program | Elective Courses (4) (distance: 0.616)\n[Page: Online Program | Section: Elective Courses (4)]\n\nYou will complete 4 required electives toward your 12-course degree program. We continually add electives to evolve with the data science landscape. Past electives include Advanced Computer Vision with Deep Learning, Advanced Machine Learning a...\n\n[3] Course Progressions | Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 5 > Elective 6 (distance: 0.647)\n[Page: Course Progressions | Section: Course Progressions > Sample 2-Year Full-Time Schedule > Quarter 5 > Elective 6]\n\nElective 6 [Elective, Letter Grade, 10 Weeks]\nElective offerings vary. Students will work with their academic advisor to select electives based on their interests and course availa...\n\n[4] Online Program | Sample Elective Courses > Data Science for Algorithmic Marketing (distance: 0.649)\n[Page: Online Program | Section: Sample Elective Courses > Data Science for Algorithmic Marketing]\n\nand analysis of covariance, advanced visualization techniques for mapping brand perceptions, and analysis of social media data using advanced NLP"
+              }
+            ],
+            "judger": {
+              "completeness": "none",
+              "useful_indices": [],
+              "decision": "continue",
+              "candidate_chunk_count": 7,
+              "accepted_chunk_count": 0
+            }
+          },
+          {
+            "step": 3,
+            "tool_calls": [
+              {
+                "name": "fetch_section_chunks",
+                "args": {
+                  "section_breadcrumb": "In Person Program - Accordion Overview > Sample Elective Courses",
+                  "url": "in_person_program"
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "fetch_section_chunks",
+                "content": "Fetched 1 chunk(s) from \"In Person Program - Accordion Overview > Sample Elective Courses\":\n\n[0] In Person Program | In Person Program - Accordion Overview > Sample Elective Courses\n[Page: In Person Program | Section: In Person Program - Accordion Overview > Sample Elective Courses]\n\nSample Elective Courses:\nAdvanced Computer Vision with Deep Learning, Advanced Machine Learning and Artificial Intelligence, Applied Generative AI: Agents and Multimodal Intelligence, Bayesian Mach..."
+              }
+            ],
+            "judger": {
+              "completeness": "none",
+              "useful_indices": [],
+              "decision": "continue",
+              "candidate_chunk_count": 1,
+              "accepted_chunk_count": 0
+            }
+          }
+        ],
+        "evidence": [
+          {
+            "text": "[Page: Faqs | Section: Application Process > What’s the difference between the MS in Applied Data Science and the MS in Data Science programs at UChicago?]\n\nThe two programs share a strong foundation in data science but differ in structure, location, and focus. The MS in Data Science is a 10-course program based on UChicago’s Hyde Park campus. It includes a comprehensive research project and is designed for students who want to dive deeper into the theoretical and research side of data science—often as preparation for PhD study or research-focused careers. The MS in Applied Data Science program offers both a 12-course track and an 18-course thesis track. It is offered in online and in-person formats, with in-person classes held at the NBC Tower in downtown Chicago. The program focuses on applying data science and machine learning methods to real-world problems through hands-on coursework, industry collaborations, and a two-quarter capstone or research project. For a more detailed breakdown of the differences between the two programs, check",
+            "chunk_id": "education__masters_programs__ms_in_applied_data_science__faqs__what_s_the_difference_between_the_ms_in_applied_data_science_and_the_ms_in_data_science_programs_at_uchicago__23",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/",
+            "page_title": "Faqs",
+            "section": "What’s the difference between the MS in Applied Data Science and the MS in Data Science programs at UChicago?",
+            "section_breadcrumb": "Application Process > What’s the difference between the MS in Applied Data Science and the MS in Data Science programs at UChicago?",
+            "content_type": "text",
+            "program_type": "general",
+            "distance": 0.6495620012283325
+          },
+          {
+            "text": "[Page: Ms In Applied Data Science | Section: How UChicago’s MS in Applied Data Science Prepares Future Innovators]\n\nLearn how the University of Chicago’s MS in Applied Data Science equips students with strong foundations in machine learning, real-world problem solving, and communication. Current students and alumni share how the curriculum prepares graduates to translate data into meaningful, real-world impact. Learn More",
+            "chunk_id": "education__masters_programs__ms_in_applied_data_science__how_uchicago_s_ms_in_applied_data_science_prepares_future_innovators__9",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/",
+            "page_title": "Ms In Applied Data Science",
+            "section": "How UChicago’s MS in Applied Data Science Prepares Future Innovators",
+            "section_breadcrumb": "How UChicago’s MS in Applied Data Science Prepares Future Innovators",
+            "content_type": "text",
+            "program_type": "general",
+            "distance": 0.7098007202148438
+          },
+          {
+            "text": "[Page: Inference Analytics Healthcare Specialized Llm With Reinforcement Learning | Section: Faculty Advisor]\n\n500 companies, provided expert consultancy in architecting cloud-based machine learning solutions, and co-founded Inference Analytics in 2018. Under his leadership, Inference Analytics was recognized in 2023 as one of the top Machine Learning Companies in Illinois, marking a significant milestone in healthcare analytics in Chicago. Dr. Pamuksuz’s academic path has taken him through some of Illinois’ most prestigious universities. He completed his MS in Computer Engineering/Science at Northwestern University and went on to earn his Ph.D. from UIUC. Today, he contributes his expertise as a faculty member at the University of Chicago. This journey, connecting three significant academic institutions, reflects a strong foundation and dedication to his field and a deep engagement with the state’s rich educational landscape. Outside of his professional endeavors, Dr. Pamuksuz is enthusiastic",
+            "chunk_id": "research__inference_analytics_healthcare_specialized_llm_with_reinforcement_learning__faculty_advisor__5",
+            "source_url": "https://datascience.uchicago.edu/research/inference-analytics-healthcare-specialized-llm-with-reinforcement-learning/",
+            "page_title": "Inference Analytics Healthcare Specialized Llm With Reinforcement Learning",
+            "section": "Faculty Advisor",
+            "section_breadcrumb": "Faculty Advisor",
+            "content_type": "text",
+            "program_type": "general",
+            "distance": 0.711081862449646
+          },
+          {
+            "text": "[Page: In Person Program | Section: 2-Year Thesis Track, 18 Course Program (Full-Time Only)]\n\nBeginning in academic year 2026-27, UChicago will offer an additional 2-year (21 month) pathway for In-Person, Full-Time applicants. The application for the 2-Year Thesis Track (Autumn 2026 start) closed on December 4, 2025. The 2-year Thesis Track (18 courses) pathway is optimized for those who want a longer master’s program, are interested in taking more elective courses, and have the capacity to complete a master’s thesis. The 2-year (21 month) pathway is completed over 6 academic quarters. The summer in between years 1 and 2 serves as a vacation quarter. Within the application portal, applicants will indicate their selection of this pathway. Read more about applying to the 2-Year program. All students complete:",
+            "chunk_id": "education__masters_programs__in_person_program__2_year_thesis_track_18_course_program_full_time_only__5",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+            "page_title": "In Person Program",
+            "section": "2-Year Thesis Track, 18 Course Program (Full-Time Only)",
+            "section_breadcrumb": "2-Year Thesis Track, 18 Course Program (Full-Time Only)",
+            "content_type": "text",
+            "program_type": "in_person",
+            "distance": 0.7201288938522339
+          },
+          {
+            "text": "[Page: In Person Program | Section: By and For Data Science Innovators]\n\nYou will earn UChicago’s Master’s in Applied Data Science by successfully completing the required curriculum and our tailored, multi-quarter Career Seminar. To keep up with the rapidly evolving field and job market, you will be challenged by our rigorous curriculum that is designed by and for data science innovators and leaders. Courses are reviewed annually to ensure the content keeps pace with the rapidly evolving landscape of data science. You have the flexibility to pursue the Master’s in Applied Data Science degree on a part- or full-time schedule. Part-time students enroll in two courses each quarter and take their courses in the evenings or on Saturdays. Full-time students take three courses per quarter. Some of their courses may be offered during the day. All courses are taught at the NBC Tower or Gleacher Center in downtown Chicago.",
+            "chunk_id": "education__masters_programs__in_person_program__by_and_for_data_science_innovators__13",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+            "page_title": "In Person Program",
+            "section": "By and For Data Science Innovators",
+            "section_breadcrumb": "By and For Data Science Innovators",
+            "content_type": "text",
+            "program_type": "in_person",
+            "distance": 0.7244017124176025
+          },
+          {
+            "text": "[Page: Inference Analytics Ai Powered Scientific Research Assistant | Section: Faculty Advisor]\n\n500 companies, provided expert consultancy in architecting cloud-based machine learning solutions, and co-founded Inference Analytics in 2018. Under his leadership, Inference Analytics was recognized in 2023 as one of the top Machine Learning Companies in Illinois, marking a significant milestone in healthcare analytics in Chicago. Dr. Pamuksuz’s academic path has taken him through some of Illinois’ most prestigious universities. He completed his MS in Computer Engineering/Science at Northwestern University and went on to earn his Ph.D. from UIUC. Today, he contributes his expertise as a faculty member at the University of Chicago. This journey, connecting three significant academic institutions, reflects a strong foundation and dedication to his field and a deep engagement with the state’s rich educational landscape. Outside of his professional endeavors, Dr. Pamuksuz is enthusiastic",
+            "chunk_id": "research__inference_analytics_ai_powered_scientific_research_assistant__faculty_advisor__4",
+            "source_url": "https://datascience.uchicago.edu/research/inference-analytics-ai-powered-scientific-research-assistant/",
+            "page_title": "Inference Analytics Ai Powered Scientific Research Assistant",
+            "section": "Faculty Advisor",
+            "section_breadcrumb": "Faculty Advisor",
+            "content_type": "text",
+            "program_type": "general",
+            "distance": 0.7357152104377747
+          },
+          {
+            "text": "[Page: In Person Program | Section: Tailor Your Data Science Journey]\n\nThe In-Person MS in Applied Data Science program at the University of Chicago prepares students to work at the intersection of data science, machine learning, and artificial intelligence through rigorous, applied coursework and real-world projects. Complete your master’s degree full- or part-time with UChicago’s In-Person MS in Applied Data Science program. While many In-Person students are early in their careers, the most competitive applicants will have at least 1 year of full-time work experience and 1 or more relevant, sustained internships. For those seeking part-time study and those with more years of full-time work experience (3+), our Online program is optimized for you .",
+            "chunk_id": "education__masters_programs__in_person_program__tailor_your_data_science_journey__1",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+            "page_title": "In Person Program",
+            "section": "Tailor Your Data Science Journey",
+            "section_breadcrumb": "Tailor Your Data Science Journey",
+            "content_type": "text",
+            "program_type": "in_person",
+            "distance": 0.7371242046356201
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 15394,
+          "completion_tokens": 924,
+          "total_tokens": 16318,
+          "llm_calls": 10
+        },
+        "metrics": {
+          "tool_calls": 5,
+          "loop_count": 3,
+          "evidence_count": 7,
+          "llm_calls": 10,
+          "judge_calls": null,
+          "valid_fetch_count": null,
+          "invalid_fetch_count": null,
+          "fallback_triggered": null
+        }
+      }
+    },
+    "pipeline_grag_v2": {
+      "pipeline_id": "pipeline_grag_v2",
+      "display_name": "GRAG v2",
+      "answer": "I can only answer questions about the UChicago MS in Applied Data Science program.",
+      "sources": [
+        {
+          "page_title": "Faculty, Instructors, Staff",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/instructors-staff"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P12"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P12] Faculty, Instructors, Staff\n[N1] Page Introduction — Section (1 content block)\n[N2] Faculty, Instructors — PeopleGroup (53 content blocks)\n    ├── [N3] Greg Green — Person (4 content blocks)\n    ├── [N4] Arnab Bose, PhD — Person (2 content blocks)\n    ├── [N5] Francisco Azeredo, PhD — Person (3 content blocks)\n    ├── [N6] Anil D Chaturvedi, PhD — Person (1 content block)\n    ├── [N7] Nick Kadochnikov — Person (2 content blocks)\n    ├── [N8] Ming-Long Lam, PhD — Person (1 content block)\n    ├── [N9] Roger Moore, MBA — Person (1 content block)\n    ├── [N10] Utku Pamuksuz, PhD — Person (3 content blocks)\n    ├── [N11] Donald Patchell, MSE, MBA — Person (2 content blocks)\n    ├── [N12] Jonathan Williams, MS — Person (1 content block)\n    ├── [N13] Shaddy Abado, PhD — Person (2 content blocks)\n    ├── [N14] Gizem Agar, PhD — Person (1 content block)\n    ├── [N15] Mike Anderson — Person (1 content block)\n    ├── [N16] Steve Barry — Person (2 content blocks)\n    ├── [N17] Shree Bharadwaj, MS — Person (2 content blocks)\n    ├── [N18] Sanjay Boddhu, PhD — Person (2 content blocks)\n    ├── [N19] Fouad Bousetouane, PhD — Person (3 content blocks)\n    ├── [N20] Shahbaz Chaudhary, MA — Person (1 content block)\n    ├── [N21] Sebastien Donadio, PhD — Person (2 content blocks)\n    ├── [N22] Ignas Grabauskas — Person (1 content block)\n    ├── [N23] Batu Gundogdu, PhD — Person (2 content blocks)\n    ├── [N24] Justin Kurland, PhD — Person (1 content block)\n    ├── [N25] Jeong-Yoon Lee, PhD — Person (2 content blocks)\n    ├── [N26] John Navarro — Person (2 content blocks)\n    ├── [N27] Danny Ng, PhD — Person (1 content block)\n    ├── [N28] Ashish Pujari — Person (1 content block)\n    ├── [N29] Jenny Schmidt — Person (1 content block)\n    ├── [N30] Jeanette Shutay, PhD — Person (2 content blocks)\n    ├── [N31] Fan Yang, PhD — Person (2 content blocks)\n    ├── [N32] Dmitri Sidorov — Person (1 content block)\n    ├── [N33] Igor Yakushin, PhD — Person (1 content block)\n[N34] Staff — PeopleGroup (25 content blocks)\n    ├── [N35] Taylor Alexander, MA — Person (2 content blocks)\n    ├── [N36] Briana Allen, MEd — Person (1 content block)\n    ├── [N37] Jose Alvarado — Person (1 content block)\n    ├── [N38] Josie Badillo Sittig — Person (1 content block)\n    ├── [N39] Zach Brown — Person (1 content block)\n    ├── [N40] Kendall Cox — Person (2 content blocks)\n    ├── [N41] Nick DiAntonio, MEd — Person (1 content block)\n    ├── [N42] Lauren Isaacman Darga, MA — Person (1 content block)\n    ├── [N43] Matthew Harris-Ridker — Person (1 content block)\n    ├── [N44] Henry Igunbor — Person (2 content blocks)\n    ├── [N45] Emma Kerr-Ketchum, MA — Person (1 content block)\n    ├── [N46] Samantha Kruse — Person (1 content block)\n    ├── [N47] Lauren Milewski, MSEd — Person (1 content block)\n    ├── [N48] Alison Ossyra — Person (1 content block)\n    ├── [N49] DuJuan Smith, PhD — Person (2 content blocks)\n    ├── [N50] Daniel Truesdale, MPP — Person (1 content block)\n    ├── [N51] Patrick Vonesh — Person (1 content block)\n    ├── [N52] Taylor Wallace, MEd — Person (1 content block)\n    ├── [N53] Jennifer Wei, MEM — Person (1 content block)\n    ├── [N54] Samantha Widemon, MNA — Person (1 content block)\n    ├── [N55] Ben Wiebers — Person (1 content block)\n[N56] Page Overview — PageOverview (1 content block)"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "The question asks about NLP focus, which relates to faculty expertise and research interests. P12 (Faculty, Instructors, Staff) is most likely to contain information about NLP specialization. Inspect it first to find relevant nodes."
+        },
+        {
+          "step": 2,
+          "tool_calls": [
+            {
+              "name": "fetch_graph_content",
+              "args": {
+                "node_refs": [
+                  "N2",
+                  "N3",
+                  "N4",
+                  "N5",
+                  "N6"
+                ]
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_graph_content",
+              "content": "[N2] Faculty, Instructors — path: Faculty, Instructors, Staff > Faculty, Instructors\n  [N2.1] Greg Green\n    [E1] Greg Green (Faculty, Instructors): Senior Instructional Professor; Senior Director of the DSI Polsky Transform Initiative; Senior Director of DSI Executive and Professional Education\nGreg Green is Senior Instructional Professor and Director of the MS in Applied Data Science Program at the University of Chicago, and Senior Director for Industrial Partnerships and Strategy at the Data Science Institute. Dr. Green helps the University of Chicago professional data science students learn to apply data science to solve complex industry problems with greater impact.\nDr. Green is reshaping the content and approaches used to educate the next generation of professional data scientists at the University of Chicago. Additionally, Greg is designing new, creative offerings more deeply connected to MS and PhD research programs in Data Science, Computer Science, Statistics, and Financial Mathematics.\n    [E2] programs in Data Science, Computer Science, Statistics, and Financial Mathematics. New course offerings developed and launched since joining the University of Chicago include an innovative approach to “Leadership in Data Science and Artificial Intelligence”, “Consulting in Data Science” and “Your Career in Data Science”.\nThroughout his professional career, Greg has used his expertise in digital strategies, business analytics, and new product development to drive rapid revenue growth and accelerate business transformation. His previous work bringing innovation to an academic environment included authoring a Marketing Analytics course, designing a pre-requisite applied statistics course and serving as a lecturer for Marketing Analytics at Northwestern University.\n    [E3] course and serving as a lecturer for Marketing Analytics at Northwestern University.\nGreg’s industry roles include Chief Analytics Officer at Harland Clarke Holdings, Director at Google, EVP/Managing Director at Publicis Groupe, and Analytics Practice Lead at PwC. Greg’s patented cloud-based media analytics platform was highlighted in Harvard Business Review and Fast Company .\nGreg holds a Doctor of Philosophy in Mathematics from Claremont Graduate School and a Master of Science in Statistics from Michigan State University. Born in Owosso, Michigan, Greg is married to Jill, an artist, and their adult children include two more artists, a teacher, and an engineer. Greg and his family enjoy snowboarding, snow/water skiing and live theatre—as well as good food and friendships.\n    [E4] snowboarding, snow/water skiing and live theatre—as well as good food and friendships. Their passion for the environment is reflected in a love for Lake Michigan where they like to spend as much of the summer as possible.\n  [N2.2] Arnab Bose, PhD\n    [E5] Arnab Bose, PhD (Faculty, Instructors): Associate Senior Instructional Professor, Program Director of MS in Applied Data Science Online Program; Chief Scientific Officer, UST AlphaAI\nDr. Arnab Bose is an Associate Senior Instructional Professor, Faculty Director of the online program, and Curriculum Director in the Master of Science in Applied Data Science program at the University of Chicago Data Science Institute. He has over two and a half decades of industry experience and enjoys working with data to influence behavioral outcomes.\nAs an entrepreneur, Arnab had a startup focused on industrial applications of AI in healthcare, finance, semiconductor, and retail that he successfully exited post-acquisition. He is an advisor to AI companies and the Chief Scientific Officer at UST AlphaAI.\n    [E6] He is an advisor to AI companies and the Chief Scientific Officer at UST AlphaAI. At the University of Chicago, Arnab teaches Machine Learning, Machine Learning Operations, Time Series Analysis and Forecasting, and Data Science in Healthcare.\nArnab has published a book, book chapters, and numerous peer-reviewed conference & journal papers. He enjoys public speaking and has given talks in the US, Australia, Saudi Arabia, and India. He is an avid traveler and has visited the 7 wonders of the world. Arnab holds MS and PhD degrees from the University of Southern California and a BTech from the Indian Institute of Technology, Kharagpur, India.\n  [N2.3] Francisco Azeredo, PhD\n    [E7] Francisco Azeredo, PhD (Faculty, Instructors): Associate Clinical Professor\nFrancisco Azeredo is a financial economist and decision scientist with over 15 years of experience working for leading financial and consulting firms in the Chicago area.\nHe is presently an Associate Clinical Professor at the University of Chicago. P reviously, he was the senior vice-president at Northern Trust, working on research and development of quantitative strategies for fixed income and equities at Northern Trust Asset Management.\nPrior to joining asset management, Francisco led strategic and quantitative driven projects across Northern Trust’s three major business units.\n    [E8] and quantitative driven projects across Northern Trust’s three major business units. His experience included leading analytics projects on foreign exchange global revenue forecast, wealth management client deposit modeling, wealth management digital client behavior modeling, treasury deposit modeling, derivatives and hedging solutions and foreign exchange high-frequency algorithmic execution cost. He also conducted research on foreign exchange algorithmic execution methods and securities lending price modeling.\nHis prior work experience includes credit risk, operational risk and macroeconomic modeling for stress testing and capital planning, analysis of complex financial instruments, interest rate modeling, and econometric and predictive analysis for litigation matters involving financial institutions and multinational corporations.\n    [E9] for litigation matters involving financial institutions and multinational corporations.\nHis research in financial economics was recognized by leading economists in the Handbook of the Equity Risk Premium, Intermediate Financial Theory, and an encyclopedia of behavior economics. He currently teaches reinforcement learning, statistical analysis, non-linear statistical modeling, and optimization methods in the MS in Applied Data Science program at the University of Chicago and has five years of prior experience teaching at Northwestern University, the University of California, Santa Barbara and Riverside. He holds a PhD in Economics from the University of California, Santa Barbara.\n  [N2.4] Anil D Chaturvedi, PhD\n    [E10] Anil D Chaturvedi, PhD (Faculty, Instructors): Associate Clinical Professor\nAnil Chaturvedi has over 35 years of professional experience at companies such as AT&T Bell Labs, Kraft Foods, Capital One, and Accenture. He has provided consulting services to Bank of America, Fannie Mae, Johnson & Johnson, and Procter & Gamble. His general research interests include enhancing business value using data science. He has patented and published advanced algorithms for predictive modeling, market segmentation, new product development, product positioning, customer loyalty, consumer promotion mix optimization, and brand strategy. He earned his PhD from Rutgers University and an MBA from IIM Ahmedabad, India.\n  [N2.5] Nick Kadochnikov\n    [E11] Nick Kadochnikov (Faculty, Instructors): Associate Clinical Professor\nNick Kadochnikov is an Associate Clinical Professor at University of Chicago Data Science Institute as well as head of Artificial Intelligence and Advanced Technology group at Harbor Global, where he is at the forefront of creating cutting-edge Generative AI tools and advanced tech solutions. These innovative capabilities assist law firms and corporate legal teams in enhancing their service quality, making legal processes more streamlined, accessible, and requiring less manual effort.\nBefore joining Harbor, Nick served as a Director of AI at William Blair, where he oversaw the development of advanced AI/ML capabilities and intelligent workflows to transform Investment Banking processes.\n    [E12] AI/ML capabilities and intelligent workflows to transform Investment Banking processes. Prior to that, Nick dedicated 20 years at IBM, successfully crafting AI solutions for a wide range of enterprise functions such as supply-chain, sales, marketing, finance, procurement, and legal. In his final role at IBM Watson Health Consulting, his main focus was on utilizing AI to address healthcare challenges, enhancing patient outcomes, elevating population health, and optimizing the efficiency of clinical trials.\n  [N2.6] Ming-Long Lam, PhD\n    [E13] Ming-Long Lam, PhD (Faculty, Instructors): Assistant Clinical Professor\nI am a full-stack data scientist, software developer, and educator with diverse backgrounds. I have thirty years of experience in applying data science in commercial software development, property and casualty insurance, and retail financial service industries. I specialize in algorithm development with an emphasis on statistical learning, machine learning, and artificial intelligence.\nI co-published the book “Using Data Analysis to Improve Student Learning: Toward 100% Proficiency” in 2006. I published the e-book “A Practitioner’s Guide to Machine Learning” in 2020.\nI received my Ph.D. in statistics from the University of Chicago.\n  [N2.7] Roger Moore, MBA\n    [E14] Roger Moore, MBA (Faculty, Instructors): Associate Clinical Professor\nRoger is an Associate Clinical Professor at the University of Chicago. He teaches Leadership Skills in the Master of Science in Applied Data Science program. Previously Roger was VP, Analytics and Customer Operations at Entytle. Entytle provides a SaaS tool supporting customer installed base automated sales with AI and machine learning. Roger has also worked at Gartner, Sagence, Booz & Co, PwC, Diamond Management & Technology Partners and the Boston Consulting Group. Roger is active in the data, analytics and technology communities in the Chicago area. He attends many MeetUps, roundtables and industry events. Roger founded and chairs the Chicago Booth Big Data & Analytics Roundtable.\n  [N2.8] Utku Pamuksuz, PhD\n    [E15] Utku Pamuksuz, PhD (Faculty, Instructors): Associate Clinical Professor; Co-Founder Inference Analytics\nDr. Pamuksuz, a professor of AI, specializes in applied mathematics, machine/deep learning, responsible and generative AI. He has contributed to various analytics journals, including IEEE Transactions on Artificial Intelligence, and has shared his insights at several national and international conferences.\nSince joining the University of Chicago as a faculty member in 2018, Dr. Pamuksuz has taught a range of subjects, including data mining, machine learning, and linear & non-linear models, along with more specialized areas like AI-data science for leaders and Generative AI Research. His supervision of capstone theses has often centered on computer vision and natural language processing.\nIn the professional realm, Dr. Pamuksuz has an impressive record.\n    [E16] language processing.\nIn the professional realm, Dr. Pamuksuz has an impressive record. He has led data science teams at several Fortune 500 companies, provided expert consultancy in architecting cloud-based machine learning solutions, and co-founded Inference Analytics in 2018. Under his leadership, Inference Analytics was recognized in 2023 as one of the top Machine Learning Companies in Illinois, marking a significant milestone in healthcare analytics in Chicago.\nDr. Pamuksuz’s academic path has taken him through some of Illinois’ most prestigious universities. He completed his MS in Computer Engineering/Science at Northwestern University and went on to earn his Ph.D. from UIUC. Today, he contributes his expertise as a faculty member at the University of Chicago.\n    [E17] Today, he contributes his expertise as a faculty member at the University of Chicago. This journey, connecting three significant academic institutions, reflects a strong foundation and dedication to his field and a deep engagement with the state’s rich educational landscape. Outside of his professional endeavors, Dr. Pamuksuz is enthusiastic about hackathons, not only participating in several but also organizing them twice annually since 2020. His involvement has yielded notable success in various data challenges. As a sports fan, he follows Champions League Soccer, supporting Galatasaray, and enjoys engaging in basketball and volleyball during his leisure time. He also enjoys smooth/gypsy jazz where you can find him on Wednesdays in his favorite place Green Mill.\n  [N2.9] Donald Patchell, MSE, MBA\n    [E18] Donald Patchell, MSE, MBA (Faculty, Instructors): Associate Clinical Professor\nOver more than 30 years, Don has served in a variety of assignments that utilize research and data analysis to provide impact to major CPG, Retail and Foodservice companies. Don currently serves Associate Clinical Professor at the University of Chicago. Previously Don served as Board President of Chicago Chapter of the American Statistical Association and as Program Director of the MS, Business Analytics program at DePaul University. As Senior VP, Analytics for HAVI Group, Don helped pioneer new analytics implementations for McDonald’s and Coca-Cola. Prior to joining HAVI Group, Don was Director of Advertising Analytics for Sears, Roebuck & Co. – bringing cutting edge analytics of Sears’ media (tv, radio, print) support to drive ROI based decision making.\n    [E19] analytics of Sears’ media (tv, radio, print) support to drive ROI based decision making. Don has also managed research and analytics for several major brands for Kraft Foods and site location analytics and modeling for Hallmark Cards.\nDon was also an active duty U.S. Army officer for 11 years – serving in troop leadership positions in South Korea, Germany and the U.S. Don graduated from the United States Military Academy at West Point with a BS in Engineering. Additionally, he has an MSE in Operations Research from The University of Texas at Austin and MBA from the University of Kansas.\n  [N2.10] Jonathan Williams, MS\n    [E20] Jonathan Williams, MS (Faculty, Instructors): Assistant Clinical Professor\nJonathan Williams has been working in statistical consulting and data science education for fourteen years and currently teaches full-time at the University of Chicago. Previously, he managed data science teams at Civis Analytics, working on behalf of public sector clients, and before that he worked as a vice president at Compass Lexecon, providing and supporting expert reports and expert testimony for litigation. Jonathan earned his BA and MS degrees in statistics from the University of Chicago (’07, ’08) and is also an alumni of the Master of Science in Analytics (now known as MS in Applied Data Science ) program (’16). His focuses include regression analysis, data visualization, technical writing, financial valuation, mortgage portfolio modeling, and damages estimation.\n  [N2.11] Shaddy Abado, PhD\n    [E21] Shaddy Abado, PhD (Faculty, Instructors): Adjunct Associate Professor; Lead Data Scientist at Ulta Beauty\nShaddy Abado is a Lead Data Scientist at Ulta Beauty, where he focuses on developing machine learning models to optimize marketing strategies and enhance personalized experiences. With a background in engineering, throughout his career, Shaddy’s interests span various fields ranging from researching light-fluid interactions for aero-optics applications, developing data driven solutions for equipment predictive maintenance, and consulting companies throughout their digital transformation. Shaddy is passionate about teaching and engaging students in insightful education. Since 2012, he has been instructing graduate-level courses in various academic programs.\nCurrently, Shaddy is an Adjunct Associate Professor at the University of Chicago for the MS in Applied Data Science program.\n    [E22] Professor at the University of Chicago for the MS in Applied Data Science program. He holds three US patents, has presented his research at national conferences, and has published papers in peer-reviewed journals and conference proceedings. Shaddy holds a PhD in aerospace and mechanical engineering from the University of Notre Dame.\n  [N2.12] Gizem Agar, PhD\n    [E23] Gizem Agar, PhD (Faculty, Instructors): Instructor; Analytics & Transformation Leader\nGizem Agar, PhD is an expert in data analytics, machine learning, and transformation with a passion for mentoring. With 15+ years of interdisciplinary academic and industry experience, her latest work is in manufacturing, pricing, logistics, and supply chain. She has received the CEO Award and Outstanding Achievement in Analytics awards for her contributions to Caterpillar.\nDr. Agar teaches Principles of Data Mining, Python for Analytics, Supply Chain Optimization, Capstone courses and advises students. She holds a PhD and MSc in Industrial Engineering from University of Oklahoma, and BSc in IE and a BSc in CE from Cankaya University, Turkiye. She was a visiting scholar at the Kuhne Logistics University (Hamburg, Germany) and at the Technical University of Vienna (Vienna, Austria).\n  [N2.13] Mike Anderson\n    [E24] Mike Anderson (Faculty, Instructors): Adjunct Assistant Professor\nMike is a Staff Data Scientist at Google. His role involves consulting with large advertisers to help develop data science solutions to their marketing-related challenges. Before joining Google, Mike was a Senior Data Scientist at Nielsen, analyzing smart TV data. Mike has a PhD in Astrophysics from the University of Michigan. He also worked as a postdoctoral researcher at the Max-Planck Institute for Astrophysics in Germany before moving to Data Science.\n  [N2.14] Steve Barry\n    [E25] Steve Barry (Faculty, Instructors): Instructor; Head of Technology and Data, Savant Wealth Management\nSteve Barry serves as technology and data leader at a global investment bank. He brings more than 25 years of leadership experience in the realms of technology and finance. Furthermore, Steve’s expertise extends to data science and AI, with a demonstrated proficiency in platforms like AWS, Azure, and GCP.\nSteve is currently a Lecturer in the Master’s in Applied Data Science at the University of Chicago. He graduated with a master’s degree from the same program in 2020. His background in finance and technology, has been pivotal in applying data science in practical contexts.\n    [E26] finance and technology, has been pivotal in applying data science in practical contexts.\nComplementing his professional experience, Steve served as a Teaching Assistant in the same University of Chicago Master’s program for three years for multiple courses including: BDP, DEPA, ML, and Data Visualization. This role allowed him to bridge the gap between academic knowledge and its application in the finance and tech industries. Steve is an enthusiastic lifelong learner that provides him unique perspective to communicate complex concepts clearly.\n  [N2.15] Shree Bharadwaj, MS\n    [E27] Shree Bharadwaj, MS (Faculty, Instructors): Instructor; Director and Innovation Fellow at West Monroe\nShree Bharadwaj works at West Monroe, a management consulting company. As the AI Center of Excellence lead for M&A, he advises private equity and venture capital firms and C-level executives on value creation, post-close synergies, and data and analytics (BI/AI) strategies focused on business outcomes. In his previous executive leadership roles at Syndigo and IRI, he led the product ownership, data strategy, data science, next-gen platform and M&A integrations. His expertise revolves around growth and innovation, leadership and operational excellence. Additionally, his focus revolve around automation and driving decisioning using AI/ML, data engineering at scale using on-premise and cloud platforms, effective data visualizations, model-driven design, and algorithimic thinking.\n    [E28] effective data visualizations, model-driven design, and algorithimic thinking.\nBharadwaj was elected to the Global Standards Architecture Board at GS1, where he worked with global industry leaders to develop standards, road maps, and governance and compliance requirements relating to food services, healthcare, retail, supply chain, and CPG/FMCG verticals. His experience spans across multiple industries that include AdTech, EdTech, Fintech, healthcare, MarTech, public safety, retail, and telecom in organizations that range from startups to Fortune 100 companies. His interests include His interests include Intelligent Systems and Robotics, Machine Learning at scale, Data Engineering, Data Visualization & Knowledge Engineering.\n  [N2.16] Sanjay Boddhu, PhD\n    [E29] Sanjay Boddhu, PhD (Faculty, Instructors): Instructor; Capstone and Advisor, Head of UniMap Automation at HERE Technologies\nSanjay Boddhu is the Head of AI/ML Engineering at HERE Technologies, a global leader in location data and platform services. He has over 15 years of experience in leading and mentoring diverse and distributed teams in developing state-of-the-art applications and solutions in the domains of Computer Vision, Image Processing, Natural Language Processing, Predictive Analytics, and Data Science Strategy/Modeling. He holds a Ph.D. in Computer Science and Engineering from Wright State University and is a Senior Member of the IEEE.\n    [E30] Science and Engineering from Wright State University and is a Senior Member of the IEEE.\nAt HERE, he is leading the UniMap Automation initiative, which leverages AI and machine learning to transform raw spatial and nonspatial data from various sources, such as imagery, probe data, car camera feeds, lidar, and IoT data, into an actionable, navigable digital map that is updated in near real-time. He is also responsible for designing and deploying algorithms at scale, managing product roadmaps and stakeholder engagements, and driving innovation and excellence in map automation and computer vision. His mission is to revolutionize how maps are created and maintained, and to enable new use cases and opportunities for autonomous and robotic mobility.\n  [N2.17] Fouad Bousetouane, PhD\n    [E31] Fouad Bousetouane, PhD (Faculty, Instructors): Instructor; Co-Founder and Chief AI Officer at InterspectAI Inc.\nDr. Fouad Bousetouane is a distinguished expert and innovator in artificial intelligence and machine learning. Currently, he serves as the Co-Founder and Chief AI Officer at InterspectAI Inc., working to revolutionize the human resources industry through advanced AI-driven solutions. Dr. Bousetouane also teaches Generative AI at the University of Chicago, where he mentors master’s students, guiding them through high-impact projects that prepare the next generation of AI professionals with real-world applications.\nProfessionally, Dr. Bousetouane has a successful track record of leading large machine learning and AI teams, delivering solutions that drive significant business impact for Fortune 500 companies.\n    [E32] delivering solutions that drive significant business impact for Fortune 500 companies. His leadership has shaped cross-functional AI initiatives, cementing his reputation as an innovator in AI-driven business transformation.\nDr. Bousetouane’s academic background is rooted in rigorous research and scholarship. He completed his doctorate at UBMA in Algeria, in collaboration with ULCO in France, and later received an accredited Ph.D. from the University of Nevada, Las Vegas (UNLV). His postdoctoral work at UNLV focused on deep learning for multimodal data, leading to numerous publications in top-tier journals and conferences. As a respected reviewer, he contributes his expertise to prominent journals and conferences, including IET-Image Processing Journal, IEEE Transactions on Intelligent Transportation Systems, IEEE-IROS2012, and IEEE-ITSC-2015.\nThroughout his career, Dr.\n    [E33] Transportation Systems, IEEE-IROS2012, and IEEE-ITSC-2015.\nThroughout his career, Dr. Bousetouane has been honored with multiple awards, including recognition as one of the top 30 AI scientists by MIT-Arabia Magazine, the Timmy Award for Best Tech Manager in Chicago (2020), and designation as a top emerging leader by Marquis Emerging Leaders Magazine in 2024. His leadership in AI innovation also earned his team a place on Fortune’s list of “America’s Most Innovative Teams.” Additionally, Dr. Bousetouane was appointed by Amazon/AWS as one of the judges for the Foundation and Generative AI Model Development Awards.\nA strong advocate for ethical AI practices, Dr. Bousetouane actively participates in AI panels, mentors aspiring professionals, and champions responsible AI frameworks that ensure a positive societal impact, solidifying his influence in AI innovation and education.\n  [N2.18] Shahbaz Chaudhary, MA\n    [E34] Shahbaz Chaudhary, MA (Faculty, Instructors): Instructor; Manager of Data Science, Charles Schwab\nShahbaz Chaudhary has over fifteen years of experience developing software systems for financial companies, specializing, most recently, in trading systems. His free and open-source tools are widely used on Wall Street. Three years ago, he made the switch to data science. He graduated from the University of Chicago’s Master of Science in Analytics program, where his team won top honors for their capstone project. He is currently working at Charles Schwab as a manager of data science.\n  [N2.19] Sebastien Donadio, PhD\n    [E35] Sebastien Donadio, PhD (Faculty, Instructors): Instructor; Chief Technology Officer, TradAir\nSebastien Donation has nearly two decades of experience in the fields of high-performance computing, software design and development, and financial computing. Currently an architect in Bloomberg Office of the CTO, he has a wide variety of professional experience, including serving as CTO of a FX/Crypto trading shop, head of software engineering at HC Technologies, quantitative trading strategy software developer at Sun Trading, partner at high-frequency trading hedge fund AienTech, and a technological leader in creating operating systems for the Department of Defense. He also has research experience with Bull, and as an IT Credit Risk Manager with Société Générale in France.\n    [E36] experience with Bull, and as an IT Credit Risk Manager with Société Générale in France.\nSebastien has taught various computer science and financial engineering courses over the past fifteen years at a variety of academic institutions, including the University of Versailles, Columbia University’s Fu Foundation School of Engineering and Applied Science, University of Chicago and NYU Tandon School of Engineering. Courses taught include: Computer Architecture, Parallel Architecture, Operating Systems, Machine Learning, Advanced Programming, Real-time Smart Systems, Computing for Finance in Python, and Advanced Computing for Finance. Sebastien holds a PhD in High Performance Computing Optimization, an MBA in Finance and Management, and an MSc in Analytics from the University of Chicago. His main passion is technology, but he is also a scuba diving instructor and an experienced rock-climber.\n  [N2.20] Ignas Grabauskas\n    [E37] Ignas Grabauskas (Faculty, Instructors): Instructor; Data Scientist at Simpson Thacher\nIgnas Grabauskas is a Data Scientist at Simpson, Thacher, & Bartlett, a premier law firm well-known for its expertise in financial and corporate law. Ignas has over five years of experience applying machine learning and deep learning techniques to the finance and legal domains. His recent work includes using LLMs for various tasks such as document classification, customized named-entity recognition (NER), and summarization. Ignas holds a BA in Physics from the University of Chicago and is an alumnus of the MS in Applied Data Science program.\n  [N2.21] Batu Gundogdu, PhD\n    [E38] Batu Gundogdu, PhD (Faculty, Instructors): Instructor; Research Assistant Professor (BSD), Senior AI Engineer at Eva\nBatu Gundogdu holds a Ph.D. in Electrical Engineering and brings over 15 years of experience developing deep-learning models across the fields of speech, language, and medical imaging. Most recently, he served as Research Faculty in the Department of Radiology at the University of Chicago for four years, where he led AI efforts at the MRI Research Center. Dr. Gundogdu is currently a Senior AI Engineer at Eva, a startup building next-generation AI compute platforms.\n    [E39] a Senior AI Engineer at Eva, a startup building next-generation AI compute platforms. In the UChicago MS in Applied Data Science program, he shares his practical insights and experiences with students on being an AI engineer and scientist across diverse venues—including research institutions (UChicago MRI Research Center), corporate companies (Analog Devices – ADI), government (Navy and NATO), and startups (Eva). He teaches courses on Bayesian Machine Learning for Generative AI and Advanced Linear Algebra for Machine Learning.\n  [N2.22] Justin Kurland, PhD\n    [E40] Justin Kurland, PhD (Faculty, Instructors): Instructor; Vice President, Tech Fellow in the Engineering Division at Goldman Sachs\nDr. Justin Kurland is Vice President, Tech Fellow in the Engineering Division at Goldman Sachs. Justin’s 20+ years in data and analytics include a senior lectureship in the Department of Computer Science at the University of Waikato, 50+ peer-reviewed publications, and numerous open-source contributions in Machine Learning and Times Series forecasting. With degrees from Rutgers University, Boston University, and University College London, Justin also has extensive data science consulting experience working with organizations like Microsoft and the UK Home Office.\n  [N2.23] Jeong-Yoon Lee, PhD\n    [E41] Jeong-Yoon Lee, PhD (Faculty, Instructors): Lecturer\nJeong-Yoon Lee is a Sr. Manager in Applied Science at Uber, where he leads research and development in personalization, targeting, optimization, and causal inference for marketing. Jeong is also leading the CausalML project, an open-source Python package that provides a suite of causal machine-learning algorithms based on recent research. He has co-organized the causal machine learning tutorial and workshops (CMLKDD) at KDD since 2021. As an avid participant in machine learning competitions, Jeong won the KDD Cup in 2012 and 2015 and was ranked in the top 10 at Kaggle in 2015. He also served as the KDD Cup co-chair in 2018. Prior to joining Uber, Jeong was a Sr. Research Scientist at Netflix, a Sr. Applied ML Scientist at Microsoft, and the Chief Data Scientist at Conversion Logic. Jeong received his Ph.D.\n    [E42] at Microsoft, and the Chief Data Scientist at Conversion Logic. Jeong received his Ph.D. in Computer Science from the University of Southern California and his B.S. in Electrical Engineering from Seoul National University.\n  [N2.24] John Navarro\n    [E43] John Navarro (Faculty, Instructors): Adjunct Assistant Professor\nJohn Navarro is an Adjunct Instructor in the Master of Science in Applied Data Science program at the University of Chicago, bringing a unique blend of academic expertise and real-world industry experience to the classroom. He currently serves as Chief Financial Officer at John Burns Construction Company, where he leads financial operations, drives long-term strategic planning, and implements advanced analytics to guide organizational decision-making.\nBefore assuming his current role, John built a diverse career in consulting, data science, and finance. He was a Strategy Consulting/Data Science Manager at McKinsey & Company, a Data Science Manager at Accenture, and a Senior Data Scientist at 84.51°, a leading data analytics firm.\n    [E44] at Accenture, and a Senior Data Scientist at 84.51°, a leading data analytics firm. Earlier in his career, he specialized in algorithmic trading and financial modeling with HC Technologies, International Trading Group, and StoneX Group.\nA double graduate of the University of Chicago, John holds a Bachelor of Arts in Economics and a Master of Science in Applied Data Science. His teaching draws directly from his professional experiences, integrating statistical modeling, computational methods, and strategic insight to help students bridge theory with practice. Known for his industry-informed approach and commitment to mentorship, he challenges students to think critically, apply rigorous analytics, and connect their work to real-world impact.\n  [N2.25] Danny Ng, PhD\n    [E45] Danny Ng, PhD (Faculty, Instructors): Instructor; Director of Machine Learning at Expedia Group\nDanny Ng is a Director of Machine Learning at Expedia Group. At Expedia, one of the world’s leading travel companies, Danny leads a team of scientists on developing machine learning models for travel search experience. Danny is also an Adjunct Lecturer at the University of Chicago where he teaches graduate courses for the Master of Science in Applied Data Science program. Danny earned his PhD in Statistics from the University of Chicago.\n  [N2.26] Ashish Pujari\n    [E46] Ashish Pujari (Faculty, Instructors): Adjunct Associate Professor\nAshish Pujari is a Data and AI consultant, practitioner, and educator with over 20 years of experience in in machine learning, big data, and cloud computing. He has led large global technology and data science teams and consulted for Fortune 500 companies in banking, finance, healthcare, insurance, and manufacturing.\nAs a Principal ML/AI Architect at AWS, Ashish provides strategic guidance to enterprise customers on leveraging the cloud for AI and Machine Learning. Prior to joining Amazon, he served in various technology leadership roles at Credera, GLG, IRI, and Pegasystems. Ashish holds a Master of Science in Analytics from the University of Chicago and BS in Electrical Engineering from the National Institute of Technology, Rourkela.\n  [N2.27] Jenny Schmidt\n    [E47] Jenny Schmidt (Faculty, Instructors): Instructor; Analytics Talent Development Specialist\nJenny Schmidt, founder of J Schmidt Consulting, is an expert in developing analytics talent. As an experienced leadership and career coach, Jenny works with those seeking to enter the analytics field and analytics professionals to advance in their careers, get their ideas implemented, develop executive presence, and perform at a high level. She also partners with analytics leaders and HR executives to develop analytics talent and facilitates team-building workshops to improve the productivity and effectiveness of analytics teams. Jenny is an expert panelist for the International Institute for Analytics (IIA) and a founder of the Des Moines Data & Analytics Meetup, a networking group for data and analytics professionals.\n  [N2.28] Jeanette Shutay, PhD\n    [E48] Jeanette Shutay, PhD (Faculty, Instructors): Instructor; President & Chief Data Officer at Shutay Consulting\nDr. Jeanette Shutay is currently the President and Chief Data Officer at Shutay Consulting. Jeanette is a strategic research and data science leader with extensive experience building and scaling advanced analytics and data science teams. Her analytical expertise spans across product, sales, marketing, supply chain, and operations. Jeanette also has approximately 10 years of consulting experience working with nonprofit organizations, educational institutions, and the federal government. As a consultant, Jeanette focuses on data strategy, research methodology and analysis, as well as campaign and program evaluation.\n    [E49] strategy, research methodology and analysis, as well as campaign and program evaluation. Jeanette is incredibly passionate about nature and wildlife, and she tries to find ways to incorporate her skills to help improve the environment and the lives of all creatures that inhabit the Earth.\n  [N2.29] Fan Yang, PhD\n    [E50] Fan Yang, PhD (Faculty, Instructors): Instructor; Senior Manager at Discover Financial Service\nFan Yang is an experienced professional in the financial industry, blending over a decade of expertise in data science and financial modeling with a background in consumer banking. Specializing in Deposits, Residential Loans, Auto Loans, and Credit Cards. His journey has been marked by contributions to loss forecasting, marketing analytics, card acquisition model development, and credit data management. Currently serving as a Senior Manager at Discover Financial Service in Chicago, where he leads the Card Acquisition Risk Modeling team, overseeing both onshore and offshore operations. His role involves building machine learning models and providing strategic data-driven support for various business needs.\n    [E51] learning models and providing strategic data-driven support for various business needs.\nHis professional narrative also includes tenures at BMO, where he led the Marketing Advanced Data Analytics team, and KeyBank/Northern Trust, focusing on Comprehensive Capital Analysis and Review (CCAR) and Current Expected Credit Loss (CECL) Stress Tests. In these roles, he used advanced quantitative techniques XGBoost, and Convolutional neural network (CNN), helping companies drive business growth and optimize risk management strategies effectively. Fan’s educational background includes a Ph.D. in Statistics and an MBA from the University of Iowa. He currently teaches Time Series Analysis and Forecasting at the University of Chicago and has three years of prior experience teaching at the University of Iowa.\n  [N2.30] Dmitri Sidorov\n    [E52] Dmitri Sidorov (Faculty, Instructors): Instructor; Principal Data Scientist at Abbott\nDr. Dmitri Sidorov is a Principal Data Scientist at Abbott Laboratories, a multinational healthcare company, specializing in research-based drugs, medical devices, diagnostics, and nutritional products.\nHe earned a PhD in Physics from Oklahoma State University with a focus in analysis of data from particle physics experiments and applying statistics.\nDmitri has over a decade of professional experience analyzing Big Data, using various methods and techniques, and generating relevant and actionable insights. He teaches R for Data Science and Big Data and Cloud Computing courses in the MS in Applied Data Science program at the University of Chicago.\nThis experience gave him a strong belief that any endeavor can be improved by intelligent use of data.\n  [N2.31] Igor Yakushin, PhD\n    [E53] Igor Yakushin, PhD (Faculty, Instructors): Adjunct Assistant Professor; Applied Scientist\nPhD in Theoretical Physics, MS in Computer Science. Currently – Applied Scientist at Amazon. Previous jobs: Computational Scientist at the Argonne National Laboratory, Scientist at LIGO project of California Institute of Technology. I specialize in scientific computing, HPC, machine learning, data analysis.\n\n[N3] Greg Green — path: Faculty, Instructors, Staff > Faculty, Instructors > Greg Green\n  [E1] Greg Green (Faculty, Instructors): Senior Instructional Professor; Senior Director of the DSI Polsky Transform Initiative; Senior Director of DSI Executive and Professional Education\nGreg Green is Senior Instructional Professor and Director of the MS in Applied Data Science Program at the University of Chicago, and Senior Director for Industrial Partnerships and Strategy at the Data Science Institute. Dr. Green helps the University of Chicago professional data science students learn to apply data science to solve complex industry problems with greater impact.\nDr. Green is reshaping the content and approaches used to educate the next generation of professional data scientists at the University of Chicago. Additionally, Greg is designing new, creative offerings more deeply connected to MS and PhD research programs in Data Science, Computer Science, Statistics, and Financial Mathematics.\n  [E2] programs in Data Science, Computer Science, Statistics, and Financial Mathematics. New course offerings developed and launched since joining the University of Chicago include an innovative approach to “Leadership in Data Science and Artificial Intelligence”, “Consulting in Data Science” and “Your Career in Data Science”.\nThroughout his professional career, Greg has used his expertise in digital strategies, business analytics, and new product development to drive rapid revenue growth and accelerate business transformation. His previous work bringing innovation to an academic environment included authoring a Marketing Analytics course, designing a pre-requisite applied statistics course and serving as a lecturer for Marketing Analytics at Northwestern University.\n  [E3] course and serving as a lecturer for Marketing Analytics at Northwestern University.\nGreg’s industry roles include Chief Analytics Officer at Harland Clarke Holdings, Director at Google, EVP/Managing Director at Publicis Groupe, and Analytics Practice Lead at PwC. Greg’s patented cloud-based media analytics platform was highlighted in Harvard Business Review and Fast Company .\nGreg holds a Doctor of Philosophy in Mathematics from Claremont Graduate School and a Master of Science in Statistics from Michigan State University. Born in Owosso, Michigan, Greg is married to Jill, an artist, and their adult children include two more artists, a teacher, and an engineer. Greg and his family enjoy snowboarding, snow/water skiing and live theatre—as well as good food and friendships.\n  [E4] snowboarding, snow/water skiing and live theatre—as well as good food and friendships. Their passion for the environment is reflected in a love for Lake Michigan where they like to spend as much of the summer as possible.\n\n[N4] Arnab Bose, PhD — path: Faculty, Instructors, Staff > Faculty, Instructors > Arnab Bose, PhD\n  [E5] Arnab Bose, PhD (Faculty, Instructors): Associate Senior Instructional Professor, Program Director of MS in Applied Data Science Online Program; Chief Scientific Officer, UST AlphaAI\nDr. Arnab Bose is an Associate Senior Instructional Professor, Faculty Director of the online program, and Curriculum Director in the Master of Science in Applied Data Science program at the University of Chicago Data Science Institute. He has over two and a half decades of industry experience and enjoys working with data to influence behavioral outcomes.\nAs an entrepreneur, Arnab had a startup focused on industrial applications of AI in healthcare, finance, semiconductor, and retail that he successfully exited post-acquisition. He is an advisor to AI companies and the Chief Scientific Officer at UST AlphaAI.\n  [E6] He is an advisor to AI companies and the Chief Scientific Officer at UST AlphaAI. At the University of Chicago, Arnab teaches Machine Learning, Machine Learning Operations, Time Series Analysis and Forecasting, and Data Science in Healthcare.\nArnab has published a book, book chapters, and numerous peer-reviewed conference & journal papers. He enjoys public speaking and has given talks in the US, Australia, Saudi Arabia, and India. He is an avid traveler and has visited the 7 wonders of the world. Arnab holds MS and PhD degrees from the University of Southern California and a BTech from the Indian Institute of Technology, Kharagpur, India.\n\n[N5] Francisco Azeredo, PhD — path: Faculty, Instructors, Staff > Faculty, Instructors > Francisco Azeredo, PhD\n  [E7] Francisco Azeredo, PhD (Faculty, Instructors): Associate Clinical Professor\nFrancisco Azeredo is a financial economist and decision scientist with over 15 years of experience working for leading financial and consulting firms in the Chicago area.\nHe is presently an Associate Clinical Professor at the University of Chicago. P reviously, he was the senior vice-president at Northern Trust, working on research and development of quantitative strategies for fixed income and equities at Northern Trust Asset Management.\nPrior to joining asset management, Francisco led strategic and quantitative driven projects across Northern Trust’s three major business units.\n  [E8] and quantitative driven projects across Northern Trust’s three major business units. His experience included leading analytics projects on foreign exchange global revenue forecast, wealth management client deposit modeling, wealth management digital client behavior modeling, treasury deposit modeling, derivatives and hedging solutions and foreign exchange high-frequency algorithmic execution cost. He also conducted research on foreign exchange algorithmic execution methods and securities lending price modeling.\nHis prior work experience includes credit risk, operational risk and macroeconomic modeling for stress testing and capital planning, analysis of complex financial instruments, interest rate modeling, and econometric and predictive analysis for litigation matters involving financial institutions and multinational corporations.\n  [E9] for litigation matters involving financial institutions and multinational corporations.\nHis research in financial economics was recognized by leading economists in the Handbook of the Equity Risk Premium, Intermediate Financial Theory, and an encyclopedia of behavior economics. He currently teaches reinforcement learning, statistical analysis, non-linear statistical modeling, and optimization methods in the MS in Applied Data Science program at the University of Chicago and has five years of prior experience teaching at Northwestern University, the University of California, Santa Barbara and Riverside. He holds a PhD in Economics from the University of California, Santa Barbara.\n\n[N6] Anil D Chaturvedi, PhD — path: Faculty, Instructors, Staff > Faculty, Instructors > Anil D Chaturvedi, PhD\n  [E10] Anil D Chaturvedi, PhD (Faculty, Instructors): Associate Clinical Professor\nAnil Chaturvedi has over 35 years of professional experience at companies such as AT&T Bell Labs, Kraft Foods, Capital One, and Accenture. He has provided consulting services to Bank of America, Fannie Mae, Johnson & Johnson, and Procter & Gamble. His general research interests include enhancing business value using data science. He has patented and published advanced algorithms for predictive modeling, market segmentation, new product development, product positioning, customer loyalty, consumer promotion mix optimization, and brand strategy. He earned his PhD from Rutgers University and an MBA from IIM Ahmedabad, India."
+            }
+          ],
+          "judger": {
+            "node_assessments": [
+              {
+                "node_ref": "N2",
+                "keep_evidence": [
+                  "E15",
+                  "E16",
+                  "E29",
+                  "E37",
+                  "E38"
+                ],
+                "comment": "This node lists faculty and instructors. For NLP focus, relevant evidence includes E15-E16 (Utku Pamuksuz supervises capstones in NLP), E29 (Sanjay Boddhu has NLP experience), E37 (Ignas Grabauskas uses LLMs for NLP tasks), and E38 (Batu Gundogdu has deep-learning experience in speech and language). Other faculty are not directly relevant to NLP."
+              },
+              {
+                "node_ref": "N3",
+                "keep_evidence": [],
+                "comment": "Greg Green's profile focuses on program direction and industry partnerships, with no specific NLP expertise or courses. Not useful for comparing NLP programs."
+              },
+              {
+                "node_ref": "N4",
+                "keep_evidence": [],
+                "comment": "Arnab Bose teaches machine learning and related courses but no NLP-specific content. Not directly relevant to NLP focus."
+              },
+              {
+                "node_ref": "N5",
+                "keep_evidence": [],
+                "comment": "Francisco Azeredo's expertise is in financial economics and quantitative finance, not NLP. Not useful for NLP comparison."
+              },
+              {
+                "node_ref": "N6",
+                "keep_evidence": [],
+                "comment": "Anil Chaturvedi's research is in business value and predictive modeling, with no NLP specialization. Not relevant to NLP focus."
+              }
+            ]
+          },
+          "decision_reason": "The question asks about NLP program strength. Faculty expertise is a key indicator, so I will fetch the faculty list and the first few faculty profiles to see if any specialize in NLP or related areas."
+        },
+        {
+          "step": 3,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P12"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P12] Faculty, Instructors, Staff\n[N1] Page Introduction — Section (1 content block)\n[N2] Faculty, Instructors — PeopleGroup (53 content blocks)\n    ├── [N3] Greg Green — Person (4 content blocks)\n    ├── [N4] Arnab Bose, PhD — Person (2 content blocks)\n    ├── [N5] Francisco Azeredo, PhD — Person (3 content blocks)\n    ├── [N6] Anil D Chaturvedi, PhD — Person (1 content block)\n    ├── [N7] Nick Kadochnikov — Person (2 content blocks)\n    ├── [N8] Ming-Long Lam, PhD — Person (1 content block)\n    ├── [N9] Roger Moore, MBA — Person (1 content block)\n    ├── [N10] Utku Pamuksuz, PhD — Person (3 content blocks)\n    ├── [N11] Donald Patchell, MSE, MBA — Person (2 content blocks)\n    ├── [N12] Jonathan Williams, MS — Person (1 content block)\n    ├── [N13] Shaddy Abado, PhD — Person (2 content blocks)\n    ├── [N14] Gizem Agar, PhD — Person (1 content block)\n    ├── [N15] Mike Anderson — Person (1 content block)\n    ├── [N16] Steve Barry — Person (2 content blocks)\n    ├── [N17] Shree Bharadwaj, MS — Person (2 content blocks)\n    ├── [N18] Sanjay Boddhu, PhD — Person (2 content blocks)\n    ├── [N19] Fouad Bousetouane, PhD — Person (3 content blocks)\n    ├── [N20] Shahbaz Chaudhary, MA — Person (1 content block)\n    ├── [N21] Sebastien Donadio, PhD — Person (2 content blocks)\n    ├── [N22] Ignas Grabauskas — Person (1 content block)\n    ├── [N23] Batu Gundogdu, PhD — Person (2 content blocks)\n    ├── [N24] Justin Kurland, PhD — Person (1 content block)\n    ├── [N25] Jeong-Yoon Lee, PhD — Person (2 content blocks)\n    ├── [N26] John Navarro — Person (2 content blocks)\n    ├── [N27] Danny Ng, PhD — Person (1 content block)\n    ├── [N28] Ashish Pujari — Person (1 content block)\n    ├── [N29] Jenny Schmidt — Person (1 content block)\n    ├── [N30] Jeanette Shutay, PhD — Person (2 content blocks)\n    ├── [N31] Fan Yang, PhD — Person (2 content blocks)\n    ├── [N32] Dmitri Sidorov — Person (1 content block)\n    ├── [N33] Igor Yakushin, PhD — Person (1 content block)\n[N34] Staff — PeopleGroup (25 content blocks)\n    ├── [N35] Taylor Alexander, MA — Person (2 content blocks)\n    ├── [N36] Briana Allen, MEd — Person (1 content block)\n    ├── [N37] Jose Alvarado — Person (1 content block)\n    ├── [N38] Josie Badillo Sittig — Person (1 content block)\n    ├── [N39] Zach Brown — Person (1 content block)\n    ├── [N40] Kendall Cox — Person (2 content blocks)\n    ├── [N41] Nick DiAntonio, MEd — Person (1 content block)\n    ├── [N42] Lauren Isaacman Darga, MA — Person (1 content block)\n    ├── [N43] Matthew Harris-Ridker — Person (1 content block)\n    ├── [N44] Henry Igunbor — Person (2 content blocks)\n    ├── [N45] Emma Kerr-Ketchum, MA — Person (1 content block)\n    ├── [N46] Samantha Kruse — Person (1 content block)\n    ├── [N47] Lauren Milewski, MSEd — Person (1 content block)\n    ├── [N48] Alison Ossyra — Person (1 content block)\n    ├── [N49] DuJuan Smith, PhD — Person (2 content blocks)\n    ├── [N50] Daniel Truesdale, MPP — Person (1 content block)\n    ├── [N51] Patrick Vonesh — Person (1 content block)\n    ├── [N52] Taylor Wallace, MEd — Person (1 content block)\n    ├── [N53] Jennifer Wei, MEM — Person (1 content block)\n    ├── [N54] Samantha Widemon, MNA — Person (1 content block)\n    ├── [N55] Ben Wiebers — Person (1 content block)\n[N56] Page Overview — PageOverview (1 content block)"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "Need to find Stanford NLP program information. Since the knowledge graph only contains UChicago pages, I should inspect other pages that might mention Stanford or comparative information. However, the long-term memory list does not include a Stanford page. The question asks for a comparison between UChicago and Stanford, but the system only has UChicago data. I should inspect the FAQs page (P5) which might contain comparative information or mention Stanford. Alternatively, I could inspect the Course Progressions (P4) to see if NLP courses are offered, but that won't help with Stanford. Given the constraint, I'll inspect P5 to see if it addresses comparisons with other schools."
+        },
+        {
+          "step": 4,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P1"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P1] Master's in Applied Data Science\n[N57] Programs — Section (1 content block)\n[N58] In-Person Program — Section (1 content block)\n[N59] Online Program — Section (1 content block)\n[N60] MBA/MS Program — Section (1 content block)\n[N61] Apply Today! — Section (0 content blocks)\n[N62] How to Apply — Section (1 content block)\n[N63] Industry Leading Faculty — Section (1 content block)\n[N64] Data in Action - Capstone Projects — Section (1 content block)\n[N65] How UChicago’s MS in Applied Data Science Prepares Future Innovators — Section (1 content block)\n[N66] Start Your Application — Section (0 content blocks)\n[N67] Related News, Insights, and Past Events — Section (0 content blocks)\n[N68] The Time Constraints of AI Access Could Change How We Think — Section (0 content blocks)\n[N69] Who Gets Hired, Paid, and Liked? Who Gets Credit? New Research Examines AI’s Role in Writing and the Workplace — Section (0 content blocks)\n[N70] University of Chicago Wins Distinguished Laude Institute Moonshots Seed Grant — Section (0 content blocks)\n[N71] University of Chicago Announces Partnership with AI Research Commons and Microsoft to Accelerate Midwest AI Startups — Section (0 content blocks)\n[N72] Pathways to Impact in AI and Data Science with the Polsky Center for Entrepreneurship and Innovation — Section (0 content blocks)\n[N73] University of Chicago Data Science Institute Welcomes Millennium as New Industry Affiliate Partner — Section (0 content blocks)\n[N74] For Better Sleep, One MS-ADS Student Turned to Artificial Intelligence — Section (0 content blocks)\n[N75] From Chips to Agents: UChicago Watches NVIDIA’s Vision for the Next Era of AI — Section (0 content blocks)\n[N76] What If AI Scientists Could Talk to Each Other? — Section (0 content blocks)\n[N77] Page Overview — PageOverview (1 content block)"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "The question asks for a comparison between UChicago and Stanford NLP programs. The knowledge graph only contains UChicago pages, so a direct comparison is impossible. However, the best approach is to gather comprehensive UChicago NLP-related information from the most relevant pages. P1 (Master's in Applied Data Science) is a general overview that may contain high-level mentions of NLP or program strengths, which could be useful for the comparison. Since P12 and P5 were already inspected without Stanford info, inspecting P1 is a reasonable next step to see if it provides any comparative or NLP-specific details."
+        },
+        {
+          "step": 5,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P4"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P4] Course Progressions\n[N78] Page Introduction — Section (1 content block)\n[N79] Flexible Formats — Section (1 content block)\n[N80] Curriculum Details — Section (4 content blocks)\n[N81] Course Progression Tabs — ProgressionTabs (144 content blocks)\n    ├── [N82] Sample Full-Time Schedule — ProgressionTab (44 content blocks)\n        ├── [N83] Prequarter • 5 Weeks — Quarter (4 content blocks)\n            preview: Prequarter • 5 Weeks includes: Optional: Introduction to Statistical Concepts (Foundational) (Optional), R for Data Science (Foundational) (Optional)\n        ├── [N84] Quarter 1 • 10 Weeks — Quarter (12 content blocks)\n            preview: Quarter 1 • 10 Weeks includes: Optional: Python for Data Science (Foundational) (Optional), Advanced Linear Algebra for Machine Learning (Foundational) (Optional); Core: Statistical Models for Data Science (Letter Grade); Core: Leadership and Consulting for Data Science (Letter Grade); Core (Choose 1): Data Engineering Platforms for Analytics or Big Data and Cloud Computing (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N85] Quarter 2 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 2 • 10 Weeks includes: Core: Machine Learning I (Letter Grade); Core: Time Series Analysis and Forecasting (Letter Grade); Elective: Elective 1 (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N86] Quarter 3 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 3 • 10 Weeks includes: Core: Machine Learning II (Letter Grade); Elective: Elective 2 (Letter Grade); Capstone: Data Science Capstone Project (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N87] Quarter 4 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 4 • 10 Weeks includes: Elective: Elective 3 (Letter Grade); Elective: Elective 4 (Letter Grade); Capstone: Data Science Capstone Project (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n    ├── [N88] Sample Part-Time Schedule — ProgressionTab (38 content blocks)\n        ├── [N89] Prequarter • 5 Weeks — Quarter (4 content blocks)\n            preview: Prequarter • 5 Weeks includes: Optional: Introduction to Statistical Concepts (Foundational) (Optional), R for Data Science (Foundational) (Optional)\n        ├── [N90] Quarter 1 • 10 Weeks — Quarter (8 content blocks)\n            preview: Quarter 1 • 10 Weeks includes: Optional: Python for Data Science (Foundational) (Optional), Advanced Linear Algebra for Machine Learning (Foundational) (Optional); Core: Statistical Models for Data Science (Letter Grade); Core: Data Engineering Platforms for Analytics or Big Data and Cloud Computing (Letter Grade)\n        ├── [N91] Quarter 2 • 10 Weeks — Quarter (5 content blocks)\n            preview: Quarter 2 • 10 Weeks includes: Core: Machine Learning I (Letter Grade); Core: Time Series Analysis and Forecasting (Letter Grade)\n        ├── [N92] Quarter 3 • 10 Weeks — Quarter (5 content blocks)\n            preview: Quarter 3 • 10 Weeks includes: Core: Machine Learning II (Letter Grade); Core: Leadership and Consulting for Data Science (Letter Grade)\n        ├── [N93] Quarter 4 • 10 Weeks — Quarter (5 content blocks)\n            preview: Quarter 4 • 10 Weeks includes: Elective: Elective 1 (Letter Grade); Elective: Elective 2 (Letter Grade)\n        ├── [N94] Quarter 5 • 10 Weeks — Quarter (5 content blocks)\n            preview: Quarter 5 • 10 Weeks includes: Capstone: Data Science Capstone Project (Letter Grade); Elective: Elective 3 (Letter Grade)\n        ├── [N95] Quarter 6 • 10 Weeks — Quarter (5 content blocks)\n            preview: Quarter 6 • 10 Weeks includes: Capstone: Data Science Capstone Project (Letter Grade); Elective: Elective 4 (Letter Grade)\n    ├── [N96] Sample 2-Year Full-Time Schedule — ProgressionTab (62 content blocks)\n        ├── [N97] Prequarter • 5 Weeks — Quarter (4 content blocks)\n            preview: Prequarter • 5 Weeks includes: Optional: Introduction to Statistical Concepts (Foundational) (Optional), R for Data Science (Foundational) (Optional)\n        ├── [N98] Quarter 1 • 10 Weeks — Quarter (12 content blocks)\n            preview: Quarter 1 • 10 Weeks includes: Optional: Python for Data Science (Foundational) (Optional), Advanced Linear Algebra for Machine Learning (Foundational) (Optional); Core: Statistical Models for Data Science (Letter Grade); Core: Data Engineering Platforms for Analytics or Big Data and Cloud Computing (Letter Grade); Core: Leadership and Consulting for Data Science (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N99] Quarter 2 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 2 • 10 Weeks includes: Core: Machine Learning I (Letter Grade); Core: Time Series Analysis and Forecasting (Letter Grade); Elective: Elective 1 (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N100] Quarter 3 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 3 • 10 Weeks includes: Core: Machine Learning II (Letter Grade); Elective: Elective 2 (Letter Grade); Capstone: Data Science Capstone Project (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N101] Quarter 4 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 4 • 10 Weeks includes: Elective: Elective 3 (Letter Grade); Elective: Elective 4 (Letter Grade); Capstone: Data Science Capstone Project (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N102] Quarter 5 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 5 • 10 Weeks includes: Elective: Elective 5 (Letter Grade); Elective: Elective 6 (Letter Grade); Indep Study I: Thesis Course I (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N103] Quarter 6 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 6 • 10 Weeks includes: Elective: Elective 7 (Letter Grade); Elective: Elective 8 (Letter Grade); Indep Study II: Thesis Course II (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "Need to find UChicago NLP-specific curriculum/courses. P4 (Course Progressions) likely lists specific courses that may include NLP-related electives, which is directly relevant to assessing the program's NLP focus."
+        },
+        {
+          "step": 6,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P4"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P4] Course Progressions\n[N78] Page Introduction — Section (1 content block)\n[N79] Flexible Formats — Section (1 content block)\n[N80] Curriculum Details — Section (4 content blocks)\n[N81] Course Progression Tabs — ProgressionTabs (144 content blocks)\n    ├── [N82] Sample Full-Time Schedule — ProgressionTab (44 content blocks)\n        ├── [N83] Prequarter • 5 Weeks — Quarter (4 content blocks)\n            preview: Prequarter • 5 Weeks includes: Optional: Introduction to Statistical Concepts (Foundational) (Optional), R for Data Science (Foundational) (Optional)\n        ├── [N84] Quarter 1 • 10 Weeks — Quarter (12 content blocks)\n            preview: Quarter 1 • 10 Weeks includes: Optional: Python for Data Science (Foundational) (Optional), Advanced Linear Algebra for Machine Learning (Foundational) (Optional); Core: Statistical Models for Data Science (Letter Grade); Core: Leadership and Consulting for Data Science (Letter Grade); Core (Choose 1): Data Engineering Platforms for Analytics or Big Data and Cloud Computing (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N85] Quarter 2 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 2 • 10 Weeks includes: Core: Machine Learning I (Letter Grade); Core: Time Series Analysis and Forecasting (Letter Grade); Elective: Elective 1 (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N86] Quarter 3 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 3 • 10 Weeks includes: Core: Machine Learning II (Letter Grade); Elective: Elective 2 (Letter Grade); Capstone: Data Science Capstone Project (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N87] Quarter 4 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 4 • 10 Weeks includes: Elective: Elective 3 (Letter Grade); Elective: Elective 4 (Letter Grade); Capstone: Data Science Capstone Project (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n    ├── [N88] Sample Part-Time Schedule — ProgressionTab (38 content blocks)\n        ├── [N89] Prequarter • 5 Weeks — Quarter (4 content blocks)\n            preview: Prequarter • 5 Weeks includes: Optional: Introduction to Statistical Concepts (Foundational) (Optional), R for Data Science (Foundational) (Optional)\n        ├── [N90] Quarter 1 • 10 Weeks — Quarter (8 content blocks)\n            preview: Quarter 1 • 10 Weeks includes: Optional: Python for Data Science (Foundational) (Optional), Advanced Linear Algebra for Machine Learning (Foundational) (Optional); Core: Statistical Models for Data Science (Letter Grade); Core: Data Engineering Platforms for Analytics or Big Data and Cloud Computing (Letter Grade)\n        ├── [N91] Quarter 2 • 10 Weeks — Quarter (5 content blocks)\n            preview: Quarter 2 • 10 Weeks includes: Core: Machine Learning I (Letter Grade); Core: Time Series Analysis and Forecasting (Letter Grade)\n        ├── [N92] Quarter 3 • 10 Weeks — Quarter (5 content blocks)\n            preview: Quarter 3 • 10 Weeks includes: Core: Machine Learning II (Letter Grade); Core: Leadership and Consulting for Data Science (Letter Grade)\n        ├── [N93] Quarter 4 • 10 Weeks — Quarter (5 content blocks)\n            preview: Quarter 4 • 10 Weeks includes: Elective: Elective 1 (Letter Grade); Elective: Elective 2 (Letter Grade)\n        ├── [N94] Quarter 5 • 10 Weeks — Quarter (5 content blocks)\n            preview: Quarter 5 • 10 Weeks includes: Capstone: Data Science Capstone Project (Letter Grade); Elective: Elective 3 (Letter Grade)\n        ├── [N95] Quarter 6 • 10 Weeks — Quarter (5 content blocks)\n            preview: Quarter 6 • 10 Weeks includes: Capstone: Data Science Capstone Project (Letter Grade); Elective: Elective 4 (Letter Grade)\n    ├── [N96] Sample 2-Year Full-Time Schedule — ProgressionTab (62 content blocks)\n        ├── [N97] Prequarter • 5 Weeks — Quarter (4 content blocks)\n            preview: Prequarter • 5 Weeks includes: Optional: Introduction to Statistical Concepts (Foundational) (Optional), R for Data Science (Foundational) (Optional)\n        ├── [N98] Quarter 1 • 10 Weeks — Quarter (12 content blocks)\n            preview: Quarter 1 • 10 Weeks includes: Optional: Python for Data Science (Foundational) (Optional), Advanced Linear Algebra for Machine Learning (Foundational) (Optional); Core: Statistical Models for Data Science (Letter Grade); Core: Data Engineering Platforms for Analytics or Big Data and Cloud Computing (Letter Grade); Core: Leadership and Consulting for Data Science (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N99] Quarter 2 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 2 • 10 Weeks includes: Core: Machine Learning I (Letter Grade); Core: Time Series Analysis and Forecasting (Letter Grade); Elective: Elective 1 (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N100] Quarter 3 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 3 • 10 Weeks includes: Core: Machine Learning II (Letter Grade); Elective: Elective 2 (Letter Grade); Capstone: Data Science Capstone Project (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N101] Quarter 4 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 4 • 10 Weeks includes: Elective: Elective 3 (Letter Grade); Elective: Elective 4 (Letter Grade); Capstone: Data Science Capstone Project (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N102] Quarter 5 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 5 • 10 Weeks includes: Elective: Elective 5 (Letter Grade); Elective: Elective 6 (Letter Grade); Indep Study I: Thesis Course I (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N103] Quarter 6 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 6 • 10 Weeks includes: Elective: Elective 7 (Letter Grade); Elective: Elective 8 (Letter Grade); Indep Study II: Thesis Course II (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "Need to find UChicago's NLP-specific curriculum/courses. P4 (Course Progressions) likely contains detailed course lists that may include NLP-related electives. Inspect it to locate relevant nodes."
+        },
+        {
+          "step": 7,
+          "tool_calls": [
+            {
+              "name": "fetch_graph_content",
+              "args": {
+                "node_refs": [
+                  "N81"
+                ]
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_graph_content",
+              "content": "N81 has 144 content blocks — too broad. Consider its children instead: N82 (44), N88 (38), N96 (62)."
+            }
+          ],
+          "judger": null,
+          "decision_reason": "Need to find NLP-specific courses in the curriculum to compare with Stanford. N81 (Course Progression Tabs) is the most detailed curriculum node on P4 and likely contains course names relevant to NLP."
+        },
+        {
+          "step": 8,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P4"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P4] Course Progressions\n[N78] Page Introduction — Section (1 content block)\n[N79] Flexible Formats — Section (1 content block)\n[N80] Curriculum Details — Section (4 content blocks)\n[N81] Course Progression Tabs — ProgressionTabs (144 content blocks)\n    ├── [N82] Sample Full-Time Schedule — ProgressionTab (44 content blocks)\n        ├── [N83] Prequarter • 5 Weeks — Quarter (4 content blocks)\n            preview: Prequarter • 5 Weeks includes: Optional: Introduction to Statistical Concepts (Foundational) (Optional), R for Data Science (Foundational) (Optional)\n        ├── [N84] Quarter 1 • 10 Weeks — Quarter (12 content blocks)\n            preview: Quarter 1 • 10 Weeks includes: Optional: Python for Data Science (Foundational) (Optional), Advanced Linear Algebra for Machine Learning (Foundational) (Optional); Core: Statistical Models for Data Science (Letter Grade); Core: Leadership and Consulting for Data Science (Letter Grade); Core (Choose 1): Data Engineering Platforms for Analytics or Big Data and Cloud Computing (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N85] Quarter 2 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 2 • 10 Weeks includes: Core: Machine Learning I (Letter Grade); Core: Time Series Analysis and Forecasting (Letter Grade); Elective: Elective 1 (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N86] Quarter 3 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 3 • 10 Weeks includes: Core: Machine Learning II (Letter Grade); Elective: Elective 2 (Letter Grade); Capstone: Data Science Capstone Project (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N87] Quarter 4 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 4 • 10 Weeks includes: Elective: Elective 3 (Letter Grade); Elective: Elective 4 (Letter Grade); Capstone: Data Science Capstone Project (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n    ├── [N88] Sample Part-Time Schedule — ProgressionTab (38 content blocks)\n        ├── [N89] Prequarter • 5 Weeks — Quarter (4 content blocks)\n            preview: Prequarter • 5 Weeks includes: Optional: Introduction to Statistical Concepts (Foundational) (Optional), R for Data Science (Foundational) (Optional)\n        ├── [N90] Quarter 1 • 10 Weeks — Quarter (8 content blocks)\n            preview: Quarter 1 • 10 Weeks includes: Optional: Python for Data Science (Foundational) (Optional), Advanced Linear Algebra for Machine Learning (Foundational) (Optional); Core: Statistical Models for Data Science (Letter Grade); Core: Data Engineering Platforms for Analytics or Big Data and Cloud Computing (Letter Grade)\n        ├── [N91] Quarter 2 • 10 Weeks — Quarter (5 content blocks)\n            preview: Quarter 2 • 10 Weeks includes: Core: Machine Learning I (Letter Grade); Core: Time Series Analysis and Forecasting (Letter Grade)\n        ├── [N92] Quarter 3 • 10 Weeks — Quarter (5 content blocks)\n            preview: Quarter 3 • 10 Weeks includes: Core: Machine Learning II (Letter Grade); Core: Leadership and Consulting for Data Science (Letter Grade)\n        ├── [N93] Quarter 4 • 10 Weeks — Quarter (5 content blocks)\n            preview: Quarter 4 • 10 Weeks includes: Elective: Elective 1 (Letter Grade); Elective: Elective 2 (Letter Grade)\n        ├── [N94] Quarter 5 • 10 Weeks — Quarter (5 content blocks)\n            preview: Quarter 5 • 10 Weeks includes: Capstone: Data Science Capstone Project (Letter Grade); Elective: Elective 3 (Letter Grade)\n        ├── [N95] Quarter 6 • 10 Weeks — Quarter (5 content blocks)\n            preview: Quarter 6 • 10 Weeks includes: Capstone: Data Science Capstone Project (Letter Grade); Elective: Elective 4 (Letter Grade)\n    ├── [N96] Sample 2-Year Full-Time Schedule — ProgressionTab (62 content blocks)\n        ├── [N97] Prequarter • 5 Weeks — Quarter (4 content blocks)\n            preview: Prequarter • 5 Weeks includes: Optional: Introduction to Statistical Concepts (Foundational) (Optional), R for Data Science (Foundational) (Optional)\n        ├── [N98] Quarter 1 • 10 Weeks — Quarter (12 content blocks)\n            preview: Quarter 1 • 10 Weeks includes: Optional: Python for Data Science (Foundational) (Optional), Advanced Linear Algebra for Machine Learning (Foundational) (Optional); Core: Statistical Models for Data Science (Letter Grade); Core: Data Engineering Platforms for Analytics or Big Data and Cloud Computing (Letter Grade); Core: Leadership and Consulting for Data Science (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N99] Quarter 2 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 2 • 10 Weeks includes: Core: Machine Learning I (Letter Grade); Core: Time Series Analysis and Forecasting (Letter Grade); Elective: Elective 1 (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N100] Quarter 3 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 3 • 10 Weeks includes: Core: Machine Learning II (Letter Grade); Elective: Elective 2 (Letter Grade); Capstone: Data Science Capstone Project (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N101] Quarter 4 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 4 • 10 Weeks includes: Elective: Elective 3 (Letter Grade); Elective: Elective 4 (Letter Grade); Capstone: Data Science Capstone Project (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N102] Quarter 5 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 5 • 10 Weeks includes: Elective: Elective 5 (Letter Grade); Elective: Elective 6 (Letter Grade); Indep Study I: Thesis Course I (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)\n        ├── [N103] Quarter 6 • 10 Weeks — Quarter (9 content blocks)\n            preview: Quarter 6 • 10 Weeks includes: Elective: Elective 7 (Letter Grade); Elective: Elective 8 (Letter Grade); Indep Study II: Thesis Course II (Letter Grade); Seminar: Career Seminar (Required) (Pass/Fail)"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "Need to find NLP-specific courses in the curriculum to compare with Stanford. Inspect P4 to see its outline and identify specific course nodes related to NLP."
+        },
+        {
+          "step": 9,
+          "tool_calls": [
+            {
+              "name": "fetch_graph_content",
+              "args": {
+                "node_refs": [
+                  "N82",
+                  "N88",
+                  "N96"
+                ]
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_graph_content",
+              "content": "N82 has 44 content blocks — too broad. Consider its children instead: N83 (4), N84 (12), N85 (9), N86 (9), N87 (9).\nN88 has 38 content blocks — too broad. Consider its children instead: N89 (4), N90 (8), N91 (5), N92 (5), N93 (5), N94 (5), N95 (5).\nN96 has 62 content blocks — too broad. Consider its children instead: N97 (4), N98 (12), N99 (9), N100 (9), N101 (9), N102 (9), N103 (9)."
+            }
+          ],
+          "judger": null,
+          "decision_reason": "Need to find NLP-specific courses in the curriculum to compare with Stanford. These nodes contain detailed course schedules for different tracks, which may list NLP-related electives."
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E15",
+          "status": "accepted",
+          "page_title": "Faculty, Instructors, Staff",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/instructors-staff",
+          "text": "Utku Pamuksuz, PhD (Faculty, Instructors): Associate Clinical Professor; Co-Founder Inference Analytics\nDr. Pamuksuz, a professor of AI, specializes in applied mathematics, machine/deep learning, responsible and generative AI. He has contributed to various analytics journals, including IEEE Transactions on Artificial Intelligence, and has shared his insights at several national and international conferences.\nSince joining the University of Chicago as a faculty member in 2018, Dr. Pamuksuz has taught a range of subjects, including data mining, machine learning, and linear & non-linear models, along with more specialized areas like AI-data science for leaders and Generative AI Research. His supervision of capstone theses has often centered on computer vision and natural language processing.\nIn the professional realm, Dr. Pamuksuz has an impressive record.",
+          "path": [
+            "Faculty, Instructors, Staff",
+            "Faculty, Instructors",
+            "Utku Pamuksuz, PhD"
+          ],
+          "section_breadcrumb": "Faculty, Instructors, Staff > Faculty, Instructors > Utku Pamuksuz, PhD",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N2"
+            }
+          ],
+          "chunk_id": "chunk:095322d468b50fe5",
+          "owner_node_id": "person:7157cfecd5a90c6f",
+          "page_id": "page:f4f2b27925a19440",
+          "internal_metadata": {
+            "source_type": "body_text",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E16",
+          "status": "accepted",
+          "page_title": "Faculty, Instructors, Staff",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/instructors-staff",
+          "text": "language processing.\nIn the professional realm, Dr. Pamuksuz has an impressive record. He has led data science teams at several Fortune 500 companies, provided expert consultancy in architecting cloud-based machine learning solutions, and co-founded Inference Analytics in 2018. Under his leadership, Inference Analytics was recognized in 2023 as one of the top Machine Learning Companies in Illinois, marking a significant milestone in healthcare analytics in Chicago.\nDr. Pamuksuz’s academic path has taken him through some of Illinois’ most prestigious universities. He completed his MS in Computer Engineering/Science at Northwestern University and went on to earn his Ph.D. from UIUC. Today, he contributes his expertise as a faculty member at the University of Chicago.",
+          "path": [
+            "Faculty, Instructors, Staff",
+            "Faculty, Instructors",
+            "Utku Pamuksuz, PhD"
+          ],
+          "section_breadcrumb": "Faculty, Instructors, Staff > Faculty, Instructors > Utku Pamuksuz, PhD",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N2"
+            }
+          ],
+          "chunk_id": "chunk:ba8c8422b3a67a21",
+          "owner_node_id": "person:7157cfecd5a90c6f",
+          "page_id": "page:f4f2b27925a19440",
+          "internal_metadata": {
+            "source_type": "body_text",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E29",
+          "status": "accepted",
+          "page_title": "Faculty, Instructors, Staff",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/instructors-staff",
+          "text": "Sanjay Boddhu, PhD (Faculty, Instructors): Instructor; Capstone and Advisor, Head of UniMap Automation at HERE Technologies\nSanjay Boddhu is the Head of AI/ML Engineering at HERE Technologies, a global leader in location data and platform services. He has over 15 years of experience in leading and mentoring diverse and distributed teams in developing state-of-the-art applications and solutions in the domains of Computer Vision, Image Processing, Natural Language Processing, Predictive Analytics, and Data Science Strategy/Modeling. He holds a Ph.D. in Computer Science and Engineering from Wright State University and is a Senior Member of the IEEE.",
+          "path": [
+            "Faculty, Instructors, Staff",
+            "Faculty, Instructors",
+            "Sanjay Boddhu, PhD"
+          ],
+          "section_breadcrumb": "Faculty, Instructors, Staff > Faculty, Instructors > Sanjay Boddhu, PhD",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N2"
+            }
+          ],
+          "chunk_id": "chunk:b40ceee1b0c6f716",
+          "owner_node_id": "person:92afe6683ced361f",
+          "page_id": "page:f4f2b27925a19440",
+          "internal_metadata": {
+            "source_type": "body_text",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E37",
+          "status": "accepted",
+          "page_title": "Faculty, Instructors, Staff",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/instructors-staff",
+          "text": "Ignas Grabauskas (Faculty, Instructors): Instructor; Data Scientist at Simpson Thacher\nIgnas Grabauskas is a Data Scientist at Simpson, Thacher, & Bartlett, a premier law firm well-known for its expertise in financial and corporate law. Ignas has over five years of experience applying machine learning and deep learning techniques to the finance and legal domains. His recent work includes using LLMs for various tasks such as document classification, customized named-entity recognition (NER), and summarization. Ignas holds a BA in Physics from the University of Chicago and is an alumnus of the MS in Applied Data Science program.",
+          "path": [
+            "Faculty, Instructors, Staff",
+            "Faculty, Instructors",
+            "Ignas Grabauskas"
+          ],
+          "section_breadcrumb": "Faculty, Instructors, Staff > Faculty, Instructors > Ignas Grabauskas",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N2"
+            }
+          ],
+          "chunk_id": "chunk:42f4f1fa78ca78a4",
+          "owner_node_id": "person:0403d35f6d528dcc",
+          "page_id": "page:f4f2b27925a19440",
+          "internal_metadata": {
+            "source_type": "body_text",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E38",
+          "status": "accepted",
+          "page_title": "Faculty, Instructors, Staff",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/instructors-staff",
+          "text": "Batu Gundogdu, PhD (Faculty, Instructors): Instructor; Research Assistant Professor (BSD), Senior AI Engineer at Eva\nBatu Gundogdu holds a Ph.D. in Electrical Engineering and brings over 15 years of experience developing deep-learning models across the fields of speech, language, and medical imaging. Most recently, he served as Research Faculty in the Department of Radiology at the University of Chicago for four years, where he led AI efforts at the MRI Research Center. Dr. Gundogdu is currently a Senior AI Engineer at Eva, a startup building next-generation AI compute platforms.",
+          "path": [
+            "Faculty, Instructors, Staff",
+            "Faculty, Instructors",
+            "Batu Gundogdu, PhD"
+          ],
+          "section_breadcrumb": "Faculty, Instructors, Staff > Faculty, Instructors > Batu Gundogdu, PhD",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N2"
+            }
+          ],
+          "chunk_id": "chunk:744b2c890a8d4671",
+          "owner_node_id": "person:e0585098ec4ecd79",
+          "page_id": "page:f4f2b27925a19440",
+          "internal_metadata": {
+            "source_type": "body_text",
+            "score": null,
+            "score_breakdown": {}
+          }
+        }
+      ],
+      "time_sec": 56.237,
+      "low_confidence": true,
+      "error": null,
+      "progress_summary": {
+        "summary_covering": "Page P12 (Faculty, Instructors, Staff): Checked faculty nodes N2-N6. N2 provided useful evidence of NLP-related faculty (E15-E16, E29, E37, E38). N3-N6 were not useful for NLP comparison. Still missing: NLP-specific course offerings and curriculum details for UChicago, and comparable information for Stanford to make a comparison.",
+        "decision_trace_narrative": "Turn 1: Attempted to fetch graph content for nodes containing detailed course schedules, expecting to find NLP-related electives. The fetch returned NODE_SCOPE_TOO_BROAD, so no new information was obtained. This turn did not add to the evidence catalog."
+      },
+      "raw_debug": {
+        "response": {
+          "answer": "I can only answer questions about the UChicago MS in Applied Data Science program.",
+          "citations": [],
+          "debug": {
+            "tool_turns": 9,
+            "stop_reason": "max_agent_turns",
+            "evidence_count": 5,
+            "sufficient": false,
+            "missing": "NLP-specific course offerings and curriculum details for UChicago, and comparable information for Stanford to make a comparison.",
+            "log_path": "C:\\Users\\ss363\\Desktop\\Archive\\ads_rag_chatbot\\pipeline_grag_v2\\log\\2026-08-04_015345_c0dace936945.json",
+            "run_id": "c0dace936945"
+          }
+        },
+        "run_id": "c0dace936945",
+        "rewritten_queries": [
+          {
+            "id": "q1",
+            "query": "UChicago NLP program",
+            "target": "university_program"
+          },
+          {
+            "id": "q2",
+            "query": "Stanford NLP program",
+            "target": "university_program"
+          }
+        ],
+        "judgment": {
+          "sufficient": false,
+          "missing": "NLP-specific course offerings and curriculum details for UChicago, and comparable information for Stanford to make a comparison.",
+          "comment": "Page P12 (Faculty, Instructors, Staff): Checked faculty nodes N2-N6. N2 provided useful evidence of NLP-related faculty (E15-E16, E29, E37, E38). N3-N6 were not useful for NLP comparison. Still missing: NLP-specific course offerings and curriculum details for UChicago, and comparable information for Stanford to make a comparison."
+        },
+        "stop_reason": "max_agent_turns",
+        "fallback": {
+          "triggered": false,
+          "pages_selected": [],
+          "reason": ""
+        },
+        "metrics": {
+          "agent_turns": 9,
+          "tool_calls": 9,
+          "judge_calls": 1,
+          "llm_calls": 21,
+          "valid_fetch_count": 1,
+          "invalid_fetch_count": 2,
+          "accepted_evidence_count": 5,
+          "stop_reason": "max_agent_turns",
+          "fallback_triggered": false
+        },
+        "usage": {
+          "prompt_tokens": 49209,
+          "completion_tokens": 3142,
+          "total_tokens": 52351,
+          "llm_calls": 21
+        },
+        "progress_summary_history": [
+          {
+            "turn": 1,
+            "summary_covering": "No pages have been inspected yet, so no node paths have been checked. Nothing is missing yet because the investigation has just begun.",
+            "decision_trace_narrative": "Turn 1: The agent decided to inspect page P12 (Faculty, Instructors, Staff) because the question focuses on NLP, and faculty expertise is a key indicator of program strength in that area. The inspection succeeded, but no nodes have been evaluated yet.",
+            "sufficient": false,
+            "missing": "Information about NLP program strength at UChicago and Stanford, including faculty expertise, research opportunities, and curriculum."
+          },
+          {
+            "turn": 2,
+            "summary_covering": "Page P12 (Faculty, Instructors, Staff): Checked the faculty list and several individual profiles. The faculty list (N2) was useful, revealing several faculty with NLP-related expertise: Utku Pamuksuz (E15-E16), Sanjay Boddhu (E29), Ignas Grabauskas (E37), and Batu Gundogdu (E38). Individual profiles for Greg Green (N3), Arnab Bose (N4), Francisco Azeredo (N5), and Anil Chaturvedi (N6) were not useful for NLP comparison. Still missing: information about Stanford's NLP program, including faculty, courses, and research strengths.",
+            "decision_trace_narrative": "Turn 1: The agent fetched the faculty list and profiles from UChicago's page, reasoning that faculty expertise is a key indicator for NLP program strength. The fetch was successful. The agent found several NLP-related faculty at UChicago, but no information about Stanford yet.",
+            "sufficient": false,
+            "missing": "Information about Stanford's NLP program, including faculty, courses, and research strengths."
+          },
+          {
+            "turn": 3,
+            "summary_covering": "Page P12 (Faculty, Instructors, Staff): Checked the faculty list and several individual profiles. The faculty list is useful for NLP focus, revealing several instructors with NLP-related expertise (E15-E16, E29, E37, E38). Individual profiles for Greg Green, Arnab Bose, Francisco Azeredo, and Anil Chaturvedi were not useful for NLP comparison. Still missing: any information about Stanford's NLP program, which is essential for the comparison.",
+            "decision_trace_narrative": "Turn 1: Inspected P12 (Faculty, Instructors, Staff) to find NLP-related faculty. Found several relevant faculty members, but no Stanford information. Turn 2: Inspected individual faculty profiles (N3-N6) to see if any had NLP relevance; none did. Turn 3: Inspected P5 (FAQs) to look for comparative information with Stanford, but the page did not contain any Stanford data. No new information about Stanford was obtained.",
+            "sufficient": false,
+            "missing": "Information about Stanford's NLP program, including faculty, courses, and strengths, to enable a comparison with UChicago."
+          },
+          {
+            "turn": 4,
+            "summary_covering": "P12 (Faculty, Instructors, Staff): Checked faculty list and individual profiles. Useful evidence found: Utku Pamuksuz supervises NLP capstones (E15-E16), Sanjay Boddhu has NLP experience (E29), Ignas Grabauskas uses LLMs for NLP (E37), Batu Gundogdu has deep-learning experience in speech/language (E38). Other profiles (Greg Green, Arnab Bose, Francisco Azeredo, Anil Chaturvedi) not NLP-relevant. Still missing: Stanford NLP program details, UChicago NLP-specific curriculum/courses, program rankings or strengths, and any direct comparison.",
+            "decision_trace_narrative": "Turn 1: Inspected P12 (Faculty) to find NLP-related faculty. Reason: Need to assess UChicago's NLP strengths. Outcome: Found several faculty with NLP expertise, but no Stanford info. Turn 2: Inspected P5 (likely another page) to look for Stanford comparison. Reason: Need to compare with Stanford. Outcome: No Stanford info found. Turn 3: Inspected P1 (Master's in Applied Data Science) to see if it mentions NLP or program strengths. Reason: P1 is a general overview that might contain comparative or NLP-specific details. Outcome: This turn's inspection was successful, but no new evidence was added to the catalog (the log shows no new accepted evidence from this turn). The page may not have provided NLP-specific or comparative information.",
+            "sufficient": false,
+            "missing": "Stanford NLP program details, UChicago NLP-specific curriculum/courses, program rankings or strengths, and any direct comparison between the two schools."
+          },
+          {
+            "turn": 5,
+            "summary_covering": "Page P12 (Faculty, Instructors, Staff) has been examined. The node 'Faculty, Instructors' was useful, revealing several faculty with NLP-related expertise: Utku Pamuksuz (supervises NLP capstones), Sanjay Boddhu (NLP experience), Ignas Grabauskas (uses LLMs for NLP), and Batu Gundogdu (deep learning in speech/language). Other faculty nodes (Greg Green, Arnab Bose, Francisco Azeredo, Anil Chaturvedi) were not useful for NLP focus. Still missing: UChicago's NLP-specific curriculum/courses, and any comparison with Stanford's NLP program.",
+            "decision_trace_narrative": "Turn 1: Inspected P12 (Faculty) to find NLP-specific faculty expertise. Found several NLP-related faculty, which is useful. No re-queries.",
+            "sufficient": false,
+            "missing": "UChicago's NLP-specific curriculum/courses and Stanford's NLP program details for comparison."
+          },
+          {
+            "turn": 6,
+            "summary_covering": "P12 (Faculty, Instructors, Staff): Checked N2 (Faculty, Instructors) which provided useful evidence on NLP-related faculty (E15-E16, E29, E37, E38). Checked N3-N6 (individual faculty profiles) which were not useful for NLP comparison. Still missing: UChicago's NLP-specific curriculum/courses, Stanford's NLP program details, and any comparative analysis.",
+            "decision_trace_narrative": "Turn 1: Inspected P12 (Faculty, Instructors, Staff) to find NLP-related faculty. Found evidence of NLP expertise among faculty (E15-E16, E29, E37, E38). Turn 2: Inspected individual faculty profiles (N3-N6) to see if they had NLP relevance; none were useful. Turn 3: Inspected P4 (Course Progressions) to locate NLP-specific courses; this turn's result is pending.",
+            "sufficient": false,
+            "missing": "UChicago's NLP-specific curriculum/courses, Stanford's NLP program details, and comparative analysis."
+          },
+          {
+            "turn": 7,
+            "summary_covering": "Page P12 (Faculty, Instructors, Staff): Checked N2 (Faculty list) and individual faculty profiles (N3-N6). N2 provided useful evidence: several faculty have NLP-related expertise (E15-E16, E29, E37, E38). Individual profiles for Greg Green, Arnab Bose, Francisco Azeredo, and Anil Chaturvedi were not useful for NLP. Still missing: NLP-specific course offerings and curriculum details for UChicago, and any comparison with Stanford's NLP program.",
+            "decision_trace_narrative": "Turn 1: Agent attempted to fetch N81 (Course Progression Tabs) on P4 to find NLP-specific courses, but the node scope was too broad. Reason: Need to find NLP-specific courses in the curriculum to compare with Stanford. Outcome: No new information; will need to refine the query or try a different node.",
+            "sufficient": false,
+            "missing": "NLP-specific course offerings and curriculum details for UChicago, and any comparison with Stanford's NLP program."
+          },
+          {
+            "turn": 8,
+            "summary_covering": "Page P12 (Faculty, Instructors, Staff): Checked faculty list and individual profiles. Useful: N2 lists faculty with NLP-relevant expertise (E15-E16, E29, E37, E38). Not useful: N3-N6 (Greg Green, Arnab Bose, Francisco Azeredo, Anil Chaturvedi) have no NLP specialization. Still missing: NLP-specific course offerings and curriculum details from P4 and other pages to compare with Stanford.",
+            "decision_trace_narrative": "Turn 1: Inspected P12 to find NLP-relevant faculty. Found several with NLP experience (E15-E16, E29, E37, E38). Turn 2: Inspected individual faculty profiles (N3-N6) to assess NLP relevance; none were useful. Turn 3: Inspected P4 to find NLP-specific courses; outcome pending. No re-queries of already-fetched nodes.",
+            "sufficient": false,
+            "missing": "NLP-specific course offerings and curriculum details from P4 and other pages to compare with Stanford."
+          },
+          {
+            "turn": 9,
+            "summary_covering": "Page P12 (Faculty, Instructors, Staff): Checked faculty nodes N2-N6. N2 provided useful evidence of NLP-related faculty (E15-E16, E29, E37, E38). N3-N6 were not useful for NLP comparison. Still missing: NLP-specific course offerings and curriculum details for UChicago, and comparable information for Stanford to make a comparison.",
+            "decision_trace_narrative": "Turn 1: Attempted to fetch graph content for nodes containing detailed course schedules, expecting to find NLP-related electives. The fetch returned NODE_SCOPE_TOO_BROAD, so no new information was obtained. This turn did not add to the evidence catalog.",
+            "sufficient": false,
+            "missing": "NLP-specific course offerings and curriculum details for UChicago, and comparable information for Stanford to make a comparison."
+          }
+        ],
+        "node_evaluation_log": {
+          "P12 (Faculty, Instructors, Staff)": {
+            "N2 (Faculty, Instructors)": {
+              "node_id": "people_group:0a1234ef2cf51a53",
+              "path": [
+                "Faculty, Instructors, Staff",
+                "Faculty, Instructors"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E15",
+                  "chunk_id": "chunk:095322d468b50fe5",
+                  "text_preview": "Utku Pamuksuz, PhD (Faculty, Instructors): Associate Clinical Professor; Co-Founder Inference Analytics\nDr. Pamuksuz, a professor of AI, specializes i"
+                },
+                {
+                  "evidence_ref": "E16",
+                  "chunk_id": "chunk:ba8c8422b3a67a21",
+                  "text_preview": "language processing.\nIn the professional realm, Dr. Pamuksuz has an impressive record. He has led data science teams at several Fortune 500 companies,"
+                },
+                {
+                  "evidence_ref": "E29",
+                  "chunk_id": "chunk:b40ceee1b0c6f716",
+                  "text_preview": "Sanjay Boddhu, PhD (Faculty, Instructors): Instructor; Capstone and Advisor, Head of UniMap Automation at HERE Technologies\nSanjay Boddhu is the Head "
+                },
+                {
+                  "evidence_ref": "E37",
+                  "chunk_id": "chunk:42f4f1fa78ca78a4",
+                  "text_preview": "Ignas Grabauskas (Faculty, Instructors): Instructor; Data Scientist at Simpson Thacher\nIgnas Grabauskas is a Data Scientist at Simpson, Thacher, & Bar"
+                },
+                {
+                  "evidence_ref": "E38",
+                  "chunk_id": "chunk:744b2c890a8d4671",
+                  "text_preview": "Batu Gundogdu, PhD (Faculty, Instructors): Instructor; Research Assistant Professor (BSD), Senior AI Engineer at Eva\nBatu Gundogdu holds a Ph.D. in El"
+                }
+              ],
+              "comment": "This node lists faculty and instructors. For NLP focus, relevant evidence includes E15-E16 (Utku Pamuksuz supervises capstones in NLP), E29 (Sanjay Boddhu has NLP experience), E37 (Ignas Grabauskas uses LLMs for NLP tasks), and E38 (Batu Gundogdu has deep-learning experience in speech and language). Other faculty are not directly relevant to NLP."
+            },
+            "N3 (Greg Green)": {
+              "node_id": "person:3a262b3f6eee31c9",
+              "path": [
+                "Faculty, Instructors, Staff",
+                "Faculty, Instructors",
+                "Greg Green"
+              ],
+              "eff_evidence": [],
+              "comment": "Greg Green's profile focuses on program direction and industry partnerships, with no specific NLP expertise or courses. Not useful for comparing NLP programs."
+            },
+            "N4 (Arnab Bose, PhD)": {
+              "node_id": "person:bfe4b95fce10356e",
+              "path": [
+                "Faculty, Instructors, Staff",
+                "Faculty, Instructors",
+                "Arnab Bose, PhD"
+              ],
+              "eff_evidence": [],
+              "comment": "Arnab Bose teaches machine learning and related courses but no NLP-specific content. Not directly relevant to NLP focus."
+            },
+            "N5 (Francisco Azeredo, PhD)": {
+              "node_id": "person:635b0e2f142fe69f",
+              "path": [
+                "Faculty, Instructors, Staff",
+                "Faculty, Instructors",
+                "Francisco Azeredo, PhD"
+              ],
+              "eff_evidence": [],
+              "comment": "Francisco Azeredo's expertise is in financial economics and quantitative finance, not NLP. Not useful for NLP comparison."
+            },
+            "N6 (Anil D Chaturvedi, PhD)": {
+              "node_id": "person:7f56959ef594c60b",
+              "path": [
+                "Faculty, Instructors, Staff",
+                "Faculty, Instructors",
+                "Anil D Chaturvedi, PhD"
+              ],
+              "eff_evidence": [],
+              "comment": "Anil Chaturvedi's research is in business value and predictive modeling, with no NLP specialization. Not relevant to NLP focus."
+            }
+          }
+        },
+        "log_path": "C:\\Users\\ss363\\Desktop\\Archive\\ads_rag_chatbot\\pipeline_grag_v2\\log\\2026-08-04_015345_c0dace936945.json"
+      }
+    }
+  },
+  "run_batch_id": "20260804T013937"
+}

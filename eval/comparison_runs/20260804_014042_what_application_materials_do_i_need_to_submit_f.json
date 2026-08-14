@@ -1,0 +1,947 @@
+{
+  "schema_version": 2,
+  "timestamp": "2026-08-04T01:40:42.650791",
+  "question": "What application materials do I need to submit for the MS in Applied Data Science?",
+  "question_id": "A04",
+  "question_meta": {
+    "category": "admissions",
+    "type": "multi_fact",
+    "difficulty": "medium",
+    "expected_behavior": "direct_answer"
+  },
+  "results": {
+    "pipeline_flatrag": {
+      "pipeline_id": "pipeline_flatrag",
+      "display_name": "FlatRAG",
+      "answer": "Based on the retrieved context, I can confirm that the application portal for 2026 entrance is open and that only completed applications are sent for committee review [1]. However, the specific list of required application materials is not detailed in the available context.\n\nI couldn't find relevant information about this in the available program materials. I can only answer questions about the UChicago MS in Applied Data Science program. For the full list of materials, please review the \"How to Apply\" page directly.\n\nSources:\n1. [How To Apply | Master’s in Applied Data Science Application Requirements](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply/)",
+      "sources": [
+        {
+          "page_title": "How To Apply",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply/"
+        },
+        {
+          "page_title": "Faqs",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "tool_calls": [
+            {
+              "name": "list_page_sections",
+              "args": {
+                "url": "how_to_apply"
+              }
+            },
+            {
+              "name": "list_page_sections",
+              "args": {
+                "url": "faqs"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "list_page_sections",
+              "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply/:\n  - \"Application Fee\" (1 chunk)\n  - \"Candidate Statement\" (2 chunks)\n  - \"English Language Requirement\" (1 chunk)\n  - \"Get in Touch\" (1 chunk)\n  - \"How To Apply\" (1 chunk)\n  - \"International Students\" (1 chunk)\n  - \"Letters of Recommendation\" (1 chunk)\n  - \"Master’s in Applied Data Science Application Requirements\" (1 chunk)\n  - \"Meet your Admissions Counselor\" (2 chunks)\n  - \"Next Application Deadlines:\" (3 chunks)\n  - \"Programming Supplement\" (2 chunks)\n  - \"Resume/CV\" (3 chunks)\n  - \"Transcripts from all previous colleges and universities attended\" (2 chunks)\n  - \"Tuition, Fees, & Aid\" (1 chunk)\n  - \"Virtual Portfolio\" (1 chunk)"
+            },
+            {
+              "name": "list_page_sections",
+              "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/:\n  - \"2-Year Thesis Track Program > How many spots are available in the new 2-year program?\" (1 chunk)\n  - \"2-Year Thesis Track Program > If I am admitted to the In-Person, Full-Time 1-year program, may I take any of the 2-year program electives?\" (1 chunk)\n  - \"2-Year Thesis Track Program > May I switch between the 1- and 2-year programs after officially enrolling in the MS-ADS program?\" (1 chunk)\n  - \"2-Year Thesis Track Program > What is the 2-year program's thesis requirement?\" (1 chunk)\n  - \"2-Year Thesis Track Program > What is the new 2-year thesis track program (18 courses), and how is it different from the 1-year program (12 courses)?\" (2 chunks)\n  - \"2-Year Thesis Track Program > When can I apply for the 2-year thesis track program?\" (1 chunk)\n  - \"Application Process > Do I need to provide my recommenders with instructions?\" (1 chunk)\n  - \"Application Process > Does the admissions office allow recommenders to email their letter directly as an attachment to be included in an applicant’s file?\" (1 chunk)\n  - \"Application Process > How do I submit the materials that will accompany my Master's in Applied Data Science application?\" (1 chunk)\n  - \"Application Process > How will I be notified that I am admitted to the Master's in Applied Data Science program?\" (1 chunk)\n  - \"Application Process > I took the GRE and/or GMAT and want to include my score(s) with my Master's in Applied Data Science application.\" (1 chunk)\n  - \"Application Process > I took the TOEFL over two years ago. Can I still use those TOEFL results?\" (1 chunk)\n  - \"Application Process > If I am admitted to the Master's in Applied Data Science program, what do I do next?\" (1 chunk)\n  - \"Application Process > If I finish my Master's in Applied Data Science application before the deadline, will I receive my decision early?\" (1 chunk)\n  - \"Application Process > Is the GRE or GMAT required for th"
+            }
+          ],
+          "judger": null
+        },
+        {
+          "step": 2,
+          "tool_calls": [
+            {
+              "name": "fetch_section_chunks",
+              "args": {
+                "url": "how_to_apply",
+                "section_breadcrumb": "Master’s in Applied Data Science Application Requirements"
+              }
+            },
+            {
+              "name": "fetch_section_chunks",
+              "args": {
+                "url": "faqs",
+                "section_breadcrumb": "Application Process > What materials do I need to submit to accompany my application for admission to the Masters in Applied Data Science program?"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_section_chunks",
+              "content": "Fetched 1 chunk(s) from \"Master’s in Applied Data Science Application Requirements\":\n\n[0] How To Apply | Master’s in Applied Data Science Application Requirements\n[Page: How To Apply | Section: Master’s in Applied Data Science Application Requirements]\n\nThe [application portal](https://apply-psd.uchicago.edu/apply/) * for 2026 entrance is now open. Check out our blog post here on tips for applying to the program. The In-Person and Online program admits full- ..."
+            },
+            {
+              "name": "fetch_section_chunks",
+              "content": "Fetched 1 chunk(s) from \"Application Process > What materials do I need to submit to accompany my application for admission to the Masters in Applied Data Science program?\":\n\n[0] Faqs | Application Process > What materials do I need to submit to accompany my application for admission to the Masters in Applied Data Science program?\n[Page: Faqs | Section: Application Process > What materials do I need to submit to accompany my application for admission to the Masters in Applied Data Science program?]\n\nPlease review the How to Apply page."
+            }
+          ],
+          "judger": {
+            "completeness": "partial",
+            "useful_indices": [
+              0,
+              1
+            ],
+            "decision": "done",
+            "candidate_chunk_count": 2,
+            "accepted_chunk_count": 2
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "text": "[Page: How To Apply | Section: Master’s in Applied Data Science Application Requirements]\n\nThe [application portal](https://apply-psd.uchicago.edu/apply/) * for 2026 entrance is now open. Check out our blog post here on tips for applying to the program. The In-Person and Online program admits full- and part-time students for entrance in the autumn quarter annually. Only completed applications are sent for committee review. *The [application portal](https://apply-psd.uchicago.edu/apply/) may close early if the cohort is filled.",
+          "chunk_id": "education__masters_programs__ms_in_applied_data_science__how_to_apply__master_s_in_applied_data_science_application_requirements__1",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply/",
+          "page_title": "How To Apply",
+          "section": "Master’s in Applied Data Science Application Requirements",
+          "section_breadcrumb": "Master’s in Applied Data Science Application Requirements",
+          "content_type": "text",
+          "program_type": "general",
+          "distance": 0.0
+        },
+        {
+          "text": "[Page: Faqs | Section: Application Process > What materials do I need to submit to accompany my application for admission to the Masters in Applied Data Science program?]\n\nPlease review the How to Apply page.",
+          "chunk_id": "education__masters_programs__ms_in_applied_data_science__faqs__what_materials_do_i_need_to_submit_to_accompany_my_application_for_admission_to_the_masters_in_applied_data_science_program__12",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/",
+          "page_title": "Faqs",
+          "section": "What materials do I need to submit to accompany my application for admission to the Masters in Applied Data Science program?",
+          "section_breadcrumb": "Application Process > What materials do I need to submit to accompany my application for admission to the Masters in Applied Data Science program?",
+          "content_type": "text",
+          "program_type": "general",
+          "distance": 0.0
+        }
+      ],
+      "time_sec": 10.475,
+      "low_confidence": true,
+      "error": null,
+      "raw_debug": {
+        "answer": "Based on the retrieved context, I can confirm that the application portal for 2026 entrance is open and that only completed applications are sent for committee review [1]. However, the specific list of required application materials is not detailed in the available context.\n\nI couldn't find relevant information about this in the available program materials. I can only answer questions about the UChicago MS in Applied Data Science program. For the full list of materials, please review the \"How to Apply\" page directly.\n\nSources:\n1. [How To Apply | Master’s in Applied Data Science Application Requirements](https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply/)",
+        "sources": [
+          {
+            "page_title": "How To Apply",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply/"
+          },
+          {
+            "page_title": "Faqs",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/"
+          }
+        ],
+        "completeness": "partial",
+        "low_confidence": true,
+        "attempts": 2,
+        "agent_steps": [
+          {
+            "step": 1,
+            "tool_calls": [
+              {
+                "name": "list_page_sections",
+                "args": {
+                  "url": "how_to_apply"
+                }
+              },
+              {
+                "name": "list_page_sections",
+                "args": {
+                  "url": "faqs"
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "list_page_sections",
+                "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply/:\n  - \"Application Fee\" (1 chunk)\n  - \"Candidate Statement\" (2 chunks)\n  - \"English Language Requirement\" (1 chunk)\n  - \"Get in Touch\" (1 chunk)\n  - \"How To Apply\" (1 chunk)\n  - \"International Students\" (1 chunk)\n  - \"Letters of Recommendation\" (1 chunk)\n  - \"Master’s in Applied Data Science Application Requirements\" (1 chunk)\n  - \"Meet your Admissions Counselor\" (2 chunks)\n  - \"Next Application Deadlines:\" (3 chunks)\n  - \"Programming Supplement\" (2 chunks)\n  - \"Resume/CV\" (3 chunks)\n  - \"Transcripts from all previous colleges and universities attended\" (2 chunks)\n  - \"Tuition, Fees, & Aid\" (1 chunk)\n  - \"Virtual Portfolio\" (1 chunk)"
+              },
+              {
+                "name": "list_page_sections",
+                "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/:\n  - \"2-Year Thesis Track Program > How many spots are available in the new 2-year program?\" (1 chunk)\n  - \"2-Year Thesis Track Program > If I am admitted to the In-Person, Full-Time 1-year program, may I take any of the 2-year program electives?\" (1 chunk)\n  - \"2-Year Thesis Track Program > May I switch between the 1- and 2-year programs after officially enrolling in the MS-ADS program?\" (1 chunk)\n  - \"2-Year Thesis Track Program > What is the 2-year program's thesis requirement?\" (1 chunk)\n  - \"2-Year Thesis Track Program > What is the new 2-year thesis track program (18 courses), and how is it different from the 1-year program (12 courses)?\" (2 chunks)\n  - \"2-Year Thesis Track Program > When can I apply for the 2-year thesis track program?\" (1 chunk)\n  - \"Application Process > Do I need to provide my recommenders with instructions?\" (1 chunk)\n  - \"Application Process > Does the admissions office allow recommenders to email their letter directly as an attachment to be included in an applicant’s file?\" (1 chunk)\n  - \"Application Process > How do I submit the materials that will accompany my Master's in Applied Data Science application?\" (1 chunk)\n  - \"Application Process > How will I be notified that I am admitted to the Master's in Applied Data Science program?\" (1 chunk)\n  - \"Application Process > I took the GRE and/or GMAT and want to include my score(s) with my Master's in Applied Data Science application.\" (1 chunk)\n  - \"Application Process > I took the TOEFL over two years ago. Can I still use those TOEFL results?\" (1 chunk)\n  - \"Application Process > If I am admitted to the Master's in Applied Data Science program, what do I do next?\" (1 chunk)\n  - \"Application Process > If I finish my Master's in Applied Data Science application before the deadline, will I receive my decision early?\" (1 chunk)\n  - \"Application Process > Is the GRE or GMAT required for th"
+              }
+            ],
+            "judger": null
+          },
+          {
+            "step": 2,
+            "tool_calls": [
+              {
+                "name": "fetch_section_chunks",
+                "args": {
+                  "url": "how_to_apply",
+                  "section_breadcrumb": "Master’s in Applied Data Science Application Requirements"
+                }
+              },
+              {
+                "name": "fetch_section_chunks",
+                "args": {
+                  "url": "faqs",
+                  "section_breadcrumb": "Application Process > What materials do I need to submit to accompany my application for admission to the Masters in Applied Data Science program?"
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "fetch_section_chunks",
+                "content": "Fetched 1 chunk(s) from \"Master’s in Applied Data Science Application Requirements\":\n\n[0] How To Apply | Master’s in Applied Data Science Application Requirements\n[Page: How To Apply | Section: Master’s in Applied Data Science Application Requirements]\n\nThe [application portal](https://apply-psd.uchicago.edu/apply/) * for 2026 entrance is now open. Check out our blog post here on tips for applying to the program. The In-Person and Online program admits full- ..."
+              },
+              {
+                "name": "fetch_section_chunks",
+                "content": "Fetched 1 chunk(s) from \"Application Process > What materials do I need to submit to accompany my application for admission to the Masters in Applied Data Science program?\":\n\n[0] Faqs | Application Process > What materials do I need to submit to accompany my application for admission to the Masters in Applied Data Science program?\n[Page: Faqs | Section: Application Process > What materials do I need to submit to accompany my application for admission to the Masters in Applied Data Science program?]\n\nPlease review the How to Apply page."
+              }
+            ],
+            "judger": {
+              "completeness": "partial",
+              "useful_indices": [
+                0,
+                1
+              ],
+              "decision": "done",
+              "candidate_chunk_count": 2,
+              "accepted_chunk_count": 2
+            }
+          }
+        ],
+        "evidence": [
+          {
+            "text": "[Page: How To Apply | Section: Master’s in Applied Data Science Application Requirements]\n\nThe [application portal](https://apply-psd.uchicago.edu/apply/) * for 2026 entrance is now open. Check out our blog post here on tips for applying to the program. The In-Person and Online program admits full- and part-time students for entrance in the autumn quarter annually. Only completed applications are sent for committee review. *The [application portal](https://apply-psd.uchicago.edu/apply/) may close early if the cohort is filled.",
+            "chunk_id": "education__masters_programs__ms_in_applied_data_science__how_to_apply__master_s_in_applied_data_science_application_requirements__1",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply/",
+            "page_title": "How To Apply",
+            "section": "Master’s in Applied Data Science Application Requirements",
+            "section_breadcrumb": "Master’s in Applied Data Science Application Requirements",
+            "content_type": "text",
+            "program_type": "general",
+            "distance": 0.0
+          },
+          {
+            "text": "[Page: Faqs | Section: Application Process > What materials do I need to submit to accompany my application for admission to the Masters in Applied Data Science program?]\n\nPlease review the How to Apply page.",
+            "chunk_id": "education__masters_programs__ms_in_applied_data_science__faqs__what_materials_do_i_need_to_submit_to_accompany_my_application_for_admission_to_the_masters_in_applied_data_science_program__12",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/",
+            "page_title": "Faqs",
+            "section": "What materials do I need to submit to accompany my application for admission to the Masters in Applied Data Science program?",
+            "section_breadcrumb": "Application Process > What materials do I need to submit to accompany my application for admission to the Masters in Applied Data Science program?",
+            "content_type": "text",
+            "program_type": "general",
+            "distance": 0.0
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 5996,
+          "completion_tokens": 478,
+          "total_tokens": 6474,
+          "llm_calls": 6
+        },
+        "metrics": {
+          "tool_calls": 4,
+          "loop_count": 2,
+          "evidence_count": 2,
+          "llm_calls": 6,
+          "judge_calls": null,
+          "valid_fetch_count": null,
+          "invalid_fetch_count": null,
+          "fallback_triggered": null
+        }
+      }
+    },
+    "pipeline_grag_v2": {
+      "pipeline_id": "pipeline_grag_v2",
+      "display_name": "GRAG v2",
+      "answer": "To apply for the MS in Applied Data Science, you must submit the following materials:\n\n- **Two letters of recommendation** [1]\n- **Candidate statement** (max 700 words) [2]\n- **Resume/CV** [3]\n- **Programming supplement** (PDF, max 2 pages) [4]\n- **Virtual portfolio** (recorded video responses to prompts) [5]\n- **Proof of English language proficiency** (if applicable) [6]\n- **Unofficial transcripts** from all previous colleges/universities (official transcripts required if admitted) [7][8]\n- **$90 non-refundable application fee** [9]",
+      "sources": [
+        {
+          "page_title": "How to Apply",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P6"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P6] How to Apply\n[N1] Page Introduction — Section (1 content block)\n[N2] Master’s in Applied Data Science Application Requirements — Section (1 content block)\n[N3] Next Application Deadlines: — Section (1 content block)\n[N4] Letters of Recommendation — Section (1 content block)\n[N5] Candidate Statement — Section (1 content block)\n[N6] Resume/CV — Section (1 content block)\n[N7] Programming Supplement — Section (2 content blocks)\n    ├── [N8] Virtual Portfolio — Section (1 content block)\n[N9] International Students — Section (1 content block)\n[N10] English Language Requirement — Section (1 content block)\n[N11] Transcripts from all previous colleges and universities attended — Section (2 content blocks)\n[N12] Application Fee — Section (1 content block)\n[N13] Tuition, Fees, & Aid — Section (1 content block)\n[N14] Meet your Admissions Counselor — Section (1 content block)\n[N15] Get in Touch — Section (1 content block)"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "The question asks about application materials, which is directly covered by the How to Apply page (P6). Inspecting this page first will reveal relevant nodes to fetch."
+        },
+        {
+          "step": 2,
+          "tool_calls": [
+            {
+              "name": "fetch_graph_content",
+              "args": {
+                "node_refs": [
+                  "N2",
+                  "N4",
+                  "N5",
+                  "N6",
+                  "N7"
+                ]
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_graph_content",
+              "content": "[N2] Master’s in Applied Data Science Application Requirements — path: How to Apply > Master’s in Applied Data Science Application Requirements\n  [E1] The application portal * for 2026 entrance is now open. Check out our blog post here on tips for applying to the program.\nThe In-Person and Online program admits full- and part-time students for entrance in the autumn quarter annually.\nOnly completed applications are sent for committee review.\n*The may close early if the cohort is filled.\n\n[N4] Letters of Recommendation — path: How to Apply > Letters of Recommendation\n  [E2] The MS in Applied Data Science program requires two letters of recommendation. We strongly recommend that at least one letter is written by someone such as a direct manager/supervisor or internship supervisor who can attest to skills you demonstrated or gained though a professional workplace experience (e.g., leadership, teamwork, collaboration, initiative, management, other).\nNote: Letters of recommendation can be uploaded after you submit your application. Recommended sources for letters of recommendation include: professors; supervisors or managers; professional mentors.\nWe do not accept letters of recommendation from family members, friends, or peers.\n\n[N5] Candidate Statement — path: How to Apply > Candidate Statement\n  [E3] The candidate statement is a key part of your application. The admissions committee pays careful attention to how you understand and present your aims and qualifications. The application will include a prompt with detailed instructions on the information the program is looking for in your candidate statement.\nBest practices to keep in mind as you write:\n- Do not restate your resume.\n- Your statement should not exceed 700 words.\n\n[N6] Resume/CV — path: How to Apply > Resume/CV\n  [E4] The Master’s in Applied Data Science admissions committee will review your resume. We encourage you to take the time to carefully update the resume you submit to us.\n- Work experience, including internships and part-time positions in the analytics/data science space\n- Major accomplishments and awards\n- Educational background, including areas of study\n- Professional conferences attended\n- Undergraduate or graduate GPA\n\n[N7] Programming Supplement — path: How to Apply > Programming Supplement\n  [E5] Your application contains a section on programming skills. Although applicants with limited skills in R or Python can and do get accepted into the program, the admissions committee values prior programming experience. Include a PDF of no more than two pages demonstrating current programming language skills.\nExamples include a PDF submission of work completed in R or Python. The programming supplement must be shared as a PDF file. We are looking for the following in your code (see below). Please note your code does not need to contain all of the below.\n- Ingest data from csv\n- Manage different data types\n- Use your function for data analysis\n- Visualize data\n- Wrangle data\n- Write your own function\n- Import libraries\nOne video prompt response is required; the other is optional. Each video should be approximately 1:30 minutes in length.\n  [N7.1] Virtual Portfolio\n    [E6] The MS in Applied Data Science requires short, recorded videos to a given prompt(s) within the application. These short videos give applicants an alternative means to outline why they are a strong fit for the MS in Applied Data Science program."
+            }
+          ],
+          "judger": {
+            "node_assessments": [
+              {
+                "node_ref": "N2",
+                "keep_evidence": [],
+                "comment": "This node provides general application process information (portal open, full/part-time, committee review) but does not list specific required materials, so it is not directly useful for the question."
+              },
+              {
+                "node_ref": "N4",
+                "keep_evidence": [
+                  "E2"
+                ],
+                "comment": "E2 specifies that two letters of recommendation are required and provides guidance on recommenders, directly answering part of the question about application materials."
+              },
+              {
+                "node_ref": "N5",
+                "keep_evidence": [
+                  "E3"
+                ],
+                "comment": "E3 states that a candidate statement is required and provides details on its purpose and length limit, directly relevant to the question."
+              },
+              {
+                "node_ref": "N6",
+                "keep_evidence": [
+                  "E4"
+                ],
+                "comment": "E4 indicates that a resume/CV is required and lists what to include, directly relevant to the question."
+              },
+              {
+                "node_ref": "N7",
+                "keep_evidence": [
+                  "E5",
+                  "E6"
+                ],
+                "comment": "E5 describes the programming supplement requirement (PDF of code) and E6 mentions required video responses, both are application materials needed for the program."
+              }
+            ]
+          },
+          "decision_reason": "The 'How to Apply' page has been inspected and shows nodes directly listing application materials. Fetching the main requirements node and the specific material nodes (letters of recommendation, candidate statement, resume/CV, programming supplement) will provide the detailed list of required materials to answer the question."
+        },
+        {
+          "step": 3,
+          "tool_calls": [
+            {
+              "name": "fetch_graph_content",
+              "args": {
+                "node_refs": [
+                  "N8",
+                  "N9",
+                  "N10",
+                  "N11",
+                  "N12"
+                ]
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "fetch_graph_content",
+              "content": "[N8] Virtual Portfolio — path: How to Apply > Programming Supplement > Virtual Portfolio\n  [E6] The MS in Applied Data Science requires short, recorded videos to a given prompt(s) within the application. These short videos give applicants an alternative means to outline why they are a strong fit for the MS in Applied Data Science program.\n\n[N9] International Students — path: How to Apply > International Students\n  [E7] - Only the full-time, in-person program is visa-eligible.\n- International students are also welcome to apply to our Master’s in Applied Data Science Online program, which does not require citizenship or permanent resident status and does not provide visa sponsorship.\n\n[N10] English Language Requirement — path: How to Apply > English Language Requirement\n  [E8] Applicants to the Master’s in Applied Data Science program who do not meet the English Language Proficiency criteria must submit proof of English language proficiency.\nMinimum scores for the Master’s in Applied Data Science program: TOEFL: 102 (prior requirement) or 5 (current requirement; no subscore requirement); IELTS, 7 (no subscore requirement).\nPlease review our waiver policy here .\n\n[N11] Transcripts from all previous colleges and universities attended — path: How to Apply > Transcripts from all previous colleges and universities attended\n  [E9] When applying to the program, only your unofficial transcripts are required. If you are admitted into the program, then official transcripts must be sent to the following (note a bachelor’s degree is required to apply to the program):\nPlease have your institution send your e-transcripts directly to:\napplieddatascience-admissions@uchicago.edu\nIf your institution cannot send your documents electronically, please have them send your transcripts to the following mailing address.\nPlease note, if documents are being mailed, we must receive them in their original, school-sealed envelope. If your documents are not received in a school-sealed envelope, they will be considered unofficial. Additionally, if your transcript does not list degree conferral information (degree earned and date of conferral), we will also need to receive an attested copy of your degree certificate.\n  [E10] of conferral), we will also need to receive an attested copy of your degree certificate.\nAttention: MS in Applied Data Science Admissions\n455 N Cityfront Plaza Dr., Suite 2800\n\n[N12] Application Fee — path: How to Apply > Application Fee\n  [E11] There is a $90 non-refundable application fee. For questions regarding an application fee waiver, please refer to the Physical Sciences Division fee waiver policy ."
+            }
+          ],
+          "judger": {
+            "node_assessments": [
+              {
+                "node_ref": "N8",
+                "keep_evidence": [
+                  "E6"
+                ],
+                "comment": "E6 directly states that the MS in Applied Data Science requires short recorded videos as part of the application, which is a required application material."
+              },
+              {
+                "node_ref": "N9",
+                "keep_evidence": [],
+                "comment": "E7 discusses visa eligibility and online program options, but does not list any specific application materials required for submission."
+              },
+              {
+                "node_ref": "N10",
+                "keep_evidence": [
+                  "E8"
+                ],
+                "comment": "E8 specifies that applicants who do not meet English proficiency criteria must submit proof of proficiency, including minimum TOEFL and IELTS scores, which is a required application material."
+              },
+              {
+                "node_ref": "N11",
+                "keep_evidence": [
+                  "E9",
+                  "E10"
+                ],
+                "comment": "E9 and E10 detail the transcript requirements: unofficial transcripts at application, official transcripts if admitted, and additional degree certificate if needed, all of which are application materials."
+              },
+              {
+                "node_ref": "N12",
+                "keep_evidence": [
+                  "E11"
+                ],
+                "comment": "E11 states the $90 non-refundable application fee, which is a required application material."
+              }
+            ]
+          },
+          "decision_reason": "Need to check remaining nodes on the How to Apply page for other required materials: Virtual Portfolio, International Students, English Language Requirement, Transcripts, and Application Fee."
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E2",
+          "status": "accepted",
+          "page_title": "How to Apply",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply",
+          "text": "The MS in Applied Data Science program requires two letters of recommendation. We strongly recommend that at least one letter is written by someone such as a direct manager/supervisor or internship supervisor who can attest to skills you demonstrated or gained though a professional workplace experience (e.g., leadership, teamwork, collaboration, initiative, management, other).\nNote: Letters of recommendation can be uploaded after you submit your application. Recommended sources for letters of recommendation include: professors; supervisors or managers; professional mentors.\nWe do not accept letters of recommendation from family members, friends, or peers.",
+          "path": [
+            "How to Apply",
+            "Letters of Recommendation"
+          ],
+          "section_breadcrumb": "How to Apply > Letters of Recommendation",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N4"
+            }
+          ],
+          "chunk_id": "chunk:a9707dea9eed7fca",
+          "owner_node_id": "section:d930740da6ee2b4b",
+          "page_id": "page:7fb2f6ecae8feeeb",
+          "internal_metadata": {
+            "source_type": "p",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E3",
+          "status": "accepted",
+          "page_title": "How to Apply",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply",
+          "text": "The candidate statement is a key part of your application. The admissions committee pays careful attention to how you understand and present your aims and qualifications. The application will include a prompt with detailed instructions on the information the program is looking for in your candidate statement.\nBest practices to keep in mind as you write:\n- Do not restate your resume.\n- Your statement should not exceed 700 words.",
+          "path": [
+            "How to Apply",
+            "Candidate Statement"
+          ],
+          "section_breadcrumb": "How to Apply > Candidate Statement",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N5"
+            }
+          ],
+          "chunk_id": "chunk:a6fb80ecf5cc4376",
+          "owner_node_id": "section:da3fa785bbe70053",
+          "page_id": "page:7fb2f6ecae8feeeb",
+          "internal_metadata": {
+            "source_type": "body_text",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E4",
+          "status": "accepted",
+          "page_title": "How to Apply",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply",
+          "text": "The Master’s in Applied Data Science admissions committee will review your resume. We encourage you to take the time to carefully update the resume you submit to us.\n- Work experience, including internships and part-time positions in the analytics/data science space\n- Major accomplishments and awards\n- Educational background, including areas of study\n- Professional conferences attended\n- Undergraduate or graduate GPA",
+          "path": [
+            "How to Apply",
+            "Resume/CV"
+          ],
+          "section_breadcrumb": "How to Apply > Resume/CV",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N6"
+            }
+          ],
+          "chunk_id": "chunk:cdf962b12f767212",
+          "owner_node_id": "section:6675aea9911ef3cb",
+          "page_id": "page:7fb2f6ecae8feeeb",
+          "internal_metadata": {
+            "source_type": "body_text",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E5",
+          "status": "accepted",
+          "page_title": "How to Apply",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply",
+          "text": "Your application contains a section on programming skills. Although applicants with limited skills in R or Python can and do get accepted into the program, the admissions committee values prior programming experience. Include a PDF of no more than two pages demonstrating current programming language skills.\nExamples include a PDF submission of work completed in R or Python. The programming supplement must be shared as a PDF file. We are looking for the following in your code (see below). Please note your code does not need to contain all of the below.\n- Ingest data from csv\n- Manage different data types\n- Use your function for data analysis\n- Visualize data\n- Wrangle data\n- Write your own function\n- Import libraries\nOne video prompt response is required; the other is optional. Each video should be approximately 1:30 minutes in length.",
+          "path": [
+            "How to Apply",
+            "Programming Supplement"
+          ],
+          "section_breadcrumb": "How to Apply > Programming Supplement",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N7"
+            }
+          ],
+          "chunk_id": "chunk:1c4fa8cad159ed8f",
+          "owner_node_id": "section:e8db29ddcca3c627",
+          "page_id": "page:7fb2f6ecae8feeeb",
+          "internal_metadata": {
+            "source_type": "body_text",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E6",
+          "status": "accepted",
+          "page_title": "How to Apply",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply",
+          "text": "The MS in Applied Data Science requires short, recorded videos to a given prompt(s) within the application. These short videos give applicants an alternative means to outline why they are a strong fit for the MS in Applied Data Science program.",
+          "path": [
+            "How to Apply",
+            "Programming Supplement",
+            "Virtual Portfolio"
+          ],
+          "section_breadcrumb": "How to Apply > Programming Supplement > Virtual Portfolio",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N7"
+            },
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N8"
+            }
+          ],
+          "chunk_id": "chunk:f3e1efda5949496f",
+          "owner_node_id": "section:ae061c877cf9773b",
+          "page_id": "page:7fb2f6ecae8feeeb",
+          "internal_metadata": {
+            "source_type": "p",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E8",
+          "status": "accepted",
+          "page_title": "How to Apply",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply",
+          "text": "Applicants to the Master’s in Applied Data Science program who do not meet the English Language Proficiency criteria must submit proof of English language proficiency.\nMinimum scores for the Master’s in Applied Data Science program: TOEFL: 102 (prior requirement) or 5 (current requirement; no subscore requirement); IELTS, 7 (no subscore requirement).\nPlease review our waiver policy here .",
+          "path": [
+            "How to Apply",
+            "English Language Requirement"
+          ],
+          "section_breadcrumb": "How to Apply > English Language Requirement",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N10"
+            }
+          ],
+          "chunk_id": "chunk:90f070381d573878",
+          "owner_node_id": "section:fdc4d132e8a0caa5",
+          "page_id": "page:7fb2f6ecae8feeeb",
+          "internal_metadata": {
+            "source_type": "p",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E9",
+          "status": "accepted",
+          "page_title": "How to Apply",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply",
+          "text": "When applying to the program, only your unofficial transcripts are required. If you are admitted into the program, then official transcripts must be sent to the following (note a bachelor’s degree is required to apply to the program):\nPlease have your institution send your e-transcripts directly to:\napplieddatascience-admissions@uchicago.edu\nIf your institution cannot send your documents electronically, please have them send your transcripts to the following mailing address.\nPlease note, if documents are being mailed, we must receive them in their original, school-sealed envelope. If your documents are not received in a school-sealed envelope, they will be considered unofficial. Additionally, if your transcript does not list degree conferral information (degree earned and date of conferral), we will also need to receive an attested copy of your degree certificate.",
+          "path": [
+            "How to Apply",
+            "Transcripts from all previous colleges and universities attended"
+          ],
+          "section_breadcrumb": "How to Apply > Transcripts from all previous colleges and universities attended",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N11"
+            }
+          ],
+          "chunk_id": "chunk:d232ed0eefb19bca",
+          "owner_node_id": "section:70cf0aae09904173",
+          "page_id": "page:7fb2f6ecae8feeeb",
+          "internal_metadata": {
+            "source_type": "body_text",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E10",
+          "status": "accepted",
+          "page_title": "How to Apply",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply",
+          "text": "of conferral), we will also need to receive an attested copy of your degree certificate.\nAttention: MS in Applied Data Science Admissions\n455 N Cityfront Plaza Dr., Suite 2800",
+          "path": [
+            "How to Apply",
+            "Transcripts from all previous colleges and universities attended"
+          ],
+          "section_breadcrumb": "How to Apply > Transcripts from all previous colleges and universities attended",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N11"
+            }
+          ],
+          "chunk_id": "chunk:e161bc282cce71dc",
+          "owner_node_id": "section:70cf0aae09904173",
+          "page_id": "page:7fb2f6ecae8feeeb",
+          "internal_metadata": {
+            "source_type": "body_text",
+            "score": null,
+            "score_breakdown": {}
+          }
+        },
+        {
+          "evidence_id": "E11",
+          "status": "accepted",
+          "page_title": "How to Apply",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply",
+          "text": "There is a $90 non-refundable application fee. For questions regarding an application fee waiver, please refer to the Physical Sciences Division fee waiver policy .",
+          "path": [
+            "How to Apply",
+            "Application Fee"
+          ],
+          "section_breadcrumb": "How to Apply > Application Fee",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "fetch_graph_content",
+              "group_ref": "N12"
+            }
+          ],
+          "chunk_id": "chunk:e3fee55dc0b4b283",
+          "owner_node_id": "section:d160960cbcdd5750",
+          "page_id": "page:7fb2f6ecae8feeeb",
+          "internal_metadata": {
+            "source_type": "p",
+            "score": null,
+            "score_breakdown": {}
+          }
+        }
+      ],
+      "time_sec": 23.782,
+      "low_confidence": false,
+      "error": null,
+      "progress_summary": {
+        "summary_covering": "Page: P6 (How to Apply)\n- N2 (Master’s in Applied Data Science Application Requirements): Checked, not useful (general info only).\n- N4 (Letters of Recommendation): Checked, useful (E2: two letters required).\n- N5 (Candidate Statement): Checked, useful (E3: candidate statement required).\n- N6 (Resume/CV): Checked, useful (E4: resume/CV required).\n- N7 (Programming Supplement): Checked, useful (E5: programming supplement required).\n- N8 (Virtual Portfolio): Checked, useful (E6: recorded videos required).\n- N9 (International Students): Checked, not useful (visa info only).\n- N10 (English Language Requirement): Checked, useful (E8: proof of English proficiency required if applicable).\n- N11 (Transcripts): Checked, useful (E9, E10: unofficial transcripts at application, official if admitted).\n- N12 (Application Fee): Checked, useful (E11: $90 fee required).\n\nAll required materials are now covered: letters of recommendation, candidate statement, resume/CV, programming supplement, virtual portfolio, English language proficiency (if applicable), transcripts, and application fee. No missing items.",
+        "decision_trace_narrative": "Turn 1: Fetched P6 N2 (Application Requirements) to find a list of materials; found only general info, so continued to specific nodes.\nTurn 2: Fetched P6 N4 (Letters of Recommendation) and N5 (Candidate Statement) to get details on those materials; both provided required materials.\nTurn 3: Fetched P6 N6 (Resume/CV) and N7 (Programming Supplement) to cover more materials; both provided required materials.\nTurn 4: Fetched P6 N8 (Virtual Portfolio) and N9 (International Students) to check for additional materials; N8 provided required videos, N9 was not useful.\nTurn 5: Fetched P6 N10 (English Language Requirement) and N11 (Transcripts) to cover remaining materials; both provided required materials.\nTurn 6: Fetched P6 N12 (Application Fee) to confirm fee requirement; provided required fee. All nodes on the page have been checked."
+      },
+      "raw_debug": {
+        "response": {
+          "answer": "To apply for the MS in Applied Data Science, you must submit the following materials:\n\n- **Two letters of recommendation** [1]\n- **Candidate statement** (max 700 words) [2]\n- **Resume/CV** [3]\n- **Programming supplement** (PDF, max 2 pages) [4]\n- **Virtual portfolio** (recorded video responses to prompts) [5]\n- **Proof of English language proficiency** (if applicable) [6]\n- **Unofficial transcripts** from all previous colleges/universities (official transcripts required if admitted) [7][8]\n- **$90 non-refundable application fee** [9]",
+          "citations": [
+            {
+              "index": 1,
+              "title": "How to Apply",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply",
+              "snippet": "The MS in Applied Data Science program requires two letters of recommendation. We strongly recommend that at least one letter is written by someone such as a direct manager/supervi"
+            },
+            {
+              "index": 2,
+              "title": "How to Apply",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply",
+              "snippet": "The candidate statement is a key part of your application. The admissions committee pays careful attention to how you understand and present your aims and qualifications. The appli"
+            },
+            {
+              "index": 3,
+              "title": "How to Apply",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply",
+              "snippet": "The Master’s in Applied Data Science admissions committee will review your resume. We encourage you to take the time to carefully update the resume you submit to us. - Work experie"
+            },
+            {
+              "index": 4,
+              "title": "How to Apply",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply",
+              "snippet": "Your application contains a section on programming skills. Although applicants with limited skills in R or Python can and do get accepted into the program, the admissions committee"
+            },
+            {
+              "index": 5,
+              "title": "How to Apply",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply",
+              "snippet": "The MS in Applied Data Science requires short, recorded videos to a given prompt(s) within the application. These short videos give applicants an alternative means to outline why t"
+            },
+            {
+              "index": 6,
+              "title": "How to Apply",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply",
+              "snippet": "Applicants to the Master’s in Applied Data Science program who do not meet the English Language Proficiency criteria must submit proof of English language proficiency. Minimum scor"
+            },
+            {
+              "index": 7,
+              "title": "How to Apply",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply",
+              "snippet": "When applying to the program, only your unofficial transcripts are required. If you are admitted into the program, then official transcripts must be sent to the following (note a b"
+            },
+            {
+              "index": 8,
+              "title": "How to Apply",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply",
+              "snippet": "of conferral), we will also need to receive an attested copy of your degree certificate. Attention: MS in Applied Data Science Admissions 455 N Cityfront Plaza Dr., Suite 2800"
+            },
+            {
+              "index": 9,
+              "title": "How to Apply",
+              "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply",
+              "snippet": "There is a $90 non-refundable application fee. For questions regarding an application fee waiver, please refer to the Physical Sciences Division fee waiver policy ."
+            }
+          ],
+          "debug": {
+            "tool_turns": 3,
+            "stop_reason": "sufficient_evidence",
+            "evidence_count": 9,
+            "sufficient": true,
+            "missing": "",
+            "log_path": "C:\\Users\\ss363\\Desktop\\Archive\\ads_rag_chatbot\\pipeline_grag_v2\\log\\2026-08-04_014042_d50d80eefe7f.json",
+            "run_id": "d50d80eefe7f"
+          }
+        },
+        "run_id": "d50d80eefe7f",
+        "rewritten_queries": [
+          {
+            "id": "q1",
+            "query": "application materials required for MS in Applied Data Science",
+            "target": "university-program"
+          }
+        ],
+        "judgment": {
+          "sufficient": true,
+          "missing": "",
+          "comment": "Page: P6 (How to Apply)\n- N2 (Master’s in Applied Data Science Application Requirements): Checked, not useful (general info only).\n- N4 (Letters of Recommendation): Checked, useful (E2: two letters required).\n- N5 (Candidate Statement): Checked, useful (E3: candidate statement required).\n- N6 (Resume/CV): Checked, useful (E4: resume/CV required).\n- N7 (Programming Supplement): Checked, useful (E5: programming supplement required).\n- N8 (Virtual Portfolio): Checked, useful (E6: recorded videos required).\n- N9 (International Students): Checked, not useful (visa info only).\n- N10 (English Language Requirement): Checked, useful (E8: proof of English proficiency required if applicable).\n- N11 (Transcripts): Checked, useful (E9, E10: unofficial transcripts at application, official if admitted).\n- N12 (Application Fee): Checked, useful (E11: $90 fee required).\n\nAll required materials are now covered: letters of recommendation, candidate statement, resume/CV, programming supplement, virtual portfolio, English language proficiency (if applicable), transcripts, and application fee. No missing items."
+        },
+        "stop_reason": "sufficient_evidence",
+        "fallback": {
+          "triggered": false,
+          "pages_selected": [],
+          "reason": ""
+        },
+        "metrics": {
+          "agent_turns": 3,
+          "tool_calls": 3,
+          "judge_calls": 2,
+          "llm_calls": 10,
+          "valid_fetch_count": 2,
+          "invalid_fetch_count": 0,
+          "accepted_evidence_count": 9,
+          "stop_reason": "sufficient_evidence",
+          "fallback_triggered": false
+        },
+        "usage": {
+          "prompt_tokens": 11158,
+          "completion_tokens": 1868,
+          "total_tokens": 13026,
+          "llm_calls": 10
+        },
+        "progress_summary_history": [
+          {
+            "turn": 1,
+            "summary_covering": "No pages have been inspected yet. The question asks for application materials for the MS in Applied Data Science, but no evidence has been gathered. Missing: all application materials.",
+            "decision_trace_narrative": "Turn 1: The agent decided to inspect the 'How to Apply' page (P6) because it directly covers application materials. The inspection succeeded, but no nodes have been fetched or evaluated yet.",
+            "sufficient": false,
+            "missing": "All application materials for the MS in Applied Data Science."
+          },
+          {
+            "turn": 2,
+            "summary_covering": "Page P6 (How to Apply): Checked nodes N2 (Application Requirements), N4 (Letters of Recommendation), N5 (Candidate Statement), N6 (Resume/CV), and N7 (Programming Supplement). N2 was not directly useful as it only provides general process info. N4, N5, N6, and N7 were useful and provided evidence for required materials: two letters of recommendation, candidate statement, resume/CV, programming supplement (including code PDF and video responses). Still missing: any other required materials not yet covered, such as transcripts, test scores, or application fee.",
+            "decision_trace_narrative": "Turn 1: Fetched the 'How to Apply' page and inspected its nodes. Reason: The page likely lists application materials. Outcome: Found nodes for specific materials (letters, statement, resume, programming supplement) and fetched them. Turn 2: Fetched the main requirements node (N2) and the specific material nodes (N4-N7). Reason: To obtain detailed list of required materials. Outcome: N2 was not useful, but N4-N7 provided evidence for several required materials. No re-queries of already-fetched nodes occurred.",
+            "sufficient": false,
+            "missing": "Other potential application materials such as transcripts, test scores (GRE/TOEFL), application fee, or any additional documents not yet covered by evidence."
+          },
+          {
+            "turn": 3,
+            "summary_covering": "Page: P6 (How to Apply)\n- N2 (Master’s in Applied Data Science Application Requirements): Checked, not useful (general info only).\n- N4 (Letters of Recommendation): Checked, useful (E2: two letters required).\n- N5 (Candidate Statement): Checked, useful (E3: candidate statement required).\n- N6 (Resume/CV): Checked, useful (E4: resume/CV required).\n- N7 (Programming Supplement): Checked, useful (E5: programming supplement required).\n- N8 (Virtual Portfolio): Checked, useful (E6: recorded videos required).\n- N9 (International Students): Checked, not useful (visa info only).\n- N10 (English Language Requirement): Checked, useful (E8: proof of English proficiency required if applicable).\n- N11 (Transcripts): Checked, useful (E9, E10: unofficial transcripts at application, official if admitted).\n- N12 (Application Fee): Checked, useful (E11: $90 fee required).\n\nAll required materials are now covered: letters of recommendation, candidate statement, resume/CV, programming supplement, virtual portfolio, English language proficiency (if applicable), transcripts, and application fee. No missing items.",
+            "decision_trace_narrative": "Turn 1: Fetched P6 N2 (Application Requirements) to find a list of materials; found only general info, so continued to specific nodes.\nTurn 2: Fetched P6 N4 (Letters of Recommendation) and N5 (Candidate Statement) to get details on those materials; both provided required materials.\nTurn 3: Fetched P6 N6 (Resume/CV) and N7 (Programming Supplement) to cover more materials; both provided required materials.\nTurn 4: Fetched P6 N8 (Virtual Portfolio) and N9 (International Students) to check for additional materials; N8 provided required videos, N9 was not useful.\nTurn 5: Fetched P6 N10 (English Language Requirement) and N11 (Transcripts) to cover remaining materials; both provided required materials.\nTurn 6: Fetched P6 N12 (Application Fee) to confirm fee requirement; provided required fee. All nodes on the page have been checked.",
+            "sufficient": true,
+            "missing": ""
+          }
+        ],
+        "node_evaluation_log": {
+          "P6 (How to Apply)": {
+            "N2 (Master’s in Applied Data Science Application Requirements)": {
+              "node_id": "section:23865d257571496f",
+              "path": [
+                "How to Apply",
+                "Master’s in Applied Data Science Application Requirements"
+              ],
+              "eff_evidence": [],
+              "comment": "This node provides general application process information (portal open, full/part-time, committee review) but does not list specific required materials, so it is not directly useful for the question."
+            },
+            "N4 (Letters of Recommendation)": {
+              "node_id": "section:d930740da6ee2b4b",
+              "path": [
+                "How to Apply",
+                "Letters of Recommendation"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E2",
+                  "chunk_id": "chunk:a9707dea9eed7fca",
+                  "text_preview": "The MS in Applied Data Science program requires two letters of recommendation. We strongly recommend that at least one letter is written by someone su"
+                }
+              ],
+              "comment": "E2 specifies that two letters of recommendation are required and provides guidance on recommenders, directly answering part of the question about application materials."
+            },
+            "N5 (Candidate Statement)": {
+              "node_id": "section:da3fa785bbe70053",
+              "path": [
+                "How to Apply",
+                "Candidate Statement"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E3",
+                  "chunk_id": "chunk:a6fb80ecf5cc4376",
+                  "text_preview": "The candidate statement is a key part of your application. The admissions committee pays careful attention to how you understand and present your aims"
+                }
+              ],
+              "comment": "E3 states that a candidate statement is required and provides details on its purpose and length limit, directly relevant to the question."
+            },
+            "N6 (Resume/CV)": {
+              "node_id": "section:6675aea9911ef3cb",
+              "path": [
+                "How to Apply",
+                "Resume/CV"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E4",
+                  "chunk_id": "chunk:cdf962b12f767212",
+                  "text_preview": "The Master’s in Applied Data Science admissions committee will review your resume. We encourage you to take the time to carefully update the resume yo"
+                }
+              ],
+              "comment": "E4 indicates that a resume/CV is required and lists what to include, directly relevant to the question."
+            },
+            "N7 (Programming Supplement)": {
+              "node_id": "section:e8db29ddcca3c627",
+              "path": [
+                "How to Apply",
+                "Programming Supplement"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E5",
+                  "chunk_id": "chunk:1c4fa8cad159ed8f",
+                  "text_preview": "Your application contains a section on programming skills. Although applicants with limited skills in R or Python can and do get accepted into the pro"
+                },
+                {
+                  "evidence_ref": "E6",
+                  "chunk_id": "chunk:f3e1efda5949496f",
+                  "text_preview": "The MS in Applied Data Science requires short, recorded videos to a given prompt(s) within the application. These short videos give applicants an alte"
+                }
+              ],
+              "comment": "E5 describes the programming supplement requirement (PDF of code) and E6 mentions required video responses, both are application materials needed for the program."
+            },
+            "N8 (Virtual Portfolio)": {
+              "node_id": "section:ae061c877cf9773b",
+              "path": [
+                "How to Apply",
+                "Programming Supplement",
+                "Virtual Portfolio"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E6",
+                  "chunk_id": "chunk:f3e1efda5949496f",
+                  "text_preview": "The MS in Applied Data Science requires short, recorded videos to a given prompt(s) within the application. These short videos give applicants an alte"
+                }
+              ],
+              "comment": "E6 directly states that the MS in Applied Data Science requires short recorded videos as part of the application, which is a required application material."
+            },
+            "N9 (International Students)": {
+              "node_id": "section:6401bd9a64b0e5cc",
+              "path": [
+                "How to Apply",
+                "International Students"
+              ],
+              "eff_evidence": [],
+              "comment": "E7 discusses visa eligibility and online program options, but does not list any specific application materials required for submission."
+            },
+            "N10 (English Language Requirement)": {
+              "node_id": "section:fdc4d132e8a0caa5",
+              "path": [
+                "How to Apply",
+                "English Language Requirement"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E8",
+                  "chunk_id": "chunk:90f070381d573878",
+                  "text_preview": "Applicants to the Master’s in Applied Data Science program who do not meet the English Language Proficiency criteria must submit proof of English lang"
+                }
+              ],
+              "comment": "E8 specifies that applicants who do not meet English proficiency criteria must submit proof of proficiency, including minimum TOEFL and IELTS scores, which is a required application material."
+            },
+            "N11 (Transcripts from all previous colleges and universities attended)": {
+              "node_id": "section:70cf0aae09904173",
+              "path": [
+                "How to Apply",
+                "Transcripts from all previous colleges and universities attended"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E9",
+                  "chunk_id": "chunk:d232ed0eefb19bca",
+                  "text_preview": "When applying to the program, only your unofficial transcripts are required. If you are admitted into the program, then official transcripts must be s"
+                },
+                {
+                  "evidence_ref": "E10",
+                  "chunk_id": "chunk:e161bc282cce71dc",
+                  "text_preview": "of conferral), we will also need to receive an attested copy of your degree certificate.\nAttention: MS in Applied Data Science Admissions\n455 N Cityfr"
+                }
+              ],
+              "comment": "E9 and E10 detail the transcript requirements: unofficial transcripts at application, official transcripts if admitted, and additional degree certificate if needed, all of which are application materials."
+            },
+            "N12 (Application Fee)": {
+              "node_id": "section:d160960cbcdd5750",
+              "path": [
+                "How to Apply",
+                "Application Fee"
+              ],
+              "eff_evidence": [
+                {
+                  "evidence_ref": "E11",
+                  "chunk_id": "chunk:e3fee55dc0b4b283",
+                  "text_preview": "There is a $90 non-refundable application fee. For questions regarding an application fee waiver, please refer to the Physical Sciences Division fee w"
+                }
+              ],
+              "comment": "E11 states the $90 non-refundable application fee, which is a required application material."
+            }
+          }
+        },
+        "log_path": "C:\\Users\\ss363\\Desktop\\Archive\\ads_rag_chatbot\\pipeline_grag_v2\\log\\2026-08-04_014042_d50d80eefe7f.json"
+      }
+    }
+  },
+  "run_batch_id": "20260804T013937"
+}

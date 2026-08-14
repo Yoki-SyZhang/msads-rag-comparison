@@ -1,0 +1,40 @@
+# Environment
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Jupyter
+notebooks/.ipynb_checkpoints/
+*.ipynb_checkpoints/
+
+vector_store/
+
+# Scraped data
+data/raw/*
+!data/raw/README.md
+
+# Chunks (regenerable from raw + cleaner + chunker)
+data/chunks/
+
+# Vector database (ChromaDB persists here at runtime)
+data/chroma_db/
+
+# Evaluation results (generated artifacts)
+eval/results/*
+!eval/results/README.md
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/settings.json
+.idea/

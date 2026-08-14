@@ -1,0 +1,36 @@
+# Secrets
+.env
+**/.env
+
+# Python
+__pycache__/
+**/__pycache__/
+*.pyc
+.pytest_cache/
+
+# Regenerable scrape/index artifacts (rebuild via each pipeline's build scripts)
+pipeline_flatrag/data/raw/
+pipeline_flatrag/data/cleaned/
+pipeline_flatrag/data/chunks/
+pipeline_flatrag/data/chroma_db/
+pipeline_flatrag/data/qa_log/
+
+pipeline_grag/raw/
+pipeline_grag/processed/
+pipeline_grag/index/
+pipeline_grag/log/
+
+pipeline_grag_v2/raw/
+pipeline_grag_v2/processed/
+pipeline_grag_v2/index/
+pipeline_grag_v2/log/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Claude Code local machine state (not meant to be shared)
+**/.claude/settings.local.json
+.claude/scheduled_tasks.lock

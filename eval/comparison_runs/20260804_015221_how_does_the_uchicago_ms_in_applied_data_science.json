@@ -1,0 +1,738 @@
+{
+  "schema_version": 2,
+  "timestamp": "2026-08-04T01:52:21.690233",
+  "question": "How does the UChicago MS in Applied Data Science compare to Northwestern's MS in Data Science program?",
+  "question_id": "E04",
+  "question_meta": {
+    "category": "edge",
+    "type": "out_of_scope",
+    "difficulty": "medium",
+    "expected_behavior": "refuse_out_of_scope"
+  },
+  "results": {
+    "pipeline_flatrag": {
+      "pipeline_id": "pipeline_flatrag",
+      "display_name": "FlatRAG",
+      "answer": "I can only answer questions about the UChicago MS in Applied Data Science program.",
+      "sources": [
+        {
+          "page_title": "Faqs",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/"
+        },
+        {
+          "page_title": "In Person Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/"
+        },
+        {
+          "page_title": "Online Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/online-program/"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "tool_calls": [
+            {
+              "name": "semantic_search",
+              "args": {
+                "query": "comparison with Northwestern MS in Data Science program",
+                "top_k": 5
+              }
+            },
+            {
+              "name": "list_page_sections",
+              "args": {
+                "url": "faqs"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "semantic_search",
+              "content": "Semantic search returned 5 result(s):\n\n[0] Faqs | Application Process > What’s the difference between the MS in Applied Data Science and the MS in Data Science programs at UChicago? (distance: 0.385)\n[Page: Faqs | Section: Application Process > What’s the difference between the MS in Applied Data Science and the MS in Data Science programs at UChicago?]\n\nThe two programs share a strong foundation in data science but differ in structure, location, and focus. The MS in Data Science is a 10-course ...\n\n[1] In Person Program | Tailor Your Data Science Journey (distance: 0.507)\n[Page: In Person Program | Section: Tailor Your Data Science Journey]\n\nThe In-Person MS in Applied Data Science program at the University of Chicago prepares students to work at the intersection of data science, machine learning, and artificial intelligence through rigorous, applied coursework and r...\n\n[2] Faqs | MBA/MS > What are the main differences in programs and outcomes between the MBA/MS in Applied Data Science compared to Computer Science? (distance: 0.532)\n[Page: Faqs | Section: MBA/MS > What are the main differences in programs and outcomes between the MBA/MS in Applied Data Science compared to Computer Science?]\n\nThe fields of Statistics, Mathematics, and Computer Science intersect with industry domains in different ways. The MPCS program focuses on...\n\n[3] Online Program | Academic Rigor Meets Work/Life Balance (distance: 0.558)\n[Page: Online Program | Section: Academic Rigor Meets Work/Life Balance]\n\nThe Online MS in Applied Data Science program at the University of Chicago delivers a structured online learning experience with live classes designed for working professionals. You will benefit from the same top faculty, brig...\n\n[4] In Person Program | By and For Data Science Innovators (distance: 0.562)\n[Page: In Person Program | Section: By and For Data Science Innovators]\n\nYou will earn UChicago’s Master’s in Applied Data Science by successfully completing the required curriculum an"
+            },
+            {
+              "name": "list_page_sections",
+              "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/:\n  - \"2-Year Thesis Track Program > How many spots are available in the new 2-year program?\" (1 chunk)\n  - \"2-Year Thesis Track Program > If I am admitted to the In-Person, Full-Time 1-year program, may I take any of the 2-year program electives?\" (1 chunk)\n  - \"2-Year Thesis Track Program > May I switch between the 1- and 2-year programs after officially enrolling in the MS-ADS program?\" (1 chunk)\n  - \"2-Year Thesis Track Program > What is the 2-year program's thesis requirement?\" (1 chunk)\n  - \"2-Year Thesis Track Program > What is the new 2-year thesis track program (18 courses), and how is it different from the 1-year program (12 courses)?\" (2 chunks)\n  - \"2-Year Thesis Track Program > When can I apply for the 2-year thesis track program?\" (1 chunk)\n  - \"Application Process > Do I need to provide my recommenders with instructions?\" (1 chunk)\n  - \"Application Process > Does the admissions office allow recommenders to email their letter directly as an attachment to be included in an applicant’s file?\" (1 chunk)\n  - \"Application Process > How do I submit the materials that will accompany my Master's in Applied Data Science application?\" (1 chunk)\n  - \"Application Process > How will I be notified that I am admitted to the Master's in Applied Data Science program?\" (1 chunk)\n  - \"Application Process > I took the GRE and/or GMAT and want to include my score(s) with my Master's in Applied Data Science application.\" (1 chunk)\n  - \"Application Process > I took the TOEFL over two years ago. Can I still use those TOEFL results?\" (1 chunk)\n  - \"Application Process > If I am admitted to the Master's in Applied Data Science program, what do I do next?\" (1 chunk)\n  - \"Application Process > If I finish my Master's in Applied Data Science application before the deadline, will I receive my decision early?\" (1 chunk)\n  - \"Application Process > Is the GRE or GMAT required for th"
+            }
+          ],
+          "judger": {
+            "completeness": "partial",
+            "useful_indices": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "decision": "done",
+            "candidate_chunk_count": 5,
+            "accepted_chunk_count": 5
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "text": "[Page: Faqs | Section: Application Process > What’s the difference between the MS in Applied Data Science and the MS in Data Science programs at UChicago?]\n\nThe two programs share a strong foundation in data science but differ in structure, location, and focus. The MS in Data Science is a 10-course program based on UChicago’s Hyde Park campus. It includes a comprehensive research project and is designed for students who want to dive deeper into the theoretical and research side of data science—often as preparation for PhD study or research-focused careers. The MS in Applied Data Science program offers both a 12-course track and an 18-course thesis track. It is offered in online and in-person formats, with in-person classes held at the NBC Tower in downtown Chicago. The program focuses on applying data science and machine learning methods to real-world problems through hands-on coursework, industry collaborations, and a two-quarter capstone or research project. For a more detailed breakdown of the differences between the two programs, check",
+          "chunk_id": "education__masters_programs__ms_in_applied_data_science__faqs__what_s_the_difference_between_the_ms_in_applied_data_science_and_the_ms_in_data_science_programs_at_uchicago__23",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/",
+          "page_title": "Faqs",
+          "section": "What’s the difference between the MS in Applied Data Science and the MS in Data Science programs at UChicago?",
+          "section_breadcrumb": "Application Process > What’s the difference between the MS in Applied Data Science and the MS in Data Science programs at UChicago?",
+          "content_type": "text",
+          "program_type": "general",
+          "distance": 0.38502219319343567
+        },
+        {
+          "text": "[Page: In Person Program | Section: Tailor Your Data Science Journey]\n\nThe In-Person MS in Applied Data Science program at the University of Chicago prepares students to work at the intersection of data science, machine learning, and artificial intelligence through rigorous, applied coursework and real-world projects. Complete your master’s degree full- or part-time with UChicago’s In-Person MS in Applied Data Science program. While many In-Person students are early in their careers, the most competitive applicants will have at least 1 year of full-time work experience and 1 or more relevant, sustained internships. For those seeking part-time study and those with more years of full-time work experience (3+), our Online program is optimized for you .",
+          "chunk_id": "education__masters_programs__in_person_program__tailor_your_data_science_journey__1",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+          "page_title": "In Person Program",
+          "section": "Tailor Your Data Science Journey",
+          "section_breadcrumb": "Tailor Your Data Science Journey",
+          "content_type": "text",
+          "program_type": "in_person",
+          "distance": 0.5070291757583618
+        },
+        {
+          "text": "[Page: Faqs | Section: MBA/MS > What are the main differences in programs and outcomes between the MBA/MS in Applied Data Science compared to Computer Science?]\n\nThe fields of Statistics, Mathematics, and Computer Science intersect with industry domains in different ways. The MPCS program focuses on the center of Computer Science, including Software Engineering, High Performance Computing, Data Analytics, and Application Development. The MS-ADS Program focuses at the intersection of multiple fields, such as Computer Science, Mathematics, and Statistics (including Statistical Inference, Linear/Non-Linear Models, Machine Learning, Natural Language Processing, and Deep Learning). The outcomes for MPCS students include Software Engineer (Developer), Senior Software Engineering Management, Software/Hardware Architect, and Senior Cyber Security Engineer. The outcomes for students in MS-ADS include roles as Data Scientist (most common), Senior Data Science Consultant, Business Intelligence (BI) Director, Data Visualization Manager, Data Analytics Business Intelligence (BI) Director, Data Visualization Manager, Data Analytics Engineer, and AI Solution Architect.",
+          "chunk_id": "education__masters_programs__ms_in_applied_data_science__faqs__what_are_the_main_differences_in_programs_and_outcomes_between_the_mba_ms_in_applied_data_science_compared_to_computer_science__41",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/",
+          "page_title": "Faqs",
+          "section": "What are the main differences in programs and outcomes between the MBA/MS in Applied Data Science compared to Computer Science?",
+          "section_breadcrumb": "MBA/MS > What are the main differences in programs and outcomes between the MBA/MS in Applied Data Science compared to Computer Science?",
+          "content_type": "text",
+          "program_type": "general",
+          "distance": 0.5323089361190796
+        },
+        {
+          "text": "[Page: Online Program | Section: Academic Rigor Meets Work/Life Balance]\n\nThe Online MS in Applied Data Science program at the University of Chicago delivers a structured online learning experience with live classes designed for working professionals. You will benefit from the same top faculty, bright peer group, and academic rigor as the In-Person program. You may complete the program full- or part-time. Full-time and part-time students begin in Autumn quarter. Please visit the In-Person program page if you are interested in exploring those full- and part-time options for entrance Autumn quarter. Online Program Director, Arnab Bose, PhD",
+          "chunk_id": "education__masters_programs__online_program__academic_rigor_meets_work_life_balance__1",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/online-program/",
+          "page_title": "Online Program",
+          "section": "Academic Rigor Meets Work/Life Balance",
+          "section_breadcrumb": "Academic Rigor Meets Work/Life Balance",
+          "content_type": "text",
+          "program_type": "online",
+          "distance": 0.557553768157959
+        },
+        {
+          "text": "[Page: In Person Program | Section: By and For Data Science Innovators]\n\nYou will earn UChicago’s Master’s in Applied Data Science by successfully completing the required curriculum and our tailored, multi-quarter Career Seminar. To keep up with the rapidly evolving field and job market, you will be challenged by our rigorous curriculum that is designed by and for data science innovators and leaders. Courses are reviewed annually to ensure the content keeps pace with the rapidly evolving landscape of data science. You have the flexibility to pursue the Master’s in Applied Data Science degree on a part- or full-time schedule. Part-time students enroll in two courses each quarter and take their courses in the evenings or on Saturdays. Full-time students take three courses per quarter. Some of their courses may be offered during the day. All courses are taught at the NBC Tower or Gleacher Center in downtown Chicago.",
+          "chunk_id": "education__masters_programs__in_person_program__by_and_for_data_science_innovators__13",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+          "page_title": "In Person Program",
+          "section": "By and For Data Science Innovators",
+          "section_breadcrumb": "By and For Data Science Innovators",
+          "content_type": "text",
+          "program_type": "in_person",
+          "distance": 0.5624054074287415
+        }
+      ],
+      "time_sec": 7.102,
+      "low_confidence": true,
+      "error": null,
+      "raw_debug": {
+        "answer": "I can only answer questions about the UChicago MS in Applied Data Science program.",
+        "sources": [
+          {
+            "page_title": "Faqs",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/"
+          },
+          {
+            "page_title": "In Person Program",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/"
+          },
+          {
+            "page_title": "Online Program",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/online-program/"
+          }
+        ],
+        "completeness": "partial",
+        "low_confidence": true,
+        "attempts": 1,
+        "agent_steps": [
+          {
+            "step": 1,
+            "tool_calls": [
+              {
+                "name": "semantic_search",
+                "args": {
+                  "query": "comparison with Northwestern MS in Data Science program",
+                  "top_k": 5
+                }
+              },
+              {
+                "name": "list_page_sections",
+                "args": {
+                  "url": "faqs"
+                }
+              }
+            ],
+            "tool_results": [
+              {
+                "name": "semantic_search",
+                "content": "Semantic search returned 5 result(s):\n\n[0] Faqs | Application Process > What’s the difference between the MS in Applied Data Science and the MS in Data Science programs at UChicago? (distance: 0.385)\n[Page: Faqs | Section: Application Process > What’s the difference between the MS in Applied Data Science and the MS in Data Science programs at UChicago?]\n\nThe two programs share a strong foundation in data science but differ in structure, location, and focus. The MS in Data Science is a 10-course ...\n\n[1] In Person Program | Tailor Your Data Science Journey (distance: 0.507)\n[Page: In Person Program | Section: Tailor Your Data Science Journey]\n\nThe In-Person MS in Applied Data Science program at the University of Chicago prepares students to work at the intersection of data science, machine learning, and artificial intelligence through rigorous, applied coursework and r...\n\n[2] Faqs | MBA/MS > What are the main differences in programs and outcomes between the MBA/MS in Applied Data Science compared to Computer Science? (distance: 0.532)\n[Page: Faqs | Section: MBA/MS > What are the main differences in programs and outcomes between the MBA/MS in Applied Data Science compared to Computer Science?]\n\nThe fields of Statistics, Mathematics, and Computer Science intersect with industry domains in different ways. The MPCS program focuses on...\n\n[3] Online Program | Academic Rigor Meets Work/Life Balance (distance: 0.558)\n[Page: Online Program | Section: Academic Rigor Meets Work/Life Balance]\n\nThe Online MS in Applied Data Science program at the University of Chicago delivers a structured online learning experience with live classes designed for working professionals. You will benefit from the same top faculty, brig...\n\n[4] In Person Program | By and For Data Science Innovators (distance: 0.562)\n[Page: In Person Program | Section: By and For Data Science Innovators]\n\nYou will earn UChicago’s Master’s in Applied Data Science by successfully completing the required curriculum an"
+              },
+              {
+                "name": "list_page_sections",
+                "content": "Sections in https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/:\n  - \"2-Year Thesis Track Program > How many spots are available in the new 2-year program?\" (1 chunk)\n  - \"2-Year Thesis Track Program > If I am admitted to the In-Person, Full-Time 1-year program, may I take any of the 2-year program electives?\" (1 chunk)\n  - \"2-Year Thesis Track Program > May I switch between the 1- and 2-year programs after officially enrolling in the MS-ADS program?\" (1 chunk)\n  - \"2-Year Thesis Track Program > What is the 2-year program's thesis requirement?\" (1 chunk)\n  - \"2-Year Thesis Track Program > What is the new 2-year thesis track program (18 courses), and how is it different from the 1-year program (12 courses)?\" (2 chunks)\n  - \"2-Year Thesis Track Program > When can I apply for the 2-year thesis track program?\" (1 chunk)\n  - \"Application Process > Do I need to provide my recommenders with instructions?\" (1 chunk)\n  - \"Application Process > Does the admissions office allow recommenders to email their letter directly as an attachment to be included in an applicant’s file?\" (1 chunk)\n  - \"Application Process > How do I submit the materials that will accompany my Master's in Applied Data Science application?\" (1 chunk)\n  - \"Application Process > How will I be notified that I am admitted to the Master's in Applied Data Science program?\" (1 chunk)\n  - \"Application Process > I took the GRE and/or GMAT and want to include my score(s) with my Master's in Applied Data Science application.\" (1 chunk)\n  - \"Application Process > I took the TOEFL over two years ago. Can I still use those TOEFL results?\" (1 chunk)\n  - \"Application Process > If I am admitted to the Master's in Applied Data Science program, what do I do next?\" (1 chunk)\n  - \"Application Process > If I finish my Master's in Applied Data Science application before the deadline, will I receive my decision early?\" (1 chunk)\n  - \"Application Process > Is the GRE or GMAT required for th"
+              }
+            ],
+            "judger": {
+              "completeness": "partial",
+              "useful_indices": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "decision": "done",
+              "candidate_chunk_count": 5,
+              "accepted_chunk_count": 5
+            }
+          }
+        ],
+        "evidence": [
+          {
+            "text": "[Page: Faqs | Section: Application Process > What’s the difference between the MS in Applied Data Science and the MS in Data Science programs at UChicago?]\n\nThe two programs share a strong foundation in data science but differ in structure, location, and focus. The MS in Data Science is a 10-course program based on UChicago’s Hyde Park campus. It includes a comprehensive research project and is designed for students who want to dive deeper into the theoretical and research side of data science—often as preparation for PhD study or research-focused careers. The MS in Applied Data Science program offers both a 12-course track and an 18-course thesis track. It is offered in online and in-person formats, with in-person classes held at the NBC Tower in downtown Chicago. The program focuses on applying data science and machine learning methods to real-world problems through hands-on coursework, industry collaborations, and a two-quarter capstone or research project. For a more detailed breakdown of the differences between the two programs, check",
+            "chunk_id": "education__masters_programs__ms_in_applied_data_science__faqs__what_s_the_difference_between_the_ms_in_applied_data_science_and_the_ms_in_data_science_programs_at_uchicago__23",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/",
+            "page_title": "Faqs",
+            "section": "What’s the difference between the MS in Applied Data Science and the MS in Data Science programs at UChicago?",
+            "section_breadcrumb": "Application Process > What’s the difference between the MS in Applied Data Science and the MS in Data Science programs at UChicago?",
+            "content_type": "text",
+            "program_type": "general",
+            "distance": 0.38502219319343567
+          },
+          {
+            "text": "[Page: In Person Program | Section: Tailor Your Data Science Journey]\n\nThe In-Person MS in Applied Data Science program at the University of Chicago prepares students to work at the intersection of data science, machine learning, and artificial intelligence through rigorous, applied coursework and real-world projects. Complete your master’s degree full- or part-time with UChicago’s In-Person MS in Applied Data Science program. While many In-Person students are early in their careers, the most competitive applicants will have at least 1 year of full-time work experience and 1 or more relevant, sustained internships. For those seeking part-time study and those with more years of full-time work experience (3+), our Online program is optimized for you .",
+            "chunk_id": "education__masters_programs__in_person_program__tailor_your_data_science_journey__1",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+            "page_title": "In Person Program",
+            "section": "Tailor Your Data Science Journey",
+            "section_breadcrumb": "Tailor Your Data Science Journey",
+            "content_type": "text",
+            "program_type": "in_person",
+            "distance": 0.5070291757583618
+          },
+          {
+            "text": "[Page: Faqs | Section: MBA/MS > What are the main differences in programs and outcomes between the MBA/MS in Applied Data Science compared to Computer Science?]\n\nThe fields of Statistics, Mathematics, and Computer Science intersect with industry domains in different ways. The MPCS program focuses on the center of Computer Science, including Software Engineering, High Performance Computing, Data Analytics, and Application Development. The MS-ADS Program focuses at the intersection of multiple fields, such as Computer Science, Mathematics, and Statistics (including Statistical Inference, Linear/Non-Linear Models, Machine Learning, Natural Language Processing, and Deep Learning). The outcomes for MPCS students include Software Engineer (Developer), Senior Software Engineering Management, Software/Hardware Architect, and Senior Cyber Security Engineer. The outcomes for students in MS-ADS include roles as Data Scientist (most common), Senior Data Science Consultant, Business Intelligence (BI) Director, Data Visualization Manager, Data Analytics Business Intelligence (BI) Director, Data Visualization Manager, Data Analytics Engineer, and AI Solution Architect.",
+            "chunk_id": "education__masters_programs__ms_in_applied_data_science__faqs__what_are_the_main_differences_in_programs_and_outcomes_between_the_mba_ms_in_applied_data_science_compared_to_computer_science__41",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/",
+            "page_title": "Faqs",
+            "section": "What are the main differences in programs and outcomes between the MBA/MS in Applied Data Science compared to Computer Science?",
+            "section_breadcrumb": "MBA/MS > What are the main differences in programs and outcomes between the MBA/MS in Applied Data Science compared to Computer Science?",
+            "content_type": "text",
+            "program_type": "general",
+            "distance": 0.5323089361190796
+          },
+          {
+            "text": "[Page: Online Program | Section: Academic Rigor Meets Work/Life Balance]\n\nThe Online MS in Applied Data Science program at the University of Chicago delivers a structured online learning experience with live classes designed for working professionals. You will benefit from the same top faculty, bright peer group, and academic rigor as the In-Person program. You may complete the program full- or part-time. Full-time and part-time students begin in Autumn quarter. Please visit the In-Person program page if you are interested in exploring those full- and part-time options for entrance Autumn quarter. Online Program Director, Arnab Bose, PhD",
+            "chunk_id": "education__masters_programs__online_program__academic_rigor_meets_work_life_balance__1",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/online-program/",
+            "page_title": "Online Program",
+            "section": "Academic Rigor Meets Work/Life Balance",
+            "section_breadcrumb": "Academic Rigor Meets Work/Life Balance",
+            "content_type": "text",
+            "program_type": "online",
+            "distance": 0.557553768157959
+          },
+          {
+            "text": "[Page: In Person Program | Section: By and For Data Science Innovators]\n\nYou will earn UChicago’s Master’s in Applied Data Science by successfully completing the required curriculum and our tailored, multi-quarter Career Seminar. To keep up with the rapidly evolving field and job market, you will be challenged by our rigorous curriculum that is designed by and for data science innovators and leaders. Courses are reviewed annually to ensure the content keeps pace with the rapidly evolving landscape of data science. You have the flexibility to pursue the Master’s in Applied Data Science degree on a part- or full-time schedule. Part-time students enroll in two courses each quarter and take their courses in the evenings or on Saturdays. Full-time students take three courses per quarter. Some of their courses may be offered during the day. All courses are taught at the NBC Tower or Gleacher Center in downtown Chicago.",
+            "chunk_id": "education__masters_programs__in_person_program__by_and_for_data_science_innovators__13",
+            "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program/",
+            "page_title": "In Person Program",
+            "section": "By and For Data Science Innovators",
+            "section_breadcrumb": "By and For Data Science Innovators",
+            "content_type": "text",
+            "program_type": "in_person",
+            "distance": 0.5624054074287415
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3713,
+          "completion_tokens": 227,
+          "total_tokens": 3940,
+          "llm_calls": 5
+        },
+        "metrics": {
+          "tool_calls": 2,
+          "loop_count": 1,
+          "evidence_count": 5,
+          "llm_calls": 5,
+          "judge_calls": null,
+          "valid_fetch_count": null,
+          "invalid_fetch_count": null,
+          "fallback_triggered": null
+        }
+      }
+    },
+    "pipeline_grag_v2": {
+      "pipeline_id": "pipeline_grag_v2",
+      "display_name": "GRAG v2",
+      "answer": "I can only answer questions about the UChicago MS in Applied Data Science program.",
+      "sources": [
+        {
+          "page_title": "Course Progressions",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions"
+        },
+        {
+          "page_title": "FAQs",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs"
+        },
+        {
+          "page_title": "In-Person Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P1"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P1] Master's in Applied Data Science\n[N1] Programs — Section (1 content block)\n[N2] In-Person Program — Section (1 content block)\n[N3] Online Program — Section (1 content block)\n[N4] MBA/MS Program — Section (1 content block)\n[N5] Apply Today! — Section (0 content blocks)\n[N6] How to Apply — Section (1 content block)\n[N7] Industry Leading Faculty — Section (1 content block)\n[N8] Data in Action - Capstone Projects — Section (1 content block)\n[N9] How UChicago’s MS in Applied Data Science Prepares Future Innovators — Section (1 content block)\n[N10] Start Your Application — Section (0 content blocks)\n[N11] Related News, Insights, and Past Events — Section (0 content blocks)\n[N12] The Time Constraints of AI Access Could Change How We Think — Section (0 content blocks)\n[N13] Who Gets Hired, Paid, and Liked? Who Gets Credit? New Research Examines AI’s Role in Writing and the Workplace — Section (0 content blocks)\n[N14] University of Chicago Wins Distinguished Laude Institute Moonshots Seed Grant — Section (0 content blocks)\n[N15] University of Chicago Announces Partnership with AI Research Commons and Microsoft to Accelerate Midwest AI Startups — Section (0 content blocks)\n[N16] Pathways to Impact in AI and Data Science with the Polsky Center for Entrepreneurship and Innovation — Section (0 content blocks)\n[N17] University of Chicago Data Science Institute Welcomes Millennium as New Industry Affiliate Partner — Section (0 content blocks)\n[N18] For Better Sleep, One MS-ADS Student Turned to Artificial Intelligence — Section (0 content blocks)\n[N19] From Chips to Agents: UChicago Watches NVIDIA’s Vision for the Next Era of AI — Section (0 content blocks)\n[N20] What If AI Scientists Could Talk to Each Other? — Section (0 content blocks)\n[N21] Page Overview — PageOverview (1 content block)"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "Starting with the general MSADS overview page to get high-level program details for comparison with Northwestern's program."
+        },
+        {
+          "step": 2,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P2"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P2] In-Person Program\n[N22] Page Introduction — Section (1 content block)\n[N23] Tailor Your Data Science Journey — Section (1 content block)\n[N24] 1-Year 12 Course Program (Full- and Part-Time Options) — Section (1 content block)\n[N25] 2-Year Thesis Track, 18 Course Program (Full-Time Only) — Section (2 content blocks)\n[N26] Comparison Chart — Section (1 content block)\n[N27] Your Career Success — Section (1 content block)\n[N28] Your Engagement — Section (1 content block)\n[N29] Your Student Experience — Section (1 content block)\n[N30] Career Outcomes in Data Science — Section (1 content block)\n[N31] By and For Data Science Innovators — Section (1 content block)\n[N32] Get in Touch — Section (1 content block)\n[N33] Course Progression Tabs — ProgressionTabs (47 content blocks)\n    ├── [N34] Noncredit Courses — ProgressionTab (7 content blocks)\n        preview: This accordion contains: Career Seminar (Seminar, required); Introduction to Statistical Concepts (Foundational, optional); R for Data Science (Foundational, optional); Python for Data Science (Foundational, optional); Advanced Linear Algebra for Machine Learning (Foundational, optional); Brush up on the Basics (Optional resource)\n    ├── [N35] Core Courses — ProgressionTab (8 content blocks)\n        preview: This accordion contains: Time Series Analysis and Forecasting; Statistical Models for Data Science; Machine Learning I; Machine Learning II; Data Engineering Platforms for Analytics or Big Data and Cloud Computing; Leadership and Consulting for Data Science; Data Science Capstone Project\n    ├── [N36] Sample Elective Courses — ProgressionTab (32 content blocks)\n        ├── [N37] Accordion — Accordion (32 content blocks)\n            preview: This accordion contains: Advanced Computer Vision with Deep Learning; Advanced Machine Learning and Artificial Intelligence; Applied Generative AI: Agents and Multimodal Intelligence; Bayesian Machine Learning with Generative AI Applications; Causal Models for Data Science; Data Science for Algorithmic Marketing; Data Science for Healthcare; Data Visualization Techniques; Digital Marketing Analytics in Theory and Practice; Deep Reinforcement Learning; Generative AI: Principles and Applications; Machine Learning Operations; Next-Gen NLP: LLM and Agentic AI in Practice; Optimization and Simulation Methods for Data Science; Quantitative Finance: Methods and Applications; Real Time Intelligent Systems; Supply Chain Optimization"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "The question asks for a comparison with Northwestern's program, so I need detailed UChicago program specifics. P1 is a general overview; P2 (In-Person Program) provides concrete details on curriculum, tracks, and structure that are essential for comparison. I'll inspect P2 next to gather substantive content."
+        },
+        {
+          "step": 3,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P2"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P2] In-Person Program\n[N22] Page Introduction — Section (1 content block)\n[N23] Tailor Your Data Science Journey — Section (1 content block)\n[N24] 1-Year 12 Course Program (Full- and Part-Time Options) — Section (1 content block)\n[N25] 2-Year Thesis Track, 18 Course Program (Full-Time Only) — Section (2 content blocks)\n[N26] Comparison Chart — Section (1 content block)\n[N27] Your Career Success — Section (1 content block)\n[N28] Your Engagement — Section (1 content block)\n[N29] Your Student Experience — Section (1 content block)\n[N30] Career Outcomes in Data Science — Section (1 content block)\n[N31] By and For Data Science Innovators — Section (1 content block)\n[N32] Get in Touch — Section (1 content block)\n[N33] Course Progression Tabs — ProgressionTabs (47 content blocks)\n    ├── [N34] Noncredit Courses — ProgressionTab (7 content blocks)\n        preview: This accordion contains: Career Seminar (Seminar, required); Introduction to Statistical Concepts (Foundational, optional); R for Data Science (Foundational, optional); Python for Data Science (Foundational, optional); Advanced Linear Algebra for Machine Learning (Foundational, optional); Brush up on the Basics (Optional resource)\n    ├── [N35] Core Courses — ProgressionTab (8 content blocks)\n        preview: This accordion contains: Time Series Analysis and Forecasting; Statistical Models for Data Science; Machine Learning I; Machine Learning II; Data Engineering Platforms for Analytics or Big Data and Cloud Computing; Leadership and Consulting for Data Science; Data Science Capstone Project\n    ├── [N36] Sample Elective Courses — ProgressionTab (32 content blocks)\n        ├── [N37] Accordion — Accordion (32 content blocks)\n            preview: This accordion contains: Advanced Computer Vision with Deep Learning; Advanced Machine Learning and Artificial Intelligence; Applied Generative AI: Agents and Multimodal Intelligence; Bayesian Machine Learning with Generative AI Applications; Causal Models for Data Science; Data Science for Algorithmic Marketing; Data Science for Healthcare; Data Visualization Techniques; Digital Marketing Analytics in Theory and Practice; Deep Reinforcement Learning; Generative AI: Principles and Applications; Machine Learning Operations; Next-Gen NLP: LLM and Agentic AI in Practice; Optimization and Simulation Methods for Data Science; Quantitative Finance: Methods and Applications; Real Time Intelligent Systems; Supply Chain Optimization"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "Need UChicago program details for comparison; P2 has concrete curriculum and structure info."
+        },
+        {
+          "step": 4,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P2"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P2] In-Person Program\n[N22] Page Introduction — Section (1 content block)\n[N23] Tailor Your Data Science Journey — Section (1 content block)\n[N24] 1-Year 12 Course Program (Full- and Part-Time Options) — Section (1 content block)\n[N25] 2-Year Thesis Track, 18 Course Program (Full-Time Only) — Section (2 content blocks)\n[N26] Comparison Chart — Section (1 content block)\n[N27] Your Career Success — Section (1 content block)\n[N28] Your Engagement — Section (1 content block)\n[N29] Your Student Experience — Section (1 content block)\n[N30] Career Outcomes in Data Science — Section (1 content block)\n[N31] By and For Data Science Innovators — Section (1 content block)\n[N32] Get in Touch — Section (1 content block)\n[N33] Course Progression Tabs — ProgressionTabs (47 content blocks)\n    ├── [N34] Noncredit Courses — ProgressionTab (7 content blocks)\n        preview: This accordion contains: Career Seminar (Seminar, required); Introduction to Statistical Concepts (Foundational, optional); R for Data Science (Foundational, optional); Python for Data Science (Foundational, optional); Advanced Linear Algebra for Machine Learning (Foundational, optional); Brush up on the Basics (Optional resource)\n    ├── [N35] Core Courses — ProgressionTab (8 content blocks)\n        preview: This accordion contains: Time Series Analysis and Forecasting; Statistical Models for Data Science; Machine Learning I; Machine Learning II; Data Engineering Platforms for Analytics or Big Data and Cloud Computing; Leadership and Consulting for Data Science; Data Science Capstone Project\n    ├── [N36] Sample Elective Courses — ProgressionTab (32 content blocks)\n        ├── [N37] Accordion — Accordion (32 content blocks)\n            preview: This accordion contains: Advanced Computer Vision with Deep Learning; Advanced Machine Learning and Artificial Intelligence; Applied Generative AI: Agents and Multimodal Intelligence; Bayesian Machine Learning with Generative AI Applications; Causal Models for Data Science; Data Science for Algorithmic Marketing; Data Science for Healthcare; Data Visualization Techniques; Digital Marketing Analytics in Theory and Practice; Deep Reinforcement Learning; Generative AI: Principles and Applications; Machine Learning Operations; Next-Gen NLP: LLM and Agentic AI in Practice; Optimization and Simulation Methods for Data Science; Quantitative Finance: Methods and Applications; Real Time Intelligent Systems; Supply Chain Optimization"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "Need detailed UChicago program info to compare with Northwestern. P2 covers in-person program structure, curriculum, and outcomes, which are key comparison dimensions."
+        },
+        {
+          "step": 5,
+          "tool_calls": [
+            {
+              "name": "inspect_page",
+              "args": {
+                "page_ref": "P3"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "inspect_page",
+              "content": "[P3] Online Program\n[N38] Page Introduction — Section (1 content block)\n[N39] Academic Rigor Meets Work/Life Balance — Section (1 content block)\n[N40] Master Data Science, Master Your Career — Section (1 content block)\n[N41] Get in Touch — Section (1 content block)\n[N42] Your Outcomes — Section (1 content block)\n[N43] Your Online Applied Data Science Experience — Section (1 content block)\n[N44] Your Access to Alumni — Section (1 content block)\n[N45] Your Time, Your Advancement — Section (2 content blocks)\n[N46] In-Person ‘Immersion Weekend’ — Section (1 content block)\n[N47] Note for International Students — Section (1 content block)\n[N48] Curriculum — Section (1 content block)\n[N49] Foundational Courses (noncredit, optional) — Section (2 content blocks)\n[N50] Career Seminar (noncredit, required) — Section (1 content block)\n[N51] Core Courses (6) — Section (1 content block)\n[N52] Elective Courses (4) — Section (1 content block)\n[N53] Capstone (2) — Section (1 content block)\n[N54] Additional Resources — Section (1 content block)\n[N55] Course Progression Tabs — ProgressionTabs (42 content blocks)\n    ├── [N56] Noncredit Courses — ProgressionTab (7 content blocks)\n        preview: This accordion contains: Career Seminar (Seminar, required); Introduction to Statistical Concepts (Foundational, optional); R for Data Science (Foundational, optional); Python for Data Science (Foundational, optional); Advanced Linear Algebra for Machine Learning (Foundational, optional); Brush up on the Basics (Optional resource)\n    ├── [N57] Core Courses — ProgressionTab (8 content blocks)\n        preview: This accordion contains: Time Series Analysis and Forecasting; Statistical Models for Data Science; Machine Learning I; Machine Learning II; Data Engineering Platforms for Analytics or Big Data and Cloud Computing; Leadership and Consulting for Data Science; Data Science Capstone Project\n    ├── [N58] Sample Elective Courses — ProgressionTab (27 content blocks)\n        ├── [N59] Accordion — Accordion (27 content blocks)\n            preview: This accordion contains: Advanced Computer Vision with Deep Learning; Advanced Machine Learning and Artificial Intelligence; Bayesian Machine Learning with Generative AI Applications; Data Science for Algorithmic Marketing; Data Science for Healthcare; Data Visualization Techniques; Digital Marketing Analytics in Theory and Practice; Quantitative Finance: Methods and Applications; Generative AI: Principles and Applications; Machine Learning Operations; Next-Gen NLP: LLM and Agentic AI in Practice; Real Time Intelligent Systems; Deep Reinforcement Learning; Supply Chain Optimization"
+            }
+          ],
+          "judger": null,
+          "decision_reason": "Need detailed UChicago online program info for comparison; P3 covers online program details."
+        },
+        {
+          "step": 6,
+          "tool_calls": [
+            {
+              "name": "hybrid_retrieve",
+              "args": {
+                "query": "UChicago MS in Applied Data Science program details",
+                "page_ids": [
+                  "page:4f1aba5696f12664",
+                  "page:a1d4f5293a26528e",
+                  "page:a5c1f12af4c1e404",
+                  "page:dd76146bcccd1e59",
+                  "page:fe9d95e97a7ee76f"
+                ]
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "name": "hybrid_retrieve",
+              "content": "[E1] The Master’s in Applied Data Science program offers two curriculum pathways: a 12-course program and an 18-course thesis track. Both include core courses, electives, a multi-quarter Capstone Project, and a required Career Seminar. The 18-course program includes additional electives and a thesis requirement. See below for a breakdown of each component.\nFoundational Courses (Optional, Noncredit) : Foundational noncredit courses are designed and taught by Master’s in Applied Data Science faculty and instructors . These optional courses—available at no additional cost— provide the basis for the rigorous Applied Data Science degree. Course content undergirds the theoretical, strategic, and practical data science studies you will encounter in the rest of the curriculum.\nBeginning in academic year 2024-25, all entering students will complete a required online Foundational Skills Assessment.\n[E2] Project in which students work in teams to address a real industry or research problem. Full-time students typically begin Capstone in their third quarter; part-time students begin two quarters before graduation.\n[E3] Want to get in touch with our enrollment team? Click below to share your information and receive details about the MS in Applied Data Science program and upcoming events.\n[E4] real-world skills like communication, collaboration, and ethical problem-solving. Students with 3+ years of relevant full-time work experience may petition for a waiver.\nCore Courses : All students complete 6 core courses that build theoretical understanding and teach students to apply data science methods to real-world problems.\nElective Courses : Students in the 12-course track complete 4 electives. Students in the 18-course thesis track complete 8 electives and 2 independent study courses. Past electives include topics like Generative AI Principles, Natural Language Processing and Cognitive Computing, Health Analytics, Supply Chain Optimization, and more.\nCapstone Project : A required 2-quarter Capstone Project in which students work in teams to address a real industry or research problem.\n[E5] all entering students will complete a required online Foundational Skills Assessment. This required assessment helps faculty and advisors understand how to best support you once you begin in the program. You may choose to opt-out of taking the Foundational Skill Assessments and instead register for all four Foundational courses. The four Foundational noncredit courses are listed below. Please note that Introduction to Statistical Concepts and R are considered pre-quarter courses and therefore take place during the 5 weeks leading up to your first quarter in the program. All Foundational courses are completed virtually for all students regardless of enrollment in the In-Person or Online Program.\nCareer Seminar (Required, Noncredit) : A multi-quarter seminar focused on building real-world skills like communication, collaboration, and ethical problem-solving.\n[E6] The two programs share a strong foundation in data science but differ in structure, location, and focus.\n- The MS in Data Science is a 10-course program based on UChicago’s Hyde Park campus. It includes a comprehensive research project and is designed for students who want to dive deeper into the theoretical and research side of data science—often as preparation for PhD study or research-focused careers.\n- The MS in Applied Data Science program offers both a 12-course track and an 18-course thesis track. It is offered in online and in-person formats, with in-person classes held at the NBC Tower in downtown Chicago. The program focuses on applying data science and machine learning methods to real-world problems through hands-on coursework, industry collaborations, and a two-quarter capstone or research project.\n[E7] Take the next step to advance your career with UChicago’s MS in Applied Data Science.\nThe In-Person program admits full- and part-time students for entrance in Autumn quarter annually. The full-time, in-person MS in Applied Data Science program is STEM/OPT eligible . Please visit the Online program page if you are interested in those full- and part-time options.\n[E8] (structure summary) This page contains: Page Introduction; Flexible Formats; Curriculum Details; Course Progression Tabs"
+            }
+          ],
+          "judger": {
+            "node_assessments": [
+              {
+                "node_ref": "hybrid",
+                "keep_evidence": [
+                  "E1",
+                  "E2",
+                  "E4",
+                  "E5",
+                  "E6",
+                  "E7"
+                ],
+                "comment": "E1 details the two curriculum pathways (12-course and 18-course thesis) and components like core courses, electives, capstone, and career seminar. E2 describes the capstone project structure. E4 lists core courses, electives, and capstone specifics. E5 explains foundational courses and career seminar. E6 directly compares the MS in Applied Data Science to the MS in Data Science, highlighting differences in structure, location, and focus. E7 provides admission details and STEM/OPT eligibility. E3 is a contact prompt and not useful for comparison."
+              }
+            ]
+          },
+          "decision_reason": "fallback: scoped hybrid retrieve"
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E1",
+          "status": "accepted",
+          "page_title": "Course Progressions",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+          "text": "The Master’s in Applied Data Science program offers two curriculum pathways: a 12-course program and an 18-course thesis track. Both include core courses, electives, a multi-quarter Capstone Project, and a required Career Seminar. The 18-course program includes additional electives and a thesis requirement. See below for a breakdown of each component.\nFoundational Courses (Optional, Noncredit) : Foundational noncredit courses are designed and taught by Master’s in Applied Data Science faculty and instructors . These optional courses—available at no additional cost— provide the basis for the rigorous Applied Data Science degree. Course content undergirds the theoretical, strategic, and practical data science studies you will encounter in the rest of the curriculum.\nBeginning in academic year 2024-25, all entering students will complete a required online Foundational Skills Assessment.",
+          "path": [
+            "Course Progressions",
+            "Curriculum Details"
+          ],
+          "section_breadcrumb": "Course Progressions > Curriculum Details",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "hybrid_retrieve",
+              "group_ref": "hybrid"
+            }
+          ],
+          "chunk_id": "chunk:a3cddb0a7c729ecd",
+          "owner_node_id": "section:43d53660b5b41187",
+          "page_id": "page:4f1aba5696f12664",
+          "internal_metadata": {
+            "source_type": "p",
+            "score": 0.696523,
+            "score_breakdown": {
+              "vector": 0.7118,
+              "bm25": 3.256206,
+              "graph": 2.52,
+              "intent_boost": 0.0
+            }
+          }
+        },
+        {
+          "evidence_id": "E2",
+          "status": "accepted",
+          "page_title": "Course Progressions",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+          "text": "Project in which students work in teams to address a real industry or research problem. Full-time students typically begin Capstone in their third quarter; part-time students begin two quarters before graduation.",
+          "path": [
+            "Course Progressions",
+            "Curriculum Details"
+          ],
+          "section_breadcrumb": "Course Progressions > Curriculum Details",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "hybrid_retrieve",
+              "group_ref": "hybrid"
+            }
+          ],
+          "chunk_id": "chunk:04bcfad48a13960f",
+          "owner_node_id": "section:43d53660b5b41187",
+          "page_id": "page:4f1aba5696f12664",
+          "internal_metadata": {
+            "source_type": "p",
+            "score": 0.614436,
+            "score_breakdown": {
+              "vector": 0.556789,
+              "bm25": 5.163229,
+              "graph": 2.52,
+              "intent_boost": 0.0
+            }
+          }
+        },
+        {
+          "evidence_id": "E4",
+          "status": "accepted",
+          "page_title": "Course Progressions",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+          "text": "real-world skills like communication, collaboration, and ethical problem-solving. Students with 3+ years of relevant full-time work experience may petition for a waiver.\nCore Courses : All students complete 6 core courses that build theoretical understanding and teach students to apply data science methods to real-world problems.\nElective Courses : Students in the 12-course track complete 4 electives. Students in the 18-course thesis track complete 8 electives and 2 independent study courses. Past electives include topics like Generative AI Principles, Natural Language Processing and Cognitive Computing, Health Analytics, Supply Chain Optimization, and more.\nCapstone Project : A required 2-quarter Capstone Project in which students work in teams to address a real industry or research problem.",
+          "path": [
+            "Course Progressions",
+            "Curriculum Details"
+          ],
+          "section_breadcrumb": "Course Progressions > Curriculum Details",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "hybrid_retrieve",
+              "group_ref": "hybrid"
+            }
+          ],
+          "chunk_id": "chunk:274404c8feda498d",
+          "owner_node_id": "section:43d53660b5b41187",
+          "page_id": "page:4f1aba5696f12664",
+          "internal_metadata": {
+            "source_type": "p",
+            "score": 0.602612,
+            "score_breakdown": {
+              "vector": 0.63386,
+              "bm25": 3.120607,
+              "graph": 2.52,
+              "intent_boost": 0.0
+            }
+          }
+        },
+        {
+          "evidence_id": "E5",
+          "status": "accepted",
+          "page_title": "Course Progressions",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions",
+          "text": "all entering students will complete a required online Foundational Skills Assessment. This required assessment helps faculty and advisors understand how to best support you once you begin in the program. You may choose to opt-out of taking the Foundational Skill Assessments and instead register for all four Foundational courses. The four Foundational noncredit courses are listed below. Please note that Introduction to Statistical Concepts and R are considered pre-quarter courses and therefore take place during the 5 weeks leading up to your first quarter in the program. All Foundational courses are completed virtually for all students regardless of enrollment in the In-Person or Online Program.\nCareer Seminar (Required, Noncredit) : A multi-quarter seminar focused on building real-world skills like communication, collaboration, and ethical problem-solving.",
+          "path": [
+            "Course Progressions",
+            "Curriculum Details"
+          ],
+          "section_breadcrumb": "Course Progressions > Curriculum Details",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "hybrid_retrieve",
+              "group_ref": "hybrid"
+            }
+          ],
+          "chunk_id": "chunk:f64eb51f675da168",
+          "owner_node_id": "section:43d53660b5b41187",
+          "page_id": "page:4f1aba5696f12664",
+          "internal_metadata": {
+            "source_type": "p",
+            "score": 0.509425,
+            "score_breakdown": {
+              "vector": 0.550749,
+              "bm25": 3.120607,
+              "graph": 2.52,
+              "intent_boost": 0.0
+            }
+          }
+        },
+        {
+          "evidence_id": "E6",
+          "status": "accepted",
+          "page_title": "FAQs",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs",
+          "text": "The two programs share a strong foundation in data science but differ in structure, location, and focus.\n- The MS in Data Science is a 10-course program based on UChicago’s Hyde Park campus. It includes a comprehensive research project and is designed for students who want to dive deeper into the theoretical and research side of data science—often as preparation for PhD study or research-focused careers.\n- The MS in Applied Data Science program offers both a 12-course track and an 18-course thesis track. It is offered in online and in-person formats, with in-person classes held at the NBC Tower in downtown Chicago. The program focuses on applying data science and machine learning methods to real-world problems through hands-on coursework, industry collaborations, and a two-quarter capstone or research project.",
+          "path": [
+            "FAQs",
+            "Application Process",
+            "What’s the difference between the MS in Applied Data Science and the MS in Data Science programs at UChicago?"
+          ],
+          "section_breadcrumb": "FAQs > Application Process > What’s the difference between the MS in Applied Data Science and the MS in Data Science programs at UChicago?",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "hybrid_retrieve",
+              "group_ref": "hybrid"
+            }
+          ],
+          "chunk_id": "chunk:7a682e8c58c53027",
+          "owner_node_id": "accordion_item:07448f144e2983d9",
+          "page_id": "page:a1d4f5293a26528e",
+          "internal_metadata": {
+            "source_type": "body_text",
+            "score": 0.5,
+            "score_breakdown": {
+              "vector": 0.854574,
+              "bm25": 0.0,
+              "graph": 0.0,
+              "intent_boost": 0.0
+            }
+          }
+        },
+        {
+          "evidence_id": "E7",
+          "status": "accepted",
+          "page_title": "In-Person Program",
+          "source_url": "https://datascience.uchicago.edu/education/masters-programs/in-person-program",
+          "text": "Take the next step to advance your career with UChicago’s MS in Applied Data Science.\nThe In-Person program admits full- and part-time students for entrance in Autumn quarter annually. The full-time, in-person MS in Applied Data Science program is STEM/OPT eligible . Please visit the Online program page if you are interested in those full- and part-time options.",
+          "path": [
+            "In-Person Program",
+            "Your Career Success"
+          ],
+          "section_breadcrumb": "In-Person Program > Your Career Success",
+          "visible_type": "text",
+          "provenance": [
+            {
+              "tool": "hybrid_retrieve",
+              "group_ref": "hybrid"
+            }
+          ],
+          "chunk_id": "chunk:e76c0f151085cf62",
+          "owner_node_id": "section:489ed62cde4c5aa7",
+          "page_id": "page:fe9d95e97a7ee76f",
+          "internal_metadata": {
+            "source_type": "p",
+            "score": 0.491147,
+            "score_breakdown": {
+              "vector": 0.846678,
+              "bm25": 0.0,
+              "graph": 0.0,
+              "intent_boost": 0.0
+            }
+          }
+        }
+      ],
+      "time_sec": 25.557,
+      "low_confidence": true,
+      "error": null,
+      "progress_summary": {
+        "summary_covering": "No pages have been evaluated yet. Nothing is covered. Missing: detailed information about UChicago MS in Applied Data Science (curriculum, online format, admissions, outcomes) and Northwestern MS in Data Science (curriculum, format, admissions, outcomes), plus a comparison of the two programs.",
+        "decision_trace_narrative": "Turn 1: The agent attempted to inspect a page (P3) to gather detailed UChicago online program information for comparison. The tool status was OK, but no node evaluations or evidence have been recorded yet. This is the first action; no re-queries or redundant checks have occurred."
+      },
+      "raw_debug": {
+        "response": {
+          "answer": "I can only answer questions about the UChicago MS in Applied Data Science program.",
+          "citations": [],
+          "debug": {
+            "tool_turns": 5,
+            "stop_reason": "fallback_hybrid_retrieve",
+            "evidence_count": 6,
+            "sufficient": false,
+            "missing": "All required information: UChicago MS in Applied Data Science details (curriculum, online format, admissions, outcomes) and Northwestern MS in Data Science details (curriculum, format, admissions, outcomes), and a comparative analysis.",
+            "log_path": "C:\\Users\\ss363\\Desktop\\Archive\\ads_rag_chatbot\\pipeline_grag_v2\\log\\2026-08-04_015221_6a048db728c6.json",
+            "run_id": "6a048db728c6"
+          }
+        },
+        "run_id": "6a048db728c6",
+        "rewritten_queries": [
+          {
+            "id": "q1",
+            "query": "UChicago MS in Applied Data Science program details",
+            "target": "university_program"
+          },
+          {
+            "id": "q2",
+            "query": "Northwestern MS in Data Science program details",
+            "target": "university_program"
+          },
+          {
+            "id": "q3",
+            "query": "comparison between UChicago MS in Applied Data Science and Northwestern MS in Data Science",
+            "target": "university_program"
+          }
+        ],
+        "judgment": {
+          "sufficient": false,
+          "missing": "All required information: UChicago MS in Applied Data Science details (curriculum, online format, admissions, outcomes) and Northwestern MS in Data Science details (curriculum, format, admissions, outcomes), and a comparative analysis.",
+          "comment": "No pages have been evaluated yet. Nothing is covered. Missing: detailed information about UChicago MS in Applied Data Science (curriculum, online format, admissions, outcomes) and Northwestern MS in Data Science (curriculum, format, admissions, outcomes), plus a comparison of the two programs."
+        },
+        "stop_reason": "fallback_hybrid_retrieve",
+        "fallback": {
+          "triggered": true,
+          "pages_selected": [
+            "P2",
+            "P3",
+            "P4",
+            "P5",
+            "P7"
+          ],
+          "reason": "To compare UChicago MS in Applied Data Science with Northwestern's MS in Data Science, we need detailed information about UChicago's program structure (P2, P3, P4), admissions and FAQs (P5), and costs (P7). These pages cover curriculum, format, requirements, and tuition, which are essential for a comparison. Northwestern's program details are not in the provided pages, so we focus on UChicago's specifics to enable a comparison."
+        },
+        "metrics": {
+          "agent_turns": 5,
+          "tool_calls": 6,
+          "judge_calls": 1,
+          "llm_calls": 14,
+          "valid_fetch_count": 0,
+          "invalid_fetch_count": 0,
+          "accepted_evidence_count": 6,
+          "stop_reason": "fallback_hybrid_retrieve",
+          "fallback_triggered": true
+        },
+        "usage": {
+          "prompt_tokens": 15264,
+          "completion_tokens": 1433,
+          "total_tokens": 16697,
+          "llm_calls": 14
+        },
+        "progress_summary_history": [
+          {
+            "turn": 1,
+            "summary_covering": "No pages have been evaluated yet. Nothing is covered. Missing: all details about UChicago MS in Applied Data Science and Northwestern MS in Data Science, including curriculum, admissions, outcomes, and any comparative analysis.",
+            "decision_trace_narrative": "Turn 1: The agent attempted to inspect the general MSADS overview page, with the stated reason of starting with high-level program details for comparison. The tool status was OK, but no node evaluations or evidence have been recorded yet. This is the first action; no re-queries or redundant checks have occurred.",
+            "sufficient": false,
+            "missing": "All information needed to compare the two programs is missing."
+          },
+          {
+            "turn": 2,
+            "summary_covering": "No pages have been inspected yet. The agent has only stated an intention to inspect P2 (In-Person Program) for UChicago specifics, but no nodes have been checked. Therefore, no information has been gathered, and nothing is covered. Missing: all details about both UChicago and Northwestern programs needed for comparison.",
+            "decision_trace_narrative": "Turn 1: The agent decided to inspect P2 (In-Person Program) on the UChicago page, reasoning that P1 is a general overview and P2 provides concrete curriculum and structure details essential for comparison. The inspection was initiated but no results are logged yet.",
+            "sufficient": false,
+            "missing": "All program details for both UChicago and Northwestern, including curriculum, tracks, structure, and any other comparative aspects."
+          },
+          {
+            "turn": 3,
+            "summary_covering": "No pages have been evaluated yet. No node paths have been checked. Missing: all information about both UChicago and Northwestern MS in Data Science programs, including curriculum, structure, admissions, outcomes, and any comparative details.",
+            "decision_trace_narrative": "Turn 1: The agent attempted to inspect a page (P2) to obtain UChicago program details, as the question requires comparing the two programs. The tool returned OK, but no node evaluations have been recorded yet, so no information has been gathered.",
+            "sufficient": false,
+            "missing": "All details about UChicago MS in Applied Data Science and Northwestern MS in Data Science, including curriculum, structure, admissions, outcomes, and any comparative analysis."
+          },
+          {
+            "turn": 4,
+            "summary_covering": "No pages have been evaluated yet. No node paths have been checked. Missing: detailed information on both UChicago and Northwestern MS in Data Science programs, including curriculum, structure, outcomes, and any other comparison dimensions.",
+            "decision_trace_narrative": "Turn 1: The agent decided to inspect a page (P2) to obtain detailed UChicago program information, reasoning that this is needed for comparison with Northwestern. The inspection was successful, but no nodes have been evaluated yet, so no evidence has been accepted.",
+            "sufficient": false,
+            "missing": "Detailed information on UChicago MS in Applied Data Science and Northwestern MS in Data Science, including curriculum, program structure, outcomes, and other comparison dimensions."
+          },
+          {
+            "turn": 5,
+            "summary_covering": "No pages have been evaluated yet. Nothing is covered. Missing: detailed information about UChicago MS in Applied Data Science (curriculum, online format, admissions, outcomes) and Northwestern MS in Data Science (curriculum, format, admissions, outcomes), plus a comparison of the two programs.",
+            "decision_trace_narrative": "Turn 1: The agent attempted to inspect a page (P3) to gather detailed UChicago online program information for comparison. The tool status was OK, but no node evaluations or evidence have been recorded yet. This is the first action; no re-queries or redundant checks have occurred.",
+            "sufficient": false,
+            "missing": "All required information: UChicago MS in Applied Data Science details (curriculum, online format, admissions, outcomes) and Northwestern MS in Data Science details (curriculum, format, admissions, outcomes), and a comparative analysis."
+          }
+        ],
+        "node_evaluation_log": {},
+        "log_path": "C:\\Users\\ss363\\Desktop\\Archive\\ads_rag_chatbot\\pipeline_grag_v2\\log\\2026-08-04_015221_6a048db728c6.json"
+      }
+    }
+  },
+  "run_batch_id": "20260804T013937"
+}
